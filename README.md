@@ -1,5 +1,5 @@
 # code.gov
-Website for the Federal Source Code Policy
+Website for implementing the Federal Source Code Policy
 
 ## Public domain
 
