@@ -61,6 +61,7 @@ h1 {
 .buttons a {
   border: 2px solid white;
   border-radius: 2em;
+  display: inline-block;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
