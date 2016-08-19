@@ -77,6 +77,8 @@ h1 {
   transition: all .3s ease;
 }
 
+
+
 .buttons a:hover {
   border-color: #29d9c2;
   background-color: #29d9c2;
@@ -91,12 +93,75 @@ h1 {
   border-color: #29d9c2;
 }
 
+.buttons input {
+  border: 2px solid white;
+  /*border-radius: 2em;*/
+  border-radius: 2em 0 0 2em;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: .5px;
+  min-width: 15em;
+  padding: 1em 2em 1em 2em;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.buttons input:focus {
+  outline: 0;
+}
+
+.buttons input.white {
+  background-color: white;
+  color: #008487;
+}
+
+}
+.buttons input.white:hover {
+  border-color: #29d9c2;
+}
+.buttons .blank {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 0 2em 2em 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 1em .5em;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.buttons .blank:hover {
+  background-color: #29d9c2;
+  border-color: #29d9c2;
+  cursor: pointer;
+}
+
 .blinking-cursor {
   -webkit-animation: 1.5s blink step-end infinite;
   -moz-animation: 1.5s blink step-end infinite;
   -ms-animation: 1.5s blink step-end infinite;
   -o-animation: 1.5s blink step-end infinite;
   animation: 1.5s blink step-end infinite;
+}
+
+.footer-message {
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 0.9em;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.mailchimp-buttons {
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 @keyframes "blink" {
@@ -142,4 +207,18 @@ h1 {
   50% {
     color: white;
   }
+}
+
+@media (max-width: 500px) {
+
+  .buttons input {
+    font-size: 0.7em;
+    min-width: 10em;
+    padding: 1em;
+  }
+
+  .buttons .blank {
+    font-size: 0.7em;
+  }
+
 }
