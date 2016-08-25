@@ -86,6 +86,7 @@
     <meta name="twitter:title" content="code.gov" />
     <meta name="twitter:description" content="The people's code." />
     <meta name="twitter:image" content="https://code.gov/img/open-graph.jpg?v=2485d4e" />
+    <script type="text/javascript" src="js/confirmation.js"></script>
   </head>
   <body>
     <!-- Google Tag Manager -->
@@ -107,10 +108,13 @@
       <p>
         We&rsquo;re helping the nation unlock the tremendous potential of the Federal Government&rsquo;s software.
       </p>
-
+      <div id="confirmation"></div>
       <div id="mc_embed_signup">
         
-        <form action="https://docs.google.com/a/gsa.gov/forms/d/e/1FAIpQLSejHiSAm26JMKpuFgCvU1yHYZ3zMG0WkyUJGmauBCOBLjsx9A/formResponse" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+                onload="if(submitted) {window.location='#';}"></iframe> 
+        <form action="https://docs.google.com/a/gsa.gov/forms/d/e/1FAIpQLSejHiSAm26JMKpuFgCvU1yHYZ3zMG0WkyUJGmauBCOBLjsx9A/formResponse" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="hidden_iframe" 
+onsubmit="showConfirmation()" novalidate>
 
           <div class="buttons">
             <div class="mailchimp-buttons" id="mc_embed_signup_scroll">
