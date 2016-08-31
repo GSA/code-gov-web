@@ -2,9 +2,17 @@
 var submitted=false; 
 
 function showConfirmation(){
-  submitted=true;
-  document.getElementById("confirmation").innerHTML='Thanks for joining the code.gov mailing list, '+document.getElementById("mce-EMAIL").value+'!'; 
-  
-  document.getElementById("mce-EMAIL").value=' ';
+  var emailField  = document.getElementById('mce-EMAIL');
+  var confirmationEl = document.getElementById("confirmation");
+
+  if(emailField.validity && !emailField.validity.valid) {
+    confirmationEl.innerHTML='Please enter a valid email.';
+  }
+  else {
+    submitted=true;
+    confirmationEl.innerHTML='Thanks for joining the code.gov mailing list, ' + emailField.value + '!';
+
+    emailField.value=' ';
+  }
 }
         
