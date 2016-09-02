@@ -68,7 +68,7 @@ h1 {
   border: 2px solid white;
   border-radius: 2em;
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.85em;
   font-weight: 600;
   letter-spacing: 1px;
   margin: .5em;
@@ -97,6 +97,7 @@ h1 {
   border: 2px solid white;
   /*border-radius: 2em;*/
   border-radius: 2em 0 0 2em;
+  box-sizing: border-box;
   display: inline-block;
   font-size: 0.85em;
   font-weight: 600;
@@ -105,6 +106,7 @@ h1 {
   padding: 1em 2em 1em 2em;
   text-decoration: none;
   transition: all .3s ease;
+  width: 50%;
 }
 
 .buttons input:focus {
@@ -124,6 +126,7 @@ h1 {
   background-color: transparent;
   border: 2px solid #fff;
   border-radius: 0 2em 2em 0;
+  box-sizing: border-box;
   color: #fff;
   display: inline-block;
   font-size: 0.85em;
@@ -133,6 +136,7 @@ h1 {
   padding: 1em .5em;
   text-decoration: none;
   transition: all .3s ease;
+  width: 50%;
 }
 
 .buttons .blank:hover {
@@ -160,7 +164,8 @@ h1 {
 }
 
 .mailchimp-buttons {
-  margin-bottom: 2em;
+  margin: 0 auto 2em;
+  max-width: 50em;
   text-align: center;
 }
 
@@ -212,6 +217,7 @@ h1 {
 @media (max-width: 500px) {
 
   .buttons input {
+    box-sizing: border-box;
     font-size: 0.7em;
     min-width: 10em;
     padding: 1em;
