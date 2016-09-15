@@ -1,0 +1,150 @@
+---
+# .about.yml project metadata
+#
+# Short name that acts as the project identifier (required)
+name: code-gov-web
+
+# Full proper name of the project (required)
+full_name: Code.Gov
+
+# The type of content in the repo
+# values: app, docs, policy
+type: docs, policy
+
+# Describes whether a project team, working group/guild, etc. owns the repo (required)
+# values: guild, working-group, project
+owner_type: project
+
+# Name of the main project repo if this is a sub-repo; name of the working group/guild repo if this is a working group/guild subproject
+#parent:
+
+# Maturity stage of the project (required)
+# values: discovery, alpha, beta, live, sunset, transfer, end
+stage: beta
+
+# Description of the project
+description: An online collection of tools, best practices, and schemas to help
+federal agencies implement the federal source code policy.
+
+# Tags that describe the project or aspects of the project
+tags:
+- open source
+- source code
+- source code policy
+
+
+# Should this repo have automated tests? If so, set to `true`. (required)
+# values: true, false
+testable: true
+
+# Team members contributing to the project (required)
+# Items:
+# - github: GitHub user name
+#   id: Internal team identifier/user name
+#   role: Team member's role; leads should be designated as 'lead'
+team:
+- github: okamanda
+  id: Olivier Kamanda
+  role: lead
+
+- github: theresaanna
+  id: Theresa Summa
+  role: Developer
+
+- github: lukad03
+  id: Luke Keller
+  role: Developer
+
+- github: michael-balint
+  id: Michael Balint
+  role: Developer
+
+- github: mattbailey0
+  id: Matt Bailey
+  role: Community Manager
+  
+# Partners for whom the project is developed
+partners:
+- OMB
+- GSA
+
+# Organizations or individuals who have adopted the project for their own use
+# Items:
+# - id: The name of the organization or individual
+#   url: A URL to the user's version of the project
+#users:
+#-
+
+# Brief descriptions of significant project developments
+#milestones:
+#-
+
+# Technologies used to build the project
+stack:
+- Ruby on Rails
+- Javascript
+- Jekyll
+
+# Brief description of the project's outcomes
+impact: The platform will help shape federal agencies software procurement and creation policies
+
+# Services used to supply project status information
+# Items:
+# - name: Name of the service
+#   category: Type of the service
+#   url: URL for detailed information
+#   badge: URL for the status badge
+#services:
+#-
+
+# Licenses that apply to the project and/or its components (required)
+# Items by property name pattern:
+#   .*:
+#     name: Name of the license from the Software Package Data Exchange (SPDX): https://spdx.org/licenses/
+#     url: URL for the text of the license
+licenses:
+  ruby-on-rails:
+    name: MIT
+    url: https://github.com/rails/rails
+ 
+  jquery-1.11.3.min.js:
+    name: MIT
+    url: https://jquery.org/license/
+  font-awesome.min.css:
+    name: MIT, SIL OFL 1.1, CC BY 3.0
+    url: http://fontawesome.io/license/
+  ruby:
+    name: BSD
+    url: https://www.ruby-lang.org/en/about/license.txt
+  jekyll:
+    name: MIT
+    url: https://github.com/jekyll/jekyll/blob/master/LICENSE
+  us-web-design-standards:
+    name: OFL-1.0, OFL-1.1, MIT, CC0-1.0
+    url: https://github.com/18F/web-design-standards/blob/18f-pages-staging/LICENSE.md
+
+# Tag to use when blogging about this project
+blogTag:
+- codegov
+
+# Links to project artifacts
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+#   category: Type of the link
+links:
+- url: https://code.gov
+- - text: Home of code.gov
+- - category: homepage
+
+- url: https://sourcecode.cio.gov
+ text: Federal Source Code Policy
+ category: documentation
+
+# URIs for points-of-contact
+# Items:
+# - url: URL for the link
+#   text: Anchor text for the link
+contact:
+- url: mailto:code@gsa.gov
+  text: Olivier Kamanda
