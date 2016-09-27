@@ -5,6 +5,10 @@
 *   `code.json` must live in the root directory of your agency's website.
 *   `code.json` must include a single object represented as JSON, with key-value pairs according to the list below.
 
+## Example `code.json`
+
+We've created a [sample `code.json`](https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/_draft_content/schema/code.json).
+
 ## Fields
 
 ### Required
