@@ -4,7 +4,7 @@
     "projects": [
         {
             "name": "mygov",
-            "description": "A Platform for Conecting People and Government",
+            "description": "A Platform for Connecting People and Government",
             "license": "https://path.to/license",
             "openSourceProject": 1,
             "governmentWideReuseProject": 0,
