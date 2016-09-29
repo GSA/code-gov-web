@@ -15,7 +15,7 @@ We've created a [sample `code.json`](https://github.com/presidential-innovation-
 
 *   `agency`: [string] The agency acronym. For example "GSA" or "DOD"
 *   `organization`: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".
-*   `project`: [object] Contains objects representing each software project
+*   `projects`: [array] Contains objects representing each software project
     *   `name`: [string] The project name
     *   `description`: [string] A description of the project
     *   `license`: [`null` or string] The URL of the project license, if available. `null` should be used if not.
@@ -33,7 +33,7 @@ We've created a [sample `code.json`](https://github.com/presidential-innovation-
 
 ### Optional
 
-*   `project`: [object] Contains objects representing each software project
+*   `projects`: [array] Contains objects representing each software project
     *   `status`: [string] The development status of the project
         *   `"Ideation"` - brainstorming phase.
         *   `"Alpha"` - initial prototyping phase and internal testing.
