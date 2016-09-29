@@ -21,8 +21,8 @@ We've created a [sample `code.json`](https://github.com/presidential-innovation-
     *   `license`: [`null` or string] The URL of the project license, if available. `null` should be used if not.
     *   `openSourceProject`: [integer] A value indicating whether or not the project is open source.
 
-    *   `0`: The project is not open source.
-    *   `1`: The project is open source.
+         *   `0`: The project is not open source.
+         *   `1`: The project is open source.
 
     *   `governmentWideReuseProject`: [integer] A value indicating whether or not the project is built for government-wide reuse.
         *   `0`: The project is not built for government-wide reuse.
@@ -47,7 +47,7 @@ We've created a [sample `code.json`](https://github.com/presidential-innovation-
     *   `languages`: [array] A list of strings with the names of the programming languages in use on the project.
     *   `contact`: [object] Information about contacting the project.
         *   `name`: [string] The name of a contact or department for the project
-        *   `twitter`: [string] The username of the project's Twitter account
+        *   `url`: [string] A contact URL for the project
         *   `phone`: [string] The phone number to contact a project.
     *   `partners`: [array] A list of strings containing the acronyms of agencies partnering on the project.
     *   `exemption`: [integer] The exemption that excuses the project from government-wide reuse.
@@ -59,4 +59,4 @@ We've created a [sample `code.json`](https://github.com/presidential-innovation-
     *   `updated`: [object] Dates that the project and metadata have been updated.
         *   `metadataLastUpdated`: [string] A date in YYYY-MM-DD or ISO 8601 format indicating when the metadata in this file was last updated.
         *   `lastCommit`: [string] A date in ISO 8601 format indicating when the last commit to the project repository was.
-        *   `sourceCodeLastModified`: [string] A field intended for closed-source software and software outside of a VCS. The date in YYYY-MM-DD or ISO 8601 format that the source code or package was last updated.
+        *   `lastModified`: [string] A field intended for closed-source software and software outside of a VCS. The date in YYYY-MM-DD or ISO 8601 format that the source code or package was last updated.
