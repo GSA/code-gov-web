@@ -3,7 +3,7 @@ import { inject, TestBed } from '@angular/core/testing';
 // Load the implementations that should be tested
 import { HomeComponent } from './';
 
-describe('AppComponent', () => {
+describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
