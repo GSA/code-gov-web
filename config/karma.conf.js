@@ -5,7 +5,7 @@ module.exports = function(config) {
 
     // base path that will be used to resolve all patterns (e.g. files, exclude)
     basePath: '',
-
+    browserNoActivityTimeout: 100000,
     /*
      * Frameworks to use
      *

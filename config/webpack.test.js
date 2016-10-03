@@ -3,6 +3,7 @@
  */
 
 const helpers = require('./helpers');
+const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 
 /**
  * Webpack Plugins
@@ -203,20 +204,23 @@ module.exports = {
       }
     }),
 
+    new LoaderOptionsPlugin({
+      options: {
+        sassLoader: {
+          includePaths: [
+            require('path').join(__dirname, '../node_modules/uswds/src/stylesheets')
+          ]
+        },
+        tslint: {
+          emitErrors: false,
+          failOnHint: false,
+          resourcePath: 'src'
+        }
+      }
+    })
+
 
   ],
-
-  /**
-   * Static analysis linter for TypeScript advanced options configuration
-   * Description: An extensible linter for the TypeScript language.
-   *
-   * See: https://github.com/wbuchwalter/tslint-loader
-   */
-  tslint: {
-    emitErrors: false,
-    failOnHint: false,
-    resourcePath: 'src'
-  },
 
   /**
    * Include polyfills or mocks for various node stuff
@@ -232,11 +236,4 @@ module.exports = {
     clearImmediate: false,
     setImmediate: false
   },
-
-  sassLoader: {
-    includePaths: [
-      require("bourbon").includePaths,
-      require("bourbon-neat").includePaths,
-    ]
-  }
 };
