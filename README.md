@@ -67,9 +67,8 @@ dedicated to your new file in the appropriate place.
 
 ## Style Guide
 This app follows the
-[official Angular Stlye Guide](https://angular.io/styleguide). When writing new
-or or creating new files, please ensure you follow the naming conventions
-defined in this guide.
+[official Angular Stlye Guide](https://angular.io/styleguide). Please ensure you
+follow the naming conventions defined in this guide.
 
 ## License
 
