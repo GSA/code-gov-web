@@ -1,6 +1,10 @@
 
 # Code.gov - Unlocking the potential of the Federal Government’s software.
 
+[![Build Status](https://circleci.com/gh/presidential-innovation-fellows/code-gov-web.svg?style=shield)](https://circleci.com/gh/presidential-innovation-fellows/code-gov-web)
+[![Code Climate](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web/badges/gpa.svg)](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web)
+[![Test Coverage](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web/badges/coverage.svg)](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web/coverage)
+
 ## Introduction
 
 [Code.gov](https://code.gov) is a website promoting good practices in code development, collaboration, and reuse across the U.S.  Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.
