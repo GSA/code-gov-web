@@ -15,6 +15,7 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './components/app';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { HomeComponent } from './components/home';
+import { PolicyGuideComponent } from './components/policy-guide';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -34,7 +35,8 @@ const APP_PROVIDERS = [
   ],
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PolicyGuideComponent
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
