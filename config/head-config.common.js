@@ -16,23 +16,23 @@
 module.exports = {
   link: [
     /** <link> tags for "apple-touch-icon" (AKA Web Clips). **/
-    { rel: "apple-touch-icon", sizes: "57x57", href: "/assets/img/uswds/favicons/favicon-57.png" },
-    { rel: "apple-touch-icon", sizes: "72x72", href: "/assets/img/uswds/favicons/favicon-72.png" },
-    { rel: "apple-touch-icon", sizes: "114x114", href: "/assets/img/uswds/favicons/favicon-114.png" },
-    { rel: "apple-touch-icon", sizes: "114x114", href: "/assets/img/uswds/favicons/favicon-144.png" },
+    { rel: "apple-touch-icon", sizes: "57x57", href: "/assets/img/favicons/favicon-57.png" },
+    { rel: "apple-touch-icon", sizes: "72x72", href: "/assets/img/favicons/favicon-72.png" },
+    { rel: "apple-touch-icon", sizes: "114x114", href: "/assets/img/favicons/favicon-114.png" },
+    { rel: "apple-touch-icon", sizes: "114x114", href: "/assets/img/favicons/favicon-144.png" },
 
     /** <link> tags for android web app icons **/
-    { rel: "icon", type: "image/png", sizes: "192x192", href: "/assets/img/uswds/favicons/favicon-192.png" },
+    { rel: "icon", type: "image/png", sizes: "192x192", href: "/assets/img/favicons/favicon-192.png" },
 
     /** <link> tags for favicons **/
-    { rel: "icon", href: "/assets/img/uswds/favicons/favicon.ico" },
+    { rel: "icon", href: "/assets/img/favicons/favicon.ico" },
 
     /** <link> tags for a Web App Manifest **/
-    { rel: "manifest", href: "/assets/manifest.json" }
+    { rel: "manifest", href: "/manifest.json" }
   ],
   meta: [
     { name: "msapplication-TileColor", content: "#00bcd4" },
-    { name: "msapplication-TileImage", content: "/assets/img/uswds/favicons/favicon-144.png", "=content": true },
+    { name: "msapplication-TileImage", content: "/assets/img/favicons/favicon-144.png", "=content": true },
     { name: "theme-color", content: "#00bcd4" }
   ]
 };
