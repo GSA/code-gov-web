@@ -1,1 +1,48 @@
 @import '../../../styles/base/all';
+
+.app-links {
+  display: block;
+  float: right;
+  margin-top: 0.75em;
+
+  a {
+    color: $color-gray;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid $brand-blue;
+      color: $brand-blue;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+}
+
+.app-logo {
+  float: left;
+  font-size: 2.15em;
+
+  a {
+    color: $brand-blue;
+  }
+}
+
+.app-navigation {
+  padding: 1em 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.usa-disclaimer {
+  height: auto;
+  padding: 0.5em 0;
+
+  img {
+    max-width: 1.5em;
+  }
+}
