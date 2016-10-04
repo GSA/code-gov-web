@@ -1,1 +1,17 @@
-hound.yml
+# See https://houndci.com/configuration for help.
+coffeescript:
+  # config_file: .coffeescript-style.json
+  enabled: false
+haml:
+  # config_file: .haml-style.yml
+  enabled: false
+javascript:
+  # config_file: .javascript-style.json
+  enabled: false
+  # ignore_file: .javascript_ignore
+ruby:
+  # config_file: .ruby-style.yml
+  enabled: false
+scss:
+  config_file: config/scss-style.yml
+  enabled: true

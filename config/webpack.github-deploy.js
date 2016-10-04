@@ -21,7 +21,9 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
    * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
    * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
    */
-  baseUrl: '/' + GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.metadata.baseUrl)
+  baseUrl:
+    '/site/presidential-innovation-fellows/' +
+    GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.metadata.baseUrl)
 });
 
 module.exports = webpackMerge(webpackConfig, {
@@ -47,7 +49,9 @@ module.exports = webpackMerge(webpackConfig, {
      * Prefixing so every resource will be absolute (otherwise it will be url.com/repoName/repoName...
      * Suffixing since chunks will not do it automatically (testes against about page)
      */
-    publicPath: '/' + GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.output.publicPath)
+    publicPath:
+      '/site/presidential-innovation-fellows/' +
+      GH_REPO_NAME + '/' + ghDeploy.safeUrl(webpackConfig.output.publicPath)
   },
 
   plugins: [
