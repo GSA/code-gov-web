@@ -1,12 +1,13 @@
-const helpers = require('../helpers');
 const execSync = require('child_process').execSync;
+const helpers = require('../helpers');
 
-const REPO_NAME_RE = /Push  URL: https:\/\/github\.com\/.*\/(.*)\.git/;
+const HTTPS_REPO_NAME_RE = /Push  URL: https:\/\/github\.com\/.*\/(.*)\.git/;
+const SSH_REPO_NAME_RE = /Push\s*URL:\s*git@github\.com:.*\/(.*)\.git/;
 
 function getWebpackConfigModule() {
-  if (helpers.hasProcessFlag('github-dev')) {
+  if (helpers.hasProcessFlag('env.github-dev')) {
     return require('../webpack.dev.js');
-  } else if (helpers.hasProcessFlag('github-prod')) {
+  } else if (helpers.hasProcessFlag('env.github-prod')) {
     return require('../webpack.prod.js');
   } else {
     throw new Error('Invalid compile option.');
@@ -16,13 +17,19 @@ function getWebpackConfigModule() {
 function getRepoName(remoteName) {
   remoteName = remoteName || 'origin';
 
-  var stdout = execSync('git remote show ' + remoteName),
-      match = REPO_NAME_RE.exec(stdout);
+  var stdoutHttps = execSync('git remote show ' + remoteName),
+      matchHttps = HTTPS_REPO_NAME_RE.exec(stdoutHttps);
 
-  if (!match) {
-    throw new Error('Could not find a repository on remote ' + remoteName);
-  } else {
-    return match[1];
+  var stdout_ssh = execSync('git remote show ' + remoteName),
+      match_ssh = SSH_REPO_NAME_RE.exec(stdout_ssh);
+
+  if (!matchHttps) {
+     if (!match_ssh) {
+        throw new Error('Could not find a repository on remote ' + remoteName);
+     } else {
+       return match_ssh[1];
+    }} else {
+      return matchHttps[1];
   }
 }
 
