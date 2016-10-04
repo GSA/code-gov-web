@@ -14,6 +14,7 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './components/app';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { DocsComponent } from './components/policy-guide/docs';
 import { HomeComponent } from './components/home';
 import { PolicyGuideComponent } from './components/policy-guide';
 
@@ -35,6 +36,7 @@ const APP_PROVIDERS = [
   ],
   declarations: [
     AppComponent,
+    DocsComponent,
     HomeComponent,
     PolicyGuideComponent
   ],
