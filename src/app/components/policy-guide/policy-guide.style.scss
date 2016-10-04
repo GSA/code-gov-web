@@ -21,4 +21,16 @@
     display: inline-block;
     margin-right: 1.5em;
   }
+
+  .active {
+    a {
+      background-color: $brand-blue-gray;
+      color: $color-white;
+    }
+  }
+}
+
+.policy-guide-content {
+  background-color: $brand-blue-gray;
+  padding-top: 2em;
 }

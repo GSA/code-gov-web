@@ -1,0 +1,14 @@
+@import '../../../../styles/base/all';
+
+.policy-guide-subnav {
+
+  a {
+    color: $color-gray-lightest;
+    font-size: 0.95em;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
