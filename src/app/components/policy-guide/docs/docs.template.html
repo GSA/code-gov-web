@@ -1,13 +1,12 @@
 <nav class="policy-guide-subnav docs-nav">
-  <ul class="usa-unstyled-list">
+  <ul class="usa-sidenav-list">
     <li>
-      <a>Overview</a>
-    </li>
-    <li>
-      <a>Introduction</a>
-    </li>
-    <li>
-      <a>Why It Was Created</a>
+      <a [routerLink]="['overview']" routerLinkActive="usa-current">Overview</a>
+      <ul class="usa-sidenav-sub_list">
+        <li>
+          <a [routerLink]="['overview/introduction']" routerLinkActive="usa-current">Introduction</a>
+        </li>
+      </ul>
     </li>
     <li>
       <a>Compliance</a>
@@ -19,4 +18,5 @@
 </nav>
 
 <section class="docs-content">
+  <router-outlet></router-outlet>
 </section>
