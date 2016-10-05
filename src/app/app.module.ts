@@ -17,6 +17,10 @@ import { AppComponent } from './components/app';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { DocsComponent } from './components/policy-guide/docs';
 import { HomeComponent } from './components/home';
+import {
+  IntroductionComponent
+} from './components/policy-guide/docs/overview/introduction';
+import { OverviewComponent } from './components/policy-guide/docs/overview';
 import { PolicyGuideComponent } from './components/policy-guide';
 
 // Application wide providers
@@ -39,6 +43,8 @@ const APP_PROVIDERS = [
     AppComponent,
     DocsComponent,
     HomeComponent,
+    IntroductionComponent,
+    OverviewComponent,
     PolicyGuideComponent
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

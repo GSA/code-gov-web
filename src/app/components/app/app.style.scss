@@ -13,6 +13,12 @@
       border-bottom: 2px solid $brand-blue;
       color: $brand-blue;
     }
+
+    &.active {
+      border-bottom: 2px solid $brand-blue;
+      color: $brand-blue;
+      font-weight: bold;
+    }
   }
 
   li {
@@ -27,6 +33,11 @@
 
   a {
     color: $brand-blue;
+
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
   }
 }
 

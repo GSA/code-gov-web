@@ -7,3 +7,32 @@ label {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+  &:focus {
+    box-shadow: 0 0 3px rgba($color-gray-dark, 0.25), 0 0 7px rgba($color-gray-dark, 0.25);
+    outline: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+h6 {
+  color: $color-gray-dark;
+  font-family: $header-font-family;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+p {
+  color: $color-gray;
+
+  @include media($medium-screen) {
+    font-size: 1.1em;
+  }
+}
