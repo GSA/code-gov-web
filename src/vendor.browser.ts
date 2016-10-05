@@ -21,7 +21,6 @@ import '@angularclass/hmr';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 
-import 'uswds/dist/js/uswds.min.js';
 
 if ('production' === ENV) {
   // Production

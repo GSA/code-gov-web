@@ -250,7 +250,7 @@ module.exports = {
      */
     new HtmlElementsPlugin({
       headTags: require('./head-config.common')
-    })
+    }),
   ],
 
   /*
@@ -270,7 +270,8 @@ module.exports = {
 
   sassLoader: {
     includePaths: [
-      require('path').join(__dirname, '../node_modules/uswds/src/stylesheets')
+      require('bourbon').includePaths,
+      require('bourbon-neat').includePaths
     ]
   },
 

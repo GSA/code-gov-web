@@ -206,16 +206,17 @@ module.exports = {
 
     new LoaderOptionsPlugin({
       options: {
-        sassLoader: {
-          includePaths: [
-            require('path').join(__dirname, '../node_modules/uswds/src/stylesheets')
-          ]
-        },
         tslint: {
           emitErrors: false,
           failOnHint: false,
           resourcePath: 'src'
-        }
+        },
+        sassLoader: {
+         includePaths: [
+           require('bourbon').includePaths,
+           require('bourbon-neat').includePaths
+         ]
+        },
       }
     })
 
@@ -228,6 +229,7 @@ module.exports = {
    *
    * See: https://webpack.github.io/docs/configuration.html#node
    */
+
   node: {
     global: 'window',
     process: false,
