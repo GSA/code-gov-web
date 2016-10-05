@@ -33,6 +33,9 @@ Thumbs.db
 /bower_components
 npm-debug.log
 
+# Webpack Files #
+stats.json
+
 # Coverage #
 /coverage/
 
