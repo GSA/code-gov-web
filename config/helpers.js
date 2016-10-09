@@ -16,16 +16,21 @@ function root(args) {
   return path.join.apply(path, [ROOT].concat(args));
 }
 
-function checkNodeImport(context, request, cb) {
+function checkNodeImport(request, cb) {
   if (!path.isAbsolute(request) && request.charAt(0) !== '.') {
-    cb(null, 'commonjs ' + request); return;
+    cb(null, 'commonjs ' + request);
+    return;
   }
   cb();
 }
 
 function prepend(extensions, args) {
   args = args || [];
-  if (!Array.isArray(args)) { args = [args]; }
+
+  if (!Array.isArray(args)) {
+    args = [args];
+  }
+
   return extensions.reduce(function(memo, val) {
       return memo.concat(val, args.map(function(prefix) {
           return prefix + val;

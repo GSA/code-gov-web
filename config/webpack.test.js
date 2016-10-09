@@ -47,8 +47,7 @@ module.exports = {
     /**
      * Make sure root is src
      */
-    root: helpers.root('src'),
-
+    root: helpers.root('src')
   },
 
   /**
@@ -149,7 +148,6 @@ module.exports = {
        * See: https://github.com/webpack/raw-loader
        */
       { test: /\.html$/, loader: 'raw-loader', exclude: [helpers.root('src/index.html')] }
-
     ],
 
     /**
@@ -173,7 +171,6 @@ module.exports = {
           /node_modules/
         ]
       }
-
     ]
   },
 
@@ -200,7 +197,7 @@ module.exports = {
       'process.env': {
         'ENV': JSON.stringify(ENV),
         'NODE_ENV': JSON.stringify(ENV),
-        'HMR': false,
+        'HMR': false
       }
     }),
 
@@ -216,11 +213,9 @@ module.exports = {
            require('bourbon').includePaths,
            require('bourbon-neat').includePaths
          ]
-        },
+        }
       }
     })
-
-
   ],
 
   /**
@@ -237,5 +232,5 @@ module.exports = {
     module: false,
     clearImmediate: false,
     setImmediate: false
-  },
+  }
 };
