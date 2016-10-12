@@ -128,7 +128,7 @@ module.exports = webpackMerge(commonConfig, {
       'process.env': {
         'ENV': JSON.stringify(METADATA.ENV),
         'NODE_ENV': JSON.stringify(METADATA.ENV),
-        'HMR': METADATA.HMR,
+        'HMR': METADATA.HMR
       }
     }),
 
@@ -172,7 +172,7 @@ module.exports = webpackMerge(commonConfig, {
     new NormalModuleReplacementPlugin(
       /angular2-hmr/,
       helpers.root('config/modules/angular2-hmr-prod.js')
-    ),
+    )
 
     /**
      * Plugin: IgnorePlugin
@@ -195,7 +195,6 @@ module.exports = webpackMerge(commonConfig, {
     //   regExp: /\.css$|\.html$|\.js$|\.map$/,
     //   threshold: 2 * 1024
     // })
-
   ],
 
   /**
@@ -225,7 +224,7 @@ module.exports = webpackMerge(commonConfig, {
       [/\*/, /(?:)/],
       [/\[?\(?/, /(?:)/]
     ],
-    customAttrAssign: [/\)?\]?=/]
+    customAttrAssign: [/\)?]?=/]
   },
 
   /*
@@ -242,5 +241,4 @@ module.exports = webpackMerge(commonConfig, {
     clearImmediate: false,
     setImmediate: false
   }
-
 });

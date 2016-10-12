@@ -56,7 +56,7 @@ module.exports = webpackMerge(webpackConfig, {
 
   plugins: [
     function() {
-      this.plugin("done", function(stats) {
+      this.plugin('done', function() {
         console.log('Starting deployment to GitHub.');
 
         const logger = function (msg) {
