@@ -1,0 +1,17 @@
+section_id,section_name,content_id,content_required_date,content_policy_cite,content_status,content_name,content_description
+1,Overview,1,,,very rough draft,About the policy,
+1,Overview,2,,,,Inventorying and sharing code,
+1,Overview,3,120 days,5.1,very rough draft,The open source pilot,
+1,Overview,4,90 days,7.7,rough draft,Tracking our progress,
+2,Booting up,5,,,rough draft,Overview - what's required?,Key dates and activities
+2,Booting up,6,,,,Acquiring code,How to meet the new software acquisition requirements
+2,Booting up,7,90 days,5.1,rough draft,Measuring code, How to measure source code 
+2,Booting up,8,90 days,7.5,internal review,Licensing,How to license open source code
+2,Booting up,9,,7.2,rough draft,Inventorying your code,Working with the schema and building your inventory
+2,Booting up,10,120 days,7.2,rough draft,Metadata schema,Metadata schema definition
+3,Building capacity,11,,,,Introduction,Building your agency's open source practice
+3,Building capacity,12,90 days,7.1,research,The basics,Building and maintaining custom code
+3,Building capacity,13,90 days,7.1,research,Security and open source,Tips on developing in the open to improve information security
+2,Building capacity,14,,5.2,,Collaborating with the Open Source community,Collaborating with the OSS Community
+3,Building capacity,15,,,,Interagency code sharing,How agencies can get the most value out of pooling their code
+3,Building capacity,16,,7.4,,Resources,Tools and resources for agencies
