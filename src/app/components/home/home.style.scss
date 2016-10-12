@@ -3,3 +3,28 @@
 body {
   background-color: $color-white;
 }
+
+.about {
+  background-color: $color-gray-lightest;
+  padding: 3em 0;
+}
+
+.banner {
+  padding: 6em 0 8em;
+
+  h1 {
+    color: $brand-blue;
+    font-size: 2.75em;
+    font-weight: 300;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+}
+
+.banner-content {
+  max-width: 30em;
+}

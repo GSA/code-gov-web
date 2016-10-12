@@ -1,5 +1,48 @@
 @import '../../../styles/base/all';
 
+.agency-logos {
+
+  li {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  .gsa,
+  .pif {
+    max-width: 2.75em;
+  }
+
+  .whitehouse {
+    max-width: 4em;
+  }
+}
+
+.app-footer {
+  background-color: $color-gray-lightest;
+  padding: 2em 0 3em;
+
+  label {
+    color: $color-gray;
+    font-size: 0.9em;
+    margin-top: 0;
+  }
+
+  .email {
+    border: 1px solid lighten($color-gray, 20);
+    font-size: 0.9em;
+  }
+
+  .submit {
+    @include transition(all 0.2s ease);
+    font-size: 0.9em;
+    margin: 0.5em 0 0;
+
+    &:hover {
+      @include transform(translateY(-2px));
+    }
+  }
+}
+
 .app-links {
   display: block;
   float: right;
@@ -46,6 +89,26 @@
 
   a {
     text-decoration: none;
+  }
+}
+
+.footer-links {
+  margin-bottom: 1em;
+
+  a {
+    color: $color-gray;
+    font-size: 0.9em;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid $brand-blue;
+      color: $brand-blue;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 0.5em;
   }
 }
 
