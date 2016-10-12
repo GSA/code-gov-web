@@ -63,4 +63,4 @@ Section 7.2 and 7.3 of the Federal Source Code Policy require covered agencies t
         
 ## Example `code.json`
 
-We've created a [sample `code.json`](https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/_draft_content/schema/code.json).
+We've created a [sample `code.json`](https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/_draft_content/02_compliance/schema/code.json).
