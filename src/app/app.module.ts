@@ -21,6 +21,9 @@ import {
   IntroductionComponent
 } from './components/policy-guide/docs/overview/introduction';
 import { OverviewComponent } from './components/policy-guide/docs/overview';
+import {
+  OverviewInventoryComponent
+} from './components/policy-guide/docs/overview/overview-inventory';
 import { PolicyGuideComponent } from './components/policy-guide';
 
 // Application wide providers
@@ -45,6 +48,7 @@ const APP_PROVIDERS = [
     HomeComponent,
     IntroductionComponent,
     OverviewComponent,
+    OverviewInventoryComponent,
     PolicyGuideComponent
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
