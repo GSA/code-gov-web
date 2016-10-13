@@ -1,18 +1,15 @@
 import { Routes, RouterModule } from '@angular/router';
-import { DocsComponent } from './components/policy-guide/docs';
-import { HomeComponent } from './components/home';
 import {
-  IntroductionComponent
-} from './components/policy-guide/docs/overview/introduction';
-import { OverviewComponent } from './components/policy-guide/docs/overview';
-import {
-  OverviewInventoryComponent
-} from './components/policy-guide/docs/overview/overview-inventory';
-import {
-  OverviewPilotComponent
-} from './components/policy-guide/docs/overview/overview-pilot';
-import { PolicyGuideComponent } from './components/policy-guide';
-
+  AppComponent,
+  DocsComponent,
+  HomeComponent,
+  IntroductionComponent,
+  OverviewComponent,
+  OverviewInventoryComponent,
+  OverviewPilotComponent,
+  OverviewTrackingProgressComponent,
+  PolicyGuideComponent
+}from './app.components';
 import { DataResolver } from './app.resolver';
 
 
@@ -33,8 +30,12 @@ export const ROUTES: Routes = [
             component: OverviewComponent,
             children: [
               { path: 'introduction', component: IntroductionComponent },
-              { path: 'inventory', component: OverviewInventoryComponent }
-              { path: 'pilot', component: OverviewPilotComponent }
+              { path: 'inventory', component: OverviewInventoryComponent },
+              { path: 'pilot', component: OverviewPilotComponent },
+              {
+                path: 'tracking-progress',
+                component: OverviewTrackingProgressComponent
+              }
             ]
           }
         ]

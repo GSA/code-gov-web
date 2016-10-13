@@ -13,21 +13,18 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
-import { AppComponent } from './components/app';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { DocsComponent } from './components/policy-guide/docs';
-import { HomeComponent } from './components/home';
 import {
-  IntroductionComponent
-} from './components/policy-guide/docs/overview/introduction';
-import { OverviewComponent } from './components/policy-guide/docs/overview';
-import {
-  OverviewInventoryComponent
-} from './components/policy-guide/docs/overview/overview-inventory';
-import {
-  OverviewPilotComponent
-} from './components/policy-guide/docs/overview/overview-pilot';
-import { PolicyGuideComponent } from './components/policy-guide';
+  AppComponent,
+  DocsComponent,
+  HomeComponent,
+  IntroductionComponent,
+  OverviewComponent,
+  OverviewInventoryComponent,
+  OverviewPilotComponent,
+  OverviewTrackingProgressComponent,
+  PolicyGuideComponent
+}from './app.components';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -53,6 +50,7 @@ const APP_PROVIDERS = [
     OverviewComponent,
     OverviewInventoryComponent,
     OverviewPilotComponent,
+    OverviewTrackingProgressComponent,
     PolicyGuideComponent
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
