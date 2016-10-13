@@ -1,4 +1,22 @@
-## This project is in the public domain
+## A few parts of this project are not in the public domain
+
+### Files licensed under the SIL Open Font License
+
+The Source Sans Pro font files in `src/assets/fonts` are a customized subset of [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Adobe Systems Incorporated](http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+
+The Merriweather font files in `src/assets/fonts` are from [Google Web Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Merriweather:400,300,400italic,700,700italic), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Sorkin Type Co](www.sorkintype.com) with Reserved Font Name 'Merriweather'.
+
+The files in `src/assets/fonts` are from [Font Awesome](http://fontawesome.io/) by Dave Gandy under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+
+### AngularClass project files
+
+This project originated as the [angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter) and was created by [AngularClass](https://github.com/AngularClass). These files are licensed under the MIT license located in the root directory as `AngularClass License.txt`.
+
+### Project dependencies
+
+This project is built on dozens of dependencies, all with varying licenses. For a detailed overview of each of these licenses and their dependencies, you can review the `dependency_licenses.json` file in the root directory of this project.
+
+## The rest of this project is in the public domain
 
 As a work of the United States Government, this project is in the
 public domain within the United States.
