@@ -5,6 +5,9 @@ import {
   IntroductionComponent
 } from './components/policy-guide/docs/overview/introduction';
 import { OverviewComponent } from './components/policy-guide/docs/overview';
+import {
+  OverviewInventoryComponent
+} from './components/policy-guide/docs/overview/overview-inventory';
 import { PolicyGuideComponent } from './components/policy-guide';
 
 import { DataResolver } from './app.resolver';
@@ -16,16 +19,18 @@ export const ROUTES: Routes = [
     path: 'policy-guide',
     component: PolicyGuideComponent,
     children: [
+      { path: '', redirectTo: 'docs/overview/introduction'},
       {
         path: 'docs',
         component: DocsComponent,
         children: [
+          { path: '', redirectTo: 'overview/introduction'},
           {
             path: 'overview',
             component: OverviewComponent,
             children: [
-              { path: 'introduction', component: IntroductionComponent
-              }
+              { path: 'introduction', component: IntroductionComponent }
+              { path: 'inventory', component: OverviewInventoryComponent }
             ]
           }
         ]
