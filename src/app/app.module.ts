@@ -17,6 +17,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import {
   AppComponent,
   ComplianceComponent,
+  ComplianceAcquiringCodeComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
   HomeComponent,
@@ -26,7 +27,7 @@ import {
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent
-}from './app.components';
+} from './app.components';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -47,6 +48,7 @@ const APP_PROVIDERS = [
   declarations: [
     AppComponent,
     ComplianceComponent,
+    ComplianceAcquiringCodeComponent,
     ComplianceWhatsRequiredComponent,
     DocsComponent,
     HomeComponent,

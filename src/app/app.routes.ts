@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import {
-  AppComponent,
   ComplianceComponent,
+  ComplianceAcquiringCodeComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
   HomeComponent,
@@ -46,6 +46,10 @@ export const ROUTES: Routes = [
             component: ComplianceComponent,
             children: [
               { path: '', redirectTo: 'whats-required'},
+              {
+                path: 'acquiring-code',
+                component: ComplianceAcquiringCodeComponent
+              },
               {
                 path: 'whats-required',
                 component: ComplianceWhatsRequiredComponent
