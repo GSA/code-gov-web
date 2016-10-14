@@ -16,6 +16,8 @@ import { ROUTES } from './app.routes';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import {
   AppComponent,
+  ComplianceComponent,
+  ComplianceWhatsRequiredComponent,
   DocsComponent,
   HomeComponent,
   IntroductionComponent,
@@ -44,6 +46,8 @@ const APP_PROVIDERS = [
   ],
   declarations: [
     AppComponent,
+    ComplianceComponent,
+    ComplianceWhatsRequiredComponent,
     DocsComponent,
     HomeComponent,
     IntroductionComponent,
