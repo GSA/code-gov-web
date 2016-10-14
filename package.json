@@ -55,7 +55,8 @@
     "preversion": "npm test",
     "version": "npm run build",
     "postversion": "git push && git push --tags",
-    "postinstall": "typings install"
+    "postinstall": "typings install",
+    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json"
   },
   "dependencies": {
     "@angular/common": "^2.0.0-rc.6",
