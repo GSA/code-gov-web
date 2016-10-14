@@ -2,6 +2,10 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   ComplianceComponent,
   ComplianceAcquiringCodeComponent,
+  ComplianceInventoryCodeComponent,
+  ComplianceLicensingComponent,
+  ComplianceMeasuringCodeComponent,
+  ComplianceMetadataSchemaComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
   HomeComponent,
@@ -11,7 +15,7 @@ import {
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent
-}from './app.components';
+}from './utils/app-components';
 import { DataResolver } from './app.resolver';
 
 
@@ -49,6 +53,22 @@ export const ROUTES: Routes = [
               {
                 path: 'acquiring-code',
                 component: ComplianceAcquiringCodeComponent
+              },
+              {
+                path: 'inventory-code',
+                component: ComplianceInventoryCodeComponent
+              },
+              {
+                path: 'licensing',
+                component: ComplianceLicensingComponent
+              },
+              {
+                path: 'measuring-code',
+                component: ComplianceMeasuringCodeComponent
+              },
+              {
+                path: 'metadata-schema',
+                component: ComplianceMetadataSchemaComponent
               },
               {
                 path: 'whats-required',
