@@ -3,6 +3,9 @@ export { APP_RESOLVER_PROVIDERS } from './app.resolver';
 
 export { ComplianceComponent } from './components/policy-guide/docs/compliance';
 export {
+  ComplianceAcquiringCodeComponent
+} from './components/policy-guide/docs/compliance/compliance-acquiring-code';
+export {
   ComplianceWhatsRequiredComponent
 } from './components/policy-guide/docs/compliance/compliance-whats-required';
 
