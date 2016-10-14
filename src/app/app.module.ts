@@ -14,20 +14,8 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import {
-  AppComponent,
-  ComplianceComponent,
-  ComplianceAcquiringCodeComponent,
-  ComplianceWhatsRequiredComponent,
-  DocsComponent,
-  HomeComponent,
-  IntroductionComponent,
-  OverviewComponent,
-  OverviewInventoryComponent,
-  OverviewPilotComponent,
-  OverviewTrackingProgressComponent,
-  PolicyGuideComponent
-} from './app.components';
+import { AppComponent } from './utils/app-components';
+import { APP_COMPONENTS } from './utils/app-components';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -46,18 +34,7 @@ const APP_PROVIDERS = [
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   declarations: [
-    AppComponent,
-    ComplianceComponent,
-    ComplianceAcquiringCodeComponent,
-    ComplianceWhatsRequiredComponent,
-    DocsComponent,
-    HomeComponent,
-    IntroductionComponent,
-    OverviewComponent,
-    OverviewInventoryComponent,
-    OverviewPilotComponent,
-    OverviewTrackingProgressComponent,
-    PolicyGuideComponent
+    APP_COMPONENTS
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
