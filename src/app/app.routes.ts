@@ -1,6 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 import {
   AppComponent,
+  ComplianceComponent,
+  ComplianceWhatsRequiredComponent,
   DocsComponent,
   HomeComponent,
   IntroductionComponent,
@@ -29,12 +31,24 @@ export const ROUTES: Routes = [
             path: 'overview',
             component: OverviewComponent,
             children: [
+              { path: '', redirectTo: 'introduction'},
               { path: 'introduction', component: IntroductionComponent },
               { path: 'inventory', component: OverviewInventoryComponent },
               { path: 'pilot', component: OverviewPilotComponent },
               {
                 path: 'tracking-progress',
                 component: OverviewTrackingProgressComponent
+              }
+            ]
+          },
+          {
+            path: 'compliance',
+            component: ComplianceComponent,
+            children: [
+              { path: '', redirectTo: 'whats-required'},
+              {
+                path: 'whats-required',
+                component: ComplianceWhatsRequiredComponent
               }
             ]
           }

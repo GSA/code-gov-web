@@ -28,6 +28,13 @@
     }
   }
 
+  .usa-current {
+
+    .usa-sidenav-sub_list {
+      display: block;
+    }
+  }
+
   .usa-sidenav-list {
 
     a {
@@ -36,5 +43,9 @@
         background-color: darken($brand-blue-gray, 10);
       }
     }
+  }
+
+  .usa-sidenav-sub_list {
+    display: none;
   }
 }

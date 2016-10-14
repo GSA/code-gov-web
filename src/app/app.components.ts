@@ -1,10 +1,18 @@
 export { AppComponent } from './components/app';
 export { APP_RESOLVER_PROVIDERS } from './app.resolver';
+
+export { ComplianceComponent } from './components/policy-guide/docs/compliance';
+export {
+  ComplianceWhatsRequiredComponent
+} from './components/policy-guide/docs/compliance/compliance-whats-required';
+
 export { DocsComponent } from './components/policy-guide/docs';
 export { HomeComponent } from './components/home';
+
 export {
   IntroductionComponent
 } from './components/policy-guide/docs/overview/introduction';
+
 export { OverviewComponent } from './components/policy-guide/docs/overview';
 export {
   OverviewInventoryComponent
@@ -15,4 +23,5 @@ export {
 export {
   OverviewTrackingProgressComponent
 } from './components/policy-guide/docs/overview/overview-tracking-progress';
+
 export { PolicyGuideComponent } from './components/policy-guide';
