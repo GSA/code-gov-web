@@ -25,6 +25,12 @@
   li {
     display: inline-block;
     margin-right: 1.5em;
+
+    i {
+      font-size: 0.9em;
+      margin-left: 0.4em;
+      vertical-align: middle;
+    }
   }
 
   .active {

@@ -1,5 +1,12 @@
 import {
   AppComponent,
+  CapacityComponent,
+  CapacityBasicsComponent,
+  CapacityCollaborationComponent,
+  CapacityInteragencySharingComponent,
+  CapacityIntroductionComponent,
+  CapacitySecurityComponent,
+  CapacityResourcesComponent,
   ComplianceComponent,
   ComplianceAcquiringCodeComponent,
   ComplianceInventoryCodeComponent,
@@ -19,6 +26,13 @@ import {
 
 export const APP_COMPONENTS = [
   AppComponent,
+  CapacityComponent,
+  CapacityBasicsComponent,
+  CapacityCollaborationComponent,
+  CapacityInteragencySharingComponent,
+  CapacityIntroductionComponent,
+  CapacityResourcesComponent,
+  CapacitySecurityComponent,
   ComplianceComponent,
   ComplianceAcquiringCodeComponent,
   ComplianceInventoryCodeComponent,
