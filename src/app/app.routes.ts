@@ -1,5 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
 import {
+  CapacityComponent,
+  CapacityBasicsComponent,
+  CapacityCollaborationComponent,
+  CapacityInteragencySharingComponent,
+  CapacityIntroductionComponent,
+  CapacityResourcesComponent,
+  CapacitySecurityComponent,
   ComplianceComponent,
   ComplianceAcquiringCodeComponent,
   ComplianceInventoryCodeComponent,
@@ -15,7 +22,7 @@ import {
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent
-}from './utils/app-components';
+} from './utils/app-components';
 import { DataResolver } from './app.resolver';
 
 
@@ -32,17 +39,25 @@ export const ROUTES: Routes = [
         children: [
           { path: '', redirectTo: 'overview/introduction'},
           {
-            path: 'overview',
-            component: OverviewComponent,
+            path: 'capacity-building',
+            component: CapacityComponent,
             children: [
-              { path: '', redirectTo: 'introduction'},
-              { path: 'introduction', component: IntroductionComponent },
-              { path: 'inventory', component: OverviewInventoryComponent },
-              { path: 'pilot', component: OverviewPilotComponent },
+              { path: '', redirectTo: 'introduction' },
+              { path: 'basics', component: CapacityBasicsComponent },
               {
-                path: 'tracking-progress',
-                component: OverviewTrackingProgressComponent
-              }
+                path: 'collaboration',
+                component: CapacityCollaborationComponent
+              },
+              {
+                path: 'interagency-sharing',
+                component: CapacityInteragencySharingComponent
+              },
+              {
+                path: 'introduction',
+                component: CapacityIntroductionComponent
+              },
+              { path: 'resources', component: CapacityResourcesComponent },
+              { path: 'security', component: CapacitySecurityComponent }
             ]
           },
           {
@@ -73,6 +88,20 @@ export const ROUTES: Routes = [
               {
                 path: 'whats-required',
                 component: ComplianceWhatsRequiredComponent
+              }
+            ]
+          },
+          {
+            path: 'overview',
+            component: OverviewComponent,
+            children: [
+              { path: '', redirectTo: 'introduction'},
+              { path: 'introduction', component: IntroductionComponent },
+              { path: 'inventory', component: OverviewInventoryComponent },
+              { path: 'pilot', component: OverviewPilotComponent },
+              {
+                path: 'tracking-progress',
+                component: OverviewTrackingProgressComponent
               }
             ]
           }
