@@ -1,0 +1,19 @@
+@import '../../../../../styles/base/all';
+
+.sidebar-agencies-list {
+  img {
+    left: 0.5em;
+    max-width: 1.5em;
+    position: absolute;
+  }
+
+  li {
+    font-size: 0.9em;
+    position: relative;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 1.75em;
+  }
+}

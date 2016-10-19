@@ -1,4 +1,7 @@
 import {
+  AgenciesComponent,
+  AgencyComponent,
+  AgencySidebarComponent,
   AppComponent,
   CapacityComponent,
   CapacityBasicsComponent,
@@ -15,6 +18,7 @@ import {
   ComplianceMetadataSchemaComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
+  ExploreCodeComponent,
   HomeComponent,
   IntroductionComponent,
   OverviewComponent,
@@ -25,6 +29,9 @@ import {
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
+  AgenciesComponent,
+  AgencyComponent,
+  AgencySidebarComponent,
   AppComponent,
   CapacityComponent,
   CapacityBasicsComponent,
@@ -41,6 +48,7 @@ export const APP_COMPONENTS = [
   ComplianceMetadataSchemaComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
+  ExploreCodeComponent,
   HomeComponent,
   IntroductionComponent,
   OverviewComponent,

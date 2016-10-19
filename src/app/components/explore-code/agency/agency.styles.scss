@@ -1,0 +1,19 @@
+@import '../../../../styles/base/all';
+@import '../../../../styles/utils/all';
+
+.repo {
+
+  a {
+    @extend %card;
+    color: $color-gray;
+    display: block;
+    font-size: 0.95em;
+    margin-bottom: 1em;
+    text-decoration: none;
+  }
+
+  p {
+    font-size: 0.95em;
+    margin: 0;
+  }
+}

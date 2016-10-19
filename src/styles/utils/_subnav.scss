@@ -1,0 +1,41 @@
+%subnav {
+  background-color: $color-gray-lightest;
+
+  a {
+    color: $color-gray;
+    display: inline-block;
+    font-size: 0.95em;
+    font-weight: bold;
+    padding: 0.75em 1.25em;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $brand-blue-gray;
+      color: $color-white;
+    }
+
+    &.active {
+      background-color: $brand-blue-gray;
+      color: $color-white;
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1.5em;
+
+    i {
+      font-size: 0.9em;
+      margin-left: 0.4em;
+      vertical-align: middle;
+    }
+  }
+
+  .active {
+
+    a {
+      background-color: $brand-blue-gray;
+      color: $color-white;
+    }
+  }
+}

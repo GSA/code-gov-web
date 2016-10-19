@@ -16,10 +16,14 @@ import { ROUTES } from './app.routes';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
+import { AgencyService, AGENCIES } from './services/agency';
+import { ReposService } from './services/repos';
 
 // Application wide providers
 const APP_PROVIDERS = [
-  ...APP_RESOLVER_PROVIDERS
+  ...APP_RESOLVER_PROVIDERS,
+  AgencyService,
+  ReposService
 ];
 
 /**

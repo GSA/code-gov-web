@@ -1,0 +1,575 @@
+{
+  "total": 209,
+  "repos": [
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/LaborStats-Android.git",
+      "name": "LaborStats-Android",
+      "repoID": "9077093",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "Get the latest economic indicators from BLS & ETA ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "latest"
+        },
+        {
+          "tag": "economic"
+        },
+        {
+          "tag": "indicators"
+        },
+        {
+          "tag": "bls"
+        },
+        {
+          "tag": "eta"
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "Java"
+        }
+      ],
+      "agency": "DOL"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/Mobile-Accessibility-Test-Script.git",
+      "name": "Mobile-Accessibility-Test-Script",
+      "repoID": "9297086",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "A selection of test cases used to test accessibility and Section 508 compliance of mobile applications ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "selection"
+        },
+        {
+          "tag": "test"
+        },
+        {
+          "tag": "cases"
+        },
+        {
+          "tag": "used"
+        },
+        {
+          "tag": "test"
+        },
+        {
+          "tag": "accessibility"
+        },
+        {
+          "tag": "section"
+        },
+        {
+          "tag": "508"
+        },
+        {
+          "tag": "compliance"
+        },
+        {
+          "tag": "mobile"
+        },
+        {
+          "tag": "applications"
+        }
+      ],
+      "codeLanguage": [],
+      "agency": "DOL"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/Ruby-Sample-App.git",
+      "name": "Ruby-Sample-App",
+      "repoID": "10005043",
+      "homepage": "",
+      "downloadURL": " ",
+      "description": "A sample app using the Ruby Federal SDK. Documentation can be found at http://USDepartmentofLabor.github.io/Ruby-Sample-App. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "sample"
+        },
+        {
+          "tag": "app"
+        },
+        {
+          "tag": "using"
+        },
+        {
+          "tag": "ruby"
+        },
+        {
+          "tag": "federal"
+        },
+        {
+          "tag": "sdk"
+        },
+        {
+          "tag": "documentation"
+        },
+        {
+          "tag": "found"
+        },
+        {
+          "tag": "http"
+        },
+        {
+          "tag": "usdepartmentoflabor"
+        },
+        {
+          "tag": "github"
+        },
+        {
+          "tag": "io"
+        },
+        {
+          "tag": "ruby"
+        },
+        {
+          "tag": "sample"
+        },
+        {
+          "tag": "app"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "Ruby"
+        }
+      ],
+      "agency": "DOL"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/Swift-Sample-App.git",
+      "name": "Swift-Sample-App",
+      "repoID": "21164368",
+      "homepage": "http://usdepartmentoflabor.github.io/Swift-Sample-App/",
+      "downloadURL": " ",
+      "description": "Sample app using the Swift Federal Data SDK. For documentation and a how-to, see: ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "sample"
+        },
+        {
+          "tag": "app"
+        },
+        {
+          "tag": "using"
+        },
+        {
+          "tag": "swift"
+        },
+        {
+          "tag": "federal"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "sdk"
+        },
+        {
+          "tag": "documentation"
+        },
+        {
+          "tag": "see"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "Swift"
+        }
+      ],
+      "agency": "DOL"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
+      "name": "data-act-broker-web-app",
+      "repoID": "47277547",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "null ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [],
+      "codeLanguage": [
+        {
+          "language": "JavaScript"
+        }
+      ],
+      "agency": "TRE"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/fedspendingtransparency/DATAActStyleGuide.git",
+      "name": "DATAActStyleGuide",
+      "repoID": "56064792",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "A style guide for the DATA Act site and broker ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "style"
+        },
+        {
+          "tag": "guide"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "act"
+        },
+        {
+          "tag": "site"
+        },
+        {
+          "tag": "broker"
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "CSS"
+        }
+      ],
+      "agency": "TRE"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USEPA/XCode-RadNet-Sample-Envirofacts-API.git",
+      "name": "XCode-RadNet-Sample-Envirofacts-API",
+      "repoID": "11643888",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "iOS Sample Envirofacts RadNet Representational State Transfer (REST) Application Programming Interface (API) ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "ios"
+        },
+        {
+          "tag": "sample"
+        },
+        {
+          "tag": "envirofacts"
+        },
+        {
+          "tag": "radnet"
+        },
+        {
+          "tag": "representational"
+        },
+        {
+          "tag": "state"
+        },
+        {
+          "tag": "transfer"
+        },
+        {
+          "tag": "rest"
+        },
+        {
+          "tag": "application"
+        },
+        {
+          "tag": "programming"
+        },
+        {
+          "tag": "interface"
+        },
+        {
+          "tag": "api"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "Objective-C"
+        }
+      ],
+      "agency": "EPA"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USEPA/Stormwater-Management-Model.git",
+      "name": "Stormwater-Management-Model",
+      "repoID": "17753855",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "ORD Stormwater Management Model repository ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "ord"
+        },
+        {
+          "tag": "stormwater"
+        },
+        {
+          "tag": "management"
+        },
+        {
+          "tag": "model"
+        },
+        {
+          "tag": "repository"
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "C"
+        }
+      ],
+      "agency": "EPA"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USEPA/introR.git",
+      "name": "introR",
+      "repoID": "28233402",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "ORD - introR ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "ord"
+        },
+        {
+          "tag": "intror"
+        }
+      ],
+      "codeLanguage": [],
+      "agency": "EPA"
+    },
+    {
+      "vcs": "git",
+      "repository": "git://github.com/USEPA/epa-data.git",
+      "name": "epa-data",
+      "repoID": "34909654",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "null ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [],
+      "codeLanguage": [],
+      "agency": "EPA"
+    }
+  ]
+}
