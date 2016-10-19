@@ -1,0 +1,23 @@
+<div *ngIf="agency">
+  <h1>{{agency.name}}</h1>
+
+  <ul class="repos-list usa-unstyled-list">
+    <li *ngFor="let repo of repos" class="repo">
+      <a href="#">
+        <h3 class="repo-name">{{ repo.name }}</h3>
+        <p class="repo-description">
+          {{ repo.description }}
+        </p>
+        <p class="language">
+          {{ repo.language }}
+        </p>
+      </a>
+    </li>
+  </ul>
+
+  <div *ngIf="!hasRepos">
+    <p>
+      No repositories found.
+    </p>
+  </div>
+</div>

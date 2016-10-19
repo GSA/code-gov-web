@@ -1,0 +1,9 @@
+@import '../../../../styles/base/all';
+
+.agencies-content {
+  @include span-columns(9);
+}
+
+.sidebar-agencies {
+  @include span-columns(3);
+}
