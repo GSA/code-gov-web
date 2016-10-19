@@ -39,4 +39,4 @@ A number of communities of practice exist that agency practitioners can use to k
 - education
 - France
 - llvm
-- 
+- ..
