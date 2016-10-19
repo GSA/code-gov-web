@@ -35,6 +35,11 @@ A number of communities of practice exist that agency practitioners can use to k
 - security listserv
 - digital service listserv
 
+## Acquisitions
+- TechFAR
+- DFAR
+- ..
+
 ## Analogous work in related fields
 - education
 - France
