@@ -25,7 +25,7 @@ Increasingly, these tools can be configured to reflect the specific security pol
 Tools to consider include:
 - [Clouseau](https://github.com/cfpb/clouseau)
 - [Poirot](https://github.com/emanuelfeld/poirot)
-- 
+- ..
 
 
 ## Development practices for government
