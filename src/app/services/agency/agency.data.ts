@@ -2,7 +2,7 @@ export const AGENCIES = [
   {
     id: 'CFPB',
     name: 'Consumer Financial Protection Bureau'
-  }
+  },
   {
     id: 'DOC',
     name: 'Department of Commerce'
