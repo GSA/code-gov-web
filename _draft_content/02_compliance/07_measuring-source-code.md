@@ -8,7 +8,6 @@ Agencies are not required to use a specific method of measuring their code but s
 
 The Open Source community and Federal developers have suggested a number of options that agencies may choose from. These include:
 - source lines of code
-- repository disk size
 - number of self-contained modules
 - cost
 - number of software projects
@@ -26,3 +25,31 @@ Having chosen a measure, your agency will likely need to measure the size of its
 - It is likely useful for your agency to coordinate this baselining effort with other activities required by the Source Code Policy, such as developing your Code Inventory.
 - Remember that the Source Code Policy requires the release of "20% of [..] new custom code" and does not apply retroactively. Agencies are strongly encouraged to exceed the minimum requirement and consider releasing retroactively as well.
 - Importantly, for the purposes of calculating your total amount of custom code, agencies *should include* code that is unlikely or certain not to be released for reasons of national security or the other exemptions related to the Code Inventory.
+
+
+## Notes on specific measures
+
+### Repository Size
+For agencies that, in accordance with [section 7.4 of the Source Code Policy](https://sourcecode.cio.gov/Implementation/#code-repositories) consistently maintain their code in version-controlled repositories, one measure that may be tempting to use is the disk size or version-control system reported size of the repository itself.  While this approach can be workable, agencies should consider several limitations to its accuracy, which may or may not affect their particular systems:
+- repeated commits of code can increase repository size. Repositories that have been under development for longer may be artificially inflated simply because they have a longer "revision history"
+- differing measures between platforms.  There is not a standard method of measuring repository size and so agencies that maintain code on different platforms or different versions of platforms should not assume that repository size is an apples-to-apples comparison between them
+- vendor support. Because of the limited utility of repository size as a measure, vendors may not be commited to providing consistent support to automated reporting of this measure or may change their approach to measuring it over time.
+
+
+### Source Lines of Code
+
+
+
+
+### Cost
+
+
+
+### 
+
+
+
+
+
+
+
