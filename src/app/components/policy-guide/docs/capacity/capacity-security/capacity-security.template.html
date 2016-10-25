@@ -1,2 +1,151 @@
-<h1>Security and Open Source</h1>
-<p>Content goes here</p>
+<h1><a id="Building_Security_into_your_Open_Source_Practice_0"></a>Building Security into your Open Source Practice</h1>
+<p>One of the most common concerns raised by agencies related to opening code or developing in the open is information security.  There are a number of specific things that any open source project (governmental or otherwise) can do to protect the security of its sensitive information and its production systems. There are also quite a few myths and misconceptions about security in relation to open source that are worth debunking.</p>
+<h2><a id="Opening_an_existing_codebase_4"></a>Opening an existing codebase</h2>
+<p>The first thing to understand when considering open sourcing code is that some types of code and data are categorically inappropriate to be made public.  Secure open source practices protect these kinds of content from publication.</p>
+<p>While there are always exceptions and the list isn’t exhaustive, agencies should carefully consider how to limit the risk that the following types of information could be make public as part of an open source offering:</p>
+<ul>
+<li>passwords</li>
+<li>private keys</li>
+<li>server configurations, network topology, and similar information</li>
+<li>national security and other sensitive information</li>
+<li>PII</li>
+<li>content such as inappropriate or offensive language, that could create reputational harm</li>
+</ul>
+<p>^ someone smarter than me has created a list like this. NIST?</p>
+<h2><a id="Developing_in_the_Open_19"></a>Developing in the Open</h2>
+<p>Section 5.2.B of the Source Code Policy states that agencies should develop custom code in the open:</p>
+<p><code>Engage in Open Development: Software that is custom-developed for or by agencies should, to the extent possible and appropriate, be developed using open development practices. These practices provide an environment in which OSS can flourish and be repurposed. This principle, as well as the one below for releasing source code, include distributing a minimum viable product as OSS; engaging the public before official release; and drawing upon the public’s knowledge to make improvements to the project.</code>
+At the most basic level, developing in the open means that developers maintain the up-to-date working copy of their code on a publicly accessible repository.</p>
+<h3><a id="For_developers_34"></a>For developers</h3>
+<ul>
+<li>Make your main codebase open.</li>
+<li>even if a piece of something needs to remain private not everything needs to remain so.</li>
+<li>Develop modularly</li>
+<li>Don’t bifurcate your project where you don’t have to.
+<ul>
+<li>i.e. content</li>
+<li>slows you down</li>
+<li>reviews</li>
+<li>workflow</li>
+<li>design</li>
+<li>versioning</li>
+</ul>
+</li>
+</ul>
+<h3><a id="For_Comms_48"></a>For Comms</h3>
+<ul>
+<li>Work with your Comms team
+<ul>
+<li>you can still have your “big reveal”</li>
+</ul>
+</li>
+<li>set expectations at the outset of a project.
+<ul>
+<li>declare a project “open” in your project charter.</li>
+<li>staff for feedback and engagement with the public throughout the project
+<ul>
+<li>BENEFITS: early feedback</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a id="For_Security_56"></a>For Security</h3>
+<pre><code>- if for some reason api keys etc do get published developing in the open makes that less risky by allowing that to happen earlier.
+</code></pre>
+<h2><a id="Organizational_best_practices_60"></a>Organizational best practices</h2>
+<ul>
+<li>make sure there is a team (real, virtual) in your org who keep track of the open source and monitor and remediate issues, including escalating for security and including process/training improvements. this should be written down and there should be procedures.</li>
+<li></li>
+</ul>
+<h2><a id="Workflow_tips_for_security_64"></a>Workflow tips for security</h2>
+<ul>
+<li>gitignore</li>
+<li>educate your team</li>
+<li>environmental variables</li>
+<li>know your tools (aws, github), know the monitoring and notification services they provide, and make sure someone receives those emails.</li>
+<li>tools</li>
+<li>commit hooks
+<ul>
+<li>18F research on this.</li>
+</ul>
+</li>
+</ul>
+<h1><a id="Myth_Busting_73"></a>Myth Busting</h1>
+<ul>
+<li>security through obscurity</li>
+<li></li>
+</ul>
+<h1><a id="Case_Studies_77"></a>Case Studies</h1>
+<ul>
+<li>N-CATS pshtt - <a href="https://github.com/dhs-ncats/pshtt">https://github.com/dhs-ncats/pshtt</a></li>
+</ul>
+<h2><a id="Licensing_86"></a>Licensing</h2>
+<h2><a id="Developing_in_the_open_89"></a>Developing in the open</h2>
+<ul>
+<li>benefits of public feedback</li>
+</ul>
+<h2><a id="Technical_practices_94"></a>Technical practices</h2>
+<ul>
+<li>Code versioning</li>
+<li>REQUIRED 7.4 Use common third-party repository platforms</li>
+<li>REQUIRED Integrate OSS practices into your agency’s day-to-day operations (7.1)</li>
+</ul>
+<h2><a id="Communications_102"></a>Communications</h2>
+<ul>
+<li>you can still have your big reveal
+<ul>
+<li>case study</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>open by default</li>
+<li>even if a piece of something needs to remain private not everything needs to remain so.</li>
+<li>modular devlopment</li>
+<li>set expectations at the outset of a project.
+<ul>
+<li>declare a project “open” in your project charter.</li>
+<li>staff for feedback and engagement with the public throughout the project
+<ul>
+<li>BENEFITS: early feedback</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>don’t bifurcate your project where you don’t have to.</li>
+<li>i.e. content</li>
+<li>slows you down</li>
+<li>reviews</li>
+<li>workflow</li>
+<li>design</li>
+<li>versioning</li>
+<li>what can’t be made public?</li>
+<li>passowrds</li>
+<li>sensitive data</li>
+<li></li>
+</ul>
+<p>#Github</p>
+<h2><a id="Have_a_set_of_practices_around_using_github_133"></a>Have a set of practices around using github</h2>
+<ul>
+<li>low sensitivity
+<ul>
+<li>procurement</li>
+<li>PII</li>
+<li></li>
+</ul>
+</li>
+<li>2fa</li>
+<li>use an avatar</li>
+<li>have a public contact email address</li>
+<li>have your actual name in there</li>
+<li>if you’re using your work computer - set gitconfig so that it’s using your work email</li>
+</ul>
+<h1><a id="Communications_and_community_engagement_145"></a>Communications and community engagement</h1>
+<p>Community contributions</p>
+<ul>
+<li>it has to be an expectation that comms won’t review every interaction online.</li>
+<li>accounts also associated with personal activities</li>
+</ul>
+<h1><a id="Security_150"></a>Security</h1>
+<p>It is important to integrate strong security practices into your open source development practices to ensure that only code that is appropriate to share publicly is published.  Read here for more on this topic.</p>
