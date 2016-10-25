@@ -1,11 +1,11 @@
 module.exports = function(config) {
-  var testWebpackConfig = require('./webpack.test.js');
+  var testWebpackConfig = require('./webpack.test.js')({env: 'test'});
 
   var configuration = {
 
     // base path that will be used to resolve all patterns (e.g. files, exclude)
     basePath: '',
-    browserNoActivityTimeout: 100000,
+
     /*
      * Frameworks to use
      *
@@ -21,9 +21,7 @@ module.exports = function(config) {
      *
      * we are building the test environment in ./spec-bundle.js
      */
-    files: [
-        { pattern: './config/spec-bundle.js', watched: false }
-    ],
+    files: [ { pattern: './config/spec-bundle.js', watched: false } ],
 
     proxies: {
         '/assets/fonts': '/base/assets/fonts'
@@ -42,13 +40,22 @@ module.exports = function(config) {
       dir : 'coverage/',
       subdir: '.',
       reporters: [
-        { type: 'text-summary' },
-        { type: 'lcov' }
+        {type: 'in-memory'}
       ]
     },
 
+    remapCoverageReporter: {
+      'text-summary': null,
+    },
+
+    remapIstanbulReporter: {
+      reports: {
+        lcovonly: './coverage/lcov.info'
+      }
+    },
+
     // Webpack please don't spam the console when running in karma!
-    webpackServer: { noInfo: true },
+    webpackMiddleware: { stats: 'errors-only'},
 
     /*
      * test results reporter to use
@@ -56,7 +63,7 @@ module.exports = function(config) {
      * possible values: 'dots', 'progress'
      * available reporters: https://npmjs.org/browse/keyword/karma-reporter
      */
-    reporters: ['story', 'coverage', 'progress'],
+    reporters: ['mocha', 'coverage', 'remap-coverage', 'karma-remap-istanbul'],
 
     // web server port
     port: 9876,
@@ -85,5 +92,12 @@ module.exports = function(config) {
      */
     singleRun: true
   };
+
+  if (process.env.TRAVIS){
+    configuration.browsers = [
+      'PhantomJS'
+    ];
+  }
+
   config.set(configuration);
 };
