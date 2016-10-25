@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { inject, TestBed } from '@angular/core/testing';
@@ -16,7 +16,8 @@ describe('AgencyComponent', () => {
         AgencyComponent
       ],
       imports: [
-        HttpModule
+        HttpModule,
+        RouterModule
       ],
       providers: [
         AgencyService,

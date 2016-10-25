@@ -22,11 +22,11 @@ export class AgencyComponent {
 
   ngOnDestroy() {
     this.hasRepos = false;
+    this.agency = null;
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      console.log('Params Subscribed');
 
       let id = params['id'];
 

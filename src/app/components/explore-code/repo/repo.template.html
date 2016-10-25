@@ -1,0 +1,51 @@
+<section *ngIf="repo" class="repo-container">
+  <header>
+    <div class="repo-header-container usa-width-three-fourths">
+      <h3>
+        <a routerLink="/explore-code/agencies/{{repo.agency.id}}">
+          {{ repo.agency.name }}
+        </a>
+      </h3>
+      <h1>{{ repo.name }}</h1>
+      <p *ngIf="repo.description && repo.description != 'null' && repo.description != 'null '">{{ repo.description }}</p>
+    </div>
+    <div class="repo-actions">
+      <ul class="usa-unstyled-list">
+        <li *ngIf="repo.homepage && repo.homepage != 'null'">
+          <a class="usa-button" href="{{repo.homepage}}" target="_blank">
+            Visit Repo
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="repo-content">
+    <div class="usa-width-three-fourths">
+      <ul class="usa-unstyled-list">
+        <li class="repo-language usa-width-one-half">
+          <h2>Language</h2>
+          <p>
+            This repo is built in
+            <span *ngFor="let language of repo.codeLanguage" class="language">
+              {{ language.language }}
+            </span>.
+          </p>
+        </li>
+        <li class="repo-license usa-width-one-half">
+          <h2>License</h2>
+          <p>
+            This repo uses the license name license.
+          </p>
+          <a href="{{repo.license}}" target="_blank">View License</a>
+        </li>
+      </ul>
+      <h2>Latest Activity</h2>
+      <ul class="usa-unstyled-list">
+      </ul>
+    </div>
+    <div class="usa-width-one-fourth">
+      <h4>Similar Repos</h4>
+    </div>
+  </div>
+</section>

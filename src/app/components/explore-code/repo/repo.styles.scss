@@ -1,0 +1,38 @@
+@import '../../../../styles/base/all';
+@import '../../../../styles/utils/all';
+
+.repo-container {
+
+  header {
+    margin-bottom: 2em;
+    position: relative;
+  }
+}
+
+.repo-actions {
+  position: absolute;
+  right: 0;
+  top: 1.3em;
+}
+
+.repo-header-container {
+
+  h1 {
+    margin: 0 0 0.25em;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin: 0;
+
+    a {
+      color: $color-gray;
+      font-size: 0.95em;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin-top: 0;
+  }
+}
