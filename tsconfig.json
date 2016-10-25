@@ -9,17 +9,14 @@
     "sourceMap": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "removeComments": false,
-    "noImplicitAny": false,
     "baseUrl": "./src",
-    "paths": [
-    ],
+    "paths": {
+    },
     "lib": [
       "dom",
       "es6"
     ],
     "types": [
-      "core-js",
       "hammerjs",
       "jasmine",
       "node",

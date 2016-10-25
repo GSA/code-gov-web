@@ -19,28 +19,45 @@ require('core-js/es7/reflect');
 // Typescript emit helpers polyfill
 require('ts-helpers');
 
-require('reflect-metadata/Reflect');
 require('zone.js/dist/zone');
 require('zone.js/dist/long-stack-trace-zone');
-require('zone.js/dist/proxy');
+require('zone.js/dist/proxy'); // since zone.js 0.6.15
 require('zone.js/dist/sync-test');
-require('zone.js/dist/jasmine-patch');
+require('zone.js/dist/jasmine-patch'); // put here since zone.js 0.6.14
 require('zone.js/dist/async-test');
 require('zone.js/dist/fake-async-test');
+
 
 // RxJS
 require('rxjs/Rx');
 
-__karma__.loaded = function () { };
-Promise.all([
-  System.import('@angular/core/testing'),
-  System.import('@angular/platform-browser-dynamic/testing')
-])
-.then(function (_a) {
-  var testing = _a[0], testingBrowser = _a[1];
-  testing.getTestBed().initTestEnvironment(testingBrowser.BrowserDynamicTestingModule, testingBrowser.platformBrowserDynamicTesting());
-})
-.then(function () { return require.context('../src', true, /\.spec\.ts/); })
-.then(function (context) { return context.keys().map(context); })
-.then(__karma__.start, __karma__.error);
+var testing = require('@angular/core/testing');
+var browser = require('@angular/platform-browser-dynamic/testing');
 
+testing.TestBed.initTestEnvironment(
+  browser.BrowserDynamicTestingModule,
+  browser.platformBrowserDynamicTesting()
+);
+
+/*
+ * Ok, this is kinda crazy. We can use the context method on
+ * require that webpack created in order to tell webpack
+ * what files we actually want to require or import.
+ * Below, context will be a function/object with file names as keys.
+ * Using that regex we are saying look in ../src then find
+ * any file that ends with spec.ts and get its path. By passing in true
+ * we say do this recursively
+ */
+var testContext = require.context('../src', true, /\.spec\.ts/);
+
+/*
+ * get all the files, for each file, call the context function
+ * that will require the file and load it up here. Context will
+ * loop and require those spec files here
+ */
+function requireAll(requireContext) {
+  return requireContext.keys().map(requireContext);
+}
+
+// requires and returns all modules that match
+var modules = requireAll(testContext);
