@@ -25,7 +25,9 @@ import {
   OverviewInventoryComponent,
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
-  PolicyGuideComponent
+  PolicyGuideComponent,
+  RepoComponent,
+  ReposComponent
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
@@ -55,5 +57,7 @@ export const APP_COMPONENTS = [
   OverviewInventoryComponent,
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
-  PolicyGuideComponent
+  PolicyGuideComponent,
+  RepoComponent,
+  ReposComponent
 ]
