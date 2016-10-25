@@ -1,4 +1,40 @@
-<h1>Measuring Code</h1>
-<p>
-  Content goes here.
-</p>
+<h1><a id="Measuring_Source_Code_0"></a>Measuring Source Code</h1>
+<p>As part of the <a href="link">Open Source Pilot</a> the Source Code Policy requires that:</p>
+<blockquote>
+<p>Each agency shall release as OSS at least 20 percent of its new custom-developed code each year.</p>
+</blockquote>
+<p>Agencies are not required to use a specific method of measuring their code but should use a single measure and apply it consistently and in a reproducible manner.</p>
+<p>The Open Source community and Federal developers have suggested a number of options that agencies may choose from. These include:</p>
+<ul>
+<li>source lines of code</li>
+<li>number of self-contained modules</li>
+<li>cost</li>
+<li>number of software projects</li>
+<li>system certification and accreditation boundaries</li>
+</ul>
+<h2><a id="Choosing_a_measure_15"></a>Choosing a measure</h2>
+<p>The list above is not exhaustive and agencies should choose the most appropriate measure for their organization. When choosing a measure, agencies should consider the following factors:</p>
+<ul>
+<li>Automation. Is it possible to collect the data for the measure automatically or automate aspects of the collection process?  For example can a script be developed to query your agency’s version control system for the size of some or all of your codebases?</li>
+<li>Existing processes. Does your agency already collect data or collect systems information that can be repurposed to meet this requirement?</li>
+<li>Approximation. Given the difficulty in definitively calculating most reasonable measures related to this requirement, the policy leaves room for agencies to use approximate or “estimated” measures. For example, the number of source lines of code in a particular codebase may fluctuate day to day.  Or if cost is your measure, a particular codebase may not align cleanly to a discrete budget line-item or procurement. Agencies may use approximation in measuring their code but should do so according to a documented, justifiable process that is applied consistently and considers the overall goals of the policy. Importantly, the greater the degree of approximation present in an agency’s measure, the greater weight the agency should place on documenting the way the measure is calculated and ensuring that it is applied consistently.</li>
+</ul>
+<h2><a id="Measuring_your_code_for_the_first_time_21"></a>Measuring your code for the first time</h2>
+<p>Having chosen a measure, your agency will likely need to measure the size of its codebases that are under active development to establish a baseline.  Things to consider include:</p>
+<ul>
+<li>The Source Code Policy, in defining “custom code” allows agencies to exclude “code that is truly exploratory or disposable in nature, such as that written by a developer experimenting with a new language or library.”  When in doubt, include code in your inventory or reachout to OMB for guidance.</li>
+<li>It is likely useful for your agency to coordinate this baselining effort with other activities required by the Source Code Policy, such as developing your Code Inventory.</li>
+<li>Remember that the Source Code Policy requires the release of “20% of […] new custom code” and does not apply retroactively. Agencies are strongly encouraged to exceed the minimum requirement and consider releasing retroactively as well.</li>
+<li>Importantly, for the purposes of calculating your total amount of custom code, agencies <em>should include</em> code that is unlikely or certain not to be released for reasons of national security or the other exemptions related to the Code Inventory.</li>
+</ul>
+<h2><a id="Notes_on_specific_measures_29"></a>Notes on specific measures</h2>
+<h3><a id="Repository_Size_31"></a>Repository Size</h3>
+<p>For agencies that, in accordance with <a href="https://sourcecode.cio.gov/Implementation/#code-repositories">section 7.4 of the Source Code Policy</a> consistently maintain their code in version-controlled repositories, one measure that may be tempting to use is the disk size or version-control system reported size of the repository itself.  While this approach can be workable, agencies should consider several limitations to its accuracy, which may or may not affect their particular systems:</p>
+<ul>
+<li>repeated commits of code can increase repository size. Repositories that have been under development for longer may be artificially inflated simply because they have a longer “revision history”</li>
+<li>differing measures between platforms.  There is not a standard method of measuring repository size and so agencies that maintain code on different platforms or different versions of platforms should not assume that repository size is an apples-to-apples comparison between them</li>
+<li>vendor support. Because of the limited utility of repository size as a measure, vendors may not be commited to providing consistent support to automated reporting of this measure or may change their approach to measuring it over time.</li>
+</ul>
+<h3><a id="Source_Lines_of_Code_38"></a>Source Lines of Code</h3>
+<h3><a id="Cost_43"></a>Cost</h3>
+<h3><a id="_47"></a></h3>
