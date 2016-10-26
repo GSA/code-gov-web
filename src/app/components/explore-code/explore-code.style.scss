@@ -1,3 +1,10 @@
+@import '../../../styles/base/all';
+
 .explore-code-content {
-  margin: 2em 0 3em;
+  background-color: lighten($color-gray-lightest, 2);
+  padding: 2em 0 3em;
+}
+
+.explore-code-nav {
+  background-color: darken($color-gray-lightest, 5);
 }

@@ -21,31 +21,62 @@
   </header>
 
   <div class="repo-content">
-    <div class="usa-width-three-fourths">
-      <ul class="usa-unstyled-list">
+    <div class="repo-features>">
+      <h2>Highlights</h2>
+      <ul class="usa-unstyled-list repo-features-list">
         <li class="repo-language usa-width-one-half">
-          <h2>Language</h2>
-          <p>
-            This repo is built in
-            <span *ngFor="let language of repo.codeLanguage" class="language">
-              {{ language.language }}
-            </span>.
-          </p>
+          <div *ngIf="repo.language">
+            <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
+              <i class="devicons devicons-{{language.language | lowercase}}"></i>
+            </div>
+            <h3>Language</h3>
+            <p>
+              This repo is built in
+              <span *ngFor="let language of repo.codeLanguage" class="language">
+                {{ language.language }}.
+              </span>
+            </p>
+          </div>
+          <div *ngIf="!repo.language">
+            <div class="feature-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            <h3>Language</h3>
+            <p>
+              We’re not sure what this repo is built in. Try making a pull
+              request that updates this repo’s <code>data.json</code> file.
+            </p>
+          </div>
         </li>
         <li class="repo-license usa-width-one-half">
-          <h2>License</h2>
-          <p>
-            This repo uses the license name license.
-          </p>
-          <a href="{{repo.license}}" target="_blank">View License</a>
+          <div *ngIf="repo.license && repo.license_name">
+            <div class="feature-icon">
+              <i class="fa fa-file-text-o "></i>
+            </div>
+            <h3>License</h3>
+            <p>
+              This repo uses the
+              <a href="{{repo.license}}" target="_blank">
+                {{repo.license_name}} license.
+              </a>
+            </p>
+          </div>
+          <div *ngIf="!repo.license || !repo.license_name">
+            <div class="feature-icon">
+              <i class="fa fa-question"></i>
+            </div>
+            <h3>License</h3>
+            <p>
+              We’re not sure what license this repo has. Try making a pull
+              request that updates this repo’s <code>data.json</code> file.
+            </p>
+          </div>
         </li>
       </ul>
-      <h2>Latest Activity</h2>
-      <ul class="usa-unstyled-list">
-      </ul>
     </div>
-    <div class="usa-width-one-fourth">
-      <h4>Similar Repos</h4>
-    </div>
+
+    <h2>Activity</h2>
+    <ul class="usa-unstyled-list">
+    </ul>
   </div>
 </section>
