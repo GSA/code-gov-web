@@ -4,166 +4,17 @@
     {
       "status": " ",
       "vcs": "git",
-      "repository": "git://github.com/CommerceGov/commerce.gov-api.git",
-      "name": "commerce.gov-api",
-      "repoID": "43393077",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": "Content API for Commerce.gov ",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/CommerceGov/commerce.gov-api/blob/master/LICENSE.md",
-      "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "content"
-        },
-        {
-          "tag": "api"
-        },
-        {
-          "tag": "commerce"
-        },
-        {
-          "tag": "gov"
-        }
-      ],
-      "codeLanguage": [],
-      "agency": "DOC"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
-      "name": "data-act-broker-web-app",
-      "repoID": "47277547",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": "",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/fedspendingtransparency/data-act-broker-web-app/blob/dev/LICENSE",
-      "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "data act"
-        },
-        {
-          "tag": "api"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "JavaScript"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-09-04T17:27:20Z",
-        "metadataLastUpdated": "2015-12-02T17:41:07Z",
-        "lastModified": "2016-10-20T19:50:02Z"
-      },
-      "agency": "TRE"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
       "repository": "git://github.com/department-of-veterans-affairs/vets-website.git",
       "name": "vets-website",
       "repoID": "33202667",
-      "events": [
-        {
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"IssueComment",
-     "user":"webinista",
-     "time":"2016-10-25T15:29:36Z",
-     "message": "Updated URL routes in Rx and messaging.",
-      "url":"https://api.github.com/repos/department-of-veterans-affairs/vets-website/issues/3512"
-},{
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"PullRequest",
-     "user":"crwallace",
-     "time":"2016-10-25T15:18:43Z",
-     "message": "removes 1010AD",
-      "url":"https://api.github.com/repos/department-of-veterans-affairs/vets-website/pulls/3526"
-},{
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"Create",
-     "user":"crwallace",
-     "time":"2016-10-25T15:17:36Z"
-
-},{
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"Push",
-     "user":"U-DON",
-     "time":"2016-10-25T15:13:58Z",
-     "message": "adds a link for loa3 to global sign in for development (#3523) * adds a link for loa3 to global sign in for development * chnages json structure to new schema * fixes tests",
-      "url":"https://api.github.com/repos/department-of-veterans-affairs/vets-website/commits/53ffc860595ee42bd1d002b6b320655393fdf10a"
-},{
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"Push",
-     "user":"U-DON",
-     "time":"2016-10-25T15:00:37Z",
-     "message": "adds a link for loa3 to global sign in for development (#3523) * adds a link for loa3 to global sign in for development * chnages json structure to new schema * fixes tests",
-      "url":"https://api.github.com/repos/department-of-veterans-affairs/vets-website/commits/53ffc860595ee42bd1d002b6b320655393fdf10a"
-},{
-     "id": "33202667",
-     "name": "department-of-veterans-affairs/vets-website",
-     "type":"Push",
-     "user":"U-DON",
-     "time":"2016-10-25T14:59:42Z",
-     "message": "Fix scroll handling on claims status (#3509)",
-      "url":"https://api.github.com/repos/department-of-veterans-affairs/vets-website/commits/bcf7abb63e5af5e084c41951769c3da808437919"
-}
-      ],
-      "homepage": "https://www.vets.gov/",
+      "homepage": "",
       "downloadURL": " ",
-      "description": "Beta version of Vets.gov",
+      "description": "Beta version of Vets.gov ",
       "contact": [
         {
           "email": " ",
           "name": " ",
-          "twitter": "https://twitter.com/DeptVetAffairs/",
+          "twitter": " ",
           "phone": " "
         }
       ],
@@ -176,11 +27,10 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "beta"
@@ -213,14 +63,14 @@
       "repository": "git://github.com/department-of-veterans-affairs/vets-api.git",
       "name": "vets-api",
       "repoID": "62409417",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "API for vets.gov ",
       "contact": [
         {
           "email": " ",
           "name": " ",
-          "twitter": "https://twitter.com/DeptVetAffairs/",
+          "twitter": " ",
           "phone": " "
         }
       ],
@@ -233,11 +83,10 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/vets-api/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "api"
@@ -267,7 +116,7 @@
       "repository": "git://github.com/USEPA/E-Enterprise-Portal.git",
       "name": "E-Enterprise-Portal",
       "repoID": "36677210",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "E-Enterprise is a transformative approach to make environmental information and data more accessible, efficient, and evidence-based through advances in monitoring, reporting, and information technology. The Portal is designed to be a modern and efficient interface for environmental transactions. This includes easier access to information and making transactions with environmental agencies as efficient and effective as possible. ",
       "contact": [
@@ -287,12 +136,26 @@
         }
       ],
       "license": "https://github.com/USEPA/E-Enterprise-Portal/blob/master/drupal/LICENSE.txt",
-      "license_name": "gplv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
+        {
+          "tag": "e"
+        },
+        {
+          "tag": "enterprise"
+        },
+        {
+          "tag": "transformative"
+        },
+        {
+          "tag": "approach"
+        },
+        {
+          "tag": "make"
+        },
         {
           "tag": "environmental"
         },
@@ -303,10 +166,25 @@
           "tag": "data"
         },
         {
-          "tag": "epa"
+          "tag": "more"
         },
         {
-          "tag": "evidence-based"
+          "tag": "accessible"
+        },
+        {
+          "tag": "efficient"
+        },
+        {
+          "tag": "evidence"
+        },
+        {
+          "tag": "based"
+        },
+        {
+          "tag": "through"
+        },
+        {
+          "tag": "advances"
         },
         {
           "tag": "monitoring"
@@ -315,13 +193,22 @@
           "tag": "reporting"
         },
         {
+          "tag": "information"
+        },
+        {
+          "tag": "technology"
+        },
+        {
           "tag": "portal"
         },
         {
-          "tag": "ux"
+          "tag": "designed"
         },
         {
-          "tag": "ui"
+          "tag": "modern"
+        },
+        {
+          "tag": "efficient"
         },
         {
           "tag": "interface"
@@ -331,6 +218,42 @@
         },
         {
           "tag": "transactions"
+        },
+        {
+          "tag": "includes"
+        },
+        {
+          "tag": "easier"
+        },
+        {
+          "tag": "access"
+        },
+        {
+          "tag": "information"
+        },
+        {
+          "tag": "making"
+        },
+        {
+          "tag": "transactions"
+        },
+        {
+          "tag": "environmental"
+        },
+        {
+          "tag": "agencies"
+        },
+        {
+          "tag": "efficient"
+        },
+        {
+          "tag": "effective"
+        },
+        {
+          "tag": "possible"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -370,12 +293,11 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/nasa/trick/blob/master/LICENSE",
-      "license_name": "nasa",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "trick"
@@ -384,10 +306,40 @@
           "tag": "simulation"
         },
         {
-          "tag": "simulation environment"
+          "tag": "environment"
         },
         {
           "tag": "trick"
+        },
+        {
+          "tag": "provides"
+        },
+        {
+          "tag": "common"
+        },
+        {
+          "tag": "set"
+        },
+        {
+          "tag": "simulation"
+        },
+        {
+          "tag": "capabilities"
+        },
+        {
+          "tag": "utilities"
+        },
+        {
+          "tag": "build"
+        },
+        {
+          "tag": "simulations"
+        },
+        {
+          "tag": "automatically"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -428,20 +380,19 @@
         }
       ],
       "license": "https://github.com/nasa/earthdata-search/blob/master/LICENSE",
-         "license_name": "apachev2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "earthdata"
         },
         {
-          "tag": "web application"
+          "tag": "search"
         },
         {
-          "tag": "data"
+          "tag": "web"
         },
         {
           "tag": "application"
@@ -456,7 +407,43 @@
           "tag": "eosdis"
         },
         {
+          "tag": "enable"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "discovery"
+        },
+        {
+          "tag": "search"
+        },
+        {
+          "tag": "comparison"
+        },
+        {
           "tag": "visualization"
+        },
+        {
+          "tag": "access"
+        },
+        {
+          "tag": "eosdis"
+        },
+        {
+          "tag": "earth"
+        },
+        {
+          "tag": "science"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "holdings"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -472,7 +459,7 @@
       "agency": "NASA"
     },
     {
-      "status": "alpha",
+      "status": " ",
       "vcs": "git",
       "repository": "git://github.com/presidential-innovation-fellows/apps-gov.git",
       "name": "apps-gov",
@@ -482,7 +469,7 @@
       "description": "Be more productive ",
       "contact": [
         {
-          "email": "apps-gov@gsa.gov",
+          "email": " ",
           "name": " ",
           "twitter": " ",
           "phone": " "
@@ -497,41 +484,16 @@
         }
       ],
       "license": "https://github.com/presidential-innovation-fellows/apps-gov/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "apps.gov"
+          "tag": "more"
         },
         {
-          "tag": "cloud"
-        },
-        {
-          "tag": "ATO"
-        },
-        {
-          "tag": "SaaS"
-        },
-        {
-          "tag": "IaaS"
-        },
-        {
-          "tag": "PaaS"
-        },
-        {
-          "tag": "micro-purchase"
-        },
-        {
-          "tag": "gwac"
-        },
-        {
-          "tag": "schedule 70"
-        },
-        {
-          "tag": "procurement"
+          "tag": "productive"
         }
       ],
       "codeLanguage": [
@@ -572,17 +534,19 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/File-Analyzer/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "nara"
         },
         {
-          "tag": "file analyzer"
+          "tag": "file"
+        },
+        {
+          "tag": "analyzer"
         },
         {
           "tag": "metadata"
@@ -606,12 +570,12 @@
     {
       "status": " ",
       "vcs": "git",
-      "repository": "git://github.com/USDA/RIDB.git",
-      "name": "RIDB",
-      "repoID": "29924484",
-      "homepage": "https://usda.github.io/RIDB",
+      "repository": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
+      "name": "data-act-broker-web-app",
+      "repoID": "47277547",
+      "homepage": "null",
       "downloadURL": " ",
-      "description": "Recreation Information Database ",
+      "description": "null ",
       "contact": [
         {
           "email": " ",
@@ -628,127 +592,70 @@
           "email": " "
         }
       ],
-      "license": "https://path.to/license",
-      "license_name": "",
+      "license": "https://github.com/fedspendingtransparency/data-act-broker-web-app/blob/dev/LICENSE",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "recreation"
-        },
-        {
-          "tag": "information"
-        },
-        {
-          "tag": "database"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "HTML"
-        }
-      ],
-      "agency": "USDA"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/bro/bro.git",
-      "name": "bro",
-      "repoID": "4930716",
-      "homepage": "http://www.bro.org",
-      "downloadURL": " ",
-      "description": "Bro is a powerful network analysis framework that is much different from the typical IDS you may know. Official mirror of git.bro.org/bro.git . ",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/bro/bro/blob/master/doc/LICENSE",
-       "license_name": "ccby4",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "bro"
-        },
-        {
-          "tag": "network analysis"
-        },
-        {
-          "tag": "framework"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "Bro"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-10-20T15:43:20Z",
-        "metadataLastUpdated": "2012-07-06T20:30:16Z",
-        "lastModified": "2016-10-20T15:53:52Z"
-      },
-      "agency": "DOE"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/USDepartmentofLabor/Child-Labor.git",
-      "name": "Child-Labor",
-      "repoID": "37860521",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": "",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://path.to/license",
-      "license_name": "",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [],
       "codeLanguage": [
         {
-          "language": "Swift"
+          "language": "JavaScript"
         }
       ],
       "updated": {
-        "lastCommit": "2016-04-01T12:35:30Z",
-        "metadataLastUpdated": "2015-06-22T14:35:39Z",
-        "lastModified": "2016-10-18T18:27:45Z"
+        "lastCommit": "2016-09-04T17:27:20Z",
+        "metadataLastUpdated": "2015-12-02T17:41:07Z",
+        "lastModified": "2016-10-20T19:50:02Z"
       },
-      "agency": "DOL"
+      "agency": "TRE"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/CommerceGov/commerce.gov-api.git",
+      "name": "commerce.gov-api",
+      "repoID": "43393077",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "Content API for Commerce.gov ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "content"
+        },
+        {
+          "tag": "api"
+        },
+        {
+          "tag": "commerce"
+        },
+        {
+          "tag": "gov"
+        }
+      ],
+      "codeLanguage": [],
+      "agency": "DOC"
     },
     {
       "status": " ",
@@ -756,14 +663,14 @@
       "repository": "git://github.com/department-of-veterans-affairs/sniffybara.git",
       "name": "sniffybara",
       "repoID": "51226712",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "Gem that adds automatic 508 accessibility compliance checks into your Capybara specs ",
       "contact": [
         {
           "email": " ",
           "name": " ",
-          "twitter": "https://twitter.com/DeptVetAffairs/",
+          "twitter": " ",
           "phone": " "
         }
       ],
@@ -776,14 +683,19 @@
         }
       ],
       "license": "https://path.to/license",
-      "license_name": "",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "gem"
+        },
+        {
+          "tag": "adds"
+        },
+        {
+          "tag": "automatic"
         },
         {
           "tag": "508"
@@ -842,20 +754,28 @@
         }
       ],
       "license": "https://github.com/nasa/openmct/blob/master/LICENSES.md",
-      "license_name": "apache",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "web-based"
+          "tag": "web"
         },
         {
-          "tag": "mission control"
+          "tag": "based"
+        },
+        {
+          "tag": "mission"
+        },
+        {
+          "tag": "control"
         },
         {
           "tag": "framework"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -895,18 +815,26 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/USAJOBS/open-source-policy/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "open source"
+          "tag": "repository"
         },
         {
-          "tag": "source code"
+          "tag": "contains"
+        },
+        {
+          "tag": "official"
+        },
+        {
+          "tag": "open"
+        },
+        {
+          "tag": "source"
         },
         {
           "tag": "policy"
@@ -943,21 +871,23 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/USAJOBS/Help/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "faq"
+          "tag": "next"
         },
         {
-          "tag": "jobs"
+          "tag": "generation"
         },
         {
           "tag": "help"
+        },
+        {
+          "tag": "content"
         },
         {
           "tag": "usajobs"
@@ -996,23 +926,25 @@
         }
       ],
       "license": "https://github.com/cfpb/owning-a-home/blob/master/TERMS.md",
-       "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "home ownership"
+          "tag": "suite"
         },
         {
-          "tag": "housing"
+          "tag": "tools"
         },
         {
-          "tag": "house"
+          "tag": "resources"
         },
         {
           "tag": "homebuyers"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1033,51 +965,6 @@
       "repository": "git://github.com/WhiteHouse/fb_messenger_bot.git",
       "name": "fb_messenger_bot",
       "repoID": "70825196",
-      "events": [
-        {
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Fork",
-     "user":"xsongx",
-     "time":"2016-10-25T15:26:48Z"
-
-},{
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Watch",
-     "user":"levelos",
-     "time":"2016-10-25T15:09:48Z"
-
-},{
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Fork",
-     "user":"youngshine",
-     "time":"2016-10-25T14:26:30Z"
-
-},{
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Fork",
-     "user":"XiliangSong",
-     "time":"2016-10-25T11:01:10Z"
-
-},{
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Watch",
-     "user":"XiliangSong",
-     "time":"2016-10-25T11:01:07Z"
-
-},{
-     "id": "70825196",
-     "name": "WhiteHouse/fb_messenger_bot",
-     "type":"Fork",
-     "user":"happyqq",
-     "time":"2016-10-25T08:08:06Z"
-
-}
-      ],
       "homepage": "",
       "downloadURL": " ",
       "description": "This Drupal module provides a tool to build a chat bot to work on Facebook's Messenger Platform. ",
@@ -1098,11 +985,10 @@
         }
       ],
       "license": "https://path.to/license",
-      "license_name": "",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "drupal"
@@ -1111,19 +997,37 @@
           "tag": "module"
         },
         {
+          "tag": "provides"
+        },
+        {
+          "tag": "tool"
+        },
+        {
+          "tag": "build"
+        },
+        {
           "tag": "chat"
         },
         {
           "tag": "bot"
         },
         {
+          "tag": "work"
+        },
+        {
           "tag": "facebook"
+        },
+        {
+          "tag": "s"
         },
         {
           "tag": "messenger"
         },
         {
-          "tag": "facebook messenger"
+          "tag": "platform"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1141,58 +1045,12 @@
     {
       "status": " ",
       "vcs": "git",
-      "repository": "git://github.com/USDA/data-standards.git",
-      "name": "data-standards",
-      "repoID": "64396310",
-      "homepage": "https://usda.github.io/data-standards",
+      "repository": "git://github.com/USDA/RIDB.git",
+      "name": "RIDB",
+      "repoID": "29924484",
+      "homepage": "https://usda.github.io/RIDB",
       "downloadURL": " ",
-      "description": "A collaborative site for official USDA data elements and data standards. ",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/USDA/data-standards/blob/gh-pages/LICENSE",
-      "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "usda"
-        },
-        {
-          "tag": "data standards"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "CSS"
-        }
-      ],
-      "agency": "USDA"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/CommerceGov/CommerceGov.github.io.git",
-      "name": "CommerceGov.github.io",
-      "repoID": "13225017",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": " ",
+      "description": "Recreation Information Database ",
       "contact": [
         {
           "email": " ",
@@ -1213,28 +1071,34 @@
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": ""
+          "tag": "recreation"
+        },
+        {
+          "tag": "information"
+        },
+        {
+          "tag": "database"
         }
       ],
       "codeLanguage": [
         {
-          "language": "CSS"
+          "language": "HTML"
         }
       ],
-      "agency": "DOC"
+      "agency": "USDA"
     },
     {
       "status": " ",
       "vcs": "git",
-      "repository": "git://github.com/dun/conman.git",
-      "name": "conman",
-      "repoID": "32411476",
-      "homepage": "",
+      "repository": "git://github.com/bro/bro.git",
+      "name": "bro",
+      "repoID": "4930716",
+      "homepage": "http://www.bro.org",
       "downloadURL": " ",
-      "description": "ConMan: The Console Manager ",
+      "description": "Bro is a powerful network analysis framework that is much different from the typical IDS you may know. Official mirror of git.bro.org/bro.git . ",
       "contact": [
         {
           "email": " ",
@@ -1251,34 +1115,121 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/dun/conman",
-      "license_name": "gplv3",
+      "license": "https://github.com/bro/bro/blob/master/doc/LICENSE",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "conman"
+          "tag": "bro"
         },
         {
-          "tag": "console"
+          "tag": "powerful"
         },
         {
-          "tag": "manager"
+          "tag": "network"
+        },
+        {
+          "tag": "analysis"
+        },
+        {
+          "tag": "framework"
+        },
+        {
+          "tag": "much"
+        },
+        {
+          "tag": "different"
+        },
+        {
+          "tag": "typical"
+        },
+        {
+          "tag": "ids"
+        },
+        {
+          "tag": "know"
+        },
+        {
+          "tag": "official"
+        },
+        {
+          "tag": "mirror"
+        },
+        {
+          "tag": "git"
+        },
+        {
+          "tag": "bro"
+        },
+        {
+          "tag": "org"
+        },
+        {
+          "tag": "bro"
+        },
+        {
+          "tag": "git"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
         {
-          "language": "C"
+          "language": "Bro"
         }
       ],
       "updated": {
-        "lastCommit": "2016-04-26T23:10:27Z",
-        "metadataLastUpdated": "2015-03-17T18:13:16Z",
-        "lastModified": "2016-10-20T23:34:14Z"
+        "lastCommit": "2016-10-20T15:43:20Z",
+        "metadataLastUpdated": "2012-07-06T20:30:16Z",
+        "lastModified": "2016-10-20T15:53:52Z"
       },
       "agency": "DOE"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/Child-Labor.git",
+      "name": "Child-Labor",
+      "repoID": "37860521",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "null ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [],
+      "codeLanguage": [
+        {
+          "language": "Swift"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-04-01T12:35:30Z",
+        "metadataLastUpdated": "2015-06-22T14:35:39Z",
+        "lastModified": "2016-10-18T18:27:45Z"
+      },
+      "agency": "DOL"
     },
     {
       "status": " ",
@@ -1286,7 +1237,7 @@
       "repository": "git://github.com/USEPA/My-Right-To-Know--MyRTK-.git",
       "name": "My-Right-To-Know--MyRTK-",
       "repoID": "10644334",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "This application compares toxic chemical releases from individual facilities to releases from other facilities in the same county, as well as to releases from other facilities in the same industry sector. ",
       "contact": [
@@ -1306,12 +1257,17 @@
         }
       ],
       "license": "https://github.com/USEPA/My-Right-To-Know--MyRTK-/blob/master/LICENSE.md",
-       "license_name": "epaosa",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
+        {
+          "tag": "application"
+        },
+        {
+          "tag": "compares"
+        },
         {
           "tag": "toxic"
         },
@@ -1319,22 +1275,46 @@
           "tag": "chemical"
         },
         {
+          "tag": "releases"
+        },
+        {
+          "tag": "individual"
+        },
+        {
+          "tag": "facilities"
+        },
+        {
+          "tag": "releases"
+        },
+        {
+          "tag": "facilities"
+        },
+        {
+          "tag": "same"
+        },
+        {
+          "tag": "county"
+        },
+        {
+          "tag": "well"
+        },
+        {
+          "tag": "releases"
+        },
+        {
+          "tag": "facilities"
+        },
+        {
+          "tag": "same"
+        },
+        {
           "tag": "industry"
         },
         {
-          "tag": "epa"
+          "tag": "sector"
         },
         {
-          "tag": "mobile"
-        },
-        {
-          "tag": "web"
-        },
-        {
-          "tag": "water"
-        },
-        {
-          "tag": "pollution"
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1355,7 +1335,7 @@
       "repository": "git://github.com/nasa/NASA-3D-Resources.git",
       "name": "NASA-3D-Resources",
       "repoID": "22180681",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "Here you'll find a growing collection of 3D models, textures, and images from inside NASA. ",
       "contact": [
@@ -1375,23 +1355,46 @@
         }
       ],
       "license": "https://path.to/license",
-       "license_name": "",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "3D"
+          "tag": "here"
+        },
+        {
+          "tag": "ll"
+        },
+        {
+          "tag": "find"
+        },
+        {
+          "tag": "growing"
+        },
+        {
+          "tag": "collection"
+        },
+        {
+          "tag": "3d"
+        },
+        {
+          "tag": "models"
+        },
+        {
+          "tag": "textures"
+        },
+        {
+          "tag": "images"
+        },
+        {
+          "tag": "inside"
         },
         {
           "tag": "nasa"
         },
         {
-          "tag": "3d models"
-        },
-        {
-          "tag": "nasa"
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1407,7 +1410,7 @@
       "agency": "NASA"
     },
     {
-      "status": "production",
+      "status": " ",
       "vcs": "git",
       "repository": "git://github.com/18F/web-design-standards.git",
       "name": "web-design-standards",
@@ -1417,7 +1420,7 @@
       "description": "Open source UI components and visual style guide for U.S. government websites ",
       "contact": [
         {
-          "email": "uswebdesignstandards@gsa.gov",
+          "email": " ",
           "name": " ",
           "twitter": " ",
           "phone": " "
@@ -1432,14 +1435,13 @@
         }
       ],
       "license": "https://github.com/18F/web-design-standards/blob/staging/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "css"
+          "tag": "open"
         },
         {
           "tag": "source"
@@ -1460,13 +1462,13 @@
           "tag": "guide"
         },
         {
-          "tag": "uswds"
+          "tag": "u"
         },
         {
-          "tag": "web design"
+          "tag": "s"
         },
         {
-          "tag": "design standards"
+          "tag": "government"
         },
         {
           "tag": "websites"
@@ -1509,21 +1511,23 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/USAJOBS/analytics.usajobs.gov/blob/18f-pages/LICENSE.md",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "usajobs"
         },
         {
-          "tag": "analytics"
+          "tag": "web"
         },
         {
-          "tag": "web-traffic"
+          "tag": "traffic"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1558,13 +1562,15 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/USAJOBS/analytics-reporter/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
+        {
+          "tag": "lightweight"
+        },
         {
           "tag": "analytics"
         },
@@ -1572,10 +1578,64 @@
           "tag": "reporting"
         },
         {
-          "tag": "google analytics"
+          "tag": "publishing"
         },
         {
-          "tag": "ga"
+          "tag": "tool"
+        },
+        {
+          "tag": "google"
+        },
+        {
+          "tag": "analytics"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "powers"
+        },
+        {
+          "tag": "https"
+        },
+        {
+          "tag": "analytics"
+        },
+        {
+          "tag": "usa"
+        },
+        {
+          "tag": "gov"
+        },
+        {
+          "tag": "http"
+        },
+        {
+          "tag": "analytics"
+        },
+        {
+          "tag": "phila"
+        },
+        {
+          "tag": "gov"
+        },
+        {
+          "tag": "http"
+        },
+        {
+          "tag": "analytics"
+        },
+        {
+          "tag": "cityofsacramento"
+        },
+        {
+          "tag": "org"
+        },
+        {
+          "tag": "more"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1611,17 +1671,22 @@
         }
       ],
       "license": "https://github.com/eregs/eregs.github.io/blob/master/LICENSE",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "documentation"
         },
         {
           "tag": "eregulations"
+        },
+        {
+          "tag": "project"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1635,6 +1700,167 @@
         "lastModified": "2016-10-05T16:25:15Z"
       },
       "agency": "CFPB"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/USDA/data-standards.git",
+      "name": "data-standards",
+      "repoID": "64396310",
+      "homepage": "https://usda.github.io/data-standards",
+      "downloadURL": " ",
+      "description": "A collaborative site for official USDA data elements and data standards. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "collaborative"
+        },
+        {
+          "tag": "site"
+        },
+        {
+          "tag": "official"
+        },
+        {
+          "tag": "usda"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "elements"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "standards"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "CSS"
+        }
+      ],
+      "agency": "USDA"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/CommerceGov/CommerceGov.github.io.git",
+      "name": "CommerceGov.github.io",
+      "repoID": "13225017",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": " ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "CSS"
+        }
+      ],
+      "agency": "DOC"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/dun/conman.git",
+      "name": "conman",
+      "repoID": "32411476",
+      "homepage": "",
+      "downloadURL": " ",
+      "description": "ConMan: The Console Manager ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://github.com/dun/conman",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "conman"
+        },
+        {
+          "tag": "console"
+        },
+        {
+          "tag": "manager"
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "C"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-04-26T23:10:27Z",
+        "metadataLastUpdated": "2015-03-17T18:13:16Z",
+        "lastModified": "2016-10-20T23:34:14Z"
+      },
+      "agency": "DOE"
     },
     {
       "status": " ",
@@ -1662,12 +1888,20 @@
         }
       ],
       "license": "https://path.to/license",
-      "license_name":"",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
+        {
+          "tag": "feedback"
+        },
+        {
+          "tag": "ideas"
+        },
+        {
+          "tag": "questions"
+        },
         {
           "tag": "usda"
         },
@@ -1675,16 +1909,28 @@
           "tag": "apis"
         },
         {
-          "tag": "rec1stop"
+          "tag": "use"
         },
         {
-          "tag": "api"
+          "tag": "repository"
         },
         {
-          "tag": "ridb"
+          "tag": "s"
         },
         {
-          "tag": "issue tracker"
+          "tag": "issue"
+        },
+        {
+          "tag": "tracker"
+        },
+        {
+          "tag": "join"
+        },
+        {
+          "tag": "discussion"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [],
@@ -1696,7 +1942,7 @@
       "repository": "git://github.com/CommerceGov/Policies-and-Guidance.git",
       "name": "Policies-and-Guidance",
       "repoID": "33949902",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "Official instructions that are directly relevant to work performed by @CommerceGov on Github. ",
       "contact": [
@@ -1715,12 +1961,11 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/CommerceGov/Policies-and-Guidance/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "official"
@@ -1779,26 +2024,43 @@
         }
       ],
       "license": "https://github.com/samilliken/openDCIM",
-      "license_name": "gplv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "open source"
+          "tag": "open"
         },
         {
           "tag": "source"
         },
         {
-          "tag": "data center"
+          "tag": "gpl"
         },
         {
-          "tag": "inventory management"
+          "tag": "v3"
+        },
+        {
+          "tag": "data"
+        },
+        {
+          "tag": "center"
+        },
+        {
+          "tag": "inventory"
+        },
+        {
+          "tag": "management"
         },
         {
           "tag": "dcim"
+        },
+        {
+          "tag": "application"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1839,17 +2101,19 @@
         }
       ],
       "license": "https://github.com/dun/munge",
-      "license_name": "gplv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "munge"
         },
         {
           "tag": "uid"
+        },
+        {
+          "tag": "n"
         },
         {
           "tag": "gid"
@@ -1869,6 +2133,213 @@
         "lastModified": "2016-10-08T07:37:01Z"
       },
       "agency": "DOE"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/18F/vote-gov.git",
+      "name": "vote-gov",
+      "repoID": "57156495",
+      "homepage": "https://vote.gov/",
+      "downloadURL": " ",
+      "description": "This repository contains the files and infrastructure to run the current vote.gov website. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://github.com/18F/vote-gov/blob/staging/LICENSE.md",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "repository"
+        },
+        {
+          "tag": "contains"
+        },
+        {
+          "tag": "files"
+        },
+        {
+          "tag": "infrastructure"
+        },
+        {
+          "tag": "run"
+        },
+        {
+          "tag": "current"
+        },
+        {
+          "tag": "vote"
+        },
+        {
+          "tag": "gov"
+        },
+        {
+          "tag": "website"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "HTML"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-10-06T22:37:01Z",
+        "metadataLastUpdated": "2016-04-26T19:35:23Z",
+        "lastModified": "2016-10-11T18:16:56Z"
+      },
+      "agency": "GSA"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/presidential-innovation-fellows/code-gov-web.git",
+      "name": "code-gov-web",
+      "repoID": "65018281",
+      "homepage": "https://code.gov",
+      "downloadURL": " ",
+      "description": "Federal Source Code policy implementation. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/LICENSE.md",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "federal"
+        },
+        {
+          "tag": "source"
+        },
+        {
+          "tag": "code"
+        },
+        {
+          "tag": "policy"
+        },
+        {
+          "tag": "implementation"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "JavaScript"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-10-18T16:42:30Z",
+        "metadataLastUpdated": "2016-08-05T12:53:38Z",
+        "lastModified": "2016-10-20T19:03:31Z"
+      },
+      "agency": "GSA"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/cfpb/college-costs.git",
+      "name": "college-costs",
+      "repoID": "43300650",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "A tool to help students weigh the costs and rewards of a college program. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://github.com/cfpb/college-costs/blob/master/LICENSE",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "tool"
+        },
+        {
+          "tag": "help"
+        },
+        {
+          "tag": "students"
+        },
+        {
+          "tag": "weigh"
+        },
+        {
+          "tag": "costs"
+        },
+        {
+          "tag": "rewards"
+        },
+        {
+          "tag": "college"
+        },
+        {
+          "tag": "program"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "CSS"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-08-23T21:13:45Z",
+        "metadataLastUpdated": "2015-09-28T12:51:23Z",
+        "lastModified": "2016-10-20T16:31:59Z"
+      },
+      "agency": "CFPB"
     },
     {
       "status": " ",
@@ -1896,14 +2367,13 @@
         }
       ],
       "license": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK/blob/master/SWXMLHash LICENSE",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "federal data"
+          "tag": "federal"
         },
         {
           "tag": "data"
@@ -1912,7 +2382,28 @@
           "tag": "sdk"
         },
         {
+          "tag": "built"
+        },
+        {
           "tag": "swift"
+        },
+        {
+          "tag": "programming"
+        },
+        {
+          "tag": "language"
+        },
+        {
+          "tag": "follow"
+        },
+        {
+          "tag": "link"
+        },
+        {
+          "tag": "documentation"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -1953,14 +2444,16 @@
         }
       ],
       "license": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io/blob/master/LICENSE",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "federal spending"
+          "tag": "federal"
+        },
+        {
+          "tag": "spending"
         },
         {
           "tag": "transparency"
@@ -1979,323 +2472,14 @@
       "agency": "TRE"
     },
     {
-      "status": "production",
-      "vcs": "git",
-      "repository": "git://github.com/18F/vote-gov.git",
-      "name": "vote-gov",
-      "repoID": "57156495",
-       "events": [
-        {
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"Issues",
-     "user":"jamesharnett",
-     "time":"2016-10-19T18:00:42Z"
-
-},{
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"IssueComment",
-     "user":"arantxarecio",
-     "time":"2016-10-17T21:42:29Z",
-     "message": "Add statement about voter reg deadlines to state pages",
-      "url":"https://api.github.com/repos/18F/vote-gov/issues/151"
-},{
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"Issues",
-     "user":"megdaly",
-     "time":"2016-10-17T18:15:22Z"
-
-},{
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"Issues",
-     "user":"yozlet",
-     "time":"2016-10-11T20:28:57Z"
-
-},{
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"IssueComment",
-     "user":"yozlet",
-     "time":"2016-10-11T20:28:57Z",
-     "message": "Launch checklist",
-      "url":"https://api.github.com/repos/18F/vote-gov/issues/121"
-},{
-     "id": "57156495",
-     "name": "18F/vote-gov",
-     "type":"Push",
-     "user":"yozlet",
-     "time":"2016-10-11T18:16:57Z",
-     "message": "Add redirector nginx conf",
-      "url":"https://api.github.com/repos/18F/vote-gov/commits/91b79a23d061b5117446c60a6b48f1d4a4ac1254"
-}
-      ],
-      "homepage": "https://vote.gov/",
-      "downloadURL": " ",
-      "description": "This repository contains the files and infrastructure to run the current vote.gov website. ",
-      "contact": [
-        {
-          "email": "john.yuda@gsa.gov",
-          "name": "John Yuda",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/18F/vote-gov/blob/staging/LICENSE.md",
-      "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "voting"
-        },
-        {
-          "tag": "elections"
-        },
-        {
-          "tag": "voter registration"
-        },
-        {
-          "tag": "voter reg"
-        },
-        {
-          "tag": "voter"
-        },
-        {
-          "tag": "election"
-        },
-        {
-          "tag": "vote"
-        },
-        {
-          "tag": "vote.gov"
-        },
-        {
-          "tag": "votar"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "HTML"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-10-06T22:37:01Z",
-        "metadataLastUpdated": "2016-04-26T19:35:23Z",
-        "lastModified": "2016-10-11T18:16:56Z"
-      },
-      "agency": "GSA"
-    },
-    {
-      "status": "production",
-      "vcs": "git",
-      "repository": "git://github.com/presidential-innovation-fellows/code-gov-web.git",
-      "name": "code-gov-web",
-      "repoID": "65018281",
-      "homepage": "https://code.gov",
-      "downloadURL": " ",
-      "description": "Federal Source Code policy implementation.",
-      "contact": [
-        {
-          "email": "code@listserv.gsa.gov",
-          "name": "Code.gov Team",
-          "twitter": "htttps://twitter.com/codedotgov",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": "OMB"
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/LICENSE.md",
-         "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "open source"
-        },
-        {
-          "tag": "source"
-        },
-        {
-          "tag": "peoples code"
-        },
-        {
-          "tag": "government code"
-        },
-        {
-          "tag": "code"
-        },
-        {
-          "tag": "policy"
-        },
-        {
-          "tag": "source code"
-        },
-        {
-          "tag": "code.gov"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "JavaScript"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-10-18T16:42:30Z",
-        "metadataLastUpdated": "2016-08-05T12:53:38Z",
-        "lastModified": "2016-10-20T19:03:31Z"
-      },
-      "agency": "GSA"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/cfpb/college-costs.git",
-      "name": "college-costs",
-      "repoID": "43300650",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": "A tool to help students weigh the costs and rewards of a college program. ",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://github.com/cfpb/college-costs/blob/master/LICENSE",
-      "license_name": "cc0",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "students"
-        },
-        {
-          "tag": "education"
-        },
-        {
-          "tag": "college costs"
-        },
-        {
-          "tag": "higher education"
-        },
-        {
-          "tag": "college"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "CSS"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-08-23T21:13:45Z",
-        "metadataLastUpdated": "2015-09-28T12:51:23Z",
-        "lastModified": "2016-10-20T16:31:59Z"
-      },
-      "agency": "CFPB"
-    },
-    {
-      "status": " ",
-      "vcs": "git",
-      "repository": "git://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS.git",
-      "name": "OSHA-Heat-Safety-iOS",
-      "repoID": "9076547",
-      "homepage": "",
-      "downloadURL": " ",
-      "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers. ",
-      "contact": [
-        {
-          "email": " ",
-          "name": " ",
-          "twitter": " ",
-          "phone": " "
-        }
-      ],
-      "partners": [
-        {
-          "name": " "
-        },
-        {
-          "email": " "
-        }
-      ],
-      "license": "https://path.to/license",
-      "license_name": "",
-      "openproject": 1,
-      "govwideReuseproject": 0,
-      "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "app"
-        },
-        {
-          "tag": "heat index"
-        },
-        {
-          "tag": "worksite"
-        },
-        {
-          "tag": "risk level"
-        },
-        {
-          "tag": "outdoor workers"
-        }
-      ],
-      "codeLanguage": [
-        {
-          "language": "HTML"
-        }
-      ],
-      "updated": {
-        "lastCommit": "2016-02-07T23:10:32Z",
-        "metadataLastUpdated": "2013-03-28T12:26:25Z",
-        "lastModified": "2016-06-20T13:41:13Z"
-      },
-      "agency": "DOL"
-    },
-    {
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/fedspendingtransparency/data-act-broker-backend.git",
       "name": "data-act-broker-backend",
       "repoID": "57313310",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
-      "description": "",
+      "description": "null ",
       "contact": [
         {
           "email": " ",
@@ -2313,19 +2497,11 @@
         }
       ],
       "license": "https://github.com/fedspendingtransparency/data-act-broker-backend/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "data act"
-        },
-        {
-          "tag": "api"
-        }
-      ],
+      "exemption": null,
+      "projectTags": [],
       "codeLanguage": [
         {
           "language": "Python"
@@ -2344,14 +2520,14 @@
       "repository": "git://github.com/department-of-veterans-affairs/roadrunner-rails.git",
       "name": "roadrunner-rails",
       "repoID": "50939211",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
       "description": "Base rails project with the VA special sauce. ",
       "contact": [
         {
           "email": " ",
           "name": " ",
-          "twitter": "https://twitter.com/DeptVetAffairs/",
+          "twitter": " ",
           "phone": " "
         }
       ],
@@ -2364,14 +2540,13 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/roadrunner-rails/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "ruby"
+          "tag": "base"
         },
         {
           "tag": "rails"
@@ -2380,7 +2555,16 @@
           "tag": "project"
         },
         {
-          "tag": "roadrunner"
+          "tag": "va"
+        },
+        {
+          "tag": "special"
+        },
+        {
+          "tag": "sauce"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -2401,9 +2585,9 @@
       "repository": "git://github.com/USEPA/WNTR.git",
       "name": "WNTR",
       "repoID": "63262591",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
-      "description": "",
+      "description": "null ",
       "contact": [
         {
           "email": " ",
@@ -2421,11 +2605,10 @@
         }
       ],
       "license": "https://github.com/USEPA/WNTR/blob/master/LICENSE.txt",
-      "license_name": "bsd3,lgplv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [],
       "codeLanguage": [
         {
@@ -2464,21 +2647,47 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/USAJOBS/design-system/blob/gh-pages/LICENSE.md",
-      "license_name": "cc0",
+      "license": "https://path.to/license",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
+        {
+          "tag": "design"
+        },
+        {
+          "tag": "system"
+        },
+        {
+          "tag": "next"
+        },
+        {
+          "tag": "generation"
+        },
         {
           "tag": "usajobs"
         },
         {
-          "tag": "jobs"
+          "tag": "describes"
         },
         {
-          "tag": "uswds"
+          "tag": "design"
+        },
+        {
+          "tag": "language"
+        },
+        {
+          "tag": "reusable"
+        },
+        {
+          "tag": "components"
+        },
+        {
+          "tag": "site"
+        },
+        {
+          "tag": ""
         }
       ],
       "codeLanguage": [
@@ -2514,14 +2723,22 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/federalregister-api-core/blob/master/LICENSE",
-      "license_name": "agplv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
-          "tag": "federal register"
+          "tag": "federal"
+        },
+        {
+          "tag": "register"
+        },
+        {
+          "tag": "2"
+        },
+        {
+          "tag": "0"
         },
         {
           "tag": "api"
@@ -2530,7 +2747,7 @@
           "tag": "data"
         },
         {
-          "tag": "data importer"
+          "tag": "importer"
         }
       ],
       "codeLanguage": [
@@ -2571,11 +2788,10 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/federal_register/blob/master/LICENSE.md",
-      "license_name": "cc0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "ruby"
@@ -2588,6 +2804,27 @@
         },
         {
           "tag": "federalregister"
+        },
+        {
+          "tag": "gov"
+        },
+        {
+          "tag": "handles"
+        },
+        {
+          "tag": "searching"
+        },
+        {
+          "tag": "articles"
+        },
+        {
+          "tag": "getting"
+        },
+        {
+          "tag": "information"
+        },
+        {
+          "tag": "agencies"
         }
       ],
       "codeLanguage": [
@@ -2628,20 +2865,34 @@
         }
       ],
       "license": "https://github.com/WhiteHouse/petitions#license",
-      "license_name": "cc0,gplv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
+      "exemption": null,
       "projectTags": [
         {
           "tag": "drupal"
+        },
+        {
+          "tag": "installation"
+        },
+        {
+          "tag": "profile"
+        },
+        {
+          "tag": "powering"
+        },
+        {
+          "tag": "people"
         },
         {
           "tag": "petitions"
         },
         {
           "tag": "whitehouse"
+        },
+        {
+          "tag": "gov"
         }
       ],
       "codeLanguage": [
@@ -2662,9 +2913,9 @@
       "repository": "git://github.com/WhiteHouse/wh-app-android.git",
       "name": "wh-app-android",
       "repoID": "5662026",
-      "homepage": "",
+      "homepage": "null",
       "downloadURL": " ",
-      "description": "",
+      "description": "null ",
       "contact": [
         {
           "email": " ",
@@ -2682,22 +2933,11 @@
         }
       ],
       "license": "https://github.com/WhiteHouse/wh-app-android#license",
-      "license_name": "mit",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
-      "exemption": "",
-      "projectTags": [
-        {
-          "tag": "android"
-        },
-        {
-          "tag": "white house"
-        },
-        {
-          "tag": "white house app"
-        }
-      ],
+      "exemption": null,
+      "projectTags": [],
       "codeLanguage": [
         {
           "language": "Java"
@@ -2709,6 +2949,101 @@
         "lastModified": "2015-12-19T08:10:50Z"
       },
       "agency": "EOP"
+    },
+    {
+      "status": " ",
+      "vcs": "git",
+      "repository": "git://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS.git",
+      "name": "OSHA-Heat-Safety-iOS",
+      "repoID": "9076547",
+      "homepage": "null",
+      "downloadURL": " ",
+      "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers. ",
+      "contact": [
+        {
+          "email": " ",
+          "name": " ",
+          "twitter": " ",
+          "phone": " "
+        }
+      ],
+      "partners": [
+        {
+          "name": " "
+        },
+        {
+          "email": " "
+        }
+      ],
+      "license": "https://path.to/license",
+      "openproject": 1,
+      "govwideReuseproject": 0,
+      "closedproject": 0,
+      "exemption": null,
+      "projectTags": [
+        {
+          "tag": "app"
+        },
+        {
+          "tag": "allows"
+        },
+        {
+          "tag": "workers"
+        },
+        {
+          "tag": "supervisors"
+        },
+        {
+          "tag": "calculate"
+        },
+        {
+          "tag": "heat"
+        },
+        {
+          "tag": "index"
+        },
+        {
+          "tag": "worksite"
+        },
+        {
+          "tag": "based"
+        },
+        {
+          "tag": "heat"
+        },
+        {
+          "tag": "index"
+        },
+        {
+          "tag": "displays"
+        },
+        {
+          "tag": "risk"
+        },
+        {
+          "tag": "level"
+        },
+        {
+          "tag": "outdoor"
+        },
+        {
+          "tag": "workers"
+        },
+        {
+          "tag": ""
+        }
+      ],
+      "codeLanguage": [
+        {
+          "language": "HTML"
+        }
+      ],
+      "updated": {
+        "lastCommit": "2016-02-07T23:10:32Z",
+        "metadataLastUpdated": "2013-03-28T12:26:25Z",
+        "lastModified": "2016-06-20T13:41:13Z"
+      },
+      "agency": "DOL"
     }
   ]
 }
