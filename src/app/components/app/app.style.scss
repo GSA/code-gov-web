@@ -19,7 +19,7 @@
 }
 
 .app-footer {
-  background-color: $color-gray-lightest;
+  background-color: darken($color-gray-lightest, 5);
   padding: 2em 0 3em;
 
   label {
@@ -47,19 +47,19 @@
 .app-links {
   display: block;
   float: right;
-  margin-top: 0.1em;
+  margin-top: 0.2em;
 
   a {
     color: $color-gray;
     text-decoration: none;
 
     &:hover {
-      border-bottom: 2px solid $brand-blue;
+      border-bottom: 3px solid $brand-teal;
       color: $brand-blue;
     }
 
     &.active {
-      border-bottom: 2px solid $brand-blue;
+      border-bottom: 3px solid $brand-teal;
       color: $brand-blue;
       font-weight: bold;
     }
@@ -73,7 +73,7 @@
 
 .app-logo {
   float: left;
-  max-width: 10em;
+  max-width: 7.5em;
 
   a {
     color: $brand-blue;
@@ -108,7 +108,7 @@
     text-decoration: none;
 
     &:hover {
-      border-bottom: 2px solid $brand-blue;
+      border-bottom: 3px solid $brand-teal;
       color: $brand-blue;
     }
   }

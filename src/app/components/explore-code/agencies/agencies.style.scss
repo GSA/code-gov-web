@@ -2,6 +2,12 @@
 
 .agencies-content {
   @include span-columns(9);
+  background-color: $color-white;
+  padding: 2.5em 1.5em;
+
+  @include media($extra-large-screen) {
+    padding: 2.5em 2em;
+  }
 }
 
 .sidebar-agencies {
