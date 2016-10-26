@@ -25,7 +25,7 @@
       <h2>Highlights</h2>
       <ul class="usa-unstyled-list repo-features-list">
         <li class="repo-language usa-width-one-half">
-          <div *ngIf="repo.language">
+          <div *ngIf="repo.codeLanguage">
             <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
               <i class="devicons devicons-{{language.language | lowercase}}"></i>
             </div>
@@ -37,7 +37,7 @@
               </span>
             </p>
           </div>
-          <div *ngIf="!repo.language">
+          <div *ngIf="!repo.codeLanguage">
             <div class="feature-icon">
               <i class="fa fa-question"></i>
             </div>
