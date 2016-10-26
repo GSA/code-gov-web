@@ -27,7 +27,7 @@
         }
       ],
       "license": "https://github.com/CommerceGov/commerce.gov-api/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -75,7 +75,7 @@
         }
       ],
       "license": "https://github.com/fedspendingtransparency/data-act-broker-web-app/blob/dev/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -176,7 +176,7 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -233,7 +233,7 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/vets-api/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -287,7 +287,7 @@
         }
       ],
       "license": "https://github.com/USEPA/E-Enterprise-Portal/blob/master/drupal/LICENSE.txt",
-      "license_name": "gplv2",
+      "license_name": "GPLv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -371,7 +371,7 @@
         }
       ],
       "license": "https://github.com/nasa/trick/blob/master/LICENSE",
-      "license_name": "nasa",
+      "license_name": "NOSA",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -428,7 +428,7 @@
         }
       ],
       "license": "https://github.com/nasa/earthdata-search/blob/master/LICENSE",
-         "license_name": "apachev2",
+         "license_name": "Apache v2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -497,7 +497,7 @@
         }
       ],
       "license": "https://github.com/presidential-innovation-fellows/apps-gov/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -572,7 +572,7 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/File-Analyzer/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -678,7 +678,7 @@
         }
       ],
       "license": "https://github.com/bro/bro/blob/master/doc/LICENSE",
-       "license_name": "ccby4",
+       "license_name": "CCBY4.0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -842,7 +842,7 @@
         }
       ],
       "license": "https://github.com/nasa/openmct/blob/master/LICENSES.md",
-      "license_name": "apache",
+      "license_name": "Apache v1",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -896,7 +896,7 @@
         }
       ],
       "license": "https://github.com/USAJOBS/open-source-policy/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -944,7 +944,7 @@
         }
       ],
       "license": "https://github.com/USAJOBS/Help/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -996,7 +996,7 @@
         }
       ],
       "license": "https://github.com/cfpb/owning-a-home/blob/master/TERMS.md",
-       "license_name": "cc0",
+       "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1164,7 +1164,7 @@
         }
       ],
       "license": "https://github.com/USDA/data-standards/blob/gh-pages/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1252,7 +1252,7 @@
         }
       ],
       "license": "https://github.com/dun/conman",
-      "license_name": "gplv3",
+      "license_name": "GPLv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1306,7 +1306,7 @@
         }
       ],
       "license": "https://github.com/USEPA/My-Right-To-Know--MyRTK-/blob/master/LICENSE.md",
-       "license_name": "epaosa",
+       "license_name": "EPAOSA",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1432,7 +1432,7 @@
         }
       ],
       "license": "https://github.com/18F/web-design-standards/blob/staging/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1510,7 +1510,7 @@
         }
       ],
       "license": "https://github.com/USAJOBS/analytics.usajobs.gov/blob/18f-pages/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1559,7 +1559,7 @@
         }
       ],
       "license": "https://github.com/USAJOBS/analytics-reporter/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1611,7 +1611,7 @@
         }
       ],
       "license": "https://github.com/eregs/eregs.github.io/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1716,7 +1716,7 @@
         }
       ],
       "license": "https://github.com/CommerceGov/Policies-and-Guidance/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1779,7 +1779,7 @@
         }
       ],
       "license": "https://github.com/samilliken/openDCIM",
-      "license_name": "gplv3",
+      "license_name": "GPLv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1839,7 +1839,7 @@
         }
       ],
       "license": "https://github.com/dun/munge",
-      "license_name": "gplv3",
+      "license_name": "GPLv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1896,7 +1896,7 @@
         }
       ],
       "license": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK/blob/master/SWXMLHash LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1953,7 +1953,7 @@
         }
       ],
       "license": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2052,7 +2052,7 @@
         }
       ],
       "license": "https://github.com/18F/vote-gov/blob/staging/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2124,7 +2124,7 @@
         }
       ],
       "license": "https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/LICENSE.md",
-         "license_name": "cc0",
+         "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2193,7 +2193,7 @@
         }
       ],
       "license": "https://github.com/cfpb/college-costs/blob/master/LICENSE",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2313,7 +2313,7 @@
         }
       ],
       "license": "https://github.com/fedspendingtransparency/data-act-broker-backend/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2364,7 +2364,7 @@
         }
       ],
       "license": "https://github.com/department-of-veterans-affairs/roadrunner-rails/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2421,7 +2421,7 @@
         }
       ],
       "license": "https://github.com/USEPA/WNTR/blob/master/LICENSE.txt",
-      "license_name": "bsd3,lgplv2",
+      "license_name": "BSD-3,LGPLv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2465,7 +2465,7 @@
         }
       ],
       "license": "https://github.com/USAJOBS/design-system/blob/gh-pages/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2514,7 +2514,7 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/federalregister-api-core/blob/master/LICENSE",
-      "license_name": "agplv3",
+      "license_name": "AGPLv3",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2571,7 +2571,7 @@
         }
       ],
       "license": "https://github.com/usnationalarchives/federal_register/blob/master/LICENSE.md",
-      "license_name": "cc0",
+      "license_name": "CC0",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2628,7 +2628,7 @@
         }
       ],
       "license": "https://github.com/WhiteHouse/petitions#license",
-      "license_name": "cc0,gplv2",
+      "license_name": "CC0,GPLv2",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -2682,7 +2682,7 @@
         }
       ],
       "license": "https://github.com/WhiteHouse/wh-app-android#license",
-      "license_name": "mit",
+      "license_name": "MIT",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
