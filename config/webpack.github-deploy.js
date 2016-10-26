@@ -26,7 +26,9 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
    */
   baseUrl: '/site/presidential-innovation-fellows/' + GH_REPO_NAME + '/',
   ENV: ENV,
-  HMR: false
+  HMR: false,
+  isDevServer: false,
+  title: 'Code.gov',
 });
 
 
@@ -43,6 +45,7 @@ module.exports = function (env) {
       new HtmlWebpackPlugin({
         metadata: METADATA,
         template: 'src/index.html',
+        title: METADATA.title,
         chunksSortMode: 'dependency',
         inject: 'head'
       }),
