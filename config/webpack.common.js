@@ -140,7 +140,7 @@ module.exports = function (options) {
         /* File loader for supporting images, for example, in CSS files.
         */
         {
-          test: /\.(jpe?g|png|gif)$/,
+          test: /\.(jpe?g|png|gif|svg)$/,
           loader: 'file'
         },
 

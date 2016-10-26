@@ -47,7 +47,7 @@
 .app-links {
   display: block;
   float: right;
-  margin-top: 0.75em;
+  margin-top: 0.1em;
 
   a {
     color: $color-gray;
@@ -73,15 +73,21 @@
 
 .app-logo {
   float: left;
-  font-size: 2.15em;
+  max-width: 10em;
 
   a {
     color: $brand-blue;
+    display: inline-block;
 
     &:focus {
       box-shadow: none;
       outline: 0;
     }
+  }
+
+  img {
+    display: block;
+    width: 100%;
   }
 }
 

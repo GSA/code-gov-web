@@ -2,6 +2,7 @@
 @import '../../../../styles/utils/all';
 
 .repo-container {
+  @include clearfix;
 
   header {
     margin-bottom: 2em;
