@@ -18,12 +18,14 @@ import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
 import { ReposService } from './services/repos';
+import { StateService } from './services/state';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AgencyService,
-  ReposService
+  ReposService,
+  StateService
 ];
 
 /**

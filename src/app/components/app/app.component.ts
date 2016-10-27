@@ -2,6 +2,7 @@
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
+import { StateService } from '../../services/state';
 /*
  * App Component
  * Top Level Component
@@ -14,7 +15,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 
 export class AppComponent {
-  constructor(){}
+  constructor(public stateService: StateService) {}
 }
 
 /*

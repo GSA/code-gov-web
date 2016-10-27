@@ -1,6 +1,28 @@
 @import '../../../styles/base/all';
 @import '../../../styles/utils/all';
 
+.home {
+
+  .app-logo {
+
+    .cls-1 {
+      fill: $color-white;
+    }
+  }
+
+  .app-navigation {
+    background-color: $brand-blue-gray;
+
+    a {
+      color: lighten($brand-blue-gray, 50);
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
+
 .agency-logos {
 
   li {
@@ -47,7 +69,6 @@
 .app-links {
   display: block;
   float: right;
-  margin-top: 0.2em;
 
   a {
     color: $color-gray;
@@ -73,7 +94,7 @@
 
 .app-logo {
   float: left;
-  max-width: 7.5em;
+  max-width: 6em;
 
   a {
     color: $brand-blue;
@@ -85,7 +106,7 @@
     }
   }
 
-  img {
+  svg {
     display: block;
     width: 100%;
   }

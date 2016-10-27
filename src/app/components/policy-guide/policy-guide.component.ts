@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StateService } from '../../services/state';
 
 @Component({
   selector: 'policy-guide',
@@ -7,8 +8,7 @@ import { Component } from '@angular/core';
 })
 export class PolicyGuideComponent {
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor(public stateService: StateService) {
+    this.stateService.set('section', 'policy-guide');
   }
 }

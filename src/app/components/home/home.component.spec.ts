@@ -1,6 +1,7 @@
 import { inject, TestBed } from '@angular/core/testing';
 
 // Load the implementations that should be tested
+import { StateService } from '../../services/state';
 import { HomeComponent } from './';
 
 describe('HomeComponent', () => {
@@ -10,6 +11,9 @@ describe('HomeComponent', () => {
       declarations: [
         HomeComponent
       ],
+      providers: [
+        StateService
+      ]
     });
 
     this.fixture = TestBed.createComponent(HomeComponent);
