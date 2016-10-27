@@ -148,6 +148,12 @@
   height: auto;
   padding: 0.5em 0;
 
+  a {
+    color: $brand-blue;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   img {
     max-width: 1.5em;
   }
