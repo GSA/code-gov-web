@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StateService } from '../../services/state';
 
 @Component({
   // The selector is what angular internally uses
@@ -11,8 +12,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   url = 'https://pif.gov';
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor(public stateService: StateService) {
+    this.stateService.set('section', 'home');
   }
 }
