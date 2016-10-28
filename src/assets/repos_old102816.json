@@ -5,19 +5,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/CommerceGov/commerce.gov-api.git",
-      "repoURL": "https://github.com/CommerceGov/commerce.gov-api",
       "name": "commerce.gov-api",
       "repoID": "43393077",
-      "events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
       "homepage": "",
       "downloadURL": " ",
       "description": "Content API for Commerce.gov ",
@@ -64,19 +53,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/fedspendingtransparency/data-act-broker-web-app.git",
-      "repoURL": "https://github.com/fedspendingtransparency/data-act-broker-web-app",
       "name": "data-act-broker-web-app",
       "repoID": "47277547",
-      "events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
       "homepage": "",
       "downloadURL": " ",
       "description": "",
@@ -126,7 +104,6 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/department-of-veterans-affairs/vets-website.git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/vets-website",
       "name": "vets-website",
       "repoID": "33202667",
       "events": [
@@ -234,19 +211,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/department-of-veterans-affairs/vets-api.git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/vets-api",
       "name": "vets-api",
       "repoID": "62409417",
-      "events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
       "homepage": "",
       "downloadURL": " ",
       "description": "API for vets.gov ",
@@ -299,19 +265,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USEPA/E-Enterprise-Portal.git",
-      "repoURL": "https://github.com/USEPA/E-Enterprise-Portal",
       "name": "E-Enterprise-Portal",
       "repoID": "36677210",
-      "events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
       "homepage": "",
       "downloadURL": " ",
       "description": "E-Enterprise is a transformative approach to make environmental information and data more accessible, efficient, and evidence-based through advances in monitoring, reporting, and information technology. The Portal is designed to be a modern and efficient interface for environmental transactions. This includes easier access to information and making transactions with environmental agencies as efficient and effective as possible. ",
@@ -394,20 +349,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/nasa/trick.git",
-      "repoURL": "https://github.com/nasa/trick",
       "name": "trick",
       "repoID": "30925311",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Trick Simulation Environment. Trick provides a common set of simulation capabilities and utilities to build simulations automatically. ",
@@ -463,20 +406,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/nasa/earthdata-search.git",
-       "repoURL": "https://github.com/nasa/earthdata-search",
       "name": "earthdata-search",
       "repoID": "40671758",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://search.earthdata.nasa.gov",
       "downloadURL": " ",
       "description": "Earthdata Search is a web application developed by NASA EOSDIS to enable data discovery, search, comparison, visualization, and access across EOSDIS' Earth Science data holdings. ",
@@ -544,20 +475,8 @@
       "status": "alpha",
       "vcs": "git",
       "repository": "git://github.com/presidential-innovation-fellows/apps-gov.git",
-      "repoURL": "https://github.com/presidential-innovation-fellows/apps-gov",
       "name": "apps-gov",
       "repoID": "50465059",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://apps.gov",
       "downloadURL": " ",
       "description": "Be more productive ",
@@ -631,20 +550,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/usnationalarchives/File-Analyzer.git",
-      "repoURL": "https://github.com/usnationalarchives/File-Analyzer",
       "name": "File-Analyzer",
       "repoID": "2533400",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://www.archives.gov/developer",
       "downloadURL": " ",
       "description": "NARA File Analyzer and Metadata Harvester ",
@@ -700,20 +607,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDA/RIDB.git",
-       "repoURL": "https://github.com/USDA/RIDB",
       "name": "RIDB",
       "repoID": "29924484",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://usda.github.io/RIDB",
       "downloadURL": " ",
       "description": "Recreation Information Database ",
@@ -761,20 +656,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/bro/bro.git",
-      "repoURL": "https://github.com/bro/bro",
       "name": "bro",
       "repoID": "4930716",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://www.bro.org",
       "downloadURL": " ",
       "description": "Bro is a powerful network analysis framework that is much different from the typical IDS you may know. Official mirror of git.bro.org/bro.git . ",
@@ -827,20 +710,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDepartmentofLabor/Child-Labor.git",
-      "repoURL": "https://github.com/USDepartmentofLabor/Child-Labor",
       "name": "Child-Labor",
       "repoID": "37860521",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "",
@@ -883,20 +754,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/department-of-veterans-affairs/sniffybara.git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/sniffybara",
       "name": "sniffybara",
       "repoID": "51226712",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Gem that adds automatic 508 accessibility compliance checks into your Capybara specs ",
@@ -961,20 +820,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/nasa/openmct.git",
-       "repoURL": "https://github.com/nasa/openmct",
       "name": "openmct",
       "repoID": "36753839",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://nasa.github.io/openmct/",
       "downloadURL": " ",
       "description": "A web based mission control framework. ",
@@ -1027,20 +874,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USAJOBS/open-source-policy.git",
-      "repoURL": "https://github.com/USAJOBS/open-source-policy",
       "name": "open-source-policy",
       "repoID": "44256248",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://usajobs.gov",
       "downloadURL": " ",
       "description": "This repository contains the official Open Source Policy of USAJOBS ",
@@ -1087,20 +922,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USAJOBS/Help.git",
-      "repoURL": "https://github.com/USAJOBS/Help",
       "name": "Help",
       "repoID": "52627605",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://usajobs.github.io/Help/",
       "downloadURL": " ",
       "description": "Next generation of help content for USAJOBS ",
@@ -1151,20 +974,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/cfpb/owning-a-home.git",
-      "repoURL": "https://github.com/cfpb/owning-a-home",
       "name": "owning-a-home",
       "repoID": "15999442",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://consumerfinance.gov/owning-a-home",
       "downloadURL": " ",
       "description": "Suite of tools and resources for homebuyers. ",
@@ -1220,7 +1031,6 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/WhiteHouse/fb_messenger_bot.git",
-      "repoURL": "https://github.com/WhiteHouse/fb_messenger_bot",
       "name": "fb_messenger_bot",
       "repoID": "70825196",
       "events": [
@@ -1287,8 +1097,8 @@
           "email": " "
         }
       ],
-      "license": "https://github.com/WhiteHouse/software-policy/blob/gh-pages/LICENSE.md",
-      "license_name": "CC0",
+      "license": "https://path.to/license",
+      "license_name": "",
       "openproject": 1,
       "govwideReuseproject": 0,
       "closedproject": 0,
@@ -1332,20 +1142,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDA/data-standards.git",
-      "repoURL": "https://github.com/USDA/data-standards",
       "name": "data-standards",
       "repoID": "64396310",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://usda.github.io/data-standards",
       "downloadURL": " ",
       "description": "A collaborative site for official USDA data elements and data standards. ",
@@ -1390,20 +1188,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/CommerceGov/CommerceGov.github.io.git",
-      "repoURL": "https://github.com/CommerceGov/CommerceGov.github.io",
       "name": "CommerceGov.github.io",
       "repoID": "13225017",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": " ",
@@ -1444,20 +1230,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/dun/conman.git",
-       "repoURL": "https://github.com/dun/conman",
       "name": "conman",
       "repoID": "32411476",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "ConMan: The Console Manager ",
@@ -1510,20 +1284,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USEPA/My-Right-To-Know--MyRTK-.git",
-      "repoURL": "https://github.com/USEPA/My-Right-To-Know--MyRTK-",
       "name": "My-Right-To-Know--MyRTK-",
       "repoID": "10644334",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "This application compares toxic chemical releases from individual facilities to releases from other facilities in the same county, as well as to releases from other facilities in the same industry sector. ",
@@ -1591,20 +1353,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/nasa/NASA-3D-Resources.git",
-      "repoURL": "https://github.com/nasa/NASA-3D-Resources",
       "name": "NASA-3D-Resources",
       "repoID": "22180681",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Here you'll find a growing collection of 3D models, textures, and images from inside NASA. ",
@@ -1660,20 +1410,8 @@
       "status": "production",
       "vcs": "git",
       "repository": "git://github.com/18F/web-design-standards.git",
-      "repoURL": "https://github.com/18F/web-design-standards",
       "name": "web-design-standards",
       "repoID": "35968578",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://standards.usa.gov",
       "downloadURL": " ",
       "description": "Open source UI components and visual style guide for U.S. government websites ",
@@ -1750,20 +1488,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USAJOBS/analytics.usajobs.gov.git",
-      "repoURL": "https://github.com/USAJOBS/analytics.usajobs.gov",
       "name": "analytics.usajobs.gov",
       "repoID": "58501015",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://analytics.usajobs.gov",
       "downloadURL": " ",
       "description": "USAJOBS web traffic. ",
@@ -1811,20 +1537,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USAJOBS/analytics-reporter.git",
-      "repoURL": "https://github.com/USAJOBS/analytics-reporter",
       "name": "analytics-reporter",
       "repoID": "58501082",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Lightweight analytics reporting and publishing tool for Google Analytics data. Powers https://analytics.usa.gov, http://analytics.phila.gov, http://analytics.cityofsacramento.org, and more. ",
@@ -1875,20 +1589,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/eregs/eregs.github.io.git",
-      "repoURL": "https://github.com/eregs/eregs.github.io",
       "name": "eregs.github.io",
       "repoID": "22834612",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://eregs.github.io/",
       "downloadURL": " ",
       "description": "Documentation for the eRegulations project. ",
@@ -1938,20 +1640,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDA/USDA-APIs.git",
-      "repoURL": "https://github.com/USDA/USDA-APIs",
       "name": "USDA-APIs",
       "repoID": "10064296",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "www.usda.gov/developer",
       "downloadURL": " ",
       "description": "Do you have feedback, ideas, or questions for USDA APIs? Use this repository's Issue Tracker to join the discussion. ",
@@ -2004,20 +1694,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/CommerceGov/Policies-and-Guidance.git",
-      "repoURL": "https://github.com/CommerceGov/Policies-and-Guidance",
       "name": "Policies-and-Guidance",
       "repoID": "33949902",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Official instructions that are directly relevant to work performed by @CommerceGov on Github. ",
@@ -2079,20 +1757,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/samilliken/openDCIM.git",
-      "repoURL": "https://github.com/samilliken/openDCIM",
       "name": "openDCIM",
       "repoID": "4059172",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://opendcim.org",
       "downloadURL": " ",
       "description": "An open source (GPL v3) Data Center Inventory Management (DCIM) application. ",
@@ -2151,20 +1817,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/dun/munge.git",
-      "repoURL": "https://github.com/dun/munge",
       "name": "munge",
       "repoID": "35699486",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "MUNGE Uid 'N' Gid Emporium ",
@@ -2220,20 +1874,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK.git",
-      "repoURL": "https://github.com/USDepartmentofLabor/Swift-Federal-Data-SDK",
       "name": "Swift-Federal-Data-SDK",
       "repoID": "20970680",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://usdepartmentoflabor.github.io/Swift-Federal-Data-SDK/",
       "downloadURL": " ",
       "description": "Federal Data SDK built in the Swift programming language. Follow the link for the documentation: ",
@@ -2289,20 +1931,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/fedspendingtransparency/fedspendingtransparency.github.io.git",
-       "repoURL": "https://github.com/fedspendingtransparency/fedspendingtransparency.github.io",
       "name": "fedspendingtransparency.github.io",
       "repoID": "24609061",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://fedspendingtransparency.github.io",
       "downloadURL": " ",
       "description": "Federal Spending Transparency ",
@@ -2352,7 +1982,6 @@
       "status": "production",
       "vcs": "git",
       "repository": "git://github.com/18F/vote-gov.git",
-      "repoURL": "https://github.com/18F/vote-gov",
       "name": "vote-gov",
       "repoID": "57156495",
        "events": [
@@ -2473,20 +2102,8 @@
       "status": "production",
       "vcs": "git",
       "repository": "git://github.com/presidential-innovation-fellows/code-gov-web.git",
-      "repoURL": "https://github.com/presidential-innovation-fellows/code-gov-web",
       "name": "code-gov-web",
       "repoID": "65018281",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://code.gov",
       "downloadURL": " ",
       "description": "Federal Source Code policy implementation.",
@@ -2554,20 +2171,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/cfpb/college-costs.git",
-      "repoURL": "https://github.com/cfpb/college-costs",
       "name": "college-costs",
       "repoID": "43300650",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "A tool to help students weigh the costs and rewards of a college program. ",
@@ -2626,20 +2231,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS.git",
-      "repoURL": "https://github.com/USDepartmentofLabor/OSHA-Heat-Safety-iOS",
       "name": "OSHA-Heat-Safety-iOS",
       "repoID": "9076547",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "This app allows workers and supervisors to calculate the heat index for their worksite, and, based on the heat index, displays a risk level to outdoor workers. ",
@@ -2698,20 +2291,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/fedspendingtransparency/data-act-broker-backend.git",
-      "repoURL": "https://github.com/fedspendingtransparency/data-act-broker-backend",
       "name": "data-act-broker-backend",
       "repoID": "57313310",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "",
@@ -2761,20 +2342,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/department-of-veterans-affairs/roadrunner-rails.git",
-      "repoURL": "https://github.com/department-of-veterans-affairs/roadrunner-rails",
       "name": "roadrunner-rails",
       "repoID": "50939211",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "Base rails project with the VA special sauce. ",
@@ -2830,20 +2399,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USEPA/WNTR.git",
-      "repoURL": "https://github.com/USEPA/WNTR",
       "name": "WNTR",
       "repoID": "63262591",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "",
@@ -2886,20 +2443,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/USAJOBS/design-system.git",
-      "repoURL": "https://github.com/USAJOBS/design-system",
       "name": "design-system",
       "repoID": "44112444",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://usajobs.github.io/design-system/",
       "downloadURL": " ",
       "description": "The design system for the next generation of USAJOBs. Describes the design language and reusable components of the site. ",
@@ -2947,20 +2492,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/usnationalarchives/federalregister-api-core.git",
-      "repoURL": "https://github.com/usnationalarchives/federalregister-api-core",
       "name": "federalregister-api-core",
       "repoID": "607511",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://www.federalregister.gov",
       "downloadURL": " ",
       "description": "Federal Register 2.0 API and Data Importer ",
@@ -3016,20 +2549,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/usnationalarchives/federal_register.git",
-      "repoURL": "https://github.com/usnationalarchives/federal_register",
       "name": "federal_register",
       "repoID": "2138478",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "http://www.federalregister.gov/learn/developers",
       "downloadURL": " ",
       "description": "Ruby API Client for FederalRegister.gov that handles searching articles and getting information about agencies ",
@@ -3085,20 +2606,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/WhiteHouse/petitions.git",
-      "repoURL": "https://github.com/WhiteHouse/petitions",
       "name": "petitions",
       "repoID": "5532200",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "https://petitions.whitehouse.gov/",
       "downloadURL": " ",
       "description": "Drupal installation profile powering We The People at petitions.whitehouse.gov ",
@@ -3151,20 +2660,8 @@
       "status": " ",
       "vcs": "git",
       "repository": "git://github.com/WhiteHouse/wh-app-android.git",
-      "repoURL": "https://github.com/WhiteHouse/wh-app-android",
       "name": "wh-app-android",
       "repoID": "5662026",
-"events": [
-        {
-     "id": "",
-     "name": "",
-     "type":"",
-     "user":"",
-     "time":"",
-     "message": "",
-      "url":""
-}],
-
       "homepage": "",
       "downloadURL": " ",
       "description": "",
