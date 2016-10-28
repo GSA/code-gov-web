@@ -7,13 +7,18 @@ import { Observable } from 'rxjs/Rx';
 import { AgencyComponent } from './index';
 import { AgencyService } from '../../../services/agency';
 import { ReposService } from '../../../services/repos';
+import { LanguageIconPipe } from '../../../pipes/language-icon';
+import { TruncatePipe } from '../../../pipes/truncate';
+
 
 describe('AgencyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AgencyComponent
+        AgencyComponent,
+        LanguageIconPipe,
+        TruncatePipe
       ],
       imports: [
         HttpModule,

@@ -1,3 +1,4 @@
+.usa-button,
 .usa-button.usa-button-big,
 .usa-button-primary.usa-button-big,
 .usa-button:visited.usa-button-big,
@@ -8,11 +9,9 @@ button.usa-button-big,
 [type="reset"].usa-button-big,
 [type="image"].usa-button-big {
   @include transition(all 0.2s ease);
-  background-color: $brand-blue;
   box-shadow: 0 3px 7px rgba($color-black, 0.1);
 
   &:hover {
     @include transform(translateY(-2px));
-    background-color: lighten($brand-blue, 10);
   }
 }
