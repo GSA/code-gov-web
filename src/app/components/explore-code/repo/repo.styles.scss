@@ -35,6 +35,17 @@
   position: absolute;
   right: 0;
   top: 1.3em;
+
+  li {
+    display: inline-block;
+
+    &:last-child {
+
+      .usa-button {
+        background-color: $brand-purple;
+      }
+    }
+  }
 }
 
 .repo-features-list {

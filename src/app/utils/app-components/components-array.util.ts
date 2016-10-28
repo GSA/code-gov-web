@@ -1,4 +1,5 @@
 import {
+  ActivityListComponent,
   AgenciesComponent,
   AgencyComponent,
   AgencySidebarComponent,
@@ -31,6 +32,7 @@ import {
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
+  ActivityListComponent,
   AgenciesComponent,
   AgencyComponent,
   AgencySidebarComponent,

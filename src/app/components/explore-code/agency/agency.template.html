@@ -8,7 +8,7 @@
         <a routerLink="/explore-code/repos/{{repo.repoID}}">
           <h3 class="repo-name">{{ repo.name }}</h3>
           <p class="repo-description">
-            {{ repo.description | truncate : 200 : "." }}
+            {{ repo.description | truncate : 200 }}
           </p>
           <p *ngFor="let language of repo.codeLanguage" class="language">
             <i class="devicons devicons-{{language.language | lowercase | languageIcon }}"></i>

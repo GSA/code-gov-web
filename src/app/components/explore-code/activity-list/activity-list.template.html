@@ -1,0 +1,18 @@
+<ul class="usa-unstyled-list">
+  <li *ngFor="let activity of activities" class="activity">
+    <div class="activity-icon">
+      <i class="fa fa-file-text-o"></i>
+    </div>
+    <div class="usa-grid">
+      <div class="usa-width-three-fourths">
+        <h3>{{ activity.type }}</h3>
+        <p *ngIf="activity.message" class="message">
+          {{ activity.message | truncate : 80 }}
+        </p>
+      </div>
+      <div class="usa-width-one-fourth">
+        <p class="date">{{ activity.time | date }}</p>
+      </div>
+    </div>
+  </li>
+</ul>

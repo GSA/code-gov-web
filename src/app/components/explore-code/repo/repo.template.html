@@ -13,6 +13,12 @@
       <ul class="usa-unstyled-list">
         <li *ngIf="repo.homepage && repo.homepage != 'null'">
           <a class="usa-button" href="{{repo.homepage}}" target="_blank">
+            Homepage
+          </a>
+        </li>
+
+        <li *ngIf="repo.repoURL && repo.repoURL != 'null'">
+          <a class="usa-button" href="{{ repo.repoURL }}" target="_blank">
             Visit Repo
           </a>
         </li>
@@ -76,8 +82,11 @@
       </ul>
     </div>
 
-    <h2>Activity</h2>
-    <ul class="usa-unstyled-list">
-    </ul>
+    <div class="activity-container">
+      <h2>Activity</h2>
+      <ul class="usa-unstyled-list">
+        <activity-list></activity-list>
+      </ul>
+    </div>
   </div>
 </section>
