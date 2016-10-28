@@ -27,7 +27,8 @@
         <li class="repo-language usa-width-one-half">
           <div *ngIf="repo.codeLanguage">
             <div *ngFor="let language of repo.codeLanguage" class="feature-icon">
-              <i class="devicons devicons-{{language.language | lowercase}}"></i>
+              <i class="devicons devicons-{{language.language | lowercase | languageIcon }}">
+              </i>
             </div>
             <h3>Language</h3>
             <p>

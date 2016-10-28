@@ -22,14 +22,6 @@ body {
   li {
     @extend %card;
   }
-
-  .usa-button {
-    background-color: $brand-teal;
-
-    &:hover {
-      background-color: darken($brand-teal, 5);
-    }
-  }
 }
 
 .about-actions {
@@ -84,7 +76,7 @@ body {
   }
 
   .usa-button {
-    background-color: $brand-teal;
+    font-size: 1.2em;
 
     i {
       font-weight: bold;

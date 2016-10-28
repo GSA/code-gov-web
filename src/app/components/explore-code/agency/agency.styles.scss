@@ -1,6 +1,18 @@
 @import '../../../../styles/base/all';
 @import '../../../../styles/utils/all';
 
+.agency-container {
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.devicons {
+  color: $brand-teal;
+}
+
 .repo {
 
   a {
@@ -16,4 +28,8 @@
     font-size: 0.95em;
     margin: 0;
   }
+}
+
+.repos-count {
+  margin: 0 0 1.5em;
 }

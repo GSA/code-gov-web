@@ -14,6 +14,8 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { LanguageIconPipe } from './pipes/language-icon';
+import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
@@ -40,7 +42,9 @@ const APP_PROVIDERS = [
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   declarations: [
-    APP_COMPONENTS
+    APP_COMPONENTS,
+    LanguageIconPipe,
+    TruncatePipe
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
