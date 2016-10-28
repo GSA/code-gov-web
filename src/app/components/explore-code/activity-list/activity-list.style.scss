@@ -1,0 +1,45 @@
+@import '../../../../styles/base/all';
+@import '../../../../styles/utils/all';
+
+.activity {
+  @extend %card;
+  margin-bottom: 1em;
+  padding-left: 3em;
+  position: relative;
+
+  p {
+    margin: 0;
+  }
+
+  .activity-icon {
+    border: 2px solid $brand-teal;
+    border-radius: 50%;
+    left: 1em;
+    padding: 0.75em 0.75em 0.7em;
+    position: absolute;
+    text-align: center;
+    top: 1em;
+    vertical-align: middle;
+
+    i {
+      color: $brand-teal;
+      font-size: 1.25em;
+      height: 1em;
+      line-height: 1em;
+      width: 1em;
+    }
+  }
+
+  .date {
+    font-size: 0.9em;
+    text-align: right;
+  }
+
+  .message {
+    font-size: 0.9em;
+  }
+
+  .usa-grid {
+    min-height: 3.5em;
+  }
+}
