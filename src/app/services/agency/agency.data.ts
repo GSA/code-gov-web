@@ -49,6 +49,6 @@ export const AGENCIES = [
   },
   {
     id: 'VA',
-    name: 'Department of Veteran Affairs'
+    name: 'Department of Veterans Affairs'
   }
 ];

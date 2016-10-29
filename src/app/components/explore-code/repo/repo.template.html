@@ -85,7 +85,7 @@
     <div class="activity-container">
       <h2>Activity</h2>
       <ul class="usa-unstyled-list">
-        <activity-list></activity-list>
+        <activity-list  *ngIf="repo" [eventRepo]="repo"></activity-list>
       </ul>
     </div>
   </div>

@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { Subject }    from 'rxjs/Subject';
 
-import { ACTIVITIES } from './';
 import { RepoComponent } from '../repo';
+import { ReposService } from '../../../services/repos';
 import { TruncatePipe } from '../../../pipes/truncate';
 
 @Component({
@@ -11,12 +12,12 @@ import { TruncatePipe } from '../../../pipes/truncate';
 })
 
 export class ActivityListComponent {
-  @Input() repo: RepoComponent;
-  activities = ACTIVITIES;
+  @Input() eventRepo;
+  public activities: any;
 
-  constructor() {
-    this.activities.forEach((activity: any) => {
-      activity.time = new Date(activity.time);
-    });
+  constructor() {}
+
+  ngAfterViewChecked() {
+    setTimeout(_ => this.activities = this.eventRepo.events);
   }
 }
