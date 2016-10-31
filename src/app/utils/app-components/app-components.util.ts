@@ -9,6 +9,8 @@ export * from '../../components/explore-code/agency';
 export * from '../../components/explore-code/repo';
 export * from '../../components/explore-code/repos';
 
+export * from '../../components/modal';
+
 export * from '../../components/policy-guide';
 export * from '../../components/policy-guide/docs';
 
@@ -19,7 +21,6 @@ export * from '../../components/policy-guide/docs/capacity/capacity-interagency-
 export * from '../../components/policy-guide/docs/capacity/capacity-introduction';
 export * from '../../components/policy-guide/docs/capacity/capacity-resources';
 export * from '../../components/policy-guide/docs/capacity/capacity-security';
-
 export * from '../../components/policy-guide/docs/compliance';
 export * from '../../components/policy-guide/docs/compliance/compliance-acquiring-code';
 export * from '../../components/policy-guide/docs/compliance/compliance-inventory-code';
@@ -27,7 +28,6 @@ export * from '../../components/policy-guide/docs/compliance/compliance-licensin
 export * from '../../components/policy-guide/docs/compliance/compliance-measuring-code';
 export * from '../../components/policy-guide/docs/compliance/compliance-metadata-schema';
 export * from '../../components/policy-guide/docs/compliance/compliance-whats-required';
-
 export * from '../../components/policy-guide/docs/overview/introduction';
 export * from '../../components/policy-guide/docs/overview';
 export * from '../../components/policy-guide/docs/overview/overview-inventory';

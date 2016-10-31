@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AgencyService } from '../../../services/agency';
+import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
 
 @Component({

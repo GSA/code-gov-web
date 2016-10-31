@@ -5,6 +5,7 @@ import { async, fakeAsync, inject, TestBed, tick } from '@angular/core/testing';
 import { Observable } from 'rxjs/Rx';
 
 import { AgencyService } from '../../../services/agency';
+import { ExternalLinkDirective } from '../../../directives/external-link';
 import { RepoComponent } from './index';
 import { ReposService } from '../../../services/repos';
 import { REPOS } from '../../../services/repos';
@@ -17,6 +18,7 @@ describe('RepoComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
+        ExternalLinkDirective,
         RepoComponent
       ],
       imports: [
