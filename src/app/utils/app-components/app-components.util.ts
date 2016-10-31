@@ -1,5 +1,7 @@
 export * from '../../components/app';
+export * from '../../components/four-oh-four';
 export * from '../../components/home';
+export * from '../../components/modal';
 
 export * from '../../components/explore-code';
 export * from '../../components/explore-code/activity-list';
@@ -8,9 +10,6 @@ export * from '../../components/explore-code/agencies/agency-sidebar';
 export * from '../../components/explore-code/agency';
 export * from '../../components/explore-code/repo';
 export * from '../../components/explore-code/repos';
-
-export * from '../../components/modal';
-
 export * from '../../components/policy-guide';
 export * from '../../components/policy-guide/docs';
 
