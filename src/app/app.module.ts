@@ -15,6 +15,7 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { LanguageIconPipe } from './pipes/language-icon';
+import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
@@ -44,6 +45,7 @@ const APP_PROVIDERS = [
   declarations: [
     APP_COMPONENTS,
     LanguageIconPipe,
+    PluralizePipe,
     TruncatePipe
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
