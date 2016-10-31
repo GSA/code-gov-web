@@ -9,10 +9,6 @@
   }
 }
 
-.devicons {
-  color: $brand-teal;
-}
-
 .repo {
 
   a {
@@ -32,4 +28,25 @@
 
 .repos-count {
   margin: 0 0 1.5em;
+}
+
+.repo-features {
+  margin-top: 1em;
+
+  i {
+    color: $brand-teal;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 0.75em;
+
+    &:last-child {
+      margin-right: 0;
+
+      i {
+        margin-right: 0.2em;
+      }
+    }
+  }
 }
