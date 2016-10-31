@@ -1,0 +1,17 @@
+<div *ngIf="visible" class="overlay">
+  <div class="modal-container" tabindex="-1">
+    <div class="close">
+      <button (click)="close()" aria-label="close">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div *ngIf="title" class="modal-header">
+      <h1>{{ title }}</h1>
+    </div>
+    <div class="modal-content">
+      <p *ngIf="description">{{ description }}</p>
+      <p class="link-pretext">Continue to:</p>
+      <a *ngIf="url" href="{{ url }}">{{ url }}</a>
+    </div>
+  </div>
+</div>

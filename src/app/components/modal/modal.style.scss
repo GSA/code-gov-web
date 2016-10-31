@@ -1,0 +1,55 @@
+@import '../../../styles/base/all';
+
+.modal-container {
+  @include animation(fadeInUp 0.2s ease);
+  @include animation-fill-mode(forwards);
+  background-color: $color-white;
+  left: 50%;
+  margin-left: -16em;
+  margin-top: -10em;
+  width: 32em;
+  padding: 3em 2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+
+  a {
+    color: darken($brand-teal, 10);
+  }
+
+  button {
+    @include transition(all 0.2s ease);
+    background-color: transparent;
+    color: $color-gray;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: darken($color-gray, 10);
+    }
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  .close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+
+  .link-pretext {
+    margin-bottom: 0.1em;
+  }
+}
+
+.overlay {
+  background-color: rgba(darken($brand-blue-gray, 10), 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}

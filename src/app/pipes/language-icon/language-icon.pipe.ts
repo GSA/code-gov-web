@@ -7,7 +7,7 @@ import { LANGUAGES } from './';
 
 export class LanguageIconPipe implements PipeTransform {
   transform(value: string): any {
-    switch(value) {
+    switch (value) {
       case 'html':
         value = 'html5';
         break;

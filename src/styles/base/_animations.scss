@@ -1,0 +1,23 @@
+@include keyframes(fadeInUp) {
+  from {
+    @include transform(translateY(0.5em));
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    @include transform(translateY(0));
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}

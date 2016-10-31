@@ -14,12 +14,14 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 // App is our top level component
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
+import { ExternalLinkDirective } from './directives/external-link';
 import { LanguageIconPipe } from './pipes/language-icon';
 import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
+import { ModalService } from './services/modal';
 import { ReposService } from './services/repos';
 import { StateService } from './services/state';
 
@@ -27,6 +29,7 @@ import { StateService } from './services/state';
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AgencyService,
+  ModalService,
   ReposService,
   StateService
 ];
@@ -44,6 +47,7 @@ const APP_PROVIDERS = [
   ],
   declarations: [
     APP_COMPONENTS,
+    ExternalLinkDirective,
     LanguageIconPipe,
     PluralizePipe,
     TruncatePipe
