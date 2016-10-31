@@ -2,7 +2,9 @@
   <h1>{{ agency.name }}</h1>
 
   <div *ngIf="hasRepos" class="repos-container">
-    <p class="repos-count">{{ repos.length }} Open Source Projects</p>
+    <p class="repos-count">
+      {{ repos.length }} Featured {{ "Projects" | pluralize : repos.length }}
+    </p>
     <ul class="repos-list usa-unstyled-list">
       <li *ngFor="let repo of repos" class="repo">
         <a routerLink="/explore-code/repos/{{repo.repoID}}">

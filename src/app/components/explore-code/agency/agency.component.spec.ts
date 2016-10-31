@@ -8,6 +8,7 @@ import { AgencyComponent } from './index';
 import { AgencyService } from '../../../services/agency';
 import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
+import { PluralizePipe } from '../../../pipes/pluralize';
 import { TruncatePipe } from '../../../pipes/truncate';
 
 
@@ -18,6 +19,7 @@ describe('AgencyComponent', () => {
       declarations: [
         AgencyComponent,
         LanguageIconPipe,
+        PluralizePipe,
         TruncatePipe
       ],
       imports: [

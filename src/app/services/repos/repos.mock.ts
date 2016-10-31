@@ -1,5 +1,4 @@
-export const REPOS =
-{
+export const REPOS = {
   'total': 2,
   'repos': [
     {
