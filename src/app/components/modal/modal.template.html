@@ -1,4 +1,4 @@
-<div *ngIf="visible" class="overlay">
+<div *ngIf="visible" class="overlay" (click)="close()">
   <div class="modal-container" tabindex="-1">
     <div class="close">
       <button (click)="close()" aria-label="close">
@@ -11,7 +11,7 @@
     <div class="modal-content">
       <p *ngIf="description">{{ description }}</p>
       <p class="link-pretext">Continue to:</p>
-      <a *ngIf="url" href="{{ url }}">{{ url }}</a>
+      <a *ngIf="url" href="{{ url }}" target="_blank">{{ url }}</a>
     </div>
   </div>
 </div>
