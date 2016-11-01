@@ -11,7 +11,7 @@
   }
 
   .app-navigation {
-    background-color: $brand-purple;
+    background-color: darken($color-primary, 10);
     font-size: 0.9em;
 
     @include media($small-screen) {
@@ -20,6 +20,10 @@
 
     a {
       color: lighten($brand-blue-gray, 50);
+
+      &:focus {
+        box-shadow: 0 0 3px rgba($color-white, 0.25), 0 0 7px rgba($color-white, 0.25);
+      }
 
       &:hover {
         color: $color-white;
@@ -151,7 +155,7 @@
 
   li {
     display: inline-block;
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
 }
 
