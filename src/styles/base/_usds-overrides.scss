@@ -9,7 +9,6 @@ button.usa-button-big,
 [type="reset"].usa-button-big,
 [type="image"].usa-button-big {
   @include transition(all 0.2s ease);
-  box-shadow: 0 3px 7px rgba($color-black, 0.1);
 
   &:hover {
     @include transform(translateY(-2px));

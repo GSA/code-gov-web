@@ -11,7 +11,12 @@
   }
 
   .app-navigation {
-    background-color: $brand-blue-gray;
+    background-color: $brand-purple;
+    font-size: 0.9em;
+
+    @include media($small-screen) {
+      font-size: 1em;
+    }
 
     a {
       color: lighten($brand-blue-gray, 50);
@@ -50,6 +55,14 @@
     margin-top: 0;
   }
 
+  .email-signup {
+    margin-top: 2em;
+
+    @include media($medium-screen) {
+      margin-top: 0;
+    }
+  }
+
   .email {
     border: 1px solid lighten($color-gray, 20);
     font-size: 0.9em;
@@ -57,11 +70,13 @@
 
   .submit {
     @include transition(all 0.2s ease);
+    background-color: $brand-purple;
     font-size: 0.9em;
     margin: 0.5em 0 0;
 
     &:hover {
       @include transform(translateY(-2px));
+      background-color: darken($brand-purple, 10);
     }
   }
 }
@@ -146,7 +161,7 @@
 
 .usa-disclaimer {
   height: auto;
-  padding: 0.5em 0;
+  padding: 0.3em 0;
 
   a {
     color: $brand-blue;
@@ -156,5 +171,10 @@
 
   img {
     max-width: 1.5em;
+  }
+
+  .usa-disclaimer-stage {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }

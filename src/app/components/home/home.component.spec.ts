@@ -2,6 +2,7 @@ import { inject, TestBed } from '@angular/core/testing';
 
 // Load the implementations that should be tested
 import { StateService } from '../../services/state';
+import { BannerArtComponent } from './banner-art';
 import { HomeComponent } from './';
 
 describe('HomeComponent', () => {
@@ -9,6 +10,7 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
+        BannerArtComponent,
         HomeComponent
       ],
       providers: [
