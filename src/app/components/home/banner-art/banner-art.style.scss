@@ -32,6 +32,15 @@
     width: 45em;
   }
 
+  a {
+    color: lighten($brand-teal, 12);
+    text-decoration: none;
+
+    &:focus {
+      box-shadow: 0 0 3px rgba($color-white, 0.25), 0 0 7px rgba($color-white, 0.25);
+    }
+  }
+
   p {
     color: lighten($brand-blue-gray, 50);
     font-size: 0.85em;
@@ -59,9 +68,5 @@
 
   .dolla {
     margin-right: 0.5em;
-  }
-
-  .teal {
-    color: $brand-teal;
   }
 }
