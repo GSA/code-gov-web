@@ -1,0 +1,67 @@
+@import '../../../../styles/base/all';
+
+.artwork {
+  @include background-image(url('assets/img/terminal.svg'));
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  border-radius: 0.3em 0.3em 0 0;
+  height: 6em;
+  left: 50%;
+  margin-left: -10em;
+  overflow: hidden;
+  padding: 1em 0.5em;
+  position: absolute;
+  width: 20em;
+
+  @include media($small-screen) {
+    margin-left: -13em;
+    padding: 2em 1em 2em 1em;
+    width: 26em;
+  }
+
+  @include media($medium-screen) {
+    margin-left: -18em;
+    padding: 2em 1em 2em 1em;
+    width: 36em;
+  }
+
+  @include media($large-screen) {
+    margin-left: -22.5em;
+    padding: 2.25em 1em 3em 1em;
+    width: 45em;
+  }
+
+  p {
+    color: lighten($brand-blue-gray, 50);
+    font-size: 0.85em;
+    margin: 0 0 0.1em;
+
+    @include media($medium-screen) {
+      font-size: 0.9em;
+    }
+
+    @include media($large-screen) {
+      font-size: 1em;
+    }
+  }
+
+  .content {
+    font-family: $header-font-family;
+    font-size: 0.8em;
+  }
+
+  .cursor {
+    @include animation(blink 0.8s step-end infinite);
+    color: $brand-teal;
+    font-size: 1.1em;
+  }
+
+  .dolla {
+    margin-right: 0.5em;
+  }
+
+  .teal {
+    color: $brand-teal;
+  }
+}

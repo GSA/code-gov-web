@@ -7,32 +7,64 @@ body {
 
 .about {
   border-bottom: 1px solid $color-gray-lightest;
-  padding: 4em 0;
+  padding: 2em 0 1em;
+
+  @include media($medium-screen) {
+    padding: 4em 0;
+  }
 
   header {
     margin: 0 auto;
-    max-width: 43em;
     text-align: center;
+
+    @include media($small-screen) {
+      max-width: 43em;
+    }
 
 
     h1 {
+      font-size: 1.75em;
       margin: 0 auto;
       max-width: 17em;
+
+      @include media($small-screen) {
+        font-size: 2em;
+      }
+
+      @include media($medium-screen) {
+        font-size: 4rem;
+      }
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1em;
+
+      @include media($medium-screen) {
+        font-size: 1.2em;
+      }
     }
   }
 
   li {
     @extend %card;
   }
+
+  .usa-button {
+    background-color: $brand-purple;
+
+    &:hover {
+      background-color: darken($brand-purple, 10);
+    }
+  }
 }
 
 .about-actions {
-  margin-top: 4em;
+  margin-top: 2em;
   padding: 0;
+
+  @include media($medium-screen) {
+    margin-top: 4em;
+  }
 
   h2 {
     font-size: 1.3em;
@@ -40,6 +72,7 @@ body {
   }
 
   li {
+    margin-bottom: 2em;
     padding-left: 3em;
     position: relative;
 
@@ -62,37 +95,66 @@ body {
 }
 
 .banner {
-  @include background-image(url('assets/img/usa-background.svg'));
-  background-color: $brand-blue-gray;
-  background-position: calc(100% + 50px) -50px;
-  background-size: 600px 600px;
+  background-color: $brand-purple;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding: 6em 0 8em;
+  padding: 2em 0 8em;
+  position: relative;
+
+  @include media($small-screen) {
+    padding: 4em 0 8em;
+  }
 
   h1 {
     color: $color-white;
-    font-size: 2.8em;
-    margin-bottom: 0.25em;
+    font-size: 2em;
+    margin: 0 0 0.25em;
+
+    @include media($small-screen) {
+      font-size: 2.8em;
+    }
+
+    @include media($medium-screen) {
+      font-size: 3.2em;
+    }
   }
 
   p {
     color: lighten($brand-blue-gray, 50);
-    font-size: 1.4em;
+    font-size: 1em;
     margin-top: 0;
+
+    @include media($small-screen) {
+      font-size: 1.2em;
+    }
+
+    @include media($medium-screen) {
+      font-size: 1.4em;
+    }
   }
 
   .usa-button {
-    font-size: 1.2em;
+    box-shadow: 0 3px 7px rgba($color-black, 0.1);
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 12em;
 
-    i {
-      font-weight: bold;
-      margin-left: 0.15em;
+    &:hover {
+      background-color: darken($color-primary, 15);
+    }
+
+    @include media($small-screen) {
+      font-size: 1.2em;
+      max-width: none;
     }
   }
 }
 
-.banner-content {
-  max-width: 36em;
+.banner-container {
+  background-color: $brand-purple;
+  margin: 0 auto;
+  max-width: 30em;
+  text-align: center;
 }
 
 .press {
@@ -114,7 +176,13 @@ body {
 }
 
 .press-links {
-  text-align: right;
+  margin-top: 2em;
+  text-align: center;
+
+  @include media($medium-screen) {
+    margin-top: 0;
+    text-align: right;
+  }
 
   img {
     max-width: 7.5em;
@@ -129,23 +197,38 @@ body {
 
   h1 {
     color: $brand-blue-gray;
+    font-size: 1.75em;
     margin-bottom: 0.2em;
+    padding-left: 0.75em;
     position: relative;
+
+    @include media($medium-screen) {
+      font-size: 2.5em;
+    }
 
     &::before {
       color: $brand-teal;
       content: "“";
-      font-size: 2.5em;
-      left: -0.35em;
+      font-size: 1.75em;
+      left: 0em;
       position: absolute;
       top: -0.275em;
+
+      @include media($medium-screen) {
+        font-size: 2.5em;
+      }
     }
   }
 
   .attribution {
     border-top: 1px solid lighten($color-gray-light, 10);
     display: inline-block;
+    margin-left: 1.3em;
     padding-top: 0.75em;
+
+    @include media($medium-screen) {
+      margin-left: 2em;
+    }
 
     img {
       @include transition(all 0.1s ease);

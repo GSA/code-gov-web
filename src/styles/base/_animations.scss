@@ -21,3 +21,13 @@
     visibility: visible;
   }
 }
+
+@include keyframes(blink) {
+  from, to {
+    color: transparent;
+  }
+
+  50% {
+    color: $brand-teal;
+  }
+}
