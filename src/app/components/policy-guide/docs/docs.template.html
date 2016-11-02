@@ -1,4 +1,15 @@
-<nav class="policy-guide-subnav docs-nav">
+<nav [ngClass]="{active: menuActive}" class="policy-guide-subnav docs-nav">
+  <button toggle-menu class="mobile-submenu">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      Menu
+    </span>
+  </button>
   <ul class="usa-sidenav-list">
     <li routerLinkActive="usa-current">
       <a routerLink="overview" routerLinkActive="usa-current">Overview</a>

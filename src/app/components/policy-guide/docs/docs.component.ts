@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+import { MobileService } from '../../../services/mobile';
+
 @Component({
   selector: 'docs',
   styles: [require('./docs.style.scss')],
@@ -7,9 +9,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class DocsComponent {
+  menuActive: boolean;
 
-  constructor() {}
+  constructor(private mobileService: MobileService) {
+    this.menuActive = false;
 
-  ngOnInit() {
+    mobileService.activeMobileMenu$.subscribe(
+      menuStatus => {
+        this.menuActive = menuStatus;
+      }
+    );
   }
 }

@@ -15,12 +15,14 @@ import { ROUTES } from './app.routes';
 // App is our top level component
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { ExternalLinkDirective } from './directives/external-link';
+import { ToggleMenuDirective } from './directives/toggle-menu';
 import { LanguageIconPipe } from './pipes/language-icon';
 import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
+import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
 import { ReposService } from './services/repos';
 import { SeoService } from './services/seo';
@@ -30,6 +32,7 @@ import { StateService } from './services/state';
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AgencyService,
+  MobileService,
   ModalService,
   ReposService,
   SeoService,
@@ -52,6 +55,7 @@ const APP_PROVIDERS = [
     ExternalLinkDirective,
     LanguageIconPipe,
     PluralizePipe,
+    ToggleMenuDirective,
     TruncatePipe
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

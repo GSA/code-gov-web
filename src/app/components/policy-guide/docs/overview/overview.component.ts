@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
+import { MobileService } from '../../../../services/mobile';
 
 @Component({
   selector: 'overview',
@@ -6,8 +8,7 @@ import { Component } from '@angular/core';
 })
 export class OverviewComponent {
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor(private mobileService: MobileService) {
+    this.mobileService.hideMenu();
   }
 }

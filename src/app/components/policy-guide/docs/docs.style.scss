@@ -1,9 +1,12 @@
 @import '../../../../styles/base/all';
 
 .docs-content {
-  @include span-columns(9);
   background-color: $color-white;
   padding: 2.5em 1.5em;
+
+  @include media($medium-screen) {
+    @include span-columns(9);
+  }
 
   @include media($extra-large-screen) {
     padding: 2.5em 2em;
@@ -60,10 +63,141 @@
   }
 }
 
+.menu-icon {
+  @include transform(rotate(0deg));
+  @include transition(0.3s ease-in-out);
+  cursor: pointer;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  width: 18px;
+
+  @include media($medium-screen) {
+    display: none;
+  }
+
+  .line {
+    @include transform(rotate(0deg));
+    @include transition(0.2s ease-in-out);
+    background: lighten($color-white, 5);
+    border-radius: 3px;
+    display: block;
+    height: 2px;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 6px;
+    }
+
+    &:nth-child(4) {
+      top: 12px;
+    }
+  }
+}
+
+.menu-text {
+  display: inline-block;
+  margin-left: 0.2em;
+  vertical-align: top;
+}
+
 .policy-guide-subnav {
-  @include span-columns(3);
+  position: relative;
+
+  @include media($medium-screen) {
+    @include span-columns(3);
+  }
+
+  &.active {
+
+    .usa-sidenav-list {
+      @include transition(all 0.2s ease);
+      @include transform(translateY(0));
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .menu-icon {
+
+      .line {
+
+        &:nth-child(1) {
+          left: 50%;
+          top: 6px;
+          width: 0%;
+        }
+
+        &:nth-child(2) {
+          @include transform(rotate(45deg));
+        }
+
+        &:nth-child(3) {
+          @include transform(rotate(-45deg));
+        }
+
+        &:nth-child(4) {
+          left: 50%;
+          top: 6px;
+          width: 0%;
+        }
+      }
+    }
+  }
+
+  .mobile-submenu {
+    font-size: 0.95em;
+    margin-bottom: 1.25em;
+    padding: 0.75em 0.5em 0.65em;
+    width: auto;
+
+    @include media($medium-screen) {
+      display: none;
+    }
+  }
 
   .usa-sidenav-list {
+    @include transform(translateY(-0.5em));
+    background-color: darken($brand-blue-gray, 10);
+    left: 0;
+    padding: 1em;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    &::before {
+      border-bottom: 10px solid darken($brand-blue-gray, 10);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      content: "";
+      height: 0;
+      left: 1em;
+      position: absolute;
+      top: -10px;
+      width: 0;
+
+      @include media($medium-screen) {
+        display: none;
+      }
+    }
+
+    @include media($medium-screen) {
+      background-color: transparent;
+      display: block;
+      left: auto;
+      padding: 0;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
 
     a {
       color: $color-gray-lightest;
@@ -82,6 +216,10 @@
     &:hover {
       color: $color-white;
     }
+  }
+
+  li {
+    font-size: 1em;
   }
 
   .usa-current {

@@ -12,11 +12,6 @@
 
   .app-navigation {
     background-color: darken($color-primary, 10);
-    font-size: 0.9em;
-
-    @include media($small-screen) {
-      font-size: 1em;
-    }
 
     a {
       color: lighten($brand-blue-gray, 50);
@@ -99,7 +94,6 @@
     }
 
     &.active {
-      border-bottom: 3px solid $brand-teal;
       color: $brand-blue;
       font-weight: bold;
     }
@@ -107,6 +101,7 @@
 
   li {
     display: inline-block;
+    font-size: 1em;
     margin-left: 1em;
   }
 }
@@ -132,7 +127,12 @@
 }
 
 .app-navigation {
+  font-size: 0.9em;
   padding: 1.75em 0;
+
+  @include media($small-screen) {
+    font-size: 1em;
+  }
 
   a {
     text-decoration: none;
