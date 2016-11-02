@@ -37,28 +37,6 @@ export const POLICY_GUIDE_ROUTES: Routes = [
         children: [
           { path: '', redirectTo: 'overview/introduction'},
           {
-            path: 'capacity-building',
-            component: CapacityComponent,
-            children: [
-              { path: '', redirectTo: 'introduction' },
-              { path: 'basics', component: CapacityBasicsComponent },
-              {
-                path: 'collaboration',
-                component: CapacityCollaborationComponent
-              },
-              {
-                path: 'interagency-sharing',
-                component: CapacityInteragencySharingComponent
-              },
-              {
-                path: 'introduction',
-                component: CapacityIntroductionComponent
-              },
-              { path: 'resources', component: CapacityResourcesComponent },
-              { path: 'security', component: CapacitySecurityComponent }
-            ]
-          },
-          {
             path: 'compliance',
             component: ComplianceComponent,
             children: [
@@ -87,6 +65,28 @@ export const POLICY_GUIDE_ROUTES: Routes = [
                 path: 'whats-required',
                 component: ComplianceWhatsRequiredComponent
               }
+            ]
+          },
+          {
+            path: 'open-source',
+            component: CapacityComponent,
+            children: [
+              { path: '', redirectTo: 'introduction' },
+              { path: 'basics', component: CapacityBasicsComponent },
+              {
+                path: 'collaboration',
+                component: CapacityCollaborationComponent
+              },
+              {
+                path: 'interagency-sharing',
+                component: CapacityInteragencySharingComponent
+              },
+              {
+                path: 'introduction',
+                component: CapacityIntroductionComponent
+              },
+              { path: 'resources', component: CapacityResourcesComponent },
+              { path: 'security', component: CapacitySecurityComponent }
             ]
           },
           {
