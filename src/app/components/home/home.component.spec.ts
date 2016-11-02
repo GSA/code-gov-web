@@ -1,9 +1,11 @@
 import { inject, TestBed } from '@angular/core/testing';
 
-// Load the implementations that should be tested
-import { StateService } from '../../services/state';
 import { BannerArtComponent } from './banner-art';
+import { ExternalLinkDirective } from '../../directives/external-link';
 import { HomeComponent } from './';
+import { ModalComponent } from '../modal';
+import { ModalService } from '../../services/modal';
+import { StateService } from '../../services/state';
 
 describe('HomeComponent', () => {
 
@@ -11,9 +13,12 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         BannerArtComponent,
-        HomeComponent
+        ExternalLinkDirective,
+        HomeComponent,
+        ModalComponent
       ],
       providers: [
+        ModalService,
         StateService
       ]
     });
