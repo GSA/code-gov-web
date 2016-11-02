@@ -2,5 +2,9 @@
 
 .policy-guide-content {
   background-color: $brand-blue-gray;
-  padding: 2em 0 3em;
+  padding: 0.75em 0 3em;
+
+  @include media($medium-screen) {
+    padding: 2em 0 3em;
+  }
 }
