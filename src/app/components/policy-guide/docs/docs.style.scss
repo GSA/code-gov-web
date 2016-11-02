@@ -8,13 +8,69 @@
   @include media($extra-large-screen) {
     padding: 2.5em 2em;
   }
+
+  a {
+    color: darken($brand-teal, 10);
+    text-decoration: none;
+
+    &:hover {
+      color: darken($brand-teal, 20);
+    }
+  }
+
+  blockquote {
+    background-color: lighten($color-gray-lightest, 2);
+    border-left: 6px solid $brand-purple;
+    color: darken($color-gray, 6);
+    margin: 1.5em 0;
+    padding: 1em 1em 1em 2.5em;
+
+    p {
+      font-size: 0.95em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  code {
+    background-color: $brand-blue-gray;
+    border-radius: 3px;
+    color: $brand-teal;
+    font-size: 0.9em;
+    padding: 2px 3px;
+  }
+
+  li {
+    color: $color-gray;
+
+    p {
+      font-size: 1em;
+    }
+
+    ul {
+      margin-top: 0.2em;
+      padding-left: 1.25em;
+    }
+  }
 }
 
 .policy-guide-subnav {
   @include span-columns(3);
 
+  .usa-sidenav-list {
+
+    a {
+      color: $color-gray-lightest;
+    }
+  }
+
   a {
-    color: $color-gray-lightest;
     font-size: 0.95em;
     text-decoration: none;
 
