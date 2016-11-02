@@ -30,6 +30,7 @@ import {
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent,
+  PrivacyPolicyComponent,
   RepoComponent,
   ReposComponent
 } from './app-components.util';
@@ -66,6 +67,7 @@ export const APP_COMPONENTS = [
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
   PolicyGuideComponent,
+  PrivacyPolicyComponent,
   RepoComponent,
   ReposComponent
 ]
