@@ -7,15 +7,7 @@
 			"repoURL": "https://github.com/CommerceGov/commerce.gov-api",
 			"name": "commerce.gov-api",
 			"repoID": "43393077",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 			"homepage": "",
 			"downloadURL": " ",
 			"description": "Content API for Commerce.gov ",
@@ -1275,15 +1267,7 @@
 			"repoURL": "https://github.com/USAJOBS/open-source-policy",
 			"name": "open-source-policy",
 			"repoID": "44256248",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 
 			"homepage": "https://usajobs.gov",
 			"downloadURL": " ",
@@ -1690,15 +1674,7 @@
 			"repoURL": "https://github.com/CommerceGov/CommerceGov.github.io",
 			"name": "CommerceGov.github.io",
 			"repoID": "13225017",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 
 			"homepage": "",
 			"downloadURL": " ",
@@ -1829,15 +1805,7 @@
 			"repoURL": "https://github.com/USEPA/My-Right-To-Know--MyRTK-",
 			"name": "My-Right-To-Know--MyRTK-",
 			"repoID": "10644334",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 
 			"homepage": "",
 			"downloadURL": " ",
@@ -2093,15 +2061,7 @@
 			"repoURL": "https://github.com/USAJOBS/analytics.usajobs.gov",
 			"name": "analytics.usajobs.gov",
 			"repoID": "58501015",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 
 			"homepage": "https://analytics.usajobs.gov",
 			"downloadURL": " ",
@@ -2141,15 +2101,7 @@
 			"repoURL": "https://github.com/USAJOBS/analytics-reporter",
 			"name": "analytics-reporter",
 			"repoID": "58501082",
-			"events": [{
-				"id": "",
-				"name": "",
-				"type": "",
-				"user": "",
-				"time": "",
-				"message": "",
-				"url": ""
-			}],
+			"events": null,
 
 			"homepage": "",
 			"downloadURL": " ",
