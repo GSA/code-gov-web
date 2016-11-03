@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { MobileService } from '../../../services/mobile';
+
 @Component({
   selector: 'agencies',
   styles: [require('./agencies.style.scss')],
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 
 export class AgenciesComponent {
+
+  constructor(private mobileService: MobileService) {
+    this.mobileService.hideMenu();
+  }
 }

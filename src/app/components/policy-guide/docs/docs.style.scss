@@ -119,10 +119,7 @@
   &.active {
 
     .usa-sidenav-list {
-      @include transition(all 0.2s ease);
-      @include transform(translateY(0));
-      opacity: 1;
-      visibility: visible;
+      display: block;
     }
 
     .menu-icon {
@@ -164,14 +161,11 @@
   }
 
   .usa-sidenav-list {
-    @include transform(translateY(-0.5em));
     background-color: darken($brand-blue-gray, 10);
-    left: 0;
+    display: none;
     padding: 1em;
-    position: absolute;
+    position: relative;
     width: 100%;
-    opacity: 0;
-    visibility: hidden;
 
     &::before {
       border-bottom: 10px solid darken($brand-blue-gray, 10);
