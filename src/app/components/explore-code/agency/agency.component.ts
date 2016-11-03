@@ -4,6 +4,7 @@ import { AgencyService } from '../../../services/agency';
 import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
+import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
 
 @Component({
@@ -20,7 +21,8 @@ export class AgencyComponent {
   constructor(
     private agencyService: AgencyService,
     private route: ActivatedRoute,
-    private reposService: ReposService
+    private reposService: ReposService,
+    private seoService: SeoService
   ) {}
 
   ngOnDestroy() {
@@ -35,6 +37,10 @@ export class AgencyComponent {
 
       this.agency = this.agencyService.getAgency(id);
       this.agencyRepos();
+
+      this.seoService.setTitle(this.agency.name, true);
+      this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
+      this.seoService.setMetaRobots('Index, Follow');
     });
   }
 

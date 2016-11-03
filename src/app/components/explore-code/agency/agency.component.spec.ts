@@ -6,9 +6,10 @@ import { Observable } from 'rxjs/Rx';
 
 import { AgencyComponent } from './index';
 import { AgencyService } from '../../../services/agency';
-import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
+import { ReposService } from '../../../services/repos';
+import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
 
 
@@ -29,6 +30,7 @@ describe('AgencyComponent', () => {
       providers: [
         AgencyService,
         ReposService,
+        SeoService,
         { provide: ActivatedRoute, useClass: MockActivatedRoute }
       ]
     });

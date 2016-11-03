@@ -14,7 +14,7 @@ export class SeoService {
   private DOM: any;
 
   constructor(titleService: Title){
-    this.baseTitle = "· Code.gov"
+    this.baseTitle = '· Code.gov'
     this.titleService = titleService;
     this.DOM = getDOM();
     this.headElement = this.DOM.query('head');
@@ -28,7 +28,7 @@ export class SeoService {
 
   public setTitle(newTitle: string, baseTitle = false) {
     if(baseTitle === true)
-      newTitle += " · Code.gov"
+      newTitle += ' · Code.gov'
     this.titleService.setTitle(newTitle);
   }
 
