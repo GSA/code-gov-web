@@ -21,10 +21,24 @@
   <!-- base url -->
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
 
-
+  <% if (htmlWebpackPlugin.options.metadata.gtmAuth != null) { %>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','<%=htmlWebpackPlugin.options.metadata.gtmId%>');
+    </script>
+  <% } %>
 </head>
 
 <body>
+  <% if (htmlWebpackPlugin.options.metadata.gtmAuth != null) { %>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9L9Q5&gtm_auth=<%=htmlWebpackPlugin.options.metadata.gtmAuth%>" height="0" width="0" style="display:none;visibility:hidden">
+      </iframe>
+    </noscript>
+  <% } %>
 
   <app>
     <div class="loading" style="background-color: #485568; bottom: 0; left: 0; position: fixed; right: 0; top: 0">
