@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AgencyService } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
+import { SeoService } from '../../../services/seo';
 
 @Component({
   selector: 'repo',
@@ -17,7 +18,8 @@ export class RepoComponent {
   constructor(
     private route: ActivatedRoute,
     private agencyService: AgencyService,
-    private reposService: ReposService
+    private reposService: ReposService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit() {
@@ -35,6 +37,9 @@ export class RepoComponent {
         if (result) {
           this.repo = result['repos'].filter(repo => repo.repoID === id)[0];
           this.repo.agency = this.agencyService.getAgency(this.repo.agency);
+          this.seoService.setTitle(this.repo.name, true);
+          this.seoService.setMetaDescription(this.repo.description);
+          this.seoService.setMetaRobots('Index, Follow');
         } else {
           console.log('Error.');
         }

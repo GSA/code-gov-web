@@ -9,6 +9,7 @@ import { ExternalLinkDirective } from '../../../directives/external-link';
 import { RepoComponent } from './index';
 import { ReposService } from '../../../services/repos';
 import { REPOS } from '../../../services/repos';
+import { SeoService } from '../../../services/seo';
 
 describe('RepoComponent', () => {
   let id = '33202667';
@@ -28,6 +29,7 @@ describe('RepoComponent', () => {
       providers: [
         AgencyService,
         ReposService,
+        SeoService,
         { provide: ActivatedRoute, useClass: MockActivatedRoute }
       ]
     });
