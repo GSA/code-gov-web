@@ -3,15 +3,19 @@
     <div class="activity-icon">
       <i class="fa fa-file-text-o"></i>
     </div>
-    <div class="usa-grid">
-      <div class="usa-width-three-fourths">
-        <h3 *ngIf="activity.type">{{ activity.type }}</h3>
-        <p *ngIf="activity.message" class="message">
+    <div class="activity-content">
+      <div class="activity-heading">
+        <div *ngIf="activity.type">
+          <h3>{{ activity.type }}</h3>
+        </div>
+        <div *ngIf="activity.time">
+          <p class="date">{{ activity.time | date }}</p>
+        </div>
+      </div>
+      <div *ngIf="activity.message">
+        <p class="message">
           {{ activity.message | truncate : 80 }}
         </p>
-      </div>
-      <div *ngIf="activity.time" class="usa-width-one-fourth">
-        <p class="date">{{ activity.time | date }}</p>
       </div>
     </div>
   </li>
