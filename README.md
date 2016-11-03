@@ -36,6 +36,7 @@ Here’s how you can help contribute to code.gov:
 
 * Code.gov
     * To provide feedback on [the code.gov website], you should follow this [repository](https://github.com/presidential-innovation-fellows/code-gov-web) and [this issues tracker](https://github.com/presidential-innovation-fellows/code-gov-web/issues).
+    * To contribute to the Code.gov website, head down to the [Getting Started](#getting-started) section.
     * If you aren't sure where your question or idea fits, this is a good place to share it.
 
 ## Questions?
@@ -47,11 +48,6 @@ If you have questions, please feel [free to open an issue here](https://github.c
 After you have cloned this repo, you can use `npm install` to install all of the
 project’s dependencies.
 
-This project requires the `uswds` package to be modified to work properly. In
-`node_modules/uswds/src/stylesheets/base/_defaults`, change the `$font-path` and
-`$img-path` variables to begin with `../assets/`, i.e. `../assets/fonts` to
-ensure asset files map to their actual location in the project.
-
 You can then run the server using `npm start`.
 
 ## Testing
@@ -59,11 +55,31 @@ This app uses Karma + Jasmine to handle testing. Run `npm test` to execute
 tests. To add tests, simply create a file with `.spec.ts` as the extension and
 your tests will be included.
 
+## Deployment
+This app uses the `github-deploy` package for handling deployment. To configure
+deployment, customize the `config/github-deploy` and `webpack.github-deploy`
+files to match your settings. When ready to deploy, run
+`npm run github-deploy:dev` or `npm run github-deploy:prod`, depending on your
+intended destination.
+
+## Generating License Data
+To update the `dependency_licenses.json` file, run `npm run licenses`.
+
 ## File Structure
 The directories in `src/app` are organized around the pillars of Angular, along
 with several additional custom file types. When creating new files, be sure to
 add your file and any necessary templates, styles, and tests to a directory
 dedicated to your new file in the appropriate place.
+
+For the most part, components are organized based on the navigation structure of
+the app. For example, you can find Policy Guide content in
+`src/app/components/policy-guide`.
+
+## Component Structure
+Most Components have a `style`, `template`, and `component` file. Template files
+are composed of HTML with Angular syntax for inserting content and view
+conditionals. Styles are encapsulated by default unless the Component has
+`ViewEncapsulation` disabled, so global class names are generally not an issue.
 
 ## Style Guide
 This app follows the
@@ -85,3 +101,6 @@ with this waiver of copyright interest.
 from Angular Class and includes the original [MIT License](/LICENSE). Should you
 choose to use this repo for your own purposes, be sure to retain the MIT license
 that comes with it.
+
+> For a detailed list of licenses from each of the `node_modules`, view the
+[Dependency Licenses](/dependency_licenses.json) file.
