@@ -24,7 +24,7 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
    * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
    * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
    */
-  baseUrl: '/site/presidential-innovation-fellows/' + GH_REPO_NAME + '/',
+  baseUrl: '/',
   ENV: ENV,
   HMR: false,
   isDevServer: false,
@@ -37,7 +37,7 @@ module.exports = function (env) {
   return webpackMerge(webpackConfig({env: ENV}), {
 
     output: {
-      publicPath: '/site/presidential-innovation-fellows/' + GH_REPO_NAME + '/'
+      publicPath: '/'
     },
 
     plugins: [
