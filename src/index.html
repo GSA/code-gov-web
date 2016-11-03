@@ -71,24 +71,6 @@
     <!-- Webpack Dev Server reload -->
     <script src="/webpack-dev-server.js"></script>
   <% } %>
-  <script>
-    var submitted=false;
-
-    function showConfirmation(){
-      var emailField  = document.getElementById('email');
-      var confirmationEl = document.getElementById("confirmation");
-
-      if(emailField.validity && !emailField.validity.valid) {
-        confirmationEl.innerHTML='Please enter a valid email.';
-      }
-      else {
-        submitted=true;
-        confirmationEl.innerHTML='Thanks for joining the code.gov mailing list, ' + emailField.value + '!';
-
-        emailField.value=' ';
-      }
-    }
-  </script>
 
 
 </body>
