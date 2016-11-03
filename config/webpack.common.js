@@ -17,7 +17,6 @@ const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
@@ -179,14 +178,6 @@ module.exports = function (options) {
          from: 'src/meta',
       }
      ]),
-
-     new HtmlWebpackPlugin({
-       template: 'src/index.html',
-       title: METADATA.title,
-       chunksSortMode: 'dependency',
-       metadata: METADATA,
-       inject: 'head'
-     }),
 
      new ScriptExtHtmlWebpackPlugin({
        defaultAttribute: 'defer'
