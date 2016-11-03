@@ -2,11 +2,15 @@
 
 ### Files licensed under the SIL Open Font License
 
-The Source Sans Pro font files in `src/assets/fonts` are a customized subset of [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Adobe Systems Incorporated](http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+The Devicons font files in `src/assets/fonts` are licensed under the [MIT License](https://opensource.org/licenses/MIT), and copyright [Theodore Vorillas](https://github.com/vorillaz).
+
+The FontAwesome font files in `src/assets/fonts` are from [Font Awesome](http://fontawesome.io/) by Dave Gandy under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL). The FontAwesome styles located in `src/assets/fonts.css` are licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 The Merriweather font files in `src/assets/fonts` are from [Google Web Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Merriweather:400,300,400italic,700,700italic), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Sorkin Type Co](www.sorkintype.com) with Reserved Font Name 'Merriweather'.
 
-The files in `src/assets/fonts` are from [Font Awesome](http://fontawesome.io/) by Dave Gandy under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+The Source Sans Pro font files in `src/assets/fonts` are a customized subset of [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Adobe Systems Incorporated](http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
+
+The TT Lakes font files in `src/assets/fonts` are from [Fontspring](https://www.fontspring.com/fonts/typetype/tt-lakes), licensed under the [Fontspring Font License](https://www.fontspring.com/lic/lv4e5lv2k2), and copyright The Foundry.
 
 ### AngularClass project files
 
