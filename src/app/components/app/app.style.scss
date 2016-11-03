@@ -108,11 +108,10 @@
 
 .app-logo {
   float: left;
-  max-width: 6em;
+  width: 6em;
 
   a {
-    color: $brand-blue;
-    display: inline-block;
+    display: block;
 
     &:focus {
       box-shadow: none;
@@ -121,13 +120,23 @@
   }
 
   svg {
-    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .svg-container {
+    height: 0;
+    padding-top: 29%;
+    position: relative;
     width: 100%;
   }
 }
 
 .app-navigation {
-  font-size: 0.9em;
+  font-size: 0.8em;
   padding: 1.75em 0;
 
   @include media($small-screen) {
