@@ -22,7 +22,6 @@ export class MobileService {
   }
 
   toggleMenu() {
-    console.log("Change Menu");
    this.active = !this.active;
    this.changeMenuStatus();
   }
