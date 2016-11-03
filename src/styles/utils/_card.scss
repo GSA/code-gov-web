@@ -1,6 +1,10 @@
 %card {
   background-color: $color-white;
-  border: 1px solid $color-gray-lightest;
+  border: 1px solid darken($color-gray-lightest, 3);
   box-sizing: border-box;
-  padding: 1em;
+  padding: 0.5em;
+
+  @include media($medium-screen) {
+    padding: 1em;
+  }
 }
