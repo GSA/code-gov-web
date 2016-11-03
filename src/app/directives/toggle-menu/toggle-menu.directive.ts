@@ -9,10 +9,19 @@ import { MobileService } from '../../services/mobile';
 })
 
 export class ToggleMenuDirective {
-  constructor(private el: ElementRef, private mobileService: MobileService) {}
+  toggle: boolean;
+  constructor(private el: ElementRef, private mobileService: MobileService) {
+    this.toggle = JSON.parse(this.el.nativeElement.getAttribute('aria-pressed'));
+  }
 
   onClick(event: any) {
     event.preventDefault();
     this.mobileService.toggleMenu();
+    this.togglePressed();
+  }
+
+  togglePressed() {
+    this.toggle = !this.toggle;
+    this.el.nativeElement.setAttribute('aria-pressed', this.toggle);
   }
 }
