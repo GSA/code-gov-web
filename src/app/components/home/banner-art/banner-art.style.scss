@@ -1,34 +1,25 @@
 @import '../../../../styles/base/all';
 
 .artwork {
-  @include background-image(url('assets/img/terminal.svg'));
-  background-repeat: no-repeat;
-  background-size: cover;
   bottom: 0;
-  border-radius: 0.3em 0.3em 0 0;
-  height: 6em;
   left: 50%;
   margin-left: -10em;
   overflow: hidden;
-  padding: 1em 0.5em;
   position: absolute;
   width: 20em;
 
   @include media($small-screen) {
     margin-left: -13em;
-    padding: 2em 1em 2em 1em;
     width: 26em;
   }
 
   @include media($medium-screen) {
-    margin-left: -18em;
-    padding: 2em 1em 2em 1em;
-    width: 36em;
+    margin-left: -18.5em;
+    width: 37em;
   }
 
   @include media($large-screen) {
     margin-left: -22.5em;
-    padding: 2.25em 1em 3em 1em;
     width: 45em;
   }
 
@@ -55,9 +46,41 @@
     }
   }
 
+  .circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.53em;
+    margin-right: 0.1em;
+    width: 0.53em;
+
+    @include media($medium-screen) {
+      height: 0.65em;
+      margin-right: 0.25em;
+      width: 0.65em;
+    }
+
+    &.green {
+      background-color: #34c84a;
+    }
+
+    &.red {
+      background-color: #fc625d;
+    }
+
+    &.yellow {
+      background-color: #fdbc40;
+    }
+  }
+
   .content {
+    background-color: $color-gray-dark;
     font-family: $header-font-family;
     font-size: 0.8em;
+    padding: 0.75em;
+
+    @include media($medium-screen) {
+      padding: 1em;
+    }
   }
 
   .cursor {
@@ -68,5 +91,15 @@
 
   .dolla {
     margin-right: 0.5em;
+  }
+
+  .topbar {
+    background-color: darken($color-gray-lightest, 5);
+    border-radius: 0.3em 0.3em 0 0;
+    padding: 0.05em 0.75em;
+
+    @include media($medium-screen) {
+      padding: 0.25em 1em;
+    }
   }
 }
