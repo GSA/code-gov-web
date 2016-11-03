@@ -12,13 +12,13 @@
     <div class="repo-actions">
       <ul class="usa-unstyled-list">
         <li *ngIf="repo.homepage && repo.homepage != 'null'">
-          <a external-link class="usa-button" href="{{repo.homepage}}" target="_blank">
+          <a external-link class="usa-button" href="{{repo.homepage}}">
             Homepage
           </a>
         </li>
 
         <li *ngIf="repo.repoURL && repo.repoURL != 'null'">
-          <a external-link class="usa-button" href="{{ repo.repoURL }}" target="_blank">
+          <a external-link class="usa-button" href="{{ repo.repoURL }}">
             Visit Repo
           </a>
         </li>
@@ -63,7 +63,7 @@
             <h3>License</h3>
             <p>
               This repo uses the
-              <a external-link href="{{repo.license}}" target="_blank">
+              <a external-link href="{{repo.license}}">
                 {{repo.license_name}} license.
               </a>
             </p>

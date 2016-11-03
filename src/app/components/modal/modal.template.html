@@ -11,7 +11,9 @@
     <div class="modal-content">
       <p *ngIf="description">{{ description }}</p>
       <p class="link-pretext">Continue to:</p>
-      <a *ngIf="url" href="{{ url }}" target="_blank">{{ url }}</a>
+      <a *ngIf="url" href="{{ url }}" target="_blank" rel="noopener">
+        {{ url }}
+      </a>
     </div>
   </div>
 </div>
