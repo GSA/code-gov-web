@@ -1,11 +1,24 @@
 <h3>Agencies</h3>
-<ul class="sidebar-agencies-list usa-sidenav-list">
-  <li *ngFor="let agency of agencies">
-    <a routerLink="{{agency.id}}" routerLinkActive="usa-current">
-      <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png" alt="{{agency.name}}"/>
-      <span>
-        {{agency.name}}
-      </span>
-    </a>
-  </li>
-</ul>
+<nav [ngClass]="{active: menuActive}">
+  <button toggle-menu class="mobile-submenu">
+    <span class="menu-icon">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span class="menu-text">
+      Agencies
+    </span>
+  </button>
+  <ul class="sidebar-agencies-list usa-sidenav-list">
+    <li *ngFor="let agency of agencies">
+      <a toggle-menu routerLink="{{agency.id}}" routerLinkActive="usa-current">
+        <img src="assets/img/logos/agencies/{{agency.id}}-50x50.png" alt="{{agency.name}}"/>
+        <span>
+          {{agency.name}}
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>

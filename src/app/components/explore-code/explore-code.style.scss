@@ -2,7 +2,11 @@
 
 .explore-code-content {
   background-color: lighten($color-gray-lightest, 2);
-  padding: 2em 0 3em;
+  padding: 0.75em 0 3em;
+
+  @include media($medium-screen) {
+    padding: 2em 0 3em;
+  }
 }
 
 .explore-code-nav {
