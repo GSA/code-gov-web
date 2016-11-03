@@ -1,5 +1,5 @@
 {
-	"total": 46,
+	"total": 44,
 	"repos": [{
 			"status": " ",
 			"vcs": "git",
@@ -1263,46 +1263,6 @@
 		}, {
 			"status": " ",
 			"vcs": "git",
-			"repository": "git://github.com/USAJOBS/open-source-policy.git",
-			"repoURL": "https://github.com/USAJOBS/open-source-policy",
-			"name": "open-source-policy",
-			"repoID": "44256248",
-			"events": null,
-
-			"homepage": "https://usajobs.gov",
-			"downloadURL": " ",
-			"description": "This repository contains the official Open Source Policy of USAJOBS ",
-			"contact": [{
-				"email": " ",
-				"name": " ",
-				"twitter": " ",
-				"phone": " "
-			}],
-			"partners": [{
-				"name": " "
-			}, {
-				"email": " "
-			}],
-			"license": "https://github.com/USAJOBS/open-source-policy/blob/master/LICENSE.md",
-			"license_name": "CC0",
-			"openproject": 1,
-			"govwideReuseproject": 0,
-			"closedproject": 0,
-			"exemption": "",
-			"projectTags": [{
-				"tag": "open source"
-			}, {
-				"tag": "source code"
-			}, {
-				"tag": "policy"
-			}, {
-				"tag": "usajobs"
-			}],
-			"codeLanguage": [],
-			"agency": "OPM"
-		}, {
-			"status": " ",
-			"vcs": "git",
 			"repository": "git://github.com/USAJOBS/Help.git",
 			"repoURL": "https://github.com/USAJOBS/Help",
 			"name": "Help",
@@ -2057,46 +2017,6 @@
 		}, {
 			"status": " ",
 			"vcs": "git",
-			"repository": "git://github.com/USAJOBS/analytics.usajobs.gov.git",
-			"repoURL": "https://github.com/USAJOBS/analytics.usajobs.gov",
-			"name": "analytics.usajobs.gov",
-			"repoID": "58501015",
-			"events": null,
-
-			"homepage": "https://analytics.usajobs.gov",
-			"downloadURL": " ",
-			"description": "USAJOBS web traffic. ",
-			"contact": [{
-				"email": " ",
-				"name": " ",
-				"twitter": " ",
-				"phone": " "
-			}],
-			"partners": [{
-				"name": " "
-			}, {
-				"email": " "
-			}],
-			"license": "https://github.com/USAJOBS/analytics.usajobs.gov/blob/18f-pages/LICENSE.md",
-			"license_name": "CC0",
-			"openproject": 1,
-			"govwideReuseproject": 0,
-			"closedproject": 0,
-			"exemption": "",
-			"projectTags": [{
-				"tag": "usajobs"
-			}, {
-				"tag": "analytics"
-			}, {
-				"tag": "web-traffic"
-			}],
-			"codeLanguage": [{
-				"language": "CSS"
-			}],
-			"agency": "OPM"
-		}, {
-			"status": " ",
-			"vcs": "git",
 			"repository": "git://github.com/USAJOBS/analytics-reporter.git",
 			"repoURL": "https://github.com/USAJOBS/analytics-reporter",
 			"name": "analytics-reporter",
@@ -2285,7 +2205,7 @@
 				}
 			],
 
-			"homepage": "www.usda.gov/developer",
+			"homepage": "http://www.usda.gov/developer",
 			"downloadURL": " ",
 			"description": "Do you have feedback, ideas, or questions for USDA APIs? Use this repository's Issue Tracker to join the discussion. ",
 			"contact": [{
@@ -3872,7 +3792,8 @@
 				"lastCommit": "2016-10-25T09:20:59Z",
 				"metadataLastUpdated": "2014-12-30T20:14:50Z",
 				"lastModified": "2016-11-02T00:20:01Z"
-			}
+			},
+      "agency": "GSA"
 		}
 
 	]
