@@ -13,7 +13,6 @@ export class ToggleMenuDirective {
 
   onClick(event: any) {
     event.preventDefault();
-    console.log("Directive Clicked");
     this.mobileService.toggleMenu();
   }
 }
