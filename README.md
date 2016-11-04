@@ -50,6 +50,8 @@ project’s dependencies.
 
 You can then run the server using `npm start`.
 
+By default, the development server will listen on <http://localhost:2700/>. You can change the default port by setting the `PORT` environment variable before starting the server (for example, `PORT=3000 npm start`).
+
 ## Testing
 This app uses Karma + Jasmine to handle testing. Run `npm test` to execute
 tests. To add tests, simply create a file with `.spec.ts` as the extension and
