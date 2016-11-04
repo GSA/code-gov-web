@@ -122,7 +122,7 @@ At the most basic level, developing in the open means that developers maintain t
     - design
     - versioning
 - what can't be made public?
- - passowrds
+ - passwords
  - sensitive data
  - 
 

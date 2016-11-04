@@ -50,7 +50,7 @@ Using the resources provided below to automate the creation of your repository w
 #Frequently Asked Questions#
 ##How do I build my agency's inventory if my code is stored on ... [Github, Bitbucket, Gitlab, etc.] ?##
 
-We will be preparing a list of tools and resources to accomodate mapping and conversion to the code.gov metadata schema. We will prioritize the development of those tools based on use/ demand by government agencies. 
+We will be preparing a list of tools and resources to accommodate mapping and conversion to the code.gov metadata schema. We will prioritize the development of those tools based on use/ demand by government agencies. 
 
 *For Github*: 
 Mapping tool: (insert link)
