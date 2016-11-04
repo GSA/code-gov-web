@@ -36,6 +36,7 @@
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "github-deploy": "npm run github-deploy:dev",
     "github-deploy:dev": "webpack --config config/webpack.github-deploy.js --progress --profile --env.github-dev",
+    "github-deploy:stag": "webpack --config config/webpack.github-deploy.js --progress --profile --env.github-stag",
     "github-deploy:prod": "webpack --config config/webpack.github-deploy.js --progress --profile --env.github-prod",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
