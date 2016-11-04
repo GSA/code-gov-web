@@ -83,7 +83,7 @@ conditionals. Styles are encapsulated by default unless the Component has
 
 ## Style Guide
 This app follows the
-[official Angular Stlye Guide](https://angular.io/styleguide). Please ensure you
+[official Angular Style Guide](https://angular.io/styleguide). Please ensure you
 follow the naming conventions defined in this guide.
 
 ## License
