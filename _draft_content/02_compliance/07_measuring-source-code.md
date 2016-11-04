@@ -33,7 +33,7 @@ Having chosen a measure, your agency will likely need to measure the size of its
 For agencies that, in accordance with [section 7.4 of the Source Code Policy](https://sourcecode.cio.gov/Implementation/#code-repositories) consistently maintain their code in version-controlled repositories, one measure that may be tempting to use is the disk size or version-control system reported size of the repository itself.  While this approach can be workable, agencies should consider several limitations to its accuracy, which may or may not affect their particular systems:
 - repeated commits of code can increase repository size. Repositories that have been under development for longer may be artificially inflated simply because they have a longer "revision history"
 - differing measures between platforms.  There is not a standard method of measuring repository size and so agencies that maintain code on different platforms or different versions of platforms should not assume that repository size is an apples-to-apples comparison between them
-- vendor support. Because of the limited utility of repository size as a measure, vendors may not be commited to providing consistent support to automated reporting of this measure or may change their approach to measuring it over time.
+- vendor support. Because of the limited utility of repository size as a measure, vendors may not be committed to providing consistent support to automated reporting of this measure or may change their approach to measuring it over time.
 
 
 ### Source Lines of Code
