@@ -17,6 +17,13 @@ const GIT_REMOTE_NAME = 'origin';
 const COMMIT_MESSAGE = 'Updates';
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';
+let BASEURL;
+
+if (helpers.hasProcessFlag('github-stag')) {
+  BASEURL = '/code-gov-web';
+} else {
+  BASEURL = '/';
+}
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
   /**
@@ -24,7 +31,7 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
    * This also means all resource URIs (CSS/Images/JS) will have this prefix added by the browser
    * unless they are absolute (start with '/'). We will handle it via `output.publicPath`
    */
-  baseUrl: '/',
+  baseUrl: BASEURL,
   ENV: ENV,
   HMR: false,
   isDevServer: false,
@@ -37,7 +44,7 @@ module.exports = function (env) {
   return webpackMerge(webpackConfig({env: ENV}), {
 
     output: {
-      publicPath: '/'
+      publicPath: BASEURL
     },
 
     plugins: [
