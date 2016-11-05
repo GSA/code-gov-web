@@ -4,6 +4,10 @@ export const AGENCIES = [
     name: 'Consumer Financial Protection Bureau'
   },
   {
+    id: 'USDA',
+    name: 'Department of Agriculture'
+  },
+  {
     id: 'DOC',
     name: 'Department of Commerce'
   },
@@ -16,39 +20,35 @@ export const AGENCIES = [
     name: 'Department of Labor'
   },
   {
-    id: 'EOP',
-    name: 'Executive Office of the President'
+    id: 'TRE',
+    name: 'Department of the Treasury'
+  },
+  {
+    id: 'VA',
+    name: 'Department of Veterans Affairs'
   },
   {
     id: 'EPA',
     name: 'Environmental Protection Agency'
   },
   {
-    id: 'GSA',
-    name: 'General Services Administration'
+    id: 'EOP',
+    name: 'Executive Office of the President'
   },
   {
-    id: 'NARA',
-    name: 'National Archives and Records Administration'
+    id: 'GSA',
+    name: 'General Services Administration'
   },
   {
     id: 'NASA',
     name: 'NASA'
   },
   {
+    id: 'NARA',
+    name: 'National Archives and Records Administration'
+  },
+  {
     id: 'OPM',
     name: 'Office of Personnel Management'
-  },
-  {
-    id: 'TRE',
-    name: 'Department of the Treasury'
-  },
-  {
-    id: 'USDA',
-    name: 'Department of Agriculture'
-  },
-  {
-    id: 'VA',
-    name: 'Department of Veterans Affairs'
   }
 ];
