@@ -26,6 +26,7 @@ export const REPOS = {
           'email': ' '
         }
       ],
+      // tslint:disable-next-line:max-line-length
       'license': 'https://github.com/department-of-veterans-affairs/vets-website/blob/master/LICENSE',
       'openproject': 1,
       'govwideReuseproject': 0,
@@ -82,6 +83,7 @@ export const REPOS = {
           'email': ' '
         }
       ],
+      // tslint:disable-next-line:max-line-length
       'license': 'https://github.com/department-of-veterans-affairs/vets-api/blob/master/LICENSE.md',
       'openproject': 1,
       'govwideReuseproject': 0,

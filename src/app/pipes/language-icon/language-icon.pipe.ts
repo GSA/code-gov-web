@@ -15,7 +15,7 @@ export class LanguageIconPipe implements PipeTransform {
         value = 'css3';
         break;
       default:
-        value;
+        break;
     }
 
     if (LANGUAGES.indexOf(value) > -1) {
