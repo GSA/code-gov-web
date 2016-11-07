@@ -5,6 +5,7 @@ import { ExternalLinkDirective } from '../../directives/external-link';
 import { HomeComponent } from './';
 import { ModalComponent } from '../modal';
 import { ModalService } from '../../services/modal';
+import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
 
 describe('HomeComponent', () => {
@@ -19,6 +20,7 @@ describe('HomeComponent', () => {
       ],
       providers: [
         ModalService,
+        SeoService,
         StateService
       ]
     });
