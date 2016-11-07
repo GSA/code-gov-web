@@ -17,11 +17,11 @@ Code.gov is an open source project, so we invite your contributions, be it in th
 
 The development of code.gov is guided by the requirements set forth in [Section 7.2 (Code Inventories and Discovery)](https://sourcecode.cio.gov/Implementation/#code-inventories-and-discovery), [Section 7.3 (Code.gov)](https://sourcecode.cio.gov/Implementation/#codegov), and  [Section 7.6 (Agency Policy)](https://sourcecode.cio.gov/Implementation/#agency-policy) of the Federal Source Code Policy. Namely:
 
-    * "Within 90 days of the publication date of this policy, the Administration will launch https://www.code.gov, an online collection of tools, best practices, and schemas to help agencies implement this policy.";
-
-    * "Within 90 days of the publication date of this policy, each agency’s CIO—in consultation with the agency’s CAO—shall develop an agency-wide policy that addresses the requirements of this [document.]";  and
-
-    * "Within 120 days of the publication date of this policy, each agency must update—and thereafter keep up to date—its inventory of agency information resources to include an enterprise code inventory that lists custom-developed code for or by the agency after the publication of this policy."
+> * "Within 90 days of the publication date of this policy, the Administration will launch https://www.code.gov, an online collection of tools, best practices, and schemas to help agencies implement this policy.";
+>
+> * "Within 90 days of the publication date of this policy, each agency’s CIO—in consultation with the agency’s CAO—shall develop an agency-wide policy that addresses the requirements of this [document.]";  and
+>
+> * "Within 120 days of the publication date of this policy, each agency must update—and thereafter keep up to date—its inventory of agency information resources to include an enterprise code inventory that lists custom-developed code for or by the agency after the publication of this policy."
 
 Over the next few weeks, we will begin the *discovery sprint* for code.gov. During that time, we will conduct user interviews and engage this community in discussions that will inform the user experience for code.gov.
 
