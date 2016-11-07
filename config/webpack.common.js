@@ -173,9 +173,6 @@ module.exports = function (options) {
       {
         from: 'src/assets',
         to: 'assets',
-      },
-      {
-         from: 'src/meta',
       }
      ]),
 

@@ -3,6 +3,8 @@
  */
 const helpers = require('./helpers');
 const ghDeploy = require('./github-deploy');
+const CreateFilePlugin = require('webpack-create-file-plugin');
+const CriticalCssPlugin = require('./critical-css-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
@@ -20,7 +22,7 @@ const ENV = 'production';
 let BASEURL;
 
 if (helpers.hasProcessFlag('github-stag')) {
-  BASEURL = '/code-gov-web';
+  BASEURL = '/code-gov-web/';
 } else {
   BASEURL = '/';
 }
@@ -68,6 +70,16 @@ module.exports = function (env) {
         }
       }),
 
+      new CriticalCssPlugin({
+        src: 'index.html'
+      }),
+
+      new CreateFilePlugin({
+        files: [
+          '.nojekyll'
+        ]
+      }),
+
       function() {
         this.plugin('done', function() {
           console.log('Starting deployment to GitHub.');
@@ -79,7 +91,8 @@ module.exports = function (env) {
           const options = {
             logger: logger,
             remote: GIT_REMOTE_NAME,
-            message: COMMIT_MESSAGE
+            message: COMMIT_MESSAGE,
+            dotfiles: true
           };
 
           ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
