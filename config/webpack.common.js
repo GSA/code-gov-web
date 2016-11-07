@@ -36,7 +36,10 @@ const METADATA = {
  * See: http://webpack.github.io/docs/configuration.html#cli
  */
 module.exports = function (options) {
-  isProd = options.env === 'production';
+  // TODO: Used by `@angularclass/hmr-loader` below. Feels bad, might
+  // want to upgrade to latest hmr-loader and pull out env dependency
+  // (or move this definition out of common)
+  isProd = ['production', 'staging'].includes(options.env);
 
   return {
 
