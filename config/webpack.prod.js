@@ -5,6 +5,7 @@
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const commonConfig = require('./webpack.common.js'); // the settings that are common to prod and dev
+const CriticalCssPlugin = require('./critical-css-plugin');
 
 /**
  * Webpack Plugins
@@ -206,6 +207,13 @@ module.exports = function (env) {
         chunksSortMode: 'dependency',
         metadata: METADATA,
         inject: 'head'
+      }),
+
+      /**
+       * Inline critical-path CSS in index.html, and asynchronously load remainder of stylesheet.
+       */
+      new CriticalCssPlugin({
+        src: 'index.html'
       }),
 
       /**
