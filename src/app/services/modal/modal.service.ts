@@ -5,6 +5,7 @@ import { Subject } from 'rxjs/Subject';
 
 export class ModalService {
    private modalActivation = new Subject<string>();
+   // tslint:disable-next-line:member-ordering
    modalActivated$ = this.modalActivation.asObservable();
 
 
