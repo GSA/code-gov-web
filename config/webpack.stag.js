@@ -18,13 +18,12 @@ const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplaceme
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 
 /**
  * Webpack Constants
  */
-const ENV = process.env.NODE_ENV = process.env.ENV = 'staging';
+const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 8080;
 
@@ -34,7 +33,7 @@ const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
   port: PORT,
   ENV: ENV,
   HMR: false,
-  gtmAuth: 'GTM-M9L9Q5'
+  gtmAuth: 'GTM-NTMZFB'
 });
 
 module.exports = function (env) {
@@ -216,16 +215,6 @@ module.exports = function (env) {
       new CriticalCssPlugin({
         src: 'index.html'
       }),
-
-      new CopyWebpackPlugin([
-       {
-         from: 'src/assets',
-         to: 'assets',
-       },
-       {
-         from: 'config/CNAME'
-       }
-      ]),
 
       /**
        * Plugin LoaderOptionsPlugin (experimental)

@@ -7,8 +7,10 @@ const SSH_REPO_NAME_RE = /Push\s*URL:\s*git@github\.com:.*\/(.*)\.git/;
 function getWebpackConfigModule() {
   if (helpers.hasProcessFlag('github-dev')) {
     return require('../webpack.dev.js');
-  } else if (helpers.hasProcessFlag('github-prod') || helpers.hasProcessFlag('github-stag')) {
+  } else if (helpers.hasProcessFlag('github-prod')) {
     return require('../webpack.prod.js');
+  } else if (helpers.hasProcessFlag('github-stag')){
+    return require('../webpack.stag.js');
   } else {
     throw new Error('Invalid compile option.');
   }
