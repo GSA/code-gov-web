@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
 
 @Component({
@@ -13,7 +14,11 @@ import { StateService } from '../../services/state';
 export class HomeComponent {
   url = 'https://pif.gov';
 
-  constructor(public stateService: StateService) {
+  constructor(
+    public stateService: StateService,
+    private seoService: SeoService) {
     this.stateService.set('section', 'home');
+    this.seoService.setTitle('Code.gov', false);
+    this.seoService.setMetaDescription('Code.gov is a platform designed to improve access to the federal government’s custom-developed software.');
   }
 }
