@@ -3,7 +3,7 @@ import { inject, TestBed } from '@angular/core/testing';
 import { ModalComponent } from './modal.component';
 import { ModalService } from '../../services/modal';
 
-import {By} from '@angular/platform-browser';
+import { By } from '@angular/platform-browser';
 
 describe('ModalComponent', () => {
 
@@ -24,9 +24,10 @@ describe('ModalComponent', () => {
 
   it('should display a title in h1 when component\'s title property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
-    // Observable since ModalComponent subscribes to that Obesrvable to get the value of its title property.
-    // In this case, the title is set to 'Foobar', which means that 'Foobar' will be displayed
-    // when the title property is interpolated in the component template (line 9).
+    // Observable since ModalComponent subscribes to that Obesrvable to get the value of
+    // its title property. In this case, the title is set to 'Foobar', which means that
+    // 'Foobar' will be displayed when the title property is interpolated in the
+    // component template (line 9).
     let newTitle = 'Foobar';
     this.modalService.showModal({description: undefined, title: newTitle, url: undefined});
     this.fixture.detectChanges();
@@ -36,11 +37,13 @@ describe('ModalComponent', () => {
     expect(this.modalComponent.visible).toBeTruthy();
   });
 
-  it('should NOT display a title or h1 tag when component\'s title property is set to undefined', () => {
+  it('should NOT display a title or h1 tag when component\'s title property is set ' +
+    'to undefined', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
-    // Observable since ModalComponent subscribes to that Obesrvable to get the value of its title property.
-    // In this case, the title pushed through the Observable is undefined, which means that the title
-    // element (<h1>) will be null in the template due to the *ngIf on line 8.
+    // Observable since ModalComponent subscribes to that Obesrvable to get the value
+    // of its title property. In this case, the title pushed through the Observable
+    // is undefined, which means that the title element (<h1>) will be null in the
+    // template due to the *ngIf on line 8.
     let newTitle = undefined;
     this.modalService.showModal({description: undefined, title: newTitle, url: undefined});
     this.fixture.detectChanges();
@@ -52,9 +55,10 @@ describe('ModalComponent', () => {
 
   it('should display a description when component\'s description property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
-    // Observable since ModalComponent subscribes to that Obesrvable to get the value of its desdcription property.
-    // In this case, the description is set to 'Modal Desc', which means that 'Modal Desc' will be displayed
-    // when the description property is interpolated in the component template (line 12).
+    // Observable since ModalComponent subscribes to that Obesrvable to get the value
+    // of its desdcription property. In this case, the description is set to
+    // 'Modal Desc', which means that 'Modal Desc' will be displayed when the
+    // description property is interpolated in the component template (line 12).
     let newDesc = 'Modal Desc';
     this.modalService.showModal({description: newDesc, title: undefined, url: undefined});
     this.fixture.detectChanges();
@@ -65,9 +69,10 @@ describe('ModalComponent', () => {
 
   it('should show a url link when component\'s url property is set', () => {
     // Call ModalService.showModal() to push an Object through the modalActivated$
-    // Observable since ModalComponent subscribes to that Obesrvable to get the value of its url property.
-    // In this case, the description is set to 'http://foo.bar/', which means that 'http://foo.bar/' will be
-    // the anchor link when the url property is interpolated in the component template (line 14).
+    // Observable since ModalComponent subscribes to that Obesrvable to get the
+    // value of its url property. In this case, the description is set to
+    // 'http://foo.bar/', which means that 'http://foo.bar/' will be the anchor
+    // link when the url property is interpolated in the component template (line 14).
     let newUrl = 'http://foo.bar/';
     this.modalService.showModal({description: undefined, title: undefined, url: newUrl});
     this.fixture.detectChanges();
