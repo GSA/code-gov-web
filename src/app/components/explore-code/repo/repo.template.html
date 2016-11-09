@@ -12,13 +12,13 @@
     <div class="repo-actions">
       <ul class="usa-unstyled-list">
         <li *ngIf="repo.homepage && repo.homepage != 'null'">
-          <a external-link class="usa-button" href="{{repo.homepage}}">
+          <a external-link class="usa-button" href="{{repo.homepage}}" target="_blank">
             Homepage
           </a>
         </li>
 
         <li *ngIf="repo.repoURL && repo.repoURL != 'null'">
-          <a external-link class="usa-button" href="{{ repo.repoURL }}">
+          <a external-link class="usa-button" href="{{ repo.repoURL }}" target="_blank">
             Visit Repo
           </a>
         </li>

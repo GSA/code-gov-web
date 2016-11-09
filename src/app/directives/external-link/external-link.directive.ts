@@ -10,6 +10,7 @@ import { ModalService } from '../../services/modal';
 
 export class ExternalLinkDirective {
   modalContent: Object;
+  url: string;
 
   constructor(private el: ElementRef, private modalService: ModalService) {
     this.modalContent = {
@@ -20,9 +21,17 @@ export class ExternalLinkDirective {
     };
   }
 
+  isExternalLink(url) {
+    return !this.url.match(/(.+\.)?([^.]+)\.(?:gov|mil)$/);
+  }
+
   onClick(event: any) {
-    event.preventDefault();
-    this.modalContent['url'] = this.el.nativeElement.getAttribute('href');
-    this.modalService.showModal(this.modalContent);
+    this.url = this.el.nativeElement.getAttribute('href');
+
+    if (this.isExternalLink(this.url)) {
+      event.preventDefault();
+      this.modalContent['url'] = this.url;
+      this.modalService.showModal(this.modalContent);
+    }
   }
 }
