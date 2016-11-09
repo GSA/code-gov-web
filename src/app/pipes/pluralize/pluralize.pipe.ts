@@ -1,4 +1,4 @@
-import * as pluralize from 'pluralize';
+import * as Pluralize from 'pluralize';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -7,6 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class PluralizePipe implements PipeTransform {
   transform(value: string, arg: number): any {
+    const pluralize:any = Pluralize;
 
     return pluralize.plural(value, arg);
   }
