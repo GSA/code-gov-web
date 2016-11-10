@@ -20,11 +20,14 @@ const COMMIT_MESSAGE = 'Updates';
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';
 let BASEURL;
+let gtmAuth;
 
 if (helpers.hasProcessFlag('github-stag')) {
   BASEURL = '/code-gov-web/';
+  gtmAuth = 'GTM-NTMZFB';
 } else {
   BASEURL = '/';
+  gtmAuth = 'GTM-M9L9Q5';
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
