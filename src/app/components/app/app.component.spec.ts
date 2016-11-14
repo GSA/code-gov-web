@@ -1,3 +1,8 @@
+import {
+  Angulartics2,
+  Angulartics2GoogleTagManager,
+  Angulartics2Module
+} from 'angulartics2';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
@@ -26,11 +31,14 @@ describe('AgencyComponent', () => {
         TruncatePipe
       ],
       imports: [
+        Angulartics2Module.forRoot(),
         HttpModule,
         RouterModule.forRoot([])
       ],
       providers: [
         AgencyService,
+        Angulartics2,
+        Angulartics2GoogleTagManager,
         ReposService,
         SeoService,
         StateService,
