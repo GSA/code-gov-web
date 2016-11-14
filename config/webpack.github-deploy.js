@@ -38,6 +38,7 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
    */
   baseUrl: BASEURL,
   ENV: ENV,
+  gtmAuth: gtmAuth,
   HMR: false,
   isDevServer: false,
   title: 'Code.gov',
