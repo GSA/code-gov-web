@@ -7,6 +7,8 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -45,6 +47,7 @@ const APP_PROVIDERS = [
  */
 @NgModule({
   imports: [ // import Angular's modules
+    Angulartics2Module.forRoot(),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -63,7 +66,8 @@ const APP_PROVIDERS = [
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    Angulartics2GoogleTagManager
   ],
   bootstrap: [ AppComponent ]
 })
