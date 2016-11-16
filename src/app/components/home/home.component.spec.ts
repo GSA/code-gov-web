@@ -1,4 +1,9 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { inject, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { SpyLocation } from '@angular/common/testing';
+
+import { Angulartics2, Angulartics2Module } from 'angulartics2';
 
 import { BannerArtComponent } from './banner-art';
 import { ExternalLinkDirective } from '../../directives/external-link';
@@ -18,7 +23,14 @@ describe('HomeComponent', () => {
         HomeComponent,
         ModalComponent
       ],
+      imports: [
+        Angulartics2Module.forRoot(),
+        RouterModule.forRoot([])
+      ],
       providers: [
+        Angulartics2,
+        {provide: APP_BASE_HREF, useValue: '/'},
+        { provide: Location, useClass: SpyLocation },
         ModalService,
         SeoService,
         StateService

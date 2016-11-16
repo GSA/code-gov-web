@@ -4,8 +4,10 @@ import { HttpModule } from '@angular/http';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Location, CommonModule } from '@angular/common';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Observable } from 'rxjs/Rx';
 import { By } from '@angular/platform-browser';
+
+import { Angulartics2, Angulartics2Module } from 'angulartics2';
+import { Observable } from 'rxjs/Rx';
 
 import { AgencyService } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';
@@ -33,6 +35,7 @@ describe('RepoComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
+        Angulartics2Module.forRoot(),
         CommonModule,
         HttpModule,
         // This hack is needed because there is a routerLink in the template
@@ -52,6 +55,7 @@ describe('RepoComponent', () => {
       ],
       providers: [
         AgencyService,
+        Angulartics2,
         ReposService,
         ModalService,
         SeoService,

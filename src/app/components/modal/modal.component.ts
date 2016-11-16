@@ -1,3 +1,4 @@
+import { Angulartics2 } from 'angulartics2';
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -16,7 +17,10 @@ export class ModalComponent implements OnDestroy {
   visible: boolean;
   modalSub: Subscription;
 
-  constructor(private modalService: ModalService) {
+  constructor(
+    private angulartics2: Angulartics2,
+    private modalService: ModalService
+  ) {
     this.modalSub = modalService.modalActivated$.subscribe(
       modal => {
         this.description = modal['description'];
@@ -32,6 +36,7 @@ export class ModalComponent implements OnDestroy {
   }
 
   close() {
+    this.angulartics2.eventTrack.next({ action: 'Close', properties: { category: 'Modal' }});
     this.visible = false;
   }
 }

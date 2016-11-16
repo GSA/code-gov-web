@@ -1,6 +1,11 @@
 import { Component, Directive } from '@angular/core';
 import { inject, TestBed } from '@angular/core/testing';
+import { Location } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { SpyLocation } from '@angular/common/testing';
+
 import { Observable } from 'rxjs';
+import { Angulartics2 } from 'angulartics2';
 
 import { ExternalLinkDirective } from './external-link.directive';
 import { ModalService } from '../../services/modal';
@@ -10,11 +15,26 @@ describe('ExternalLinkDirective', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ ExternalLinkDirective, TestComponent ],
-      providers: [{provide: ModalService, useClass: mockModalService}]
+      imports: [ RouterModule.forRoot([]) ],
+      providers: [
+        Angulartics2,
+        { provide: Location, useClass: SpyLocation },
+        { provide: ModalService, useClass: mockModalService }
+      ]
     });
 
     this.fixture = TestBed.createComponent(TestComponent);
     this.fixture.detectChanges();
+  });
+
+  it('should trigger Angularitics when an external link is quicked', () => {
+    let angulartics2 = TestBed.get(Angulartics2);
+    spyOn(angulartics2.eventTrack, "next");
+    this.fixture.debugElement.nativeElement.querySelector('#ext-link').click();
+
+    expect(angulartics2.eventTrack.next).toHaveBeenCalledWith(
+      { action: 'Click', properties: { category: 'External Link' }}
+    );
   });
 
   it('should trigger the ModalService when an external link is quicked', () => {
