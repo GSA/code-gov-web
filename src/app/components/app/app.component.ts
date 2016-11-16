@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private angulartics2: Angulartics2,
-    angulartics2Gtm: Angulartics2GoogleTagManager,
+    private angulartics2Gtm: Angulartics2GoogleTagManager,
     private router: Router,
     public stateService: StateService
   ) {}

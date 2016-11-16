@@ -1,4 +1,10 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { inject, TestBed } from '@angular/core/testing';
+import { RouterModule } from '@angular/router';
+import { SpyLocation } from '@angular/common/testing';
+
+
+import { Angulartics2, Angulartics2Module } from 'angulartics2';
 
 import { ModalComponent } from './modal.component';
 import { ModalService } from '../../services/modal';
@@ -12,7 +18,14 @@ describe('ModalComponent', () => {
       declarations: [
         ModalComponent
       ],
+      imports: [
+        Angulartics2Module.forRoot(),
+        RouterModule.forRoot([])
+      ],
       providers: [
+        Angulartics2,
+        {provide: APP_BASE_HREF, useValue: '/'},
+        { provide: Location, useClass: SpyLocation },
         ModalService
       ]
     });
@@ -82,22 +95,33 @@ describe('ModalComponent', () => {
     expect(element.nativeElement.href).toBe(newUrl);
   });
 
-  it('should no longer be visible when ModalComponent.close() is called.', () => {
-    // Call ModalService.showModal() to push an item into the modalActivated$ Observable. All values
-    // are undefined since we are only concerned about the visible property that is set
-    // in the subscribe() call in the ModalComponent constructor (line 23).
-    this.modalService.showModal({description: undefined, title: undefined, url: undefined});
-    this.fixture.detectChanges();
-    // close the modal, which sets ModalComponent.visible to false
-    this.modalComponent.close();
-    this.fixture.detectChanges();
-    // Since the visible property is false, the *ngIf on line 1 of the template means that
-    // the root div element will be null.
-    let element = this.fixture.debugElement.query(By.css('.overlay'));
+  describe ('close', () => {
+    it('should hide the modal', () => {
+      // Call ModalService.showModal() to push an item into the modalActivated$ Observable. All values
+      // are undefined since we are only concerned about the visible property that is set
+      // in the subscribe() call in the ModalComponent constructor (line 23).
+      this.modalService.showModal({description: undefined, title: undefined, url: undefined});
+      this.fixture.detectChanges();
+      // close the modal, which sets ModalComponent.visible to false
+      this.modalComponent.close();
+      this.fixture.detectChanges();
+      // Since the visible property is false, the *ngIf on line 1 of the template means that
+      // the root div element will be null.
+      let element = this.fixture.debugElement.query(By.css('.overlay'));
 
-    expect(element).toBeNull();
-    // Check that the ModalComponent.close() call sets the visible property to false.
-    expect(this.modalComponent.visible).toBeFalsy();
+      expect(element).toBeNull();
+      // Check that the ModalComponent.close() call sets the visible property to false.
+      expect(this.modalComponent.visible).toBeFalsy();
+    });
+
+    it('should trigger a close Event via Angulartics2', inject([Angulartics2], (angulartics2) => {
+      spyOn(angulartics2.eventTrack, "next");
+      this.modalComponent.close();
+
+      expect(angulartics2.eventTrack.next).toHaveBeenCalledWith(
+        { action: 'Close', properties: { category: 'Modal' }}
+      );
+    }));
   });
 
   describe('destroy', () => {

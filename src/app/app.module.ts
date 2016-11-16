@@ -7,6 +7,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth} from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
 
 /*

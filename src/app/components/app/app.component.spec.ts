@@ -1,13 +1,14 @@
-import {
-  Angulartics2,
-  Angulartics2GoogleTagManager,
-  Angulartics2Module
-} from 'angulartics2';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { inject, TestBed } from '@angular/core/testing';
+
+import {
+  Angulartics2,
+  Angulartics2GoogleTagManager,
+  Angulartics2Module
+} from 'angulartics2';
 import { Observable } from 'rxjs/Rx';
 
 import { AppComponent } from './index';
