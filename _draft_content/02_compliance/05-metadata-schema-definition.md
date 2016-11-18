@@ -20,10 +20,8 @@ Section 7.2 and 7.3 of the Federal Source Code Policy require covered agencies t
     *   `description`: [string] A description of the project
     *   `license`: [`null` or string] The URL of the project license, if available. `null` should be used if not.
     *   `openSourceProject`: [integer] A value indicating whether or not the project is open source.
-
-    *   `0`: The project is not open source.
-    *   `1`: The project is open source.
-
+        *   `0`: The project is not open source.
+        *   `1`: The project is open source.
     *   `governmentWideReuseProject`: [integer] A value indicating whether or not the project is built for government-wide reuse.
         *   `0`: The project is not built for government-wide reuse.
         *   `1`: The project is built for government-wide reuse.
