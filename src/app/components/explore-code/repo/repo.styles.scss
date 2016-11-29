@@ -55,7 +55,12 @@
   a {
     color: $brand-blue;
     font-weight: bold;
+    padding-bottom: 0.1em;
     text-decoration: none;
+
+    &:hover {
+      border-bottom: 2px solid $brand-blue;
+    }
   }
 
   h3 {

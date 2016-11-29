@@ -185,7 +185,16 @@ body {
   }
 
   img {
+    @include backface-visibility(visible);
+    @include transition(all 0.2s ease);
+    @include transform-style(preserve-3d);
+    @include transform(translate3d(0,0,0));
     max-width: 7.5em;
+    -webkit-perspective: 1000;
+
+    &:hover {
+      @include transform(translateY(-2px));
+    }
   }
 
   li {
@@ -231,12 +240,14 @@ body {
     }
 
     img {
-      @include transition(all 0.1s ease);
+      @include backface-visibility(visible);
+      @include transition(all 0.2s ease);
+      @include transform-style(preserve-3d);
       max-width: 5em;
-      opacity: 0.5;
+      -webkit-perspective: 1000;
 
       &:hover {
-        opacity: 1;
+        @include transform(translateY(-2px));
       }
     }
   }

@@ -25,10 +25,15 @@
 
   a {
     color: lighten($brand-teal, 12);
+    padding-bottom: 0.1em;
     text-decoration: none;
 
     &:focus {
       box-shadow: 0 0 3px rgba($color-white, 0.25), 0 0 7px rgba($color-white, 0.25);
+    }
+
+    &:hover {
+      border-bottom: 2px solid $brand-teal;
     }
   }
 
