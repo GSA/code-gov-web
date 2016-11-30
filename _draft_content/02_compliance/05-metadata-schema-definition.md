@@ -1,8 +1,10 @@
-#Specification for Metadata Schema#
-## Overview##
-Section 7.2 and 7.3 of the Federal Source Code Policy require covered agencies to provide an inventory of their 'custom-developed code'. 
+# Specification for Metadata Schema
 
-##Specification##
+## Overview
+
+Sections 7.2 and 7.3 of the Federal Source Code Policy require covered agencies to provide an inventory of their 'custom-developed code'. 
+
+## Specification
 
 ### File location and contents
 
