@@ -6,20 +6,28 @@ import { LANGUAGES } from './';
 })
 
 export class LanguageIconPipe implements PipeTransform {
+
+  parameterize(value: string): any {
+    let lowercasedValue = value.toLowerCase();
+    return lowercasedValue.replace(/ /g,"_");
+  }
+
   transform(value: string): any {
-    switch (value) {
+    let sanitizedValue = this.parameterize(value);
+
+    switch (sanitizedValue) {
       case 'html':
-        value = 'html5';
+        sanitizedValue = 'html5';
         break;
       case 'css':
-        value = 'css3';
+        sanitizedValue = 'css3';
         break;
       default:
         break;
     }
 
-    if (LANGUAGES.indexOf(value) > -1) {
-      return value;
+    if (LANGUAGES.indexOf(sanitizedValue) > -1) {
+      return sanitizedValue;
     } else {
       return 'code_badge';
     }
