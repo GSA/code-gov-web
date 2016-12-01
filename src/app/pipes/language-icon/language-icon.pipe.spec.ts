@@ -29,7 +29,6 @@ describe('LanguageIconPipe', () => {
   });
 
   describe('transform', () => {
-
     it('returns code_badge if the argument is not defined in LANGUAGES', () => {
       let value = 'made up language';
 
