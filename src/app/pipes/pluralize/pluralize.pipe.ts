@@ -9,6 +9,6 @@ export class PluralizePipe implements PipeTransform {
   transform(value: string, arg: number): any {
     const pluralize:any = Pluralize;
 
-    return pluralize.plural(value, arg);
+    return pluralize(value, arg);
   }
 }
