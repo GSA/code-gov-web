@@ -17,8 +17,9 @@
 <h3>Fields:</h3>
 <h4>Required</h4>
 <ul>
+ <li><code>version</code>: [string] The version of the metadata schema.</li> 
 <li><code>agency</code>: [string] The agency acronym. For example "GSA" or "DOD"</li>
-<li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
+
 <li><code>project</code>: [object] Contains objects representing each software project
 <ul>
 <li>
@@ -40,7 +41,7 @@
 <p><code>1</code>: The project is open source.</p>
 </li>
 <li>
-<p><code>governmentWideReuseProject</code>: [integer] A value indicating whether or not the project is built for government-wide reuse.</p>
+<p><code>govwideReuseproject</code>: [integer] A value indicating whether or not the project is built for government-wide reuse.</p>
 <ul>
 <li><code>0</code>: The project is not built for government-wide reuse.</li>
 <li><code>1</code>: The project is built for government-wide reuse.</li>
@@ -60,7 +61,8 @@
 </ul>
 <h4>Optional</h4>
 <ul>
-<li><code>project</code>: [object] Contains objects representing each software project
+  <li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
+<li><code>projects</code>: [object] Contains objects representing each software project
 <ul>
 <li><code>status</code>: [string] The development status of the project
 <ul>
@@ -84,8 +86,9 @@
 </ul>
 </li>
 <li><code>partners</code>: [array] A list of strings containing the acronyms of agencies partnering on the project.</li>
-<li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse.
-<ul>
+<li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse.</li>
+<li><code>exemption_text</code>: [string] A brief narrative explanation for the exception requested in the 'exemption' field..</li>
+  <ul>
 <li><code>1</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
 <li><code>2</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
 <li><code>3</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
