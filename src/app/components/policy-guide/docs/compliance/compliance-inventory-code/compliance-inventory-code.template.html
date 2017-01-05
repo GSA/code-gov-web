@@ -65,7 +65,7 @@
 <h4>Optional</h4>
 <ul>
   <li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
-<li><code>projects</code>: [object] Contains objects representing each software project
+<li><code>projects</code>: [array] Contains objects representing each software project
 <ul>
 <li><code>status</code>: [string] The development status of the project
 <ul>
@@ -88,7 +88,10 @@
 <li><code>phone</code>: [string] The phone number to contact a project.</li>
 </ul>
 </li>
-<li><code>partners</code>: [array] An array of objects including an acronym for each agency partnering on the project and the contact email at such agency.</li>
+<li><code>partners</code>: [array] An array of objects including an acronym for each agency partnering on the project and the contact email at such agency.
+  <ul><li><code>name</code>: [string] The acronym describing the partner agency.</li>
+    <li><code>email</code>: [string] The email address for the point of contact at the partner agency.</li>
+  </ul></li>
 <li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse.</li>
 <li><code>exemption_text</code>: [string] A brief narrative explanation for the exception requested in the 'exemption' field..</li>
   <ul>
