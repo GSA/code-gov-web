@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
+    "types": [
+      "hammerjs",
+      "jasmine",
+      "node",
+      "protractor",
+      "selenium-webdriver",
+      "source-map",
+      "uglify-js",
+      "webpack"
+    ],
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -16,16 +26,6 @@
       "dom",
       "es6"
     ],
-    "types": [
-      "hammerjs",
-      "jasmine",
-      "node",
-      "protractor",
-      "selenium-webdriver",
-      "source-map",
-      "uglify-js",
-      "webpack"
-    ]
   },
   "exclude": [
     "node_modules",
