@@ -38,7 +38,7 @@
                 }    
             ],
             "exemption": null,
-            "exemption_text": "No exemption requested",
+            "exemptionText": "No exemption requested",
             "updated": {
                 "lastCommit": "2016-04-30",
                 "metadataLastUpdated": "2016-04-13",
