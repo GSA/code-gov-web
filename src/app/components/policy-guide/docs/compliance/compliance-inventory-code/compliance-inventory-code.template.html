@@ -29,6 +29,7 @@
 	<li><code>agency</code>: [string] The agency acronym. For example "GSA" or "DOD"</li>
 	<li><code>projects</code>: [object] Contains objects representing each software project</li>
 	<ul>
+		<li><code>name</code>: [string] The project name
 		<li><code>repository</code>: [string] The URL of the public project repository for open source repositories. ** For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field will not be required.</li>
 		<li>
 			<p><code>description</code>: [string] A description of the project</p>
@@ -69,9 +70,9 @@
 <h4>Optional</h4>
 
 <ul>
-  	<li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
-	<li><code>projects</code>: [array] Contains objects representing each software project
+	<li>Optional fields for project objects within <code>projects</code>: 
 		<ul>
+			<li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
 			<li><code>status</code>: [string] The development status of the project
 				<ul>
 					<li><code>"Ideation"</code> - brainstorming phase.</li>
@@ -98,15 +99,15 @@
 		    		<li><code>email</code>: [string] The email address for the point of contact at the partner agency.</li>
 		  		</ul>
 		  	</li>
-			<li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse.</li>
-			<li><code>exemption_text</code>: [string] A brief narrative explanation for the exception requested in the 'exemption' field..</li>
+			<li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse. Possible values and the exemption they correspond to from the policy are:</li>
 			<ul>
-				<li><code>1</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
-				<li><code>2</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
-				<li><code>3</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
-				<li><code>4</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
-				<li><code>5</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
+				<li><code>1</code>: "The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information."</li>
+				<li><code>2</code>: "The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy."</li>
+				<li><code>3</code>: "The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel."</li>
+				<li><code>4</code>: "The sharing of the source code would create an identifiable risk to agency mission, programs, or operations."</li>
+				<li><code>5</code>: "The CIO believes it is in the national interest to exempt sharing the source code."</li>
 			</ul>
+			<li><code>exemptionText</code>: [string] A brief narrative explanation for the exception requested in the 'exemption' field.</li>
 			<li><code>updated</code>: [object] Dates that the project and metadata have been updated.
 				<ul>
 					<li><code>metadataLastUpdated</code>: [string] A date in YYYY-MM-DD or ISO 8601 format indicating when the metadata in this file was last updated.</li>
