@@ -9,7 +9,7 @@
             "license": "https://path.to/license",
             "openSourceProject": 1,
             "governmentWideReuseProject": 0,
-        
+
             "tags": [
               "platform",
               "government",
@@ -35,7 +35,7 @@
                 {
                     "name": "DOXYZ",
                     "email": "project@doxyz.gov"
-                }    
+                }
             ],
             "exemption": null,
             "exemptionText": "No exemption requested",

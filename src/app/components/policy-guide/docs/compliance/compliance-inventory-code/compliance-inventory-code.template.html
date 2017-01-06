@@ -25,41 +25,46 @@
 <h4>Required</h4>
 
 <ul>
-	<li><code>version</code>: [string] The version of the metadata schema in use. For example "1.0.1"</li> 
+	<li><code>version</code>: [string] The version of the metadata schema in use. For example "1.0.1"</li>
 	<li><code>agency</code>: [string] The agency acronym. For example "GSA" or "DOD"</li>
 	<li><code>projects</code>: [object] Contains objects representing each software project</li>
 	<ul>
-		<li><code>name</code>: [string] The project name
-		<li><code>repository</code>: [string] The URL of the public project repository for open source repositories. ** For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field will not be required.</li>
 		<li>
-			<p><code>description</code>: [string] A description of the project</p>
+			<code>name</code>: [string] The project name
 		</li>
 		<li>
-			<p><code>license</code>: [<code>null</code> or string] The URL of the project license, if available. <code>null</code> should be used if not.</p>
+			<code>repository</code>: [string] The URL of the public project repository for open source repositories.<br>
+      ** For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field will not be required.
 		</li>
 		<li>
-			<p><code>openSourceProject</code>: [integer] A value indicating whether or not the project is open source.</p>
+			<code>description</code>: [string] A description of the project
+		</li>
+		<li>
+			<code>license</code>: [<code>null</code> or string] The URL of the project license, if available. <code>null</code> should be used if not.
+		</li>
+		<li>
+			<code>openSourceProject</code>: [integer] A value indicating whether or not the project is open source.
 		</li>
 		<ul>
 		<li>
-			<p><code>0</code>: The project is not open source.</p>
+			<code>0</code>: The project is not open source.
 		</li>
 		<li>
-			<p><code>1</code>: The project is open source.</p>
+			<code>1</code>: The project is open source.
 		</li>
 		</ul>
 		<li>
-			<p><code>governmentWideReuseProject</code>: [integer] A value indicating whether or not the project is built for government-wide reuse.</p>
+			<code>governmentWideReuseProject</code>: [integer] A value indicating whether or not the project is built for government-wide reuse.
 		</li>
 			<ul>
 				<li><code>0</code>: The project is not built for government-wide reuse.</li>
 				<li><code>1</code>: The project is built for government-wide reuse.</li>
 			</ul>
 		<li>
-			<p><code>tags</code>: [array] A list of string alphanumeric keywords that identify the project.</p>
+			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the project.
 		</li>
 		<li>
-			<p><code>contact</code>: [object] Information about contacting the project.</p>
+			<code>contact</code>: [object] Information about contacting the project.
 			<ul>
 				<li><code>email</code>: [string] An email address to contact the project.</li>
 			</ul>
@@ -135,5 +140,5 @@
 
 	<li>‘repository’: The link to the open source repository will be considered a required field for all open source repositories. For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field is not required.</li>
 
-	<li>‘exemption_text’: This field allows agencies to provide a brief narrative explanation for the exception requested in the 'exemption' field.</li>
+	<li>‘exemptionText’: This field allows agencies to provide a brief narrative explanation for the exception requested in the 'exemption' field.</li>
 </ul>
