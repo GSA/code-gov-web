@@ -95,7 +95,7 @@
   "devDependencies": {
     "@types/core-js": "^0.9.34",
     "@types/hammerjs": "^2.0.33",
-    "@types/jasmine": "^2.2.34",
+    "@types/jasmine": "^2.5.38",
     "@types/node": "^6.0.38",
     "@types/protractor": "^1.5.20",
     "@types/requirejs": "^2.1.26",
