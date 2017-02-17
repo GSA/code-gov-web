@@ -94,6 +94,7 @@ module.exports = function (env) {
 
           const options = {
             logger: logger,
+            branch: 'federalist-pages',
             remote: GIT_REMOTE_NAME,
             message: COMMIT_MESSAGE,
             dotfiles: true
