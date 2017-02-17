@@ -12,6 +12,7 @@ import {
   ComplianceInventoryCodeComponent,
   ComplianceLicensingComponent,
   ComplianceMeasuringCodeComponent,
+  ComplianceDashboardComponent,
   ComplianceWhatsRequiredComponent,
   DocsComponent,
   IntroductionComponent,
@@ -59,6 +60,10 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               {
                 path: 'whats-required',
                 component: ComplianceWhatsRequiredComponent
+              },
+              {
+                path: 'dashboard',
+                component: ComplianceDashboardComponent
               }
             ]
           },

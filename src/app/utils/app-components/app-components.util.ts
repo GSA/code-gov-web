@@ -28,6 +28,7 @@ export * from '../../components/policy-guide/docs/compliance/compliance-inventor
 export * from '../../components/policy-guide/docs/compliance/compliance-licensing';
 export * from '../../components/policy-guide/docs/compliance/compliance-measuring-code';
 export * from '../../components/policy-guide/docs/compliance/compliance-whats-required';
+export * from '../../components/policy-guide/docs/compliance/compliance-dashboard';
 export * from '../../components/policy-guide/docs/overview/introduction';
 export * from '../../components/policy-guide/docs/overview';
 export * from '../../components/policy-guide/docs/overview/overview-inventory';
