@@ -25,6 +25,11 @@ let gtmAuth;
 if (helpers.hasProcessFlag('github-stag')) {
   BASEURL = '/code-gov-web/';
   gtmAuth = 'GTM-NTMZFB';
+} else if (helpers.hasProcessFlag('federalist-stag')){
+  
+  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
+
 } else {
   BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
   gtmAuth = 'GTM-M9L9Q5';
