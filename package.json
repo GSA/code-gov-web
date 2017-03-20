@@ -123,7 +123,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-istanbul-preprocessor": "0.0.2",
-    "karma-jasmine": "^1.0.2",
+    "karma-jasmine": "^1.1.0",
     "karma-mocha-reporter": "^2.0.0",
     "karma-remap-coverage": "^0.1.1",
     "karma-remap-istanbul": "^0.2.1",
@@ -166,7 +166,7 @@
     "url": "https://github.com/presidential-innovation-fellows/code-gov-web/issues"
   },
   "engines": {
-    "node": ">= 4.2.1",
+    "node": ">= 6.9.5",
     "npm": "^4.0.5"
   }
 }
