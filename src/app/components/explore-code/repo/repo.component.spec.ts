@@ -118,15 +118,15 @@ describe('RepoComponent', () => {
   }));
 
 
-  it('should display repository in template if repo.repository property is set',
+  it('should display repoUrl in template if repo.repoUrl property is set',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
     let agency = {id: 'VA', name: 'Department of Veterans Affairs'};
     spyOn(agencyService, 'getAgency').and.returnValue(agency);
-    const repository = 'http://www.github.com/foobar/';
+    const repoURL = 'http://www.github.com/foobar/';
     let repo = createRepository(
       {name: 'A Fake repo name to show repo',
-      repository: repository, homepage: 'http://code.gov/foobar/' });
+      repoURL: repoURL, homepage: 'http://code.gov/foobar/' });
     spyOn(reposService, 'getJsonFile').and.returnValue(Observable.of(repo));
 
     fixture.detectChanges();
@@ -134,8 +134,8 @@ describe('RepoComponent', () => {
     let anchors = fixture.nativeElement.querySelectorAll('.usa-button');
     // console.log('Anchors: ', anchors);
 
-    // 2nd child anchor is the repository (first one is homepage)
-    expect(anchors[1].href).toBe(repository);
+    // 2nd child anchor is the repoURL (first one is homepage)
+    expect(anchors[1].href).toBe(repoURL);
   }));
 
   it('should display repository name in template if repo.name property is defined',
@@ -239,13 +239,13 @@ describe('RepoComponent', () => {
       }
   ));
 
-/******* Test repo.repository  ****/
+/******* Test repo.repoUrl  ****/
 
-  it('should NOT display repository url in template if repo.repository property is undefined',
+  it('should NOT display repository url in template if repo.repoURL property is undefined',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
         setupRepoPropertyTest(agencyService, reposService, seoService,
-          {repository: undefined, homepage: 'http://foo.bar'});
+          {repoURL: undefined, homepage: 'http://foo.bar'});
 
         fixture.detectChanges();
 
@@ -256,11 +256,11 @@ describe('RepoComponent', () => {
   ));
 
 
-  it('should NOT display repository Url in template if repo.repository property is null',
+  it('should NOT display repository Url in template if repo.repoURL property is null',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
         setupRepoPropertyTest(agencyService, reposService, seoService,
-          {repository: null, homepage: 'http://foo.bar'});
+          {repoURL: null, homepage: 'http://foo.bar'});
 
         fixture.detectChanges();
 
@@ -270,11 +270,11 @@ describe('RepoComponent', () => {
       }
   ));
 
-  it('should display repository repository in template if repo.repository property is defined',
+  it('should display repository repoUrl in template if repo.repoURL property is defined',
     inject([AgencyService, ReposService, SeoService],
       (agencyService, reposService, seoService)  => {
         setupRepoPropertyTest(agencyService, reposService, seoService,
-          {repository: 'http://code.gov/repo', homepage: undefined});
+          {repoURL: 'http://code.gov/repo', homepage: undefined});
 
         fixture.detectChanges();
 
@@ -304,7 +304,7 @@ interface RepoProps {
   name?: string;
   description?: string;
   homepage?: string;
-  repository?: string;
+  repoURL?: string;
 }
 
 /**
@@ -316,7 +316,7 @@ export function createRepository(repoProps: RepoProps) {
       repos: [
         { repoID : id, name: repoProps.name, description: repoProps.description,
           codeLanguage: [{language: 'JavaScript'}], agency: 'VA',
-          homepage: repoProps.homepage, repository: repoProps.repository }
+          homepage: repoProps.homepage, repoURL: repoProps.repoURL }
         ]
     };
 }
