@@ -4,6 +4,8 @@ import {
   AgencyComponent,
   AgencySidebarComponent,
   AppComponent,
+  AutocompleteComponent,
+  AutocompleteResultComponent,
   BannerArtComponent,
   CapacityComponent,
   CapacityBasicsComponent,
@@ -31,8 +33,12 @@ import {
   OverviewTrackingProgressComponent,
   PolicyGuideComponent,
   PrivacyPolicyComponent,
+  RepoListComponent,
+  RepoListItemComponent,
   RepoComponent,
-  ReposComponent
+  ReposComponent,
+  ReposSearchComponent,
+  SearchResultsComponent
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
@@ -41,6 +47,8 @@ export const APP_COMPONENTS = [
   AgencyComponent,
   AgencySidebarComponent,
   AppComponent,
+  AutocompleteComponent,
+  AutocompleteResultComponent,
   BannerArtComponent,
   CapacityComponent,
   CapacityBasicsComponent,
@@ -69,5 +77,9 @@ export const APP_COMPONENTS = [
   PolicyGuideComponent,
   PrivacyPolicyComponent,
   RepoComponent,
-  ReposComponent
+  RepoListComponent,
+  RepoListItemComponent,
+  ReposComponent,
+  ReposSearchComponent,
+  SearchResultsComponent
 ]

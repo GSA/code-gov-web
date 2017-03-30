@@ -1,20 +1,26 @@
 import { Injectable } from '@angular/core';
-import { AGENCIES } from './agency.data';
+import { Http, Response } from '@angular/http';
+
+import { ApiService } from '../api';
 
 @Injectable()
-export class AgencyService {
-  agencies: Agency[] = AGENCIES;
+export class AgencyService extends ApiService {
+  public agencies: any;
 
-  getAgencies(): Agency[] {
-    return this.agencies;
+  constructor(private http: Http) {
+    super(http);
   }
 
-  getAgency(id): Agency {
-    return this.agencies.filter(agency => agency.id === id)[0];
+  getAgency(term, value) {
+    return this.agencies.filter(agency => agency[term].toLowerCase() === value.toLowerCase())[0];
   }
-}
 
-export interface Agency {
-  id: string;
-  name: string;
+  getAgencies() {
+    let query = '?size=100';
+    return super.fetch('agencies', query);
+  }
+
+  setAgencies(agencies) {
+    this.agencies = agencies;
+  }
 }

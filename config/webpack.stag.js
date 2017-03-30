@@ -29,6 +29,7 @@ const PORT = process.env.PORT || 8080;
 
 /** Be sure to update gtmAuth for Final Deployment to WH **/
 const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
+  API_URL: 'http://54.172.68.204:3001/api/0.1/',
   host: HOST,
   port: PORT,
   ENV: ENV,
@@ -123,6 +124,7 @@ module.exports = function (env) {
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
       new DefinePlugin({
+        'API_URL': JSON.stringify(METADATA.API_URL),
         'ENV': JSON.stringify(METADATA.ENV),
         'HMR': METADATA.HMR,
         'process.env': {
