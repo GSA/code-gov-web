@@ -30,7 +30,12 @@ if (helpers.hasProcessFlag('github-stag')) {
   BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
   gtmAuth = 'GTM-M9L9Q5';
 
-} else {
+} else if (helpers.hasProcessFlag('dev')){
+  
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
+}
+else {
   BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
   gtmAuth = 'GTM-M9L9Q5';
 }
