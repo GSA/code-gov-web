@@ -30,7 +30,7 @@ module.exports = function (options) {
   isProdProper = ['production'].includes(options.env);
 
   const METADATA = {
-    API_URL: isProd ? 'http://54.172.68.204:3001/api/0.1/' : 'http://localhost:3001/api/0.1/',
+    API_URL: isProd ? 'http://52.222.36.7:3001/api/0.1/' : 'http://localhost:3001/api/0.1/',
     title: 'Code.gov',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer(),

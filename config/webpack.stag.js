@@ -29,7 +29,7 @@ const PORT = process.env.PORT || 8080;
 
 /** Be sure to update gtmAuth for Final Deployment to WH **/
 const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
-  API_URL: 'http://54.172.68.204:3001/api/0.1/',
+  API_URL: 'http://52.222.36.7:3001/api/0.1/',
   host: HOST,
   port: PORT,
   ENV: ENV,
