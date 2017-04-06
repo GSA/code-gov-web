@@ -1,0 +1,24 @@
+{
+    "authors": "Morten Houston Ludvigsen <https://github.com/MortenHoustonLudvigsen>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "0",
+    "libraryMinorVersion": "1",
+    "libraryName": "source-map v0.1.38",
+    "typingsPackageName": "source-map",
+    "projectName": "https://github.com/mozilla/source-map",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "UMD",
+    "globals": [
+        "SourceMap",
+        "sourceMap"
+    ],
+    "declaredModules": [],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "1a54d4ba10a3288dfdbabd10f9fb6463d11b8f629ea60f571bf12d20c4524a4f"
+}

@@ -1,0 +1,329 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  color: #072f44;
+  font-family: sans-serif;
+  line-height: 1.625;
+  margin: 0 0 3rem;
+  text-align: center; }
+
+h3 {
+  margin: 1em; }
+
+a,
+a:visited {
+  color: inherit; }
+
+pre {
+  line-height: 1.6em; }
+
+code {
+  display: block; }
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 30px;
+  position: relative; }
+
+.welcome-message {
+  background-color: #aadbf5;
+  margin-bottom: 1.5rem;
+  padding: 1.625em 0;
+  text-align: center; }
+  .welcome-message::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.welcome-message-title {
+  font-weight: 200;
+  line-height: 1; }
+
+.code {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d5eefb;
+  padding: 0.5em;
+  text-align: center; }
+  .code::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.page-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #d5eefb;
+  line-height: 2.4375;
+  margin-bottom: 3em;
+  text-align: center; }
+  .page-section::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.page-section-inner {
+  background-color: #aadbf5;
+  font-size: 0.8em;
+  height: 6.5rem;
+  line-height: 1.625;
+  margin-bottom: 2em;
+  padding: 1em;
+  text-align: left; }
+
+.zero-alpha,
+.zero-beta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  height: 6.5rem;
+  line-height: 1.625;
+  padding: 1em;
+  text-align: left; }
+  .zero-alpha:last-child,
+  .zero-beta:last-child {
+    margin-right: 0; }
+
+.first-alpha {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 6.17215%; }
+  .first-alpha:last-child {
+    margin-right: 0; }
+
+.first-beta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 91.4702%; }
+  .first-beta:last-child {
+    margin-right: 0; }
+
+.first-gamma {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .first-gamma:last-child {
+    margin-right: 0; }
+
+.first-delta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .first-delta:last-child {
+    margin-right: 0; }
+
+.first-epsilon {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .first-epsilon:last-child {
+    margin-right: 0; }
+
+.first-zeta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .first-zeta:last-child {
+    margin-right: 0; }
+
+.first-eta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .first-eta:last-child {
+    margin-right: 0; }
+
+.first-theta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .first-theta:last-child {
+    margin-right: 0; }
+
+.first-iota {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%; }
+  .first-iota:last-child {
+    margin-right: 0; }
+
+.first-kappa {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%; }
+  .first-kappa:last-child {
+    margin-right: 0; }
+
+.first-lambda {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .first-lambda:last-child {
+    margin-right: 0; }
+
+.first-mu {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .first-mu:last-child {
+    margin-right: 0; }
+
+.first-beta,
+.first-delta,
+.first-zeta,
+.first-theta,
+.first-kappa,
+.first-mu {
+  margin-right: 0; }
+
+.second-alpha {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .second-alpha:last-child {
+    margin-right: 0; }
+
+.second-beta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  line-height: 3.25;
+  padding: 0;
+  text-align: center; }
+  .second-beta:last-child {
+    margin-right: 0; }
+
+.second-beta-alpha,
+.second-beta-beta {
+  float: left;
+  display: block;
+  margin-right: 3.57866%;
+  width: 48.21067%;
+  background-color: #d5eefb;
+  height: 84%;
+  padding: 1em; }
+  .second-beta-alpha:last-child,
+  .second-beta-beta:last-child {
+    margin-right: 0; }
+
+.third-dummy {
+  border-bottom: 0;
+  height: 5.5em;
+  text-align: center; }
+
+.third-alpha {
+  width: 100%;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin-bottom: 0;
+  padding: 0; }
+
+.third-alpha-alpha {
+  display: table-cell;
+  width: 33.33333%;
+  border-right: 1px solid rgba(250, 250, 250, 0.5); }
+
+.third-alpha-beta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  height: 20em; }
+  .third-alpha-beta:last-child {
+    margin-right: 0; }
+
+.fourth .fourth-alpha {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  height: 20em;
+  text-align: center; }
+  .fourth .fourth-alpha:last-child {
+    margin-right: 0; }
+
+.fifth-box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  font-size: 0.78em;
+  height: 8em;
+  margin-top: 2em; }
+  .fifth-box:nth-child(4n) {
+    margin-right: 0; }
+  .fifth-box:nth-child(4n+1) {
+    clear: left; }
+  .fifth-box:last-child {
+    margin-right: 0; }
+
+@media screen and (min-width: 600px) {
+  .sixth {
+    font-size: 0.9em;
+    line-height: 1.5em; } }
+
+.sixth pre {
+  padding: 10px 0; }
+
+.sixth-alpha,
+.sixth-beta {
+  line-height: 2em;
+  min-height: 20em;
+  padding: 1em;
+  text-align: left; }
+
+.sixth-alpha {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .sixth-alpha:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .sixth-alpha {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .sixth-alpha:last-child {
+        margin-right: 0; } }
+
+.sixth-beta {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .sixth-beta:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .sixth-beta {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .sixth-beta:last-child {
+        margin-right: 0; } }

@@ -1,0 +1,3 @@
+{
+  "properties": ["(.*)text-size(.*)", "(.*)animation(.*)"]
+}

@@ -1,0 +1,27 @@
+{
+    "authors": "Niklas Mollenhauer <https://github.com/nikeee>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [
+        "node"
+    ],
+    "moduleDependencies": [
+        "child_process"
+    ],
+    "libraryMajorVersion": 0,
+    "libraryMinorVersion": 3,
+    "libraryName": "ShellJS v0.3.0",
+    "typingsPackageName": "shelljs",
+    "projectName": "http://shelljs.org",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "ProperModule",
+    "globals": [],
+    "declaredModules": [
+        "shelljs"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "f351afcc9f0f168d8ddcb6e2eb751ea0036936113deed0393c6c91cab4bcd40c"
+}

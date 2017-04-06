@@ -1,0 +1,24 @@
+{
+    "authors": "Niklas Mollenhauer <https://github.com/nikeee/>, Jeremy Hull <https://github.com/sourrust>",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": 9,
+    "libraryMinorVersion": 1,
+    "typeScriptVersion": "2.0",
+    "libraryName": "highlight.js",
+    "typingsPackageName": "highlight.js",
+    "projectName": "https://github.com/isagalaev/highlight.js",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "master",
+    "globals": [
+        "hljs"
+    ],
+    "declaredModules": [
+        "highlight.js"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "14dae95213aaf7c92441e3519fee7f0c531e554829c0add5b41f59b20b451fd4"
+}

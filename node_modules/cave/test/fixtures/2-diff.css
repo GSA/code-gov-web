@@ -1,0 +1,6 @@
+@media only screen and (max-width: 768px) {
+  .a-class,
+  .that-class {
+    text-align: center;
+  }
+}

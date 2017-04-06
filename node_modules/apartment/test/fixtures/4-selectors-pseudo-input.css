@@ -1,0 +1,6 @@
+::-moz-selection {
+  color: #fff;
+}
+::selection {
+  color: #fff;
+}

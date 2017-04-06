@@ -1,0 +1,31 @@
+{
+    "authors": "Philip Bulley <https://github.com/milkisevil/>, Han Lin Yap <https://github.com/codler>",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": 2,
+    "libraryMinorVersion": 0,
+    "typeScriptVersion": "2.0",
+    "libraryName": "Hammer.js",
+    "typingsPackageName": "hammerjs",
+    "projectName": "http://hammerjs.github.io/",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "master",
+    "globals": [
+        "Hammer",
+        "HammerInput",
+        "MouseInput",
+        "PointerEventInput",
+        "SingleTouchInput",
+        "TouchAction",
+        "TouchInput",
+        "TouchMouseInput"
+    ],
+    "declaredModules": [
+        "hammerjs"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "da6e6c2f2084a19ad742fa5e7540ee472daa9fa1ba5d2b9789dfd28bdce5d40e"
+}

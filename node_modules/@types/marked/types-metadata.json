@@ -1,0 +1,25 @@
+{
+    "authors": "William Orr <https://github.com/worr>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "0",
+    "libraryMinorVersion": "0",
+    "libraryName": "Marked",
+    "typingsPackageName": "marked",
+    "projectName": "https://github.com/chjj/marked",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "Mixed",
+    "globals": [
+        "marked"
+    ],
+    "declaredModules": [
+        "marked"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": false,
+    "contentHash": "ebaaa997ad2ab752bb16fbb1a02c4a34e440cb93410eb5ec82db83a1076fba80"
+}

@@ -1,0 +1,12 @@
+.gg-continuous rect:nth-child(2) {
+  -webkit-animation-name: logo-0;
+  -moz-animation-name: logo-0;
+  -o-animation-name: logo-0;
+  -ms-animation-name: logo-0;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}

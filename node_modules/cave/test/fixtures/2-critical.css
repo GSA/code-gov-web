@@ -1,0 +1,10 @@
+.a-class {
+  color: #f00;
+}
+
+@media only screen and (min-width: 768px) {
+  .a-class,
+  .that-class {
+    text-align: left;
+  }
+}

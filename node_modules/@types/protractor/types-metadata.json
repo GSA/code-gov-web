@@ -1,0 +1,33 @@
+{
+    "authors": "Bill Armstrong <https://github.com/BillArmstrong>",
+    "definitionFilename": "index.d.ts",
+    "libraryDependencies": [
+        "selenium-webdriver"
+    ],
+    "moduleDependencies": [],
+    "libraryMajorVersion": "1",
+    "libraryMinorVersion": "5",
+    "libraryName": "Angular Protractor 1.5.0",
+    "typingsPackageName": "protractor",
+    "projectName": "https://github.com/angular/protractor",
+    "sourceRepoURL": "https://www.github.com/DefinitelyTyped/DefinitelyTyped",
+    "sourceBranch": "types-2.0",
+    "kind": "Mixed",
+    "globals": [
+        "$",
+        "$$",
+        "By",
+        "browser",
+        "by",
+        "element",
+        "protractor"
+    ],
+    "declaredModules": [
+        "protractor"
+    ],
+    "files": [
+        "index.d.ts"
+    ],
+    "hasPackageJson": true,
+    "contentHash": "da88e335033fa424a77ac0bde3d90f8d8a74266413b39f0b71e94fed68a5d27f"
+}
