@@ -21,23 +21,37 @@ const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';
 let BASEURL;
 let gtmAuth;
+let GIT_BRANCH_NAME;
 
 if (helpers.hasProcessFlag('github-stag')) {
   BASEURL = '/code-gov-web/';
   gtmAuth = 'GTM-NTMZFB';
+  GIT_BRANCH_NAME = 'gh-pages';
 } else if (helpers.hasProcessFlag('federalist-stag')){
+  GIT_BRANCH_NAME = 'federalist-stag';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-stag/';
+  gtmAuth = 'GTM-M9L9Q5';
   
+} else if (helpers.hasProcessFlag('federalist-dev')){
+  
+  GIT_BRANCH_NAME = 'federalist-dev';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
+  gtmAuth = 'GTM-M9L9Q5';
+  
+  
+}
+else if (helpers.hasProcessFlag('federalist-prod')){
+  GIT_BRANCH_NAME = 'federalist-pages';
   BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
   gtmAuth = 'GTM-M9L9Q5';
-
-} else if (helpers.hasProcessFlag('dev')){
   
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/';
-  gtmAuth = 'GTM-M9L9Q5';
+  
 }
 else {
-  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  GIT_BRANCH_NAME = 'federalist-dev';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
   gtmAuth = 'GTM-M9L9Q5';
+  
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
@@ -51,7 +65,7 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
   gtmAuth: gtmAuth,
   HMR: false,
   isDevServer: false,
-  title: 'Code.gov',
+  title: 'Code.gov'
 });
 
 
@@ -80,7 +94,7 @@ module.exports = function (env) {
               require('bourbon').includePaths,
               require('bourbon-neat').includePaths
             ]
-          },
+          }
         }
       }),
 
@@ -104,7 +118,7 @@ module.exports = function (env) {
 
           const options = {
             logger: logger,
-            branch: 'federalist-pages',
+            branch: GIT_BRANCH_NAME,
             remote: GIT_REMOTE_NAME,
             message: COMMIT_MESSAGE,
             dotfiles: true
@@ -112,7 +126,7 @@ module.exports = function (env) {
 
           ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
             if (err) {
-              console.log('GitHub deployment done. STATUS: ERROR.');
+              console.log('GitHub deployment done. STATUS: ERROR: '+err);
               throw err;
             } else {
               console.log('GitHub deployment done. STATUS: SUCCESS.');
