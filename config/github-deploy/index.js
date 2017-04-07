@@ -13,14 +13,15 @@ function getWebpackConfigModule() {
     return require('../webpack.stag.js');
   }
    else if (helpers.hasProcessFlag('federalist-dev')){
-    return require('../webpack.common.js');
+    return require('../webpack.prod.js');
   }
   else if (helpers.hasProcessFlag('federalist-stag')){
-    return require('../webpack.common.js');
+    return require('../webpack.prod.js');
   }
   else if (helpers.hasProcessFlag('federalist-prod')){
-    return require('../webpack.common.js');
-  }else {
+    return require('../webpack.prod.js');
+  }
+  else {
     throw new Error('Invalid compile option.');
   }
 }
