@@ -27,10 +27,8 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 
 module.exports = function (options) {
   isProd = ['production', 'staging'].includes(options.env);
-  isProdProper = ['production'].includes(options.env);
 
   const METADATA = {
-    API_URL: isProd ? 'http://54.172.68.204:3001/api/0.1/' : 'http://localhost:3001/api/0.1/',
     title: 'Code.gov',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer(),
@@ -45,7 +43,7 @@ module.exports = function (options) {
     from: 'src/assets',
     to: 'assets',
   }];
-  if (isProdProper) copyPluginOptions.push({ from: 'config/CNAME' })
+  if (isProd) copyPluginOptions.push({ from: 'config/CNAME' })
 
   /**
    * Common Plugins
@@ -100,7 +98,6 @@ module.exports = function (options) {
       }
     }),
     new DefinePlugin({
-      'API_URL': JSON.stringify(METADATA.API_URL),
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
       'process.env': {
