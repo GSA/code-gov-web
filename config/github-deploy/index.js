@@ -21,6 +21,9 @@ function getWebpackConfigModule() {
   else if (helpers.hasProcessFlag('federalist-prod')){
     return require('../webpack.prod.js');
   }
+  else if (helpers.hasProcessFlag('dashboard-preview')){
+    return require('../webpack.prod.js');
+  }
   else {
     throw new Error('Invalid compile option.');
   }

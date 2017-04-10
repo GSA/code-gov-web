@@ -39,6 +39,7 @@
     "federalist-deploy:dev": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
     "federalist-deploy:stag": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
     "federalist-deploy:prod": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
+    "federalist-deploy:dashboard": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.dashboard-preview",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
     "server:dev:hmr": "npm run server:dev -- --inline --hot",
