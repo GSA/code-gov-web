@@ -17,7 +17,6 @@ const commonConfig = require('./webpack.common.js');
  */
 const GIT_REMOTE_NAME = 'origin';
 const COMMIT_MESSAGE = 'Updates';
-
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
 const ENV = 'production';
 let BASEURL;
@@ -29,27 +28,37 @@ if (helpers.hasProcessFlag('github-stag')) {
   gtmAuth = 'GTM-NTMZFB';
   GIT_BRANCH_NAME = 'gh-pages';
 } else if (helpers.hasProcessFlag('federalist-stag')){
-  
-  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
-  gtmAuth = 'GTM-M9L9Q5';
   GIT_BRANCH_NAME = 'federalist-stag';
-
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  gtmAuth = 'GTM-M9L9Q5';
+  
 } else if (helpers.hasProcessFlag('federalist-dev')){
   
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/';
-  gtmAuth = 'GTM-M9L9Q5';
   GIT_BRANCH_NAME = 'federalist-dev';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  gtmAuth = 'GTM-M9L9Q5';
+  
+  
+}
+else if (helpers.hasProcessFlag('dashboard-preview')){
+  GIT_BRANCH_NAME = 'federalist-dashboard-preview';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  gtmAuth = 'GTM-M9L9Q5';
+  
 }
 else if (helpers.hasProcessFlag('federalist-prod')){
+  GIT_BRANCH_NAME = 'federalist-pages';
+  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  gtmAuth = 'GTM-M9L9Q5';
   
-  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
-  gtmAuth = 'GTM-M9L9Q5';
-  GIT_BRANCH_NAME = 'federalist-pages';
+  
 }
+
 else {
-  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  GIT_BRANCH_NAME = 'federalist-dev';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
   gtmAuth = 'GTM-M9L9Q5';
-  GIT_BRANCH_NAME = 'federalist-pages';
+  
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
@@ -63,7 +72,7 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
   gtmAuth: gtmAuth,
   HMR: false,
   isDevServer: false,
-  title: 'Code.gov',
+  title: 'Code.gov'
 });
 
 
@@ -92,7 +101,7 @@ module.exports = function (env) {
               require('bourbon').includePaths,
               require('bourbon-neat').includePaths
             ]
-          },
+          }
         }
       }),
 
@@ -124,7 +133,7 @@ module.exports = function (env) {
 
           ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
             if (err) {
-              console.log('GitHub deployment done. STATUS: ERROR.');
+              console.log('GitHub deployment done. STATUS: ERROR: '+err);
               throw err;
             } else {
               console.log('GitHub deployment done. STATUS: SUCCESS.');
