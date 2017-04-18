@@ -56,7 +56,7 @@ else if (helpers.hasProcessFlag('federalist-prod')){
 
 else {
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
+  BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }
