@@ -48,7 +48,7 @@ else if (helpers.hasProcessFlag('dashboard-preview')){
 }
 else if (helpers.hasProcessFlag('federalist-prod')){
   GIT_BRANCH_NAME = 'federalist-pages';
-  BASEURL = '/site/presidential-innovation-fellows/code-gov-web/';
+  BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
   
   
@@ -56,7 +56,7 @@ else if (helpers.hasProcessFlag('federalist-prod')){
 
 else {
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/';
+  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }
