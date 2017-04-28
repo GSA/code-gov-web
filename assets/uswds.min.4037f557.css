@@ -1,23 +1,9 @@
-html {
-  box-sizing: border-box;
-}
-
 *::after,
 *::before {
   box-sizing: inherit;
 }
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
 
 article,
 aside,
@@ -103,10 +89,6 @@ sup {
 
 sub {
   bottom: -0.25em;
-}
-
-img {
-  border: 0;
 }
 
 svg:not(:root) {
@@ -282,18 +264,9 @@ th {
   src: url("fonts/merriweather-bold-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/merriweather-bold-webfont.woff2") format("woff2"),url("fonts/merriweather-bold-webfont.woff") format("woff"),url("fonts/merriweather-bold-webfont.ttf") format("truetype");
 }
 
-html {
-  box-sizing: border-box;
-}
-
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-body {
-  background-color: #fff;
-  overflow-x: hidden;
 }
 
 .lt-ie9 * {
@@ -1136,10 +1109,6 @@ button.usa-button-big,
   background-color: transparent;
 }
 
-img {
-  max-width: 100%;
-}
-
 .media_link {
   display: inline-block;
   line-height: 0;
@@ -1622,10 +1591,6 @@ table td {
 html {
   font-family: "Source Sans Pro","Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
   font-size: 10px;
-}
-
-body {
-  font-size: 1.7rem;
 }
 
 p {
