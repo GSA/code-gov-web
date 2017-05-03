@@ -1,5 +1,5 @@
 {
-  "timestamp": "Wed Apr 26 2017 12:04:52 GMT-0400 (EDT)",
+  "timestamp": "Mon May 01 2017 15:30:28 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "NOT FULLY COMPLIANT: 25 WARNINGS, 25 validation errors, 25 REQUESTED ENHANCEMENTS",
@@ -1080,27 +1080,751 @@
       }
     },
     "DOT": {
-      "status": "NOT FULLY COMPLIANT: 14 ERRORS, 14 validation errors",
+      "status": "NOT FULLY COMPLIANT: 167 WARNINGS, 167 validation errors, 14 REQUESTED ENHANCEMENTS",
       "issues": [
+        {
+          "repoID": "dot_ost_ptbs",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "PTBS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_m20_case_tracking_system",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST M20 Case Tracking System",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_i10_grants_notification_system",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST I10 Grants Notification System",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c50_rulemaking_management_system",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C50 Rulemaking Management System",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_s10_rulemaking",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST S10 Rulemaking",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ogc_c30",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OGC-C30",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_s10_",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST S10 ",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_r2d2_resource_requirement_decision_data_",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "R2D2 (Resource Requirement Decision Data)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ptbs_development",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "PTBS Development",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ptbs_test",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "PTBS Test",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ogc_c30",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OGC-C30",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_ogc",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - OGC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_m20",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST - M20",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_s10_",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST S10 ",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_transit_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "Transit Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_parking_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "Parking Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_transit_application_training",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "Transit Application Training",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_c70_consumer_complaint_application",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST C70 Consumer Complaint Application",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_i10_grants_notification_system",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST I10 Grants Notification System",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_s3_essential_air_service",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST S3 Essential Air Service",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_bts_vista",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "BTS VISTA",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
         {
           "repoID": "dot_ost_air_carrier_traffic",
           "agency": "Department of Transportation",
           "organization": "OST",
           "project_name": "Air Carrier Traffic",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1109,19 +1833,29 @@
           "organization": "OST",
           "project_name": "Air Travel Price Index",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1130,19 +1864,29 @@
           "organization": "OST",
           "project_name": "Average Air Fares",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1151,19 +1895,29 @@
           "organization": "OST",
           "project_name": "BTS Dictionary",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1172,19 +1926,29 @@
           "organization": "OST",
           "project_name": "Bulk Delete OST",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1193,19 +1957,29 @@
           "organization": "OST",
           "project_name": "Major Pub",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1214,19 +1988,29 @@
           "organization": "OST",
           "project_name": "Multi Import OST",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1235,19 +2019,29 @@
           "organization": "OST",
           "project_name": "Recruisive Impact",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1256,19 +2050,29 @@
           "organization": "OST",
           "project_name": "Subject Areas DOT ",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1277,19 +2081,29 @@
           "organization": "OST",
           "project_name": "Subject Areas WOM",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1298,19 +2112,29 @@
           "organization": "OST",
           "project_name": "Transportation Services Index",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1319,19 +2143,29 @@
           "organization": "OST",
           "project_name": "Custom Search DOT",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1340,19 +2174,29 @@
           "organization": "OST",
           "project_name": "RITA Book",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
           }
         },
         {
@@ -1361,19 +2205,2528 @@
           "organization": "OST",
           "project_name": "Address 2 Abstate",
           "issues": {
-            "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "enhancements": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "type",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/type",
                 "params": {
-                  "missingProperty": "repository"
+                  "type": "string"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should be string"
               }
-            ]
+            ],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_ost_ost_prism",
+          "agency": "Department of Transportation",
+          "organization": "OST",
+          "project_name": "OST PRISM",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_administrative_management_expense_system_ames_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Administrative Management Expense System (AMES)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_charter_registration_tool_admin",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Charter Registration Tool - Admin",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_charter_registration_tool_public",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Charter Registration Tool - Public",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_charter_reporting_tool_admin",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Charter Reporting Tool - Admin",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_charter_reporting_tool_public",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Charter Reporting Tool - Public",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_contact_us_tool_cut_admin",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Contact Us Tool (CUT) - Admin",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_contact_us_tool_cut_public",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Contact Us Tool (CUT) - Public",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_operational_assets_security_information_system_oasis_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Operational Assets and Security Information System (OASIS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_oversight_tracking_system_otrak_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Oversight Tracking System (OTrak)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_oversight_tracking_system_otrak_user_acceptance",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Oversight Tracking System (OTrak) - User Acceptance",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_oversight_tracking_system_otrak_training",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Oversight Tracking System (OTrak) - Training",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_phone_directory",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Phone Directory",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_program_guidance_proguide_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Program Guidance (ProGuide)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_fta_coordinating_council_for_access_mobility_ccam_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_fta_coordinating_council_for_access_mobility_ccam_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "FTA Coordinating Council for Access & Mobility (CCAM) ",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_discretionary_grants_system_dgs_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Discretionary Grants System (DGS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_fta_workshop_planning_calendar",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "FTA Workshop Planning Calendar",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_our_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "OUR Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_transport",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "TransPort",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_national_transit_database_ntd_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "National Transit Database (NTD)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_transit_award_management_system_trams_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Transit Award Management System (TrAMS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_change_tracking_system_cts_cmdb_im_",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "Change Tracking System (CTS/CMDB/IM)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fta_fta_public_site",
+          "agency": "Department of Transportation",
+          "organization": "FTA",
+          "project_name": "FTA Public Site",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_data_loading_tool",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "Data Loading Tool",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_web",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Web",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_rghs",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "RGHS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_rsac",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "RSAC",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_buy_america_waiver",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "Buy America Waiver",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_online_quiz",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "Online Quiz",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_sat_training",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "SAT Training",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_intranet_portal",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Intranet Portal",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_pa2_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "PA2 Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fedex_cost_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FedEx Cost Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_wcf_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "WCF Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_prism_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "PRISM Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_poam_tracker",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA POAM Tracker",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_training_tracker",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Training Tracker",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_rail_crossing_locator",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "Rail Crossing Locator",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_hoteling",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Hoteling",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_vacancy_tracker",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Vacancy Tracker",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_fast_act_deliverable_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA FAST Act Deliverable Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_ntsb_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "NTSB Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_ats_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "ATS Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fraaab_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRAAAB Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_fra_org_chart",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "FRA Org chart",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_rls_lerb_dashboard",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "RLS -LERB  Dashboard",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_state_laws",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "State Laws",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_laws_regs",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "Laws & Regs",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".contact.email",
+                "schemaPath": "#/properties/contact/properties/email/format",
+                "params": {
+                  "format": "email"
+                },
+                "message": "should match format \"email\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fra_hos",
+          "agency": "Department of Transportation",
+          "organization": "FRA",
+          "project_name": "HOS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_ears",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "EARS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_ears_mobile_app",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "EARS Mobile App",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_hip",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "HIP",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_online_cfr",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Online CFR",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_m_v_approvals",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "M-V Approvals",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_special_permits",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Special Permits",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_hazmat_registration",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Hazmat Registration",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_pdm",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "PDM",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_smart",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "SMART",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_fim",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "FIM",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_phmsa_portal",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "PHMSA Portal",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_fedstar",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "FedStar",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_bank_america_import",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Bank of America Import",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_hmis",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "HMIS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_dot_approvals",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "DOT Approvals",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_annual_reports",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Annual Reports",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_oms",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "OMS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_npms",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "NPMS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_pam",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "PAM",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_odes",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "ODES",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_phmsa_registration_management",
+          "agency": "Department of Transportation",
+          "organization": "PHMSA",
+          "project_name": "Registration Management",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_geolocator",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Geolocator",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_vin_decoder",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "VIN Decoder",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_parse",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "PARSE",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_cissweb",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "CISSWeb",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_toolbox",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Toolbox",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_helpdesk",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Helpdesk",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_upsa",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "UPSA",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_variable_repository",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Variable Repository",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_mde",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "MDE",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_intranet",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Intranet",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_query_tool",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Query Tool",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_sso",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "SSO",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_edt_manager",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "EDT Manager",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_case_viewer",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Case Viewer",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_fastfars",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "FastFARS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_report_builder",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Report Builder",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_edit_checks",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Edit Checks",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_irex",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "iREx",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_naf",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "NAF",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_mr_tool_sdag_",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "MR Tool (SDAG)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_travelontrack",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "TravelOnTrack",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_sisame",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "SISAME",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_vpic_list",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "vPIC-List",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_encyclopedia",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "Encyclopedia",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_nhtsa_cissform",
+          "agency": "Department of Transportation",
+          "organization": "NHTSA",
+          "project_name": "CISSForm",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_sls_n_a",
+          "agency": "Department of Transportation",
+          "organization": "SLS",
+          "project_name": "N/A",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_dims",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "DIMS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_fois",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "FOIS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_fmis",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "FMIS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_fmis_5",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "FMIS-5",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_foia",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "FOIA",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_nbi",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "NBI",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_nhi_cms",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "NHI/CMS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_rasps",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "RASPS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_tfics",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "TFICS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_upacs",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "UPACS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fhwa_nti",
+          "agency": "Department of Transportation",
+          "organization": "FHWA",
+          "project_name": "NTI",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_marad_n_a",
+          "agency": "Department of Transportation",
+          "organization": "MARAD",
+          "project_name": "N/A",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_oig_n_a",
+          "agency": "Department of Transportation",
+          "organization": "OIG",
+          "project_name": "N/A",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fmsca_sfd",
+          "agency": "Department of Transportation",
+          "organization": "FMSCA",
+          "project_name": "SFD",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fmsca_d_adb",
+          "agency": "Department of Transportation",
+          "organization": "FMSCA",
+          "project_name": "D&ADB",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_fmsca_erods",
+          "agency": "Department of Transportation",
+          "organization": "FMSCA",
+          "project_name": "eRODS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_volpe_aviation_environmental_design_tool",
+          "agency": "Department of Transportation",
+          "organization": "VOLPE",
+          "project_name": "Aviation Environmental Design Tool",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_volpe_safetyhat",
+          "agency": "Department of Transportation",
+          "organization": "VOLPE",
+          "project_name": "SafetyHAT",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_faa_unmanned_aircraft_systems_registration_service_uasrs_",
+          "agency": "Department of Transportation",
+          "organization": "FAA",
+          "project_name": "Unmanned Aircraft Systems Registration Service (UASRS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_faa_b4ufly",
+          "agency": "Department of Transportation",
+          "organization": "FAA",
+          "project_name": "B4UFly",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_faa_edai",
+          "agency": "Department of Transportation",
+          "organization": "FAA",
+          "project_name": "EDAI",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "type",
+                "dataPath": ".exemption",
+                "schemaPath": "#/properties/exemption/type",
+                "params": {
+                  "type": "integer"
+                },
+                "message": "should be integer"
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "dot_faa_edcs",
+          "agency": "Department of Transportation",
+          "organization": "FAA",
+          "project_name": "EDCS",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
           }
         }
       ],
