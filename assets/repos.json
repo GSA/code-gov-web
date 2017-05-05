@@ -2,6 +2,107 @@
 	"total": 90,
 	"repos": [
     {
+	"status": " ",
+	"vcs": "git",
+	"repository": "git://github.com/deptofdefense/eMCM.git",
+  "repoURL": "https://github.com/deptofdefense/eMCM",    
+	"name": "eMCM",
+	"repoID": "76482381",
+	"events": [
+
+		{
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "Watch",
+			"user": "fureigh",
+			"time": "2017-03-29T21:34:48Z"
+
+		}, {
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "Issues",
+			"user": "shawoods",
+			"time": "2017-03-27T15:39:01Z"
+
+		}, {
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "IssueComment",
+			"user": "shawoods",
+			"time": "2017-03-27T15:39:01Z",
+			"message": "Nit picking copyright notices",
+			"url": "https://api.github.com/repos/deptofdefense/eMCM/issues/19"
+		}, {
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "Delete",
+			"user": "BrandonBouier",
+			"time": "2017-03-27T14:08:20Z"
+
+		}, {
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "Push",
+			"user": "BrandonBouier",
+			"time": "2017-03-27T14:08:18Z",
+			"message": "Change preview.html header Signed-off-by: Brandon Bouier ",
+			"url": "https://api.github.com/repos/deptofdefense/eMCM/commits/52cb4d1c75e07492456723a53c9fd8113c61eb50"
+		}, {
+			"id": "76482381",
+			"name": "deptofdefense/eMCM",
+			"type": "PullRequest",
+			"user": "BrandonBouier",
+			"time": "2017-03-27T14:08:16Z",
+			"message": "Change preview.html header",
+			"url": "https://api.github.com/repos/deptofdefense/eMCM/pulls/21"
+		}
+	],
+	"homepage": "http://mcm.mil",
+	"downloadURL": " ",
+	"description": "Search and browse interface for the Military Courts-martial Manual ",
+	"contact": [{
+		"email": " ",
+		"name": "",
+		"twitter": "",
+		"phone": ""
+	}],
+	"partners": [{
+		"name": ""
+	}, {
+		"email": ""
+	}],
+	"license": "https://github.com/deptofdefense/eMCM/blob/master/LICENSE.md",
+  "license_name": "AGPLv3",
+	"openSourceProject": 1,
+  "governmentWideReuseProject": 0,
+	"closedproject": 0,
+	"exemption": "",
+	"projectTags": [{
+		"tag": "search"
+	}, {
+		"tag": "browse"
+	}, {
+		"tag": "interface"
+	}, {
+		"tag": "military"
+	}, {
+		"tag": "courts"
+	}, {
+		"tag": "martial"
+	}, {
+		"tag": "manual"
+	}],
+	"codeLanguage": [{
+		"language": "HTML"
+	}],
+	"updated": {
+		"lastCommit": "2017-04-05T20:47:50Z",
+		"metadataLastUpdated": "2016-12-14T17:37:02Z",
+		"lastModified": "2017-03-27T14:08:20Z"
+	},
+      "agency": "DOD"
+},
+    {
       
 	"status": " ",
 	"vcs": "git",
@@ -102,7 +203,7 @@
 	"vcs": "git",
    "repoURL":"https://github.com/deptofdefense/anet",
 	"repository": "git://github.com/deptofdefense/anet.git",
-	"name": "anet",
+	"name": "ANET",
 	"repoID": "70628952",
 	"events": [
 
@@ -153,7 +254,7 @@
 	],
 	"homepage": "",
 	"downloadURL": " ",
-	"description": "Advisor Network ",
+	"description": "A tool to track relationships between advisors and advisees -- like NATO and the Afghan government.",
 	"contact": [{
 		"email": " ",
 		"name": "",
