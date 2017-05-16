@@ -437,7 +437,7 @@
     },
     {
       "name": "Adaptive Case Management",
-      "description": "Utilizing Enterprise Content and Case Management products from Vega and IBM, the NRC's Adaptive Case Management systems automate and streamline processes for public interaction and internal tracking and reporting of workflow activities. These systems leverage the configuration of widgets provided by the platform that can be adapted to meet agency business needs.  Though the code underlying this platform is not for government reuse, the lessons learned an innovative approaches taken are of value across agencies for those seeking to create efficiencies in case and workflow management.",
+      "description": "Utilizing Enterprise Content and Case Management products from Vega and IBM, the NRC's Adaptive Case Management systems automate and streamline processes for public interaction and internal tracking and reporting of workflow activities. These systems leverage the configuration of widgets provided by the platform that can be adapted to meet agency business needs.",
       "license": null,
       "openSourceProject": 0,
       "governmentWideReuseProject": 1,
