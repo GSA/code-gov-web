@@ -294,7 +294,7 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0,
+            "schemaFormat": 0.5,
             "overallCompliance": 0.25
           }
         }
