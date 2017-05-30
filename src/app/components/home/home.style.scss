@@ -56,6 +56,13 @@ body {
       background-color: darken($brand-purple, 10);
     }
   }
+  .usa-mail-button {
+    background-color: $brand-teal;
+
+    &:hover {
+      background-color: darken($brand-teal, 10);
+    }
+  }
 }
 
 .about-actions {
@@ -148,12 +155,27 @@ body {
       max-width: none;
     }
   }
+  .usa-mail-button {
+    box-shadow: 0 3px 7px rgba($color-black, 0.1);
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 12em;
+
+    &:hover {
+      background-color: darken($color-primary, 15);
+    }
+
+    @include media($small-screen) {
+      font-size: 1em;
+      max-width: none;
+    }
+  }
 }
 
 .banner-container {
   background-color: darken($color-primary, 10);
   margin: 0 auto;
-  max-width: 30em;
+  max-width: 37em;
   text-align: center;
 }
 
