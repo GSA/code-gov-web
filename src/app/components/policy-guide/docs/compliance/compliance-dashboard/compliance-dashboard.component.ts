@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Component } from '@angular/core';
+
 import { Observable } from 'rxjs/Observable';
 import { AgencyService, Agency } from '../../../../../services/agency';
 import { StatusService } from '../../../../../services/status';
@@ -14,8 +14,8 @@ import { SeoService } from '../../../../../services/seo';
 })
 
 export class ComplianceDashboardComponent implements OnInit, OnDestroy {
-  agencyIds[];
-  public statuses[];
+  agencyIds=[];
+  public statuses=[];
   public updated;
   private statusesSub: Subscription;
 
