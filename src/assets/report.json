@@ -1,5 +1,5 @@
 {
-  "timestamp": "Tue May 30 2017 13:51:19 GMT+0000 (UTC)",
+  "timestamp": "Mon Jun 05 2017 15:02:08 GMT+0000 (UTC)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -96,7 +96,7 @@
       }
     },
     "DOE": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 1)",
       "issues": [],
       "version": "",
       "metadata": {
@@ -294,7 +294,7 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0,
+            "schemaFormat": 0.5,
             "overallCompliance": 0.25
           }
         }
@@ -306,7 +306,7 @@
       }
     },
     "TRE": {
-      "status": "NOT FULLY COMPLIANT: 3 ERRORS, 3 validation errors",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [
         {
           "repoID": "tre_department_treasury_data_act_broker_web_app",
@@ -315,18 +315,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -336,18 +336,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -357,18 +357,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -378,18 +378,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -399,18 +399,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -420,18 +420,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -441,18 +441,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -462,18 +462,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -483,18 +483,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -504,18 +504,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -525,18 +525,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -546,18 +546,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -567,18 +567,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -588,18 +588,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -609,18 +609,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -630,18 +630,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -651,18 +651,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -672,18 +672,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -693,18 +693,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -714,18 +714,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -735,18 +735,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -756,18 +756,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -777,18 +777,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -798,18 +798,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -819,18 +819,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -840,18 +840,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -861,18 +861,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -882,18 +882,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -903,18 +903,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -924,18 +924,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -945,18 +945,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -966,18 +966,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -987,18 +987,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1008,18 +1008,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1029,18 +1029,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1050,18 +1050,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1071,18 +1071,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1092,18 +1092,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1113,18 +1113,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1134,18 +1134,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1155,18 +1155,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1176,18 +1176,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1197,18 +1197,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1218,18 +1218,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1239,18 +1239,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1260,18 +1260,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1281,18 +1281,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1302,18 +1302,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1323,18 +1323,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1344,18 +1344,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1365,18 +1365,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1386,18 +1386,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1407,18 +1407,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1428,18 +1428,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1449,18 +1449,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1470,18 +1470,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1491,18 +1491,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1512,18 +1512,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1533,18 +1533,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1554,18 +1554,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1575,18 +1575,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1596,18 +1596,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1617,18 +1617,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1638,18 +1638,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1659,18 +1659,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1680,18 +1680,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1701,18 +1701,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1722,18 +1722,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1743,18 +1743,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1764,18 +1764,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1785,18 +1785,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1806,18 +1806,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1827,18 +1827,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1848,18 +1848,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1869,18 +1869,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1890,18 +1890,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1911,18 +1911,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1932,18 +1932,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1953,18 +1953,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1974,18 +1974,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -1995,18 +1995,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2016,18 +2016,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2037,18 +2037,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2058,18 +2058,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2079,18 +2079,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2100,18 +2100,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2121,18 +2121,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2142,18 +2142,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2163,18 +2163,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2184,18 +2184,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2205,18 +2205,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2226,18 +2226,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2247,18 +2247,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2268,18 +2268,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2289,18 +2289,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2310,18 +2310,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2331,18 +2331,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2352,18 +2352,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2373,18 +2373,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2394,18 +2394,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2415,18 +2415,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2436,18 +2436,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2457,18 +2457,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2478,18 +2478,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2499,18 +2499,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2520,18 +2520,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2541,18 +2541,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2562,18 +2562,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2583,18 +2583,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2604,18 +2604,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2625,18 +2625,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2646,18 +2646,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2667,18 +2667,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2688,18 +2688,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2709,18 +2709,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2730,18 +2730,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2751,18 +2751,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2772,18 +2772,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2793,18 +2793,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2814,18 +2814,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2835,18 +2835,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2856,18 +2856,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2877,18 +2877,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2898,18 +2898,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2919,18 +2919,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2940,18 +2940,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2961,18 +2961,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -2982,18 +2982,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3003,18 +3003,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3024,18 +3024,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3045,18 +3045,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3066,18 +3066,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3087,18 +3087,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3108,18 +3108,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3129,18 +3129,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3150,18 +3150,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3171,18 +3171,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3192,18 +3192,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3213,18 +3213,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3234,18 +3234,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3255,18 +3255,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3276,18 +3276,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3297,18 +3297,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3318,18 +3318,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3339,18 +3339,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3360,18 +3360,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3381,18 +3381,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3402,18 +3402,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3423,18 +3423,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3444,18 +3444,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3465,18 +3465,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3486,18 +3486,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3507,18 +3507,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3528,18 +3528,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3549,18 +3549,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3570,18 +3570,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3591,18 +3591,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3612,18 +3612,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3633,18 +3633,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3654,18 +3654,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3675,18 +3675,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3696,18 +3696,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3717,18 +3717,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3738,18 +3738,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3759,18 +3759,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3780,18 +3780,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3801,18 +3801,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3822,18 +3822,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3843,18 +3843,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3864,18 +3864,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3885,18 +3885,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3906,18 +3906,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3927,18 +3927,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3948,18 +3948,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3969,18 +3969,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -3990,18 +3990,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4011,18 +4011,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4032,18 +4032,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4053,18 +4053,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4074,18 +4074,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4095,18 +4095,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4116,18 +4116,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4137,18 +4137,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4158,18 +4158,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4179,18 +4179,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4200,18 +4200,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4221,18 +4221,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4242,18 +4242,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4263,18 +4263,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4284,18 +4284,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4305,18 +4305,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4326,18 +4326,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4347,18 +4347,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4368,18 +4368,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4389,18 +4389,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4410,18 +4410,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4431,18 +4431,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4452,18 +4452,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4473,18 +4473,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4494,18 +4494,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4515,18 +4515,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4536,18 +4536,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4557,18 +4557,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4578,18 +4578,18 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4599,18 +4599,18 @@
           "project_name": "data-act-broker-web-app",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4620,18 +4620,18 @@
           "project_name": "data-act-broker-backend",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
           }
         },
         {
@@ -4641,18 +4641,144 @@
           "project_name": "federal spending transparency",
           "issues": {
             "enhancements": [],
-            "warnings": [],
-            "errors": [
+            "warnings": [
               {
-                "keyword": "required",
-                "dataPath": "",
-                "schemaPath": "#/required",
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
                 "params": {
-                  "missingProperty": "repository"
+                  "format": "uri"
                 },
-                "message": "should have required property 'repository'"
+                "message": "should match format \"uri\""
               }
-            ]
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_data_act_broker_web_app",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "data-act-broker-web-app",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_data_act_broker_backend",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "data-act-broker-backend",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_federal_spending_transparency",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "federal spending transparency",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_data_act_broker_web_app",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "data-act-broker-web-app",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_data_act_broker_backend",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "data-act-broker-backend",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "tre_department_treasury_federal_spending_transparency",
+          "agency": "Department of Treasury",
+          "organization": "Department of the Treasury",
+          "project_name": "federal spending transparency",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".license",
+                "schemaPath": "#/properties/license/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
           }
         }
       ],
@@ -4665,15 +4791,15 @@
           "codeUrl": "https://www.treasury.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "schemaFormat": 0.5,
-            "overallCompliance": 0.5
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "schemaFormat": 0.5,
-        "overallCompliance": 0.5
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "VA": {
