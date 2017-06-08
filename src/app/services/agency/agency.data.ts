@@ -66,6 +66,10 @@ export const AGENCIES = [
     name: 'Environmental Protection Agency'
   },
   {
+    id: 'FDA',
+    name: 'Food and Drug Administration'
+  },
+  {
     id: 'EOP',
     name: 'Executive Office of the President'
   },
