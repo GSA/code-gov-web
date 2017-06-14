@@ -14,13 +14,15 @@ import {
   ComplianceMeasuringCodeComponent,
   ComplianceDashboardComponent,
   ComplianceWhatsRequiredComponent,
+  ComplianceProcurementComponent,
   DocsComponent,
   IntroductionComponent,
   OverviewComponent,
   OverviewInventoryComponent,
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
-  PolicyGuideComponent
+  PolicyGuideComponent,
+  OpenSourceLicensingComponent
 } from '../../utils/app-components';
 import { DataResolver } from '../../app.resolver';
 
@@ -54,16 +56,16 @@ export const POLICY_GUIDE_ROUTES: Routes = [
                 component: ComplianceLicensingComponent
               },
               {
-                path: 'measuring-code',
-                component: ComplianceMeasuringCodeComponent
-              },
-              {
                 path: 'whats-required',
                 redirectTo: 'dashboard'
               },
               {
                 path: 'dashboard',
                 component: ComplianceDashboardComponent
+              },
+              {
+                path: 'procurement',
+                component: ComplianceProcurementComponent
               }
             ]
           },
@@ -85,6 +87,8 @@ export const POLICY_GUIDE_ROUTES: Routes = [
                 path: 'introduction',
                 component: CapacityIntroductionComponent
               },
+              { path: 'measuring-code', component: ComplianceMeasuringCodeComponent },
+              { path: 'licensing', component: OpenSourceLicensingComponent },
               { path: 'resources', component: CapacityResourcesComponent },
               { path: 'security', component: CapacitySecurityComponent }
             ]
