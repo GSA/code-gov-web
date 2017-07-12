@@ -21,6 +21,16 @@ import {
   OverviewInventoryComponent,
   OverviewPilotComponent,
   OverviewTrackingProgressComponent,
+  PolicyComponent,
+  PolicyIntroductionComponent,
+  PolicyObjectivesComponent,
+  PolicyScopeComponent,
+  PolicySolutionsAnalysisComponent,
+  PolicyCodeReuseComponent,
+  PolicyOpenSourceComponent,
+  PolicyExceptionsComponent,
+  PolicyImplementationComponent,
+  PolicyAppendixComponent,
   PolicyGuideComponent,
   OpenSourceLicensingComponent
 } from '../../utils/app-components';
@@ -57,7 +67,8 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               },
               {
                 path: 'whats-required',
-                redirectTo: 'dashboard'
+                redirectTo: 'dashboard',
+                pathMatch: 'full'
               },
               {
                 path: 'dashboard',
@@ -107,6 +118,22 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               }
             ]
           }
+        ]
+     },
+     {
+        path: 'policy',
+        component: PolicyComponent,
+        children: [
+          { path: '', redirectTo: 'introduction', pathMatch: 'full' },
+          { path: 'introduction', component: PolicyIntroductionComponent },
+          { path: 'objectives', component: PolicyObjectivesComponent },
+          { path: 'scope', component: PolicyScopeComponent },
+          { path: 'solutions-analysis', component: PolicySolutionsAnalysisComponent },
+          { path: 'code-reuse', component: PolicyCodeReuseComponent },
+          { path: 'open-source', component: PolicyOpenSourceComponent },
+          { path: 'exceptions', component: PolicyExceptionsComponent },
+          { path: 'implementation', component: PolicyImplementationComponent },
+          { path: 'appendix', component: PolicyAppendixComponent },
         ]
      }
     ]
