@@ -20,7 +20,7 @@
         "18F"
       ],
       "agency": "GSA"
-        
+
       ,
       "repoID": "gsa_18f_accessibility"
     },{
@@ -818,7 +818,7 @@
         "email": "eair@hq.dhs.gov"
       },
       "agency": "DHS",
-    
+
       "repoID": "dhs_custom_code_system"
     },
     {
@@ -1346,7 +1346,7 @@
 	"status": " ",
 	"vcs": "git",
 	"repository": "git://github.com/deptofdefense/eMCM.git",
-  "repoURL": "https://github.com/deptofdefense/eMCM",    
+  "repoURL": "https://github.com/deptofdefense/eMCM",
 	"name": "eMCM",
 	"repoID": "76482381",
 	"events": [
@@ -1444,7 +1444,7 @@
       "agency": "DOD"
 },
     {
-      
+
 	"status": " ",
 	"vcs": "git",
 	"repository": "git://github.com/USArmyResearchLab/Dshell.git",
@@ -1540,7 +1540,7 @@
 	},
   "agency":"DOD"
 },
-	
+
     {
       "organization": "Social Security Administration",
       "name": "Front End Capture System",
@@ -2210,7 +2210,7 @@
       "agency": "NSF",
       "repoID": "nsf_ember_common_components"
     },
-    
+
     {
       "name": "BIDS",
       "organization": "Department of State, Information Resource Management's Office of eDiplomacy",
@@ -2439,7 +2439,7 @@
         "name": "Office of the Chief Information Officer"
       },
       "status": "Alpha",
-      "agency": "HHS", 
+      "agency": "HHS",
       "repoID": "hhs_department_health_human_services_mms"
     },
     {
@@ -3805,7 +3805,7 @@
 				"email": " "
 			}],
 			"license": "https://github.com/nasa/openmct/blob/master/LICENSES.md",
-			"license_name": "Apache v1",
+			"license_name": "Apache v2",
 			"openSourceProject": 1,
 			"governmentWideReuseProject": 0,
 			"closedproject": 0,
@@ -4623,7 +4623,7 @@
 			}],
 			"agency": "OPM"
 		},{
-    
+
 			"status": " ",
 			"vcs": "git",
 			"repository": "git://github.com/18F/analytics-reporter.git",
