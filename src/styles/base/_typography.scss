@@ -1,3 +1,9 @@
+$header-color: $color-gray-dark;
+$header-contrast-color: $color-white;
+
+$text-color: $color-gray;
+$text-contrast-color: $color-white;
+
 body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -21,19 +27,58 @@ h3,
 h4,
 h5
 h6 {
-  color: $color-gray-dark;
+  color: $text-color;
   font-family: $header-font-family;
   font-weight: 500;
 
   &:first-child {
     margin-top: 0;
   }
+
+  .block--dark & {
+    color: $header-contrast-color;
+  }
+}
+
+h1 {
+  color: $header-color;
 }
 
 p {
-  color: $color-gray;
+  color: $text-color;
 
   @media screen and (min-width: $medium-screen) {
     font-size: 1.1em;
   }
+
+  .block--dark & {
+    color: $text-contrast-color;
+  }
+}
+
+blockquote {
+  background-color: $color-gray-lightest;
+  border-left: 6px solid $brand-purple;
+  margin: 1.5em 0;
+  padding: 1em 1em 1em 2.5em;
+
+  p {
+    font-size: 0.95em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+code {
+  background-color: $brand-blue-gray;
+  border-radius: 3px;
+  color: $brand-teal-dark;
+  font-size: 0.9em;
+  padding: 2px 3px;
 }

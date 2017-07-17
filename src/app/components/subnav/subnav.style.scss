@@ -1,6 +1,6 @@
-%subnav {
-  background-color: $color-gray-lightest;
+@import '../../../styles/base/all';
 
+.subnav {
   a {
     color: $color-gray;
     display: inline-block;
@@ -32,7 +32,6 @@
   }
 
   .active {
-
     a {
       background-color: $brand-blue-gray;
       color: $color-white;
