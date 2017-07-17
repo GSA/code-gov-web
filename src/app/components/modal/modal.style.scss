@@ -24,7 +24,7 @@
   }
 
   a {
-    color: darken($brand-teal, 10);
+    color: $brand-teal-dark;
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
@@ -32,12 +32,12 @@
   button {
     transition: all 0.2s ease;
     background-color: transparent;
-    color: $color-gray;
+    color: $brand-blue-gray;
     padding: 0;
 
     &:hover {
       background-color: transparent;
-      color: darken($color-gray, 10);
+      color: $brand-blue-gray-dark;
     }
   }
 
@@ -61,7 +61,7 @@
 }
 
 .overlay {
-  background-color: rgba(darken($brand-blue-gray, 10), 0.75);
+  background-color: rgba($brand-blue-gray-dark, 0.75);
   bottom: 0;
   left: 0;
   position: fixed;

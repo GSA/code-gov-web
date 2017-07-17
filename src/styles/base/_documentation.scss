@@ -1,5 +1,4 @@
 @import 'all';
-@import '../utils/all';
 
 .docs-content {
   background-color: $color-white;
@@ -15,40 +14,12 @@
   }
 
   a {
-    color: darken($brand-teal, 10);
+    color: $brand-teal-dark;
     text-decoration: none;
 
     &:hover {
-      color: darken($brand-teal, 20);
+      color: $brand-teal;
     }
-  }
-
-  blockquote {
-    background-color: lighten($color-gray-lightest, 2);
-    border-left: 6px solid $brand-purple;
-    color: darken($color-gray, 6);
-    margin: 1.5em 0;
-    padding: 1em 1em 1em 2.5em;
-
-    p {
-      font-size: 0.95em;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  code {
-    background-color: $brand-blue-gray;
-    border-radius: 3px;
-    color: $brand-teal;
-    font-size: 0.9em;
-    padding: 2px 3px;
   }
 
   li {
@@ -62,181 +33,6 @@
       margin-top: 0.2em;
       padding-left: 1.25em;
     }
-  }
-}
-
-.menu-icon {
-  transform: rotate(0deg);
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-  display: inline-block;
-  height: 16px;
-  position: relative;
-  width: 18px;
-
-  @media screen and (min-width: $medium-screen) {
-    display: none;
-  }
-
-  .line {
-    transform: rotate(0deg);
-    transition: 0.2s ease-in-out;
-    background: lighten($color-white, 5);
-    border-radius: 3px;
-    display: block;
-    height: 2px;
-    left: 0;
-    opacity: 1;
-    position: absolute;
-    width: 100%;
-
-    &:nth-child(1) {
-      top: 0;
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      top: 6px;
-    }
-
-    &:nth-child(4) {
-      top: 12px;
-    }
-  }
-}
-
-.menu-text {
-  display: inline-block;
-  margin-left: 0.2em;
-  vertical-align: top;
-}
-
-.policy-guide-subnav {
-  position: relative;
-
-  @media screen and (min-width: $medium-screen) {
-    @include grid-column(3);
-  }
-
-  &.active {
-
-    .usa-sidenav-list {
-      display: block;
-    }
-
-    .menu-icon {
-
-      .line {
-
-        &:nth-child(1) {
-          left: 50%;
-          top: 6px;
-          width: 0%;
-        }
-
-        &:nth-child(2) {
-          transform: rotate(45deg);
-        }
-
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-        }
-
-        &:nth-child(4) {
-          left: 50%;
-          top: 6px;
-          width: 0%;
-        }
-      }
-    }
-  }
-
-  .mobile-submenu {
-    font-size: 0.95em;
-    margin-bottom: 1.25em;
-    padding: 0.75em 0.5em 0.65em;
-    width: auto;
-
-    @media screen and (min-width: $medium-screen) {
-      display: none;
-    }
-  }
-
-  .usa-sidenav-list {
-    background-color: darken($brand-blue-gray, 10);
-    display: none;
-    padding: 1em;
-    position: relative;
-    width: 100%;
-
-    &::before {
-      border-bottom: 10px solid darken($brand-blue-gray, 10);
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      content: "";
-      height: 0;
-      left: 1em;
-      position: absolute;
-      top: -10px;
-      width: 0;
-
-      @media screen and (min-width: $medium-screen) {
-        display: none;
-      }
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      background-color: transparent;
-      display: block;
-      left: auto;
-      padding: 0;
-      position: static;
-      opacity: 1;
-      visibility: visible;
-    }
-
-    a {
-      color: $color-gray-lightest;
-    }
-  }
-
-  a {
-    font-size: 0.95em;
-    text-decoration: none;
-
-    &:focus {
-      box-shadow: 0 0 3px rgba(darken($color-gray-dark, 15), 0.25), 0 0 7px rgba(darken($color-gray-dark, 15), 0.25);
-      outline: 0;
-    }
-
-    &:hover {
-      color: $color-white;
-    }
-  }
-
-  li {
-    font-size: 1em;
-  }
-
-  .usa-current {
-
-    .usa-sidenav-sub_list {
-      display: block;
-    }
-  }
-
-  .usa-sidenav-list {
-
-    a {
-
-      &:hover {
-        background-color: darken($brand-blue-gray, 10);
-      }
-    }
-  }
-
-  .usa-sidenav-sub_list {
-    display: none;
   }
 }
 
@@ -290,8 +86,6 @@ h4 .noncompliant {
 }
 
 li.dashboard-agency {
-  @extend %card;
-  transition: all 0.2s ease;
   position: relative;
   color: $color-gray;
   display: block;
@@ -302,7 +96,6 @@ li.dashboard-agency {
   padding-left: 8em;
   padding-right: 1em;
   margin-bottom: 1em;
-
 
   p {
     font-size: 0.95em;
@@ -331,7 +124,7 @@ li.dashboard-agency {
     }
 
     i {
-      color: $brand-teal;
+      color: $brand-teal-dark;
       font-size: 1em;
       height: 1em;
       line-height: 0.85em;
