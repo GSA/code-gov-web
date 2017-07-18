@@ -1,17 +1,21 @@
-<subnav>
-  <li>
-    <a routerLink="docs" routerLinkActive="active">
-      How To
-    </a>
-  </li>
-  <li>
-    <a routerLink="policy" routerLinkActive="active">
-      Read the Policy
-    </a>
-  </li>
-</subnav>
+<nav class="policy-guide-nav subnav" role="navigation">
+  <div class="usa-grid">
+    <ul class="usa-unstyled-list">
+      <li>
+        <a routerLink="docs" routerLinkActive="active">
+          How To
+        </a>
+      </li>
+      <li>
+        <a routerLink="policy" routerLinkActive="active">
+          Read the Policy
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<div class="policy-guide-content block block--light l-block--medium">
+<div class="policy-guide-content">
   <div class="usa-grid">
     <router-outlet></router-outlet>
   </div>

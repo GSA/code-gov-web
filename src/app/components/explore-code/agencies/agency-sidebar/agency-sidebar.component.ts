@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { AgencyService, Agency } from '../../../../services/agency';
+import { MobileService } from '../../../../services/mobile';
 
 @Component({
   selector: 'agency-sidebar',
@@ -8,11 +10,14 @@ import { AgencyService, Agency } from '../../../../services/agency';
 })
 
 export class AgencySidebarComponent {
+  menuActive: Observable<boolean>;
   agencies: Agency[];
 
   constructor(
-    private agencyService: AgencyService
-  ) {
+    private agencyService: AgencyService,
+    private mobileService: MobileService) {
+
+    this.menuActive = mobileService.activeMobileMenu$;
   }
 
   ngOnInit() {

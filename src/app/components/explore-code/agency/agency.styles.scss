@@ -12,6 +12,8 @@
 .repo {
 
   a {
+    @extend %card;
+    transition: all 0.2s ease;
     color: $color-gray;
     display: block;
     font-size: 0.95em;
@@ -19,6 +21,8 @@
     text-decoration: none;
 
     &:hover {
+      box-shadow: 0 3px 5px rgba($color-gray-dark, 0.25);
+
       h3 {
         color: $color-primary;
       }
@@ -37,6 +41,10 @@
 
 .repo-features {
   margin-top: 1em;
+
+  i {
+    color: $brand-teal;
+  }
 
   li {
     display: inline-block;
