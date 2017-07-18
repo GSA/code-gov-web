@@ -13,7 +13,7 @@
   code {
     background-color: $brand-blue-gray;
     border-radius: 3px;
-    color: $brand-highlight;
+    color: $brand-teal;
     font-size: 0.9em;
     padding: 2px 3px;
   }
@@ -28,6 +28,10 @@
     padding-bottom: 1em;
     position: relative;
   }
+
+  .usa-button {
+    background-color: darken($brand-teal, 3);
+  }
 }
 
 .repo-actions {
@@ -36,14 +40,9 @@
     display: inline-block;
 
     &:last-child {
-      .usa-button {
-        @extend .button--secondary;
-      }
-    }
 
-    &:not(last-child) {
       .usa-button {
-        @extend .button--tertiary;
+        background-color: $brand-purple;
       }
     }
   }
@@ -54,13 +53,13 @@
   margin-bottom: 3em;
 
   a {
-    color: $brand-primary;
+    color: $brand-blue;
     font-weight: bold;
     padding-bottom: 0.1em;
     text-decoration: none;
 
     &:hover {
-      border-bottom: 2px solid $brand-primary;
+      border-bottom: 2px solid $brand-blue;
     }
   }
 
@@ -73,12 +72,18 @@
   li {
     border: 1px solid darken($color-gray-lightest, 3);
     margin-bottom: 1em;
-    padding: 1em;
-    padding-left: 2.5em;
+    padding: 1em 1em 1em 2.5em;
     position: relative;
 
     @media screen and (min-width: $medium-screen) {
       margin-bottom: 0;
+    }
+
+    .feature-icon {
+      color: $brand-teal;
+      left: 1em;
+      position: absolute;
+      top: 1em;
     }
   }
 
@@ -104,7 +109,7 @@
       text-decoration: none;
 
       &:hover {
-        border-bottom: 3px solid $brand-highlight;
+        border-bottom: 3px solid $brand-teal;
         color: $color-gray-dark;
       }
     }
