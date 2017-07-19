@@ -12,19 +12,19 @@
 <hr/>
 <div class="dashboard-container">
   <ul class="dashboard-list usa-unstyled-list">
-    <li class="dashboard-agency {{status.agency.overall}}" *ngFor="let status of statuses">
+    <li class="card dashboard-agency {{status.agency.overall}}" *ngFor="let status of statuses">
       <div class="dashboard-agency-icon">
         <img src="assets/img/logos/agencies/{{status.agency.id}}.png" alt="{{status.agency.name}}"/>
-      </div>      
+      </div>
       <div class="dashboard-agency-content">
         <div class="dashboard-agency-heading">
           <h3>{{status.agency.name}}</h3>
-          <h4> 
+          <h4>
             <span class="{{status.agency.overall}}">
               <span *ngIf="status.agency.overall=='compliant'">Fully compliant</span>
               <span *ngIf="status.agency.overall=='partial'">Partially compliant</span>
               <span *ngIf="status.agency.overall=='noncompliant'">Non-compliant</span>
-            </span> 
+            </span>
           </h4>
         </div>
 
@@ -32,8 +32,8 @@
           <div *ngIf="requirement.text=='agencyWidePolicy'">
             <div class="requirement {{requirement.status}} ">
                 <span *ngIf="requirement.status=='compliant'">Agency policy is consistent with the Source Code Policy</span>
-                <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Source Code Policy.</span> 
-                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been reviewed for consistency with the Source Code Policy</span>  
+                <span *ngIf="requirement.status=='partial'">Agency policy is being updated for consistency with the Source Code Policy.</span>
+                <span *ngIf="requirement.status=='noncompliant'">Agency policy has not been reviewed for consistency with the Source Code Policy</span>
             </div>
           </div>
           <div *ngIf="requirement.text=='schemaFormat'">
@@ -41,8 +41,8 @@
                 <span *ngIf="requirement.status=='compliant'">
                   Code inventory has been published.
                 </span>
-                <span *ngIf="requirement.status=='partial'">Code inventory has been published but has technical errors.</span> 
-                <span *ngIf="requirement.status=='noncompliant'">Code inventory has not been published.</span> 
+                <span *ngIf="requirement.status=='partial'">Code inventory has been published but has technical errors.</span>
+                <span *ngIf="requirement.status=='noncompliant'">Code inventory has not been published.</span>
             </div>
           </div>
         </div>

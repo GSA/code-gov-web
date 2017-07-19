@@ -1,16 +1,6 @@
-<nav [ngClass]="{active: menuActive}" class="policy-guide-subnav docs-nav" role="navigation">
-  <button toggle-menu class="mobile-submenu" role="button" aria-pressed="false">
-    <span class="menu-icon">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </span>
-    <span class="menu-text">
-      Menu
-    </span>
-  </button>
-  <ul class="usa-sidenav-list">
+<sidebar>
+  <sidebar-menu-text>Menu</sidebar-menu-text>
+  <sidebar-content>
     <li routerLinkActive="usa-current">
       <a routerLink="introduction" routerLinkActive="usa-current">Introduction</a>
     </li>
@@ -38,9 +28,9 @@
     <li routerLinkActive="usa-current">
       <a routerLink="appendix" routerLinkActive="usa-current">Appendix A - Definitions</a>
     </li>
-  </ul>
-</nav>
+  </sidebar-content>
+</sidebar>
 
-<section class="docs-content"> 
+<section class="docs-content">
   <router-outlet></router-outlet>
 </section>

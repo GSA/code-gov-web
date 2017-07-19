@@ -1,8 +1,6 @@
 @import '../../../../styles/base/all';
-@import '../../../../styles/utils/all';
 
 .activity {
-  @extend %card;
   margin-bottom: 1em;
   padding-left: 3.5em;
   padding-right: 0.5em;
@@ -26,7 +24,7 @@
   }
 
   .activity-icon {
-    border: 2px solid $brand-teal;
+    border: 2px solid $brand-teal-dark;
     border-radius: 50%;
     left: 0.5em;
     padding: 0.4em 0.6em;
@@ -42,7 +40,7 @@
     }
 
     i {
-      color: $brand-teal;
+      color: $brand-teal-dark;
       font-size: 1em;
       height: 1em;
       line-height: 0.85em;
