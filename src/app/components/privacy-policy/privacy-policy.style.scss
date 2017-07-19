@@ -1,15 +1,6 @@
 @import '../../../styles/base/all';
 
 .privacy-content {
-
-  a {
-    color: $color-primary;
-
-    &:hover {
-      color: darken($color-primary, 10);
-    }
-  }
-
   li {
     color: $color-gray;
     font-size: 1.1em;

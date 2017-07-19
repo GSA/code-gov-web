@@ -24,7 +24,7 @@
   }
 
   a {
-    color: lighten($brand-teal, 12);
+    color: $brand-teal;
     padding-bottom: 0.1em;
     text-decoration: none;
 
@@ -33,12 +33,12 @@
     }
 
     &:hover {
-      border-bottom: 2px solid $brand-teal;
+      border-bottom: 2px solid $brand-teal-dark;
     }
   }
 
   p {
-    color: lighten($brand-blue-gray, 50);
+    color: $color-gray-lighter;
     font-size: 0.85em;
     margin: 0 0 0.1em;
 
@@ -90,7 +90,7 @@
 
   .cursor {
     animation: blink 0.8s step-end infinite;
-    color: $brand-teal;
+    color: $brand-teal-dark;
     font-size: 1.1em;
   }
 
@@ -99,7 +99,7 @@
   }
 
   .topbar {
-    background-color: darken($color-gray-lightest, 5);
+    background-color: $color-gray-lighter;
     border-radius: 0.3em 0.3em 0 0;
     padding: 0.05em 0.75em;
 
