@@ -7,7 +7,7 @@ import { PageScrollConfig } from 'ng2-page-scroll';
 import { StateService } from '../../services/state';
 
 @Component({
-  selector: 'app',
+  selector: '[role="application"]',
   encapsulation: ViewEncapsulation.None,
   styles: [require('./app.style.scss')],
   template: require('./app.template.html')

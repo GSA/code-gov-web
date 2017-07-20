@@ -123,7 +123,7 @@ body {
 }
 
 .press {
-  h2 {
+  .press__header {
     color: $color-gray-light;
     font-size: 1em;
     margin-bottom: 2em;
@@ -157,11 +157,17 @@ body {
 }
 
 .quote-large {
-
-  h1 {
+  blockquote {
+    background-color: transparent;
+    border-left: none;
     color: $brand-blue-gray;
+    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.75em;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 0;
     margin-bottom: 0.2em;
+    padding: 0;
     padding-left: 0.75em;
     position: relative;
 
