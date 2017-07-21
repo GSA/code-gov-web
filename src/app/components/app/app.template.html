@@ -1,5 +1,5 @@
 <div class="app-container">
-  <header role="banner" class="block" [ngClass]="{ 'block--dark': stateService.state.section === 'home', 'block--white': stateService.state.section !== 'home' }">
+  <header class="block" [ngClass]="{ 'block--dark': stateService.state.section === 'home', 'block--white': stateService.state.section !== 'home' }">
     <div class="usa-disclaimer block block--light l-block--small">
       <div class="usa-grid">
         <span class="usa-disclaimer-official">
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <nav class="app-navigation" role="navigation">
+    <nav class="app-navigation">
       <div class="usa-grid">
         <div class="app-logo">
           <a [routerLink]=" ['./'] ">
@@ -40,7 +40,7 @@
     </nav>
   </header>
 
-  <main role="main">
+  <main>
     <router-outlet></router-outlet>
   </main>
 
