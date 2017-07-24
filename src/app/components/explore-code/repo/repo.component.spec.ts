@@ -20,6 +20,7 @@ import { ModalComponent } from './../../modal/modal.component';
 import { ActivityListComponent } from './../activity-list/activity-list.component';
 import { ModalService } from './../../../services/modal/modal.service';
 import { IsDefinedPipe } from './../../../pipes/is-defined/is-defined.pipe';
+import { MetaModule, MetaService } from '@ngx-meta/core';
 
 // set test repository id used throughout to Dept of Veterans Affairs
 let id = '33202667';
@@ -57,7 +58,8 @@ describe('RepoComponent', () => {
         // This hack is needed because there is a routerLink in the template
         RouterTestingModule.withRoutes([
          { path: 'explore-code/agencies/:id', component: DummyRoutingComponent }
-        ])
+        ]),
+        MetaModule.forRoot()
       ],
       declarations: [
         ExternalLinkDirective,
@@ -102,14 +104,14 @@ describe('RepoComponent', () => {
   }));
 
   it('should NOT initialize repo property if id property is bogus',
-    inject([AgencyService, ReposService],
-      (agencyService, reposService)  => {
+    inject([AgencyService, ReposService, MetaService],
+      (agencyService, reposService, metaService)  => {
     let agency = { id: 'VA', name: 'Department of Veterans Affairs' };
     spyOn(agencyService, 'getAgency').and.returnValue(agency);
     let repos = undefined;
     spyOn(reposService, 'getJsonFile').and.returnValue(Observable.of(repos));
     // instantiate a new RepoComponent so that ngOnInit() doesn't get called
-    let newRepoComponent = new RepoComponent(null, agencyService, reposService, null);
+    let newRepoComponent = new RepoComponent(null, agencyService, reposService, null, metaService);
 
     // call getRepo() that invokes reposService.getJsonFile()
     newRepoComponent.getRepo('');

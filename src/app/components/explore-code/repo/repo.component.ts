@@ -5,6 +5,7 @@ import { AgencyService, Agency } from '../../../services/agency';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'repo',
@@ -22,7 +23,8 @@ export class RepoComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private agencyService: AgencyService,
     private reposService: ReposService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private readonly meta: MetaService
   ) {}
 
   ngOnInit() {
@@ -48,6 +50,11 @@ export class RepoComponent implements OnInit, OnDestroy {
           this.seoService.setTitle(this.repo.name, true);
           this.seoService.setMetaDescription(this.repo.description);
           this.seoService.setMetaRobots('Index, Follow');
+          this.meta.setTag('twitter:card', 'summary');
+          this.meta.setTag('twitter:site', '@codedotgov');
+          this.meta.setTag('twitter:title', `code.gov/${this.repo.name}`);
+          this.meta.setTag('twitter:description', this.repo.description);
+          this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
         } else {
           console.log('Error. Source code repositories not found');
         }

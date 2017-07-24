@@ -12,6 +12,7 @@ import { ModalComponent } from '../modal';
 import { ModalService } from '../../services/modal';
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
+import { MetaModule } from '@ngx-meta/core';
 
 describe('HomeComponent', () => {
 
@@ -25,7 +26,8 @@ describe('HomeComponent', () => {
       ],
       imports: [
         Angulartics2Module.forRoot(),
-        RouterModule.forRoot([])
+        RouterModule.forRoot([]),
+        MetaModule.forRoot()
       ],
       providers: [
         Angulartics2,

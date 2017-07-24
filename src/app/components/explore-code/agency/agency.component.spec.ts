@@ -12,6 +12,7 @@ import { PluralizePipe } from '../../../pipes/pluralize';
 import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
+import { MetaModule } from '@ngx-meta/core';
 
 class MockActivatedRoute extends ActivatedRoute {
   constructor() {
@@ -32,7 +33,8 @@ describe('AgencyComponent', () => {
       ],
       imports: [
         HttpModule,
-        RouterModule
+        RouterModule,
+        MetaModule.forRoot()
       ],
       providers: [
         AgencyService,
