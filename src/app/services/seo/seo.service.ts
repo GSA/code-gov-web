@@ -1,48 +1,38 @@
 import { Inject, Injectable, RendererFactory2, ViewEncapsulation } from '@angular/core';
-import { DOCUMENT, Title } from '@angular/platform-browser';
+import { DOCUMENT } from '@angular/platform-browser';
+import { MetaService } from '@ngx-meta/core';
 
 @Injectable()
 
 export class SeoService {
 
   private baseTitle: string;
-  private titleService: Title;
   private headElement: HTMLElement;
-  private metaDescription: HTMLElement;
   private robots: HTMLElement;
   private DOM: any;
   private rendererFactory: RendererFactory2;
 
   constructor(
-    titleService: Title,
     @Inject(DOCUMENT) document,
-    @Inject(RendererFactory2) rendererFactory
+    @Inject(RendererFactory2) rendererFactory,
+    private readonly meta: MetaService
   ) {
     this.baseTitle = '· Code.gov';
-    this.titleService = titleService;
     this.rendererFactory = rendererFactory;
     this.DOM = document;
     this.headElement = this.DOM.head;
-    this.metaDescription = this.getOrCreateMetaElement('description');
     this.robots = this.getOrCreateMetaElement('robots');
-  }
-
-  public getTitle(): string {
-    return this.titleService.getTitle();
   }
 
   public setTitle(newTitle: string, baseTitle = false) {
     if (baseTitle === true)
       newTitle += ' · Code.gov';
-    this.titleService.setTitle(newTitle);
-  }
 
-  public getMetaDescription(): string {
-    return this.metaDescription.getAttribute('content');
+    this.meta.setTitle(newTitle);
   }
 
   public setMetaDescription(description: string) {
-    this.metaDescription.setAttribute('content', description);
+    this.meta.setTag('description', description);
   }
 
   public getMetaRobots(): string {

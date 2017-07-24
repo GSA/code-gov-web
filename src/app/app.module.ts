@@ -13,6 +13,8 @@ import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { Ng2SimplePageScrollModule } from 'ng2-simple-page-scroll';
 
+import { MetaModule } from '@ngx-meta/core';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -60,7 +62,8 @@ const APP_PROVIDERS = [
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     Ng2PageScrollModule.forRoot(),
-    Ng2SimplePageScrollModule.forRoot()
+    Ng2SimplePageScrollModule.forRoot(),
+    MetaModule.forRoot()
   ],
   declarations: [
     APP_COMPONENTS,

@@ -7,6 +7,7 @@ import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
 import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
+import { MetaService } from '@ngx-meta/core';
 
 @Component({
   selector: 'agency',
@@ -25,7 +26,8 @@ export class AgencyComponent implements OnInit, OnDestroy {
     private agencyService: AgencyService,
     private route: ActivatedRoute,
     private reposService: ReposService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private readonly meta: MetaService
   ) {}
 
   ngOnDestroy() {
@@ -46,6 +48,12 @@ export class AgencyComponent implements OnInit, OnDestroy {
       this.seoService.setTitle(this.agency.name, true);
       this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
       this.seoService.setMetaRobots('Index, Follow');
+
+      this.meta.setTag('twitter:card', 'summary');
+      this.meta.setTag('twitter:site', '@codedotgov');
+      this.meta.setTag('twitter:title', `code.gov/${this.agency.name}`);
+      this.meta.setTag('twitter:description', 'Browse code from the ' + this.agency.name);
+      this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
     });
   }
 
