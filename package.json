@@ -83,6 +83,7 @@
     "bourbon": "^4.3.4",
     "bourbon-neat": "^2.0.0",
     "core-js": "^2.4.1",
+    "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
