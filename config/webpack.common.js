@@ -44,6 +44,9 @@ module.exports = function (options) {
   const copyPluginOptions = [{
     from: 'src/assets',
     to: 'assets',
+  }, {
+    from: 'src/meta',
+    to: ''
   }];
   if (isProd) copyPluginOptions.push({ from: 'config/CNAME' })
 
