@@ -18,7 +18,7 @@
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
   background-color: #f4f8fb !important;
-  
+
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -43,7 +43,7 @@
   border-bottom: 2px solid #ebeff2;
 }
 tbody {
-  color: #797979;
+  color: #5b616b;
 }
 th {
   color: #666666;
@@ -276,7 +276,7 @@ table.dataTable td.focus {
       background: red;
       text-align: center;
       vertical-align: middle;
-      display:inline-flex;  
+      display:inline-flex;
     }
 #circle-yellow {
       width: 25px;
@@ -287,7 +287,7 @@ table.dataTable td.focus {
       background: yellow;
       text-align:center;
       vertical-align: middle;
-      display:inline-flex; 
+      display:inline-flex;
     }
 #circle-green {
       width: 25px;
@@ -298,5 +298,5 @@ table.dataTable td.focus {
       background: green;
       text-align:center;
       vertical-align: middle;
-      display:inline-flex; 
+      display:inline-flex;
     }
