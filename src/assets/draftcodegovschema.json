@@ -106,7 +106,7 @@
           "type":"uri",
           "description": "The URL where a distribution of the release can be found."
         },
-        "languagues":{
+        "languages":{
           "type":"array",
           "description": " An array of strings with the names of the programming languages in use on the release.",
           
