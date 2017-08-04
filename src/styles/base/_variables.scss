@@ -9,7 +9,7 @@ $brand-blue-gray: #485568;
 $brand-blue-gray-dark: #323a45;
 
 $brand-teal: #43ddd7;
-$brand-teal-dark: #23c0ba;
+$brand-teal-dark: #00847f;
 
 $brand-purple: #42519F;
 $brand-purple-dark: #333f7b;
@@ -40,6 +40,7 @@ $color-gray-warm-light:      #e4e2e0; // lighten($color-gray-warm-dark, 90%)
 $color-gray-cool-light:      #dce4ef; // lighten($color-primary, 90%)
 
 $color-gold:                 #fdb81e;
+$color-gold-dark:            #9a6b01; //  darken($color-gold, 25%)
 $color-gold-light:           #f9c642; //  lighten($color-gold, 20%)
 $color-gold-lighter:         #fad980; //  lighten($color-gold, 60%)
 $color-gold-lightest:        #fff1d2; //  lighten($color-gold, 83%)
