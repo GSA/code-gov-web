@@ -101,7 +101,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "description": "An array of keywords describing the release."
+              "description": "An array of keywords describing the release to be used for search and discoverability purposes."
             }
           },
           "contact": {
