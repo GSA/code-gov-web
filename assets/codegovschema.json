@@ -37,7 +37,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "description": "An object containing each versioned source code project made available",
+        "description": "An object containing each versioned source code release made available.",
         "properties": {
           "name": {
             "type": "string",
@@ -59,7 +59,7 @@
                 "URL": {
                   "type": "string",
                   "format": "uri",
-                  "description": "The URL of the project license, if available. null should be used if not."
+                  "description": "The URL of the release license, if available. null should be used if not."
                 },
                 "name": {
                   "type": "string",
@@ -170,9 +170,7 @@
           },
           "laborHours": {
             "type": "number",
-
             "description": "An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors."
-
           },
           "relatedCodebase": {
             "type": "array",
