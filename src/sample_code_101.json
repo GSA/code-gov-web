@@ -1,0 +1,49 @@
+{
+    "version":"1.0.1",
+    "agency": "DOABC",
+    "projects": [
+        {
+            "name": "mygov",
+            "organization": "XYZ Department",
+            "description": "A Platform for Connecting People and Government",
+            "license": "https://path.to/license",
+            "openSourceProject": 1,
+            "governmentWideReuseProject": 0,
+
+            "tags": [
+              "platform",
+              "government",
+              "connecting",
+              "people"
+            ],
+            "contact": {
+              "email": "project@agency.gov",
+              "name": "Project Coordinator Name",
+              "URL": "https://twitter.com/projectname",
+              "phone": "2025551313"
+            },
+            "status": "Alpha",
+            "vcs": "git",
+            "repository": "https://github.com/presidential-innovation-fellows/mygov",
+            "homepage": "https://agency.gov/project-homepage",
+            "downloadURL": "https://agency.gov/project/dist.tar.gz",
+            "languages": [
+              "java",
+              "python"
+            ],
+            "partners": [
+                {
+                    "name": "DOXYZ",
+                    "email": "project@doxyz.gov"
+                }
+            ],
+            "exemption": null,
+            "exemptionText": "No exemption requested",
+            "updated": {
+                "lastCommit": "2016-04-30",
+                "metadataLastUpdated": "2016-04-13",
+                "lastModified": "2016-04-12"
+            }
+        }
+    ]
+}
