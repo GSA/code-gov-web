@@ -7,11 +7,12 @@
 
 <h2>Publishing Your Agency's Inventory</h2>
 
-<p>Agencies are required publish their inventories using a standard metadata schema - a JSON file that they'll make available on their agency websites. Versions 1.0.0 and 1.0.1 of the schema are now available. Agencies are strongly encouraged to use version 1.0.1 of the schema, which is described below. This version includes minor tweaks that make your inventory much more useful and intuitive.</p>
+<p>Agencies are required publish their inventories using a standard metadata schema - a JSON file that they'll make available on their agency websites. Versions 1.0.0, 1.0.1, and 2.0.0. of the schema are now available. Agencies are strongly encouraged to use version 2.0.0 of the schema, which is described below. This version includes revisions that make your inventory much more useful and intuitive.</p>
 
 <p>Agencies should make the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code.json">“code.json”</a> available in the root folder of their website (e.g., https://www.agency.gov/code.json). Code.gov will then retrieve these JSON files daily and compile them.</p>
 
-<h2>Metadata Schema version 1.0.1</h2>
+<h2>Metadata Schema version 2.0.0</h2>
+Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/codegovschema.json">metadata schema file in JSON format can be found here.</a>
 
 <h3>File location and contents:</h3>
 
@@ -25,48 +26,74 @@
 <h4>Required</h4>
 
 <ul>
-	<li><code>version</code>: [string] The version of the metadata schema in use. For example "1.0.1"</li>
-	<li><code>agency</code>: [string] The agency acronym. For example "GSA" or "DOD"</li>
-	<li><code>projects</code>: [array] Contains objects representing each software project</li>
+	<li><code>version</code>: [string] The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0"</li>
+  <li><code>measurementType</code>: [object] An object containing description of the open source measurement method.
+  <ul>
+    <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
+    <ul>
+      <li><code>linesOfCode</code>: Source lines of code</li>
+				<li><code>modules</code>: Number of self-contained modules</li>
+        <li><code>cost</code>: Cost of software development releases</li>
+        <li><code>releases</code>: Number of software projects</li>
+        <li><code>systems</code>: System certification and accreditation boundaries</li>
+        <li><code>other</code>: An other measurement method, not referenced above</li>
+			</ul>
+    </li>
+    </ul>		
+    <ul>
+    <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>	
+			</ul>
+  </li>
+	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD"</li>
+	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.</li>
 	<ul>
 		<li>
-			<code>name</code>: [string] The project name
+			<code>name</code>: [string] The name of the release.
 		</li>
 		<li>
-			<code>repository</code>: [string] The URL of the public project repository for open source repositories.<br>
-      ** For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field will not be required.
+			<code>repositoryURL</code>: [string] The URL of the public project repository for open source repositories. **This field is not required for repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions.
 		</li>
 		<li>
-			<code>description</code>: [string] A description of the project
+			<code>description</code>: [string] A one- or two-sentence description of the release.
 		</li>
 		<li>
-			<code>license</code>: [<code>null</code> or string] The URL of the project license, if available. <code>null</code> should be used if not.
+			<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. <code>null</code> should be used if not.
+      <ul>
+        <li><code>URL</code>: [string] The URL of the release license, if available.</li> 
+        <li><code>name</code>: [string] An abbreviation for the name of the type license. For example, 'CC0' or 'MIT'.</li> 
+      </ul>
 		</li>
-		<li>
-			<code>openSourceProject</code>: [integer] A value indicating whether or not the project is open source.
-		</li>
-		<ul>
-		<li>
-			<code>0</code>: The project is not open source.
-		</li>
-		<li>
-			<code>1</code>: The project is open source.
-		</li>
-		</ul>
-		<li>
-			<code>governmentWideReuseProject</code>: [integer] A value indicating whether or not the project is built for government-wide reuse.
-		</li>
-			<ul>
-				<li><code>0</code>: The project is not built for government-wide reuse.</li>
-				<li><code>1</code>: The project is built for government-wide reuse.</li>
+    <li><code>permissions</code>: [object] An object containing description of the usage/restrictions regarding the release.
+  <ul>
+    <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage or license permissions for the release.
+    <ul>
+      <li><code>open</code>: Open source</li>
+				<li><code>governmentWideReuse</code>: Government-wide reuse</li>
+        <li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
+        <li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
+        <li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
+        <li><code>exemptByAgencyMission</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
+        <li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
 			</ul>
-		<li>
-			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the project.
+    </li>
+    </ul>		
+    <ul>
+    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for any exemption used.</li>	
+			</ul>
+  </li>
+    <li>
+			<code>laborHours</code>: [string] An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors.
 		</li>
 		<li>
-			<code>contact</code>: [object] Information about contacting the project.
+			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the release.
+		</li>
+		<li>
+			<code>contact</code>: [object] Information about contacting the release.
 			<ul>
-				<li><code>email</code>: [string] An email address to contact the project.</li>
+				<li><code>email</code>: [string] An email address to contact the release.</li>
+        <li><code>name</code>: [string] The name of a contact or department for the release</li>
+				<li><code>URL</code>: [string] The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'</li>
+				<li><code>phone</code>: [string] The phone number to contact a release.</li>
 			</ul>
 		</li>
 	</ul>
@@ -75,49 +102,46 @@
 <h4>Optional</h4>
 
 <ul>
-	<li>Optional fields for project objects within <code>projects</code>: 
+	<li>Optional fields for release objects within <code>releases</code>: 
 		<ul>
-			<li><code>organization</code>: [string] The organization within the agency that the projects listed belong to. For example, "18F" or "Navy".</li>
-			<li><code>status</code>: [string] The development status of the project
+			<li><code>organization</code>: [string] The organization within the agency that the releases listed belong to. For example, "18F" or "Navy".</li>
+			<li><code>status</code>: [string] The development status of the release
 				<ul>
 					<li><code>"Ideation"</code> - brainstorming phase.</li>
 					<li><code>"Alpha"</code> - initial prototyping phase and internal testing.</li>
-					<li><code>"Beta"</code> - a project is being tested in public.</li>
-					<li><code>"Production"</code> - finished project, with development and maintenance ongoing.</li>
-					<li><code>"Archival"</code> - finished project, but no longer actively maintained.</li>
+					<li><code>"Beta"</code> - a release is being tested in public.</li>
+					<li><code>"Production"</code> - finished release, with development and maintenance ongoing.</li>
+					<li><code>"Archival"</code> - finished release, but no longer actively maintained.</li>
 				</ul>
 			</li>
-			<li><code>vcs</code>: [string] A lowercase string with the name of the Version Control System in use on the project.</li>
-			<li><code>homepage</code>: [string] The URL of the public project homepage</li>
-			<li><code>downloadURL</code>: [string] The URL where a distribution of the project can be found.</li>
-			<li><code>languages</code>: [array] A list of strings with the names of the programming languages in use on the project.</li>
-			<li><code>contact</code>: [object] Information about contacting the project.
-				<ul>
-					<li><code>name</code>: [string] The name of a contact or department for the project</li>
-					<li><code>twitter</code>: [string] The username of the project’s Twitter account</li>
-					<li><code>phone</code>: [string] The phone number to contact a project.</li>
-				</ul>
-			</li>
-			<li><code>partners</code>: [array] An array of objects including an acronym for each agency partnering on the project and the contact email at such agency.
+			<li><code>vcs</code>: [string] A lowercase string with the name of the Version Control System in use on the release.</li>
+			<li><code>homepageURL</code>: [string] The URL of the public release homepage</li>
+			<li><code>downloadURL</code>: [string] The URL where a distribution of the release can be found.</li>
+			<li><code>disclaimerText</code>: [string] Short paragraph that includes disclaimer language to accompany the release.</li>
+      <li><code>disclaimerURL</code>: [string] The URL where disclaimer language regarding the release can be found.</li>
+      
+      <li><code>languages</code>: [array] A list of strings with the names of the programming languages in use on the release.</li>
+		
+			<li><code>partners</code>: [array] An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.
 		  		<ul>
 		  			<li><code>name</code>: [string] The acronym describing the partner agency.</li>
 		    		<li><code>email</code>: [string] The email address for the point of contact at the partner agency.</li>
 		  		</ul>
 		  	</li>
-			<li><code>exemption</code>: [integer] The exemption that excuses the project from government-wide reuse. Possible values and the exemption they correspond to from the policy are:</li>
+			<li>
+			<code>relatedCodebase</code>: [array] An array of forked, cloned, or other otherwise reused source code repositories.
 			<ul>
-				<li><code>1</code>: "The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information."</li>
-				<li><code>2</code>: "The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy."</li>
-				<li><code>3</code>: "The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel."</li>
-				<li><code>4</code>: "The sharing of the source code would create an identifiable risk to agency mission, programs, or operations."</li>
-				<li><code>5</code>: "The CIO believes it is in the national interest to exempt sharing the source code."</li>
+				<li><code>codeName</code>: [string] The name of the code repository, project, library or release.</li>
+        <li><code>codeURL</code>: [string] The URL where the code repository, project, library or release can be found.</li>
+				<li><code>isGovernmentRepo</code>: [boolean] True or False. Is the code repository owned or managed by a federal agency?</li>
+				
 			</ul>
-			<li><code>exemptionText</code>: [string] A brief narrative explanation for the exception requested in the 'exemption' field.</li>
-			<li><code>updated</code>: [object] Dates that the project and metadata have been updated.
+		</li>
+			<li><code>date</code>: [object] A date object describing the release.
 				<ul>
-					<li><code>metadataLastUpdated</code>: [string] A date in YYYY-MM-DD or ISO 8601 format indicating when the metadata in this file was last updated.</li>
-					<li><code>lastCommit</code>: [string] A date in ISO 8601 format indicating when the last commit to the project repository was.</li>
-					<li><code>sourceCodeLastModified</code>: [string] A field intended for closed-source software and software outside of a VCS. The date in YYYY-MM-DD or ISO 8601 format that the source code or package was last updated.</li>
+					<li><code>created</code>: [string] The date the release was created, in YYYY-MM-DD or ISO 8601 format.</li>
+					<li><code>lastModified</code>: [string] The date the release was modified, in YYYY-MM-DD or ISO 8601 format.</li>
+					<li><code>metadataLastUpdated</code>: [string] The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format.</li>
 				</ul>
 			</li>
 		</ul>
@@ -127,16 +151,68 @@
 
 <p>We’ve created a <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code.json">sample code.json</a>.</p>
 
-<h2>Changelog</h2>
+<h2><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
+
+<h3>August 2017 - Version 2.0.0</h3>
+<p>This revision includes revisions to incorporate the open source measurement requirement, improvements and clarifications on previous versions of schema content.</p>
+<h4 id="added">Added</h4>
+
+<ul>
+<li>'openSourceMeasureType' - The source code policy requires that 20% of an agency's code inventory must be made available as open-source. In order to do so, agencies must (1) identify a method for measuring the 20% metric and (2) apply the measurement method to the total enterprise code inventory to establish a baseline. </li>
+
+<li>Start using "changelog.md" to track changes to the official schema file.</li>
+
+<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject.</li>
+
+<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement.</li>
+
+<li>'disclaimerText' - includes short, paragraph-long disclaimer language</li>
+
+<li>'disclaimerURL' - link to disclaimer language</li>
+
+<li>'laborHours' - number of hours involved in building the release.</li>
+
+<li>'relatedCodebase'  - array of related source code repositoties. </li>
+</ul>
+
+<h4 id="changed">Changed</h4>
+
+<ul>
+<li>'releases' - changed from 'projects' to reflect types of repositories that should be listed.</li>
+
+<li>'licenses' - changed license from a URL string to an object which includes a URL and a name.
+
+
+<ul>
+<li>'repositoryURL' - changed from 'repository' for consistency. </li>
+
+<li>'homepageURL' - changed from 'homepage' for consistency.</li>
+
+<li>'exemptionText' - now included within the 'permissions' object.</li>
+
+<li>'date' - changed from 'updated' object; removed metadataLastUpdated, lastCommit, and sourceCodeLastModified and replaced with created, lastModified, and metadataLastUpdated</li></ul>
+</li>
+</ul>
+
+<h4 id="removed">Removed</h4>
+
+<ul>
+<li>'openSourceProject'</li>
+
+<li>'governmentWideReuseProject' </li>
+
+<li>'exemption' - now included within the enumerated usageType options in the 'permissions' object.</li>
+</ul>
+
 <h3>December 2016 - Version 1.0.1</h3>
 <p>This revision includes minor tweaks that are aimed at clarifying certain fields and increasing the overall utility of the schema content.</p>
 <h4>Changes in v1.0.1</h4>
 <ul>
 	<li>'version': The first official iteration of the code.gov metadata schema will be version 1.0.1. Adding a version number to the schema makes it easier to track and manage changes between versions of the metadata schema.</li>
 
-	<li>‘organization’: The ‘organization’ field, which holds the name of the sub-agency responsible for a particular repository or project, is now optional. It has also been moved into the ‘projects’ object. This enables agencies to identify the appropriate organization that owns the repository within the agency.</li>
+	<li>‘organization’: The ‘organization’ field, which holds the name of the sub-agency responsible for a particular repository or release, is now optional. It has also been moved into the ‘releases’ object. This enables agencies to identify the appropriate organization that owns the repository within the agency.</li>
 
-	<li>‘projects’: This guide previously referred to a ‘project’ field in the metadata schema, while the sample code.json referred to the plural form ‘projects’. This guide has been updated to refer to the plural form ‘projects’.</li>
+	<li>‘releases’: This guide previously referred to a ‘release’ field in the metadata schema, while the sample code.json referred to the plural form ‘releases’. This guide has been updated to refer to the plural form ‘releases’.</li>
 
 	<li>‘repository’: The link to the open source repository will be considered a required field for all open source repositories. For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field is not required.</li>
 
