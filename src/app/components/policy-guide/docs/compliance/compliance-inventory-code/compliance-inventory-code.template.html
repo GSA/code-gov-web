@@ -3,11 +3,11 @@
 
 <p>Section <a pageScroll [routerLink]="['/policy-guide/policy/implementation']" href="#code-inventories-and-discovery">7.2</a> and <a pageScroll [routerLink]="['/policy-guide/policy/implementation']" href="#codegov">7.3</a> of the Source Code Policy require agencies to provide an inventory of their 'custom-developed code' to support government-wide reuse and make Federal open source code easier to find.</p>
 
-<p>Using these inventories, <a href="https://Code.gov">Code.gov</a> will provide a platform to find custom-developed source code including that released as open source software and that which isn't open source but is available for government-wide reuse. It will compile an aggregate source code inventory for the Federal government.</p>
+<p>Using these inventories, <a href="https://Code.gov">Code.gov</a> will provide a platform to search federally funded open source software and software available for government-wide reuse.</p>
 
 <h2>Publishing Your Agency's Inventory</h2>
 
-<p>Agencies are required publish their inventories using a standard metadata schema - a JSON file that they'll make available on their agency websites. Versions 1.0.0, 1.0.1, and 2.0.0. of the schema are now available. Agencies are strongly encouraged to use version 2.0.0 of the schema, which is described below. This version includes revisions that make your inventory much more useful and intuitive.</p>
+<p>Agencies are required to publish their inventories using a standard metadata schema - a JSON file that they'll make available on their agency websites. Versions 1.0.0, 1.0.1, and 2.0.0. of the schema are now available. Agencies are strongly encouraged to use version 2.0.0 of the schema, which is described below. This version includes revisions that make your inventory much more useful and intuitive. Versions 1.0.0 and 1.0.1 will be phased out at the end of 2017.</p>
 
 <p>Agencies should make the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">“code.json”</a> available in the root folder of their website (e.g., https://www.agency.gov/code.json). Code.gov will then retrieve these JSON files daily and compile them.</p>
 
@@ -104,7 +104,8 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <ul>
 	<li>Optional fields for release objects within <code>releases</code>: 
 		<ul>
-			<li><code>organization</code>: [string] The organization within the agency that the releases listed belong to. For example, "18F" or "Navy".</li>
+			<li><code>version</code>: [string] The version for this release. For example, "1.0.0".</li>
+      <li><code>organization</code>: [string] The organization within the agency that the releases listed belong to. For example, "18F" or "Navy".</li>
 			<li><code>status</code>: [string] The development status of the release
 				<ul>
 					<li><code>"Ideation"</code> - brainstorming phase.</li>
@@ -150,60 +151,6 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <h2>Example code.json file</h2>
 
 <p>We’ve created a <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">sample code.json</a>.</p>
-
-<h2><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
-
-<h3>August 2017 - Version 2.0.0</h3>
-<p>This revision includes revisions to incorporate the open source measurement requirement, improvements and clarifications on previous versions of schema content.</p>
-<h4 id="added">Added</h4>
-
-<ul>
-<li>'openSourceMeasureType' - The source code policy requires that 20% of an agency's code inventory must be made available as open-source. In order to do so, agencies must (1) identify a method for measuring the 20% metric and (2) apply the measurement method to the total enterprise code inventory to establish a baseline. </li>
-
-<li>Start using "changelog.md" to track changes to the official schema file.</li>
-
-<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject.</li>
-
-<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement.</li>
-
-<li>'disclaimerText' - includes short, paragraph-long disclaimer language</li>
-
-<li>'disclaimerURL' - link to disclaimer language</li>
-
-<li>'laborHours' - number of hours involved in building the release.</li>
-
-<li>'relatedCodebase'  - array of related source code repositoties. </li>
-</ul>
-
-<h4 id="changed">Changed</h4>
-
-<ul>
-<li>'releases' - changed from 'projects' to reflect types of repositories that should be listed.</li>
-
-<li>'licenses' - changed license from a URL string to an object which includes a URL and a name.
-
-
-<ul>
-<li>'repositoryURL' - changed from 'repository' for consistency. </li>
-
-<li>'homepageURL' - changed from 'homepage' for consistency.</li>
-
-<li>'exemptionText' - now included within the 'permissions' object.</li>
-
-<li>'date' - changed from 'updated' object; removed metadataLastUpdated, lastCommit, and sourceCodeLastModified and replaced with created, lastModified, and metadataLastUpdated</li></ul>
-</li>
-</ul>
-
-<h4 id="removed">Removed</h4>
-
-<ul>
-<li>'openSourceProject'</li>
-
-<li>'governmentWideReuseProject' </li>
-
-<li>'exemption' - now included within the enumerated usageType options in the 'permissions' object.</li>
-</ul>
-
 
 <h2><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
 
