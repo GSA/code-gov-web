@@ -7,6 +7,7 @@
   "releases": [
     {
       "name": "mygov",
+      "version": "1.0.0",
       "organization": "XYZ Department",
       "description": "A Platform for Connecting People and Government",
       "licenses": [

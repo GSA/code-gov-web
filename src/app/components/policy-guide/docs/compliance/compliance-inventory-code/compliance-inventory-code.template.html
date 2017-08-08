@@ -85,7 +85,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<code>laborHours</code>: [string] An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors.
 		</li>
 		<li>
-			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the release.
+			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the release that will be used for search and discoverability purposes.
 		</li>
 		<li>
 			<code>contact</code>: [object] Information about contacting the release.
@@ -161,19 +161,21 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <ul>
 <li>'openSourceMeasureType' - The source code policy requires that 20% of an agency's code inventory must be made available as open-source. In order to do so, agencies must (1) identify a method for measuring the 20% metric and (2) apply the measurement method to the total enterprise code inventory to establish a baseline. </li>
 
-<li>Start using "changelog.md" to track changes to the official schema file.</li>
+<li>Start using "changelog.md" to track changes to the official schema file</li>
 
-<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject.</li>
+<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject</li>
 
-<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement.</li>
+<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement</li>
 
 <li>'disclaimerText' - includes short, paragraph-long disclaimer language</li>
 
 <li>'disclaimerURL' - link to disclaimer language</li>
 
-<li>'laborHours' - number of hours involved in building the release.</li>
+<li>'laborHours' - number of hours involved in building the release</li>
 
-<li>'relatedCodebase'  - array of related source code repositoties. </li>
+<li>'relatedCodebase'  - array of related source code repositories </li>
+
+<li>'version'  - added versioning to releases </li>
 </ul>
 
 <h4 id="changed">Changed</h4>
