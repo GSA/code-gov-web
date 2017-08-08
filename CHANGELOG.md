@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - 'repositoryURL' - changed from 'repository' for consistency. 
  - 'homepageURL' - changed from 'homepage' for consistency.
  - 'exemptionText' - now included within the 'permissions' object.
-
+ - 'date' - changed from 'updated' object; removed metadataLastUpdated, lastCommit, and sourceCodeLastModified and replaced with created, lastModified, and metadataLastUpdated
 
 ### Removed
 - 'openSourceProject'
