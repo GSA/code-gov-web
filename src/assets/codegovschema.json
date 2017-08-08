@@ -43,6 +43,10 @@
             "type": "string",
             "description": "The name of the release."
           },
+          "version": {
+            "type": "string",
+            "description": "The version for this release. For example, '1.0.0'."
+          },
           "organization": {
             "type": "string",
             "description": "The organization within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
@@ -86,8 +90,8 @@
               },
               "exemptionText": {
                 "type": [
-                  "null",
-                  "string"
+                  "string",
+                  "null"
                 ],
                 "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for any exemption used."
               }
@@ -138,7 +142,7 @@
             "description": "A lowercase string with the name of the version control system in use on the project."
           },
           "repositoryURL": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri",
             "description": "The URL of the public project repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions."
           },
@@ -240,8 +244,8 @@
           "description",
           "laborHours",
           "tags",
-          "contact",
-          "date"
+          "contact"
+          
         ]
       },
       "additionalProperties": false

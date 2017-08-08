@@ -12,10 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Start using "changelog.md" to track changes to the official schema file.
 - 'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject.
 - 'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement.
-- 'disclaimerText' - includes short, paragraph-long disclaimer language
-- 'disclaimerURL' - link to disclaimer language
+- 'disclaimerText' - includes short, paragraph-long disclaimer language.
+- 'disclaimerURL' - link to disclaimer language.
 - 'laborHours' - number of hours involved in building the release.
-- 'relatedCodebase'  - array of related source code repositoties. 
+- 'relatedCodebase'  - array of related source code repositories. 
+- 'version' - added versioning to releases.
 
 ### Changed
 - 'releases' - changed from 'projects' to reflect types of repositories that should be listed.
@@ -23,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - 'repositoryURL' - changed from 'repository' for consistency. 
  - 'homepageURL' - changed from 'homepage' for consistency.
  - 'exemptionText' - now included within the 'permissions' object.
- - 'date' - changed from 'updated' object; removed metadataLastUpdated, lastCommit, and sourceCodeLastModified and replaced with created, lastModified, and metadataLastUpdated
+ - 'date' - changed from 'updated' object; removed metadataLastUpdated, lastCommit, and sourceCodeLastModified and replaced with created, lastModified, and metadataLastUpdated.
 
 ### Removed
 - 'openSourceProject'
