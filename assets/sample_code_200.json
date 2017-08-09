@@ -44,13 +44,15 @@
       "laborHours": 1000,
       "relatedCodebase": [
         {
-          "codeName": "Code.gov Web",
-          "codeURL": "https://github.com/presidential-innovation-fellows/code-gov-web",
-          "isGovernmentRepo": true
-        },
-        {
           "codeName": "Code.gov API",
           "codeURL": "https://github.com/presidential-innovation-fellows/code-gov-api",
+          "isGovernmentRepo": true
+        }
+      ],
+      "reusedCodebase": [
+        {
+          "codeName": "US web design standards",
+          "codeURL": "https://github.com/18F/web-design-standards",
           "isGovernmentRepo": true
         }
       ],

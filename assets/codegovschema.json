@@ -17,7 +17,7 @@
             "linesOfCode",
             "modules",
             "cost",
-            "releases",
+            "projects",
             "systems",
             "other"
           ],
@@ -49,37 +49,38 @@
           },
           "organization": {
             "type": "string",
-            "description": "The organization within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
+            "description": "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
           },
           "description": {
             "type": "string",
             "description": "A one- or two-sentence description of the release."
           },
-          "licenses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "URL": {
-                  "type": "string",
-                  "format": "uri",
-                  "description": "The URL of the release license, if available. null should be used if not."
-                },
-                "name": {
-                  "type": "string",
-                  "description": "An abbreviation for the name of the type license. For example, 'CC0' or 'MIT'."
-                }
-              }
-            }
-          },
+
           "permissions": {
             "type": "object",
             "properties": {
+              "licenses": {
+                "type": ["array", "null"],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "URL": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "The URL of the release license, if available. If not, null should be used."
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "An abbreviation for the name of the license. For example, 'CC0' or 'MIT'."
+                    }
+                  }
+                }
+              },
               "usageType": {
                 "type": "string",
-                "description": "A list of enumerated values which describes the usage or license permissions for the release.",
+                "description": "A list of enumerated values which describes the usage permissions for the release.",
                 "enum": [
-                  "open",
+                  "openSource",
                   "governmentWideReuse",
                   "exemptByLaw",
                   "exemptByNationalSecurity",
@@ -93,15 +94,16 @@
                   "string",
                   "null"
                 ],
-                "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for any exemption used."
+                "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
               }
-            }
+            },
+            "required":"licenses"
           },
           "tags": {
             "type": "array",
             "items": {
               "type": "string",
-              "description": "An array of keywords describing the release to be used for search and discoverability purposes."
+              "description": "An array of keywords that will be helpful in discovering and searching for the release."
             }
           },
           "contact": {
@@ -124,27 +126,30 @@
                 "type": "string",
                 "description": "A phone number for the point of contact for the release."
               }
-            }
+            },
+            "required": "email"
           },
           "status": {
             "type": "string",
             "description": "The development status of the release.",
             "enum": [
               "Ideation",
+              "Development",
               "Alpha",
               "Beta",
+              "Release Candidate",
               "Production",
               "Archival"
             ]
           },
           "vcs": {
             "type": "string",
-            "description": "A lowercase string with the name of the version control system in use on the project."
+            "description": "A lowercase string with the name of the version control system that is being used for the release. For example, 'git'."
           },
           "repositoryURL": {
             "type": ["string", "null"],
             "format": "uri",
-            "description": "The URL of the public project repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions."
+            "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
           },
           "homepageURL": {
             "type": "string",
@@ -174,11 +179,11 @@
           },
           "laborHours": {
             "type": "number",
-            "description": "An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors."
+            "description": "An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors."
           },
           "relatedCodebase": {
             "type": "array",
-            "description": "An array of forked, cloned, or other otherwise reused source code repositories.",
+            "description": "An array of affiliated repositories that may be a part of the same project. For example,  relatedCodebase(s) for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.",
             "items": {
               "type": "object",
               "properties": {
@@ -190,6 +195,28 @@
                   "type": "string",
                   "format": "uri",
                   "description": "The URL where the code repository, project, library or release can be found."
+                },
+                "isGovermentRepo": {
+                  "type": "boolean",
+                  "description": "True or False. Is the code repository owned or managed by a federal agency?"
+                }
+              }
+            }
+          },
+          "reusedCodebase": {
+            "type": "array",
+            "description": "An array of forked, cloned, or otherwise reused source code repositories that have been incorporated into this release.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "codeName": {
+                  "type": "string",
+                  "description": "The name of the reused code repository."
+                },
+                "codeURL": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL where the code repository, library or release can be found."
                 },
                 "isGovermentRepo": {
                   "type": "boolean",
