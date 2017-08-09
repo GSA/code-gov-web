@@ -15,12 +15,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 'disclaimerText' - includes short, paragraph-long disclaimer language.
 - 'disclaimerURL' - link to disclaimer language.
 - 'laborHours' - number of hours involved in building the release.
-- 'relatedCodebase'  - array of related source code repositories. 
+- 'relatedCode'  - array of related source code repositories. 
+- 'reusedCode'  - array of government software used in the release. 
 - 'version' - added versioning to releases.
 
 ### Changed
 - 'releases' - changed from 'projects' to reflect types of repositories that should be listed.
-- 'licenses' - changed license from a URL string to an object which includes a URL and a name.
+- 'licenses' - changed license from a URL string to an object which includes a URL and a name. Now part of 'permissions' object
  - 'repositoryURL' - changed from 'repository' for consistency. 
  - 'homepageURL' - changed from 'homepage' for consistency.
  - 'exemptionText' - now included within the 'permissions' object.
