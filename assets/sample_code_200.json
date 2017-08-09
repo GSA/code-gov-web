@@ -49,11 +49,11 @@
           "isGovernmentRepo": true
         }
       ],
-      "reusedCodebase": [
+      "govSoftwareUse": [
         {
-          "codeName": "US web design standards",
-          "codeURL": "https://github.com/18F/web-design-standards",
-          "isGovernmentRepo": true
+          "name": "US web design standards",
+          "URL": "https://github.com/18F/web-design-standards"
+          
         }
       ],
       "partners": [

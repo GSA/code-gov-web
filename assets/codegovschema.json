@@ -203,25 +203,22 @@
               }
             }
           },
-          "reusedCodebase": {
+          "govSoftwareUse": {
             "type": "array",
-            "description": "An array of forked, cloned, or otherwise reused source code repositories that have been incorporated into this release.",
+            "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software. For example: US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
             "items": {
               "type": "object",
               "properties": {
-                "codeName": {
+                "name": {
                   "type": "string",
-                  "description": "The name of the reused code repository."
+                  "description": "The name of the software used in this release."
                 },
-                "codeURL": {
+                "URL": {
                   "type": "string",
                   "format": "uri",
-                  "description": "The URL where the code repository, library or release can be found."
-                },
-                "isGovermentRepo": {
-                  "type": "boolean",
-                  "description": "True or False. Is the code repository owned or managed by a federal agency?"
+                  "description": "The URL where the software can be found."
                 }
+                
               }
             }
           },
