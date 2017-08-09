@@ -26,17 +26,17 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <h4>Required</h4>
 
 <ul>
-	<li><code>version</code>: [string] The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0"</li>
+	<li><code>version</code>: [string] The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0."</li>
   <li><code>measurementType</code>: [object] An object containing description of the open source measurement method.
   <ul>
     <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
     <ul>
-      <li><code>linesOfCode</code>: Source lines of code</li>
-				<li><code>modules</code>: Number of self-contained modules</li>
-        <li><code>cost</code>: Cost of software development releases</li>
-        <li><code>releases</code>: Number of software projects</li>
-        <li><code>systems</code>: System certification and accreditation boundaries</li>
-        <li><code>other</code>: An other measurement method, not referenced above</li>
+      <li><code>linesOfCode</code>: Source lines of code.</li>
+				<li><code>modules</code>: Number of self-contained modules.</li>
+        <li><code>cost</code>: Cost of software development.</li>
+        <li><code>projects</code>: Number of software projects.</li>
+        <li><code>systems</code>: System certification and accreditation boundaries.</li>
+        <li><code>other</code>: Another measurement method not referenced above.</li>
 			</ul>
     </li>
     </ul>		
@@ -44,31 +44,32 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
     <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>	
 			</ul>
   </li>
-	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD"</li>
+	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD."</li>
 	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.</li>
 	<ul>
 		<li>
 			<code>name</code>: [string] The name of the release.
 		</li>
 		<li>
-			<code>repositoryURL</code>: [string] The URL of the public project repository for open source repositories. **This field is not required for repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions.
+			<code>repositoryURL</code>: [string] The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions).
 		</li>
 		<li>
 			<code>description</code>: [string] A one- or two-sentence description of the release.
 		</li>
-		<li>
-			<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. <code>null</code> should be used if not.
-      <ul>
-        <li><code>URL</code>: [string] The URL of the release license, if available.</li> 
-        <li><code>name</code>: [string] An abbreviation for the name of the type license. For example, 'CC0' or 'MIT'.</li> 
-      </ul>
-		</li>
+		
     <li><code>permissions</code>: [object] An object containing description of the usage/restrictions regarding the release.
   <ul>
-    <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage or license permissions for the release.
+    <li>
+			<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. If not, <code>null</code> should be used.
+      <ul>
+        <li><code>URL</code>: [string] The URL of the release license, if available.</li> 
+        <li><code>name</code>: [string] An abbreviation for the name of the license. For example, 'CC0' or 'MIT.'</li> 
+      </ul>
+		</li>
+    <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage permissions for the release.
     <ul>
-      <li><code>open</code>: Open source</li>
-				<li><code>governmentWideReuse</code>: Government-wide reuse</li>
+      <li><code>openSource</code>: Open source</li>
+				<li><code>governmentWideReuse</code>: Government-wide reuse.</li>
         <li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
         <li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
         <li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
@@ -78,22 +79,19 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
     </li>
     </ul>		
     <ul>
-    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for any exemption used.</li>	
+    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</li>	
 			</ul>
   </li>
     <li>
-			<code>laborHours</code>: [string] An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors.
+			<code>laborHours</code>: [string] An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
 		</li>
 		<li>
-			<code>tags</code>: [array] A list of string alphanumeric keywords that identify the release that will be used for search and discoverability purposes.
-		</li>
+			<code>tags</code>: [array] An array of keywords that will be helpful in discovering and searching for the release.</li>
 		<li>
 			<code>contact</code>: [object] Information about contacting the release.
 			<ul>
 				<li><code>email</code>: [string] An email address to contact the release.</li>
-        <li><code>name</code>: [string] The name of a contact or department for the release</li>
-				<li><code>URL</code>: [string] The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'</li>
-				<li><code>phone</code>: [string] The phone number to contact a release.</li>
+        
 			</ul>
 		</li>
 	</ul>
@@ -104,25 +102,34 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <ul>
 	<li>Optional fields for release objects within <code>releases</code>: 
 		<ul>
-			<li><code>version</code>: [string] The version for this release. For example, "1.0.0".</li>
-      <li><code>organization</code>: [string] The organization within the agency that the releases listed belong to. For example, "18F" or "Navy".</li>
-			<li><code>status</code>: [string] The development status of the release
+			<li><code>version</code>: [string] The version for this release. For example, "1.0.0."</li>
+      <li><code>organization</code>: [string] The organization or component within the agency that the releases listed belong to. For example, "18F" or "Navy."</li>
+			<li><code>status</code>: [string] The development status of the release.
 				<ul>
 					<li><code>"Ideation"</code> - brainstorming phase.</li>
-					<li><code>"Alpha"</code> - initial prototyping phase and internal testing.</li>
+					<li><code>"Development"</code> - a release is still in development.</li>
+          <li><code>"Alpha"</code> - initial prototyping phase and internal testing.</li>
 					<li><code>"Beta"</code> - a release is being tested in public.</li>
+          <li><code>"Release Candidate"</code> - a release is nearly ready for production.</li>
 					<li><code>"Production"</code> - finished release, with development and maintenance ongoing.</li>
 					<li><code>"Archival"</code> - finished release, but no longer actively maintained.</li>
 				</ul>
 			</li>
-			<li><code>vcs</code>: [string] A lowercase string with the name of the Version Control System in use on the release.</li>
-			<li><code>homepageURL</code>: [string] The URL of the public release homepage</li>
+			<li><code>vcs</code>: [string] A lowercase string with the name of the version control system that is being used for the release. For example, 'git.'</li>
+			<li><code>homepageURL</code>: [string] The URL of the public release homepage.</li>
 			<li><code>downloadURL</code>: [string] The URL where a distribution of the release can be found.</li>
 			<li><code>disclaimerText</code>: [string] Short paragraph that includes disclaimer language to accompany the release.</li>
       <li><code>disclaimerURL</code>: [string] The URL where disclaimer language regarding the release can be found.</li>
       
       <li><code>languages</code>: [array] A list of strings with the names of the programming languages in use on the release.</li>
-		
+		  <li>
+			<code>contact</code>: [object] Information about contacting the release.
+			<ul>
+        <li><code>name</code>: [string] The name of a contact or department for the release.</li>
+				<li><code>URL</code>: [string] The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'.</li>
+				<li><code>phone</code>: [string] The phone number to contact a release.</li>
+			</ul>
+		</li>
 			<li><code>partners</code>: [array] An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.
 		  		<ul>
 		  			<li><code>name</code>: [string] The acronym describing the partner agency.</li>
@@ -130,7 +137,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 		  		</ul>
 		  	</li>
 			<li>
-			<code>relatedCodebase</code>: [array] An array of forked, cloned, or other otherwise reused source code repositories.
+			<code>relatedCode</code>: [array] An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.
 			<ul>
 				<li><code>codeName</code>: [string] The name of the code repository, project, library or release.</li>
         <li><code>codeURL</code>: [string] The URL where the code repository, project, library or release can be found.</li>
@@ -138,6 +145,16 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 				
 			</ul>
 		</li>
+      <li>
+			<code>reusedCode</code>: [array] An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example: US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.
+			<ul>
+				<li><code>name</code>: [string] The name of the software used in this release.</li>
+        <li><code>URL</code>: [string] The URL where the software can be found.</li>
+				
+				
+			</ul>
+		</li>
+      
 			<li><code>date</code>: [object] A date object describing the release.
 				<ul>
 					<li><code>created</code>: [string] The date the release was created, in YYYY-MM-DD or ISO 8601 format.</li>
@@ -161,19 +178,20 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <ul>
 <li>'openSourceMeasureType' - The source code policy requires that 20% of an agency's code inventory must be made available as open-source. In order to do so, agencies must (1) identify a method for measuring the 20% metric and (2) apply the measurement method to the total enterprise code inventory to establish a baseline. </li>
 
-<li>Start using "changelog.md" to track changes to the official schema file</li>
+<li>Start using "changelog.md" to track changes to the official schema file.</li>
 
-<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject</li>
+<li>'permissions' - includes details about usage/licensing, replaces the openSourceProject/governmentWideReuseProject.</li>
 
-<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement</li>
+<li>'measurementType' - agencies can choose from a list of enumerated descriptions of how they measure the 20% requirement.</li>
 
-<li>'disclaimerText' - includes short, paragraph-long disclaimer language</li>
+<li>'disclaimerText' - includes short, paragraph-long disclaimer language.</li>
 
-<li>'disclaimerURL' - link to disclaimer language</li>
+<li>'disclaimerURL' - link to disclaimer language.</li>
 
-<li>'laborHours' - number of hours involved in building the release</li>
+<li>'laborHours' - number of hours involved in building the release.</li>
 
-<li>'relatedCodebase'  - array of related source code repositories </li>
+<li>'relatedCode'  - array of related source code repositories.</li>
+<li>'reusedCode'  - array of government software used in the release.</li>
 
 <li>'version'  - added versioning to releases </li>
 </ul>
@@ -184,7 +202,6 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <li>'releases' - changed from 'projects' to reflect types of repositories that should be listed.</li>
 
 <li>'licenses' - changed license from a URL string to an object which includes a URL and a name.
-
 
 <ul>
 <li>'repositoryURL' - changed from 'repository' for consistency. </li>

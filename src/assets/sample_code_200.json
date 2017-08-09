@@ -10,13 +10,14 @@
       "version": "1.0.0",
       "organization": "XYZ Department",
       "description": "A Platform for Connecting People and Government",
-      "licenses": [
+      
+      "permissions": {
+        "licenses": [
         {
           "URL": "https://path.to/license",
           "name": "CC0"
         }
       ],
-      "permissions": {
         "usageType": "open",
         "exemptionText": null
       },
@@ -42,16 +43,18 @@
         "python"
       ],
       "laborHours": 1000,
-      "relatedCodebase": [
+      "relatedCode": [
         {
-          "codeName": "Code.gov Web",
-          "codeURL": "https://github.com/presidential-innovation-fellows/code-gov-web",
-          "isGovernmentRepo": true
-        },
+          "name": "Code.gov API",
+          "URL": "https://github.com/presidential-innovation-fellows/code-gov-api"
+   
+        }
+      ],
+      "reusedCode": [
         {
-          "codeName": "Code.gov API",
-          "codeURL": "https://github.com/presidential-innovation-fellows/code-gov-api",
-          "isGovernmentRepo": true
+          "name": "US web design standards",
+          "URL": "https://github.com/18F/web-design-standards"
+          
         }
       ],
       "partners": [
