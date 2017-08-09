@@ -181,31 +181,28 @@
             "type": "number",
             "description": "An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors."
           },
-          "relatedCodebase": {
+          "relatedCode": {
             "type": "array",
-            "description": "An array of affiliated repositories that may be a part of the same project. For example,  relatedCodebase(s) for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.",
+            "description": "An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.",
             "items": {
               "type": "object",
               "properties": {
-                "codeName": {
+                "name": {
                   "type": "string",
                   "description": "The name of the code repository, project, library or release."
                 },
-                "codeURL": {
+                "URL": {
                   "type": "string",
                   "format": "uri",
                   "description": "The URL where the code repository, project, library or release can be found."
-                },
-                "isGovermentRepo": {
-                  "type": "boolean",
-                  "description": "True or False. Is the code repository owned or managed by a federal agency?"
                 }
+                
               }
             }
           },
-          "govSoftwareUse": {
+          "reusedCode": {
             "type": "array",
-            "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software. For example: US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
+            "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example, US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
             "items": {
               "type": "object",
               "properties": {
@@ -269,7 +266,6 @@
           "laborHours",
           "tags",
           "contact"
-          
         ]
       },
       "additionalProperties": false
