@@ -9,20 +9,20 @@ jobs:
           name: Add Node Module's bin to PATH
           command: echo "export PATH=`pwd`/node_modules/.bin:$PATH" >> $BASH_ENV
       - restore_cache:
-          key: code-gov-web-{{ checksum "yarn.lock" }}
+          key: code-gov-web-{{ checksum "package.json" }}
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: npm install
       - save_cache:
-          key: code-gov-web-{{ checksum "yarn.lock" }}
+          key: code-gov-web-{{ checksum "package.json" }}
           paths:
-            - "~/.cache/yarn"
+            - code-gov-web/node_modules
       - run:
           name: Run Tests
-          command: yarn test
+          command: npm test
       - run:
           name: Install CodeClimate Test Reporter
-          command: yarn add codeclimate-test-reporter
+          command: npm install codeclimate-test-reporter
       - run:
           name: Run CodeClimate Test Reporter
           command: codeclimate-test-reporter < coverage/lcov.info
