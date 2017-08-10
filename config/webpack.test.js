@@ -17,6 +17,7 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
  * Webpack Constants
  */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
+const API_URL = 'http://localhost:3001/api/0.1/';
 
 /**
  * Webpack configuration
@@ -197,6 +198,7 @@ module.exports = function (options) {
        */
       // NOTE: when adding more properties make sure you include them in custom-typings.d.ts
       new DefinePlugin({
+        'API_URL': JSON.stringify(API_URL),
         'ENV': JSON.stringify(ENV),
         'HMR': false,
         'process.env': {

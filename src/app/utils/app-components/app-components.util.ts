@@ -1,9 +1,15 @@
+export * from '../../components/autocomplete';
+export * from '../../components/autocomplete-result';
 export * from '../../components/app';
 export * from '../../components/four-oh-four';
 export * from '../../components/home';
 export * from '../../components/home/banner-art';
 export * from '../../components/modal';
 export * from '../../components/privacy-policy';
+export * from '../../components/repo-list';
+export * from '../../components/repo-list-item';
+export * from '../../components/repos-search';
+export * from '../../components/search-results';
 export * from '../../components/sidebar';
 export * from '../../components/subnav';
 

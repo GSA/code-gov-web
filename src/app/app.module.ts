@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
 
@@ -31,25 +31,33 @@ import { AppComponent } from './utils/app-components';
 import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
+import { AgencyApiService } from './services/agency-api';
 import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
+import { RepoService } from './services/repo';
 import { ReposService } from './services/repos';
+import { ElasticsearchSearchService, LunrSearchService, SearchService } from './services/search';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
 import { StatusService } from './services/status';
 import { MonacoEditorService } from './components/monaco-editor';
+import { ElasticsearchTermService, LunrTermService, TermService } from './services/term';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AgencyService,
+  AgencyApiService,
   MobileService,
   ModalService,
+  MonacoEditorService,
+  RepoService,
   ReposService,
+  { provide: SearchService, useClass: LunrSearchService },
   SeoService,
   StateService,
   StatusService,
-  MonacoEditorService
+  { provide: TermService, useClass: LunrTermService },
 ];
 
 /**
@@ -62,6 +70,7 @@ const APP_PROVIDERS = [
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    InfiniteScrollModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
     Ng2PageScrollModule.forRoot(),
     Ng2SimplePageScrollModule.forRoot(),
