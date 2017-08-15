@@ -1,0 +1,86 @@
+<div class="block block--white">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <h2>Code.json Validator</h2>
+
+      <p>Please enter your code.json file below in order to validate it correctly meets the specification.</p>
+    </div>
+  </div>
+
+  <div class="schema-validator__tool">
+    <section class="schema-validator__input">
+      <header class="usa-grid">
+        <div>
+          <div class="usa-width-one-third">
+            <h3>Code.json</h3>
+          </div>
+          <div class="usa-width-two-thirds">
+            <form>
+              <label for="version">Version</label>
+              <select
+                  id="version"
+                  name="version"
+                  [(ngModel)]="version">
+                <option value="2.0.0">2.0.0</option>
+                <option value="1.0.1">1.0.1</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </header>
+      <div *ngIf="version === '2.0.0'">
+        <monaco-editor
+            [text]="codeJson"
+            fileName="version-2.0.0.json"
+            [(editor)]="editor"
+            [(model)]="model"
+            [(monaco)]="monaco">
+        </monaco-editor>
+        <monaco-validator
+            [errors]="errors"
+            (onClickError)="scrollToError($event)">
+        </monaco-validator>
+      </div>
+      <div *ngIf="version === '1.0.1'">
+        <monaco-editor
+            [text]="codeJson"
+            fileName="version-1.0.1.json"
+            [(editor)]="editor"
+            [(model)]="model"
+            [(monaco)]="monaco">
+        </monaco-editor>
+        <monaco-validator
+            [errors]="errors"
+            (onClickError)="scrollToError($event)">
+        </monaco-validator>
+      </div>
+    </section>
+
+    <!-- <section class="schema-validator__messages" *ngIf="codeJson.length">
+      <header>
+        <h3>Messages</h3>
+      </header>
+
+      <table *ngIf="errors?.length">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Error</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let error of errors">
+            <td>{{error.dataPath}}</td>
+            <td>{{error.message}}</td>
+            <td>{{error.data}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p *ngIf="!errors?.length">
+        Valid code.json!
+      </p>
+    </section> -->
+  </div>
+</div>

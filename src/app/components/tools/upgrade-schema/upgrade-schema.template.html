@@ -1,0 +1,83 @@
+<div class="upgrade-schema block block--white">
+  <div class="usa-grid">
+    <div class="usa-width-one-whole">
+      <h2>Code.json Upgrader</h2>
+
+      <p>Please enter your version 1.0.1 code.json file below in order to upgrade it to 2.0.0.</p>
+    </div>
+  </div>
+
+  <div class="upgrade-schema__editors">
+    <div class="usa-grid">
+      <section
+          class="upgrade-schema__editor upgrade-schema__before-editor l-block--small usa-width-one-whole"
+          [ngClass]="{ 'is-minimized': isBeforeMinimized }">
+        <header class="usa-grid">
+          <div>
+            <div class="usa-width-two-thirds">
+              <div
+                  class="schema__minimize-button fa"
+                  [ngClass]="{ 'fa-plus-square-o': isBeforeMinimized, 'fa-minus-square-o': !isBeforeMinimized }"
+                  (click)="toggleBeforeMinimized()"></div>
+              <h3>Code.json v1.0.1</h3>
+            </div>
+            <div class="usa-width-one-third">
+              <form>
+                <button
+                    class="usa-button usa-button-small"
+                    [ngClass]="{ 'usa-button-disabled': !isValidBeforeJson() }"
+                    [disabled]="!isValidBeforeJson()"
+                    (click)="upgradeContent()">
+                  Upgrade
+                </button>
+              </form>
+            </div>
+          </div>
+        </header>
+        <div class="upgrade-schema__editor-body">
+          <monaco-editor
+              fileName="before-1.0.1.json"
+              [text]="beforeText"
+              [(editor)]="beforeEditor">
+          </monaco-editor>
+        </div>
+        <!-- <textarea [ngModel]="codeJson" (ngModelChange)="setCodeJson($event)"></textarea> -->
+      </section>
+
+      <section
+          class="upgrade-schema__editor upgrade-schema__after-editor l-block--small usa-width-one-whole"
+          [ngClass]="{ 'is-minimized': isAfterMinimized }">
+        <header class="usa-grid">
+          <div>
+            <div class="usa-width-two-thirds">
+              <div
+                  class="schema__minimize-button fa"
+                  [ngClass]="{ 'fa-plus-square-o': isAfterMinimized, 'fa-minus-square-o': !isAfterMinimized }"
+                  (click)="toggleAfterMinimized()"></div>
+              <h3>Code.json v2.0.0</h3>
+            </div>
+            <div class="usa-width-one-third">
+              <form>
+                <button class="usa-button usa-button-small upgrade-schema__copy-button">Copy to Clipboard</button>
+              </form>
+            </div>
+          </div>
+        </header>
+        <div class="upgrade-schema__editor-body">
+          <monaco-editor
+              [(editor)]="afterEditor"
+              fileName="after-2.0.0.json"
+              [(editor)]="afterEditor"
+              [(model)]="afterModel"
+              [(monaco)]="monaco">
+          </monaco-editor>
+          <monaco-validator
+              [errors]="errors"
+              (onClickError)="scrollToError($event)">
+          </monaco-validator>
+        </div>
+        <!-- <textarea [ngModel]="upgradedCodeJson"></textarea> -->
+      </section>
+    </div>
+  </div>
+</div>

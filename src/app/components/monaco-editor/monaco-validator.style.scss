@@ -1,0 +1,23 @@
+@import '../../../styles/base/all';
+
+.monaco-validator {
+  border-top: 1px solid $color-gray-lighter;
+  height: 192px;
+  overflow: scroll;
+
+  h4 {
+    span {
+      font-size: 0.8em;
+    }
+  }
+
+  ul {
+    font-weight: 500;
+    list-style: none;
+    padding-top: 1rem;
+  }
+
+  .error__line-number {
+    color: $color-gray;
+  }
+}

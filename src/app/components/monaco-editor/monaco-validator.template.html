@@ -1,0 +1,11 @@
+<div class="monaco-validator">
+  <h4>Problems <span *ngIf="errors.length > 0">({{errors.length}})</span></h4>
+  <p *ngIf="errors.length === 0">
+    No errors found!
+  </p>
+  <ul *ngIf="errors.length > 0">
+    <li *ngFor="let error of errors">
+      <a class="error" (click)="scrollToError(error)">{{error.options.hoverMessage[0].value}} <span class="error__line-number">({{error.startMarker.position.lineNumber}}, {{error.startMarker.position.column}})</span></a>
+    </li>
+  </ul>
+</div>

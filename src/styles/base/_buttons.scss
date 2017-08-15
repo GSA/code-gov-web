@@ -7,6 +7,11 @@ $button-secondary-color-hover: $brand-purple-dark;
 $button-tertiary-color: $brand-blue-gray;
 $button-tertiary-color-hover: #323A45;
 
+.usa-button.usa-button-small {
+  font-size: 0.8em;
+  padding: 0.6rem 1.2rem;
+}
+
 .button {
 
 }

@@ -1,0 +1,8 @@
+@import '../../../styles/base/all';
+
+.monaco-editor {
+  border: 1px solid $color-gray-lighter;
+  height: 480px;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
