@@ -1,0 +1,57 @@
+@import '../../../../styles/base/all';
+
+.upgrade-schema {
+  header {
+    padding: 1.5rem;
+
+    h3 {
+      display: inline-block;
+      margin: 0;
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    form {
+      text-align: end;
+
+      button {
+        margin: 8.5px 0;
+      }
+    }
+  }
+
+  .schema__minimize-button {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  .upgrade-schema__editor-body {
+    transition: 1s all;
+    overflow: hidden;
+    height: 480px;
+    opacity: 1;
+  }
+
+  .upgrade-schema__after-editor {
+    .upgrade-schema__editor-body {
+      height: 672px;
+    }
+  }
+
+  .is-minimized {
+    .upgrade-schema__editor-body {
+      height: 0;
+      opacity: 0;
+    }
+  }
+}
+
+.upgrade-schema__editors {
+  section {
+    border-top: 1px solid $color-gray-lighter;
+  }
+
+  & > .usa-grid {
+    padding: 0;
+  }
+}

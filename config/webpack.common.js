@@ -46,7 +46,10 @@ module.exports = function (options) {
     to: 'assets',
   }, {
     from: 'src/meta',
-    to: ''
+    to: '',
+  }, {
+    from: 'node_modules/monaco-editor/min/vs',
+    to: 'vs',
   }];
   if (isProd) copyPluginOptions.push({ from: 'config/CNAME' })
 
@@ -238,6 +241,7 @@ module.exports = function (options) {
     node: {
       global: true,
       crypto: 'empty',
+      fs: 'empty',
       process: isProd ? false : true,
       module: false,
       clearImmediate: false,

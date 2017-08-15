@@ -1,0 +1,20 @@
+<div class="block block--light l-block--medium tools">
+  <div class="usa-grid">
+    <sidebar>
+      <sidebar-menu-text>Tools</sidebar-menu-text>
+      <sidebar-title>Tools</sidebar-title>
+      <sidebar-content>
+        <li>
+          <a toggle-menu routerLink="/tools/schema-validator" routerLinkActive="usa-current">Schema Validator</a>
+        </li>
+        <li>
+          <a toggle-menu routerLink="/tools/upgrade-schema" routerLinkActive="usa-current">Upgrade Schema</a>
+        </li>
+      </sidebar-content>
+    </sidebar>
+
+    <div class="tool">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

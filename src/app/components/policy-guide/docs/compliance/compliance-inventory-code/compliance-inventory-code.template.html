@@ -39,9 +39,9 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
         <li><code>other</code>: Another measurement method not referenced above.</li>
 			</ul>
     </li>
-    </ul>		
+    </ul>
     <ul>
-    <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>	
+    <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>
 			</ul>
   </li>
 	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual. For example "GSA" or "DOD."</li>
@@ -56,14 +56,14 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 		<li>
 			<code>description</code>: [string] A one- or two-sentence description of the release.
 		</li>
-		
+
     <li><code>permissions</code>: [object] An object containing description of the usage/restrictions regarding the release.
   <ul>
     <li>
 			<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. If not, <code>null</code> should be used.
       <ul>
-        <li><code>URL</code>: [string] The URL of the release license, if available.</li> 
-        <li><code>name</code>: [string] An abbreviation for the name of the license. For example, 'CC0' or 'MIT.'</li> 
+        <li><code>URL</code>: [string] The URL of the release license, if available.</li>
+        <li><code>name</code>: [string] An abbreviation for the name of the license. For example, 'CC0' or 'MIT.'</li>
       </ul>
 		</li>
     <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage permissions for the release.
@@ -77,9 +77,9 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
         <li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
 			</ul>
     </li>
-    </ul>		
+    </ul>
     <ul>
-    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</li>	
+    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</li>
 			</ul>
   </li>
     <li>
@@ -91,7 +91,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<code>contact</code>: [object] Information about contacting the release.
 			<ul>
 				<li><code>email</code>: [string] An email address to contact the release.</li>
-        
+
 			</ul>
 		</li>
 	</ul>
@@ -100,7 +100,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <h4>Optional</h4>
 
 <ul>
-	<li>Optional fields for release objects within <code>releases</code>: 
+	<li>Optional fields for release objects within <code>releases</code>:
 		<ul>
 			<li><code>version</code>: [string] The version for this release. For example, "1.0.0."</li>
       <li><code>organization</code>: [string] The organization or component within the agency that the releases listed belong to. For example, "18F" or "Navy."</li>
@@ -120,7 +120,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<li><code>downloadURL</code>: [string] The URL where a distribution of the release can be found.</li>
 			<li><code>disclaimerText</code>: [string] Short paragraph that includes disclaimer language to accompany the release.</li>
       <li><code>disclaimerURL</code>: [string] The URL where disclaimer language regarding the release can be found.</li>
-      
+
       <li><code>languages</code>: [array] A list of strings with the names of the programming languages in use on the release.</li>
 		  <li>
 			<code>contact</code>: [object] Information about contacting the release.
@@ -142,7 +142,7 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 				<li><code>codeName</code>: [string] The name of the code repository, project, library or release.</li>
         <li><code>codeURL</code>: [string] The URL where the code repository, project, library or release can be found.</li>
 				<li><code>isGovernmentRepo</code>: [boolean] True or False. Is the code repository owned or managed by a federal agency?</li>
-				
+
 			</ul>
 		</li>
       <li>
@@ -150,11 +150,11 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 			<ul>
 				<li><code>name</code>: [string] The name of the software used in this release.</li>
         <li><code>URL</code>: [string] The URL where the software can be found.</li>
-				
-				
+
+
 			</ul>
 		</li>
-      
+
 			<li><code>date</code>: [object] A date object describing the release.
 				<ul>
 					<li><code>created</code>: [string] The date the release was created, in YYYY-MM-DD or ISO 8601 format.</li>
@@ -168,6 +168,30 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 <h2>Example code.json file</h2>
 
 <p>We’ve created a <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">sample code.json</a>.</p>
+
+<h2>Tools</h2>
+<ul>
+	<li>
+		<a routerLink="/policy-guide/docs/compliance/inventory-code/tools/validate-schema">
+			Schema Validator
+		</a>
+		<p>
+			A tool for validating your code.json against either the v1.0.1 or v2.0.0 schemas. After entering
+			in your code.json, it will list and highlight issues and provide a full featured code editor for
+			making changes to the file.
+		</p>
+	</li>
+	<li>
+		<a routerLink="/policy-guide/docs/compliance/inventory-code/tools/upgrade-schema">
+			v1.0.1 to v2.0.0 Schema Upgrader
+		</a>
+		<p>
+			The upgrader takes a valid v1.0.1 code.json and performs as many automatic upgrades as it can. It
+			also adds additional fields to the JSON to serve as templates for adding more information about
+			your repositories.
+		</p>
+	</li>
+</ul>
 
 <h2><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
 

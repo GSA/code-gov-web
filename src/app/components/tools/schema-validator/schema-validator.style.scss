@@ -1,0 +1,39 @@
+@import '../../../../styles/base/all';
+
+.schema-validator {
+
+}
+
+.schema-validator__tool {
+  border-top: 1px solid $color-gray-lighter;
+}
+
+.schema-validator__input {
+  header {
+    border-bottom: none;
+    padding: 1.5rem;
+
+    h3 {
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+
+    form {
+      text-align: end;
+
+      label {
+        margin: 0;
+        margin-right: 1rem;
+      }
+
+      select {
+        display: inline-block;
+        width: 90px;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+}

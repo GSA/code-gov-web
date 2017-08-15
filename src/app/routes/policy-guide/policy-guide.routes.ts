@@ -32,7 +32,9 @@ import {
   PolicyImplementationComponent,
   PolicyAppendixComponent,
   PolicyGuideComponent,
-  OpenSourceLicensingComponent
+  OpenSourceLicensingComponent,
+  SchemaValidatorComponent,
+  UpgradeSchemaComponent
 } from '../../utils/app-components';
 import { DataResolver } from '../../app.resolver';
 
@@ -59,7 +61,18 @@ export const POLICY_GUIDE_ROUTES: Routes = [
               },
               {
                 path: 'inventory-code',
-                component: ComplianceInventoryCodeComponent
+                component: ComplianceInventoryCodeComponent,
+                children: [
+
+                ]
+              },
+              {
+                path: 'inventory-code/tools/validate-schema',
+                component: SchemaValidatorComponent
+              },
+              {
+                path: 'inventory-code/tools/upgrade-schema',
+                component: UpgradeSchemaComponent
               },
               {
                 path: 'licensing',

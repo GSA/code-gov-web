@@ -2,7 +2,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {
    FourOhFourComponent,
    HomeComponent,
-   PrivacyPolicyComponent
+   PrivacyPolicyComponent,
+   SchemaValidatorComponent
  } from './utils/app-components';
 import { EXPLORE_CODE_ROUTES } from './routes/explore-code';
 import { POLICY_GUIDE_ROUTES } from './routes/policy-guide';

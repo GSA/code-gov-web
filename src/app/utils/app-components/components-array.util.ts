@@ -46,7 +46,12 @@ import {
   RepoComponent,
   ReposComponent,
   SidebarComponent,
-  SubnavComponent
+  SubnavComponent,
+  ToolsComponent,
+  SchemaValidatorComponent,
+  UpgradeSchemaComponent,
+  MonacoEditorComponent,
+  MonacoValidatorComponent
 } from './app-components.util';
 
 export const APP_COMPONENTS = [
@@ -97,5 +102,10 @@ export const APP_COMPONENTS = [
   RepoComponent,
   ReposComponent,
   SidebarComponent,
-  SubnavComponent
+  SubnavComponent,
+  ToolsComponent,
+  SchemaValidatorComponent,
+  UpgradeSchemaComponent,
+  MonacoEditorComponent,
+  MonacoValidatorComponent
 ];
