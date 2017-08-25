@@ -5,44 +5,69 @@ import 'rxjs/add/operator/map';
 import * as lunr from 'lunr';
 
 import { repos } from '../../../assets/repos.json';
+import { AGENCIES } from '../agency';
 import { TermService } from './term.service';
 
 @Injectable()
 
 export class LunrTermService implements TermService {
   termResultsReturned$: Observable<Array<any>>;
-  private idx: any;
-  private reposByRef: Object = {};
+  private repositoriesIndex: any;
+  private agenciesIndex: any;
+  private repositoriesByRef: Object = {};
+  private agenciesByRef: Object = {};
   private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
 
   constructor() {
-    const reposByRef = this.reposByRef;
+    const repositoriesByRef = this.repositoriesByRef;
+    const agenciesByRef = this.agenciesByRef;
 
     this.termResultsReturned$ = this.termResultsReturnedSource.asObservable();
 
-    this.idx = (<any>window).idx = lunr(function () {
+    this.repositoriesIndex = lunr(function () {
       this.ref('repoID');
       this.field('name');
       this.field('agency');
       this.field('description');
 
       repos.forEach(function (repo) {
-        reposByRef[repo['repoID']] = repo;
+        repositoriesByRef[repo['repoID']] = repo;
         this.add(repo);
+      }, this);
+    });
+
+    this.agenciesIndex = lunr(function () {
+      this.ref('id');
+      this.field('id');
+      this.field('name');
+
+      AGENCIES.forEach(function (agency) {
+        agenciesByRef[agency['id']] = agency;
+        this.add(agency);
       }, this);
     });
   }
 
   search(query) {
     const queryWithWildcards = query.trim().split(' ').map(word => `${word}* ${word}`).join(' ');
-    const searchResults = this.idx.search(queryWithWildcards);
+    const repositoriesSearchResults = this.repositoriesIndex.search(queryWithWildcards)
+      .map(result => ({ score: result.score, item: this.getRepository(result.ref) }));
+    const agenciesSearchResults = this.agenciesIndex.search(queryWithWildcards)
+      .map(result => ({ score: result.score * 1.5, item: this.getAgency(result.ref) }));
+    const searchResults = [...agenciesSearchResults, ...repositoriesSearchResults]
+      .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
+      .map(result => result.item);
+
     this.termResultsReturnedSource.next(
       searchResults
-        .slice(0, 6)
-        .map(result => this.getRepository(result.ref)));
+        .slice(0, 6));
+  }
+
+  getAgency(term) {
+    return this.agenciesByRef[term];
   }
 
   getRepository(term) {
-    return this.reposByRef[term];
+    return this.repositoriesByRef[term];
   }
 }
