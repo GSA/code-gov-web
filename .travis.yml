@@ -1,14 +1,13 @@
 after_success:
   - npm install codeclimate-test-reporter && cat coverage/lcov.info | codeclimate-test-reporter
-before_script:
-  - npm i -g npm@^3
 cache:
   directories:
     - node_modules
 language: node_js
 node_js:
-  - "5"
-  - "node"
+  - "6"
 script:
   - npm test
 sudo: required
+install:
+  - npm install
