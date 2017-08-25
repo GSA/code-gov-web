@@ -6,18 +6,20 @@ import { SearchService } from '../../services/search';
 @Component({
   selector: 'repo-list',
   template: require('./repo-list.template.html'),
+  styles: [require('./repo-list.styles.scss')],
 })
 
 export class RepoListComponent {
   private repositories = [];
   private subscription: Subscription;
-  private reposTotal: number;
+  private total: number;
 
   constructor(
     private searchService: SearchService,
   ) {
     this.subscription = this.searchService.searchResultsReturned$.subscribe(results => {
       this.repositories = results;
+      this.total = this.searchService.total;
     });
   }
 
