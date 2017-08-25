@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
 import * as lunr from 'lunr';
 
@@ -13,7 +13,7 @@ export class LunrTermService implements TermService {
   termResultsReturned$: Observable<Array<any>>;
   private idx: any;
   private reposByRef: Object = {};
-  private termResultsReturnedSource = new Subject<Array<any>>();
+  private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
 
   constructor() {
     const reposByRef = this.reposByRef;
