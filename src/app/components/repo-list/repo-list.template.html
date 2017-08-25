@@ -1,7 +1,7 @@
 <div *ngIf="hasRepos()" class="repos-container">
-  <p class="repos-count">
-    We found {{ reposTotal }} {{ "Repositories" | pluralize : reposTotal }}
-  </p>
+  <h4 class="repos-count">
+    We found {{ total }} {{ "Repositories" | pluralize : reposTotal }}
+  </h4>
   <ul class="repos-list usa-unstyled-list"
     infinite-scroll
     [infiniteScrollDistance]="2"
@@ -16,8 +16,8 @@
   </button>
 </div>
 
-<div *ngIf="!hasRepos" class="no-repos">
-  <p>
+<div *ngIf="!hasRepos()" class="no-repos">
+  <h4>
     No repositories found.
-  </p>
+  </h4>
 </div>
