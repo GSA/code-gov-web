@@ -10,7 +10,11 @@ export class AgencyService {
   }
 
   getAgency(id): Agency {
-    return this.agencies.filter(agency => agency.id === id)[0];
+    return this.agencies.find(agency => agency.id === id);
+  }
+
+  getByName(name: string): Agency {
+    return this.agencies.find(agency => agency.name.toLowerCase() === name.toLowerCase());
   }
 }
 

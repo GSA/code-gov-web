@@ -1,0 +1,43 @@
+@import '../../../styles/base/all';
+
+a {
+  display: block;
+  margin-bottom: 1em;
+  text-decoration: none;
+
+  &:hover {
+    h3 {
+      color: $color-primary;
+    }
+  }
+}
+
+h3 {
+  margin-bottom: 0.2em;
+}
+
+p {
+  font-size: 0.95em;
+  margin: 0;
+}
+
+.repo-features {
+  margin-top: 0.2em;
+
+  i {
+    color: $brand-teal;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 0.75em;
+
+    &:last-child {
+      margin-right: 0;
+
+      i {
+        margin-right: 0.2em;
+      }
+    }
+  }
+}
