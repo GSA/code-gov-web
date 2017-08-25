@@ -10,7 +10,7 @@ import { SearchService } from '../../services/search';
 })
 
 export class RepoListComponent {
-  private repositories = [];
+  private results = [];
   private subscription: Subscription;
   private total: number;
 
@@ -18,7 +18,7 @@ export class RepoListComponent {
     private searchService: SearchService,
   ) {
     this.subscription = this.searchService.searchResultsReturned$.subscribe(results => {
-      this.repositories = results;
+      this.results = results;
       this.total = this.searchService.total;
     });
   }
@@ -28,7 +28,7 @@ export class RepoListComponent {
   }
 
   hasRepos() {
-    return this.repositories.length > 0;
+    return this.results.length > 0;
   }
 
   onScroll() {

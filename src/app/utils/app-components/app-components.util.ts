@@ -1,3 +1,4 @@
+export * from '../../components/agency-list-item';
 export * from '../../components/autocomplete';
 export * from '../../components/autocomplete-result';
 export * from '../../components/app';
