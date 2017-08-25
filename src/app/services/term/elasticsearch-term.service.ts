@@ -1,7 +1,7 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { ApiService } from '../api';
 import { AgencyService } from '../agency';
@@ -12,7 +12,7 @@ import { TermService } from './term.service';
 
 export class ElasticsearchTermService extends ApiService implements TermService {
   termResultsReturned$: Observable<Array<any>>;
-  private termResultsReturnedSource = new Subject<Array<any>>();
+  private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
 
   constructor(
     private http: Http,
