@@ -7,8 +7,14 @@
     [infiniteScrollDistance]="2"
     [infiniteScrollThrottle]="500"
     (scrolled)="onScroll()">
-    <li *ngFor="let repo of repositories" class="repo">
-     <repo-list-item [repo]="repo"></repo-list-item>
+    <li *ngFor="let result of results" class="repo">
+      <div *ngIf="result.agency;then repoListItem else agencyListItem"></div>
+      <ng-template #repoListItem>
+        <repo-list-item [repo]="result"></repo-list-item>
+      </ng-template>
+      <ng-template #agencyListItem>
+        <agency-list-item [agency]="result"></agency-list-item>
+      </ng-template>
     </li>
   </ul>
   <button *ngIf="showLoadMore" (click)="loadMore()" class="load-more-button">
