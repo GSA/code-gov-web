@@ -24,8 +24,8 @@ export class UpgradeSchemaComponent {
     private monacoEditor: MonacoEditorService,
     private changeDetectorRef: ChangeDetectorRef,
   ) {
-    monacoEditor.addSchema('1.0.1.json', ['-1.0.1.json'], require('../../../schemas/1.0.1.json'));
-    monacoEditor.addSchema('2.0.0.json', ['-2.0.0.json'], require('../../../schemas/2.0.0.json'));
+    monacoEditor.addSchema('1.0.1.json', ['-1.0.1.json'], require('../../../../assets/schemas/1.0.1.json'));
+    monacoEditor.addSchema('2.0.0.json', ['-2.0.0.json'], require('../../../../assets/schemas/2.0.0.json'));
   }
 
   ngAfterViewInit() {
