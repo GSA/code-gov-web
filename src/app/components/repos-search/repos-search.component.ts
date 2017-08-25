@@ -1,8 +1,10 @@
 import {
   Component,
+  ElementRef,
   EventEmitter,
   Input,
-  Output
+  Output,
+  ViewChild,
 } from '@angular/core';
 import {
   FormsModule,
@@ -23,7 +25,9 @@ import { TermService } from '../../services/term';
 })
 
 export class ReposSearchComponent {
-  @Input() queryValue: string;
+  @Input() queryValue = '';
+  @Input() autofocus = false;
+  @ViewChild('query') queryElement: ElementRef;
   searchForm: FormGroup;
   public autocompleteVisible: boolean = false;
   public queryInputValue: string = '';
@@ -36,18 +40,31 @@ export class ReposSearchComponent {
   ) {}
 
   hasQuery(): boolean {
-    return !!this.queryInputValue;
+    return this.queryInputValue.length > 0;
   }
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
       query: [''],
     });
+
+    this.termService.search(this.queryValue);
+    this.queryInputValue = this.queryValue;
+  }
+
+  ngAfterViewInit() {
+    if (this.autofocus) {
+      this.queryElement.nativeElement.focus();
+    }
   }
 
   onKey(event: any) {
     this.queryInputValue = event.target.value;
     this.termService.search(this.queryInputValue);
+
+    if (event.code === 'Escape' || event.code === 'Enter') {
+      event.target.blur();
+    }
   }
 
   onSubmit(form: any): void {
@@ -58,7 +75,11 @@ export class ReposSearchComponent {
     this.router.navigateByUrl('/search?q=' + query);
   }
 
-  toggleAutocomplete(autocompleteVisible: boolean) {
-    this.autocompleteVisible = autocompleteVisible;
+  showAutocomplete() {
+    setTimeout(() => this.autocompleteVisible = true, 50);
+  }
+
+  hideAutocomplete() {
+    setTimeout(() => this.autocompleteVisible = false, 50);
   }
 }

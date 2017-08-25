@@ -12,7 +12,6 @@ import { TermService } from '../../services/term';
 })
 
 export class AutocompleteComponent {
-  @Input() query: string;
   public results: any[] = [];
   private subscription: Subscription;
 
