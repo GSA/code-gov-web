@@ -1,0 +1,29 @@
+@import '../../../styles/base/all';
+
+.agency-list-item {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+
+  .icon {
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    width: 80px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      height: 50px;
+      transform: translateY(-50%);
+      width: 50px;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0;
+    width: calc(100% - 80px);
+  }
+}
