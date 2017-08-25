@@ -17,6 +17,7 @@ import { SearchService } from './search.service';
 
 export class LunrSearchService implements SearchService {
   searchResultsReturned$: Observable<Array<any>>;
+  total = 0;
 
   private idx: any;
   private reposByRef: Object = {};
@@ -25,7 +26,6 @@ export class LunrSearchService implements SearchService {
   private repositories = [];
   private currentIndex = 0;
   private pageSize = 20;
-  private total = 0;
   private searchResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
 
   constructor() {

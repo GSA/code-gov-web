@@ -16,12 +16,12 @@ import { SearchService } from './search.service';
 
 export class ElasticsearchSearchService implements SearchService {
   searchResultsReturned$: Observable<Array<any>>;
+  total = 0;
   private API_URL = 'http://localhost:3001/api/0.1/';
   private searchResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
   private repositories = [];
   private currentIndex = 0;
   private pageSize = 20;
-  private total = 0;
   private query = '';
 
   constructor(private http: Http) {
