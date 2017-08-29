@@ -1,4 +1,4 @@
-<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
+<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)" #repoSearch>
   <label for="searchQuery">Query</label>
   <input
       #query
@@ -9,12 +9,11 @@
       value="{{queryValue}}"
       [formControl]="searchForm.controls['query']"
       (focus)="showAutocomplete()"
-      (blur)="hideAutocomplete()"
       (keyup)="onKey($event)"
       placeholder="Search Code.gov"
       autocomplete="off" />
   <input type="submit" value="Search" />
+  <div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
+    <autocomplete></autocomplete>
+  </div>
 </form>
-<div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
-  <autocomplete></autocomplete>
-</div>
