@@ -86,7 +86,12 @@ export class ReposSearchComponent {
   }
 
   onBlurHandler(e) {
-    if (!this.searchFormElement.nativeElement.contains(e.target)) {
+
+    const inputDoesNotHaveFocus = window.document.activeElement !== this.queryElement.nativeElement;
+    const clickIsOutsideForm = !this.searchFormElement.nativeElement.contains(e.target);
+
+    if (inputDoesNotHaveFocus && clickIsOutsideForm) {
+
       this.hideAutocomplete();
     }
   }
