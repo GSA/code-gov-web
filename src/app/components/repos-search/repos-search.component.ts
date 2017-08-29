@@ -22,12 +22,14 @@ import { TermService } from '../../services/term';
   selector: 'repos-search',
   template: require('./repos-search.template.html'),
   styles: [require('./repos-search.style.scss')],
+  host: { '(window:click)': 'onBlurHandler($event)' },
 })
 
 export class ReposSearchComponent {
   @Input() queryValue = '';
   @Input() autofocus = false;
   @ViewChild('query') queryElement: ElementRef;
+  @ViewChild('repoSearch') searchFormElement: ElementRef;
   searchForm: FormGroup;
   public autocompleteVisible: boolean = false;
   public queryInputValue: string = '';
@@ -76,10 +78,21 @@ export class ReposSearchComponent {
   }
 
   showAutocomplete() {
-    setTimeout(() => this.autocompleteVisible = true, 50);
+    this.autocompleteVisible = true;
   }
 
   hideAutocomplete() {
-    setTimeout(() => this.autocompleteVisible = false, 50);
+    this.autocompleteVisible = false;
+  }
+
+  onBlurHandler(e) {
+
+    const inputDoesNotHaveFocus = window.document.activeElement !== this.queryElement.nativeElement;
+    const clickIsOutsideForm = !this.searchFormElement.nativeElement.contains(e.target);
+
+    if (inputDoesNotHaveFocus && clickIsOutsideForm) {
+
+      this.hideAutocomplete();
+    }
   }
 }
