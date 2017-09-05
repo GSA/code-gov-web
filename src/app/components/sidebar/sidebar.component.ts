@@ -11,6 +11,10 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { MobileService } from '../../services/mobile';
 
+/**
+ * Class representing a sidebar.
+ */
+
 @Component({
   selector: 'sidebar',
   styles: [require('./sidebar.style.scss')],
@@ -24,6 +28,13 @@ export class SidebarComponent implements OnDestroy, AfterViewInit {
   showTitle: boolean;
   @ViewChild('sidebarTitle') sidebarTitle: ElementRef;
 
+  /**
+   * Constructs a SidebarComponent.
+   *
+   * @constructor
+   * @param {MobileService} mobileService - service that detects whether the user is on a mobile device
+   * @param {ChangeDetectorRef} changeDetector - service for alerting Angular to update
+   */
   constructor(
     private mobileService: MobileService,
     private changeDetector: ChangeDetectorRef
@@ -38,11 +49,18 @@ export class SidebarComponent implements OnDestroy, AfterViewInit {
     );
   }
 
+  /**
+   * After the view is added to the DOM, show the sidebar title only if it has
+   * children elements.
+   */
   ngAfterViewInit() {
     this.showTitle = this.sidebarTitle.nativeElement.children.length > 0;
     this.changeDetector.detectChanges();
   }
 
+  /**
+   * On removal from DOM, remove listener for mobile sizing.
+   */
   ngOnDestroy() {
     if (this.activeMenuSub) this.activeMenuSub.unsubscribe();
   }

@@ -8,6 +8,10 @@ import 'rxjs/add/operator/map';
 import { SearchService } from '../../services/search';
 import { StateService } from '../../services/state';
 
+/**
+ * Class representing a search results page for repositories.
+ */
+
 @Component({
   selector: 'search-results',
   styles: [require('./search-results.styles.scss')],
@@ -19,6 +23,14 @@ export class SearchResultsComponent {
   private queryValue: string = '';
   private subscription: Subscription;
 
+  /**
+   * Constructs a SearchResultsComponent.
+   *
+   * @constructor
+   * @param {StateService} stateService - A service for managing the state of the site
+   * @param {ActivatedRoute} activatedRoute - The currently active route
+   * @param {SearchService} searchService - A service for searching repositories
+   */
   constructor(
     public stateService: StateService,
     private activatedRoute: ActivatedRoute,
@@ -34,6 +46,9 @@ export class SearchResultsComponent {
     );
   }
 
+  /**
+   * On removal from the DOM, unsubscribe from URL updates.
+   */
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
