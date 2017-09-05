@@ -3,6 +3,10 @@ import { clone } from 'lodash';
 import { MonacoEditorService } from '../../monaco-editor';
 import * as Clipboard from 'clipboard';
 
+/**
+ * Class representing the upgrade schema tool.
+ */
+
 @Component({
   selector: 'upgrade-schema',
   template: require('./upgrade-schema.template.html'),
@@ -20,6 +24,13 @@ export class UpgradeSchemaComponent {
   private clipboard: any;
   private errors = [];
 
+  /**
+   * Constructs a SchemaValidatorComponent.
+   *
+   * @constructor
+   * @param {MonacoEditorService} monacoEditor - a service keeping track of the Monaco editor state
+   * @param {ChangeDetectorRef} changeDetectorRef - service for alerting Angular to update
+   */
   constructor(
     private monacoEditor: MonacoEditorService,
     private changeDetectorRef: ChangeDetectorRef,
@@ -28,6 +39,9 @@ export class UpgradeSchemaComponent {
     monacoEditor.addSchema('2.0.0.json', ['-2.0.0.json'], require('../../../../assets/schemas/2.0.0.json'));
   }
 
+  /**
+   * After the component is added to the DOM, create a Clipboard button.
+   */
   ngAfterViewInit() {
     this.clipboard = new Clipboard('.upgrade-schema__copy-button', {
       text: () => {
@@ -36,10 +50,18 @@ export class UpgradeSchemaComponent {
     });
   }
 
+  /**
+   * When removing the component from the DOM, remove the Clipboard button.
+   */
   ngOnDestroy() {
     this.clipboard.destroy();
   }
 
+  /**
+   * When setting the upgraded model, update the errors list.
+   *
+   * @param {any} m - the new Model for the Monaco Editor
+   */
   set afterModel(m) {
     this._afterModel = m;
     this._afterModel.onDidChangeDecorations(() => {
@@ -49,10 +71,18 @@ export class UpgradeSchemaComponent {
     });
   }
 
+  /**
+   * Get the current Model for the upgraded Monaco Editor.
+   */
   get afterModel() {
     return this._afterModel;
   }
 
+  /**
+   * Scroll the Monaco Editor to the position of an error.
+   *
+   * @param {any} error - a Monaco Marker representing an error in the user's input
+   */
   scrollToError(error) {
     const { startMarker, endMarker } = error;
     const range = new this.monaco.Range(
@@ -66,6 +96,12 @@ export class UpgradeSchemaComponent {
     this.afterEditor.focus();
   }
 
+  /**
+   * Add optional fields to the project
+   *
+   * @param {Object} project - a project to be upgraded to contain the optional
+   *   fields in the 2.0.0 schema
+   */
   upgradeOptionalFields(project) {
     project.vcs = project.vcs || '';
     project.disclaimerText = project.disclaimerText || '';
@@ -81,6 +117,12 @@ export class UpgradeSchemaComponent {
     }];
   }
 
+  /**
+   * Add the permissions property to a project
+   *
+   * @param {Object} project - a project to be upgraded to contain the
+   *   permissions property
+   */
   upgradeToPermissions(project) {
     project.permissions = {};
 
@@ -140,6 +182,12 @@ export class UpgradeSchemaComponent {
     delete project.exemptionText;
   }
 
+  /**
+   * Add the new date property to the project.
+   *
+   * @param {Object} project - a project to be upgraded to have the new date
+   *   property
+   */
   upgradeUpdatedToDate(project) {
     project.date = {
       created: '',
@@ -160,6 +208,11 @@ export class UpgradeSchemaComponent {
     }
   }
 
+  /**
+   * Upgrade a project to its version 2.0.0 representation
+   *
+   * @param {Object} project - a project to be upgraded to the 2.0.0 schema
+   */
   upgradeProject(project) {
     project.repositoryURL = project.repository;
     delete project.repository;
@@ -177,6 +230,12 @@ export class UpgradeSchemaComponent {
     return project;
   }
 
+  /**
+   * Converts the v1.0.1 version of projects to releases.
+   *
+   * @param {Object} project - a project to be upgraded to contain the optional
+   *   fields in the 2.0.0 schema
+   */
   upgradeProjectsToReleases(upgradedCodeJson) {
     if (Array.isArray(upgradedCodeJson.projects)) {
       upgradedCodeJson.releases = upgradedCodeJson.projects
@@ -185,6 +244,11 @@ export class UpgradeSchemaComponent {
     }
   }
 
+  /**
+   * Converts a v1.0.1 code.json to v2.0.0
+   *
+   * @param {Object} value - the JSON representation of a code.json file
+   */
   transformCodeJson(value) {
     const upgradedCodeJson = value;
 
@@ -206,6 +270,11 @@ export class UpgradeSchemaComponent {
     this.afterEditor = editor;
   }
 
+  /**
+   * Whether the JSON to be upgraded is valid JSON (whether it is parsable).
+   *
+   * @return {boolean} - whether the provided JSON is valid
+   */
   isValidBeforeJson() {
     try {
       JSON.parse(this.beforeEditor.getValue());
@@ -216,6 +285,9 @@ export class UpgradeSchemaComponent {
     }
   }
 
+  /**
+   * Convert the user provided v1.0.1 code.json to a v2.0.0 one.
+   */
   upgradeContent(e) {
     try {
       const parsedCodeJson = JSON.parse(this.beforeEditor.getValue());
@@ -231,10 +303,16 @@ export class UpgradeSchemaComponent {
     }
   }
 
+  /**
+   * Toggle the before editor between its minimized and unminimized states.
+   */
   toggleBeforeMinimized() {
     this.isBeforeMinimized = !this.isBeforeMinimized;
   }
 
+  /**
+   * Toggle the after editor between its minimized and unminimized states.
+   */
   toggleAfterMinimized() {
     this.isAfterMinimized = !this.isAfterMinimized;
   }
