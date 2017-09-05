@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { StateService } from '../../services/state';
 import { SeoService } from '../../services/seo';
 
+/**
+ * Class representing a privacy policy.
+ */
+
 @Component({
   selector: 'privacy-policy',
   styles: [require('./privacy-policy.style.scss')],
@@ -10,6 +14,13 @@ import { SeoService } from '../../services/seo';
 
 export class PrivacyPolicyComponent {
 
+  /**
+   * Construct a PrivacyPolicyComponent.
+   *
+   * @constructor
+   * @param {SeoService} seoService - A service for setting SEO related tags
+   * @param {StateService} stateService - A service for managing the state of the site
+   */
   constructor(
     private seoService: SeoService,
     public stateService: StateService
