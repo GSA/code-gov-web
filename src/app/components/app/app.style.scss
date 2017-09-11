@@ -36,10 +36,14 @@
     }
   }
 
-  li {
+  .app-link {
     display: inline-block;
     font-size: 1em;
     margin-left: 1em;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
 
@@ -49,6 +53,7 @@
 
   a {
     display: block;
+    line-height: 40px;
 
     &:focus {
       box-shadow: none;
@@ -65,8 +70,7 @@
   }
 
   .svg-container {
-    height: 0;
-    padding-top: 29%;
+    height: 40px;
     position: relative;
     width: 100%;
   }
@@ -74,10 +78,49 @@
 
 .app-navigation {
   font-size: 0.8em;
-  padding: 1.75em 0;
+  padding: 1.5rem 0;
 
   @media screen and (min-width: $small-screen) {
     font-size: 1em;
+  }
+
+  .search-form {
+    i {
+      display: block;
+      font-size: 1.5em;
+      left: 1rem;
+      line-height: 36px;
+      position: absolute;
+
+      @media screen and (min-width: $small-screen) {
+        line-height: 40px;
+      }
+    }
+
+    input {
+      border-color: $color-gray-lighter;
+      border-radius: 4px;
+      font-size: 1em;
+      height: auto;
+      padding-bottom: 1rem;
+      padding-left: 4rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      width: 100%;
+    }
+
+    .autocomplete-container {
+      right: 0;
+      width: 180%;
+    }
+  }
+
+  li {
+    vertical-align: top;
+
+    a {
+      line-height: 40px;
+    }
   }
 }
 
