@@ -9,17 +9,18 @@ import { TermService } from './term.service';
 @Injectable()
 
 export class LunrTermService implements TermService {
-  termResultsReturned$: Observable<Array<any>>;
   private repositoriesIndex: any;
   private agenciesIndex: any;
   private agenciesByRef: Object = {};
   private termResultsReturnedSource = new BehaviorSubject<Array<any>>([]);
   private agenciesSource: Subject<any> = new Subject();
   private releasesSource: Subject<any> = new Subject();
-  private agenciesSubscription: Subscription;
+  private searchResults: Observable<any>;
   private releasesSubscription: Subscription;
   private agenciesResults = [];
   private releasesResults = [];
+
+  termResultsReturned$;
 
   constructor(
     private agenciesIndexService: AgenciesIndexService,
@@ -29,38 +30,38 @@ export class LunrTermService implements TermService {
 
     this.termResultsReturned$ = this.termResultsReturnedSource.asObservable();
 
-    this.releasesSubscription = this.releasesSource.subscribe((results) => {
-      this.releasesResults = results
+    const releasesReturned = this.releasesSource.map((results) => {
+      return results
         .map(result => ({ score: result.score, item: this.releasesIndexService.getRelease(result.ref) }));
-      const searchResults = [...this.agenciesResults, ...this.releasesResults]
-        .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
-        .map(result => result.item);
-
-      this.termResultsReturnedSource.next(
-        searchResults
-          .slice(0, 6));
     });
 
-    this.agenciesSubscription = this.agenciesSource.subscribe((results) => {
-      this.agenciesResults = results
+    const agenciesReturned = this.agenciesSource.map((results) => {
+      return results
         .map(result => ({ score: result.score * 1.5, item: this.agenciesIndexService.getAgency(result.ref) }));
-      const searchResults = [...this.agenciesResults, ...this.releasesResults]
-        .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
-        .map(result => result.item);
-
-      this.termResultsReturnedSource.next(
-        searchResults
-          .slice(0, 6));
     });
+
+    this.searchResults = Observable.zip(
+      releasesReturned,
+      agenciesReturned,
+      function (releasesResults, agenciesResults) {
+        return [...agenciesResults, ...releasesResults]
+          .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
+          .map(result => result.item);
+      },
+    );
   }
 
   ngOnDestroy() {
-    this.releasesSubscription.unsubscribe();
-    this.agenciesSubscription.unsubscribe();
   }
 
-  search(query) {
+  search(query, responseSource) {
     const queryWithWildcards = query.trim().split(' ').map(word => `${word}* ${word}`).join(' ');
+
+    this.searchResults.first().subscribe((searchResults) => {
+      responseSource.next(
+        searchResults
+          .slice(0, 6));
+    });
     this.releasesIndexService.search(queryWithWildcards, this.releasesSource);
     this.agenciesIndexService.search(queryWithWildcards, this.agenciesSource);
   }

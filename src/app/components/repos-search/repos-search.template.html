@@ -1,19 +1,13 @@
-<form class="search-form" [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)" #repoSearch>
+<form
+    class="search-form"
+    (ngSubmit)="onSubmit()"
+    #repoSearch>
   <label for="searchQuery">Query</label>
-  <input
-      #query
-      id="searchQuery"
-      type="text"
-      required
-      class="form-control"
-      value="{{queryValue}}"
-      [formControl]="searchForm.controls['query']"
-      (focus)="showAutocomplete()"
-      (keyup)="onKey($event)"
-      placeholder="Search Code.gov"
-      autocomplete="off" />
+  <search-input
+      name="searchQuery"
+      [autofocus]="autofocus"
+      [(queryValue)]="queryValue"
+      ngDefaultControl>
+  </search-input>
   <input type="submit" value="Search" />
-  <div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
-    <autocomplete></autocomplete>
-  </div>
 </form>

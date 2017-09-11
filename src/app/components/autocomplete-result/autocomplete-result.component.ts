@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Subscription } from 'rxjs/Subscription';
 
@@ -10,7 +10,8 @@ import { Subscription } from 'rxjs/Subscription';
 
 export class AutocompleteResultComponent {
   @Input() result;
-  private resource: any = {};
+  @Output() onSuggestionSelected = new EventEmitter();
+  resource: any = {};
 
   ngOnInit() {
     if (this.result.agency) { // it's a repo with an agency attribute
@@ -24,5 +25,9 @@ export class AutocompleteResultComponent {
       this.resource['url'] = '/explore-code/agencies/' + this.result.id;
       this.resource['name'] = this.result.name;
     }
+  }
+
+  handleSuggestionSelected() {
+    this.onSuggestionSelected.emit(this.result);
   }
 }

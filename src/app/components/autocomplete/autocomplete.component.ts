@@ -1,9 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Subscription } from 'rxjs/Subscription';
-import { Subject } from 'rxjs/Subject';
-
-import { TermService } from '../../services/term';
 
 @Component({
   selector: 'autocomplete',
@@ -12,20 +9,26 @@ import { TermService } from '../../services/term';
 })
 
 export class AutocompleteComponent {
-  public results: any[] = [];
-  private subscription: Subscription;
+  @Output() onSuggestionSelected = new EventEmitter();
+  @Input() termResultsObservable: Observable<Array<any>>;
+  results: any[] = [];
+  subscription: Subscription;
 
-  constructor(private termService: TermService) {
-    this.subscription = this.termService.termResultsReturned$.subscribe(results => {
+  ngOnInit() {
+    this.subscription = this.termResultsObservable.subscribe(results => {
       this.results = results;
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   hasResults() {
     return this.results.length > 0;
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
+  handleSuggestionSelected(suggestion) {
+    this.onSuggestionSelected.emit(suggestion);
   }
 }
