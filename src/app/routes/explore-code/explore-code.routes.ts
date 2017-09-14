@@ -24,12 +24,13 @@ export const EXPLORE_CODE_ROUTES: Routes = [
         ]
       },
       {
-        path: 'repos',
+        path: 'agencies/:agency_id/repos',
         component: ReposComponent,
-        children: [
-          { path: ':id', component: RepoComponent }
-        ]
-      }
+      },
+      {
+        path: 'agencies/:agency_id/repos/:id',
+        component: RepoComponent,
+      },
     ]
   }
 ];

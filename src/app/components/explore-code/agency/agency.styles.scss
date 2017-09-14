@@ -6,6 +6,18 @@
     font-size: 1.8em;
     margin-bottom: 0.2em;
   }
+
+  .loading-dialog {
+    text-align: center;
+
+    > p {
+      margin-top: 120px;
+    }
+
+    > img {
+      margin-bottom: 120px;
+    }
+  }
 }
 
 .repo {

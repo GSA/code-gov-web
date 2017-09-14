@@ -2,3 +2,15 @@
 .no-repos {
   margin-top: 2rem;
 }
+
+.loading-dialog {
+  text-align: center;
+
+  > p {
+    margin-top: 120px;
+  }
+
+  > img {
+    margin-bottom: 120px;
+  }
+}

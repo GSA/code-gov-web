@@ -17,8 +17,6 @@ describe('LunrSearchService', () => {
   let defaultOptions: BaseRequestOptions;
   const http = new Http(backend, defaultOptions);
 
-  beforeEach(() => { service = new LunrSearchService(); });
-
   describe('search', () => {
     it('calls search on the Lunr index');
   });

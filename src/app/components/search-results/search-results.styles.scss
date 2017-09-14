@@ -1,6 +1,6 @@
 @import '../../../styles/base/all';
 
-.content-col {
+.search-col {
   @media screen and (min-width: $medium-screen) {
     @include grid-column(9);
   }
