@@ -32,6 +32,7 @@ import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
 import { AgencyService, AGENCIES } from './services/agency';
 import { AgencyApiService } from './services/agency-api';
+import { AgenciesIndexService, ReleasesIndexService } from './services/indexes';
 import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
 import { RepoService } from './services/repo';
@@ -46,11 +47,13 @@ import { ElasticsearchTermService, LunrTermService, TermService } from './servic
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
+  AgenciesIndexService,
   AgencyService,
   AgencyApiService,
   MobileService,
   ModalService,
   MonacoEditorService,
+  ReleasesIndexService,
   RepoService,
   ReposService,
   { provide: SearchService, useClass: LunrSearchService },
