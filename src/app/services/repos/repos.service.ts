@@ -1,23 +1,29 @@
 import {
   Http,
-  Headers,
-  RequestOptions,
-  RequestOptionsArgs,
-  Response
 } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { Subject }    from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ReposService {
-  constructor(private http: Http) {}
+  private reposSource = new BehaviorSubject<any>({
+    releases: null
+  });
+  reposReturned$: Observable<any>;
 
-  getJsonFile(): Observable<Response> {
-    return this.http.get(
-      'assets/repos.json'
+  constructor(private http: Http) {
+    this.reposReturned$ = this.reposSource.asObservable();
+
+    this.http.get(
+      'assets/releases.json'
     )
-    .map(response => response.json());
+    .map(response => response.json())
+    .subscribe((repos) => this.reposSource.next(repos));
+  }
+
+  getJsonFile(): Observable<any> {
+    return this.reposReturned$;
   }
 }

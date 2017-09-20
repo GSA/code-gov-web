@@ -17,6 +17,7 @@ export class RepoListComponent {
   private results = [];
   private subscription: Subscription;
   private total: number;
+  private isLoading = true;
 
   /**
    * Constructs a RepoListComponent.
@@ -28,8 +29,11 @@ export class RepoListComponent {
     private searchService: SearchService,
   ) {
     this.subscription = this.searchService.searchResultsReturned$.subscribe(results => {
-      this.results = results;
-      this.total = this.searchService.total;
+      if (results !== null) {
+        this.results = results;
+        this.total = this.searchService.total;
+        this.isLoading = false;
+      }
     });
   }
 

@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { inject, TestBed } from '@angular/core/testing';
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 import { Observable } from 'rxjs/Rx';
 
 import { AgencyComponent } from './index';
@@ -34,7 +36,8 @@ describe('AgencyComponent', () => {
       imports: [
         HttpModule,
         RouterModule,
-        MetaModule.forRoot()
+        MetaModule.forRoot(),
+        InfiniteScrollModule,
       ],
       providers: [
         AgencyService,

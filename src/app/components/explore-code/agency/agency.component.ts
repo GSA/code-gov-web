@@ -18,9 +18,13 @@ import { MetaService } from '@ngx-meta/core';
 export class AgencyComponent implements OnInit, OnDestroy {
   agency: Agency;
   public hasRepos: boolean = false;
-  public repos;
+  public repos = [];
   private eventSub: Subscription;
   private agencyReposSub: Subscription;
+  private allRepos = [];
+  private currentIndex = 0;
+  private pageSize = 20;
+  private isLoading = true;
 
   constructor(
     private agencyService: AgencyService,
@@ -43,6 +47,10 @@ export class AgencyComponent implements OnInit, OnDestroy {
       let id = params['id'];
 
       this.agency = this.agencyService.getAgency(id);
+      this.repos = [];
+      this.allRepos = [];
+      this.currentIndex = 0;
+      this.isLoading = true;
       this.agencyRepos();
 
       this.seoService.setTitle(this.agency.name, true);
@@ -64,28 +72,29 @@ export class AgencyComponent implements OnInit, OnDestroy {
   agencyRepos() {
     this.agencyReposSub = this.reposService.getJsonFile().
       subscribe((result) => {
-        if (result) {
-          this.repos = result['repos'].filter(repo => this.filterByAgency(repo));
+        if (result && result.releases !== null && typeof result.releases === 'object') {
+          this.allRepos = Object.values(result.releases).filter(repo => this.filterByAgency(repo))
+            .filter(repo => repo.permissions.usageType === 'openSource' || repo.permissions.usageType === 'governmentWideReuse');
+          this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
+          this.currentIndex = this.repos.length || this.pageSize;
           this.hasRepos = this.checkRepos(this.repos);
+          this.isLoading = false;
         } else {
-          console.log('Error.');
+
         }
     });
   }
 
   checkRepos(repos) {
-    if (repos.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return repos.length > 0;
   }
 
   filterByAgency(repo) {
-    if (repo.agency !== undefined && repo.agency === this.agencyId()) {
-      return true;
-    } else {
-      return false;
-    }
+    return repo.agency !== undefined && repo.agency === this.agencyId();
+  }
+
+  onScroll() {
+    this.repos = [...this.repos, ...this.allRepos.slice(this.currentIndex, this.currentIndex + this.pageSize)];
+    this.currentIndex = this.currentIndex + this.pageSize;
   }
 }
