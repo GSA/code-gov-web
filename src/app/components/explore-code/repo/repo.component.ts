@@ -29,10 +29,7 @@ export class RepoComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.eventSub = this.route.params.subscribe(params => {
-
-      let id = params['id'];
-
-      this.getRepo(id);
+      this.getRepo(params['agency_id'], params['id']);
     });
   }
 
@@ -41,11 +38,13 @@ export class RepoComponent implements OnInit, OnDestroy {
     if (this.repoSub) this.repoSub.unsubscribe();
   }
 
-  getRepo(id) {
+  getRepo(agencyId, releaseId) {
     this.repoSub = this.reposService.getJsonFile().
       subscribe((result) => {
-        if (result) {
-          this.repo = result['repos'].filter(repo => repo.repoID === id)[0];
+        if (result.releases && Object.keys(result.releases).length) {
+          this.repo = {
+            ...result.releases[`${encodeURIComponent(agencyId)}/${encodeURIComponent(releaseId)}`]
+          }; // make a copy of the values so we don't modify them in memory
           this.repo.agency = this.agencyService.getAgency(this.repo.agency);
           this.seoService.setTitle(this.repo.name, true);
           this.seoService.setMetaDescription(this.repo.description);
@@ -55,8 +54,6 @@ export class RepoComponent implements OnInit, OnDestroy {
           this.meta.setTag('twitter:title', `code.gov/${this.repo.name}`);
           this.meta.setTag('twitter:description', this.repo.description);
           this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
-        } else {
-          console.log('Error. Source code repositories not found');
         }
     });
   }
