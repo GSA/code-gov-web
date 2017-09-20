@@ -87,4 +87,68 @@ describe('AgencyComponent', () => {
       expect(this.agencyComponent.eventSub.unsubscribe).toHaveBeenCalled();
     });
   });
+
+  describe('agencyRepos', () => {
+    it('should sort the repositories returned.', () => {
+      this.fixture.detectChanges();
+      spyOn(this.agencyComponent.reposService, 'getJsonFile').and.returnValue(
+        Observable.of({
+          releases: {
+            'DOL/test': {
+              agency: 'DOL',
+              id: 'DOL/test',
+              name: 'test',
+              permissions: {
+                usageType: 'openSource',
+              },
+            },
+            'DOL/trial': {
+              agency: 'DOL',
+              id: 'DOL/trial',
+              name: 'trial',
+              permissions: {
+                usageType: 'openSource',
+              },
+            },
+            'DOL/example': {
+              agency: 'DOL',
+              id: 'DOL/example',
+              name: 'example',
+              permissions: {
+                usageType: 'openSource',
+              },
+            }
+          }
+        })
+      )
+
+      this.agencyComponent.agencyRepos();
+      expect(this.agencyComponent.allRepos).toEqual([
+        {
+          agency: 'DOL',
+          id: 'DOL/example',
+          name: 'example',
+          permissions: {
+            usageType: 'openSource',
+          },
+        },
+        {
+          agency: 'DOL',
+          id: 'DOL/test',
+          name: 'test',
+          permissions: {
+            usageType: 'openSource',
+          },
+        },
+        {
+          agency: 'DOL',
+          id: 'DOL/trial',
+          name: 'trial',
+          permissions: {
+            usageType: 'openSource',
+          },
+        },
+      ]);
+    });
+  });
 });
