@@ -4,8 +4,6 @@ import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { PageScrollConfig } from 'ng2-page-scroll';
 
-import { StateService } from '../../services/state';
-
 @Component({
   selector: '[role="application"]',
   encapsulation: ViewEncapsulation.None,
@@ -19,8 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private angulartics2: Angulartics2,
     private angulartics2Gtm: Angulartics2GoogleTagManager,
-    private router: Router,
-    public stateService: StateService
+    private router: Router
   ) {
      PageScrollConfig.defaultDuration = 0;
   }

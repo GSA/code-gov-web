@@ -1,12 +1,20 @@
+@import '../../../styles/base/all';
+
 li {
+  width: 100%;
   text-align: left;
 }
 
 .autocomplete {
   background-color: #ffffff;
   border: 1px solid lighten(#1c4772, 20);
-  position: absolute;
+  display: none;
+  position: relative;
   top: 0.25em;
   width: 100%;
   z-index: 1000;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
 }

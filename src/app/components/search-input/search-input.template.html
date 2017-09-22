@@ -1,0 +1,21 @@
+<div class="search-input" #searchInput>
+  <i class="fa fa-search" aria-hidden="true"></i>
+  <input
+      #query
+      [name]="name"
+      type="text"
+      required
+      class="form-control"
+      [ngModel]="queryValue"
+      (ngModelChange)="change($event)"
+      (focus)="showAutocomplete()"
+      (keyup)="onKey($event)"
+      [placeholder]="placeholder"
+      autocomplete="off" />
+  <div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
+    <autocomplete
+        [termResultsObservable]="termResultsObservable"
+        (onSuggestionSelected)="handleSuggestionSelected($event)">
+    </autocomplete>
+  </div>
+</div>

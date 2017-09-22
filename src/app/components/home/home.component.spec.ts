@@ -1,8 +1,8 @@
 import { APP_BASE_HREF } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { inject, TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { SpyLocation } from '@angular/common/testing';
-import { ReactiveFormsModule } from '@angular/forms';
 
 import { Angulartics2, Angulartics2Module } from 'angulartics2';
 
@@ -34,7 +34,6 @@ describe('HomeComponent', () => {
         ReposSearchComponent
       ],
       imports: [
-        ReactiveFormsModule,
         Angulartics2Module.forRoot(),
         RouterModule.forRoot([]),
         MetaModule.forRoot(),
@@ -48,7 +47,8 @@ describe('HomeComponent', () => {
         SeoService,
         StateService,
         TermService
-      ]
+      ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     });
 
     this.fixture = TestBed.createComponent(HomeComponent);
