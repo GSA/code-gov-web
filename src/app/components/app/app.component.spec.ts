@@ -19,7 +19,6 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { StateService } from './../../services/state/state.service';
 import { AppComponent } from './app.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 
@@ -60,7 +59,6 @@ describe('AppComponent', () => {
                 Angulartics2,
                 Angulartics2GoogleTagManager,
                 {provide: APP_BASE_HREF, useValue: '/'},
-                StateService,
                 {provide: Router, useClass: MockRouter}
           ]
         });
@@ -104,7 +102,6 @@ describe('AppComponent', () => {
                 Angulartics2,
                 Angulartics2GoogleTagManager,
                 {provide: APP_BASE_HREF, useValue: '/'},
-                StateService,
                 {provide: Router, useClass: MockRouter}
           ]
         });
@@ -129,31 +126,6 @@ describe('AppComponent', () => {
         let outlet = fixture.nativeElement.querySelector('main router-outlet');
 
         expect(outlet).toBeDefined();
-    });
-
-    it('should not have additional class on root div if stateService.state.section' +
-        ' has not been set', () => {
-        let stateService = component.stateService;
-        stateService.state.section = undefined;
-
-        fixture.detectChanges();
-        let div = fixture.nativeElement.querySelector('div[class="app-container "]');
-
-        expect(div).toBeDefined();
-
-    });
-
-    it('should have additional class on root div if stateService.state.section' +
-        ' has been set', () => {
-        let section = 'foobar';
-        let stateService = component.stateService;
-        stateService.state.section = section;
-
-        fixture.detectChanges();
-        let div = fixture.nativeElement.querySelector('div[class="app-container foobar"]');
-
-        expect(div).toBeDefined();
-
     });
 
  });

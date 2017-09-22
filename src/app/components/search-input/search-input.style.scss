@@ -1,0 +1,24 @@
+@import '../../../styles/base/all';
+
+i {
+  display: none;
+}
+
+input {
+  @include grid-column(9);
+  border: 1px solid $color-gray-light;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 0;
+  max-width: none;
+}
+
+.search-input {
+  position: relative;
+}
+
+.autocomplete-container {
+  position: absolute;
+  top: 44px;
+  width: calc(75% - 35px);
+}

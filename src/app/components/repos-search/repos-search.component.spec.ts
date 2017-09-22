@@ -1,6 +1,6 @@
 import { APP_BASE_HREF } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -60,7 +60,6 @@ describe('ReposSearchComponent', () => {
       ],
       imports: [
         HttpModule,
-        ReactiveFormsModule,
         RouterModule.forRoot([])
       ],
       providers: [
@@ -68,7 +67,8 @@ describe('ReposSearchComponent', () => {
         { provide: SearchService, useClass: MockSearchService },
         { provide: Router, useClass: MockRouter },
         { provide: TermService, useClass: MockTermService }
-      ]
+      ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     });
 
     this.fixture = TestBed.createComponent(ReposSearchComponent);
@@ -78,10 +78,11 @@ describe('ReposSearchComponent', () => {
   describe('onSubmit', () => {
     it('should call the search function', () => {
       spyOn(this.reposSearchComponent, 'search');
+      this.reposSearchComponent.queryValue = 'GSA';
 
-      this.reposSearchComponent.onSubmit({query: 'GSA'});
+      this.reposSearchComponent.onSubmit();
 
-      expect(this.reposSearchComponent.search).toHaveBeenCalledWith('GSA');
+      expect(this.reposSearchComponent.search).toHaveBeenCalled();
     });
   });
 
@@ -90,7 +91,8 @@ describe('ReposSearchComponent', () => {
       inject([Router], router => {
         let query = 'GSA';
         spyOn(router, 'navigateByUrl');
-        this.reposSearchComponent.search('GSA');
+        this.reposSearchComponent.queryValue = query;
+        this.reposSearchComponent.search();
 
         expect(router.navigateByUrl).toHaveBeenCalledWith('/search?q=' + query);
       }));

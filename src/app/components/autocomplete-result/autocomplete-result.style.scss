@@ -10,7 +10,8 @@
     display: table;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: lighten(#1c4772, 40);
   }
 }
@@ -22,6 +23,7 @@
   width: 2em;
 
   img {
+    display: block;
     height: auto;
     width: 100%;
   }
