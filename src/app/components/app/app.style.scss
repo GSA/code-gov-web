@@ -1,5 +1,13 @@
 @import '../../../styles/base/all';
 
+.app-container {
+  margin-top: 67px;
+
+  @media screen and (min-width: $small-screen) {
+    margin-top: 0;
+  }
+}
+
 .block--dark {
   .app-logo {
     .cls-1 {
@@ -29,17 +37,11 @@
   display: block;
   float: right;
 
-  a {
-    &.active {
-      color: $brand-primary;
-      font-weight: bold;
-    }
-  }
-
   .app-link {
     display: inline-block;
     font-size: 1em;
     margin-left: 1em;
+    vertical-align: top;
 
     &:first-of-type {
       margin-left: 0;
@@ -47,9 +49,22 @@
   }
 }
 
+.app-link > a {
+  line-height: 40px;
+
+  &.active {
+    color: $brand-primary;
+    font-weight: bold;
+  }
+}
+
 .app-logo {
-  float: left;
+  margin: 0 auto;
   width: 6em;
+
+  @media screen and (min-width: $small-screen) {
+    float: left;
+  }
 
   a {
     display: block;
@@ -85,41 +100,8 @@
   }
 
   .search-form {
-    i {
-      display: block;
-      font-size: 1.5em;
-      left: 1rem;
-      line-height: 36px;
-      position: absolute;
-
-      @media screen and (min-width: $small-screen) {
-        line-height: 40px;
-      }
-    }
-
-    input {
-      border-color: $color-gray-lighter;
-      border-radius: 4px;
-      font-size: 1em;
-      height: auto;
-      padding-bottom: 1rem;
-      padding-left: 4rem;
-      padding-right: 1rem;
-      padding-top: 1rem;
-      width: 100%;
-    }
-
     .autocomplete-container {
       right: 0;
-      width: 180%;
-    }
-  }
-
-  li {
-    vertical-align: top;
-
-    a {
-      line-height: 40px;
     }
   }
 }
@@ -138,7 +120,17 @@
 }
 
 .usa-disclaimer {
+  font-size: 0.8em;
   height: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+
+  @media screen and (min-width: $small-screen) {
+    font-size: 0.9em;
+    position: relative;
+  }
 
   a {
     color: $brand-blue;

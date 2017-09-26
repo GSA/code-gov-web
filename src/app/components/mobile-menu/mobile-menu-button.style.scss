@@ -1,0 +1,30 @@
+@import "../../../styles/base/all";
+
+.mobile-menu-button .hamburger {
+  background-color: transparent;
+  border-radius: 4px;
+  float: left;
+  height: 44px;
+  padding: 0;
+  position: relative;
+  width: 44px;
+
+  @media screen and (min-width: $small-screen) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  .block--dark & {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $color-white;
+    }
+  }
+}

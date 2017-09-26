@@ -5,26 +5,46 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 
 export class MobileService {
-  active: boolean;
+  menuActive: boolean;
+  sideNavActive: boolean;
   activeMobileMenu$: Observable<boolean>;
-  private mobileMenuActive = new Subject<boolean>();
+  activeSideNav$: Observable<boolean>;
+  private mobileMenuActiveSource = new Subject<boolean>();
+  private sideNavActiveSource = new Subject<boolean>();
 
   constructor() {
-    this.active = false;
-    this.activeMobileMenu$ = this.mobileMenuActive.asObservable();
+    this.menuActive = false;
+    this.sideNavActive = false;
+    this.activeMobileMenu$ = this.mobileMenuActiveSource.asObservable();
+    this.activeSideNav$ = this.sideNavActiveSource.asObservable();
   }
 
   changeMenuStatus() {
-    this.mobileMenuActive.next(this.active);
+    this.mobileMenuActiveSource.next(this.menuActive);
   }
 
   hideMenu() {
-    this.active = false;
+    this.menuActive = false;
     this.changeMenuStatus();
   }
 
   toggleMenu() {
-   this.active = !this.active;
+   this.menuActive = !this.menuActive;
    this.changeMenuStatus();
+  }
+
+  showSideNav() {
+    this.sideNavActive = true;
+    this.sideNavActiveSource.next(this.sideNavActive);
+  }
+
+  hideSideNav() {
+    this.sideNavActive = false;
+    this.sideNavActiveSource.next(this.sideNavActive);
+  }
+
+  toggleSideNav() {
+    this.sideNavActive = !this.sideNavActive;
+    this.sideNavActiveSource.next(this.sideNavActive);
   }
 }
