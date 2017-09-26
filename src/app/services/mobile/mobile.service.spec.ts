@@ -16,7 +16,7 @@ describe('MobileService', () => {
       spyOn(service, 'changeMenuStatus');
 
       service.hideMenu();
-      expect(service.active).toEqual(false);
+      expect(service.menuActive).toEqual(false);
     });
   });
 
@@ -29,10 +29,10 @@ describe('MobileService', () => {
     });
 
     it('should set active to the inverse of it’s original value', () => {
-      const originalActiveValue = service.active;
+      const originalActiveValue = service.menuActive;
       service.toggleMenu();
 
-      expect(service.active).not.toEqual(originalActiveValue);
+      expect(service.menuActive).not.toEqual(originalActiveValue);
     });
   });
 });

@@ -1,5 +1,6 @@
-<nav class="app-navigation">
+<nav class="app-navigation block block--white" [ngClass]="{'not-at-top': !isAtTop}">
   <div class="usa-grid">
+    <mobile-menu-button></mobile-menu-button>
     <div class="app-logo">
       <a routerLink="/">
         <div class="svg-container">
@@ -9,14 +10,42 @@
     </div>
     <ul class="app-links usa-unstyled-list">
       <li class="app-link">
-        <a class="link link--contrast" routerLink="/explore-code" routerLinkActive="link--active">
-          Explore Code
+        <a
+            class="link link--contrast"
+            routerLink="/explore-code"
+            routerLinkActive="link--active">
+          Browse Projects
         </a>
       </li>
-      <li class="app-link">
-        <a class="link link--contrast" routerLink="/policy-guide" routerLinkActive="link--active">
+      <li class="visible-xs-inline-block app-link">
+        <a
+            class="link link--contrast"
+            routerLink="/policy-guide"
+            routerLinkActive="link--active">
           Policy Info
         </a>
+      </li>
+      <li class="hidden-xs dropdown app-link">
+        <a
+            class="link link--contrast"
+            [ngClass]="{'link--active': isPolicyGuide()}"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            href="#">
+          Policy Info
+        </a>
+        <ul class="dropdown-menu">
+          <li class="menu-item">
+            <a routerLink="/policy-guide">Overview</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="/policy-guide/docs/compliance/dashboard">Compliance</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="/policy-guide/docs/open-source/introduction">Open Source Pilot</a>
+          </li>
+        </ul>
       </li>
       <li class="app-link">
         <a class="link link--contrast" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
@@ -28,6 +57,7 @@
           <search-input
               name="searchQuery"
               placeholder="Search Projects..."
+              withIcon="true"
               [(queryValue)]="searchQuery"
               ngDefaultControl>
           </search-input>

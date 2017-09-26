@@ -3,11 +3,16 @@
     (ngSubmit)="onSubmit()"
     #repoSearch>
   <label for="searchQuery">Query</label>
-  <search-input
-      name="searchQuery"
-      [autofocus]="autofocus"
-      [(queryValue)]="queryValue"
-      ngDefaultControl>
-  </search-input>
-  <input type="submit" value="Search" />
+  <div class="search-input-container">
+    <search-input
+        name="searchQuery"
+        [autofocus]="autofocus"
+        [(queryValue)]="queryValue"
+        ngDefaultControl>
+    </search-input>
+  </div>
+  <button>
+    <i class="search-button-icon fa fa-search"></i>
+    <span class="search-button-text">Search</span>
+  </button>
 </form>

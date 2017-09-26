@@ -1,4 +1,4 @@
-<div class="search-input" #searchInput>
+<div class="search-input" [ngClass]="{'with-icon': withIcon}" #searchInput>
   <i class="fa fa-search" aria-hidden="true"></i>
   <input
       #query
