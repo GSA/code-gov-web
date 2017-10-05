@@ -14,14 +14,18 @@
           "requirements": {
             "agencyWidePolicy": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
       }
     },
     "DOC": {
@@ -38,6 +42,8 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 0,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 1,
             "overallCompliance": 0.5
           }
         }
@@ -45,6 +51,8 @@
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 0,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 1,
         "overallCompliance": 0.5
       }
     },
@@ -62,6 +70,8 @@
           "requirements": {
             "agencyWidePolicy": 0,
             "schemaFormat": 0,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
             "overallCompliance": 0
           }
         }
@@ -69,6 +79,8 @@
       "requirements": {
         "agencyWidePolicy": 0,
         "schemaFormat": 0,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
         "overallCompliance": 0
       }
     },
@@ -91,6 +103,7 @@
                 },
                 "message": "should match format \"uri\""
               }
+<<<<<<< HEAD
             ],
             "errors": []
           }
@@ -155,6 +168,203 @@
             "errors": []
           }
         },
+=======
+            ]
+          }
+        }
+      ],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Education",
+          "acronym": "ED",
+          "website": "http://www.ed.gov/",
+          "codeUrl": "https://www2.ed.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 0.5,
+            "codeInventoried": 0.5,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 0.83
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 0.5,
+        "codeInventoried": 0.5,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 0.83
+      }
+    },
+    "DOE": {
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 1)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 5,
+          "name": "Department of Energy",
+          "acronym": "DOE",
+          "website": "https://energy.gov/",
+          "codeUrl": "https://energy.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "codeInventoried": 0.5,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 0.67
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "codeInventoried": 0.5,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 0.67
+      }
+    },
+    "HHS": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Health and Human Services",
+          "acronym": "HHS",
+          "website": "https://hhs.gov",
+          "codeUrl": "https://hhs.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 0.67
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 0.67
+      }
+    },
+    "HUD": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "metadata": {
+        "agency": {
+          "name": "Department of Housing and Urban Development",
+          "acronym": "HUD",
+          "website": "https://www.hud.gov/",
+          "codeUrl": "https://www.hud.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0.5
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0.5
+      }
+    },
+    "DHS": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Homeland Security",
+          "acronym": "DHS",
+          "website": "https://www.dhs.gov",
+          "codeUrl": "https://www.dhs.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "DOI": {
+      "status": "FAILURE: ERROR WHEN FETCHING (unable to verify the first certificate)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 8,
+          "name": "Department of Interior",
+          "acronym": "DOI",
+          "website": "https://data.doi.gov/",
+          "codeUrl": "https://data.doi.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "DOJ": {
+      "status": "FAILURE: ERROR WHEN FETCHING (connect ETIMEDOUT 149.101.146.50:443)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 9,
+          "name": "Department of Justice",
+          "acronym": "DOJ",
+          "website": "https://justice.gov",
+          "codeUrl": "https://justice.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 0,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 0,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "DOL": {
+      "status": "FULLY COMPLIANT: 0 validation errors, 4 REQUESTED ENHANCEMENTS",
+      "issues": [
+>>>>>>> d04c1158... Add two new fields to the compliance dashboard.
         {
           "repoID": "ed_ed_data_express",
           "agency": "Department of Education",
@@ -17775,6 +17985,251 @@
           }
         }
       ],
+<<<<<<< HEAD
+=======
+      "version": "2.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Labor",
+          "acronym": "DOL",
+          "website": "https://www.dol.gov",
+          "codeUrl": "https://www.dol.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 0.67
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 0.67
+      }
+    },
+    "DOS": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.3",
+      "metadata": {
+        "agency": {
+          "name": "Department of State",
+          "acronym": "DOS",
+          "website": "https://state.gov/",
+          "codeUrl": "http://state.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "DOT": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Transportation",
+          "acronym": "DOT",
+          "website": "https://www.transportation.gov/",
+          "codeUrl": "https://www.transportation.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 0.67
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 0.67
+      }
+    },
+    "TRE": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Department of Treasury",
+          "acronym": "TRE",
+          "website": "https://www.treasury.gov/",
+          "codeUrl": "https://www.treasury.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0.5,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0.5,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "VA": {
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 14,
+          "name": "Department of Veterans Affairs",
+          "acronym": "VA",
+          "website": "https://va.gov/",
+          "codeUrl": "https://va.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 0,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 0,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "EPA": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Environmental Protection Agency",
+          "acronym": "EPA",
+          "website": "https://epa.gov/",
+          "codeUrl": "https://epa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 0,
+            "schemaFormat": 1,
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 0,
+        "schemaFormat": 1,
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
+      }
+    },
+    "NASA": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "National Aeronautics and Space Administration",
+          "acronym": "NASA",
+          "website": "https://nasa.gov/",
+          "codeUrl": "https://code.nasa.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 1
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 1
+      }
+    },
+    "AID": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+      "metadata": {
+        "agency": {
+          "name": "Agency for International Development",
+          "acronym": "AID",
+          "website": "https://usaid.gov/",
+          "codeUrl": "https://usaid.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": 1,
+            "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0.67
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": 1,
+        "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0.67
+      }
+    },
+    "FEMA": {
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 18,
+          "name": "Federal Emergency Management Agency",
+          "acronym": "FEMA",
+          "website": "https://fema.gov/",
+          "codeUrl": "https://fema.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
+      }
+    },
+    "GSA": {
+      "status": "FULLY COMPLIANT: 0 validation errors",
+      "issues": [],
+      "version": "1.0.1",
+>>>>>>> d04c1158... Add two new fields to the compliance dashboard.
       "metadata": {
         "agency": {
           "name": "General Services Administration",
@@ -17783,15 +18238,29 @@
           "codeUrl": "https://gsa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
+<<<<<<< HEAD
             "schemaFormat": 0.5,
             "overallCompliance": 0.75
+=======
+            "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 1,
+            "overallCompliance": 1
+>>>>>>> d04c1158... Add two new fields to the compliance dashboard.
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
+<<<<<<< HEAD
         "schemaFormat": 0.5,
         "overallCompliance": 0.75
+=======
+        "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 1,
+        "overallCompliance": 1
+>>>>>>> d04c1158... Add two new fields to the compliance dashboard.
       }
     },
     "NSF": {
@@ -17806,6 +18275,8 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 1,
             "overallCompliance": 1
           }
         }
@@ -17813,6 +18284,8 @@
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 1,
         "overallCompliance": 1
       }
     },
@@ -17829,6 +18302,8 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 1,
             "overallCompliance": 1
           }
         }
@@ -17836,6 +18311,8 @@
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 1,
         "overallCompliance": 1
       }
     },
@@ -17853,14 +18330,18 @@
           "requirements": {
             "agencyWidePolicy": 0.5,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
       }
     },
     "SBA": {
@@ -17875,14 +18356,18 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "codeInventoried": 0,
+            "metOpenSourceRequirement": 0,
+            "overallCompliance": 0
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "codeInventoried": 0,
+        "metOpenSourceRequirement": 0,
+        "overallCompliance": 0
       }
     },
     "NARA": {
@@ -17898,14 +18383,18 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
-            "overallCompliance": 1
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 0.5,
+            "overallCompliance": 0.83
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 1,
-        "overallCompliance": 1
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 0.5,
+        "overallCompliance": 0.83
       }
     },
     "CFPB": {
@@ -17968,6 +18457,8 @@
           "requirements": {
             "agencyWidePolicy": 1,
             "schemaFormat": 1,
+            "codeInventoried": 1,
+            "metOpenSourceRequirement": 1,
             "overallCompliance": 1
           }
         }
@@ -17975,6 +18466,8 @@
       "requirements": {
         "agencyWidePolicy": 1,
         "schemaFormat": 1,
+        "codeInventoried": 1,
+        "metOpenSourceRequirement": 1,
         "overallCompliance": 1
       }
     }
