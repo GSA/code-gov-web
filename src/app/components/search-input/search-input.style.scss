@@ -1,16 +1,35 @@
 @import '../../../styles/base/all';
 
+
+.with-icon i {
+  display: block;
+  font-size: 1.5em;
+  left: 1rem;
+  line-height: 45px;
+  position: absolute;
+
+  @media screen and (min-width: $small-screen) {
+    line-height: 40px;
+  }
+}
+
 i {
   display: none;
 }
 
 input {
-  @include grid-column(9);
-  border: 1px solid $color-gray-light;
+  border-color: $color-gray-lighter;
+  border-radius: 4px;
+  font-size: 1.7rem;
+  height: auto;
   margin-bottom: 0;
-  margin-left: 0;
   margin-top: 0;
-  max-width: none;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.with-icon input {
+  padding-left: 4rem;
 }
 
 .search-input {
@@ -20,5 +39,5 @@ input {
 .autocomplete-container {
   position: absolute;
   top: 44px;
-  width: calc(75% - 35px);
+  width: 100%;
 }
