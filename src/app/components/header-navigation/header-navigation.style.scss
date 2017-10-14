@@ -1,0 +1,58 @@
+@import "../../../styles/base/all";
+
+.nav-item {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 8px;
+  margin-left: 1em;
+  margin-top: 8px;
+  vertical-align: top;
+}
+
+.app-navigation {
+  box-shadow: 0 0 0 0;
+  padding: 0;
+  position: fixed;
+  top: 23px;
+  transition: 0.5s box-shadow;
+  width: 100%;
+  z-index: 3;
+
+  @media screen and (min-width: $small-screen) {
+    box-shadow: none;
+    padding: 1.5rem 0;
+    position: relative;
+    top: 0;
+  }
+
+  &.not-at-top {
+    box-shadow: 0 0 10px 0 $color-black;
+  }
+}
+
+.app-links {
+  display: none;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+}
+
+.dropdown > a {
+  border-bottom: 3px solid transparent;
+}
+
+.dropdown-menu {
+  background-color: $brand-blue-gray;
+
+  > li > a {
+    color: $color-gray-lighter;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $color-white;
+    }
+  }
+}

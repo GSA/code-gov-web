@@ -1,0 +1,139 @@
+@import "../../../styles/base/all";
+
+$menu-width: 320px;
+
+.mobile-menu {
+  background-color: $brand-blue-gray-dark;
+  bottom: 0;
+  box-shadow: 0 0 10px 0 $color-black;
+  font-size: 1.3em;
+  overflow: scroll;
+  position: fixed;
+  top: 67px;
+  transform: translateX(0 - $menu-width - 11px);
+  transition: 0.5s transform ease;
+  width: $menu-width;
+  z-index: 2;
+
+  @media screen and (min-width: $small-screen) {
+    display: none;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  ul {
+    width: $menu-width;
+  }
+
+  .agency-link {
+    font-size: 0.7em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    > img {
+      margin-right: 0.5rem;
+      width: 25px;
+    }
+  }
+
+  .expander > i {
+    color: $color-gray-lighter;
+    line-height: 2;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .link {
+    border-left: 4px solid transparent;
+    color: $color-white;
+    line-height: 2;
+
+    &:focus,
+    &:hover {
+      border-bottom: 0;
+    }
+
+    &--active {
+      font-weight: normal;
+    }
+  }
+
+  .link--active {
+    border-left: 4px solid $brand-teal;
+    font-weight: bold;
+  }
+
+  .mobile-menu-sub-items {
+    display: none;
+  }
+
+  .open + .mobile-menu-sub-items {
+    display: block;
+  }
+}
+
+.mobile-menu-underlay {
+  background-color: $color-gray-dark;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 0.5s opacity;
+  z-index: 1;
+
+  &.active {
+    background-color: $color-gray-dark;
+    opacity: 0.7;
+    pointer-events: all;
+  }
+}
+
+.mobile-menu-items {
+  float: left;
+}
+
+.mobile-menu-item {
+  float: left;
+  width: 100%;
+
+  > a,
+  > div,
+  > form {
+    border-bottom: 1px solid $color-cool-blue-light;
+    display: block;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+.mobile-menu-sub-items {
+  background-color: $brand-blue-gray;
+  float: left;
+
+  .mobile-menu-item {
+    > div,
+    > a {
+      padding-left: 2rem;
+    }
+  }
+
+  .mobile-menu-sub-items {
+    background-color: $brand-blue-gray-light;
+
+    .mobile-menu-item {
+      > div,
+      > a {
+        border-bottom-color: $color-gray-lighter;
+        padding-left: 3rem;
+      }
+    }
+  }
+}

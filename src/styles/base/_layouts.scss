@@ -1,19 +1,19 @@
 .l-block--large {
-  padding: 2em 0 1em;
+  padding: 2rem 0 1rem;
 
   @media screen and (min-width: $medium-screen) {
-    padding: 4em 0;
+    padding: 4rem 0;
   }
 }
 
 .l-block--medium {
-  padding: 0.75em 0 3em;
+  padding: 0.75rem 0 3rem;
 
   @media screen and (min-width: $medium-screen) {
-    padding: 2em 0 3em;
+    padding: 2rem 0 3rem;
   }
 }
 
 .l-block--small {
-  padding: 0.3em 0;
+  padding: 0.3rem 0;
 }
