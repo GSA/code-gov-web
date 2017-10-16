@@ -4,8 +4,8 @@ $button-primary-color-hover: $brand-blue-dark;
 $button-secondary-color: $brand-purple;
 $button-secondary-color-hover: $brand-purple-dark;
 
-$button-tertiary-color: $brand-blue-gray;
-$button-tertiary-color-hover: #323A45;
+$button-tertiary-color: $color-gray-dark;
+$button-tertiary-color-hover: $brand-teal;
 
 .usa-button.usa-button-small {
   font-size: 0.8em;
@@ -34,8 +34,28 @@ $button-tertiary-color-hover: #323A45;
 
 .button--tertiary {
   background-color: $button-tertiary-color;
+  color: $color-white;
 
   &:hover {
     background-color: $button-tertiary-color-hover;
+  }
+}
+
+.button--transparent {
+  background-color: transparent;
+  border: 2px solid $color-white;
+
+  &:focus,
+  &:hover {
+    background-color: $brand-teal;
+    border: 2px solid $brand-teal;
+  }
+
+  .block--teal & {
+    &:focus,
+    &:hover {
+      background-color: $brand-blue-gray-dark;
+      border: 2px solid $brand-blue-gray-dark;
+    }
   }
 }

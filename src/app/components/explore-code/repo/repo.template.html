@@ -17,7 +17,7 @@
           </a>
         </li>
         <li>
-          <a *ngIf="repo.repositoryURL | isdefined" external-link class="usa-button button button--secondary" href="{{ repo.repositoryURL }}">
+          <a *ngIf="getRepositoryUrl() | isdefined" external-link class="usa-button button button--secondary" href="{{ getRepositoryUrl() }}">
             Visit Repo
           </a>
         </li>
@@ -48,10 +48,6 @@
           <div *ngIf="(repo.languages | isdefined) && (repo.languages[0] | isdefined); then codeLanguageBlock else noCodeLanguageBlock"></div>
           <ng-template #codeLanguageBlock>
             <div class="card__icon">
-              <i
-                  class="icon devicons devicons-{{language | languageIcon }}"
-                  *ngFor="let language of repo.languages">
-              </i>
             </div>
             <div class="card__body">
               <h3>Language</h3>
@@ -61,6 +57,10 @@
                   {{ language }}.
                 </span>
               </p>
+              <i
+                  class="icon devicons devicons-{{language | languageIcon }}"
+                  *ngFor="let language of repo.languages">
+              </i>
             </div>
           </ng-template>
           <ng-template #noCodeLanguageBlock>
@@ -80,7 +80,7 @@
           <div *ngIf="repo.permissions.licenses[0] && repo.permissions.licenses[0].name | isdefined; then licenseBlock else noLicenseBlock"></div>
           <ng-template #licenseBlock>
             <div class="card__icon">
-              <i class="icon fa fa-file-text-o"></i>
+
             </div>
             <div class="card__body">
               <h3>License</h3>
@@ -109,7 +109,7 @@
       </ul>
     </div>
 
-     <div *ngIf="repo.permissions.usageType === 'openSource'" class="activity-container">
+     <div *ngIf="repo.permissions.usageType === 'openSource' && repo.events && repo.events.length" class="activity-container">
       <h2>Activity</h2>
       <ul class="usa-unstyled-list">
         <activity-list  *ngIf="repo" [eventRepo]="repo"></activity-list>

@@ -34,10 +34,6 @@ h6 {
   &:first-child {
     margin-top: 0;
   }
-
-  .block--dark & {
-    color: $header-contrast-color;
-  }
 }
 
 h1 {
@@ -49,10 +45,6 @@ p {
 
   @media screen and (min-width: $medium-screen) {
     font-size: 1.1em;
-  }
-
-  .block--dark & {
-    color: $text-contrast-color;
   }
 }
 

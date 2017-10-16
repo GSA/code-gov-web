@@ -7,6 +7,7 @@
   height: 44px;
   padding: 0;
   position: relative;
+  top: 2px;
   width: 44px;
 
   @media screen and (min-width: $small-screen) {
@@ -18,6 +19,12 @@
     background-color: transparent;
     box-shadow: none;
     opacity: 1;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: #485567;
   }
 
   .block--dark & {

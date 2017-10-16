@@ -5,6 +5,7 @@ import {
   Input,
   Output,
   ViewChild,
+  ViewEncapsulation,
 } from '@angular/core';
 import {
   FormsModule,
@@ -23,11 +24,13 @@ import { Router } from '@angular/router';
   selector: 'repos-search',
   template: require('./repos-search.template.html'),
   styles: [require('./repos-search.style.scss')],
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class ReposSearchComponent {
   @Input() queryValue = '';
   @Input() autofocus = false;
+  @Input() buttonClasses = '';
   @ViewChild('repoSearch') searchFormElement: ElementRef;
 
   /**

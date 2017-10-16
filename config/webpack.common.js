@@ -24,6 +24,9 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const postcssCssnext = require('postcss-cssnext');
+const postcssImport = require('postcss-import');
 
 module.exports = function (options) {
   isProd = ['production', 'staging'].includes(options.env);
@@ -95,6 +98,13 @@ module.exports = function (options) {
     new LoaderOptionsPlugin({
       debug: isProd ? false : true,
       options: {
+        postcss: [
+          postcssImport({ addDependencyTo: webpack }),
+          postcssCssnext({
+            browsers: ['last 2 versions', 'ie >= 9'],
+            compress: true,
+          }),
+        ],
         sassLoader: {
           includePaths: [
             require('bourbon').includePaths,
@@ -136,6 +146,7 @@ module.exports = function (options) {
       metadata: METADATA,
       inject: 'head'
     }),
+    new PreloadWebpackPlugin(),
   ];
 
   /**
@@ -163,7 +174,7 @@ module.exports = function (options) {
      */
     new CriticalCssPlugin({
       src: 'index.html'
-    })
+    }),
   ]);
 
   /**
@@ -219,7 +230,13 @@ module.exports = function (options) {
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          loader: 'raw-loader!postcss-loader!sass-loader'
+          loaders: [{
+            loader: 'raw-loader',
+          }, {
+            loader: 'postcss-loader',
+          }, {
+            loader: 'sass-loader',
+          }]
         },
         {
           test: /\.html$/,

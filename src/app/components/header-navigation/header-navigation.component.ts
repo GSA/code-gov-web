@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+
+import { MobileService } from '../../services/mobile';
+import { SearchInputComponent } from '../search-input';
 
 @Component({
   selector: 'header-navigation',
@@ -13,8 +17,21 @@ import { Router } from '@angular/router';
 export class HeaderNavigationComponent {
   searchQuery: string = '';
   isAtTop: boolean = true;
+  isSearchBoxShown: boolean = false;
+  searchBoxActiveSubscription: Subscription;
+  @ViewChild(SearchInputComponent) child: SearchInputComponent;
+  
 
-  constructor(public router: Router) {}
+  constructor(
+    public router: Router,
+    private mobileService: MobileService,
+  ) {
+    this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
+  }
+
+  ngOnDestroy() {
+    this.searchBoxActiveSubscription.unsubscribe();
+  }
 
   /**
    * Whenever the form is submitted, perform a search and then reset the search
@@ -54,6 +71,25 @@ export class HeaderNavigationComponent {
    * @param $event - the scrolling event
    */
   onScrollHandler($event) {
-    this.isAtTop = $event.target.scrollingElement.scrollTop === 0;
+    const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    this.isAtTop = top === 0;
+  }
+
+  showSearchBox() {
+    this.mobileService.showSearchBox();
+    this.child.focus();
+  }
+
+  hideSearchBox() {
+    this.mobileService.hideSearchBox();
+    this.child.blur();
+  }
+
+  toggleSearchBox() {
+    if (this.isSearchBoxShown) {
+      this.hideSearchBox();
+    } else {
+      this.showSearchBox();
+    }
   }
 }

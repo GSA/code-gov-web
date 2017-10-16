@@ -19,7 +19,7 @@
       </div>
       <ul class="mobile-menu-sub-items usa-unstyled-list">
         <li *ngFor="let agency of agencies" class="mobile-menu-item">
-          <a class="link agency-link" routerLink="/explore-code/agencies/{{agency.id}}" routerLinkActive="link--active" (click)="hideSideNav()">
+          <a class="agency-link" routerLink="/explore-code/agencies/{{agency.id}}" routerLinkActive="link--active" (click)="hideSideNav()">
             {{agency.name}}
           </a>
         </li>
