@@ -9,7 +9,7 @@ $menu-width: 320px;
   font-size: 1.3em;
   overflow: scroll;
   position: fixed;
-  top: 67px;
+  top: 65px;
   transform: translateX(0 - $menu-width - 11px);
   transition: 0.5s transform ease;
   width: $menu-width;
@@ -49,7 +49,7 @@ $menu-width: 320px;
   }
 
   .link {
-    border-left: 4px solid transparent;
+    border-left: 8px solid transparent;
     color: $color-white;
     line-height: 2;
 
@@ -64,7 +64,7 @@ $menu-width: 320px;
   }
 
   .link--active {
-    border-left: 4px solid $brand-teal;
+    border-left: 8px solid $brand-teal;
     font-weight: bold;
   }
 

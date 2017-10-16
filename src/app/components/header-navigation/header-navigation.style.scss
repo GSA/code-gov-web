@@ -14,7 +14,7 @@
   box-shadow: 0 0 0 0;
   padding: 0;
   position: fixed;
-  top: 23px;
+  top: 21px;
   transition: 0.5s box-shadow;
   width: 100%;
   z-index: 3;
@@ -28,6 +28,10 @@
 
   &.not-at-top {
     box-shadow: 0 0 10px 0 $color-black;
+
+    @media screen and (min-width: $small-screen) {
+      box-shadow: none;
+    }
   }
 }
 
