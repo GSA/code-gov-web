@@ -74,7 +74,7 @@ const APP_PROVIDERS = [
     HttpModule,
     InfiniteScrollModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    Ng2PageScrollModule.forRoot(),
+    Ng2PageScrollModule,
     MetaModule.forRoot()
   ],
   declarations: [

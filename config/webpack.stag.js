@@ -20,6 +20,9 @@ const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const CriticalCssPlugin = require('./critical-css-plugin');
 
+const postcssCssnext = require('postcss-cssnext');
+const postcssImport = require('postcss-import');
+
 /**
  * Webpack Constants
  */
@@ -228,6 +231,13 @@ module.exports = function (env) {
       new LoaderOptionsPlugin({
         debug: false,
         options: {
+          postcss: [
+            postcssImport({ addDependencyTo: webpack }),
+            postcssCssnext({
+              browsers: ['last 2 versions', 'ie >= 9'],
+              compress: true,
+            }),
+          ],
 
           /**
            * Static analysis linter for TypeScript advanced options configuration
