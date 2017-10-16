@@ -24,6 +24,10 @@
       "id": "DOE",
       "name": "Department of Energy"
     },
+    "DOJ": {
+      "id": "DOJ",
+      "name": "Department of Justice"
+    },
     "ED": {
       "id": "ED",
       "name": "Department of Education"
