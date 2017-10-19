@@ -1,11 +1,11 @@
 {
   "main": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-stag/main.9b9b106360cc5fefbbed.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-stag/main.9b9b106360cc5fefbbed.bundle.js"
   },
   "vendor": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-stag/vendor.4d859e82e9178b50e19f.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-stag/vendor.4d859e82e9178b50e19f.bundle.js"
   },
   "polyfills": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-stag/polyfills.36c8fce421319b7ec870.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-stag/polyfills.36c8fce421319b7ec870.bundle.js"
   }
 }
