@@ -1,5 +1,5 @@
 {
-  "timestamp": "Mon Oct 16 2017 10:20:55 GMT-0400 (EDT)",
+  "timestamp": "Mon Oct 23 2017 06:15:38 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -1596,7 +1596,7 @@
     "DOJ": {
       "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "2.0.0",
       "metadata": {
         "agency": {
           "id": 9,
@@ -1821,7 +1821,7 @@
     "EPA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "1.0.0",
+      "version": "1.0.1",
       "metadata": {
         "agency": {
           "name": "Environmental Protection Agency",
@@ -17817,9 +17817,9 @@
       }
     },
     "NRC": {
-      "status": "FAILURE: ERROR WHEN FETCHING (read ETIMEDOUT)",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "1.0.1",
       "metadata": {
         "agency": {
           "name": "Nuclear Regulatory Commission",
@@ -17828,15 +17828,15 @@
           "codeUrl": "https://www.nrc.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "schemaFormat": 0,
-            "overallCompliance": 0.5
+            "schemaFormat": 1,
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "schemaFormat": 0,
-        "overallCompliance": 0.5
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "OPM": {
