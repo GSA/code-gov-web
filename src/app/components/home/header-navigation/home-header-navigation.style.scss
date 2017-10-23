@@ -1,0 +1,29 @@
+@import '../../../../styles/base/all';
+
+.social-links {
+  display: none;
+  float: right;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+}
+
+.social-link {
+  font-size: 2em;
+  line-height: 40px;
+
+  a {
+    color: $color-white;
+  }
+
+  .follow-us {
+    display: none;
+    font-size: 0.4em;
+    vertical-align: top;
+
+    @media screen and (min-width: $medium-screen) {
+      display: inline-block;
+    }
+  }
+}

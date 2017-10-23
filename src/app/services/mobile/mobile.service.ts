@@ -7,16 +7,20 @@ import { Observable } from 'rxjs/Observable';
 export class MobileService {
   menuActive: boolean;
   sideNavActive: boolean;
+  searchBoxActive: boolean;
   activeMobileMenu$: Observable<boolean>;
   activeSideNav$: Observable<boolean>;
+  activeSearchBox$: Observable<boolean>;
   private mobileMenuActiveSource = new Subject<boolean>();
   private sideNavActiveSource = new Subject<boolean>();
+  private searchBoxActiveSource = new Subject<boolean>();
 
   constructor() {
     this.menuActive = false;
     this.sideNavActive = false;
     this.activeMobileMenu$ = this.mobileMenuActiveSource.asObservable();
     this.activeSideNav$ = this.sideNavActiveSource.asObservable();
+    this.activeSearchBox$ = this.searchBoxActiveSource.asObservable();
   }
 
   changeMenuStatus() {
@@ -46,5 +50,20 @@ export class MobileService {
   toggleSideNav() {
     this.sideNavActive = !this.sideNavActive;
     this.sideNavActiveSource.next(this.sideNavActive);
+  }
+
+  showSearchBox() {
+    this.searchBoxActive = true;
+    this.searchBoxActiveSource.next(this.searchBoxActive);
+  }
+
+  hideSearchBox() {
+    this.searchBoxActive = false;
+    this.searchBoxActiveSource.next(this.searchBoxActive);
+  }
+
+  toggleSearchBox() {
+    this.searchBoxActive = !this.searchBoxActive;
+    this.searchBoxActiveSource.next(this.searchBoxActive);
   }
 }

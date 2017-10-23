@@ -5,36 +5,44 @@ body {
 }
 
 .about {
-  border-bottom: 1px solid $color-gray-lightest;
+  padding-top: 4rem;
 
   header {
     margin: 0 auto;
     text-align: center;
 
-    @media screen and (min-width: $small-screen) {
-      max-width: 43em;
-    }
-
-    h1 {
+    h2 {
       font-size: 1.75em;
       margin: 0 auto;
       max-width: 17em;
+      text-transform: uppercase;
 
       @media screen and (min-width: $small-screen) {
         font-size: 2em;
       }
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 4rem;
+        font-size: 3em;
       }
     }
 
     p {
       font-size: 1em;
+      margin-top: 2rem;
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 1.2em;
+        font-size: 1.5em;
       }
+    }
+  }
+
+  hr {
+    border-top: 6px solid $brand-teal;
+    margin-top: 3rem;
+    width: 30rem;
+
+    @media screen and (min-width: $small-screen) {
+      margin-top: 6rem;
     }
   }
 }
@@ -43,6 +51,10 @@ body {
   margin-top: 2em;
   padding: 0;
 
+  @media screen and (min-width: $small-screen) {
+    font-size: 1.1em;
+  }
+
   @media screen and (min-width: $medium-screen) {
     margin-top: 4em;
   }
@@ -50,11 +62,16 @@ body {
   h2 {
     font-size: 1.3em;
     margin-top: 0;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 2.5em;
+    }
   }
 
   li {
-    margin-bottom: 2em;
-    padding-left: 3em;
+    margin-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     position: relative;
 
     i {
@@ -64,21 +81,53 @@ body {
 
   p {
     font-size: 0.95em;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 1.1em;
+    }
   }
 
 }
 
+.about-action {
+  text-align: center;
+
+  > a > img {
+    padding: 1rem;
+    transition: 0.2s transform;
+  }
+
+  > a:focus,
+  > a:hover {
+    text-decoration: none;
+
+    > img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes zoomOutOnBackground {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
 .banner {
-  padding: 2em 0 9em;
+  height: 90vh;
+  min-height: 48rem;
   position: relative;
 
   @media screen and (min-width: $small-screen) {
-    padding: 4em 0 8em;
+    padding: 16rem 0 16rem;
   }
 
   h1 {
     font-size: 2em;
-    margin-bottom: 0.25em;
+    margin-bottom: 0;
 
     @media screen and (min-width: $small-screen) {
       font-size: 2.8em;
@@ -92,7 +141,8 @@ body {
   p {
     color: $color-gray-lighter;
     font-size: 1em;
-    margin-top: 0;
+    margin: 2rem auto 3rem;
+    max-width: 40rem;
 
     @media screen and (min-width: $small-screen) {
       font-size: 1.2em;
@@ -101,6 +151,11 @@ body {
     @media screen and (min-width: $medium-screen) {
       font-size: 1.4em;
     }
+  }
+
+  input {
+    max-width: 670px;
+    margin: 0 auto;
   }
 
   .usa-button {
@@ -116,18 +171,310 @@ body {
   }
 }
 
+.banner-background-container {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.banner-background {
+  animation: 15s linear zoomOutOnBackground;
+  background-attachment: scroll;
+  background-image: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  // HACK: This is a hack to prevent ugliness on iOS
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+  }
+}
+
 .banner-container {
+  left: 50%;
   margin: 0 auto;
-  max-width: 37em;
+  max-width: 55em;
+  position: absolute;
   text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+
+.featured-projects {
+  text-align: center;
+
+  h2 {
+    color: $color-white;
+    font-size: 1.75em;
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 2em;
+    }
+
+    @media screen and (min-width: $medium-screen) {
+      font-size: 3em;
+    }
+  }
+}
+
+.featured-project {
+  text-align: left;
+
+  &:nth-of-type(odd) {
+    .usa-width-one-half {
+      float: right;
+    }
+  }
+
+  &:nth-of-type(even) {
+    .usa-width-one-half {
+      float: left;
+    }
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.8em;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  p {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  button,
+  .usa-button {
+    margin-left: 10px;
+  }
+}
+
+.accessible-name-and-description-inspector {
+  background: #283036;
+  background: linear-gradient(215deg, #283036, #4a5963);
+  color: $color-white;
+
+  .usa-grid {
+    @media screen and (min-width: $medium-screen) {
+      background: url('assets/img/featured-projects/typing.png');
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 34rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      background-position: 0% 100%;
+      background-size: 45rem;
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+      background-position: 8% 100%;
+      background-size: 45rem;
+    }
+  }
+
+  button,
+  .usa-button,
+  h3,
+  h4,
+  p {
+    color: $color-white;
+  }
+}
+
+.osha-heat-safety {
+  background: #fdcf84;
+  background: linear-gradient(215deg, #cc9966 0%, #fdcf84 100%);
+
+  @media screen and (min-width: $medium-screen) {
+    background: radial-gradient(circle at 75% 50%, #fff 0%, #fdcf84 67%, #ac7f47 100%)
+  }
+
+  .usa-grid {
+    @media screen and (min-width: $medium-screen) {
+      background: url('assets/img/featured-projects/construction_worker.png');
+      background-position: 103% 100%;
+      background-repeat: no-repeat;
+      background-size: 34rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      background-position: 99% 100%;
+      background-size: 45rem;
+    }
+
+    @media screen and (min-width: $extra-large-screen) {
+      background-position: 90% 100%;
+      background-size: 45rem;
+    }
+  }
+
+  button,
+  .usa-button,
+  h3,
+  h4,
+  p {
+    color: $color-gray-dark;
+  }
+
+  button,
+  .usa-button {
+    border-color: $color-gray-dark;
+
+    &:focus,
+    &:hover {
+      border-color: $brand-teal;
+      color: $color-white;
+    }
+  }
+}
+
+.owning-a-home {
+  background: #3f7fab;
+  background: linear-gradient(215deg, #3f7fab, #6db5f1);
+  color: $color-white;
+
+  @media screen and (min-width: $medium-screen) {
+    background: url('assets/img/featured-projects/grass.png'), #3f7fab;
+    background: url('assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+  }
+
+  .featured-project-info {
+    padding-top: 0;
+
+    @media screen and (min-width: $small-screen) {
+      padding-bottom: 5rem;
+      padding-top: 0;
+    }
+
+    @media screen and (min-width: $medium-screen) {
+      padding-bottom: 9rem;
+      padding-top: 1rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      padding-bottom: 11rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .usa-grid {
+    @media screen and (min-width: $medium-screen) {
+      background: url('assets/img/featured-projects/house_for_sale.png');
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 50%;
+    }
+  }
+
+  button,
+  .usa-button,
+  h3,
+  h4,
+  p {
+    color: $color-white;
+  }
+}
+
+.featured-project-info {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+  @media screen and (min-width: $small-screen) {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+  }
+
+  @media screen and (min-width: $large-screen) {
+    padding-bottom: 12rem;
+    padding-top: 12rem;
+  }
+
+  .buttons {
+    text-align: center;
+
+    @media screen and (min-width: $small-screen) {
+      text-align: left;
+    }
+  }
+
+  button,
+  .usa-button {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 0;
+    margin-top: 0;
+    max-width: 170px;
+    width: 44%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      font-size: 1em;
+    }
+  }
 }
 
 .press {
-  .press__header {
-    font-size: 1em;
-    margin-bottom: 2em;
+  background-attachment: scroll;
+  background-image: url('assets/img/american_flag_1920x1280_gradient.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  // HACK: This is a hack to prevent ugliness on iOS
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
+  }
+
+  h2 {
+    color: $color-white;
+    margin-bottom: 2rem;
     text-align: center;
-    text-transform: uppercase;
+  }
+
+  hr {
+    border-top: 4px solid $brand-teal;
+    margin-top: 2rem;
+    width: 30rem;
+
+    @media screen and (min-width: $small-screen) {
+      margin-top: 3rem;
+    }
   }
 }
 
@@ -143,23 +490,33 @@ body {
 
   @media screen and (min-width: $medium-screen) {
     margin-top: 0;
-    text-align: right;
   }
 
   .press-logo {
-    max-width: 7.5em;
+    max-height: 3em;
+
+    @media screen and (min-width: $small-screen) {
+      max-height: 4em;
+    }
   }
 
   li {
+    display: inline-block;
     margin-bottom: 0.5em;
+    margin-left: 2rem;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 }
 
 .quote-large {
   blockquote {
+    line-height: 1.25;
     background-color: transparent;
     border-left: none;
-    color: $brand-blue-gray;
+    color: $color-white;
     font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 1.75em;
     font-weight: 500;
@@ -171,19 +528,30 @@ body {
     position: relative;
 
     @media screen and (min-width: $medium-screen) {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
 
-    &::before {
-      color: $brand-teal-dark;
-      content: "“";
+    .begin-quote {
+      color: $brand-teal;
       font-size: 1.75em;
       left: 0em;
       position: absolute;
       top: -0.275em;
 
       @media screen and (min-width: $medium-screen) {
-        font-size: 2.5em;
+        font-size: 2.2em;
+      }
+    }
+
+    .end-quote {
+      color: $brand-teal;
+      font-size: 1.75em;
+      line-height: 0.8;
+      position: absolute;
+      vertical-align: text-top;
+
+      @media screen and (min-width: $medium-screen) {
+        font-size: 2.2em;
       }
     }
   }
@@ -199,7 +567,8 @@ body {
     }
 
     .press-logo {
-      max-width: 5em;
+      max-height: 2em;
+      max-width: 10em;
     }
   }
 }
@@ -213,5 +582,46 @@ body {
 
   &:hover {
     transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce {
+	0%, 6%, 15%, 20%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+	12% {
+    transform: translateX(-50%) translateY(-30px);
+  }
+
+	18% {
+    transform: translateX(-50%) translateY(-15px);
+  }
+}
+
+.scroll-indicator {
+  animation: 6s linear bounce infinite;
+  bottom: 0;
+  color: $color-white;
+  font-size: 3em;
+  height: 4rem;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+
+  @media screen and (min-width: $small-screen) {
+    font-size: 6em;
+    height: 6rem;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    font-size: 8em;
+    height: 7rem;
+  }
+
+  i {
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
   }
 }

@@ -1,68 +1,116 @@
 <section class="block block--dark banner">
-  <div class="usa-grid">
-    <div class="banner-container">
-      <div class="banner-content">
-        <h1>Sharing America's Code</h1>
-        <p>
-          Unlock the tremendous potential of the Federal Government’s software.
-        </p>
-        <repos-search autofocus=true></repos-search>
-      </div>
-    </div>
-    <banner-art></banner-art>
+  <div class="banner-background-container">
+    <div class="banner-background"></div>
   </div>
+  <div class="banner-container">
+    <div class="banner-content">
+      <h1>Sharing America's Code</h1>
+      <p>
+        Unlock the tremendous potential of the Federal Government’s software.
+      </p>
+      <repos-search autofocus=true buttonClasses="button--transparent"></repos-search>
+    </div>
+  </div>
+  <a class="scroll-indicator" title="Scroll Down" pageScroll [pageScrollDuration]="250" [pageScrollOffset]="75" pageScrollTarget=".about" href="#"><i class="fa fa-angle-down"></i></a>
 </section>
-<section class="about l-block--large">
+<section id="about" class="about">
   <div class="usa-grid">
     <header>
-      <h2>Help propel America’s next breakthrough in innovation.</h2>
+      <h2>Our Mission</h2>
       <p>
-        Code.gov is a platform designed to improve access to the federal
-        government’s custom-developed software.
+        Code.gov leverages the power of code sharing and collaboration to help the US Government
+        cut down on duplicative software development and save millions of taxpayer dollars for
+        the American people.
       </p>
     </header>
+    <hr />
     <ul class="usa-unstyled-list usa-grid about-actions">
-      <li class="card usa-width-one-half">
-        <div class="card__icon">
-          <i class="icon fa fa-code"></i>
-        </div>
-        <div class="card__body">
-          <h2>Explore Code</h2>
-          <p>
-             Choose from thousands of projects you can improve and reuse.
-          </p>
-          <a routerLink="explore-code" class="usa-button button--secondary">
-            Browse Code
-          </a>
-        </div>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/docs/overview/introduction">
+          <img alt="About Icon" aria-hidden="true" src="assets/img/icons/info_bl.png" />
+          <h3>About Us</h3>
+          <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
+        </a>
       </li>
-      <li class="card usa-width-one-half">
-        <div class="card__icon">
-          <i class="icon fa fa-book"></i>
-        </div>
-        <div class="card__body">
-          <h2>Implement Policy</h2>
-          <p>
-             Discover tools and resources designed to help federal
-             agencies implement the Federal Source Code Policy.
-          </p>
-          <a routerLink="policy-guide" class="usa-button button--secondary">
-            Get Started
-          </a>
-        </div>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/policy/introduction">
+          <img alt="Policy Info Icon" aria-hidden="true" src="assets/img/icons/policy_bl.png" />
+          <h3>Policy Info</h3>
+          <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
+        </a>
+      </li>
+      <li class="about-action usa-width-one-third">
+        <a routerLink="/policy-guide/docs/compliance/dashboard">
+          <img alt="Dashboard Icon" aria-hidden="true" src="assets/img/icons/check_bl.png" />
+          <h3>Progress Report</h3>
+          <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
+        </a>
       </li>
     </ul>
   </div>
 </section>
 
-<section class="press l-block--large">
+<section class="featured-projects block block--white">
+  <ul class="usa-unstyled-list">
+    <li class="block owning-a-home featured-project usa-width-one-whole">
+      <div class="usa-grid">
+        <div class="usa-width-one-whole">
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="usa-width-one-half">
+          <div class="featured-project-info">
+            <h3>Consumer Financial Protection Bureau</h3>
+            <h4>OWNING A HOME</h4>
+            <p>"Owning a Home" is an interactive, online toolkit designed to help consumers as they shop for a mortgage. The suite of tools gives consumers the information and confidence they need to get the best deal.</p>
+            <div class="buttons">
+              <button class="button--transparent" routerLink="/explore-code/agencies/CFPB/repos/owning-a-home">View Project</button>
+              <a class="usa-button button button--transparent" href="https://github.com/cfpb/owning-a-home">Go to Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="block osha-heat-safety featured-project usa-width-one-whole">
+      <div class="usa-grid">
+        <div class="usa-width-one-half">
+          <div class="featured-project-info">
+            <h3>Department of Labor</h3>
+            <h4>OSHA HEAT SAFETY</h4>
+            <p>When you're working in the heat, safety comes first. With the OSHA-NIOSH Heat Safety Tool, you have vital safety information available whenever and wherever you need it - right on your mobile phone.</p>
+            <div class="buttons">
+              <button class="button--transparent" routerLink="/explore-code/agencies/DOL/repos/OSHA HEAT SAFETY">View Project</button>
+              <a class="usa-button button button--transparent" href="https://github.com/USDepartmentofLabor/OSHA-Heat-Safety">Go to Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="block accessible-name-and-description-inspector featured-project">
+      <div class="usa-grid">
+        <div class="usa-width-one-half">
+          <div class="featured-project-info">
+            <h3>Social Security Administration</h3>
+            <h4>Accessible Name and Description Inspector</h4>
+            <p>For many web developers, accessibility is an unfamiliar and complex territory and therefore often neglected. ANDI bridges the gap between developers and end users by revealing where accessibility issues occur on the page.</p>
+            <div class="buttons">
+              <button class="button--transparent" routerLink="/explore-code/agencies/SSA/repos/Accessible Name and Description Inspector">View Project</button>
+              <a class="usa-button button button--transparent" href="https://github.com/ssagov/ANDI">Go to Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section class="press l-block--extra-large">
   <div class="usa-grid">
-    <h2 class="press__header">Press</h2>
+    <h2>Press</h2>
     <div class="press-container">
-      <div class="usa-width-two-thirds quote-large">
+      <div class="usa-width-one-whole quote-large">
         <blockquote>
-          It’s the latest in a long line of high-profile victories for the open
-          source movement.
+          <span class="begin-quote">“</span>It’s the latest in a long line of high-profile victories for the open
+          source movement.<span class="end-quote">”</span>
         </blockquote>
         <div class="attribution">
           <a external-link href="https://www.wired.com/2016/08/open-source-won-now/">
@@ -70,11 +118,12 @@
           </a>
         </div>
       </div>
-      <div class="usa-width-one-third">
+      <div class="usa-width-one-whole">
+        <hr />
         <ul class="usa-unstyled-list press-links">
           <li>
             <a external-link href="https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/">
-              <img class="press-logo" src="assets/img/logos/press/techcrunch.png" alt="TechCrunch">
+              <img class="press-logo" src="assets/img/logos/press/techcrunch.jpg" alt="TechCrunch">
             </a>
           </li>
           <li>
@@ -84,7 +133,7 @@
           </li>
           <li>
             <a external-link href="https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx">
-              <img class="press-logo" src="assets/img/logos/press/fcw.jpg" alt="FCW">
+              <img class="press-logo" src="assets/img/logos/press/fcw.png" alt="FCW">
             </a>
           </li>
         </ul>

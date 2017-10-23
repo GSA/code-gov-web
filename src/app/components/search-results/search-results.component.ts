@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 import { Subscription } from 'rxjs/Subscription';
@@ -15,7 +15,8 @@ import { StateService } from '../../services/state';
 @Component({
   selector: 'search-results',
   styles: [require('./search-results.styles.scss')],
-  template: require('./search-results.template.html')
+  template: require('./search-results.template.html'),
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class SearchResultsComponent {

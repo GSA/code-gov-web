@@ -7,10 +7,15 @@ const CreateFilePlugin = require('webpack-create-file-plugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const ghpages = require('gh-pages');
+const webpack = require('webpack');
 const webpackConfig = ghDeploy.getWebpackConfigModule();
 const commonConfig = require('./webpack.common.js');
+
+const postcssCssnext = require('postcss-cssnext');
+const postcssImport = require('postcss-import');
 
 /**
  * Webpack Constants
@@ -29,20 +34,20 @@ if (helpers.hasProcessFlag('github-stag')) {
   GIT_BRANCH_NAME = 'gh-pages';
 } else if (helpers.hasProcessFlag('federalist-stag')){
   GIT_BRANCH_NAME = 'federalist-stag';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/';
   gtmAuth = 'GTM-M9L9Q5';
   
 } else if (helpers.hasProcessFlag('federalist-dev')){
   
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
   
   
 }
 else if (helpers.hasProcessFlag('dashboard-preview')){
   GIT_BRANCH_NAME = 'federalist-dashboard-preview';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/'+GIT_BRANCH_NAME+'/';
+  BASEURL = '/preview/gsa/code-gov-web/'+GIT_BRANCH_NAME+'/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }
@@ -56,7 +61,7 @@ else if (helpers.hasProcessFlag('federalist-prod')){
 
 else {
   GIT_BRANCH_NAME = 'federalist-dev';
-  BASEURL = '/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/';
+  BASEURL = '/preview/gsa/code-gov-web/federalist-dev/';
   gtmAuth = 'GTM-M9L9Q5';
   
 }
@@ -93,9 +98,17 @@ module.exports = function (env) {
         chunksSortMode: 'dependency',
         inject: 'head'
       }),
+      new PreloadWebpackPlugin(),
 
       new LoaderOptionsPlugin({
         options: {
+          postcss: [
+            postcssImport({ addDependencyTo: webpack }),
+            postcssCssnext({
+              browsers: ['last 2 versions', 'ie >= 9'],
+              compress: true,
+            }),
+          ],
           sassLoader: {
             includePaths: [
               require('bourbon').includePaths,

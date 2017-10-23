@@ -1,4 +1,5 @@
 .code-gov {
+  button,
   .usa-button,
   .usa-button.usa-button-big,
   .usa-button-primary.usa-button-big,
@@ -9,10 +10,15 @@
   [type="submit"].usa-button-big,
   [type="reset"].usa-button-big,
   [type="image"].usa-button-big {
+    font: inherit;
     transition: all 0.2s ease;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
   }
+
+  .usa-grid {
+    max-width: 1200px;
+  }
+}
+
+a:focus {
+  box-shadow: none;
 }

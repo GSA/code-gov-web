@@ -1,3 +1,11 @@
+.l-block--extra-large {
+  padding: 3rem 0 1.5rem;
+
+  @media screen and (min-width: $medium-screen) {
+    padding: 8rem 0;
+  }
+}
+
 .l-block--large {
   padding: 2rem 0 1rem;
 

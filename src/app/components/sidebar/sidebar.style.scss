@@ -126,6 +126,8 @@
     left: 0.5em;
     max-width: 1.5em;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   li {

@@ -3,13 +3,43 @@
 }
 
 .block--dark {
-  background-color: $brand-primary;
+  background-color: $brand-blue-gray-dark;
+  color: $color-white;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-white;
+  }
 }
 
 .block--light {
   background-color: lighten($color-gray-lightest, 2);
 }
 
+.block--teal {
+  background-color: darken($brand-teal, 10);
+  color: $color-white;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-white;
+  }
+}
+
 .block--white {
   background-color: $color-white;
+}
+
+.block--transparent {
+  background-color: transparent;
 }
