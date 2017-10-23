@@ -21,6 +21,7 @@ export class HomeHeaderNavigationComponent {
    * @param $event - the scrolling event
    */
   onScrollHandler($event) {
-    this.isAtTop = $event.target.scrollingElement.scrollTop === 0;
+    const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    this.isAtTop = top === 0;
   }
 }

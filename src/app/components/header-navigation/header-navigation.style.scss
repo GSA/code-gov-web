@@ -11,26 +11,42 @@
 }
 
 .app-navigation {
-  box-shadow: 0 0 0 0;
-  padding: 0;
+  box-shadow: none;
+  padding: 0 2rem;
   position: fixed;
-  top: 21px;
-  transition: 0.5s box-shadow;
+  top: 0;
+  transition: 0.5s box-shadow, 0.5s background-color;
   width: 100%;
   z-index: 3;
 
   @media screen and (min-width: $small-screen) {
-    box-shadow: none;
-    padding: 1.5rem 0;
-    position: relative;
-    top: 0;
+    padding: 1.5rem 2rem;
   }
 
-  &.not-at-top {
+  &.block--white.not-at-top {
+    background-color: $color-white;
+    box-shadow: 0 0 10px 0 $color-black;
+  }
+
+  &.block--dark {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &.block--dark.not-at-top {
+    background-color: $brand-blue-gray-dark;
     box-shadow: 0 0 10px 0 $color-black;
 
     @media screen and (min-width: $small-screen) {
       box-shadow: none;
+    }
+  }
+
+  .search-form {
+    display: none;
+
+    @media screen and (min-width: $large-screen) {
+      display: block;
     }
   }
 }
@@ -40,6 +56,32 @@
 
   @media screen and (min-width: $small-screen) {
     display: block;
+  }
+
+  &--right {
+    float: right;
+
+    li {
+      margin-left: 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        background: $color-gray;
+        height: 50%;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+      }
+
+      &:first-of-type {
+        &:after {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -58,5 +100,88 @@
       background-color: transparent;
       color: $color-white;
     }
+  }
+}
+
+.search-form {
+  display: none;
+  float: right;
+  width: 90%;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    width: 36rem;
+  }
+}
+
+.search-box {
+  background-color: $brand-blue-gray-dark;
+  display: none;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  right: 0;
+  top: 23px;
+  transition: 0.25s linear transform;
+  width: 100%;
+  z-index: 2;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    padding-right: 68px;
+  }
+
+  &.active {
+    transform: translateY(52px);
+  }
+}
+
+.toggle-search-box-button {
+  color: $color-gray;
+  cursor: pointer;
+  display: none;
+  float: right;
+  font-size: 1.5em;
+  line-height: 40px;
+
+  @media screen and (min-width: $small-screen) {
+    display: block;
+  }
+}
+
+.close-search-box-button {
+  color: $color-white;
+  cursor: pointer;
+  float: right;
+  font-size: 1.4em;
+  height: 42px;
+  line-height: 42px;
+  position: relative;
+  transition: 0.25s transform;
+  width: 10%;
+
+  @media screen and (min-width: $medium-screen) {
+    width: 42px;
+  }
+
+  &:focus,
+  &:hover {
+    transform: scale(1.5);
+
+    > i {
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }

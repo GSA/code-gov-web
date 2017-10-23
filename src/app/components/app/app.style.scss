@@ -1,56 +1,82 @@
 @import '../../../styles/base/all';
 
-.app-container {
-  margin-top: 65px;
-
-  @media screen and (min-width: $small-screen) {
-    margin-top: 0;
+.block--dark {
+  .cls-1 {
+    fill: $color-white;
   }
 }
 
-.block--dark {
-  .app-logo {
+.app-footer {
+  text-align: center;
+
+  @media screen and (min-width: $small-screen) {
+    text-align: left;
+  }
+}
+
+.agency-logos {
+  li {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+
+  img,
+  svg {
+    max-height: 3rem;
+    vertical-align: middle;
+
+    @media screen and (min-width: $small-screen) {
+      max-height: 6rem;
+    }
+  }
+
+  svg {
+    height: 2.5rem;
+
     .cls-1 {
       fill: $color-white;
     }
   }
 }
 
-.agency-logos {
-
-  li {
-    display: inline-block;
-    margin-right: 0.5em;
-  }
-
-  .gsa,
-  .pif {
-    max-width: 2.75em;
-  }
-
-  .whitehouse {
-    max-width: 4em;
-  }
-}
-
 .app-links {
   display: block;
-  float: right;
+  float: left;
 
   .app-link {
     display: inline-block;
-    font-size: 1em;
-    margin-left: 1em;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 1.6rem;
+    text-transform: uppercase;
     vertical-align: top;
 
-    &:first-of-type {
-      margin-left: 0;
+    @media screen and (min-width: $medium-screen) {
+      font-size: 0.8em;
+      margin-left: 2rem;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      font-size: 1em;
+      margin-left: 4rem;
+    }
+  }
+
+  .social-link {
+    display: none;
+
+    @media screen and (min-width: $medium-screen) {
+      display: inline-block;
     }
   }
 }
 
 .app-link > a {
+  color: $color-gray;
+  display: inline-block;
   line-height: 40px;
+  min-width: 44px;
+  text-align: center;
 
   &.active {
     color: $brand-primary;
@@ -60,7 +86,7 @@
 
 .app-logo {
   margin: 0 auto;
-  width: 6em;
+  width: 13rem;
 
   @media screen and (min-width: $small-screen) {
     float: left;
@@ -75,33 +101,61 @@
       outline: 0;
     }
   }
-
-  svg {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  .svg-container {
-    height: 40px;
-    position: relative;
-    width: 100%;
-  }
 }
 
 .app-navigation {
   font-size: 0.8em;
   padding: 1.5rem 0;
+  text-align: center;
 
   @media screen and (min-width: $small-screen) {
     font-size: 1em;
+    text-align: left;
+  }
+
+  > .usa-grid {
+    padding: 0;
   }
 
   .search-form {
     .autocomplete-container {
       right: 0;
+    }
+  }
+}
+
+.svg-container {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+
+  @media screen and (min-width: $small-screen) {
+    float: left;
+    left: 0;
+    position: relative;
+    transform: none;
+  }
+
+  svg {
+    height: 20px;
+    left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    top: 0;
+    width: 83px;
+
+    @media screen and (min-width: $medium-screen) {
+      height: 25px;
+      margin-bottom: 7.5px;
+      margin-top: 7.5px;
+      width: 103px;
+    }
+
+    @media screen and (min-width: $large-screen) {
+      height: 30px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      width: 124px;
     }
   }
 }

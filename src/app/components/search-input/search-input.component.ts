@@ -39,7 +39,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() placeholder: string = 'Search Code.gov';
+  @Input() placeholder: string = "Search Thousands of Projects...";
   @Input() withIcon: boolean = false;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
@@ -139,6 +139,15 @@ export class SearchInputComponent {
     if (inputDoesNotHaveFocus && clickIsOutsideForm) {
       this.hideAutocomplete();
     }
+  }
+
+  focus() {
+    console.log('focusing');
+    this.queryElement.nativeElement.focus();
+  }
+
+  blur() {
+    this.queryElement.nativeElement.blur();
   }
 
   change(newValue) {
