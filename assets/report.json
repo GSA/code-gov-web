@@ -1,5 +1,5 @@
 {
-  "timestamp": "Fri Sep 22 2017 10:59:26 GMT-0400 (EDT)",
+  "timestamp": "Mon Oct 23 2017 06:15:38 GMT-0400 (EDT)",
   "statuses": {
     "USDA": {
       "status": "FULLY COMPLIANT: 0 validation errors",
@@ -13,19 +13,15 @@
           "codeUrl": "https://www.usda.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.375
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.375
+        "overallCompliance": 0.75
       }
     },
     "DOC": {
@@ -41,19 +37,15 @@
           "codeUrl": "https://www.commerce.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.25
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.25
+        "overallCompliance": 0.5
       }
     },
     "DOD": {
@@ -69,8 +61,6 @@
           "codeUrl": "https://www.defense.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -78,14 +68,12 @@
       },
       "requirements": {
         "agencyWidePolicy": 0,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
     },
     "ED": {
-      "status": "NOT FULLY COMPLIANT: 54 WARNINGS, 54 validation errors",
+      "status": "NOT FULLY COMPLIANT: 69 WARNINGS, 69 validation errors",
       "issues": [
         {
           "repoID": "ed_oese_sharepoint_sites",
@@ -1166,6 +1154,306 @@
             ],
             "errors": []
           }
+        },
+        {
+          "repoID": "ed_application_eligibility_determiination_system_aeds_",
+          "agency": "Department of Education",
+          "project_name": "Application and Eligibility Determiination System (AEDS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_audit_accoutability_resolution_tracking_system_aarts_",
+          "agency": "Department of Education",
+          "project_name": "Audit Accoutability Resolution and Tracking System (AARTS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_budget_formulation_database",
+          "agency": "Department of Education",
+          "project_name": "Budget Formulation Database",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_case_activity_management_system_cams_",
+          "agency": "Department of Education",
+          "project_name": "Case and Activity Management System (CAMS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_civil_rights_data_collection_crdc_",
+          "agency": "Department of Education",
+          "project_name": "Civil Rights Data Collection (CRDC)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_contract_purchasing_support_systems_cpss_",
+          "agency": "Department of Education",
+          "project_name": "Contract and Purchasing Support Systems (CPSS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_debt_management_collections_system_dmcs_",
+          "agency": "Department of Education",
+          "project_name": "Debt Management and Collections System (DMCS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_edexpress",
+          "agency": "Department of Education",
+          "project_name": "EDExpress",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_edfacts",
+          "agency": "Department of Education",
+          "project_name": "EDFacts",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_enterprise_it_architecture",
+          "agency": "Department of Education",
+          "project_name": "Enterprise IT Architecture",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_ez_audit",
+          "agency": "Department of Education",
+          "project_name": "eZ-Audit",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_federal_student_aid_financial_management_system_fsafms_",
+          "agency": "Department of Education",
+          "project_name": "Federal Student Aid Financial Management System (FSAFMS)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_financial_aid_toolkit",
+          "agency": "Department of Education",
+          "project_name": "Financial Aid Toolkit",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_financial_management_support_system",
+          "agency": "Department of Education",
+          "project_name": "Financial Management Support System",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
+        },
+        {
+          "repoID": "ed_grants_management_system_g5_",
+          "agency": "Department of Education",
+          "project_name": "Grants Management System (G5)",
+          "issues": {
+            "enhancements": [],
+            "warnings": [
+              {
+                "keyword": "format",
+                "dataPath": ".repository",
+                "schemaPath": "#/properties/repository/format",
+                "params": {
+                  "format": "uri"
+                },
+                "message": "should match format \"uri\""
+              }
+            ],
+            "errors": []
+          }
         }
       ],
       "version": "1.0.1",
@@ -1177,8 +1465,6 @@
           "codeUrl": "https://www2.ed.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 0.5,
             "overallCompliance": 0.75
           }
@@ -1186,8 +1472,6 @@
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 0.5,
         "overallCompliance": 0.75
       }
@@ -1205,19 +1489,15 @@
           "codeUrl": "https://energy.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 0,
-            "overallCompliance": 0.5
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 0,
-        "overallCompliance": 0.5
+        "overallCompliance": 0.25
       }
     },
     "HHS": {
@@ -1232,24 +1512,21 @@
           "codeUrl": "https://hhs.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 1
       }
     },
     "HUD": {
-      "status": "FULLY COMPLIANT: 0 validation errors",
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
       "issues": [],
+      "version": "",
       "metadata": {
         "agency": {
           "name": "Department of Housing and Urban Development",
@@ -1258,19 +1535,15 @@
           "codeUrl": "https://www.hud.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 1,
-            "schemaFormat": 1,
-            "overallCompliance": 0.625
+            "schemaFormat": 0,
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 1,
-        "schemaFormat": 1,
-        "overallCompliance": 0.625
+        "schemaFormat": 0,
+        "overallCompliance": 0.25
       }
     },
     "DHS": {
@@ -1285,19 +1558,15 @@
           "codeUrl": "https://www.dhs.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.375
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.375
+        "overallCompliance": 0.75
       }
     },
     "DOI": {
@@ -1313,25 +1582,21 @@
           "codeUrl": "https://data.doi.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 1,
             "schemaFormat": 0,
-            "overallCompliance": 0.625
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
         "schemaFormat": 0,
-        "overallCompliance": 0.625
+        "overallCompliance": 0.25
       }
     },
     "DOJ": {
-      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "2.0.0",
       "metadata": {
         "agency": {
           "id": 9,
@@ -1341,19 +1606,15 @@
           "codeUrl": "https://justice.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
-            "schemaFormat": 0,
-            "overallCompliance": 0.125
+            "schemaFormat": 1,
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
-        "schemaFormat": 0,
-        "overallCompliance": 0.125
+        "schemaFormat": 1,
+        "overallCompliance": 0.75
       }
     },
     "DOL": {
@@ -1453,19 +1714,15 @@
           "codeUrl": "https://www.dol.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.5
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.5
+        "overallCompliance": 1
       }
     },
     "DOS": {
@@ -1480,25 +1737,21 @@
           "codeUrl": "http://state.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.375
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.375
+        "overallCompliance": 0.75
       }
     },
     "DOT": {
-      "status": "FAILURE: MISSING PROJECTS FIELD",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "2.0.0",
       "metadata": {
         "agency": {
           "name": "Department of Transportation",
@@ -1507,19 +1760,15 @@
           "codeUrl": "https://www.transportation.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0.5,
-            "inventoryRequirement": 0,
-            "schemaFormat": 0,
-            "overallCompliance": 0.375
+            "schemaFormat": 1,
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0.5,
-        "inventoryRequirement": 0,
-        "schemaFormat": 0,
-        "overallCompliance": 0.375
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "TRE": {
@@ -1534,19 +1783,15 @@
           "codeUrl": "https://www.treasury.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.625
+            "overallCompliance": 0.75
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.625
+        "overallCompliance": 0.75
       }
     },
     "VA": {
@@ -1562,8 +1807,6 @@
           "codeUrl": "https://va.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -1571,8 +1814,6 @@
       },
       "requirements": {
         "agencyWidePolicy": 0,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -1589,19 +1830,15 @@
           "codeUrl": "https://epa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0,
-            "openSourceRequirement": 0.5,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.375
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0,
-        "openSourceRequirement": 0.5,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.375
+        "overallCompliance": 0.5
       }
     },
     "NASA": {
@@ -1616,19 +1853,15 @@
           "codeUrl": "https://code.nasa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 0.875
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 0.875
+        "overallCompliance": 1
       }
     },
     "AID": {
@@ -1643,19 +1876,15 @@
           "codeUrl": "https://usaid.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 0.625
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 0.625
+        "overallCompliance": 1
       }
     },
     "FEMA": {
@@ -1671,8 +1900,6 @@
           "codeUrl": "https://fema.gov/code.json",
           "requirements": {
             "agencyWidePolicy": null,
-            "openSourceRequirement": null,
-            "inventoryRequirement": null,
             "schemaFormat": 0,
             "overallCompliance": 0
           }
@@ -1680,8 +1907,6 @@
       },
       "requirements": {
         "agencyWidePolicy": null,
-        "openSourceRequirement": null,
-        "inventoryRequirement": null,
         "schemaFormat": 0,
         "overallCompliance": 0
       }
@@ -17558,8 +17783,6 @@
           "codeUrl": "https://gsa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 0.5,
             "overallCompliance": 0.75
           }
@@ -17567,8 +17790,6 @@
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 0.5,
         "overallCompliance": 0.75
       }
@@ -17584,8 +17805,6 @@
           "codeUrl": "https://nsf.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 1,
             "schemaFormat": 1,
             "overallCompliance": 1
           }
@@ -17593,16 +17812,14 @@
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
         "schemaFormat": 1,
         "overallCompliance": 1
       }
     },
     "NRC": {
-      "status": "FAILURE: ERROR WHEN FETCHING (read ETIMEDOUT)",
+      "status": "FULLY COMPLIANT: 0 validation errors",
       "issues": [],
-      "version": "",
+      "version": "1.0.1",
       "metadata": {
         "agency": {
           "name": "Nuclear Regulatory Commission",
@@ -17611,19 +17828,15 @@
           "codeUrl": "https://www.nrc.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 1,
-            "schemaFormat": 0,
-            "overallCompliance": 0.75
+            "schemaFormat": 1,
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 1,
-        "schemaFormat": 0,
-        "overallCompliance": 0.75
+        "schemaFormat": 1,
+        "overallCompliance": 1
       }
     },
     "OPM": {
@@ -17639,19 +17852,15 @@
           "codeUrl": "https://opm.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 0.5,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 0,
-            "overallCompliance": 0.125
+            "overallCompliance": 0.25
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 0.5,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 0,
-        "overallCompliance": 0.125
+        "overallCompliance": 0.25
       }
     },
     "SBA": {
@@ -17665,19 +17874,15 @@
           "codeUrl": "https://sba.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0,
-            "inventoryRequirement": 0,
             "schemaFormat": 1,
-            "overallCompliance": 0.5
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0,
-        "inventoryRequirement": 0,
         "schemaFormat": 1,
-        "overallCompliance": 0.5
+        "overallCompliance": 1
       }
     },
     "NARA": {
@@ -17692,19 +17897,15 @@
           "codeUrl": "https://archives.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 0.5,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 0.75
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 0.5,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 0.75
+        "overallCompliance": 1
       }
     },
     "CFPB": {
@@ -17719,19 +17920,39 @@
           "codeUrl": "https://consumerfinance.gov/code.json",
           "requirements": {
             "agencyWidePolicy": null,
-            "openSourceRequirement": null,
-            "inventoryRequirement": null,
             "schemaFormat": 1,
-            "overallCompliance": 0.25
+            "overallCompliance": 0.5
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": null,
-        "openSourceRequirement": null,
-        "inventoryRequirement": null,
         "schemaFormat": 1,
-        "overallCompliance": 0.25
+        "overallCompliance": 0.5
+      }
+    },
+    "EOP": {
+      "status": "FAILURE: ERROR WHEN FETCHING (Unexpected token < in JSON at position 0)",
+      "issues": [],
+      "version": "",
+      "metadata": {
+        "agency": {
+          "id": 26,
+          "name": "White House - Executive Office of the President",
+          "acronym": "EOP",
+          "website": "https://whitehouse.gov/",
+          "codeUrl": "https://whitehouse.gov/code.json",
+          "requirements": {
+            "agencyWidePolicy": null,
+            "schemaFormat": 0,
+            "overallCompliance": 0
+          }
+        }
+      },
+      "requirements": {
+        "agencyWidePolicy": null,
+        "schemaFormat": 0,
+        "overallCompliance": 0
       }
     },
     "SSA": {
@@ -17746,19 +17967,15 @@
           "codeUrl": "https://www.ssa.gov/code.json",
           "requirements": {
             "agencyWidePolicy": 1,
-            "openSourceRequirement": 1,
-            "inventoryRequirement": 0.5,
             "schemaFormat": 1,
-            "overallCompliance": 0.875
+            "overallCompliance": 1
           }
         }
       },
       "requirements": {
         "agencyWidePolicy": 1,
-        "openSourceRequirement": 1,
-        "inventoryRequirement": 0.5,
         "schemaFormat": 1,
-        "overallCompliance": 0.875
+        "overallCompliance": 1
       }
     }
   }

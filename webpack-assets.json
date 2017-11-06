@@ -1,11 +1,14 @@
 {
   "main": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/main.87ea89e56ad4bbe2a3e4.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-dev/main.42cf5f4ad1b0f62d75ac.bundle.js"
   },
   "vendor": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/vendor.d430f162b160b105ea3e.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-dev/vendor.4d859e82e9178b50e19f.bundle.js"
+  },
+  "styles": {
+    "js": "/preview/gsa/code-gov-web/federalist-dev/styles.6b558f83dfacb516f4f9.bundle.js"
   },
   "polyfills": {
-    "js": "/preview/presidential-innovation-fellows/code-gov-web/federalist-dev/polyfills.6cf3a8e699aa892d758a.bundle.js"
+    "js": "/preview/gsa/code-gov-web/federalist-dev/polyfills.36c8fce421319b7ec870.bundle.js"
   }
 }
