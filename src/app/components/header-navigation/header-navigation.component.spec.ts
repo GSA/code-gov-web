@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { HeaderNavigationComponent } from './header-navigation.component';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
+import { MobileService } from '../../services/mobile';
 
 describe('HeaderNavigationComponent', () => {
   describe('component logic', () => {
@@ -16,11 +17,12 @@ describe('HeaderNavigationComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
           imports: [
-            RouterModule.forRoot([])
+            RouterModule.forRoot([]),
           ],
           declarations: [ HeaderNavigationComponent ],
           providers: [
             { provide: APP_BASE_HREF, useValue: '/' },
+            MobileService,
           ],
           schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
         });
