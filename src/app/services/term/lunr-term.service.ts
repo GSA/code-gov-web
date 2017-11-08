@@ -11,6 +11,7 @@ import 'rxjs/add/operator/single';
 
 import { AgenciesIndexService, ReleasesIndexService } from '../indexes';
 import { TermService } from './term.service';
+import { zipIndexResults } from '../../utils/zipIndexResults';
 
 @Injectable()
 
@@ -49,11 +50,7 @@ export class LunrTermService implements TermService {
     this.searchResults = Observable.zip(
       releasesReturned,
       agenciesReturned,
-      function (releasesResults, agenciesResults) {
-        return [...agenciesResults, ...releasesResults]
-          .sort((a, b) => a.score > b.score ? -1 : a.score === b.score ? 0 : 1)
-          .map(result => result.item);
-      },
+      zipIndexResults,
     );
   }
 
