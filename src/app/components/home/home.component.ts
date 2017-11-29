@@ -26,6 +26,10 @@ export class HomeComponent {
     );
   }
 
+  /**
+   * Get the offset of the app navigation header so we scroll down to the about
+   * section and the header is flush against the section.
+   */
   getAboutOffset() {
     return document.querySelector('.app-navigation').clientHeight;
   }
