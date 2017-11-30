@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SpyLocation } from '@angular/common/testing';
 
 import { Angulartics2, Angulartics2Module } from 'angulartics2';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AutocompleteComponent } from '../autocomplete';
 import { AutocompleteResultComponent } from '../autocomplete-result';
@@ -37,6 +38,7 @@ describe('HomeComponent', () => {
         Angulartics2Module.forRoot(),
         RouterModule.forRoot([]),
         MetaModule.forRoot(),
+        Ng2PageScrollModule,
       ],
       providers: [
         Angulartics2,
