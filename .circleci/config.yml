@@ -5,6 +5,12 @@ jobs:
       - image: circleci/node:6.11.0
     steps:
       - checkout
+      - run: 
+          name: download-cc-test-reporter
+          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: 
+          name: make-test-reporter-executable
+          command: chmod +x ./cc-test-reporter
       - run:
           name: Add Node Module's bin to PATH
           command: echo "export PATH=`pwd`/node_modules/.bin:$PATH" >> $BASH_ENV
@@ -17,17 +23,15 @@ jobs:
           key: code-gov-web-{{ checksum "package.json" }}
           paths:
             - code-gov-web/node_modules
-      - run: 
-          name: Download CondeClimate Test Reporter
-          command: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-      - run: 
-          name: Make Test Reporter Executable
-          command: chmod +x ./cc-test-reporter
-      - run:
-          command: ./cc-test-reporter before-build
       - run:
           name: Run Tests
           command: npm test
       - run:
-          name: Upload Test Report to Code Climate
-          command: ./cc-test-reporter after-build -t lcov --exit-code $?
+          name: upload-test-report
+          command: |
+             ./cc-test-reporter after-build -t lcov --exit-code $?
+      - store_test_results:
+          path: test-results.xml
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
