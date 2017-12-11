@@ -157,7 +157,7 @@ export class SearchResultsComponent {
   filterLicenses(result) {
     const filteredLicenses = this.getFilteredValues('licenses');
 
-    if (!result.permissions.licenses || filteredLicenses.length === 0) {
+    if (!result.permissions || !result.permissions.licenses || filteredLicenses.length === 0) {
       return true;
     }
 
@@ -171,7 +171,7 @@ export class SearchResultsComponent {
   filterUsageTypes(result) {
     const filteredUsageTypes = this.getFilteredValues('usageTypes');
 
-    if (!result.permissions.usageType || filteredUsageTypes.length === 0) {
+    if (!result.permissions || !result.permissions.usageType || filteredUsageTypes.length === 0) {
       return true;
     }
 
@@ -193,6 +193,6 @@ export class SearchResultsComponent {
   }
 
   getLicenses() {
-    return uniq(compact(flatten(this.results.map(result => result.permissions.licenses ? result.permissions.licenses.map(license => license.name) : []))));
+    return uniq(compact(flatten(this.results.map(result => result.permissions && result.permissions.licenses ? result.permissions.licenses.map(license => license.name) : []))));
   }
 }
