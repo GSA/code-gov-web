@@ -14,7 +14,7 @@ import {
   Validators
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
@@ -142,7 +142,6 @@ export class SearchInputComponent {
   }
 
   focus() {
-    console.log('focusing');
     this.queryElement.nativeElement.focus();
   }
 
