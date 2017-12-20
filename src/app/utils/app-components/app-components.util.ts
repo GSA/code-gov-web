@@ -5,6 +5,7 @@ export * from '../../components/app';
 export * from '../../components/four-oh-four';
 export * from '../../components/header-navigation';
 export * from '../../components/help-wanted';
+export * from '../../components/help-wanted/card';
 export * from '../../components/home';
 export * from '../../components/home/banner-art';
 export * from '../../components/home/header-navigation';

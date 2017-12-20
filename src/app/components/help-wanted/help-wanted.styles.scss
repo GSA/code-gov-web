@@ -1,0 +1,157 @@
+@import '~bourbon/app/assets/stylesheets/bourbon';
+@import '~bourbon-neat/app/assets/stylesheets/neat';
+@import '~uswds/src/stylesheets/core/variables';
+@import '../../../styles/base/variables';
+
+.help-wanted-banner {
+  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  h1,
+  p {
+    color: $color-white;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.help-wanted-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+      font-weight: bold;
+
+      &::before {
+        content: '> ';
+        font-weight: normal;
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.help-wanted-filter-section {
+  @include span-columns(3);
+
+  padding-top: 2rem;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.help-wanted-filters {
+  background-color: $color-gray-lightest;
+  padding: 1rem;
+}
+
+.help-wanted-filter {
+  h5 {
+    color: $color-black;
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    font-size: 0.8em;
+
+    label {
+      span {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 30px);
+      }
+    }
+  }
+
+  .show-more {
+    color: $color-gray-medium;
+    text-decoration: none;
+  }
+}
+
+.help-wanted-results {
+  @include span-columns(9);
+}
+
+.help-wanted-content-header {
+  border-bottom: 1px solid $color-gray-lighter;
+  margin-bottom: 2rem;
+
+  h4 {
+    color: $color-black;
+    float: left;
+    font-size: 1.5em;
+    line-height: 5.5rem;
+    margin-bottom: 0;
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.help-wanted-tabs {
+  float: right;
+  line-height: 5.5rem;
+
+  li {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &.active {
+      a {
+        border-bottom: 4px solid $brand-teal-medium;
+        color: $color-black;
+      }
+    }
+
+    a {
+      border-bottom: 4px solid transparent;
+      color: $color-gray-light;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+.help-wanted-content {
+  margin-bottom: 4rem;
+}
+
+.help-wanted-content-item {
+  @include span-columns(4);
+}
