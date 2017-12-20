@@ -9,35 +9,63 @@
       <li>Help Wanted</li>
     </ul>
   </div>
-  <div class="help-wanted-content">
-    <div class="help-wanted-content-header">
-      <h2>Explore Our Help Wanted Tasks</h2>
-      <ul class="help-wanted-areas">
-        <li><a href="#">Featured</a></li>
-        <li><a href="#">Active</a></li>
-        <li><a href="#">Popular</a></li>
+  <div class="help-wanted-content usa-grid">
+    <div class="help-wanted-filter-section">
+      <h4>Filter</h4>
+      <form class="help-wanted-filters" [formGroup]="filterForm">
+        <fieldset class="usa-fieldset-inputs">
+          <ul class="help-wanted-filter usa-unstyled-list" *ngIf="getLanguages().length > 0">
+            <li>
+              <h5>Language</h5>
+              <show-more [formGroup]="filterForm" name="languages" [list]="getLanguages()"></show-more>
+            </li>
+          </ul>
+          <ul class="help-wanted-filter usa-unstyled-list" *ngIf="getLicenses().length > 0">
+            <li>
+              <h5>License</h5>
+              <ul class="usa-unstyled-list">
+                <li *ngFor="let license of getLicenses()">
+                  <input id="license-{{ license }}" name="license" type="checkbox" value="{{ license }}" /><label for="license-{{ license }}"><span>{{ license }}</span></label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="help-wanted-filter usa-unstyled-list">
+            <li>
+              <h5>Usage Type</h5>
+              <ul class="usa-unstyled-list" [formGroup]="filterForm.controls.usageTypes">
+                <li>
+                  <input id="usage-type-government-wide-reuse" name="usageType" type="checkbox" value="government-wide-reuse" formControlName="governmentWideReuse" /><label for="usage-type-government-wide-reuse"><span>Government-Wide Reuse</span></label>
+                </li>
+                <li>
+                  <input id="usage-type-open-source" name="usageType" type="checkbox" value="open-source" formControlName="openSource" /><label for="usage-type-open-source"><span>Open Source</span></label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </div>
+    <div class="help-wanted-results">
+      <div class="help-wanted-content-header">
+        <h4>Explore Our Help Wanted Tasks</h4>
+        <ul class="help-wanted-tabs usa-unstyled-list">
+          <li class="active"><a href="#">Featured</a></li>
+          <li><a href="#">Active</a></li>
+          <li><a href="#">Popular</a></li>
+        </ul>
+      </div>
+      <ul class="help-wanted-content-items usa-unstyled-list">
+        <li class="help-wanted-content-item">
+          <help-wanted-card></help-wanted-card>
+        </li>
+        <li class="help-wanted-content-item">
+          <help-wanted-card></help-wanted-card>
+        </li>
+        <li class="help-wanted-content-item">
+          <help-wanted-card></help-wanted-card>
+        </li>
       </ul>
     </div>
-    <ul class="help-wanted-content-items">
-      <li class="help-wanted-content-item">
-        <h3><a href="#">Decrease load time</a></h3>
-        <small>Last updated Oct 26 at 11:45</small>
-        <p>The application takes too long to load.  Need helping optimizing page so it loads faster.</p>
-        <dl>
-          <dt>Language:</dt>
-          <dd>HTML, CSS, Ruby</dd>
-
-          <dt>Skill Level:</dt>
-          <dd>Beginner</dd>
-
-          <dt>Effort:</dt>
-          <dd>4 hrs</dd>
-        </dl>
-        <div class="help-wanted-content-item-actions">
-          <button>Project Details</button>
-          <button>Start Now</button>
-        </div>
-      </li>
-    </ul>
   </div>
 </div>

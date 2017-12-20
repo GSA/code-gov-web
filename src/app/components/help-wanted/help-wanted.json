@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Decrease load time",
+      "description": "The application takes too long to load.  Need helping optimizing page so it loads faster.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "HTML",
+        "CSS",
+        "Ruby"
+      ],
+      "skill": "beginner",
+      "effort": 4
+    },
+    {
+      "id": 2,
+      "title": "Search not filtering correctly",
+      "description": "When a user searches a term with a filter, the filter is not being taken into account.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "Angular"
+      ],
+      "skill": "intermediate",
+      "effort": 8
+    },
+    {
+      "id": 3,
+      "title": "New feature for a thing",
+      "description": "Would be nice if a user could do a thing using this new feature.  Its a nice to have and would make the overall experience better.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "advanced",
+      "effort": 40
+    },
+    {
+      "id": 4,
+      "title": "New feature for a thing",
+      "description": "Would be nice if a user could do a thing using this new feature.  Its a nice to have and would make the overall experience better.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "advanced",
+      "effort": 40
+    },
+    {
+      "id": 5,
+      "title": "Decrease load time",
+      "description": "The application takes too long to load.  Need helping optimizing page so it loads faster.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "HTML",
+        "CSS",
+        "Ruby"
+      ],
+      "skill": "beginner",
+      "effort": 4
+    },
+    {
+      "id": 6,
+      "title": "Search not filtering correctly",
+      "description": "When a user searches a term with a filter, the filter is not being taken into account.",
+      "updated": "2017-10-26T11:45:21Z",
+      "languages": [
+        "Angular"
+      ],
+      "skill": "intermediate",
+      "effort": 8
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { items } from './help-wanted.json';
 
 @Component({
   selector: 'help-wanted',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class HelpWantedComponent {
-  
+  private items = items;
+
+  getLanguages() {
+
+  }
 }

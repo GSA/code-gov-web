@@ -1,0 +1,66 @@
+@import '../../../../styles/base/variables';
+
+.help-wanted-card {
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    line-height: 1;
+
+    a {
+      color: $brand-teal-medium;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    color: $color-black;
+    line-height: 1.1;
+  }
+
+  small {
+    color: $color-gray-light;
+    font-size: 1em;
+  }
+
+  dl {
+    background-color: $color-cool-blue-lightest;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0.75rem;
+
+    > div {
+      line-height: 1.1;
+      margin-left: 1rem;
+      text-indent: -1rem;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  dd,
+  dt {
+    display: inline;
+    margin: 0;
+  }
+
+  dd {
+    font-weight: bold;
+  }
+
+  dt {
+    color: $color-gray;
+  }
+}
+
+.help-wanted-card-actions {
+  button {
+    background-color: $brand-blue-gray-dark;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 0.25rem 1.25rem;
+  }
+}
