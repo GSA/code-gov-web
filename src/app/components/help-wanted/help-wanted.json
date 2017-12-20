@@ -11,7 +11,9 @@
         "Ruby"
       ],
       "skill": "beginner",
-      "effort": 4
+      "effort": 4,
+      "type": "enhancement",
+      "impact": "Education"
     },
     {
       "id": 2,
@@ -22,7 +24,9 @@
         "Angular"
       ],
       "skill": "intermediate",
-      "effort": 8
+      "effort": 8,
+      "type": "bug",
+      "impact": "Environment"
     },
     {
       "id": 3,
@@ -33,7 +37,9 @@
         "JavaScript"
       ],
       "skill": "advanced",
-      "effort": 40
+      "effort": 40,
+      "type": "new_feature",
+      "impact": "Health"
     },
     {
       "id": 4,
@@ -44,7 +50,9 @@
         "JavaScript"
       ],
       "skill": "advanced",
-      "effort": 40
+      "effort": 40,
+      "type": "new_feature",
+      "impact": "Science"
     },
     {
       "id": 5,
@@ -57,7 +65,9 @@
         "Ruby"
       ],
       "skill": "beginner",
-      "effort": 4
+      "effort": 4,
+      "type": "enhancement",
+      "impact": "Education"
     },
     {
       "id": 6,
@@ -68,7 +78,9 @@
         "Angular"
       ],
       "skill": "intermediate",
-      "effort": 8
+      "effort": 8,
+      "type": "bug",
+      "impact": "Environment"
     }
   ]
 }
