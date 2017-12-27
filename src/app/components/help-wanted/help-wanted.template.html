@@ -57,14 +57,8 @@
         </ul>
       </div>
       <ul class="help-wanted-content-items usa-unstyled-list">
-        <li class="help-wanted-content-item">
-          <help-wanted-card></help-wanted-card>
-        </li>
-        <li class="help-wanted-content-item">
-          <help-wanted-card></help-wanted-card>
-        </li>
-        <li class="help-wanted-content-item">
-          <help-wanted-card></help-wanted-card>
+        <li *ngFor="let item of items" class="help-wanted-content-item">
+          <help-wanted-card [item]="item"></help-wanted-card>
         </li>
       </ul>
     </div>

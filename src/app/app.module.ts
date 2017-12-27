@@ -24,6 +24,7 @@ import { ROUTES } from './app.routes';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { ExternalLinkDirective } from './directives/external-link';
 import { ToggleMenuDirective } from './directives/toggle-menu';
+import { CapitalizePipe } from './pipes/capitalize';
 import { LanguageIconPipe } from './pipes/language-icon';
 import { PluralizePipe } from './pipes/pluralize';
 import { TruncatePipe } from './pipes/truncate';
@@ -82,6 +83,7 @@ const APP_PROVIDERS = [
   declarations: [
     APP_COMPONENTS,
     ExternalLinkDirective,
+    CapitalizePipe,
     LanguageIconPipe,
     PluralizePipe,
     IsDefinedPipe,

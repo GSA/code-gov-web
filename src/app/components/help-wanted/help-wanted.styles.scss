@@ -55,10 +55,12 @@
 .help-wanted-filter-section {
   @include span-columns(3);
 
-  padding-top: 2rem;
-
   h4 {
-    margin-bottom: 1rem;
+    color: $color-black;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 5.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -105,6 +107,7 @@
     color: $color-black;
     float: left;
     font-size: 1.5em;
+    font-weight: bold;
     line-height: 5.5rem;
     margin-bottom: 0;
   }
@@ -152,6 +155,12 @@
   margin-bottom: 4rem;
 }
 
+.help-wanted-content-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .help-wanted-content-item {
-  @include span-columns(4);
+  margin-bottom: 2rem;
+  width: 100%;
 }

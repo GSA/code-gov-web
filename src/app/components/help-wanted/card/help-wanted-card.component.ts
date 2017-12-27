@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HelpWantedItem } from '../help-wanted-item.model';
 
 @Component({
   selector: 'help-wanted-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class HelpWantedCardComponent {
-
+  @Input() private item: HelpWantedItem;
 }
