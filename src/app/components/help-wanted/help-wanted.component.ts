@@ -19,6 +19,8 @@ export class HelpWantedComponent {
       languages: {},
       skillLevels: {},
       timeRequireds: {},
+      types: {},
+      impacts: {},
     });
   }
 
@@ -26,6 +28,8 @@ export class HelpWantedComponent {
     this.buildFormControl('languages', this.getLanguages());
     this.buildFormControl('skillLevels', this.getSkillLevels());
     this.buildFormControl('timeRequireds', this.getTimeRequireds());
+    this.buildFormControl('types', this.getTypes());
+    this.buildFormControl('impacts', this.getImpacts());
   }
 
   buildFormControl(property, values) {
@@ -65,5 +69,25 @@ export class HelpWantedComponent {
     }, {});
 
     return Object.keys(timeRequireds);
+  }
+
+  getTypes() {
+    const types = this.items.reduce((acc, item) => {
+      acc[item.type] = true;
+
+      return acc;
+    }, {});
+
+    return Object.keys(types);
+  }
+
+  getImpacts() {
+    const impacts = this.items.reduce((acc, item) => {
+      acc[item.impact] = true;
+
+      return acc;
+    }, {});
+
+    return Object.keys(impacts);
   }
 }
