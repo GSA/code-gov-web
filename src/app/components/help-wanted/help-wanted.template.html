@@ -51,13 +51,13 @@
       <div class="help-wanted-content-header">
         <h4>Explore Our Help Wanted Tasks</h4>
         <ul class="help-wanted-tabs usa-unstyled-list">
-          <li class="active"><a href="#">Featured</a></li>
-          <li><a href="#">Active</a></li>
-          <li><a href="#">Popular</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'featured' }"><a href="#" (click)="setActiveTab('featured', $event)">Featured</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'active' }"><a href="#" (click)="setActiveTab('active', $event)">Active</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'popular' }"><a href="#" (click)="setActiveTab('popular', $event)">Popular</a></li>
         </ul>
       </div>
       <ul class="help-wanted-content-items usa-unstyled-list">
-        <li *ngFor="let item of items" class="help-wanted-content-item">
+        <li *ngFor="let item of filteredItems" class="help-wanted-content-item">
           <help-wanted-card [item]="item"></help-wanted-card>
         </li>
       </ul>

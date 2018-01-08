@@ -10,10 +10,15 @@
         "CSS",
         "Ruby"
       ],
-      "skill": "beginner",
+      "skill": "Beginner",
       "effort": 4,
-      "type": "enhancement",
-      "impact": "Education"
+      "type": "Enhancement",
+      "impact": "Education",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     },
     {
       "id": 2,
@@ -23,10 +28,15 @@
       "languages": [
         "Angular"
       ],
-      "skill": "intermediate",
+      "skill": "Intermediate",
       "effort": 8,
-      "type": "bug",
-      "impact": "Environment"
+      "type": "Bug",
+      "impact": "Environment",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     },
     {
       "id": 3,
@@ -36,10 +46,15 @@
       "languages": [
         "JavaScript"
       ],
-      "skill": "advanced",
+      "skill": "Advanced",
       "effort": 40,
-      "type": "new_feature",
-      "impact": "Health"
+      "type": "New Feature",
+      "impact": "Health",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     },
     {
       "id": 4,
@@ -49,10 +64,15 @@
       "languages": [
         "JavaScript"
       ],
-      "skill": "advanced",
+      "skill": "Advanced",
       "effort": 40,
-      "type": "new_feature",
-      "impact": "Science"
+      "type": "New Feature",
+      "impact": "Science",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     },
     {
       "id": 5,
@@ -64,10 +84,15 @@
         "CSS",
         "Ruby"
       ],
-      "skill": "beginner",
+      "skill": "Beginner",
       "effort": 4,
-      "type": "enhancement",
-      "impact": "Education"
+      "type": "Enhancement",
+      "impact": "Education",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     },
     {
       "id": 6,
@@ -77,10 +102,15 @@
       "languages": [
         "Angular"
       ],
-      "skill": "intermediate",
+      "skill": "Intermediate",
       "effort": 8,
-      "type": "bug",
-      "impact": "Environment"
+      "type": "Bug",
+      "impact": "Environment",
+      "projectURL": "",
+      "repositoryURL": "",
+      "featured": true,
+      "active": true,
+      "popular": true
     }
   ]
 }
