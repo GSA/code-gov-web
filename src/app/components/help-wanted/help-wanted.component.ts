@@ -10,7 +10,9 @@ import { items } from './help-wanted.json';
 
 export class HelpWantedComponent {
   private items = items;
+  private filteredItems;
   private filterForm: FormGroup;
+  private activeTab: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -30,6 +32,14 @@ export class HelpWantedComponent {
     this.buildFormControl('timeRequireds', this.getTimeRequireds());
     this.buildFormControl('types', this.getTypes());
     this.buildFormControl('impacts', this.getImpacts());
+
+    this.filteredItems = items;
+
+    this.filterForm.valueChanges.subscribe(data => {
+      this.filteredItems = this.filterItems(this.items);
+    });
+
+    this.activeTab = 'featured';
   }
 
   buildFormControl(property, values) {
@@ -89,5 +99,83 @@ export class HelpWantedComponent {
     }, {});
 
     return Object.keys(impacts);
+  }
+
+  getFilteredValues(property) {
+    return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
+  }
+
+  filterLanguages(result) {
+    const filteredLanguages = this.getFilteredValues('languages');
+
+    if (filteredLanguages.length > 0) {
+      if (Array.isArray(result.languages)) {
+        return filteredLanguages.every(l => result.languages.includes(l));
+      } else {
+        return false;
+      }
+    } else {
+      return true;
+    }
+  }
+
+  filterSkillLevels(result) {
+    const filteredSkillLevels = this.getFilteredValues('skillLevels');
+
+    if (!result.skill) {
+      return true;
+    }
+
+    return filteredSkillLevels.every(sl => result.skill === sl);
+  }
+
+  filterTimeRequired(result) {
+    const filterTimeRequireds = this.getFilteredValues('timeRequireds');
+
+    if (!result.effort) {
+      return true;
+    }
+
+    return filterTimeRequireds.every(tr => String(result.effort) === tr);
+  }
+
+  filterTypes(result) {
+    const filteredTypes = this.getFilteredValues('types');
+
+    if (!result.type) {
+      return true;
+    }
+
+    return filteredTypes.every(t => result.type === t);
+  }
+
+  filterImpacts(result) {
+    const filteredImpacts = this.getFilteredValues('impacts');
+
+    if (!result.impact) {
+      return true;
+    }
+
+    return filteredImpacts.every(i => result.impact === i);
+  }
+
+  filterByTab(result) {
+    return result[this.activeTab];
+  }
+
+  filterItems(items) {
+    return items.filter(this.filterLanguages.bind(this))
+      .filter(this.filterSkillLevels.bind(this))
+      .filter(this.filterTimeRequired.bind(this))
+      .filter(this.filterTypes.bind(this))
+      .filter(this.filterImpacts.bind(this))
+      .filter(this.filterByTab.bind(this));
+  }
+
+  setActiveTab(tab, $event) {
+    $event.preventDefault();
+
+    this.activeTab = tab;
+    this.filteredItems = this.filterItems(this.items);
   }
 }
