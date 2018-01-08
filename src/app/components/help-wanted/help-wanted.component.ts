@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { items } from './help-wanted.json';
+import { map, uniq } from 'lodash';
+
 
 @Component({
   selector: 'help-wanted',
@@ -62,43 +64,19 @@ export class HelpWantedComponent {
   }
 
   getSkillLevels() {
-    const skillLevels = this.items.reduce((acc, item) => {
-      acc[item.skill] = true;
-
-      return acc;
-    }, {});
-
-    return Object.keys(skillLevels);
+    return uniq(map(items, "skill")).filter(Boolean);
   }
 
   getTimeRequireds() {
-    const timeRequireds = this.items.reduce((acc, item) => {
-      acc[item.effort] = true;
-
-      return acc;
-    }, {});
-
-    return Object.keys(timeRequireds);
+    return uniq(map(items, "effort")).filter(Boolean);
   }
 
   getTypes() {
-    const types = this.items.reduce((acc, item) => {
-      acc[item.type] = true;
-
-      return acc;
-    }, {});
-
-    return Object.keys(types);
+    return uniq(map(items, "type")).filter(Boolean);
   }
 
   getImpacts() {
-    const impacts = this.items.reduce((acc, item) => {
-      acc[item.impact] = true;
-
-      return acc;
-    }, {});
-
-    return Object.keys(impacts);
+    return uniq(map(items, "impact")).filter(Boolean);
   }
 
   getFilteredValues(property) {
