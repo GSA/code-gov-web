@@ -57,6 +57,15 @@
   dt {
     color: $color-gray;
   }
+  
+  .agency-details {
+    padding: 10px 0px 0px 0px;
+    img {
+      height: 25px;
+      vertical-align: bottom;
+      width: 25px;
+    }
+  }
 }
 
 .help-wanted-card-actions {
@@ -66,8 +75,17 @@
     margin-bottom: 0;
     padding: 0.25rem 1.25rem;
 
+    &:focus,
+    &:hover {
+      background-color: $brand-teal;
+      border-color: $brand-teal;
+      color: $color-white;
+      transition: all 0.2s ease;
+    }
+
     &:last-of-type {
       margin-right: 0
     }
+    
   }
 }

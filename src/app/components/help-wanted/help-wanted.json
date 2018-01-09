@@ -14,11 +14,14 @@
       "effort": 4,
       "type": "Enhancement",
       "impact": "Education",
-      "projectURL": "",
-      "repositoryURL": "",
+      "projectURL": "https://github.com/SSAgov/ANDI",
+      "repositoryURL": "https://github.com/SSAgov/ANDI",
       "featured": true,
       "active": true,
-      "popular": true
+      "popular": true,
+      "url": "https://github.com/SSAgov/ANDI/issues/1",
+      "image": "SSA-50x50.png",
+      "agency": "Social Security Administration"
     },
     {
       "id": 2,

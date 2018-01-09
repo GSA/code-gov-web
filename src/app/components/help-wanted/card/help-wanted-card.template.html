@@ -1,4 +1,4 @@
-<div class="help-wanted-card card">
+<div class="help-wanted-card card card--focusable">
   <h3><a [href]="item.url">{{ item.title }}</a></h3>
   <small>Last updated Oct 26 at 11:45</small>
   <p>{{ item.description }}</p>
@@ -25,7 +25,11 @@
     
   </dl>
   <div class="help-wanted-card-actions">
-    <a [href]="item.projectURL" class="button usa-button">Project Details</a>
-    <a [href]="item.repositoryURL" class="button usa-button">Start Now</a>
+    <a [href]="item.projectURL" class="button usa-button" *ngIf="item.projectURL">Project Details</a>
+    <a [href]="item.repositoryURL" class="button usa-button" *ngIf="item.repositoryURL">Start Now</a>
+  </div>
+  <div class="agency-details">
+    <img [src]="'/assets/img/logos/agencies/' + item.image" *ngIf="item.image"/>
+    <span *ngIf="item.agency">{{item.agency}}</span>
   </div>
 </div>
