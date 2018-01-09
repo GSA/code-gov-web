@@ -17,6 +17,12 @@
       <dt>Effort:</dt>
       <dd>{{ item.effort }} {{ "hrs" | pluralize : item.effort }}</dd>
     </div>
+    
+    <div>
+      <dt>Impact:</dt>
+      <dd>{{ item.impact | capitalize }}</dd>
+    </div>
+    
   </dl>
   <div class="help-wanted-card-actions">
     <a [href]="item.projectURL" class="button usa-button">Project Details</a>
