@@ -16,6 +16,11 @@ export class AgencyService {
   getByName(name: string): Agency {
     return this.agencies.find(agency => agency.name.toLowerCase() === name.toLowerCase());
   }
+  
+  getIcon(agency) {
+    return `assets/img/logos/agencies/${agency.id}-50x50.png`;
+  }
+  
 }
 
 export interface Agency {
