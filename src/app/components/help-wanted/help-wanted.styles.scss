@@ -3,30 +3,39 @@
 @import '~uswds/src/stylesheets/core/variables';
 @import '../../../styles/base/variables';
 
-.help-wanted-banner {
-  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
-  background-attachment: fixed;
+#banner-help-wanted {
+  
+  max-height: 20rem;
+  
+ .banner-background {
+  background-attachment: scroll;
+  background-image: url('/assets/img/american_flag_1920x1280_gradient.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
   background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
   margin-bottom: 2rem;
   padding-bottom: 8rem;
-  padding-top: 8rem;
+  padding-top: 8rem;  
+  position: absolute;
+  right: 0;
   text-align: center;
+  top: 0;
+  width: 100%;
 
-  h1,
-  p {
-    color: $color-white;
-    font-weight: bold;
-    margin: 0;
+  // HACK: This is a hack to prevent ugliness on iOS
+  @media screen and (min-width: 768px) {
+    background-attachment: fixed;
   }
-
-  h1 {
-    text-transform: uppercase;
-  }
+} 
 }
 
 .help-wanted-breadcrumb {
-  font-size: 0.8em;
+  font-size: 1em;
   margin-bottom: 4rem;
+  margin-top: 2rem;
 
   ul {
     li {
@@ -67,6 +76,7 @@
 .help-wanted-filters {
   background-color: $color-gray-lightest;
   padding: 1rem;
+  min-width: min-content;
 }
 
 .help-wanted-filter {

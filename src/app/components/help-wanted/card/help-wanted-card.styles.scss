@@ -29,7 +29,7 @@
 
   dl {
     background-color: $color-cool-blue-lightest;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
     padding: 0.75rem 0.75rem;
 
     > div {
@@ -63,7 +63,7 @@
     img {
       height: 25px;
       vertical-align: bottom;
-      width: 25px;
+      max-width: 100px;
     }
   }
 }

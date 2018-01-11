@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { items } from './help-wanted.json';
-import { map, uniq } from 'lodash';
+import { keys, map, pickBy, uniq } from 'lodash';
+import { HelpWantedService } from '../../services/help-wanted';
 
 
 @Component({
@@ -11,13 +11,14 @@ import { map, uniq } from 'lodash';
 })
 
 export class HelpWantedComponent {
-  private items = items;
+  private items;
   private filteredItems;
   private filterForm: FormGroup;
   private activeTab: string;
 
   constructor(
     private formBuilder: FormBuilder,
+    private helpWantedService: HelpWantedService
   ) {
     this.filterForm = formBuilder.group({
       languages: {},
@@ -26,29 +27,49 @@ export class HelpWantedComponent {
       types: {},
       impacts: {},
     });
+    
+    this.items = [];
+    this.filteredItems = [];
   }
 
   ngOnInit() {
-    this.buildFormControl('languages', this.getLanguages());
-    this.buildFormControl('skillLevels', this.getSkillLevels());
-    this.buildFormControl('timeRequireds', this.getTimeRequireds());
-    this.buildFormControl('types', this.getTypes());
-    this.buildFormControl('impacts', this.getImpacts());
+    console.error("starting help-wanted.component.ngOnInit");
 
-    this.filteredItems = items;
+    this.helpWantedService.getTasks().then(tasks => {
 
-    this.filterForm.valueChanges.subscribe(data => {
-      this.filteredItems = this.filterItems(this.items);
+      console.error("tasks:", tasks);
+
+      this.items = tasks;
+      this.filteredItems = tasks;
+
+      this.buildFormControl('languages', this.getLanguages());
+      this.buildFormControl('skillLevels', this.getSkillLevels());
+      this.buildFormControl('timeRequireds', this.getTimeRequireds());
+      this.buildFormControl('types', this.getTypes());
+      this.buildFormControl('impacts', this.getImpacts());
+      
+      this.filterForm.valueChanges.subscribe(data => {
+        this.filteredItems = this.filterItems(this.items);
+      });
+  
+
     });
-
+    
     this.activeTab = 'featured';
+
   }
 
   buildFormControl(property, values) {
-    this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
-      obj[key] = this.formBuilder.control(false);
-      return obj;
-    }, {})));
+    try {
+      this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
+        obj[key] = this.formBuilder.control(false);
+        return obj;
+      }, {})));
+    } catch (error) {
+      console.error("property:", property);
+      console.error("values:", values);
+      console.error("[error in buildFormControl]:", error) 
+    }
   }
 
   getLanguages() {
@@ -56,31 +77,35 @@ export class HelpWantedComponent {
       item.languages.forEach(language => {
         acc[language] = true;
       });
-
+  
       return acc;
     }, {});
 
-    return Object.keys(languages);
+    return Object.keys(languages);      
+  }
+  
+  getTaskValues(key) {
+    return uniq(map(this.items, key)).filter(Boolean);
   }
 
   getSkillLevels() {
-    return uniq(map(items, "skill")).filter(Boolean);
+    return this.getTaskValues("skill");
   }
 
   getTimeRequireds() {
-    return uniq(map(items, "effort")).filter(Boolean);
+    return this.getTaskValues("effort");
   }
 
   getTypes() {
-    return uniq(map(items, "type")).filter(Boolean);
+    return this.getTaskValues("type");
   }
 
   getImpacts() {
-    return uniq(map(items, "impact")).filter(Boolean);
+    return this.getTaskValues("impact");
   }
 
   getFilteredValues(property) {
-    return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
+    return keys(pickBy(this.filterForm.value[property]));
   }
 
   filterLanguages(result) {

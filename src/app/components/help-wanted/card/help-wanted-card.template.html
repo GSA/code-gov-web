@@ -29,7 +29,7 @@
     <a [href]="item.repositoryURL" class="button usa-button" *ngIf="item.repositoryURL">Start Now</a>
   </div>
   <div class="agency-details">
-    <img [src]="'/assets/img/logos/agencies/' + item.image" *ngIf="item.image"/>
-    <span *ngIf="item.agency_name">{{item.agency_name}}</span>
+    <img [src]="item.image" *ngIf="item.image"/>
+    <span *ngIf="item?.agency?.name">{{item?.agency?.name}}</span>
   </div>
 </div>
