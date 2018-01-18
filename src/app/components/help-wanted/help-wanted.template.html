@@ -9,7 +9,7 @@
     </div>
   </div>
 </section>
-<div class="help-wanted">
+<div class="help-wanted{{mobile ? ' mobile' : ''}}">
   <div class="help-wanted-breadcrumb usa-grid">
     <ul class="usa-unstyled-list">
       <li><a routerLink="/">Home</a></li>
@@ -17,40 +17,22 @@
     </ul>
   </div>
   <div class="help-wanted-content usa-grid">
-    <div class="help-wanted-filter-section">
-      <h4>Filter</h4>
+    <div id="help-wanted-filter-section">
+      <h4 *ngIf="!mobile">Filter</h4>
+      <div class="usa-button button--tertiary" *ngIf="mobile">Filter</div>
       <form class="help-wanted-filters" [formGroup]="filterForm">
         <fieldset class="usa-fieldset-inputs">
-          <ul class="help-wanted-filter usa-unstyled-list" *ngIf="getLanguages().length > 0">
+          <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of options">
             <li>
-              <h5>Language</h5>
-              <show-more [formGroup]="filterForm" name="languages" [list]="getLanguages()"></show-more>
+              <h5>{{option.display}}</h5>
+              <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
             </li>
           </ul>
-          <ul class="help-wanted-filter usa-unstyled-list">
+          <ul class="help-wanted-filter usa-unstyled-list" *ngIf="mobile">
             <li>
-              <h5>Skill Level</h5>
-              <show-more [formGroup]="filterForm" name="skillLevels" [list]="getSkillLevels()"></show-more>
+              <button class="usa-button-big button--tertiary" (click)="applyFilters()">Apply Filters</button>
             </li>
-          </ul>
-          <ul class="help-wanted-filter usa-unstyled-list">
-            <li>
-              <h5>Time Required</h5>
-              <show-more [formGroup]="filterForm" name="timeRequireds" [list]="getTimeRequireds()"></show-more>
-            </li>
-          </ul>
-          <ul class="help-wanted-filter usa-unstyled-list">
-            <li>
-              <h5>Type</h5>
-              <show-more [formGroup]="filterForm" name="types" [list]="getTypes()"></show-more>
-            </li>
-          </ul>
-          <ul class="help-wanted-filter usa-unstyled-list">
-            <li>
-              <h5>Impact</h5>
-              <show-more [formGroup]="filterForm" name="impacts" [list]="getImpacts()"></show-more>
-            </li>
-          </ul>
+          </ul>          
         </fieldset>
       </form>
     </div>

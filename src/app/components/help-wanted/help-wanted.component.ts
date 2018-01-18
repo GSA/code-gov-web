@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { keys, map, pickBy, uniq } from 'lodash';
+import { flattenDeep, keys, map, pickBy, reduce, uniq, zipObject } from 'lodash';
 import { HelpWantedService } from '../../services/help-wanted';
 
 
@@ -15,25 +15,32 @@ export class HelpWantedComponent {
   private filteredItems;
   private filterForm: FormGroup;
   private activeTab: string;
+  private mobile: boolean;
+  private options: Object[];
 
   constructor(
     private formBuilder: FormBuilder,
     private helpWantedService: HelpWantedService
   ) {
-    this.filterForm = formBuilder.group({
-      languages: {},
-      skillLevels: {},
-      timeRequireds: {},
-      types: {},
-      impacts: {},
-    });
-    
     this.items = [];
     this.filteredItems = [];
+    //this.filterForm = new FormGroup();
+    this.filterForm = this.formBuilder.group({
+      Language: {},
+      "Skill Level": {},
+      "Time Required": {},
+      "Type": {},
+      "Impact": {}
+    });
+    this.mobile = false;
   }
 
   ngOnInit() {
     console.error("starting help-wanted.component.ngOnInit");
+    if (window.screen.width <= 600) {
+      this.mobile = true;
+    }
+    
 
     this.helpWantedService.getTasks().then(tasks => {
 
@@ -42,21 +49,54 @@ export class HelpWantedComponent {
       this.items = tasks;
       this.filteredItems = tasks;
 
-      this.buildFormControl('languages', this.getLanguages());
-      this.buildFormControl('skillLevels', this.getSkillLevels());
-      this.buildFormControl('timeRequireds', this.getTimeRequireds());
-      this.buildFormControl('types', this.getTypes());
-      this.buildFormControl('impacts', this.getImpacts());
+      this.options = [
+        {
+          display: "Language",
+          key: "languages"
+        },
+        {
+          display: "Skill Level",
+          key: "skill"
+        },
+        {
+          display: "Time Required",
+          key: "effort"
+        },
+        {
+          display: "Type",
+          key: "type"
+        },
+        {
+          display: "Impact",
+          key: "impact"
+        }
+      ];
+      
+      this.options.map(option => {
+        option.options = this.getTaskValues(option.key);
+      });
+      
+      console.log("this.options:", this.options);
+
+      this.buildFormControls(this.options);
+
+      console.log("filterForm:", this.filterForm);
       
       this.filterForm.valueChanges.subscribe(data => {
-        this.filteredItems = this.filterItems(this.items);
+        console.log("subscridbed changes:", this.mobile, data);
+        if (!this.mobile) {
+          this.applyFilters();
+        }
       });
-  
 
     });
     
     this.activeTab = 'featured';
 
+  }
+  
+  applyFilters() {
+    this.filteredItems = this.filterItems(this.items);
   }
 
   buildFormControl(property, values) {
@@ -71,95 +111,43 @@ export class HelpWantedComponent {
       console.error("[error in buildFormControl]:", error) 
     }
   }
-
-  getLanguages() {
-    const languages = this.items.reduce((acc, item) => {
-      item.languages.forEach(language => {
-        acc[language] = true;
-      });
   
-      return acc;
-    }, {});
-
-    return Object.keys(languages);      
+  buildFormControls(options) {
+    options.forEach(option => {
+      //console.log("[buildFormControls] values:", option.options);
+      this.buildFormControl(option.key, option.options);
+    });
   }
-  
+
+
   getTaskValues(key) {
-    return uniq(map(this.items, key)).filter(Boolean);
-  }
-
-  getSkillLevels() {
-    return this.getTaskValues("skill");
-  }
-
-  getTimeRequireds() {
-    return this.getTaskValues("effort");
-  }
-
-  getTypes() {
-    return this.getTaskValues("type");
-  }
-
-  getImpacts() {
-    return this.getTaskValues("impact");
+    return uniq(flattenDeep(map(this.items, key))).filter(Boolean);
   }
 
   getFilteredValues(property) {
     return keys(pickBy(this.filterForm.value[property]));
   }
-
-  filterLanguages(result) {
-    const filteredLanguages = this.getFilteredValues('languages');
-
-    if (filteredLanguages.length > 0) {
-      if (Array.isArray(result.languages)) {
-        return filteredLanguages.every(l => result.languages.includes(l));
-      } else {
-        return false;
+  
+  filterBy(key) {
+    return result => {
+      
+      let result_value = result[key];
+      
+      if (!result_value) {
+        return true;
       }
-    } else {
-      return true;
-    }
-  }
-
-  filterSkillLevels(result) {
-    const filteredSkillLevels = this.getFilteredValues('skillLevels');
-
-    if (!result.skill) {
-      return true;
-    }
-
-    return filteredSkillLevels.every(sl => result.skill === sl);
-  }
-
-  filterTimeRequired(result) {
-    const filterTimeRequireds = this.getFilteredValues('timeRequireds');
-
-    if (!result.effort) {
-      return true;
-    }
-
-    return filterTimeRequireds.every(tr => String(result.effort) === tr);
-  }
-
-  filterTypes(result) {
-    const filteredTypes = this.getFilteredValues('types');
-
-    if (!result.type) {
-      return true;
-    }
-
-    return filteredTypes.every(t => result.type === t);
-  }
-
-  filterImpacts(result) {
-    const filteredImpacts = this.getFilteredValues('impacts');
-
-    if (!result.impact) {
-      return true;
-    }
-
-    return filteredImpacts.every(i => result.impact === i);
+      
+      const filteredValues = this.getFilteredValues(key);
+      
+      return filteredValues.every(value => {
+        if (Array.isArray(result_value)) {
+          return result_value.includes(value);
+        } else {
+          return String(value) === String(result_value);
+        }
+      });
+      
+    };
   }
 
   filterByTab(result) {
@@ -167,12 +155,17 @@ export class HelpWantedComponent {
   }
 
   filterItems(items) {
-    return items.filter(this.filterLanguages.bind(this))
-      .filter(this.filterSkillLevels.bind(this))
-      .filter(this.filterTimeRequired.bind(this))
-      .filter(this.filterTypes.bind(this))
-      .filter(this.filterImpacts.bind(this))
-      .filter(this.filterByTab.bind(this));
+    console.log("starting to filterItems with", items);
+    
+    let filtered = this.items; 
+
+    this.options.forEach(option => {
+      filtered = filtered.filter(this.filterBy(option.key));
+    });
+    
+    filtered = filtered.filter(this.filterByTab.bind(this));
+    
+    return filtered;
   }
 
   setActiveTab(tab, $event) {

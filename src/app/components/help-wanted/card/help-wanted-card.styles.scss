@@ -70,18 +70,7 @@
 
 .help-wanted-card-actions {
   .button {
-    background-color: $brand-blue-gray-dark;
-    font-weight: bold;
     margin-bottom: 0;
-    padding: 0.25rem 1.25rem;
-
-    &:focus,
-    &:hover {
-      background-color: $brand-teal;
-      border-color: $brand-teal;
-      color: $color-white;
-      transition: all 0.2s ease;
-    }
 
     &:last-of-type {
       margin-right: 0

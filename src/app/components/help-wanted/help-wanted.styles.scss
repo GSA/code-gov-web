@@ -8,28 +8,28 @@
   max-height: 20rem;
   
  .banner-background {
-  background-attachment: scroll;
-  background-image: url('/assets/img/american_flag_1920x1280_gradient.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  margin-bottom: 2rem;
-  padding-bottom: 8rem;
-  padding-top: 8rem;  
-  position: absolute;
-  right: 0;
-  text-align: center;
-  top: 0;
-  width: 100%;
-
-  // HACK: This is a hack to prevent ugliness on iOS
-  @media screen and (min-width: 768px) {
-    background-attachment: fixed;
-  }
-} 
+    background-attachment: scroll;
+    background-image: url('/assets/img/american_flag_1920x1280_gradient.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 8rem;
+    padding-top: 8rem;  
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+  
+    // HACK: This is a hack to prevent ugliness on iOS
+    @media screen and (min-width: 768px) {
+      background-attachment: fixed;
+    }
+  } 
 }
 
 .help-wanted-breadcrumb {
@@ -61,7 +61,7 @@
   }
 }
 
-.help-wanted-filter-section {
+#help-wanted-filter-section {
   @include span-columns(3);
 
   h4 {
@@ -173,4 +173,30 @@
 .help-wanted-content-item {
   margin-bottom: 2rem;
   width: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .help-wanted {
+    
+    #help-wanted-filter-section {
+      
+      form {
+        bottom: 0;
+        left: -100px;
+        overflow: scroll;
+        right: 0;        
+        top: 0;
+        position: absolute;
+        z-index: 99;
+        &.display {
+          left: 0;
+          transition: 1s;
+        }
+      }
+    }
+
+  }
+  
 }

@@ -25,8 +25,8 @@
     
   </dl>
   <div class="help-wanted-card-actions">
-    <a [href]="item.projectURL" class="button usa-button" *ngIf="item.projectURL">Project Details</a>
-    <a [href]="item.repositoryURL" class="button usa-button" *ngIf="item.repositoryURL">Start Now</a>
+    <a [href]="item.projectURL" class="usa-button button--tertiary" *ngIf="item.projectURL">Project Details</a>
+    <a [href]="item.repositoryURL" class="usa-button button--tertiary" *ngIf="item.repositoryURL">Start Now</a>
   </div>
   <div class="agency-details">
     <img [src]="item.image" *ngIf="item.image"/>
