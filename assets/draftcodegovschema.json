@@ -1,0 +1,260 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Code.gov Inventory",
+  "description": "A federal source code catalog",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org"
+    },
+    "measurementType": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "linesOfCode",
+            "modules",
+            "cost",
+            "releases",
+            "systems",
+            "other"
+          ],
+          "description": "An enumerated list of methods for measuring the open source requirement."
+        },
+        "ifOther": {
+          "type": "string",
+          "description": "A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field."
+        }
+      }
+    },
+    "agency": {
+      "type": "string",
+      "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual."
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "An object containing each versioned source code project made available",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the release."
+          },
+          "organization": {
+            "type": "string",
+            "description": "The organization within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
+          },
+          "description": {
+            "type": "string",
+            "description": "A one- or two-sentence description of the release."
+          },
+          "licenses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "URL": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL of the project license, if available. null should be used if not."
+                },
+                "name": {
+                  "type": "string",
+                  "description": "An abbreviation for the name of the type license. For example, 'CC0' or 'MIT'."
+                }
+              }
+            }
+          },
+          "permissions": {
+            "type": "object",
+            "properties": {
+              "usageType": {
+                "type": "string",
+                "description": "A list of enumerated values which describes the usage or license permissions for the release.",
+                "enum": [
+                  "open",
+                  "governmentWideReuse",
+                  "exemptByLaw",
+                  "exemptByNationalSecurity",
+                  "exemptByAgencySystem",
+                  "exemptByAgencyMission",
+                  "exemptByCIO",
+                  "exemptByPolicyDate"
+                ]
+              },
+              "exemptionText": {
+                "type": [
+                  "null",
+                  "string"
+                ],
+                "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for any exemption used."
+              }
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "An array of keywords describing the release."
+            }
+          },
+          "contact": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string",
+                "description": "The email address for the point of contact for the release."
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the point of contact for the release."
+              },
+              "URL": {
+                "type": "string",
+                "format": "uri",
+                "description": "The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'."
+              },
+              "phone": {
+                "type": "string",
+                "description": "A phone number for the point of contact for the release."
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "description": "The development status of the release.",
+            "enum": [
+              "Ideation",
+              "Alpha",
+              "Beta",
+              "Production",
+              "Archival"
+            ]
+          },
+          "vcs": {
+            "type": "string",
+            "description": "A lowercase string with the name of the version control system in use on the project."
+          },
+          "repositoryURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public project repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions."
+          },
+          "homepageURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release homepage."
+          },
+          "downloadURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where a distribution of the release can be found."
+          },
+          "disclaimerURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where disclaimer language regarding the release can be found."
+          },
+          "disclaimerText": {
+            "type": "string",
+            "description": "Short paragraph that includes disclaimer language to accompany the release."
+          },
+          "languages": {
+            "type": "array",
+            "description": " An array of strings with the names of the programming languages in use on the release.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "laborHours": {
+            "type": "number",
+
+            "description": "An estimate of total labor hours spent on the development of this release that includes labor performed by federal employees and contractors."
+
+          },
+          "relatedCodebase": {
+            "type": "array",
+            "description": "An array of forked, cloned, or other otherwise reused source code repositories.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "codeName": {
+                  "type": "string",
+                  "description": "The name of the code repository, project, library or release."
+                },
+                "codeURL": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL where the code repository, project, library or release can be found."
+                },
+                "isGovermentRepo": {
+                  "type": "boolean",
+                  "description": "True or False. Is the code repository owned or managed by a federal agency?"
+                }
+              }
+            }
+          },
+          "partners": {
+            "type": "array",
+            "description": "An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The acronym describing the partner agency."
+                },
+                "email": {
+                  "type": "string",
+                  "description": "The email address for the point of contact at the partner agency."
+                }
+              }
+            }
+          },
+          "date": {
+            "type": "object",
+            "description": "A date object describing the release.",
+            "properties": {
+              "created": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the release was created, in YYYY-MM-DD or ISO 8601 format."
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the release was modified, in YYYY-MM-DD or ISO 8601 format."
+              },
+              "metadataLastUpdated": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
+              }
+            }
+          }
+        },
+        "required": [
+          "name",
+          "permissions",
+          "repositoryURL",
+          "description",
+          "laborHours",
+          "tags",
+          "contact",
+          "date"
+        ]
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "measurementType",
+    "agency",
+    "releases"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "main": {
+    "js": "/preview/gsa/code-gov-web/federalist-dashboard-preview/main.6bb253e5194225d44c18.bundle.js"
+  },
+  "vendor": {
+    "js": "/preview/gsa/code-gov-web/federalist-dashboard-preview/vendor.7f026684ec777fc80e10.bundle.js"
+  },
+  "styles": {
+    "js": "/preview/gsa/code-gov-web/federalist-dashboard-preview/styles.176b0469235123fca52d.bundle.js"
+  },
+  "polyfills": {
+    "js": "/preview/gsa/code-gov-web/federalist-dashboard-preview/polyfills.77765b24ecefc41dbbf9.bundle.js"
+  }
+}
