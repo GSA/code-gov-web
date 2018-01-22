@@ -52,12 +52,12 @@ export class HelpWantedComponent {
       this.options = [
         { display: "Show", key: "show", options: ["Featured", "Active", "Popular", "All"], version: "mobile" },
         { display: "Language", key: "languages", options: this.getTaskValues("languages"), version: "both" },
-        { display: "Skill Level", key: "skill", options: this.getTaskValues("skill"), version: "desktop" },
-        { display: "Time Required", key: "effort", options: this.getTaskValues("effort"), version: "desktop" },
-        { display: "Type", key: "type", options: this.getTaskValues("type"), version: "desktop" },
-        { display: "Impact", key: "impact", options: this.getTaskValues("impact"), version: "desktop" },
-        { display: "License", key: "license", options: this.getTaskValues("license"), version: "mobile" },
-        { display: "Usage Type", key: "usageType", options: this.getTaskValues("usageType"), version: "mobile" },
+        { display: "Skill Level", key: "skill", options: this.getTaskValues("skill"), version: "both" },
+        { display: "Time Required", key: "effort", options: this.getTaskValues("effort"), version: "both" },
+        { display: "Type", key: "type", options: this.getTaskValues("type"), version: "both" },
+        { display: "Impact", key: "impact", options: this.getTaskValues("impact"), version: "both" },
+        { display: "License", key: "license", options: this.getTaskValues("license"), version: "none" },
+        { display: "Usage Type", key: "usageType", options: this.getTaskValues("usageType"), version: "none" },
       ];
       
       this.buildFormControls(this.options);
