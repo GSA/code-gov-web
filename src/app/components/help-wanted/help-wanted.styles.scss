@@ -63,13 +63,18 @@
 
 #help-wanted-filter-section {
   @include span-columns(3);
-
+  
   h4 {
     color: $color-black;
+    font-family: $header-font-family;
     font-size: 1.5em;
     font-weight: bold;
     line-height: 5.5rem;
     margin-bottom: 0;
+  }
+
+  h5 {
+    font-family: $header-font-family;
   }
 }
 
@@ -219,8 +224,13 @@
     
     h4 {
       color: black;
+      font-family: $header-font-family;
       font-size: 2rem;
       font-weight: bold;
+    }
+    
+    h5 {
+      font-family: $header-font-family;
     }
     
   }
