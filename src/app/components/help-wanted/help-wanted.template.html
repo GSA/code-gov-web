@@ -19,10 +19,9 @@
   <div class="help-wanted-content usa-grid">
     <div id="help-wanted-filter-section">
       <h4 *ngIf="!mobile">Filter</h4>
-      <div class="usa-button button--tertiary" *ngIf="mobile">Filter</div>
-      <form class="help-wanted-filters" [formGroup]="filterForm">
+      <form class="help-wanted-filters" [formGroup]="filterForm"  *ngIf="!mobile">
         <fieldset class="usa-fieldset-inputs">
-          <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of options">
+          <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getDesktopFormOptions()" >
             <li>
               <h5>{{option.display}}</h5>
               <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
@@ -39,17 +38,40 @@
     <div class="help-wanted-results">
       <div class="help-wanted-content-header">
         <h4>Explore Our Help Wanted Tasks</h4>
-        <ul class="help-wanted-tabs usa-unstyled-list">
-          <li [ngClass]="{ active: this.activeTab === 'featured' }"><a href="#" (click)="setActiveTab('featured', $event)">Featured</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'active' }"><a href="#" (click)="setActiveTab('active', $event)">Active</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'popular' }"><a href="#" (click)="setActiveTab('popular', $event)">Popular</a></li>
+        <button id="filter-popup-trigger-button" class="usa-button-big button--tertiary" *ngIf="mobile" (click)="openPopup()">Filter</button>
+        <ul class="help-wanted-tabs usa-unstyled-list" *ngIf="!mobile">
+          <li [ngClass]="{ active: this.activeTab === 'Featured' }"><a href="#" (click)="setActiveTab('Featured', $event)">Featured</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'Active' }"><a href="#" (click)="setActiveTab('Active', $event)">Active</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'Popular' }"><a href="#" (click)="setActiveTab('Popular', $event)">Popular</a></li>
+          <li [ngClass]="{ active: this.activeTab === 'All' }"><a href="#" (click)="setActiveTab('All', $event)">All</a></li>
         </ul>
       </div>
       <ul class="help-wanted-content-items usa-unstyled-list">
         <li *ngFor="let item of filteredItems" class="help-wanted-content-item">
-          <help-wanted-card [item]="item"></help-wanted-card>
+          <help-wanted-card [item]="item" [mobile]="mobile"></help-wanted-card>
         </li>
       </ul>
     </div>
   </div>
+</div>
+
+
+<div class="filter-form-popup{{displayPopup ? ' display' : ''}}" *ngIf="mobile">
+  <div class="close-button-wrapper"><span class="close-button" (click)="closePopup()">X</span></div>
+  <form class="help-wanted-filters" [formGroup]="filterForm">
+    <h4>Filter</h4>
+    <fieldset class="usa-fieldset-inputs">
+      <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getMobileFormOptions()" >
+      <li>
+        <h5>{{option.display}}</h5>
+        <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
+      </li>
+      </ul>
+      <ul class="help-wanted-filter usa-unstyled-list">
+        <li>
+          <button class="usa-button-big button--tertiary" (click)="applyFilters(); closePopup();">Apply Filters</button>
+        </li>
+      </ul>
+    </fieldset>
+  </form>
 </div>

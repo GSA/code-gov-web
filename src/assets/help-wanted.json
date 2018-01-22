@@ -19,7 +19,8 @@
       "active": true,
       "popular": true,
       "url": "https://github.com/SSAgov/ANDI/issues/1",
-      "agency_id": "SSA"
+      "agency_id": "SSA",
+      "license": "GPL-2.0"
     },
     {
       "id": 2,
@@ -42,7 +43,9 @@
       "active": true,
       "popular": false,
       "url": "https://github.com/cfpb/cfgov-refresh/issues/3531",
-      "agency_id": "CFPB"
+      "agency_id": "CFPB",
+      "license": "BSD-3-Clause",
+      "usageType": "Exempt"
     },
     {
       "id": 3,
@@ -61,7 +64,8 @@
       "featured": true,
       "active": true,
       "url": "https://www.drupal.org/project/better_view_pane_args/issues/2895400",
-      "agency_id": "DOJ"
+      "agency_id": "DOJ",
+      "license": "CC0"
     },
     {
       "id": 4,

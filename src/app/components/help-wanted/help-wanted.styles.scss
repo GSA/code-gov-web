@@ -177,26 +177,52 @@
 
 
 @media screen and (max-width: 600px) {
-
-  .help-wanted {
+  
+  .help-wanted-results {
+    width: 100%;
     
-    #help-wanted-filter-section {
+    .help-wanted-content-header {
+      float: none;
       
-      form {
-        bottom: 0;
-        left: -100px;
-        overflow: scroll;
-        right: 0;        
-        top: 0;
-        position: absolute;
-        z-index: 99;
-        &.display {
-          left: 0;
-          transition: 1s;
-        }
+      #filter-popup-trigger-button {
+        width: 15rem;
+      }
+
+    }
+  }
+
+  .filter-form-popup {
+
+    background-color: $color-gray-lightest;
+    bottom: 0;
+    left: -100%;
+    overflow: scroll;
+    padding: 0.5rem;
+    position: fixed;
+    right: 0;        
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    &.display {
+      left: 0;
+      transition: .5s;
+    }
+    
+    .close-button-wrapper {
+      padding: 0.5rem;
+      text-align: right;
+      
+      .close-button {
+        font-size: 4rem;
       }
     }
-
+    
+    h4 {
+      color: black;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    
   }
-  
+
 }

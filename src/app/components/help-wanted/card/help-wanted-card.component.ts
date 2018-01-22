@@ -9,4 +9,5 @@ import { HelpWantedItem } from '../help-wanted-item.model';
 
 export class HelpWantedCardComponent {
   @Input() private item: HelpWantedItem;
+  @Input() private mobile: string;
 }

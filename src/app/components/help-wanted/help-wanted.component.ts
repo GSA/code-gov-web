@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { flattenDeep, keys, map, pickBy, reduce, uniq, zipObject } from 'lodash';
+import { flattenDeep, get, keys, map, pickBy, reduce, sortBy, uniq, zipObject } from 'lodash';
 import { HelpWantedService } from '../../services/help-wanted';
-
+import { Option } from "./help-wanted.option";
 
 @Component({
   selector: 'help-wanted',
@@ -16,7 +16,8 @@ export class HelpWantedComponent {
   private filterForm: FormGroup;
   private activeTab: string;
   private mobile: boolean;
-  private options: Object[];
+  private options: Option[];
+  private displayPopup: boolean;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,66 +25,44 @@ export class HelpWantedComponent {
   ) {
     this.items = [];
     this.filteredItems = [];
-    //this.filterForm = new FormGroup();
     this.filterForm = this.formBuilder.group({
-      Language: {},
-      "Skill Level": {},
-      "Time Required": {},
-      "Type": {},
-      "Impact": {}
+      "impact": {},
+      "language": {},
+      "license": {},
+      "show": {},
+      "skill": {},
+      "effort": {},
+      "type": {},
+      "usageType": {}
     });
     this.mobile = false;
+    this.options = [];
+    this.displayPopup = false;
   }
 
   ngOnInit() {
-    console.error("starting help-wanted.component.ngOnInit");
-    if (window.screen.width <= 600) {
-      this.mobile = true;
-    }
-    
+
+    this.setMobile();
 
     this.helpWantedService.getTasks().then(tasks => {
-
-      console.error("tasks:", tasks);
 
       this.items = tasks;
       this.filteredItems = tasks;
 
       this.options = [
-        {
-          display: "Language",
-          key: "languages"
-        },
-        {
-          display: "Skill Level",
-          key: "skill"
-        },
-        {
-          display: "Time Required",
-          key: "effort"
-        },
-        {
-          display: "Type",
-          key: "type"
-        },
-        {
-          display: "Impact",
-          key: "impact"
-        }
+        { display: "Show", key: "show", options: ["Featured", "Active", "Popular", "All"], version: "mobile" },
+        { display: "Language", key: "languages", options: this.getTaskValues("languages"), version: "both" },
+        { display: "Skill Level", key: "skill", options: this.getTaskValues("skill"), version: "desktop" },
+        { display: "Time Required", key: "effort", options: this.getTaskValues("effort"), version: "desktop" },
+        { display: "Type", key: "type", options: this.getTaskValues("type"), version: "desktop" },
+        { display: "Impact", key: "impact", options: this.getTaskValues("impact"), version: "desktop" },
+        { display: "License", key: "license", options: this.getTaskValues("license"), version: "mobile" },
+        { display: "Usage Type", key: "usageType", options: this.getTaskValues("usageType"), version: "mobile" },
       ];
       
-      this.options.map(option => {
-        option.options = this.getTaskValues(option.key);
-      });
-      
-      console.log("this.options:", this.options);
-
       this.buildFormControls(this.options);
 
-      console.log("filterForm:", this.filterForm);
-      
       this.filterForm.valueChanges.subscribe(data => {
-        console.log("subscridbed changes:", this.mobile, data);
         if (!this.mobile) {
           this.applyFilters();
         }
@@ -91,11 +70,16 @@ export class HelpWantedComponent {
 
     });
     
-    this.activeTab = 'featured';
+    this.activeTab = 'Featured';
 
   }
   
+  closePopup() {
+    this.displayPopup = false;
+  }
+  
   applyFilters() {
+    this.displayPopup = false;
     this.filteredItems = this.filterItems(this.items);
   }
 
@@ -114,14 +98,20 @@ export class HelpWantedComponent {
   
   buildFormControls(options) {
     options.forEach(option => {
-      //console.log("[buildFormControls] values:", option.options);
       this.buildFormControl(option.key, option.options);
     });
   }
 
+  getDesktopFormOptions() {
+    return this.options.filter(option => option.version === "desktop" || option.version === "both");
+  }
+
+  getMobileFormOptions() {
+    return this.options.filter(option => option.version === "mobile" || option.version === "both");
+  }
 
   getTaskValues(key) {
-    return uniq(flattenDeep(map(this.items, key))).filter(Boolean);
+    return sortBy(uniq(flattenDeep(map(this.items, item => get(item, key)))).filter(Boolean));
   }
 
   getFilteredValues(property) {
@@ -129,38 +119,57 @@ export class HelpWantedComponent {
   }
   
   filterBy(key) {
-    return result => {
-      
-      let result_value = result[key];
-      
-      if (!result_value) {
-        return true;
-      }
-      
+    return item => {
+
       const filteredValues = this.getFilteredValues(key);
       
-      return filteredValues.every(value => {
-        if (Array.isArray(result_value)) {
-          return result_value.includes(value);
-        } else {
-          return String(value) === String(result_value);
+      if (filteredValues.length === 0) {
+        
+        // we're not filtering by this key
+        // so return true for all the items
+        return true;
+        
+      } else if (filteredValues.length > 0) {
+
+        let item_value = item[key];
+  
+        if (item_value === undefined) {
+          // we're filtering by this key
+          // but a help-wanted item doesn't
+          // include this key, so filter it out
+          return false;
         }
-      });
+
+        return filteredValues.every(value => {
+          if (Array.isArray(item_value)) {
+            return item_value.includes(value);
+          } else {
+            return String(value) === String(item_value);
+          }
+        });
+        
+      }
       
     };
   }
 
   filterByTab(result) {
-    return result[this.activeTab];
+    if( this.activeTab === "All") {
+      return true;
+    } else {
+      return result[this.activeTab.toLowerCase()];
+    }
   }
 
   filterItems(items) {
-    console.log("starting to filterItems with", items);
-    
+
     let filtered = this.items; 
 
     this.options.forEach(option => {
-      filtered = filtered.filter(this.filterBy(option.key));
+      // we ignore show bc we use filterByTab for that
+      if (option.key != "show") {
+        filtered = filtered.filter(this.filterBy(option.key));
+      }
     });
     
     filtered = filtered.filter(this.filterByTab.bind(this));
@@ -172,6 +181,25 @@ export class HelpWantedComponent {
     $event.preventDefault();
 
     this.activeTab = tab;
-    this.filteredItems = this.filterItems(this.items);
+    this.applyFilters();
   }
+  
+  setMobile() {
+        
+    if (window.screen.width <= 600) {
+      this.mobile = true;
+    }
+
+  }
+  
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.setMobile();
+    this.closePopup();
+  }
+  
+  openPopup() {
+    this.displayPopup = true;
+  }
+
 }

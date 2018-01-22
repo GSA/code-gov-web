@@ -65,16 +65,26 @@
       vertical-align: bottom;
       max-width: 100px;
     }
-  }
-}
-
-.help-wanted-card-actions {
-  .button {
-    margin-bottom: 0;
-
-    &:last-of-type {
-      margin-right: 0
+    .help-wanted-agency-name {
+        color: $color-gray-light;
     }
-    
   }
+  
+  .help-wanted-card-description {
+    word-wrap: break-word;
+  }
+
+  .help-wanted-card-actions {
+    a {
+      button {
+        margin-bottom: 0;
+        width: fit-content;
+    
+        &:last-of-type {
+          margin-right: 0
+        }
+      }
+    }
+  }
+
 }

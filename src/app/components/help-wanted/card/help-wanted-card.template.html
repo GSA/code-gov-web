@@ -2,7 +2,7 @@
   <h3><a [href]="item.url">{{ item.title }}</a></h3>
   <small>Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</small>
   <p class="help-wanted-card-description">{{ item.description | truncate : 250}}</p>
-  <dl>
+  <dl *ngIf="!mobile">
     <div>
       <dt>Language:</dt>
       <dd>{{ item.languages.join(', ') }}</dd>
@@ -25,11 +25,11 @@
     
   </dl>
   <div class="help-wanted-card-actions">
-    <a [href]="item.projectURL" class="usa-button button--tertiary" *ngIf="item.projectURL">Project Details</a>
-    <a [href]="item.repositoryURL" class="usa-button button--tertiary" *ngIf="item.repositoryURL">Start Now</a>
+    <a [href]="item.projectURL" *ngIf="item.projectURL"><button class="usa-button button--tertiary">Project Details</button></a>
+    <a [href]="item.repositoryURL" *ngIf="item.repositoryURL"><button class="usa-button button--tertiary">Start Now</button></a>
   </div>
   <div class="agency-details">
     <img [src]="item.image" *ngIf="item.image"/>
-    <span *ngIf="item?.agency?.name">{{item?.agency?.name}}</span>
+    <span *ngIf="item?.agency?.name" class="help-wanted-agency-name">{{item?.agency?.name}}</span>
   </div>
 </div>
