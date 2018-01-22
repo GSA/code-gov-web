@@ -1,5 +1,5 @@
 <div class="help-wanted-card card card--focusable">
-  <h3><a [href]="item.url">{{ item.title }}</a></h3>
+  <h3><a external-link [href]="item.url">{{ item.title }}</a></h3>
   <small>Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</small>
   <p class="help-wanted-card-description">{{ item.description | truncate : 250}}</p>
   <dl *ngIf="!mobile">
@@ -25,8 +25,8 @@
     
   </dl>
   <div class="help-wanted-card-actions">
-    <a [href]="item.projectURL" *ngIf="item.projectURL"><button class="usa-button button--tertiary">Project Details</button></a>
-    <a [href]="item.repositoryURL" *ngIf="item.repositoryURL"><button class="usa-button button--tertiary">Start Now</button></a>
+    <a external-link [href]="item.projectURL" *ngIf="item.projectURL"><button class="usa-button button--tertiary">Project Details</button></a>
+    <a external-link [href]="item.repositoryURL" *ngIf="item.repositoryURL"><button class="usa-button button--tertiary">Start Now</button></a>
   </div>
   <div class="agency-details">
     <img [src]="item.image" *ngIf="item.image"/>
