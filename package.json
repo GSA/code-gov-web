@@ -32,6 +32,10 @@
     {
       "name": "Matt Bailey",
       "url": "https://github.com/mattbailey0"
+    },
+    {
+      "name": "Daniel J. Dufour",
+      "url": "https://github.com/danieljdufour"
     }
   ],
   "homepage": "https://github.com/GSA/code-gov-web",
@@ -124,7 +128,7 @@
     "ng2-page-scroll": "^4.0.0-beta.11",
     "ngx-infinite-scroll": "^0.5.1",
     "ngx-pagination": "^3.0.3",
-    "node-sass": "4.5.2",
+    "node-sass": "4.7.2",
     "normalize.css": "^7.0.0",
     "pluralize": "^3.0.0",
     "postcss-import": "^11.0.0",
