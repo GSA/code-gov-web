@@ -1,5 +1,5 @@
 <div class="help-wanted-card card card--focusable">
-  <h3><a external-link [href]="item.url">{{ item.title }}</a></h3>
+  <h3><a external-link [href]="item.projectURL">{{ item.title }}</a></h3>
   <small>Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</small>
   <p class="help-wanted-card-description">{{ item.description | truncate : 250}}</p>
   <dl *ngIf="!mobile">
