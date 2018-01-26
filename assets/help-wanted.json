@@ -2,122 +2,47 @@
   "items": [
     {
       "id": 1,
-      "title": "Great job! #1",
-      "description": "I like this project! It is similar to a11y.css but ANDI seems to have better navigation. Likely because ANDI is javascript and a11y is only css.\nThat being said, I think the 'installation' instructions could be simplified to just start with, copy/paste the snippet. This should work in any browser.\nIt would be nice if the snippet was in the github readme as well.",
-      "updated": "2017-11-14T15:45:21Z",
+      "title": "Code.gov Administration Tool for Agency Inventory Upload and Maintenance",
+      "description": "Issue Description:\nThis task supports the Code.gov team. We have an admin tool prototype and want to bring it to production for agency use. There is both a front-end web interface and a database.\n\nSpecific tasks:\n\nGet the current prototype admin tool working. Front-end repo here - https://github.com/GSA/code-gov-admintool; Back-end repo here - https://github.com/GSA/code-gov-admin-backend.\nWork with the Code.gov team and me (Joe Castle) to determine path forward for production. This includes integration with Code.gov, including the environment with security, CI, code scanning, databases, etc.\nContact Info:\nName: Joseph Castle\nEmail: joseph.castle@gsa.gov",
+      "updated": "2018-01-23T03:11:00Z",
       "languages": [
         "CSS",
+        "HTML",
         "JavaScript"
       ],
-      "skill": "Advanced",
-      "effort": 4,
+      "skill": "Intermediate",
+      "effort": "Large",
       "type": "Enhancement",
-      "impact": "Accesibility",
-      "projectURL": "https://www.ssa.gov/accessibility/andi/help/howtouse.html",
-      "repositoryURL": "https://github.com/SSAgov/ANDI",
+      "impact": "Open Government",
+      "projectURL": "",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/417",
       "featured": true,
       "active": true,
       "popular": true,
-      "url": "https://github.com/SSAgov/ANDI/issues/1",
-      "agency_id": "SSA"
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 2,
-      "title": "Outdated code job link #3531",
-      "description": "This code comment links to https://www.consumerfinance.gov/jobs/technology-innovation-fellows/, which contains outdated job links and info about fellows who are no longer with the bureau.\nExpected behavior\nhttps://www.consumerfinance.gov/jobs/technology-innovation-fellows/ is worded to reflect the current workforce and opportunities at the bureau.",
-      "updated": "2017-10-26T11:45:21Z",
+      "title": "Labor Hours Estimation for Code.gov Open Source Repositories",
+      "description": "Issue Description:\nThis task supports the Code.gov team. We want to estimate total lines of code and total hours and costs for the code that is located in all of our open source repositories. The open source repositories are listed in the agency json files as shown on Code.gov.\n\nSpecific tasks:\n\nCount total lines of code for all open source repos on Code.gov using CLOC - https://github.com/AlDanial/cloc.\nDetermine labor hours and costs of total lines of code using the COCOMO II Model - http://csse.usc.edu/tools/cocomoii.php. Parameters TBD and can work with me (Joe Castle) on this.\nProvide all of this in a program/script that can be run on a regular basis to account for new code as it is added to Code.gov\nContact Info:\nName: Joseph Castle\nEmail: joseph.castle@gsa.gov",
+      "updated": "2018-01-23T03:11:00Z",
       "languages": [
         "CSS",
         "HTML",
-        "JavaScript",
-        "Python"
-      ],
-      "skill": "Intermediate",
-      "effort": 8,
-      "type": "Bug",
-      "impact": "Environment",
-      "projectURL": "https://www.consumerfinance.gov/",
-      "repositoryURL": "https://github.com/cfpb/cfgov-refresh",
-      "featured": true,
-      "active": true,
-      "popular": false,
-      "url": "https://github.com/cfpb/cfgov-refresh/issues/3531",
-      "agency_id": "CFPB"
-    },
-    {
-      "id": 3,
-      "title": "Remove deference to field cardinality",
-      "description": "Currently, if a field is single-value only, then the view pane arg cannot allow multiple selections. But, that may actually be a use case. So, we should just remove that deference to the field cardinality.",
-      "updated": "2017-10-09T18:05:02Z",
-      "languages": [
-        "Drupal"
-      ],
-      "skill": "Intermediate",
-      "effort": 4,
-      "type": "Bug report",
-      "impact": "Safety",
-      "projectURL": "https://www.drupal.org/project/better_view_pane_args",
-      "repositoryURL": "https://www.drupal.org/project/better_view_pane_args",
-      "featured": true,
-      "active": true,
-      "url": "https://www.drupal.org/project/better_view_pane_args/issues/2895400",
-      "agency_id": "DOJ"
-    },
-    {
-      "id": 4,
-      "title": "4 - New feature for a thing",
-      "description": "Would be nice if a user could do a thing using this new feature.  Its a nice to have and would make the overall experience better.",
-      "updated": "2017-10-26T11:45:21Z",
-      "languages": [
         "JavaScript"
       ],
-      "skill": "Advanced",
-      "effort": 40,
-      "type": "New Feature",
-      "impact": "Science",
-      "projectURL": "",
-      "repositoryURL": "",
-      "featured": true,
-      "active": true,
-      "popular": true
-    },
-    {
-      "id": 5,
-      "title": "5 - Decrease load time",
-      "description": "The application takes too long to load.  Need helping optimizing page so it loads faster.",
-      "updated": "2017-10-26T11:45:21Z",
-      "languages": [
-        "HTML",
-        "CSS",
-        "Ruby"
-      ],
-      "skill": "Beginner",
-      "effort": 4,
-      "type": "Enhancement",
-      "impact": "Education",
-      "projectURL": "",
-      "repositoryURL": "",
-      "featured": true,
-      "active": true,
-      "popular": true
-    },
-    {
-      "id": 6,
-      "title": "6 - Search not filtering correctly",
-      "description": "When a user searches a term with a filter, the filter is not being taken into account.",
-      "updated": "2017-10-26T11:45:21Z",
-      "languages": [
-        "Angular"
-      ],
       "skill": "Intermediate",
-      "effort": 8,
-      "type": "Bug",
-      "impact": "Environment",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
       "projectURL": "",
-      "repositoryURL": "",
+      "issueUrl": "https://github.com/GSA/code-gov-web/issues/416",
       "featured": true,
       "active": true,
-      "popular": true
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     }
   ]
 }
