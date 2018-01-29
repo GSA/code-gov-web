@@ -4,12 +4,12 @@
 @import '../../../styles/base/variables';
 
 #banner-help-wanted {
-  
+
   max-height: 20rem;
-  
+
  .banner-background {
     background-attachment: scroll;
-    background-image: url('/assets/img/american_flag_1920x1280_gradient.jpg');
+    background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,18 +18,22 @@
     left: 0;
     margin-bottom: 2rem;
     padding-bottom: 8rem;
-    padding-top: 8rem;  
+    padding-top: 8rem;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
     width: 100%;
-  
+
     // HACK: This is a hack to prevent ugliness on iOS
     @media screen and (min-width: 768px) {
       background-attachment: fixed;
     }
-  } 
+  }
+
+  p {
+    max-width: 80%;
+  }
 }
 
 .help-wanted-breadcrumb {
@@ -63,7 +67,7 @@
 
 #help-wanted-filter-section {
   @include span-columns(3);
-  
+
   h4 {
     color: $color-black;
     font-family: $header-font-family;
@@ -74,7 +78,7 @@
   }
 
   h5 {
-    font-family: $header-font-family;
+    font-family: Helvetica, $header-font-family;
   }
 }
 
@@ -87,7 +91,8 @@
 .help-wanted-filter {
   h5 {
     color: $color-black;
-    margin-top: 0;
+    margin-top: 5px;
+    margin-bottom: 4px;
   }
 
   ul {
@@ -182,13 +187,13 @@
 
 
 @media screen and (max-width: 600px) {
-  
+
   .help-wanted-results {
     width: 100%;
-    
+
     .help-wanted-content-header {
       float: none;
-      
+
       #filter-popup-trigger-button {
         width: 15rem;
       }
@@ -204,7 +209,7 @@
     overflow: scroll;
     padding: 0.5rem;
     position: fixed;
-    right: 0;        
+    right: 0;
     top: 0;
     width: 100%;
     z-index: 99;
@@ -212,27 +217,27 @@
       left: 0;
       transition: .5s;
     }
-    
+
     .close-button-wrapper {
       padding: 0.5rem;
       text-align: right;
-      
+
       .close-button {
         font-size: 4rem;
       }
     }
-    
+
     h4 {
       color: black;
       font-family: $header-font-family;
       font-size: 2rem;
       font-weight: bold;
     }
-    
+
     h5 {
       font-family: $header-font-family;
     }
-    
+
   }
 
 }
