@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AgencyService, Agency } from '../../../../services/agency';
+import { Agency } from '../../../../services/agency';
+import { ClientService } from '../../../../services/client';
 
 @Component({
   selector: 'agency-sidebar',
@@ -10,16 +11,17 @@ import { AgencyService, Agency } from '../../../../services/agency';
 export class AgencySidebarComponent {
   agencies: Agency[];
 
-  constructor(
-    private agencyService: AgencyService
-  ) {
-  }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit() {
-    this.agencies = this.agencyService.getAgencies();
+    console.error("starting AgencySidebarComponent.ngOnInit");
+    // don't need an observable because only doing this once
+    this.clientService.getAgencies().then(agencies => {
+      this.agencies = agencies;
+    });
   }
 
   getIcon(agency) {
-    return `assets/img/logos/agencies/${agency.id}-50x50.png`;
+    return `assets/img/logos/agencies/${agency.acronym}-50x50.png`;
   }
 }
