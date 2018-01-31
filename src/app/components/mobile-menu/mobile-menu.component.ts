@@ -1,15 +1,11 @@
-import {
-  Component,
-} from '@angular/core';
+import { Component } from '@angular/core';
 import {
   ActivatedRoute,
   Router,
 } from '@angular/router';
-import {
-  Subscription,
-} from 'rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 
-import { AgencyService } from '../../services/agency';
+import { ClientService } from '../../services/client';
 import { MobileService } from '../../services/mobile';
 
 @Component({
@@ -31,7 +27,7 @@ export class MobileMenuComponent {
     public mobileService: MobileService,
     public router: Router,
     private route: ActivatedRoute,
-    private agencyService: AgencyService,
+    private clientService: ClientService,
   ) {
     this.sideNavSubscription = this.mobileService.activeSideNav$.subscribe(isOpen => this.isOpen = isOpen);
 
@@ -43,7 +39,9 @@ export class MobileMenuComponent {
       '/policy-guide/docs/open-source': router.isActive('/policy-guide/docs/open-source', false),
     };
 
-    this.agencies = this.agencyService.getAgencies();
+    this.clientService.getAgencies().then(agencies => {
+      this.agencies = agencies;
+    });
   }
 
   ngOnDestroy() {

@@ -1,11 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
-import { AgencyService, Agency } from '../../../../../services/agency';
+import { Agency } from '../../../../../services/agency';
+import { ClientService } from '../../../../../services/client';
 import { StatusService } from '../../../../../services/status';
 
 import { Subscription } from 'rxjs/Subscription';
 import { SeoService } from '../../../../../services/seo';
+
+import { map } from "lodash";
 
 
 @Component({
@@ -20,7 +23,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   private statusesSub: Subscription;
 
   constructor(
-    private agencyService: AgencyService,
+    private clientService: ClientService,
     private statusService: StatusService
   ) {
   }
@@ -36,11 +39,9 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
 
   getAgencyIds() {
-    this.agencyIds = [];
-    const agencies = this.agencyService.getAgencies();
-    for (let agency of agencies) {
-      this.agencyIds.push(agency.id);
-    }
+    this.clientService.getAgencies().then(agencies => {
+      this.agencyIds = map(agencies, "acronym");
+    });
   }
 
   getStatuses() {
