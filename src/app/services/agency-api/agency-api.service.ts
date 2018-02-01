@@ -14,12 +14,6 @@ export class AgencyApiService extends ApiService {
   getAgency(term, value) {
     return this.agencies.filter(agency => agency[term].toLowerCase() === value.toLowerCase())[0];
   }
-
-  getAgencies() {
-    let query = '?size=100';
-    return super.fetch('agencies', query);
-  }
-
   setAgencies(agencies) {
     this.agencies = agencies;
   }

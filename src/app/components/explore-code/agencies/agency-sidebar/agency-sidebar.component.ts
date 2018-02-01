@@ -14,7 +14,6 @@ export class AgencySidebarComponent {
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
-    console.error("starting AgencySidebarComponent.ngOnInit");
     // don't need an observable because only doing this once
     this.clientService.getAgencies().then(agencies => {
       this.agencies = agencies;

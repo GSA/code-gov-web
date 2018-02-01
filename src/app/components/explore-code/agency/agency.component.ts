@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { AgencyService, Agency } from '../../../services/agency';
+import { ClientService } from '../../../services/client';
 import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
@@ -28,6 +29,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
 
   constructor(
     private agencyService: AgencyService,
+    private clientService: ClientService,
     private route: ActivatedRoute,
     private reposService: ReposService,
     private seoService: SeoService,
@@ -70,21 +72,12 @@ export class AgencyComponent implements OnInit, OnDestroy {
   }
 
   agencyRepos() {
-    this.agencyReposSub = this.reposService.getJsonFile().
-      subscribe((result) => {
-        if (result && result.releases !== null && typeof result.releases === 'object') {
-          this.allRepos = Object.values(result.releases).filter(repo => this.filterByAgency(repo))
-            .filter(repo => repo.permissions.usageType === 'openSource' ||
-              repo.permissions.usageType === 'governmentWideReuse')
-            .sort((a, b) => a.name.toLowerCase() < b.name.toLowerCase() ? -1 :
-              a.name.toLowerCase() === b.name.toLowerCase() ? 0 : 1);
-          this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
-          this.currentIndex = this.repos.length || this.pageSize;
-          this.hasRepos = this.checkRepos(this.repos);
-          this.isLoading = false;
-        } else {
-
-        }
+    this.clientService.getAgencyRepos(this.agency.id, 10000).then(repos => {
+      this.allRepos = repos;
+      this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
+      this.currentIndex = this.repos.length || this.pageSize;
+      this.hasRepos = this.checkRepos(this.repos);
+      this.isLoading = false;
     });
   }
 

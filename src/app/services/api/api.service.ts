@@ -13,6 +13,7 @@ export class ApiService {
   fetch(endpoint: string, query: string): Observable<any> {
 
     let queryUrl = process.env.API_URL + endpoint + '?' + query;
+    console.log("queryUrl:", queryUrl);
 
     return this.apiHttp.get(queryUrl).map(
       (res: Response) => {

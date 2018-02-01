@@ -1,7 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { AgencyService, Agency } from '../../../services/agency';
+import { Agency } from '../../../services/agency';
+import { ClientService } from '../../../services/client';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
@@ -21,7 +22,7 @@ export class RepoComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
-    private agencyService: AgencyService,
+    private clientService: ClientService,
     private reposService: ReposService,
     private seoService: SeoService,
     private readonly meta: MetaService
@@ -39,22 +40,18 @@ export class RepoComponent implements OnInit, OnDestroy {
   }
 
   getRepo(agencyId, releaseId) {
-    this.repoSub = this.reposService.getJsonFile().
-      subscribe((result) => {
-        if (result.releases && Object.keys(result.releases).length) {
-          this.repo = {
-            ...result.releases[`${encodeURIComponent(agencyId)}/${encodeURIComponent(releaseId)}`]
-          }; // make a copy of the values so we don't modify them in memory
-          this.repo.agency = this.agencyService.getAgency(this.repo.agency);
-          this.seoService.setTitle(this.repo.name, true);
-          this.seoService.setMetaDescription(this.repo.description);
-          this.seoService.setMetaRobots('Index, Follow');
-          this.meta.setTag('twitter:card', 'summary');
-          this.meta.setTag('twitter:site', '@codedotgov');
-          this.meta.setTag('twitter:title', `code.gov/${this.repo.name}`);
-          this.meta.setTag('twitter:description', this.repo.description);
-          this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
-        }
+    console.log("releaseId:", releaseId);
+    this.clientService.getRepoByID(releaseId).then(repo => {
+      console.error("repo:", repo);
+      this.repo = repo;
+      this.seoService.setTitle(this.repo.name, true);
+      this.seoService.setMetaDescription(this.repo.description);
+      this.seoService.setMetaRobots('Index, Follow');
+      this.meta.setTag('twitter:card', 'summary');
+      this.meta.setTag('twitter:site', '@codedotgov');
+      this.meta.setTag('twitter:title', `code.gov/${this.repo.name}`);
+      this.meta.setTag('twitter:description', this.repo.description);
+      this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
     });
   }
 

@@ -14,33 +14,39 @@
   &:focus {
     background-color: lighten(#1c4772, 40);
   }
-}
 
-.icon {
-  float: left;
-  height: 2em;
-  margin-right: 0.5em;
-  width: 2em;
+  .icon {
+    float: left;
+    height: 2em;
+    margin-right: 0.5em;
+    width: 2em;
 
-  img {
-    display: block;
-    height: auto;
-    width: 100%;
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    i {
+      font-size: 2rem;
+      padding: .3rem;
+    }
   }
-}
 
-.info {
-  line-height: 3em;
-  overflow: hidden;
-  vertical-align: center;
-
-  p {
-    color: #323a45;
-    font-size: 0.9em;
-    line-height: 28px;
-    margin: 0;
+  .info {
+    line-height: 3em;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    vertical-align: center;
+
+    p {
+      color: #323a45;
+      font-size: 0.9em;
+      line-height: 28px;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
+  
 }

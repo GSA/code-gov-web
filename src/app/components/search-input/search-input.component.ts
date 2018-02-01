@@ -18,8 +18,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
-import { SearchService } from '../../services/search';
-import { TermService } from '../../services/term';
+import { ClientService } from '../../services/client';
 
 /**
  * Class representing a search component for repositories.
@@ -51,12 +50,10 @@ export class SearchInputComponent {
    * Constructs a ReposSearchComponent.
    *
    * @constructor
-   * @param {SearchService} searchService - A service for searching repositories
-   * @param {TermService} termService - A service for finding matching terms
+   * @param {ClientService} clientService - A service for finding matching terms
    */
   constructor(
-    private searchService: SearchService,
-    private termService: TermService,
+    private clientService: ClientService
   ) {
     this.termResultsObservable = this.termResultsReturnedSource.asObservable();
   }
@@ -74,7 +71,6 @@ export class SearchInputComponent {
    * On initialization of the ReposSearchComponent
    */
   ngOnInit() {
-    this.termService.search(this.queryValue, this.termResultsReturnedSource);
     this.queryInputValue = this.queryValue;
   }
 
@@ -95,8 +91,15 @@ export class SearchInputComponent {
    */
   onKey(event: any) {
     this.queryInputValue = event.target.value;
-    this.termService.search(this.queryInputValue, this.termResultsReturnedSource);
-
+    if (this.queryInputValue && this.queryInputValue.length >= 2) {
+      this.clientService.search(this.queryInputValue, 5)
+      .subscribe(results => {
+        console.log("results:", results);
+        this.termResultsReturnedSource.next(results);
+      });
+    } else {
+      this.termResultsReturnedSource.next([]);
+    }
     if (event.code === 'Escape' || event.code === 'Enter') {
       event.target.blur();
       this.hideAutocomplete();
