@@ -1,14 +1,8 @@
-<section id="banner-help-wanted" class="block block--dark banner">
-  <div class="banner-background-container">
-    <div class="banner-background"></div>
-  </div>
-  <div class="banner-container">
-    <div class="banner-content">
-      <h1>Help Wanted</h1>
-      <p>Discover how you can get involved and make America's Code better</p>
-    </div>
-  </div>
-</section>
+<div class="banner-help-wanted">
+  <h1>Help Wanted</h1>
+  <p>Discover how you can get involved and make America's Code better</p>
+</div>
+
 <div class="help-wanted{{mobile ? ' mobile' : ''}}">
   <div class="help-wanted-breadcrumb usa-grid">
     <ul class="usa-unstyled-list">
@@ -22,7 +16,7 @@
       <form class="help-wanted-filters" [formGroup]="filterForm"  *ngIf="!mobile">
         <fieldset class="usa-fieldset-inputs">
           <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getDesktopFormOptions()" >
-            <li>
+            <li class="filter-bottom-padding">
               <h5>{{option.display}}</h5>
               <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
             </li>
@@ -31,7 +25,7 @@
             <li>
               <button class="usa-button-big button--tertiary" (click)="applyFilters()">Apply Filters</button>
             </li>
-          </ul>          
+          </ul>
         </fieldset>
       </form>
     </div>
@@ -62,7 +56,7 @@
     <h4>Filter</h4>
     <fieldset class="usa-fieldset-inputs">
       <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getMobileFormOptions()" >
-      <li>
+      <li class="filter-bottom-padding">
         <h5>{{option.display}}</h5>
         <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
       </li>

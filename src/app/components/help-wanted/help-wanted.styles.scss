@@ -2,6 +2,41 @@
 @import '~bourbon-neat/app/assets/stylesheets/neat';
 @import '~uswds/src/stylesheets/core/variables';
 @import '../../../styles/base/variables';
+@import '../../../styles/base/grid-settings';
+
+
+  .banner-help-wanted {
+    background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 2rem;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+    text-align: center;
+
+    h1 {
+      color: $color-white;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $color-white;
+      max-width: 80%;
+      text-align: center;
+      padding-left: 20%;
+      line-height: 1.5;
+      margin-top: 1em;
+      margin-bottom: -2em;
+    }
+
+    //To accocunt for header p text pushing the padding
+    @media screen and (min-width: $large-screen) {
+      padding-bottom: 8rem;
+    }
+  }
+
+/*
 
 #banner-help-wanted {
 
@@ -9,7 +44,7 @@
 
  .banner-background {
     background-attachment: scroll;
-    background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
+    background-image: url('assets/img/american_flag_1920x1280_gradient.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +70,7 @@
     max-width: 80%;
   }
 }
+*/
 
 .help-wanted-breadcrumb {
   font-size: 1em;
@@ -107,6 +143,11 @@
         width: calc(100% - 30px);
       }
     }
+  }
+
+// USWDS usa-unstyled-list workaround - webpage and mobile form
+  .filter-bottom-padding {
+    padding-bottom: 5px;
   }
 
   .show-more {
