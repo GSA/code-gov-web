@@ -1,8 +1,8 @@
 <a
   class="autocomplete-result"
   (click)="handleSuggestionSelected()"
-  [routerLink]="['search']"
-  [queryParams]="{ q : this.result.term }"
+  [routerLink]="resource.imageIcon ? resource.url : ['search']"
+  [queryParams]="resource.imageIcon ? undefined : { q : this.result.term }"
 >
   <div *ngIf="resource.imageIcon" class="icon">
     <img src="{{resource.iconId}}">
