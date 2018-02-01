@@ -5,10 +5,6 @@ import { AGENCIES } from './agency.data';
 export class AgencyService {
   agencies: Agency[] = AGENCIES;
 
-  getAgencies(): Agency[] {
-    return this.agencies;
-  }
-
   getAgency(id): Agency {
     return this.agencies.find(agency => agency.id === id);
   }
