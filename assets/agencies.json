@@ -1,7 +1,7 @@
 {
   "agencies": {
-    "USAID": {
-      "id": "USAID",
+    "AID": {
+      "id": "AID",
       "name": "Agency for International Development"
     },
     "CFPB": {
