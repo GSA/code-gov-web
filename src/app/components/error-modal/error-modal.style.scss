@@ -1,0 +1,73 @@
+@import '~bourbon/app/assets/stylesheets/addons/font-stacks';
+@import '../../../styles/base/variables';
+@import '~uswds/src/stylesheets/core/variables';
+
+.modal-container {
+  animation: fadeInUp 0.2s ease;
+  animation-fill-mode: forwards;
+  background-color: $color-white;
+  left: 2em;
+  padding: 2em 1em;
+  position: fixed;
+  right: 2em;
+  text-align: center;
+  top: 2em;
+
+  @media screen and (min-width: $small-screen) {
+    padding: 3em 2em;
+  }
+
+  @media screen and (min-width: $medium-screen) {
+    left: 50%;
+    margin: -10em 0 0 -16em;
+    right: auto;
+    top: 50%;
+    width: 32em;
+  }
+
+  a {
+    color: $brand-teal-dark;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  button {
+    transition: all 0.2s ease;
+    background-color: transparent;
+    color: $brand-blue-gray;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: $brand-blue-gray-dark;
+    }
+  }
+
+  h1 {
+    font-size: 1.5em;
+
+    @media screen and (min-width: $small-screen) {
+      font-size: 1.75em;
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 0.2em;
+    top: 0;
+  }
+
+  .link-pretext {
+    margin-bottom: 0.1em;
+  }
+}
+
+.overlay {
+  background-color: rgba($brand-blue-gray-dark, 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
