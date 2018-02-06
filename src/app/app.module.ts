@@ -35,6 +35,7 @@ import { AgencyApiService } from './services/agency-api';
 import { ClientService } from './services/client';
 import { AgenciesIndexService, ReleasesIndexService } from './services/indexes';
 import { MobileService } from './services/mobile';
+import { ErrorModalService } from './services/error-modal';
 import { ModalService } from './services/modal';
 import { RepoService } from './services/repo';
 import { ReposService } from './services/repos';
@@ -55,6 +56,7 @@ const APP_PROVIDERS = [
   AgencyApiService,
   ClientService,
   MobileService,
+  ErrorModalService,
   ModalService,
   MonacoEditorService,
   ReleasesIndexService,

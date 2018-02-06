@@ -10,9 +10,9 @@ export class ClientService extends CodeGovAPIClient {
 
   constructor(){
     super({
-      //base: "https://code-api-staging.app.cloud.gov/api/0.1/"
+      base: "https://code-api-staging.app.cloud.gov/api/0.1/",
       debug: true,
-      environment: "development"
+      environment: "staging"
     });
   }
 

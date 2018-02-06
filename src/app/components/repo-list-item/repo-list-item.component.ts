@@ -26,24 +26,23 @@ export class RepoListItemComponent {
    */
   constructor(private agencyService: AgencyService) {}
 
-  ngOnInit() {
-    this.agency = this.agencyService.getAgency(this.repo.agency);
-  }
-
   getAgencyIcon() {
-    return `assets/img/logos/agencies/${this.agency.id}-50x50.png`;
+    if (this.repo && this.repo.agency && this.repo.agency.acronym) {
+      return `assets/img/logos/agencies/${this.repo.agency.acronym}-50x50.png`;      
+    }
   }
 
   /**
    * Returns whether the provided repository is from GitHub.
    */
   isGitHubRepo() {
-    if (!this.repo.repositoryURL && typeof this.repo.repositoryURL !== 'string') {
+    console.log("starting isGitHubRepo with", this.repo);
+    if (!this.repo.repository && typeof this.repo.repository !== 'string') {
       return false;
     } else {
       const isGitHubURL = /github\.com/;
 
-      return isGitHubURL.test(this.repo.repositoryURL);
+      return isGitHubURL.test(this.repo.repository);
     }
   }
 }

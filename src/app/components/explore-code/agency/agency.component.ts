@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { AgencyService, Agency } from '../../../services/agency';
+import { ErrorModalService } from '../../../services/error-modal';
+import { ErrorModalComponent } from './../../error-modal/error-modal.component';
 import { ClientService } from '../../../services/client';
 import { ReposService } from '../../../services/repos';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
@@ -30,6 +32,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
   constructor(
     private agencyService: AgencyService,
     private clientService: ClientService,
+    private errorModalService: ErrorModalService,
     private route: ActivatedRoute,
     private reposService: ReposService,
     private seoService: SeoService,
@@ -73,11 +76,19 @@ export class AgencyComponent implements OnInit, OnDestroy {
 
   agencyRepos() {
     this.clientService.getAgencyRepos(this.agency.id, 10000).then(repos => {
-      this.allRepos = repos;
-      this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
-      this.currentIndex = this.repos.length || this.pageSize;
-      this.hasRepos = this.checkRepos(this.repos);
-      this.isLoading = false;
+
+      let number_of_repos = repos.length;
+      if (number_of_repos === 0) {
+        console.log("zero repos showing modal");
+        this.errorModalService.showModal({});
+
+      } else if (number_of_repos > 0) {
+        this.allRepos = repos;
+        this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
+        this.currentIndex = this.repos.length || this.pageSize;
+        this.hasRepos = this.checkRepos(this.repos);
+        this.isLoading = false;
+      }
     });
   }
 

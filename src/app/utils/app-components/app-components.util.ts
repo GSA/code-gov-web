@@ -10,6 +10,7 @@ export * from '../../components/home/header-navigation';
 export * from '../../components/layouts/home';
 export * from '../../components/layouts/shared';
 export * from '../../components/mobile-menu';
+export * from '../../components/error-modal';
 export * from '../../components/modal';
 export * from '../../components/privacy-policy';
 export * from '../../components/repo-list';

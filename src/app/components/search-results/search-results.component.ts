@@ -5,11 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
-const compact = require('lodash/compact');
-const flatten = require('lodash/flatten');
-const uniq = require('lodash/uniq');
+import { compact, flatten, uniq } from "lodash";
 
-import { SearchService } from '../../services/search';
+import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 
 /**
@@ -29,7 +27,6 @@ export class SearchResultsComponent {
   private routeSubscription: Subscription;
   private results = [];
   private filteredResults = [];
-  private searchResultsSubscription: Subscription;
   private total: number;
   private isLoading = true;
   private filterForm: FormGroup;
@@ -43,12 +40,12 @@ export class SearchResultsComponent {
    * @constructor
    * @param {StateService} stateService - A service for managing the state of the site
    * @param {ActivatedRoute} activatedRoute - The currently active route
-   * @param {SearchService} searchService - A service for searching repositories
+   * @param {ClientService} clientService - A service for searching repositories
    */
   constructor(
     public stateService: StateService,
     private activatedRoute: ActivatedRoute,
-    private searchService: SearchService,
+    private clientService: ClientService,
     private formBuilder: FormBuilder,
   ) {
     this.filterForm = formBuilder.group({
@@ -85,19 +82,16 @@ export class SearchResultsComponent {
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         this.queryValue = response.q;
-        this.searchService.search(this.queryValue);
+        this.clientService.searchRepos(this.queryValue, 100).then(data => {
+          console.log("searchRepos returned:", data);
+          this.results = data.repos;
+          this.total = data.total;
+          this.buildFormControl('languages', this.getLanguages());
+          this.buildFormControl('licenses', this.getLicenses());
+          this.isLoading = false;
+        });
       }
     );
-
-    this.searchResultsSubscription = this.searchService.searchResultsReturned$.subscribe(results => {
-      if (results !== null) {
-        this.results = results;
-        this.total = this.searchService.total;
-        this.buildFormControl('languages', this.getLanguages());
-        this.buildFormControl('licenses', this.getLicenses());
-        this.isLoading = false;
-      }
-    });
   }
 
   /**
@@ -105,7 +99,6 @@ export class SearchResultsComponent {
    */
   ngOnDestroy() {
     this.routeSubscription.unsubscribe();
-    this.searchResultsSubscription.unsubscribe();
   }
 
   buildFormControl(property, values) {

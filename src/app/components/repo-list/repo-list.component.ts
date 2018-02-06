@@ -1,8 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
-import { SearchService } from '../../services/search';
-
 /**
  * Class representing a list of repositories.
  */
@@ -14,11 +12,10 @@ import { SearchService } from '../../services/search';
 })
 
 export class RepoListComponent {
-  private _results = [];
+  private _results;
   @Input() private pageSize = 10;
   private currentPage = 1;
   private subscription: Subscription;
-  private isLoading = true;
   private loadedResults = [];
   private PAGE_SIZE = 10;
 
@@ -26,20 +23,10 @@ export class RepoListComponent {
    * Constructs a RepoListComponent.
    *
    * @constructor
-   * @param {SearchService} searchService - A service for searching repositories
    */
-  constructor(
-    private searchService: SearchService,
-  ) {
-  }
+  constructor() {}
 
-  ngOnInit() {
-    this.subscription = this.searchService.searchResultsReturned$.subscribe(results => {
-      if (results !== null) {
-        this.isLoading = false;
-      }
-    });
-  }
+  ngOnInit() { }
 
   /**
    * On removal from the DOM, unsubscribe from events.
