@@ -53,7 +53,7 @@ const APP_PROVIDERS = [
   AgenciesIndexService,
   AgencyService,
   AgencyApiService,
-  ClientService,  
+  ClientService,
   MobileService,
   ModalService,
   MonacoEditorService,
