@@ -82,7 +82,7 @@ export class SearchResultsComponent {
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         this.queryValue = response.q;
-        this.clientService.searchRepos(this.queryValue, 100).then(data => {
+        this.clientService.suggest(this.queryValue, 100).then(data => {
           console.log("searchRepos returned:", data);
           this.results = data.repos;
           this.total = data.total;
