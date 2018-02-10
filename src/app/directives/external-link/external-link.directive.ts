@@ -1,6 +1,6 @@
 import { Angulartics2 } from 'angulartics2';
 import { Directive, ElementRef, Output, Renderer } from '@angular/core';
-import * as URL from "url-parse";
+import * as URL from 'url-parse';
 
 import { ModalService } from '../../services/modal';
 
@@ -30,7 +30,7 @@ export class ExternalLinkDirective {
 
   isExternalLink(url) {
     let host = new URL(url).host;
-    return !host.endsWith(".gov") && !host.endsWith(".mil");
+    return !host.endsWith('.gov') && !host.endsWith('.mil');
   }
 
   onClick(event: any) {

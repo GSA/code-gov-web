@@ -22,5 +22,5 @@ export class AgencySidebarComponent {
   getIcon(agency) {
     return this.agencyService.getIcon(agency);
   }
-  
+
 }

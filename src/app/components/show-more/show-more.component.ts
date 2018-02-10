@@ -15,36 +15,36 @@ export class ShowMoreComponent {
   @Input() name = '';
   @Input() numShown = null;
   @Input() threshold = 4;
-  @Input() mode = "collapsed";
+  @Input() mode = 'collapsed';
   @Input() formGroup: FormGroup;
   isShowMoreClicked = false;
 
 
   public showAll(e) {
     e.preventDefault();
-    this.mode = "expanded";
+    this.mode = 'expanded';
   }
-  
+
   public showLess(e) {
     e.preventDefault();
-    this.mode = "collapsed";
+    this.mode = 'collapsed';
   }
-  
+
   public getNumberToShow() {
-    if (this.mode === "collapsed") {
+    if (this.mode === 'collapsed') {
       return Math.min(this.threshold || this.list.length);
-    } else if (this.mode === "expanded") {
-      console.log("getNumberToShow returning:", this.list.length);
+    } else if (this.mode === 'expanded') {
+      console.log('getNumberToShow returning:', this.list.length);
       return this.list.length;
     }
   }
 
   public isShowLessVisible() {
-    return this.mode === "expanded";
+    return this.mode === 'expanded';
   }
 
   public isShowAllVisible() {
-    return this.mode === "collapsed" && 
+    return this.mode === 'collapsed' &&
       this.list &&
       this.list.length &&
       this.list.length > 0 &&

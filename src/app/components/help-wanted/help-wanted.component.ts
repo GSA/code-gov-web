@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { flattenDeep, get, keys, map, pickBy, reduce, sortBy, uniq, zipObject } from 'lodash';
 import { HelpWantedService } from '../../services/help-wanted';
-import { Option } from "./help-wanted.option";
+import { Option } from './help-wanted.option';
 
 @Component({
   selector: 'help-wanted',
@@ -26,14 +26,14 @@ export class HelpWantedComponent {
     this.items = [];
     this.filteredItems = [];
     this.filterForm = this.formBuilder.group({
-      "impact": {},
-      "language": {},
-      "license": {},
-      "show": {},
-      "skill": {},
-      "effort": {},
-      "type": {},
-      "usageType": {}
+      'impact': {},
+      'language': {},
+      'license': {},
+      'show': {},
+      'skill': {},
+      'effort': {},
+      'type': {},
+      'usageType': {}
     });
     this.mobile = false;
     this.options = [];
@@ -50,16 +50,16 @@ export class HelpWantedComponent {
       this.filteredItems = tasks;
 
       this.options = [
-        { display: "Show", key: "show", options: ["Featured", "Active", "Popular", "All"], version: "mobile" },
-        { display: "Language", key: "languages", options: this.getTaskValues("languages"), version: "both" },
-        { display: "Skill Level", key: "skill", options: this.getTaskValues("skill"), version: "both" },
-        { display: "Time Required", key: "effort", options: this.getTaskValues("effort"), version: "both" },
-        { display: "Type", key: "type", options: this.getTaskValues("type"), version: "both" },
-        { display: "Impact", key: "impact", options: this.getTaskValues("impact"), version: "both" },
-        { display: "License", key: "license", options: this.getTaskValues("license"), version: "none" },
-        { display: "Usage Type", key: "usageType", options: this.getTaskValues("usageType"), version: "none" },
+        { display: 'Show', key: 'show', options: ['Featured', 'Active', 'Popular', 'All'], version: 'mobile' },
+        { display: 'Language', key: 'languages', options: this.getTaskValues('languages'), version: 'both' },
+        { display: 'Skill Level', key: 'skill', options: this.getTaskValues('skill'), version: 'both' },
+        { display: 'Time Required', key: 'effort', options: this.getTaskValues('effort'), version: 'both' },
+        { display: 'Type', key: 'type', options: this.getTaskValues('type'), version: 'both' },
+        { display: 'Impact', key: 'impact', options: this.getTaskValues('impact'), version: 'both' },
+        { display: 'License', key: 'license', options: this.getTaskValues('license'), version: 'none' },
+        { display: 'Usage Type', key: 'usageType', options: this.getTaskValues('usageType'), version: 'none' },
       ];
-      
+
       this.buildFormControls(this.options);
 
       this.filterForm.valueChanges.subscribe(data => {
@@ -69,15 +69,15 @@ export class HelpWantedComponent {
       });
 
     });
-    
+
     this.activeTab = 'Featured';
 
   }
-  
+
   closePopup() {
     this.displayPopup = false;
   }
-  
+
   applyFilters() {
     this.displayPopup = false;
     this.filteredItems = this.filterItems(this.items);
@@ -90,28 +90,28 @@ export class HelpWantedComponent {
         return obj;
       }, {})));
     } catch (error) {
-      console.error("property:", property);
-      console.error("values:", values);
-      console.error("[error in buildFormControl]:", error) 
+      console.error('property:', property);
+      console.error('values:', values);
+      console.error('[error in buildFormControl]:', error);
     }
   }
-  
+
   buildFormControls(options) {
     options.forEach(option => {
       this.buildFormControl(option.key, option.options);
     });
   }
-  
+
   filterFormOptionsByVersions(versions) {
     return this.options.filter(option => versions.includes(option.version));
   }
 
   getDesktopFormOptions() {
-    return this.filterFormOptionsByVersions(["desktop", "both"]);
+    return this.filterFormOptionsByVersions(['desktop', 'both']);
   }
 
   getMobileFormOptions() {
-    return this.filterFormOptionsByVersions(["mobile", "both"]);
+    return this.filterFormOptionsByVersions(['mobile', 'both']);
   }
 
   getTaskValues(key) {
@@ -121,23 +121,23 @@ export class HelpWantedComponent {
   getFilteredValues(property) {
     return keys(pickBy(this.filterForm.value[property]));
   }
-  
+
   filterBy(key) {
     return item => {
 
       const filteredValues = this.getFilteredValues(key);
-      
+
       if (filteredValues.length === 0) {
-        
+
         // we're not filtering by this key
         // so return true for all the items
         return true;
-        
+
       } else if (filteredValues.length > 0) {
 
-        let item_value = item[key];
-  
-        if (item_value === undefined) {
+        let itemValue = item[key];
+
+        if (itemValue === undefined) {
           // we're filtering by this key
           // but a help-wanted item doesn't
           // include this key, so filter it out
@@ -145,20 +145,21 @@ export class HelpWantedComponent {
         }
 
         return filteredValues.every(value => {
-          if (Array.isArray(item_value)) {
-            return item_value.includes(value);
+          if (Array.isArray(itemValue)) {
+            return itemValue.includes(value);
           } else {
-            return String(value) === String(item_value);
+            return String(value) === String(itemValue);
           }
         });
-        
+
       }
-      
+
     };
   }
 
   filterByTab(result) {
-    if( this.activeTab === "All") {
+
+    if (this.activeTab === 'All') {
       return true;
     } else {
       return result[this.activeTab.toLowerCase()];
@@ -167,17 +168,17 @@ export class HelpWantedComponent {
 
   filterItems(items) {
 
-    let filtered = this.items; 
+    let filtered = this.items;
 
     this.options.forEach(option => {
       // we ignore show bc we use filterByTab for that
-      if (option.key != "show") {
+      if (option.key !== 'show') {
         filtered = filtered.filter(this.filterBy(option.key));
       }
     });
-    
+
     filtered = filtered.filter(this.filterByTab.bind(this));
-    
+
     return filtered;
   }
 
@@ -187,21 +188,21 @@ export class HelpWantedComponent {
     this.activeTab = tab;
     this.applyFilters();
   }
-  
+
   setMobile() {
-        
+
     if (window.screen.width <= 600) {
       this.mobile = true;
     }
 
   }
-  
+
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     this.setMobile();
     this.closePopup();
   }
-  
+
   openPopup() {
     this.displayPopup = true;
   }
