@@ -101,13 +101,17 @@ export class HelpWantedComponent {
       this.buildFormControl(option.key, option.options);
     });
   }
+  
+  filterFormOptionsByVersions(versions) {
+    return this.options.filter(option => versions.includes(option.version));
+  }
 
   getDesktopFormOptions() {
-    return this.options.filter(option => option.version === "desktop" || option.version === "both");
+    return this.filterFormOptionsByVersions(["desktop", "both"]);
   }
 
   getMobileFormOptions() {
-    return this.options.filter(option => option.version === "mobile" || option.version === "both");
+    return this.filterFormOptionsByVersions(["mobile", "both"]);
   }
 
   getTaskValues(key) {
