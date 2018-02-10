@@ -41,6 +41,10 @@ h3 {
         }
       }
 
+      &:last-child {
+        font-weight: $font-bold;
+      }
+
       a {
         color: $color-black;
       }
