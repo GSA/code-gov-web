@@ -34,7 +34,6 @@ export class ShowMoreComponent {
     if (this.mode === 'collapsed') {
       return Math.min(this.threshold || this.list.length);
     } else if (this.mode === 'expanded') {
-      console.log('getNumberToShow returning:', this.list.length);
       return this.list.length;
     }
   }
