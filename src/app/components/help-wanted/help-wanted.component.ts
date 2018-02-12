@@ -44,7 +44,7 @@ export class HelpWantedComponent {
 
     this.setMobile();
 
-    this.helpWantedService.getTasks().then(tasks => {
+    this.helpWantedService.getTasks().subscribe(tasks => {
 
       this.items = tasks;
       this.filteredItems = tasks;
