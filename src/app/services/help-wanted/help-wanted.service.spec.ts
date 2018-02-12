@@ -4,11 +4,11 @@ import { HelpWantedService } from './help-wanted.service';
 import { AgencyService } from '../agency';
 
 describe('HelpWantedService', () => {
-  
+
   let service: HelpWantedService;
 
   beforeEach(async(() => {
-    
+
     TestBed.configureTestingModule({
       providers: [
         AgencyService,
@@ -16,10 +16,10 @@ describe('HelpWantedService', () => {
       ],
       imports: [HttpModule]
     });
-    
+
     const testbed = getTestBed();
-    service = testbed.get(HelpWantedService);    
-    
+    service = testbed.get(HelpWantedService);
+
   }));
 
   describe('tasks', () => {

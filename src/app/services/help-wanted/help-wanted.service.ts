@@ -8,13 +8,13 @@ import { AgencyService } from '../agency';
 
 
 interface Task {
-  agency: any,
-  agency_id: string,
-  image: string
+  agency: any;
+  agency_id: string;
+  image: string;
 }
 
 interface HelpWantedResponse {
-  items: Task[]
+  items: Task[];
 }
 
 @Injectable()
