@@ -90,6 +90,11 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
+        name: set-git-user-info
+        command: |
+          git config --global user.name "CodeDotGov"
+          git config --global user.email "code@gsa.gov"
+      - run:
           name: Deploy to Staging
           command: npm run federalist-deploy:stag
   deploy-production:
@@ -101,6 +106,11 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
+      - run:
+        name: set-git-user-info
+        command: |
+          git config --global user.name "CodeDotGov"
+          git config --global user.email "code@gsa.gov"
       - run:
           name: Deploy to Production
           command: npm run federalist-deploy:prod  
