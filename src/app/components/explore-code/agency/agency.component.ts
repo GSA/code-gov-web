@@ -75,7 +75,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
   }
 
   agencyRepos() {
-    this.clientService.getAgencyRepos(this.agency.id, 10000).then(repos => {
+    this.clientService.getAgencyRepos(this.agency.id, 10000).subscribe(repos => {
 
       let number_of_repos = repos.length;
       if (number_of_repos === 0) {

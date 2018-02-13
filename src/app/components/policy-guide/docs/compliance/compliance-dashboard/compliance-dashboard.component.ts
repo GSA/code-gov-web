@@ -39,7 +39,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
 
   getAgencyIds() {
-    this.clientService.getAgencies().then(agencies => {
+    this.clientService.getAgencies().subscribe(agencies => {
       this.agencyIds = map(agencies, "acronym");
     });
   }

@@ -15,7 +15,7 @@ export class AgencySidebarComponent {
 
   ngOnInit() {
     // don't need an observable because only doing this once
-    this.clientService.getAgencies().then(agencies => {
+    this.clientService.getAgencies().subscribe(agencies => {
       this.agencies = agencies;
     });
   }
@@ -23,4 +23,5 @@ export class AgencySidebarComponent {
   getIcon(agency) {
     return `assets/img/logos/agencies/${agency.acronym}-50x50.png`;
   }
+
 }

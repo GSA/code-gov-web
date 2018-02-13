@@ -9,6 +9,8 @@ import { Observable } from 'rxjs/Observable';
 
 import { AgencyComponent } from './index';
 import { AgencyService } from '../../../services/agency';
+import { ErrorModalService } from '../../../services/error-modal';
+import { ErrorModalComponent } from './../../error-modal/error-modal.component';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
 import { ReposService } from '../../../services/repos';
@@ -29,6 +31,7 @@ describe('AgencyComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AgencyComponent,
+        ErrorModalComponent,
         LanguageIconPipe,
         PluralizePipe,
         TruncatePipe
@@ -41,6 +44,7 @@ describe('AgencyComponent', () => {
       ],
       providers: [
         AgencyService,
+        ErrorModalService,        
         ReposService,
         SeoService,
         { provide: ActivatedRoute, useClass: MockActivatedRoute }

@@ -6,6 +6,7 @@ import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { MobileMenuComponent } from './mobile-menu.component';
 
 import { AgencyService } from '../../services/agency';
+import { ClientService } from '../../services/client';
 import { MobileService } from '../../services/mobile';
 
 describe('MobileMenuComponent', () => {
@@ -23,6 +24,7 @@ describe('MobileMenuComponent', () => {
         declarations: [ MobileMenuComponent ],
         providers: [
           AgencyService,
+          ClientService,
           MobileService,
           { provide: APP_BASE_HREF, useValue: '/' },
         ],
@@ -76,6 +78,7 @@ describe('MobileMenuComponent', () => {
         declarations: [ MobileMenuComponent ],
         providers: [
           AgencyService,
+          ClientService,
           MobileService,
           { provide: APP_BASE_HREF, useValue: '/' },
         ],

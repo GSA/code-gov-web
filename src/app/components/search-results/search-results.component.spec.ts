@@ -6,6 +6,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { Observable } from 'rxjs/Observable';
 
+import { ClientService } from '../../services/client';
 import { PluralizePipe } from '../../pipes/pluralize';
 import { SearchResultsComponent } from './search-results.component';
 import { StateService } from '../../services/state';
@@ -48,6 +49,7 @@ describe('SearchResultsComponent', () => {
         SearchResultsComponent,
       ],
       providers: [
+        ClientService,
         StateService,
         AgenciesIndexService,
         ReleasesIndexService,

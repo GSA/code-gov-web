@@ -39,7 +39,7 @@ export class MobileMenuComponent {
       '/policy-guide/docs/open-source': router.isActive('/policy-guide/docs/open-source', false),
     };
 
-    this.clientService.getAgencies().then(agencies => {
+    this.clientService.getAgencies().subscribe(agencies => {
       this.agencies = agencies;
     });
   }

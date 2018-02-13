@@ -10,6 +10,7 @@ import { Angulartics2, Angulartics2Module } from 'angulartics2';
 import { Observable } from 'rxjs/Observable';
 
 import { AgencyService } from '../../../services/agency';
+import { ClientService } from '../../../services/client';
 import { ExternalLinkDirective } from '../../../directives/external-link';
 import { RepoComponent } from './index';
 import { ReposService } from '../../../services/repos';
@@ -74,6 +75,7 @@ describe('RepoComponent', () => {
       providers: [
         AgencyService,
         Angulartics2,
+        ClientService,
         ReposService,
         ModalService,
         SeoService,

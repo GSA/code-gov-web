@@ -42,7 +42,7 @@ export class RepoComponent implements OnInit, OnDestroy {
 
   getRepo(agencyId, releaseId) {
     console.log("releaseId:", releaseId);
-    this.clientService.getRepoByID(releaseId).then(repo => {
+    this.clientService.getRepoByID(releaseId).subscribe(repo => {
       console.error("repo:", repo);
       this.repo = repo;
       this.seoService.setTitle(this.repo.name, true);

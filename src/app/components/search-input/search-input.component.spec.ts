@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { SearchInputComponent } from './search-input.component';
+import { ClientService } from '../../services/client';
 import { LunrSearchService, SearchService } from '../../services/search';
 import { AgenciesIndexService, ReleasesIndexService } from '../../services/indexes';
 import { LunrTermService, TermService } from '../../services/term';
@@ -35,6 +36,7 @@ describe('SearchInputComponent', () => {
           { provide: SearchService, useClass: LunrSearchService },
           { provide: TermService, useClass: LunrTermService },
           AgenciesIndexService,
+          ClientService,
           ReleasesIndexService,
         ],
         schemas: [
