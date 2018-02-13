@@ -41,6 +41,7 @@
     "tslint": "tslint --project tsconfig.json",
     "typedoc": "typedoc",
     "webpack": "webpack",
+    "webpack-analyze": "webpack --config ./config/webpack.analyze.js",
     "webpack-dev-server": "webpack-dev-server",
     "webdriver-manager": "webdriver-manager",
     "protractor": "protractor",
@@ -62,8 +63,11 @@
     "build:stag": "webpack --config config/webpack.stag.js  --progress --profile --bail",
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "federalist-deploy": "npm run federalist-deploy:dev",
+    "prefederalist-deploy:dev": "npm run clean:dist && mkdir -p dist/",
     "federalist-deploy:dev": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
+    "prefederalist-deploy:stag": "npm run clean:dist && mkdir -p dist/",
     "federalist-deploy:stag": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
+    "prefederalist-deploy:prod": "npm run clean:dist && mkdir -p dist/",
     "federalist-deploy:prod": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
     "federalist-deploy:dashboard": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.dashboard-preview",
     "server": "npm run server:dev",
@@ -84,7 +88,8 @@
     "version": "npm run build",
     "postversion": "git push && git push --tags",
     "postinstall": "typings install",
-    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json"
+    "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
+    "list-git-conflicts": "git diff --name-only --diff-filter=U"
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
@@ -130,6 +135,7 @@
     "sass-loader": "^6.0.6",
     "typed.js": "^1.1.1",
     "typings": "^2.1.1",
+    "url-parse": "^1.2.0",
     "uswds": "^1.4.4",
     "webpack-create-file-plugin": "^0.1.0",
     "zone.js": "^0.8.19"
@@ -197,11 +203,11 @@
     "typescript": "2.3.4",
     "url-loader": "^0.5.7",
     "webpack": "^3.10.0",
-    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-bundle-analyzer": "^2.10.0",
     "webpack-dev-middleware": "^1.12.2",
     "webpack-dev-server": "2.7.1",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "0.15.0"
+    "webpack-merge": "^0.15.0"
   },
   "repository": {
     "type": "git",

@@ -56,6 +56,10 @@
       a {
         color: $color-black;
       }
+
+      &:last-child {
+        font-weight: $font-bold;
+      }
     }
   }
 }
