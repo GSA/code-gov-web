@@ -2,6 +2,58 @@
 @import '../../../../styles/base/variables';
 @import '~uswds/src/stylesheets/core/variables';
 
+
+.project-banner {
+  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+    font-size: $h3-font-size;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: $h1-font-size;
+    color: $color-white;
+  }
+}
+
+.project-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '> ';
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+      }
+
+      &:last-child {
+        font-weight: $font-bold;
+      }
+    }
+  }
+}
+
 .repo-container {
   @include clearfix;
   background-color: $color-white;
@@ -19,15 +71,17 @@
     padding: 2px 3px;
   }
 
-  h2 {
-    font-size: 1em;
-  }
-
   header {
     @include clearfix;
     margin-bottom: 1em;
     padding-bottom: 1em;
     position: relative;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: $font-bold;
+    margin: 0;
   }
 }
 
@@ -51,12 +105,6 @@
     &:hover {
       border-bottom: 2px solid $brand-primary;
     }
-  }
-
-  h3 {
-    font-size: 1.2em;
-    font-weight: 500;
-    margin: 0;
   }
 
   li {
