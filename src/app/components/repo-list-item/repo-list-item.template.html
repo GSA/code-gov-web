@@ -1,5 +1,9 @@
 <div class="repo-list-item card card--focusable">
   <h3 class="repo-name"><a routerLink="/explore-code/agencies/{{repo.agency}}/repos/{{repo.name}}">{{ repo.name }}</a></h3>
+  <p *ngIf="agency" class="repo-agency-icon">
+    <img [src]="getAgencyIcon()">
+    <span>{{ agency.name }}</span>
+  </p>
   <p class="repo-description">
     {{ repo.description | truncate : 200 }}
   </p>
@@ -23,8 +27,4 @@
       <span>{{ repo.permissions.licenses[0].name }}</span>
     </li>
   </ul>
-  <p *ngIf="agency" class="repo-agency-icon">
-    <img [src]="getAgencyIcon()">
-    <span>{{ agency.name }}</span>
-  </p>
 </div>

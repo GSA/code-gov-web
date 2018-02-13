@@ -8,10 +8,6 @@
   padding: 0.5rem;
   text-decoration: none;
 
-  a {
-    color: $brand-teal-medium;
-  }
-
   @media screen and (max-width: $small-screen - 1) {
     &.card {
       border-left: 0;
@@ -28,6 +24,7 @@
 
 h3 {
   margin-bottom: 0.2em;
+  font-weight: $font-bold;
 }
 
 p {
@@ -40,7 +37,6 @@ p {
 }
 
 .repo-features {
-  background-color: $color-cool-blue-lightest;
   color: $brand-blue-dark;
   display: none;
   font-size: 0.8em;
@@ -87,7 +83,8 @@ p {
   }
 
   span {
-    font-size: 18px;
+    font-size: $small-font-size;
     vertical-align: middle;
+    color: $color-gray-light;
   }
 }
