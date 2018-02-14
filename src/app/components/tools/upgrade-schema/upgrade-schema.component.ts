@@ -1,7 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { MonacoEditorService } from '../../monaco-editor';
 import * as Clipboard from 'clipboard';
-const clone = require('lodash/clone');
+import clone from 'lodash.clone';
 
 /**
  * Class representing the upgrade schema tool.

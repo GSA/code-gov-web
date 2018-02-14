@@ -13,7 +13,6 @@ import { ErrorModalService } from '../../../services/error-modal';
 import { ErrorModalComponent } from './../../error-modal/error-modal.component';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
-import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
 import { MetaModule } from '@ngx-meta/core';
@@ -44,8 +43,7 @@ describe('AgencyComponent', () => {
       ],
       providers: [
         AgencyService,
-        ErrorModalService,        
-        ReposService,
+        ErrorModalService,
         SeoService,
         { provide: ActivatedRoute, useClass: MockActivatedRoute }
       ]
@@ -95,36 +93,6 @@ describe('AgencyComponent', () => {
   describe('agencyRepos', () => {
     it('should sort the repositories returned.', () => {
       this.fixture.detectChanges();
-      spyOn(this.agencyComponent.reposService, 'getJsonFile').and.returnValue(
-        Observable.of({
-          releases: {
-            'DOL/test': {
-              agency: 'DOL',
-              id: 'DOL/test',
-              name: 'test',
-              permissions: {
-                usageType: 'openSource',
-              },
-            },
-            'DOL/trial': {
-              agency: 'DOL',
-              id: 'DOL/trial',
-              name: 'trial',
-              permissions: {
-                usageType: 'openSource',
-              },
-            },
-            'DOL/example': {
-              agency: 'DOL',
-              id: 'DOL/example',
-              name: 'example',
-              permissions: {
-                usageType: 'openSource',
-              },
-            }
-          }
-        })
-      );
 
       this.agencyComponent.agencyRepos();
       expect(this.agencyComponent.allRepos).toEqual([

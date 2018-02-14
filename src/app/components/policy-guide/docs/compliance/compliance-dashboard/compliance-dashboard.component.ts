@@ -8,7 +8,7 @@ import { StatusService } from '../../../../../services/status';
 import { Subscription } from 'rxjs/Subscription';
 import { SeoService } from '../../../../../services/seo';
 
-import { map } from "lodash";
+import map from "lodash.map";
 
 
 @Component({

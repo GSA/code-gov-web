@@ -24,7 +24,9 @@ export class RepoListComponent {
    *
    * @constructor
    */
-  constructor() {}
+  constructor() {
+    console.log("STARTING RepoListComponent");
+  }
 
   ngOnInit() { }
 
@@ -32,7 +34,9 @@ export class RepoListComponent {
    * On removal from the DOM, unsubscribe from events.
    */
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   get results(): Array<any> {

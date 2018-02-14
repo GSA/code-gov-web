@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
-import { ApiService } from '../api';
 import { AgencyService } from '../agency';
 
 
@@ -18,12 +16,10 @@ interface HelpWantedResponse {
 }
 
 @Injectable()
-export class HelpWantedService extends ApiService {
+export class HelpWantedService {
   public tasks: any;
 
-  constructor(private http: Http, private agencyService: AgencyService) {
-    super(http);
-  }
+  constructor(private http: Http, private agencyService: AgencyService) {}
 
   cleanTask(task: Task): Task {
 

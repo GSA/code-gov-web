@@ -19,8 +19,8 @@
           (scrolled)="onScroll()">
         <li *ngFor="let repo of repos" class="repo">
 
-          <span *ngIf="repo.openSourceProject || repo.governmentWideReuseProject">
-            <a routerLink="/explore-code/agencies/{{agency.id}}/repos/{{repo.repoID}}">
+          <span *ngIf="repo.permissions.usageType === 'governmentWideReuse' || repo.permissions.usageType === 'openSource'">
+            <a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">
               <div class="card card--focusable">
                 <h3 class="repo-name">{{ repo.name }}</h3>
                 <p class="repo-description">
@@ -33,8 +33,8 @@
                   </li>
                   <li>
                     <i class="icon fa fa-code"></i>
-                    <span *ngIf="repo.openSourceProject">Open Source</span>
-                    <span *ngIf="repo.governmentWideReuseProject">Government-Wide Reuse</span>
+                    <span *ngIf="repo.permissions.usageType === 'openSource'">Open Source</span>
+                    <span *ngIf="repo.permissions.usageType === 'governmentWideReuse'">Government-Wide Reuse</span>
                   </li>
                 </ul>
               </div>

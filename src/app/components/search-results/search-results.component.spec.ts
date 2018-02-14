@@ -11,8 +11,6 @@ import { PluralizePipe } from '../../pipes/pluralize';
 import { SearchResultsComponent } from './search-results.component';
 import { StateService } from '../../services/state';
 import { MobileService } from '../../services/mobile';
-import { LunrSearchService, SearchService } from '../../services/search';
-import { AgenciesIndexService, ReleasesIndexService } from '../../services/indexes';
 
 class MockRouter {
   url: string;
@@ -51,10 +49,7 @@ describe('SearchResultsComponent', () => {
       providers: [
         ClientService,
         StateService,
-        AgenciesIndexService,
-        ReleasesIndexService,
         { provide: APP_BASE_HREF, useValue: '/' },
-        { provide: SearchService, useClass: LunrSearchService },
         { provide: ActivatedRoute, useClass: MockActivatedRoute },
       ],
       schemas: [

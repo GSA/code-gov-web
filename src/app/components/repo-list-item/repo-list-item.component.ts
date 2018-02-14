@@ -28,7 +28,7 @@ export class RepoListItemComponent {
 
   getAgencyIcon() {
     if (this.repo && this.repo.agency && this.repo.agency.acronym) {
-      return `assets/img/logos/agencies/${this.repo.agency.acronym}-50x50.png`;      
+      return `assets/img/logos/agencies/${this.repo.agency.acronym}-50x50.png`;
     }
   }
 
@@ -36,7 +36,7 @@ export class RepoListItemComponent {
    * Returns whether the provided repository is from GitHub.
    */
   isGitHubRepo() {
-    console.log("starting isGitHubRepo with", this.repo);
+    //console.log("starting isGitHubRepo with", this.repo);
     if (!this.repo.repository && typeof this.repo.repository !== 'string') {
       return false;
     } else {

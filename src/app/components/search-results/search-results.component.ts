@@ -5,8 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
-import { compact, flatten, uniq } from "lodash";
-
+import compact from 'lodash.compact';
+import flatten from 'lodash.flatten';
+import uniq from 'lodash.uniq';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 
@@ -82,8 +83,8 @@ export class SearchResultsComponent {
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         this.queryValue = response.q;
-        this.clientService.suggest(this.queryValue, 100).subscribe(data => {
-          console.log("searchRepos returned:", data);
+        this.clientService.search(this.queryValue, 100).subscribe(data => {
+          //console.log("searchRepos returned:", data);
           this.results = data.repos;
           this.total = data.total;
           this.buildFormControl('languages', this.getLanguages());

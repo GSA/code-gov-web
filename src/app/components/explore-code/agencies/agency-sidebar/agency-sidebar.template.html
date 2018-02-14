@@ -5,7 +5,7 @@
     <sidebar-content>
       <li *ngFor="let agency of agencies">
         <a toggle-menu routerLink="{{agency.acronym}}" routerLinkActive="usa-current">
-          <img [src]="getIcon(agency)"/>
+          <img [src]="getIcon(agency)" alt=""/>
           <span>
             {{agency.name}}
           </span>

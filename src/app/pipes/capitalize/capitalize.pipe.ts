@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform, Component } from '@angular/core';
-const capitalize = require('lodash/capitalize');
+import capitalize from 'lodash.capitalize';
 
 @Pipe({
   name: 'capitalize'

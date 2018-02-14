@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
 
 import { RepoComponent } from '../repo';
-import { ReposService } from '../../../services/repos';
 import { TruncatePipe } from '../../../pipes/truncate';
 
 @Component({

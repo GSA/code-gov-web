@@ -4,7 +4,6 @@ import { Subscription } from 'rxjs/Subscription';
 import { AgencyService, Agency } from '../../../services/agency';
 import { ClientService } from '../../../services/client';
 import { ExternalLinkDirective } from '../../../directives/external-link';
-import { ReposService } from '../../../services/repos';
 import { SeoService } from '../../../services/seo';
 import { MetaService } from '@ngx-meta/core';
 
@@ -24,7 +23,6 @@ export class RepoComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private agencyService: AgencyService,
     private clientService: ClientService,
-    private reposService: ReposService,
     private seoService: SeoService,
     private readonly meta: MetaService
   ) {}

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-const map = require('lodash/map');
+import map from 'lodash.map';
 
 @Injectable()
 

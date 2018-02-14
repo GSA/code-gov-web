@@ -1,6 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { flattenDeep, get, keys, map, pickBy, reduce, sortBy, uniq, zipObject } from 'lodash';
+import flattenDeep from 'lodash.flattendeep';
+import get from 'lodash.get';
+import pickBy from 'lodash.pickby';
+import sortBy from 'lodash.sortby';
+import uniq from 'lodash.uniq';
 import { HelpWantedService } from '../../services/help-wanted';
 import { Option } from './help-wanted.option';
 
@@ -115,11 +119,11 @@ export class HelpWantedComponent {
   }
 
   getTaskValues(key) {
-    return sortBy(uniq(flattenDeep(map(this.items, item => get(item, key)))).filter(Boolean));
+    return sortBy(uniq(flattenDeep(this.items.map(item => get(item, key)))).filter(Boolean));
   }
 
   getFilteredValues(property) {
-    return keys(pickBy(this.filterForm.value[property]));
+    return Object.keys(pickBy(this.filterForm.value[property]));
   }
 
   filterBy(key) {
