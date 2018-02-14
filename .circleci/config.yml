@@ -35,8 +35,7 @@ jobs:
           command: chmod +x ./cc-test-reporter
       - run:
           name: code-climate-before-build
-          command: |
-              ./cc-test-reporter before-build
+          command: ./cc-test-reporter before-build
       - restore_cache:
           key: code-gov-web-{{ checksum "package.json" }}
       - run:
@@ -51,8 +50,7 @@ jobs:
           command: npm test
       - run:
           name: upload-test-report
-          command: |
-             ./cc-test-reporter after-build -t lcov --exit-code $?
+          command: ./cc-test-reporter after-build -t lcov --exit-code $?
       - store_test_results:
           path: test-results.xml
       - store_artifacts:
@@ -90,10 +88,10 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: set-git-user-info
-        command: |
-          git config --global user.name "CodeDotGov"
-          git config --global user.email "code@gsa.gov"
+          name: set-git-user-info
+          command: |
+            git config --global user.name "CodeDotGov"
+            git config --global user.email "code@gsa.gov"
       - run:
           name: Deploy to Staging
           command: npm run federalist-deploy:stag
@@ -107,10 +105,10 @@ jobs:
           name: Install Dependencies
           command: npm install
       - run:
-        name: set-git-user-info
-        command: |
-          git config --global user.name "CodeDotGov"
-          git config --global user.email "code@gsa.gov"
+          name: set-git-user-info
+          command: |
+            git config --global user.name "CodeDotGov"
+            git config --global user.email "code@gsa.gov"
       - run:
           name: Deploy to Production
           command: npm run federalist-deploy:prod  
