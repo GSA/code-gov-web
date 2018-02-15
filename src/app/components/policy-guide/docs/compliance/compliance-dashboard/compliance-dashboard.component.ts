@@ -8,8 +8,6 @@ import { StatusService } from '../../../../../services/status';
 import { Subscription } from 'rxjs/Subscription';
 import { SeoService } from '../../../../../services/seo';
 
-import map from "lodash.map";
-
 
 @Component({
   selector: 'compliance-dashboard',
@@ -40,7 +38,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
   getAgencyIds() {
     this.clientService.getAgencies().subscribe(agencies => {
-      this.agencyIds = map(agencies, "acronym");
+      this.agencyIds = agencies.map(agency => agency.acronym);
     });
   }
 

@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform, Component } from '@angular/core';
-import capitalize from 'lodash.capitalize';
 
 @Pipe({
   name: 'capitalize'
@@ -19,6 +18,13 @@ export class CapitalizePipe implements PipeTransform {
       return null;
     }
 
-    return capitalize(value);
+    let length: number = value.length;
+    if (length === 0) {
+      return "";
+    } else if (length === 1) {
+      return value.toUpperCase();
+    } else if (length >= 2) {
+      return value[0].toUpperCase() + value.substring(1);
+    }
   }
 }

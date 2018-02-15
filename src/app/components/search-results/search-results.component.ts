@@ -5,9 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
-import compact from 'lodash.compact';
-import flatten from 'lodash.flatten';
-import uniq from 'lodash.uniq';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 
@@ -84,7 +81,7 @@ export class SearchResultsComponent {
       (response: any) => {
         this.queryValue = response.q;
         this.clientService.search(this.queryValue, 100).subscribe(data => {
-          //console.log("searchRepos returned:", data);
+          console.log("searchRepos returned:", data);
           this.results = data.repos;
           this.total = data.total;
           this.buildFormControl('languages', this.getLanguages());
@@ -183,12 +180,28 @@ export class SearchResultsComponent {
   }
 
   getLanguages() {
-    return uniq(compact(flatten(this.results.map(result => result.languages))));
+    let languages = new Set();
+    this.results.forEach(result => {
+      if (Array.isArray(result.languages)) {
+        result.languages.forEach((language: string) => {
+          languages.add(language);
+        });
+      }
+    });
+    return Array.from(languages);
   }
 
   getLicenses() {
-    return uniq(compact(flatten(this.results.map(
-      result => result.permissions && result.permissions.licenses ?
-        result.permissions.licenses.map(license => license.name) : []))));
+    let licenses = new Set();
+    this.results.forEach(result => {
+      if (result.permissions && result.permissions.licenses) {
+        result.permissions.licenses.forEach(license => {
+          if (license.name) {
+            licenses.add(license.name);
+          }
+        });
+      }
+    });
+    return Array.from(licenses);
   }
 }

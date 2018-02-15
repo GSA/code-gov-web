@@ -91,7 +91,7 @@ export class SearchInputComponent {
    */
   onKey(event: any) {
     this.queryInputValue = event.target.value;
-    if (this.queryInputValue && this.queryInputValue.length >= 2) {
+    if (this.queryInputValue && this.queryInputValue.length >= 1) {
       this.clientService.suggest(this.queryInputValue, 5)
       .subscribe(results => {
         console.log("results:", results);
