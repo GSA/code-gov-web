@@ -5,7 +5,7 @@
 .repo-list-item {
   display: block;
   margin-bottom: 1em;
-  padding: 0.5rem;
+  padding: 1em;
   text-decoration: none;
 
   @media screen and (max-width: $small-screen - 1) {
@@ -41,7 +41,6 @@ p {
   display: none;
   font-size: 0.8em;
   margin-bottom: 1rem;
-  padding: 0.7rem 1rem;
 
   @media screen and (min-width: $small-screen) {
     display: block;
