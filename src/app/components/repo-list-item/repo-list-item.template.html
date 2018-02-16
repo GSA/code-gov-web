@@ -3,28 +3,28 @@
   <p class="repo-description">
     {{ repo.description | truncate : 200 }}
   </p>
-  <ul *ngIf="isGitHubRepo() || repo.permissions.usageType === 'openSource' || repo.permissions.usageType === 'governmentWideReuse' || (repo.languages && repo.languages.length > 0) || repo.permissions.licenses[0].name" class="repo-features usa-unstyled-list">
+  <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo?.permissions?.licenses[0]?.name" class="repo-features usa-unstyled-list">
     <li *ngIf="isGitHubRepo()">
       <i class="fa fa-github"></i>
       <span><a [href]="repo.repositoryURL">{{ repo.repositoryURL }}</a></span>
     </li>
-    <li *ngIf="repo.permissions.usageType === 'openSource'">
+    <li *ngIf="repo.permissions?.usageType === 'openSource'">
       <i class="fa fa-check-circle-o"></i><span>Open Source</span>
     </li>
-    <li *ngIf="repo.permissions.usageType === 'governmentWideReuse'">
+    <li *ngIf="repo.permissions?.usageType === 'governmentWideReuse'">
       <i class="fa fa-refresh"></i><span>Gov-wide Reuse</span>
     </li>
-    <li *ngIf="repo.languages && repo.languages.length > 0" class="language">
+    <li *ngIf="repo.languages?.length > 0" class="language">
       <i class="fa fa-code"></i>
       <span *ngFor="let language of repo.languages">{{ language }}</span>
     </li>
-    <li *ngIf="repo.permissions && repo.permissions.licenses && repo.permissions.licenses.length > 0 && repo.permissions.licenses[0].name">
+    <li *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
       <i class="fa fa-certificate"></i>
-      <span>{{ repo.permissions.licenses[0].name }}</span>
+      <span>{{ repo.permissions?.licenses[0]?.name }}</span>
     </li>
   </ul>
   <p *ngIf="agency" class="repo-agency-icon">
     <img [src]="getAgencyIcon()">
-    <span>{{ agency.name }}</span>
+    <span>{{ agency?.name }}</span>
   </p>
 </div>
