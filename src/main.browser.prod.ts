@@ -2,7 +2,7 @@
  * Angular bootstrapping
  */
 import { platformBrowser } from '@angular/platform-browser';
-import { enableProdMode } from '@angular/core'
+import { enableProdMode } from '@angular/core';
 import { decorateModuleRef } from './app/environment';
 import { ApplicationRef } from '@angular/core';
 import { bootloader } from '@angularclass/hmr';

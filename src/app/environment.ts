@@ -15,7 +15,7 @@ let PROVIDERS = [
 let _decorateModuleRef = function identity(value) { return value; };
 
 declare var ENV;
-console.log("ENV:", ENV);
+console.log('ENV:', ENV);
 if ('production' === ENV) {
   // Production
   disableDebugTools();
