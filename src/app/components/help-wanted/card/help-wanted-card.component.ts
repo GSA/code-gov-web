@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ExternalLinkDirective } from '../../directives/external-link.directive';
+import { ExternalLinkDirective } from '../../../directives/external-link';
 import { HelpWantedItem } from '../help-wanted-item.model';
 
 @Component({

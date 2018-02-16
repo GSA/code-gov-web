@@ -6,6 +6,7 @@ import { enableProdMode } from '@angular/core'
 import { decorateModuleRef } from './app/environment';
 import { ApplicationRef } from '@angular/core';
 import { bootloader } from '@angularclass/hmr';
+
 /*
  * App Module
  * our top level module that holds all of our components

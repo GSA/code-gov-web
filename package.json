@@ -142,7 +142,7 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.7.0",
-    "@angular/compiler-cli": "^5.2.5",
+    "@angular/compiler-cli": "^4.4.4",
     "@ngtools/webpack": "^1.9.8",
     "@types/core-js": "^0.9.34",
     "@types/hammerjs": "^2.0.33",

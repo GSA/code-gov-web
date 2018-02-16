@@ -37,7 +37,6 @@ import { HelpWantedService } from './services/help-wanted';
 import { AgenciesIndexService, ReleasesIndexService } from './services/indexes';
 import { MobileService } from './services/mobile';
 import { ModalService } from './services/modal';
-import { RepoService } from './services/repo';
 import { ReposService } from './services/repos';
 import { ElasticsearchSearchService, LunrSearchService, SearchService } from './services/search';
 import { SeoService } from './services/seo';
@@ -59,7 +58,6 @@ const APP_PROVIDERS = [
   ModalService,
   MonacoEditorService,
   ReleasesIndexService,
-  RepoService,
   ReposService,
   { provide: SearchService, useClass: LunrSearchService },
   SeoService,
