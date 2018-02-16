@@ -3,8 +3,8 @@ import { MonacoEditorService } from './monaco-editor.service';
 
 @Component({
   selector: 'monaco-validator',
-  template: require('./monaco-validator.template.html'),
-  styles: [require('./monaco-validator.style.scss')]
+  templateUrl: './monaco-validator.template.html',
+  styleUrls: ['./monaco-validator.style.scss']
 })
 
 export class MonacoValidatorComponent {

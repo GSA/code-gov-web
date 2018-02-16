@@ -22,8 +22,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'repos-search',
-  template: require('./repos-search.template.html'),
-  styles: [require('./repos-search.style.scss')],
+  templateUrl: './repos-search.template.html',
+  styleUrls: ['./repos-search.style.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 

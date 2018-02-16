@@ -7,8 +7,8 @@ import { MonacoEditorService } from '../../monaco-editor';
 
 @Component({
   selector: 'schema-validator',
-  template: require('./schema-validator.template.html'),
-  styles: [require('./schema-validator.style.scss')],
+  templateUrl: './schema-validator.template.html',
+  styleUrls: ['./schema-validator.style.scss'],
 })
 
 export class SchemaValidatorComponent {

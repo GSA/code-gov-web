@@ -9,8 +9,8 @@ import { SearchService } from '../../services/search';
 
 @Component({
   selector: 'repo-list',
-  template: require('./repo-list.template.html'),
-  styles: [require('./repo-list.styles.scss')],
+  templateUrl: './repo-list.template.html',
+  styleUrls: ['./repo-list.styles.scss'],
 })
 
 export class RepoListComponent {

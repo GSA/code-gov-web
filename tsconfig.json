@@ -14,28 +14,28 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
+    "outDir": "lib",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
     "noEmitHelpers": true,
     "strictNullChecks": false,
-    "baseUrl": "./src",
-    "paths": {
-    },
     "lib": [
       "dom",
       "es6",
       "es2017"
-    ]
+    ],
+    "baseUrl": "."
   },
-  "exclude": [
-    "node_modules",
-    "dist"
+  "include": [
+    "src/**/*.ts"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useWebpackText": true
+  },
+  "angularCompilerOptions": {
+    "genDir": "./src/ngfactory"
   },
   "compileOnSave": false,
   "buildOnSave": false,

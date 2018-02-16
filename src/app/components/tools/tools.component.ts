@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'tools',
-  template: require('./tools.template.html'),
-  styles: [require('./tools.style.scss')]
+  templateUrl: './tools.template.html',
+  styleUrls: ['./tools.style.scss']
 })
 
 export class ToolsComponent {

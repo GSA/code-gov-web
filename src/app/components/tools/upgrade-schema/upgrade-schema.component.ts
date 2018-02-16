@@ -9,8 +9,8 @@ const clone = require('lodash/clone');
 
 @Component({
   selector: 'upgrade-schema',
-  template: require('./upgrade-schema.template.html'),
-  styles: [require('./upgrade-schema.style.scss')]
+  templateUrl: './upgrade-schema.template.html',
+  styleUrls: ['./upgrade-schema.style.scss']
 })
 
 export class UpgradeSchemaComponent {

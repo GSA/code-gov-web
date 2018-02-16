@@ -7,8 +7,8 @@ import { SearchInputComponent } from '../search-input';
 
 @Component({
   selector: 'header-navigation',
-  styles: [require('./header-navigation.style.scss')],
-  template: require('./header-navigation.template.html'),
+  styleUrls: ['./header-navigation.style.scss'],
+  templateUrl: './header-navigation.template.html',
   host: {
     '(window:scroll)': 'onScrollHandler($event)',
   },

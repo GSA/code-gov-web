@@ -27,8 +27,8 @@ import { TermService } from '../../services/term';
 
 @Component({
   selector: 'search-input',
-  template: require('./search-input.template.html'),
-  styles: [require('./search-input.style.scss')],
+  templateUrl: './search-input.template.html',
+  styleUrls: ['./search-input.style.scss'],
   host: { '(window:click)': 'onBlurHandler($event)' },
 })
 

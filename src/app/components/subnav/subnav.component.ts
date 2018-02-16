@@ -6,8 +6,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'subnav',
-  styles: [require('./subnav.style.scss')],
-  template: require('./subnav.template.html'),
+  styleUrls: ['./subnav.style.scss'],
+  templateUrl: './subnav.template.html',
   encapsulation: ViewEncapsulation.None
 })
 

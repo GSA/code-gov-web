@@ -11,7 +11,6 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -19,7 +18,6 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
-const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
@@ -71,7 +69,6 @@ module.exports = function (options) {
       filename: 'webpack-assets.json',
       prettyPrint: true
     }),
-    new CheckerPlugin(),
     new CommonsChunkPlugin({
       name: ['polyfills', 'vendor'].reverse()
     }),
@@ -200,7 +197,7 @@ module.exports = function (options) {
     entry: {
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main': 'main': isProd ? './src/main.browser.prod.ts' : './src/main.browser.ts',
+      'main': isProd ? './src/main.browser.prod.ts' : './src/main.browser.ts',
       'styles': './src/styles/base/_all.scss',
     },
 

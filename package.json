@@ -4,8 +4,7 @@
   "description": "Code.gov is a website promoting good practices in code development, collaboration, and reuse across the U.S. Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.",
   "keywords": [
     "angular2",
-    "webpack",
-    "typescript"
+    "webpack"
   ],
   "author": {
     "name": "Code.gov Team",
@@ -93,8 +92,8 @@
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
-    "@angular/common": "^4.4.4",
-    "@angular/compiler": "^4.4.4",
+    "@angular/common": "^4.4.6",
+    "@angular/compiler": "^4.4.6",
     "@angular/core": "^4.4.4",
     "@angular/forms": "^4.4.4",
     "@angular/http": "^4.4.4",
@@ -107,6 +106,7 @@
     "@angularclass/hmr-loader": "~3.0.2",
     "@ngx-meta/core": "^0.4.0-rc.2",
     "@types/jasminewd2": "^2.0.2",
+    "angular2-jwt": "^0.2.3",
     "angulartics2": "1.4.3",
     "assets-webpack-plugin": "^3.4.0",
     "bourbon": "^4.2.7",
@@ -138,14 +138,17 @@
     "url-parse": "^1.2.0",
     "uswds": "^1.4.4",
     "webpack-create-file-plugin": "^0.1.0",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.20"
   },
   "devDependencies": {
+    "@angular/cli": "^1.7.0",
+    "@angular/compiler-cli": "^5.2.5",
     "@ngtools/webpack": "^1.9.8",
     "@types/core-js": "^0.9.34",
     "@types/hammerjs": "^2.0.33",
     "@types/jasmine": "^2.8.3",
     "@types/node": "^6.0.95",
+    "@types/pluralize": "0.0.28",
     "@types/requirejs": "^2.1.26",
     "@types/selenium-webdriver": "^3.0.4",
     "@types/source-map": "^0.1.27",

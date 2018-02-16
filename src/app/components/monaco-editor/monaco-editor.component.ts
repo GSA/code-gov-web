@@ -3,8 +3,8 @@ import { MonacoEditorService } from './monaco-editor.service';
 
 @Component({
   selector: 'monaco-editor',
-  template: require('./monaco-editor.template.html'),
-  styles: [require('./monaco-editor.style.scss')]
+  templateUrl: './monaco-editor.template.html',
+  styleUrls: ['./monaco-editor.style.scss']
 })
 
 export class MonacoEditorComponent {

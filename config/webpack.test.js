@@ -237,17 +237,15 @@ module.exports = function (options) {
             ]
           },
 
+          awesomeTypescriptLoader: {}
+
           tslint: {
             emitErrors: false,
             failOnHint: false,
             resourcePath: 'src'
           },
-
         }
-      }),
-
-      awesomeTypescriptLoader: {}
-
+      })
     ],
 
     /**

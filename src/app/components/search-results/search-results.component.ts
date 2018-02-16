@@ -18,8 +18,8 @@ import { StateService } from '../../services/state';
 
 @Component({
   selector: 'search-results',
-  styles: [require('./search-results.styles.scss')],
-  template: require('./search-results.template.html'),
+  styleUrls: ['./search-results.styles.scss'],
+  templateUrl: './search-results.template.html',
   encapsulation: ViewEncapsulation.None,
 })
 

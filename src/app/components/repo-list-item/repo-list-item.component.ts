@@ -11,8 +11,8 @@ import { Agency, AgencyService } from '../../services/agency';
 
 @Component({
   selector: 'repo-list-item',
-  styles: [require('./repo-list-item.styles.scss')],
-  template: require('./repo-list-item.template.html')
+  styleUrls: ['./repo-list-item.styles.scss'],
+  templateUrl: './repo-list-item.template.html'
 })
 
 export class RepoListItemComponent {

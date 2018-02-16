@@ -4,8 +4,8 @@ import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'autocomplete-result',
-  styles: [require('./autocomplete-result.style.scss')],
-  template: require('./autocomplete-result.template.html')
+  styleUrls: ['./autocomplete-result.style.scss'],
+  templateUrl: './autocomplete-result.template.html'
 })
 
 export class AutocompleteResultComponent {

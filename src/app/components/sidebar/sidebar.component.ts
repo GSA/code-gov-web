@@ -17,8 +17,8 @@ import { MobileService } from '../../services/mobile';
 
 @Component({
   selector: 'sidebar',
-  styles: [require('./sidebar.style.scss')],
-  template: require('./sidebar.template.html'),
+  styleUrls: ['./sidebar.style.scss'],
+  templateUrl: './sidebar.template.html',
   encapsulation: ViewEncapsulation.None
 })
 

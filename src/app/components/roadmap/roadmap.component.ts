@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'roadmap',
-  styles: [require('./roadmap.styles.scss')],
-  template: require('./roadmap.template.html'),
+  styleUrls: ['./roadmap.styles.scss'],
+  templateUrl: './roadmap.template.html',
 })
 
 export class RoadmapComponent {

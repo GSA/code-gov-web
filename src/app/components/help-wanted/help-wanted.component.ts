@@ -6,8 +6,8 @@ import { Option } from './help-wanted.option';
 
 @Component({
   selector: 'help-wanted',
-  styles: [require('./help-wanted.styles.scss')],
-  template: require('./help-wanted.template.html')
+  styleUrls: ['./help-wanted.styles.scss'],
+  templateUrl: './help-wanted.template.html'
 })
 
 export class HelpWantedComponent {
