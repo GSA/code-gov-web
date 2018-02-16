@@ -24,6 +24,7 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
+const NgCompilerPlugin = require('@ngtools/webpack');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
@@ -60,6 +61,11 @@ module.exports = function (options) {
    * Common Plugins
    */
   const commonPlugins = [
+    new NgCompilerPlugin.AotPlugin({
+      tsConfigPath: './tsconfig.json',
+      entryModule: 'src/app/app.module#AppModule',
+      skipCodeGeneration: !isProd
+    }),
     new AssetsPlugin({
       path: helpers.root('dist'),
       filename: 'webpack-assets.json',
@@ -164,10 +170,6 @@ module.exports = function (options) {
       },
       comments: false
     }),
-    new NormalModuleReplacementPlugin(
-      /angular2-hmr/,
-      helpers.root('config/modules/angular2-hmr-prod.js')
-    ),
     /**
      * Inline critical-path CSS in index.html, and asynchronously load remainder of stylesheet.
      */
@@ -198,7 +200,7 @@ module.exports = function (options) {
     entry: {
       'polyfills': './src/polyfills.browser.ts',
       'vendor': './src/vendor.browser.ts',
-      'main': './src/main.browser.ts',
+      'main': 'main': isProd ? './src/main.browser.prod.ts' : './src/main.browser.ts',
       'styles': './src/styles/base/_all.scss',
     },
 
@@ -211,11 +213,7 @@ module.exports = function (options) {
       rules: [
         {
           test: /\.ts$/,
-          loaders: [
-           '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
-           'awesome-typescript-loader',
-           'angular2-template-loader'
-          ],
+          loader: '@ngtools/webpack',
           exclude: [/\.(spec|e2e)\.ts$/]
         },
         {

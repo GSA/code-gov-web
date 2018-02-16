@@ -52,7 +52,9 @@ module.exports = function (options) {
       /**
        * Make sure root is src
        */
-      modules: [ path.resolve(__dirname, 'src'), 'node_modules' ]
+      modules: [ path.resolve(__dirname, 'src'), 'node_modules' ],
+
+      entry: './config/spec-bundle'
 
     },
 
@@ -104,18 +106,10 @@ module.exports = function (options) {
          */
         {
           test: /\.ts$/,
-          loader: 'awesome-typescript-loader',
-          query: {
-            // use inline sourcemaps for "karma-remap-coverage" reporter
-            sourceMap: false,
-            inlineSourceMap: true,
-            compilerOptions: {
-
-              // Remove TypeScript helpers to be injected
-              // below by DefinePlugin
-              removeComments: true
-            }
-          },
+          loaders: [
+            'awesome-typescript-loader?inlineSourceMap=true&sourceMap=false',
+            'angular2-template-loader',
+          ],
           exclude: [/\.e2e\.ts$/]
         },
 
@@ -251,6 +245,8 @@ module.exports = function (options) {
 
         }
       }),
+
+      awesomeTypescriptLoader: {}
 
     ],
 

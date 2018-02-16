@@ -3,6 +3,9 @@
 // rc2 workaround
 import { enableDebugTools, disableDebugTools } from '@angular/platform-browser';
 import { enableProdMode, ApplicationRef } from '@angular/core';
+
+declare var ENV;
+
 // Environment Providers
 let PROVIDERS = [
   // common env directives

@@ -7,8 +7,8 @@ import { PageScrollConfig } from 'ng2-page-scroll';
 @Component({
   selector: '[role="application"]',
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./app.style.scss')],
-  template: require('./app.template.html')
+  styles: ['./app.style.scss'],
+  template: './app.template.html'
 })
 
 export class AppComponent implements OnInit, OnDestroy {

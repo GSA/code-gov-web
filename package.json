@@ -141,6 +141,7 @@
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
+    "@ngtools/webpack": "^1.9.8",
     "@types/core-js": "^0.9.34",
     "@types/hammerjs": "^2.0.33",
     "@types/jasmine": "^2.8.3",
