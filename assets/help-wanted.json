@@ -46,6 +46,27 @@
     },
     {
       "id": 3,
+      "title": "Allow rename during duplicate",
+      "description": "It would be nice to give the opportunity to rename when creating the copy, rather than having to create the copy and then go into properties to edit the name.",
+      "updated": "2017-10-24",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/604",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 4,
       "title": "Allow user to view an item from the left pane while editing",
       "description": "Issue Description:\nWhen editing, a very common observation is users single-clicking an object in the left pane (both browse tree and search) and being taken out of Edit mode, or being warned with the 'Unsaved changes' dialog. What they want is to be able to see an object before adding it to a thing they're currently editing.\n\nProposed solution:\n\nSingle-clicking in the left pane during Edit mode displays the clicked object in an overlay without taking the user out of Edit mode.\nAll normal 'view' functionality (like plot pan/zoom) would be available.\nThere should be a 'Add This Item' button available in the overlay as well that would add the item being viewed to the object being edited, then closes the overlay.",
       "updated": "2017-12-13",
@@ -57,8 +78,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "impact": "Open Government",
-      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "projectURL": "https://github.com/nasa/openmct",
       "issueURL": "https://github.com/nasa/openmct/issues/928",
       "featured": true,
       "active": true,
@@ -67,7 +87,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Add 'Create..' Option to create object inside other object.",
       "description": "It should be possible for a user to right click on an object in the tree view and select 'create...' to create an object inside of that object. This option should not exist for objects that do not have composition.",
       "updated": "2017-12-13",
@@ -79,8 +99,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "impact": "Open Government",
-      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "projectURL": "https://github.com/nasa/openmct",
       "issueURL": "https://github.com/nasa/openmct/issues/354",
       "featured": true,
       "active": true,
@@ -89,7 +108,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Remove action is available for non-editable objects",
       "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
       "updated": "2018-1-10",
@@ -101,8 +120,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "impact": "Open Government",
-      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "projectURL": "https://github.com/nasa/openmct",
       "issueURL": "https://github.com/nasa/openmct/issues/1542",
       "featured": true,
       "active": true,
@@ -111,7 +129,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Timers aren't visually indicating countdown or countup",
       "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
       "updated": "2018-1-29",
@@ -123,8 +141,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "impact": "Open Government",
-      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "projectURL": "https://github.com/nasa/openmct",
       "issueURL": "https://github.com/nasa/openmct/issues/1895",
       "featured": true,
       "active": true,
@@ -133,8 +150,8 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 7,
-      "title": "Timers aren't visually indicating countdown or countup",
+      "id": 8,
+      "title": "Various error messages in tables",
       "description": "The table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
       "updated": "2018-1-19",
       "languages": [
@@ -145,14 +162,313 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "impact": "Open Government",
-      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/Open%20Mission%20Control%20Technologies%20%28Open%20MCT%29",
+      "projectURL": "https://github.com/nasa/openmct",
       "issueURL": "https://github.com/nasa/openmct/issues/1884",
       "featured": true,
       "active": true,
       "popular": true,
       "agency_id": "NASA",
       "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 9,
+      "title": "Wait spinner shows longer than necessary",
+      "description": "During testing of VISTA R3.4 RC1, repeatedly noticed wait spinners sticking around after new data had become visible in the plot. Clicking on a splitter bar between panes causes the wait spinner to disappear, leading me to believe that we need an $apply call somewhere.",
+      "updated": "2018-1-16",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1880",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 10,
+      "title": "Y Axis disappears when deeply zoomed",
+      "description": "Steps to reproduce:Create a plot containing a telemetry element, Zoom in on data repeatedly, looking at Y-Axis, Observe: Eventually Y Axis disappears and a console error is shown",
+      "updated": "2018-1-16",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1879",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 11,
+      "title": "Elements pool doesn't get updated after removing an object",
+      "description": "In Layout, try removing an object via the context menu by right clicking the object in the elements pool. Notice the object remains listed in the elements pool.",
+      "updated": "2018-1-8",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/nasa/openmct",
+      "issueURL": "https://github.com/nasa/openmct/issues/1869",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 12,
+      "title": "Allow Angular components as Interfaces",
+      "description": "Currently Interfaces are limited to relatively simple JS (or whatever plugin libraries are loaded by the interface). It would be very nice to be able to just add an additional component and somehow load it into the main module (or add in a new app module just for this), so interface developers can utilize Angular functionality to make writing interfaces easier (and better utilize our apis).",
+      "updated": "2017-12-17",
+      "languages": [
+        "Python",
+        "Angular"
+      ],
+      "skill": "Advanced",
+      "effort": "Large",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/iadgov/WALKOFF",
+      "issueURL": "https://github.com/iadgov/WALKOFF/issues/181",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 13,
+      "title": "Split up the App API JSON Schema into multiple files",
+      "description": "Currently the App API JSON Schema in data/walkoff_schema.json is about 1000 lines long and is getting a bit bloated and hand to maintain. It would be better if it is split up into manageable files and placed in its own directory inside data. This should only involve using the {'#ref' : '../path/to/new/file'} feature of JSON schemas (see this issue here: Julian/jsonschema#98). This may also involve a teak in core.config.config depending on the reference resolver being used and possibly a change to core.config.paths if the path to the schema changes.",
+      "updated": "2017-12-1",
+      "languages": [
+        "Python",
+        "Angular"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/iadgov/WALKOFF",
+      "issueURL": "https://github.com/iadgov/WALKOFF/issues/171",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 14,
+      "title": "client-side dependency installation support for interfaces",
+      "description": "Currently, there is no clean way to install client dependencies for custom interfaces. If the install_dependencies.py script could look for a package.json file in the interfaces and run npm install in that directory, then this issue would be resolved",
+      "updated": "2017-12-1",
+      "languages": [
+        "Python",
+        "Angular"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/iadgov/WALKOFF",
+      "issueURL": "https://github.com/iadgov/WALKOFF/issues/168",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 15,
+      "title": "requirements.txt support in custom interfaces",
+      "description": "Custom interfaces may require additional dependencies, but currently, there is no straightforward mechanism to install them like there is for app dependencies. The install dependencies script could be modified to install dependencies for apps as well as interfaces",
+      "updated": "2017-12-1",
+      "languages": [
+        "Python",
+        "Angular"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/iadgov/WALKOFF",
+      "issueURL": "https://github.com/iadgov/WALKOFF/issues/168",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 16,
+      "title": "Request: parameter to start on a specific module",
+      "description": "We would love to be able to create bookmarklets that take us directly to a specific module, like Tables or Links. We have a set of bookmarklets shared by the team, organized by what they're used for, so it would be great to point someone directly to a specific module. We would love a parameter we can pass in the URL that selects the starting module.",
+      "updated": "2018-2-1",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/iadgov/WALKOFF",
+      "issueURL": "https://github.com/iadgov/WALKOFF/issues/168",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "SSA",
+      "license": "Apache License, Version 2.0"
+    },
+    {
+      "id": 17,
+      "title": "Double border in footer links at mobile",
+      "description": "When at mobile size the links in the footer stack on top of each other. Since it's three columns at desktop sizes, the three stacked columns end up with double borders between each stacked column. This is visible after the 'Open Government' and 'Tribal' link.",
+      "updated": "2017-11-9",
+      "languages": [
+        "Python",
+        "Django"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/cfpb/cfgov-refresh",
+      "issueURL": "https://github.com/cfpb/cfgov-refresh/issues/3575",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "CFPB",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 18,
+      "title": "Protractor parameters are not including text after spaces",
+      "description": "Try gulp test:acceptance --platform='OS X 10.9' --sauce and this line will have platform set to OS, not the full string with spaces, which leads to a Sauce error since the OS version is not specified.",
+      "updated": "2017-10-28",
+      "languages": [
+        "Python",
+        "Django"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/cfpb/cfgov-refresh",
+      "issueURL": "https://github.com/cfpb/cfgov-refresh/issues/3528",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "CFPB",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 19,
+      "title": "Sauce window dimensions are not being set",
+      "description": "Running tests on sauce shows up undefined,undefinedpx because this reference does not exist anymore https://github.com/cfpb/cfgov-refresh/blob/master/test/browser_tests/conf.js#L169-L170.",
+      "updated": "2017-10-28",
+      "languages": [
+        "Python",
+        "Django"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Bug",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/cfpb/cfgov-refresh",
+      "issueURL": "https://github.com/cfpb/cfgov-refresh/issues/3527",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "CFPB",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 20,
+      "title": "State OR Region?",
+      "description": "As currently designed, the site lets me think I can search for, say, schools in Virginia in the region of New England. Seems to me if I choose a state, the site should eliminate region as an additional option.",
+      "updated": "2017-9-28",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/RTICWDT/college-scorecard",
+      "issueURL": "https://github.com/RTICWDT/college-scorecard/issues/1640",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "Department of Education",
+      "license": "CC0 1.0 Universal License"
+    },
+    {
+      "id": 21,
+      "title": "AnnotationAttributes interface alignment",
+      "description": "Evaluate AnnotationAttributes in light of the patterns established by ShapeAttributes and PlacemarkAttributes. Identify and resolve inconsistent patterns. We know of one property that breaks with the established attributes convention: AnnotationAttributes.opacity. This value is expressed in the attributes' alpha channel.",
+      "updated": "2018-2-14",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/NASAWorldWind/WebWorldWind",
+      "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/473",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
+    },
+    {
+      "id": 22,
+      "title": "TectonicPlatesLayer plate geometries are drawn incorrectly",
+      "description": "The TectonicPlatesLayer plate geometries are drawn with SurfacePolygon, yet the source geometry for each plate is a WKT LineString. The geometry should be drawn with SurfacePolyline.",
+      "updated": "2018-1-27",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/NASAWorldWind/WebWorldWind",
+      "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/453",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
+    },
+    {
+      "id": 23,
+      "title": "Add a method for cleanly unregistering window controllers",
+      "description": "With the new controller design, apps have the freedom to replace the default BasicWorldWindController with one of their own choosing. However, replacing the controller will currently leave dangling GestureRecognizer references (and perhaps others) hanging around, so we need to add a method of gracefully unregistering a controller and registering a new one that does proper clean up.",
+      "updated": "2018-1-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/NASAWorldWind/WebWorldWind",
+      "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/437",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
     }
   ]
 }
