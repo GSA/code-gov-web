@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
-import { Agency } from '../../../../../services/agency';
-import { ClientService } from '../../../../../services/client';
+import { Agency, ClientService } from '../../../../../services/client';
 import { StatusService } from '../../../../../services/status';
 
 import { Subscription } from 'rxjs/Subscription';
@@ -15,7 +14,7 @@ import { SeoService } from '../../../../../services/seo';
 })
 
 export class ComplianceDashboardComponent implements OnInit, OnDestroy {
-  agencyIds = [];
+  agencyIds: string[] = [];
   public statuses = [];
   public updated;
   private statusesSub: Subscription;
@@ -37,9 +36,11 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
 
   getAgencyIds() {
-    this.clientService.getAgencies().subscribe(agencies => {
-      this.agencyIds = agencies.map(agency => agency.acronym);
-    });
+    this.clientService.getAgencies().subscribe(
+      (agencies: Agency[]) => {
+        this.agencyIds = agencies.map(agency => agency.acronym);
+      }
+    );
   }
 
   getStatuses() {

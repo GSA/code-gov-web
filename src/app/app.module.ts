@@ -32,7 +32,6 @@ import { AppComponent } from './utils/app-components';
 import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
 import { ClientService } from './services/client';
-import { AgencyService, AGENCIES } from './services/agency';
 import { HelpWantedService } from './services/help-wanted';
 import { MobileService } from './services/mobile';
 import { ErrorModalService } from './services/error-modal';
@@ -49,7 +48,6 @@ import { CustomUrlSerializer } from './serializers/custom-url-serializer';
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   ClientService,
-  AgencyService,
   HelpWantedService,
   MobileService,
   ErrorModalService,

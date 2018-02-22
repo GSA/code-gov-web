@@ -11,6 +11,7 @@ import { MobileService } from '../../../services/mobile';
 export class AgenciesComponent {
 
   constructor(private mobileService: MobileService) {
+    console.error("starting agencies.componet.ts");
     this.mobileService.hideMenu();
   }
 }

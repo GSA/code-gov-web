@@ -8,7 +8,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Observable } from 'rxjs/Observable';
 
 import { AgencyComponent } from './index';
-import { AgencyService } from '../../../services/agency';
 import { ErrorModalService } from '../../../services/error-modal';
 import { ErrorModalComponent } from './../../error-modal/error-modal.component';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
@@ -42,7 +41,6 @@ describe('AgencyComponent', () => {
         InfiniteScrollModule,
       ],
       providers: [
-        AgencyService,
         ErrorModalService,
         SeoService,
         { provide: ActivatedRoute, useClass: MockActivatedRoute }

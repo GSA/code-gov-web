@@ -1,10 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { AgencyService, Agency } from '../../../services/agency';
 import { ErrorModalService } from '../../../services/error-modal';
 import { ErrorModalComponent } from './../../error-modal/error-modal.component';
-import { ClientService } from '../../../services/client';
+import { Agency, ClientService } from '../../../services/client';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
 import { SeoService } from '../../../services/seo';
@@ -29,7 +28,6 @@ export class AgencyComponent implements OnInit, OnDestroy {
   private isLoading = true;
 
   constructor(
-    private agencyService: AgencyService,
     private clientService: ClientService,
     private errorModalService: ErrorModalService,
     private route: ActivatedRoute,
@@ -47,39 +45,43 @@ export class AgencyComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.eventSub = this.route.params.subscribe(params => {
       let id = params['id'];
-      this.agency = this.agencyService.getAgency(id);
-      if (this.agency) {
-        this.repos = [];
-        this.allRepos = [];
-        this.currentIndex = 0;
-        this.isLoading = true;
-        this.agencyRepos();
+      this.clientService.getAgencyByAcronym(id)
+      .subscribe((agency: Agency) => {
+        this.agency = agency;
+        if (this.agency) {
+          this.repos = [];
+          this.allRepos = [];
+          this.currentIndex = 0;
+          this.isLoading = true;
+          this.agencyRepos();
 
-        this.seoService.setTitle(this.agency.name, true);
-        this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
-        this.seoService.setMetaRobots('Index, Follow');
+          this.seoService.setTitle(this.agency.name, true);
+          this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
+          this.seoService.setMetaRobots('Index, Follow');
 
-        this.meta.setTag('twitter:card', 'summary');
-        this.meta.setTag('twitter:site', '@codedotgov');
-        this.meta.setTag('twitter:title', `code.gov/${this.agency.name}`);
-        this.meta.setTag('twitter:description', 'Browse code from the ' + this.agency.name);
-        this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
-      }
+          this.meta.setTag('twitter:card', 'summary');
+          this.meta.setTag('twitter:site', '@codedotgov');
+          this.meta.setTag('twitter:title', `code.gov/${this.agency.name}`);
+          this.meta.setTag('twitter:description', 'Browse code from the ' + this.agency.name);
+          this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
+        }
+      });
     });
   }
 
-  agencyId() {
+  agencyId(): string {
     if (this.agency) {
-      return this.agency.id;
+      return this.agency.acronym;
     } else {
       return null;
     }
   }
 
   agencyRepos() {
+    console.error("starting agencyRepos");
     if (this.agency) {
-      this.clientService.getAgencyRepos(this.agency.id, 10000).subscribe(repos => {
-        console.log("got agency repos:", this.agency.id, repos);
+      this.clientService.getAgencyRepos(this.agency.acronym, 10000).subscribe(repos => {
+        console.log("got agency repos:", this.agency.acronym, repos);
 
         let number_of_repos = repos.length;
         if (number_of_repos === 0) {

@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { TruncatePipe } from '../../pipes/truncate';
 import { LanguageIconPipe } from '../../pipes/language-icon';
-import { AgencyService } from '../../services/agency';
+import { ClientService } from '../../services/client';
 import { RepoListItemComponent } from './';
 
 @Component({
@@ -43,7 +43,7 @@ describe('RepoListItemComponent', () => {
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' },
-        AgencyService,
+        ClientService,
       ],
       schemas: [
       ],
