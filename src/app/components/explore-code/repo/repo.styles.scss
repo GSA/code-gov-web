@@ -3,28 +3,6 @@
 @import '~uswds/src/stylesheets/core/variables';
 
 
-.project-banner {
-  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  margin-bottom: 2rem;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
-  text-align: center;
-
-  h1 {
-    margin-bottom: 0;
-    font-size: $h3-font-size;
-    color: $color-white;
-    text-transform: uppercase;
-  }
-  h2 {
-    margin: 0;
-    font-size: $h1-font-size;
-    color: $color-white;
-  }
-}
-
 .project-breadcrumb {
   font-size: 0.8em;
   margin-bottom: 4rem;
