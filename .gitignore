@@ -60,3 +60,4 @@ stats.json
 # IDE #
 .idea/
 *.swp
+.vscode/

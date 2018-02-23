@@ -41,6 +41,7 @@
     "tslint": "tslint --project tsconfig.json",
     "typedoc": "typedoc",
     "webpack": "webpack",
+    "webpack-analyze": "webpack --config ./config/webpack.analyze.js",
     "webpack-dev-server": "webpack-dev-server",
     "webdriver-manager": "webdriver-manager",
     "protractor": "protractor",
@@ -202,11 +203,11 @@
     "typescript": "2.3.4",
     "url-loader": "^0.5.7",
     "webpack": "^3.10.0",
-    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-bundle-analyzer": "^2.10.0",
     "webpack-dev-middleware": "^1.12.2",
     "webpack-dev-server": "2.7.1",
     "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "0.15.0"
+    "webpack-merge": "^0.15.0"
   },
   "repository": {
     "type": "git",

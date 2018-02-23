@@ -100,7 +100,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
           }
 
           this.statuses = this.statuses.sort((a, b) => {
-            return a.agency.id < b.agency.id ? -1 : a.agency.id > b.agency.id ? 1 : 0;
+            return a.agency.id - b.agency.id;
           });
         } else {
           console.log('Error.');

@@ -32,7 +32,13 @@ export class HelpWantedService extends ApiService {
     }
 
     if (!task.image && task.agency_id) {
-        task.image = `assets/img/logos/agencies/${task.agency_id}-50x50.png`;
+        let partialFilename: string;
+        if (task.agency_id === 'Department of Education') {
+          partialFilename = 'ED';
+        } else {
+          partialFilename = task.agency_id;
+        }
+        task.image = `assets/img/logos/agencies/${partialFilename}-50x50.png`;
     }
     return task;
   }
