@@ -68,11 +68,11 @@
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "federalist-deploy": "npm run federalist-deploy:dev",
     "prefederalist-deploy:dev": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:dev": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
+    "federalist-deploy:dev": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
     "prefederalist-deploy:stag": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:stag": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
+    "federalist-deploy:stag": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
     "prefederalist-deploy:prod": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:prod": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
+    "federalist-deploy:prod": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
     "federalist-deploy:dashboard": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.dashboard-preview",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
@@ -93,7 +93,8 @@
     "postversion": "git push && git push --tags",
     "postinstall": "typings install",
     "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
-    "list-git-conflicts": "git diff --name-only --diff-filter=U"
+    "list-git-conflicts": "git diff --name-only --diff-filter=U",
+    "clear-gh-pages-cache": "rm -fr node_modules/gh-pages/.cache"
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
