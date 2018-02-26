@@ -82,8 +82,7 @@ export interface Repo {
 @Injectable()
 export class ClientService {
 
-  //private BASE: string = 'https://code-api-staging.app.cloud.gov/api/0.1/';
-  private BASE: string = 'https://code-api.app.cloud.gov/api/0.1/';
+  private BASE: string = 'https://code-api.app.cloud.gov/api/';
 
   constructor (private http: Http) { }
 
@@ -134,7 +133,13 @@ export class ClientService {
   search(text: string = '', size: number = 10) {
     let url = this.BASE + `repos?q=${text}&size=${size}`;
     return this.http.get(url)
-    .map((response: Response) => response.json());
+    .map((response: Response) => response.json())
+    .map((data: any) => {
+      data.repos.filter(repo => {
+        return repo.permissions && repo.permissions.usageType && ["openSource", "governmentWideReuse"].includes(repo.permissions.usageType);
+      });
+      return data;
+    });
   }
 
 }
