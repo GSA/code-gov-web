@@ -36,7 +36,6 @@ import { HelpWantedService } from './services/help-wanted';
 import { MobileService } from './services/mobile';
 import { ErrorModalService } from './services/error-modal';
 import { ModalService } from './services/modal';
-import { RepoService } from './services/repo';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
 import { StatusService } from './services/status';
@@ -53,7 +52,6 @@ const APP_PROVIDERS = [
   ErrorModalService,
   ModalService,
   MonacoEditorService,
-  RepoService,
   SeoService,
   StateService,
   StatusService,

@@ -33,7 +33,7 @@ module.exports = function (options) {
 
   const METADATA = {
 
-    API_URL: isProd ? 'https://code-api.app.cloud.gov/api/0.1/' : 'http://localhost:3001/api/0.1/',
+    API_URL: isProd ? 'https://code-api.app.cloud.gov/api/' : 'https://code-api-staging.app.cloud.gov/api/',
     title: 'Code.gov',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer(),

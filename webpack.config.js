@@ -12,6 +12,10 @@ switch (process.env.NODE_ENV) {
   case 'testing':
     module.exports = require('./config/webpack.test');
     break;
+  case 'stag':
+  case 'staging':
+    module.exports = require('./config/webpack.stag');
+    break;
   case 'dev':
   case 'development':
   default:

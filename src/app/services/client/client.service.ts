@@ -82,7 +82,7 @@ export interface Repo {
 @Injectable()
 export class ClientService {
 
-  private BASE: string = 'https://code-api.app.cloud.gov/api/';
+  private BASE: string = process.env.API_URL;
 
   constructor (private http: Http) { }
 
@@ -131,7 +131,7 @@ export class ClientService {
   }
 
   search(text: string = '', size: number = 10) {
-    let url = this.BASE + `repos?q=${text}&size=${size}`;
+    let url = this.BASE + `repos?q=${text}&permissions.usageType=openSource&permissions.usageType=governmentWideReuse&size=${size}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
