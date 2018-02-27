@@ -85,6 +85,7 @@ set an API_URL environmental variable for the npm process. Here's two examples:
 API_URL=stag npm run start
 API_URL=staging npm run start
 API_URL='https://code-api-staging.app.cloud.gov/api/' npm run start
+API_URL=staging GIT_REMOTE_NAME=upstream npm run federalist-deploy:dev
 ```
 
 
