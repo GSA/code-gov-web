@@ -85,7 +85,6 @@
     "start": "npm run server:dev",
     "start:hmr": "npm run server:dev:hmr",
     "preversion": "npm test",
-    "version": "npm run build",
     "postversion": "git push && git push --tags",
     "postinstall": "typings install",
     "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
