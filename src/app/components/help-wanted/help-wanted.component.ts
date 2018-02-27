@@ -103,7 +103,7 @@ export class HelpWantedComponent {
   }
 
   filterFormOptionsByVersions(versions) {
-    return this.options.filter(option => versions.includes(option.version));
+    return this.options.filter(option => versions.indexOf(option.version) > -1);
   }
 
   getDesktopFormOptions() {
@@ -146,7 +146,7 @@ export class HelpWantedComponent {
 
         return filteredValues.every(value => {
           if (Array.isArray(itemValue)) {
-            return itemValue.includes(value);
+            return itemValue.indexOf(value) > -1;
           } else {
             return String(value) === String(itemValue);
           }

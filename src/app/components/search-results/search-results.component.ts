@@ -145,7 +145,7 @@ export class SearchResultsComponent {
 
     if (filteredLanguages.length > 0) {
       if (Array.isArray(result.languages)) {
-        return filteredLanguages.every(l => result.languages.includes(l));
+        return filteredLanguages.every(l => result.languages.indexOf(l) > -1);
       } else {
         return false;
       }
@@ -162,7 +162,7 @@ export class SearchResultsComponent {
     }
 
     if (Array.isArray(result.permissions.licenses)) {
-      return filteredLicenses.every(l => result.permissions.licenses.map(license => license.name).includes(l));
+      return filteredLicenses.every(l => result.permissions.licenses.map(license => license.name).indexOf(l) > -1);
     } else {
       return false;
     }

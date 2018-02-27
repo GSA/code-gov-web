@@ -29,7 +29,7 @@ const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 
 module.exports = function (options) {
-  isProd = ['production', 'staging'].includes(options.env);
+  isProd = ['production', 'staging'].indexOf(options.env) > -1;
 
   const METADATA = {
 
