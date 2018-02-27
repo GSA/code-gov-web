@@ -84,7 +84,9 @@ export class ClientService {
 
   private BASE: string = process.env.API_URL;
 
-  constructor (private http: Http) { }
+  constructor (private http: Http) {
+    console.log("process.env.API_URL:", process.env.API_URL);
+  }
 
   getAgencies(): Observable<Agency[]> {
     let url = this.BASE + 'agencies';
