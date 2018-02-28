@@ -10,13 +10,18 @@ body {
 
 //div between Search and Help Wanted
 .vertical-row {
-height: 11em;
+height: 9em;
 width: 3px;
 background: white;
 top: 12em;
 bottom: 0;
 position: absolute;
 left: 50%;
+}
+
+//Modify search box size
+.input-home {
+  width: 95%;
 }
 
 //Help Wanted styles between Banner and Our Mission (About) sections on homepage
@@ -39,7 +44,7 @@ left: 50%;
 //Questions section
 .questions {
   p {
-    margin: 2rem auto 2rem;
+    margin: 3rem auto 2rem;
     max-width: 75rem;
   }
 }
