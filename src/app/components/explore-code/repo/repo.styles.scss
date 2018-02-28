@@ -35,10 +35,10 @@
 .repo-container {
   @include clearfix;
   background-color: $color-white;
-  padding: 1em 1em 2em;
+  padding: 0 1em 2em 1em;
 
   @media screen and (min-width: $medium-screen) {
-    padding: 2em 2em 3em;
+    padding: 0 2em 3em 2em;
   }
 
   code {
