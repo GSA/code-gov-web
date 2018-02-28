@@ -8,7 +8,7 @@ h3 {
 }
 
 .search-results-banner {
-  background: url('assets/img/american_flag_1920x1280_gradient.jpg');
+  background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
   background-attachment: fixed;
   background-size: cover;
   margin-bottom: 2rem;
@@ -72,7 +72,7 @@ h3 {
 
       @media screen and (min-width: $large-screen) {
         display: inline-block;
-      } 
+      }
     }
 
     label,
