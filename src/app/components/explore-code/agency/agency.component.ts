@@ -80,10 +80,10 @@ export class AgencyComponent implements OnInit, OnDestroy {
   agencyRepos() {
     if (this.agency) {
       this.clientService.getAgencyRepos(this.agency.acronym, 10000).subscribe(repos => {
-        let number_of_repos = repos.length;
-        if (number_of_repos === 0) {
+        let numberOfRepos = repos.length;
+        if (numberOfRepos === 0) {
           this.errorModalService.showModal({});
-        } else if (number_of_repos > 0) {
+        } else if (numberOfRepos > 0) {
           this.allRepos = repos;
           this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
           this.currentIndex = this.repos.length || this.pageSize;

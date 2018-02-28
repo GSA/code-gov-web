@@ -36,7 +36,6 @@ export class RepoListItemComponent {
    * Returns whether the provided repository is from GitHub.
    */
   isGitHubRepo() {
-    //console.log("starting isGitHubRepo with", this.repo);
     if (!this.repo.repository && typeof this.repo.repository !== 'string') {
       return false;
     } else {

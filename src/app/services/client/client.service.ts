@@ -131,12 +131,15 @@ export class ClientService {
   }
 
   search(text: string = '', size: number = 10) {
-    let url = this.BASE + `repos?q=${text}&permissions.usageType=openSource&permissions.usageType=governmentWideReuse&size=${size}`;
+    let permissionsFilter = '&permissions.usageType=openSource&permissions.usageType=governmentWideReuse';
+    let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
       data.repos.filter(repo => {
-        return repo.permissions && repo.permissions.usageType && ["openSource", "governmentWideReuse"].includes(repo.permissions.usageType);
+        return repo.permissions
+          && repo.permissions.usageType
+          && ['openSource', 'governmentWideReuse'].indexOf(repo.permissions.usageType) > -1;
       });
       return data;
     });

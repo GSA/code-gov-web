@@ -120,7 +120,7 @@ export class HelpWantedComponent {
       if (Array.isArray(value)) {
         value.forEach(element => {
           taskValues.add(element);
-        })
+        });
       } else {
         taskValues.add(value);
       }
@@ -132,9 +132,11 @@ export class HelpWantedComponent {
     let keys = [];
     let obj = this.filterForm.value[property];
     for (let key in obj) {
-      let value = obj[key];
-      if (value !== undefined && value !== null) {
-        keys.push(key);
+      if (obj.hasOwnProperty(key)) {
+        let value = obj[key];
+        if (value !== undefined && value !== null) {
+          keys.push(key);
+        }
       }
     }
     return keys;

@@ -89,11 +89,11 @@ describe('RepoComponent', () => {
       (clientService)  => {
     // setup dependencies
     let agency = {
-      "acronym": "SBA",
-      "name": "Small Business Administration",
-      "website": "https://sba.gov/",
-      "codeUrl": "https://sba.gov/code.json",
-      "numRepos": 5
+      'acronym': 'SBA',
+      'name': 'Small Business Administration',
+      'website': 'https://sba.gov/',
+      'codeUrl': 'https://sba.gov/code.json',
+      'numRepos': 5
     };
     spyOn(clientService, 'getAgencyByAcronym').and.returnValue(agency);
     let repo = createRepository({name: 'Fake repo name'});
@@ -103,7 +103,7 @@ describe('RepoComponent', () => {
     expect(repoComponent.repo).toBeDefined();
     // also checking on agency object after call to ClientService.getAgancy()
     expect(repoComponent.repo.agency.acronym).toEqual(agency.acronym);
-    // console.log("Agency: ", repoComponent.repo.agency);
+    // console.log('Agency: ', repoComponent.repo.agency);
   }));
 
   it('should NOT initialize repo property if id property is bogus',

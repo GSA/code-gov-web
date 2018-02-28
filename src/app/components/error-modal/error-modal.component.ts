@@ -13,7 +13,7 @@ import { ErrorModalService } from '../../services/error-modal';
 export class ErrorModalComponent implements OnDestroy {
   description: string;
   title: string;
-  url: string = "https://github.com/GSA/code-gov-web/issues/new?title=New Issue";
+  url: string = 'https://github.com/GSA/code-gov-web/issues/new?title=New Issue';
   visible: boolean;
   modalSub: Subscription;
 

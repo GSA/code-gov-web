@@ -20,7 +20,7 @@ export class CapitalizePipe implements PipeTransform {
 
     let length: number = value.length;
     if (length === 0) {
-      return "";
+      return '';
     } else if (length === 1) {
       return value.toUpperCase();
     } else if (length >= 2) {
