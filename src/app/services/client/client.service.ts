@@ -82,7 +82,7 @@ export interface Repo {
 @Injectable()
 export class ClientService {
 
-  private BASE: string = process.env.API_URL;
+  private BASE: string = process.env.API_URL || 'https://code-api.app.cloud.gov/api/';
 
   constructor (private http: Http) {
   }

@@ -40,8 +40,8 @@ export class RepoListItemComponent {
       return false;
     } else {
       const isGitHubURL = /github\.com/;
-
-      return isGitHubURL.test(this.repo.repository);
+      console.log("this.repo.repositoryURL:", this.repo.repositoryURL);
+      return isGitHubURL.test(this.repo.repositoryURL);
     }
   }
 }

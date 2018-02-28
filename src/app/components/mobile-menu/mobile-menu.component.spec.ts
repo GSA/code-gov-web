@@ -5,6 +5,7 @@ import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 
 import { MobileMenuComponent } from './mobile-menu.component';
 
+import { HttpModule } from '@angular/http';
 import { ClientService } from '../../services/client';
 import { MobileService } from '../../services/mobile';
 
@@ -18,6 +19,7 @@ describe('MobileMenuComponent', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [
+          HttpModule,
           RouterModule.forRoot([]),
         ],
         declarations: [ MobileMenuComponent ],
@@ -71,6 +73,7 @@ describe('MobileMenuComponent', () => {
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({
         imports: [
+          HttpModule,
           RouterModule.forRoot([]),
         ],
         declarations: [ MobileMenuComponent ],
