@@ -29,10 +29,8 @@ const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 
 module.exports = function (options) {
-  console.log("options.env:", options.env);
-  console.log("API_URL:", process.env.API_URL);
-  console.log("HOST:", process.env.HOST);
-  isProd = ['production', 'staging'].includes(options.env);
+
+  let isProd = ['production', 'staging'].indexOf(options.env) > -1;
 
   /*
     Basically, if set API_URL environmental variable to stag,
