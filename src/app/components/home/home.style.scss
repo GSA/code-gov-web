@@ -228,7 +228,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/typing.png');
+      background: url('./assets/img/featured-projects/typing.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -264,7 +264,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/construction_worker.png');
+      background: url('./assets/img/featured-projects/construction_worker.png');
       background-position: 103% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -307,8 +307,8 @@ body {
   color: $color-white;
 
   @media screen and (min-width: $medium-screen) {
-    background: url('../../../assets/img/featured-projects/grass.png'), #3f7fab;
-    background: url('../../../assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
+    background: url('./assets/img/featured-projects/grass.png'), #3f7fab;
+    background: url('./assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: cover, contain;
@@ -335,7 +335,7 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/house_for_sale.png');
+      background: url('./assets/img/featured-projects/house_for_sale.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 50%;
