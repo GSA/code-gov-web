@@ -81,7 +81,6 @@ export class SearchResultsComponent {
       (response: any) => {
         this.queryValue = response.q;
         this.clientService.search(this.queryValue, 100).subscribe(data => {
-          console.log("searchRepos returned:", data);
           this.results = data.repos;
           this.total = data.total;
           this.buildFormControl('languages', this.getLanguages());

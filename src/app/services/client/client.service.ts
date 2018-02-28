@@ -85,11 +85,10 @@ export class ClientService {
   private BASE: string = process.env.API_URL;
 
   constructor (private http: Http) {
-    console.log("process.env.API_URL:", process.env.API_URL);
   }
 
   getAgencies(): Observable<Agency[]> {
-    let url = this.BASE + 'agencies';
+    let url = this.BASE + 'agencies?size=1000';
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -100,7 +99,7 @@ export class ClientService {
   }
 
   getAgencyByAcronym(acronym: string): Observable<Agency> {
-    let url = this.BASE + 'agencies';
+    let url = this.BASE + 'agencies?size=1000';
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -112,7 +111,6 @@ export class ClientService {
     /*
       - permissions.usageType is 'openSource' or 'governmentWideReuse'
     */
-    console.error("starting getAgencyRepos with", acronym, "and", size);
     let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc`;
     return this.http.get(url)
     .map((response: Response) => response.json())

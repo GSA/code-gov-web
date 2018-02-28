@@ -25,7 +25,6 @@ export class RepoListComponent {
    * @constructor
    */
   constructor() {
-    console.log("STARTING RepoListComponent");
   }
 
   ngOnInit() { }

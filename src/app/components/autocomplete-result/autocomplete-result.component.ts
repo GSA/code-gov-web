@@ -14,7 +14,6 @@ export class AutocompleteResultComponent {
   resource: any = {};
 
   ngOnInit() {
-    console.log("starting AutocompleteResultComponent.ngOnInit with", this.result);
     if(this.result) {
       if (this.result.term_type === "agency.acronym") {
         let acronym = this.result.term.toUpperCase();

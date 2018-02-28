@@ -16,7 +16,6 @@ export class AutocompleteComponent {
 
   ngOnInit() {
     this.subscription = this.termResultsObservable.subscribe(results => {
-      console.log("autocomlete got more from termResultsObservable:", results);
       this.results = results;
     });
   }
@@ -26,7 +25,6 @@ export class AutocompleteComponent {
   }
 
   hasResults() {
-    console.log("starting hasResult with:", this.results.length);
     return this.results.length > 0;
   }
 

@@ -94,7 +94,6 @@ export class SearchInputComponent {
     if (this.queryInputValue && this.queryInputValue.length >= 1) {
       this.clientService.suggest(this.queryInputValue, 5)
       .subscribe(results => {
-        console.log("results:", results);
         this.termResultsReturnedSource.next(results);
       });
     } else {
