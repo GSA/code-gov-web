@@ -12,6 +12,7 @@ body {
 .vertical-row {
 height: 9em;
 width: 3px;
+//should change this to variable
 background: white;
 top: 12em;
 bottom: 0;
@@ -60,7 +61,7 @@ left: 50%;
 
 /* font awesome graphic for the comment */
 .fa.fa-comments {
-  color: $brand-teal;
+  color: $brand-teal-dark;
   font-size: 2em;
 }
 
