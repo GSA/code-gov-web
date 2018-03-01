@@ -12,8 +12,7 @@ import { Observable } from 'rxjs/Observable';
 import { AutocompleteComponent } from '../autocomplete';
 import { AutocompleteResultComponent } from '../autocomplete-result';
 import { ReposSearchComponent } from './';
-import { SearchService } from '../../services/search';
-import { TermService } from '../../services/term';
+import { ClientService } from '../../services/client';
 
 class MockRouter {
   url: string;
@@ -32,24 +31,6 @@ class MockRouter {
     return true;
   }
 }
-
-class MockSearchService {
-  result = {total: 3, repos: [{name: 'GSA'}, {name: 'GSA 2'}, {name: 'GSA 3'}]};
-
-  getResult() {
-    return this.result['repos'];
-  }
-
-  search(arg, arg2, arg3) {
-    return Observable.of(this.result);
-  }
-
-  setSearchResults(result) {
-    return true;
-  }
-}
-
-class MockTermService {}
 
 describe('ReposSearchComponent', () => {
 
@@ -71,9 +52,8 @@ describe('ReposSearchComponent', () => {
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' },
-        { provide: SearchService, useClass: MockSearchService },
-        { provide: Router, useClass: MockRouter },
-        { provide: TermService, useClass: MockTermService }
+        ClientService,
+        { provide: Router, useClass: MockRouter }
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     });

@@ -78,8 +78,20 @@ intended destination.  If you are deploying from a fork, you will have to set
 the `GIT_REMOTE_NAME` environmental variable,
 like `GIT_REMOTE_NAME="upstream" npm run federalist-deploy`.
 
+## Specifying API URL
+The app uses the production API by default.  To use the staging API,
+set an API_URL environmental variable for the npm process. Here's two examples:
+```
+API_URL=stag npm run start
+API_URL=staging npm run start
+API_URL='https://code-api-staging.app.cloud.gov/api/' npm run start
+API_URL=staging GIT_REMOTE_NAME=upstream npm run federalist-deploy:dev
+```
+
+
+
 ## Deployment Problems
-When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache` 
+When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache`
 
 ## Generating License Data
 To update the `dependency_licenses.json` file, run `npm run licenses`.

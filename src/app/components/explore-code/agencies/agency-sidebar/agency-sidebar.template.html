@@ -4,8 +4,8 @@
     <sidebar-title>Agencies</sidebar-title>
     <sidebar-content>
       <li *ngFor="let agency of agencies">
-        <a toggle-menu routerLink="{{agency.id}}" routerLinkActive="usa-current">
-          <img [src]="getIcon(agency)" alt="{{agency.name}} seal"/>
+        <a toggle-menu routerLink="{{agency.acronym}}" routerLinkActive="usa-current">
+          <img [src]="getIcon(agency)" alt=""/>
           <span>
             {{agency.name}}
           </span>

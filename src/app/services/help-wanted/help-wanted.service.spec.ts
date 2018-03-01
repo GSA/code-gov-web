@@ -1,7 +1,7 @@
 import { async, getTestBed, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 import { HelpWantedService } from './help-wanted.service';
-import { AgencyService } from '../agency';
+import { Agency, ClientService } from '../client';
 
 describe('HelpWantedService', () => {
 
@@ -11,7 +11,7 @@ describe('HelpWantedService', () => {
 
     TestBed.configureTestingModule({
       providers: [
-        AgencyService,
+        ClientService,
         HelpWantedService
       ],
       imports: [HttpModule]

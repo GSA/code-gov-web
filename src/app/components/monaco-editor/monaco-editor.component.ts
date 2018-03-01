@@ -68,7 +68,12 @@ export class MonacoEditorComponent {
   }
 
   ngOnDestroy() {
-    this.editor.dispose();
-    this.model.dispose();
+    if (this.editor) {
+      this.editor.dispose();
+    }
+
+    if (this.model) {
+      this.model.dispose();
+    }
   }
 }

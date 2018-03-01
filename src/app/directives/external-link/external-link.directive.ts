@@ -1,6 +1,6 @@
 import { Angulartics2 } from 'angulartics2';
 import { Directive, ElementRef, Output, Renderer } from '@angular/core';
-import * as URL from 'url-parse';
+declare var URL;
 
 import { ModalService } from '../../services/modal';
 

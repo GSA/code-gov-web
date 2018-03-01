@@ -10,9 +10,7 @@ import { RouterModule } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { SearchInputComponent } from './search-input.component';
-import { LunrSearchService, SearchService } from '../../services/search';
-import { AgenciesIndexService, ReleasesIndexService } from '../../services/indexes';
-import { LunrTermService, TermService } from '../../services/term';
+import { ClientService } from '../../services/client';
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 
 describe('SearchInputComponent', () => {
@@ -32,10 +30,7 @@ describe('SearchInputComponent', () => {
         ],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' },
-          { provide: SearchService, useClass: LunrSearchService },
-          { provide: TermService, useClass: LunrTermService },
-          AgenciesIndexService,
-          ReleasesIndexService,
+          ClientService
         ],
         schemas: [
           CUSTOM_ELEMENTS_SCHEMA,

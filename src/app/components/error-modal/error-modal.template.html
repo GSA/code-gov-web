@@ -1,0 +1,31 @@
+<div *ngIf="visible" class="overlay" (click)="close()">
+  <div class="modal-container" tabindex="-1">
+    <div class="close">
+      <button (click)="close()" aria-label="close">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-header">
+      <h1>An Error Has Happened</h1>
+    </div>
+    <div class="modal-content">
+      <p>
+        Please let us know by creating an issue on GitHub
+
+        <a
+          *ngIf="url"
+          angulartics2On="click"
+          angularticsEvent="Link Click"
+          angularticsCategory="Modal"
+          [angularticsProperties]="{ label: url }"
+          href="{{ url }}"
+          target="_blank"
+          rel="noopener"
+        >here</a>
+
+        or emailing us at code@gsa.gov.
+      </p>
+      <p>Thank you.</p>
+    </div>
+  </div>
+</div>
