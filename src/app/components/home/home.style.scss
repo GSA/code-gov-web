@@ -46,7 +46,22 @@ left: 50%;
   p {
     margin: 3rem auto 2rem;
     max-width: 75rem;
+    font-size: 1.2em;
   }
+  a {
+    color: $brand-teal-dark;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+    }
+  }
+}
+
+/* font awesome graphic for the comment */
+.fa.fa-comments {
+  color: $brand-teal;
+  font-size: 2em;
 }
 
 //aka Our Mission section of homepage
