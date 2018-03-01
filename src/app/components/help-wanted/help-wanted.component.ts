@@ -83,15 +83,21 @@ export class HelpWantedComponent {
   }
 
   buildFormControl(property, values) {
-    try {
-      this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
-        obj[key] = this.formBuilder.control(false);
-        return obj;
-      }, {})));
-    } catch (error) {
-      console.error('property:', property);
-      console.error('values:', values);
-      console.error('[error in buildFormControl]:', error);
+
+    // making sure filter out undefined values
+    values = values.filter(value => value !== undefined && value !== null);
+
+    if (values.length > 0) {
+      try {
+        this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
+          obj[key] = this.formBuilder.control(false);
+          return obj;
+        }, {})));
+      } catch (error) {
+        console.error('property:', property);
+        console.error('values:', values);
+        console.error('[error in buildFormControl]:', error);
+      }
     }
   }
 
@@ -119,10 +125,14 @@ export class HelpWantedComponent {
       let value = item[key];
       if (Array.isArray(value)) {
         value.forEach(element => {
-          taskValues.add(element);
+          if (element !== undefined && element !== null) {
+            taskValues.add(element);
+          }
         });
       } else {
-        taskValues.add(value);
+        if (value !== undefined && value !== null) {
+          taskValues.add(value);
+        }
       }
     });
     return Array.from(taskValues);
@@ -134,7 +144,7 @@ export class HelpWantedComponent {
     for (let key in obj) {
       if (obj.hasOwnProperty(key)) {
         let value = obj[key];
-        if (value !== undefined && value !== null) {
+        if (value !== undefined && value !== null  && value !== false) {
           keys.push(key);
         }
       }
@@ -188,18 +198,16 @@ export class HelpWantedComponent {
 
   filterItems(items) {
 
-    let filtered = this.items;
-
     this.options.forEach(option => {
       // we ignore show bc we use filterByTab for that
       if (option.key !== 'show') {
-        filtered = filtered.filter(this.filterBy(option.key));
+        items = items.filter(this.filterBy(option.key));
       }
     });
 
-    filtered = filtered.filter(this.filterByTab.bind(this));
+    items = items.filter(this.filterByTab.bind(this));
 
-    return filtered;
+    return items;
   }
 
   setActiveTab(tab, $event) {
