@@ -5,11 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
-const compact = require('lodash/compact');
-const flatten = require('lodash/flatten');
-const uniq = require('lodash/uniq');
-
-import { SearchService } from '../../services/search';
+import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 
 /**
@@ -29,7 +25,6 @@ export class SearchResultsComponent {
   private routeSubscription: Subscription;
   private results = [];
   private filteredResults = [];
-  private searchResultsSubscription: Subscription;
   private total: number;
   private isLoading = true;
   private filterForm: FormGroup;
@@ -43,12 +38,12 @@ export class SearchResultsComponent {
    * @constructor
    * @param {StateService} stateService - A service for managing the state of the site
    * @param {ActivatedRoute} activatedRoute - The currently active route
-   * @param {SearchService} searchService - A service for searching repositories
+   * @param {ClientService} clientService - A service for searching repositories
    */
   constructor(
     public stateService: StateService,
     private activatedRoute: ActivatedRoute,
-    private searchService: SearchService,
+    private clientService: ClientService,
     private formBuilder: FormBuilder,
   ) {
     this.filterForm = formBuilder.group({
@@ -85,19 +80,15 @@ export class SearchResultsComponent {
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         this.queryValue = response.q;
-        this.searchService.search(this.queryValue);
+        this.clientService.search(this.queryValue, 100).subscribe(data => {
+          this.results = data.repos;
+          this.total = data.total;
+          this.buildFormControl('languages', this.getLanguages());
+          this.buildFormControl('licenses', this.getLicenses());
+          this.isLoading = false;
+        });
       }
     );
-
-    this.searchResultsSubscription = this.searchService.searchResultsReturned$.subscribe(results => {
-      if (results !== null) {
-        this.results = results;
-        this.total = this.searchService.total;
-        this.buildFormControl('languages', this.getLanguages());
-        this.buildFormControl('licenses', this.getLicenses());
-        this.isLoading = false;
-      }
-    });
   }
 
   /**
@@ -105,7 +96,6 @@ export class SearchResultsComponent {
    */
   ngOnDestroy() {
     this.routeSubscription.unsubscribe();
-    this.searchResultsSubscription.unsubscribe();
   }
 
   buildFormControl(property, values) {
@@ -189,12 +179,28 @@ export class SearchResultsComponent {
   }
 
   getLanguages() {
-    return uniq(compact(flatten(this.results.map(result => result.languages))));
+    let languages = new Set();
+    this.results.forEach(result => {
+      if (Array.isArray(result.languages)) {
+        result.languages.forEach((language: string) => {
+          languages.add(language);
+        });
+      }
+    });
+    return Array.from(languages);
   }
 
   getLicenses() {
-    return uniq(compact(flatten(this.results.map(
-      result => result.permissions && result.permissions.licenses ?
-        result.permissions.licenses.map(license => license.name) : []))));
+    let licenses = new Set();
+    this.results.forEach(result => {
+      if (result.permissions && result.permissions.licenses) {
+        result.permissions.licenses.forEach(license => {
+          if (license.name) {
+            licenses.add(license.name);
+          }
+        });
+      }
+    });
+    return Array.from(licenses);
   }
 }

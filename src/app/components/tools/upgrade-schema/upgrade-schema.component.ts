@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { MonacoEditorService } from '../../monaco-editor';
 import * as Clipboard from 'clipboard';
-const clone = require('lodash/clone');
 
 /**
  * Class representing the upgrade schema tool.
@@ -291,7 +290,7 @@ export class UpgradeSchemaComponent {
   upgradeContent(e) {
     try {
       const parsedCodeJson = JSON.parse(this.beforeEditor.getValue());
-      const transformedJson = this.transformCodeJson(clone(parsedCodeJson));
+      const transformedJson = this.transformCodeJson(parsedCodeJson);
       const transformedString = JSON.stringify(transformedJson, null, '\t');
 
       this.afterEditor.setValue(transformedString);

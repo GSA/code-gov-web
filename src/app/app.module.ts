@@ -31,41 +31,30 @@ import { TruncatePipe } from './pipes/truncate';
 import { AppComponent } from './utils/app-components';
 import { IsDefinedPipe } from './pipes/is-defined';
 import { APP_COMPONENTS } from './utils/app-components';
-import { AgencyService, AGENCIES } from './services/agency';
-import { AgencyApiService } from './services/agency-api';
+import { ClientService } from './services/client';
 import { HelpWantedService } from './services/help-wanted';
-import { AgenciesIndexService, ReleasesIndexService } from './services/indexes';
 import { MobileService } from './services/mobile';
+import { ErrorModalService } from './services/error-modal';
 import { ModalService } from './services/modal';
-import { RepoService } from './services/repo';
-import { ReposService } from './services/repos';
-import { ElasticsearchSearchService, LunrSearchService, SearchService } from './services/search';
 import { SeoService } from './services/seo';
 import { StateService } from './services/state';
 import { StatusService } from './services/status';
 import { MonacoEditorService } from './components/monaco-editor';
-import { ElasticsearchTermService, LunrTermService, TermService } from './services/term';
 import { UrlSerializer } from '@angular/router';
 import { CustomUrlSerializer } from './serializers/custom-url-serializer';
 
 // Application wide providers
 const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
-  AgenciesIndexService,
-  AgencyService,
-  AgencyApiService,
+  ClientService,
   HelpWantedService,
   MobileService,
+  ErrorModalService,
   ModalService,
   MonacoEditorService,
-  ReleasesIndexService,
-  RepoService,
-  ReposService,
-  { provide: SearchService, useClass: LunrSearchService },
   SeoService,
   StateService,
   StatusService,
-  { provide: TermService, useClass: LunrTermService },
   { provide: UrlSerializer, useClass: CustomUrlSerializer }
 ];
 

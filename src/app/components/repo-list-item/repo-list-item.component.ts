@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { Subject }    from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 import { RepoComponent } from '../repo';
 import { TruncatePipe } from '../../../pipes/truncate';
-import { Agency, AgencyService } from '../../services/agency';
+import { Agency, ClientService } from '../../services/client';
 
 /**
  * Class representing a component for repositories in a list view.
@@ -24,25 +24,23 @@ export class RepoListItemComponent {
    *
    * @constructor
    */
-  constructor(private agencyService: AgencyService) {}
+  constructor(private clientService: ClientService) {}
 
-  ngOnInit() {
-    this.agency = this.agencyService.getAgency(this.repo.agency);
-  }
-
-  getAgencyIcon() {
-    return `assets/img/logos/agencies/${this.agency.id}-50x50.png`;
+  getAgencyIcon(): string {
+    if (this.repo && this.repo.agency && this.repo.agency.acronym) {
+      return `assets/img/logos/agencies/${this.repo.agency.acronym}-50x50.png`;
+    }
   }
 
   /**
    * Returns whether the provided repository is from GitHub.
    */
   isGitHubRepo() {
-    if (!this.repo.repositoryURL && typeof this.repo.repositoryURL !== 'string') {
+    if (!this.repo.repository && typeof this.repo.repository !== 'string') {
       return false;
     } else {
       const isGitHubURL = /github\.com/;
-
+      console.log("this.repo.repositoryURL:", this.repo.repositoryURL);
       return isGitHubURL.test(this.repo.repositoryURL);
     }
   }

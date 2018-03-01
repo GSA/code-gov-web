@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-const map = require('lodash/map');
 
 @Injectable()
 
 export class MonacoEditorService {
-  private schemas = {};
+  private schemas: any = {};
 
   public addSchema(uri, fileMatch, schema) {
     this.schemas[fileMatch] = {
@@ -15,10 +14,12 @@ export class MonacoEditorService {
   }
 
   public getSchemas() {
-    return map(this.schemas, ({ uri, fileMatch, schema }) => ({
-      uri,
-      fileMatch,
-      schema
-    }));
+    return Object.values(this.schemas).map(schema => {
+      return {
+        uri: schema.uri,
+        fileMatch: schema.fileMatch,
+        schema: schema.schema
+      };
+    });
   }
 }
