@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { flattenDeep, get, keys, map, pickBy, reduce, sortBy, uniq, zipObject } from 'lodash';
 import { HelpWantedService } from '../../services/help-wanted';
 import { Option } from './help-wanted.option';
 
@@ -84,15 +83,21 @@ export class HelpWantedComponent {
   }
 
   buildFormControl(property, values) {
-    try {
-      this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
-        obj[key] = this.formBuilder.control(false);
-        return obj;
-      }, {})));
-    } catch (error) {
-      console.error('property:', property);
-      console.error('values:', values);
-      console.error('[error in buildFormControl]:', error);
+
+    // making sure filter out undefined values
+    values = values.filter(value => value !== undefined && value !== null);
+
+    if (values.length > 0) {
+      try {
+        this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
+          obj[key] = this.formBuilder.control(false);
+          return obj;
+        }, {})));
+      } catch (error) {
+        console.error('property:', property);
+        console.error('values:', values);
+        console.error('[error in buildFormControl]:', error);
+      }
     }
   }
 
@@ -115,11 +120,36 @@ export class HelpWantedComponent {
   }
 
   getTaskValues(key) {
-    return sortBy(uniq(flattenDeep(map(this.items, item => get(item, key)))).filter(Boolean));
+    let taskValues = new Set();
+    this.items.forEach(item => {
+      let value = item[key];
+      if (Array.isArray(value)) {
+        value.forEach(element => {
+          if (element !== undefined && element !== null) {
+            taskValues.add(element);
+          }
+        });
+      } else {
+        if (value !== undefined && value !== null) {
+          taskValues.add(value);
+        }
+      }
+    });
+    return Array.from(taskValues);
   }
 
   getFilteredValues(property) {
-    return keys(pickBy(this.filterForm.value[property]));
+    let keys = [];
+    let obj = this.filterForm.value[property];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        let value = obj[key];
+        if (value !== undefined && value !== null  && value !== false) {
+          keys.push(key);
+        }
+      }
+    }
+    return keys;
   }
 
   filterBy(key) {
@@ -168,18 +198,16 @@ export class HelpWantedComponent {
 
   filterItems(items) {
 
-    let filtered = this.items;
-
     this.options.forEach(option => {
       // we ignore show bc we use filterByTab for that
       if (option.key !== 'show') {
-        filtered = filtered.filter(this.filterBy(option.key));
+        items = items.filter(this.filterBy(option.key));
       }
     });
 
-    filtered = filtered.filter(this.filterByTab.bind(this));
+    items = items.filter(this.filterByTab.bind(this));
 
-    return filtered;
+    return items;
   }
 
   setActiveTab(tab, $event) {

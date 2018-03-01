@@ -32,6 +32,10 @@
     {
       "name": "Matt Bailey",
       "url": "https://github.com/mattbailey0"
+    },
+    {
+      "name": "Daniel J. Dufour",
+      "url": "https://github.com/danieljdufour"
     }
   ],
   "homepage": "https://github.com/GSA/code-gov-web",
@@ -64,11 +68,11 @@
     "build:prod": "webpack --config config/webpack.prod.js  --progress --profile --bail",
     "federalist-deploy": "npm run federalist-deploy:dev",
     "prefederalist-deploy:dev": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:dev": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
+    "federalist-deploy:dev": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-dev",
     "prefederalist-deploy:stag": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:stag": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
+    "federalist-deploy:stag": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-stag",
     "prefederalist-deploy:prod": "npm run clean:dist && mkdir -p dist/",
-    "federalist-deploy:prod": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
+    "federalist-deploy:prod": "npm run clear-gh-pages-cache && webpack --config config/webpack.federalist-deploy.js --progress --profile --env.federalist-prod",
     "federalist-deploy:dashboard": "webpack --config config/webpack.federalist-deploy.js --progress --profile --env.dashboard-preview",
     "server": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
@@ -88,7 +92,8 @@
     "postversion": "git push && git push --tags",
     "postinstall": "typings install",
     "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
-    "list-git-conflicts": "git diff --name-only --diff-filter=U"
+    "list-git-conflicts": "git diff --name-only --diff-filter=U",
+    "clear-gh-pages-cache": "rm -fr node_modules/gh-pages/.cache"
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
@@ -104,6 +109,7 @@
     "@angularclass/conventions-loader": "^1.0.2",
     "@angularclass/hmr": "~1.2.0",
     "@angularclass/hmr-loader": "~3.0.2",
+    "@code.gov/api-client": "^0.1.1",
     "@ngx-meta/core": "^0.4.0-rc.2",
     "@types/jasminewd2": "^2.0.2",
     "angulartics2": "1.4.3",
@@ -116,16 +122,16 @@
     "devicons": "^1.8.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "font-awesome": "^4.7.0",
+    "get-installed-path": "^4.0.8",
     "hamburgers": "^0.9.1",
     "http-server": "^0.10.0",
     "ie-shim": "^0.1.0",
     "karma-phantomjs-launcher": "^1.0.1",
-    "lunr": "2.1.3",
     "monaco-editor": "^0.9.0",
     "ng2-page-scroll": "^4.0.0-beta.11",
     "ngx-infinite-scroll": "^0.5.1",
     "ngx-pagination": "^3.0.3",
-    "node-sass": "4.5.2",
+    "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "pluralize": "^3.0.0",
     "postcss-import": "^11.0.0",
@@ -134,7 +140,6 @@
     "sass-loader": "^6.0.6",
     "typed.js": "^1.1.1",
     "typings": "^2.1.1",
-    "url-parse": "^1.2.0",
     "uswds": "^1.4.4",
     "webpack-create-file-plugin": "^0.1.0",
     "zone.js": "^0.8.19"

@@ -15,10 +15,8 @@ import { HomeComponent } from './';
 import { ModalComponent } from '../modal';
 import { ModalService } from '../../services/modal';
 import { ReposSearchComponent } from '../repos-search';
-import { SearchService } from '../../services/search';
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
-import { TermService } from '../../services/term';
 import { MetaModule } from '@ngx-meta/core';
 
 describe('HomeComponent', () => {
@@ -45,10 +43,8 @@ describe('HomeComponent', () => {
         {provide: APP_BASE_HREF, useValue: '/'},
         { provide: Location, useClass: SpyLocation },
         ModalService,
-        SearchService,
         SeoService,
-        StateService,
-        TermService
+        StateService
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     });

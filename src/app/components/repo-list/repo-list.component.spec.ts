@@ -13,31 +13,10 @@ import { LanguageIconPipe } from '../../pipes/language-icon';
 import { PluralizePipe } from '../../pipes/pluralize';
 import { RepoListItemComponent } from '../repo-list-item';
 import { RepoListComponent } from './';
-import { SearchService } from '../../services/search';
 import { TruncatePipe } from '../../pipes/truncate';
 
-class MockRouter {
-  url: string;
-  constructor() {
-    this.url = '/explore-code/';
-  }
+import { ClientService } from '../../services/client';
 
-  navigateByUrl(arg) {
-    return true;
-  }
-}
-
-class MockSearchService {
-  result = {total: 3, repos: [{name: 'GSA'}, {name: 'GSA 2'}, {name: 'GSA 3'}]};
-
-  search(arg) {
-    return Observable.of(this.result);
-  }
-
-  nextPage() {
-
-  }
-}
 
 describe('RepoListComponent', () => {
 
@@ -57,7 +36,7 @@ describe('RepoListComponent', () => {
         RouterTestingModule
       ],
       providers: [
-        { provide: SearchService, useClass: MockSearchService }
+        ClientService
       ]
     });
 
@@ -65,14 +44,6 @@ describe('RepoListComponent', () => {
     this.repoListComponent = this.fixture.componentInstance;
   });
 
-  describe('onScroll', () => {
-    xit('calls the Search Service nextPage function',
-      inject([SearchService], searchService => {
-        spyOn(searchService, 'nextPage').and.callThrough();
+  // NEED TO WRITE NEW TESTS HERE
 
-        this.repoListComponent.onScroll();
-        expect(searchService.nextPage).toHaveBeenCalled();
-      }
-    ));
-  });
 });

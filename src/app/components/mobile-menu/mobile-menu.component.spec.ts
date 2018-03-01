@@ -5,7 +5,8 @@ import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 
 import { MobileMenuComponent } from './mobile-menu.component';
 
-import { AgencyService } from '../../services/agency';
+import { HttpModule } from '@angular/http';
+import { ClientService } from '../../services/client';
 import { MobileService } from '../../services/mobile';
 
 describe('MobileMenuComponent', () => {
@@ -18,11 +19,12 @@ describe('MobileMenuComponent', () => {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [
+          HttpModule,
           RouterModule.forRoot([]),
         ],
         declarations: [ MobileMenuComponent ],
         providers: [
-          AgencyService,
+          ClientService,
           MobileService,
           { provide: APP_BASE_HREF, useValue: '/' },
         ],
@@ -71,11 +73,12 @@ describe('MobileMenuComponent', () => {
       TestBed.resetTestingModule();
       TestBed.configureTestingModule({
         imports: [
+          HttpModule,
           RouterModule.forRoot([]),
         ],
         declarations: [ MobileMenuComponent ],
         providers: [
-          AgencyService,
+          ClientService,
           MobileService,
           { provide: APP_BASE_HREF, useValue: '/' },
         ],

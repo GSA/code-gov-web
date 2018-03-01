@@ -14,16 +14,20 @@ export class AutocompleteResultComponent {
   resource: any = {};
 
   ngOnInit() {
-    if (this.result.agency) { // it's a repo with an agency attribute
-      this.resource['iconId'] = 'assets/img/logos/agencies/' + this.result.agency  + '-50x50.png';
-      this.resource['imageIcon'] = true;
-      this.resource['url'] = `/explore-code/agencies/${this.result.agency}/repos/${this.result.name}`;
-      this.resource['name'] = this.result.name;
-    } else { // it's an agency
-      this.resource['iconId'] = 'assets/img/logos/agencies/' + this.result.id  + '-50x50.png';
-      this.resource['imageIcon'] = true;
-      this.resource['url'] = '/explore-code/agencies/' + this.result.id;
-      this.resource['name'] = this.result.name;
+
+    if (this.result) {
+      if (this.result.term_type === 'agency.acronym') {
+        let acronym = this.result.term.toUpperCase();
+        this.resource['iconId'] = `assets/img/logos/agencies/${acronym}-50x50.png`;
+        this.resource['imageIcon'] = true;
+        this.resource['url'] = `/explore-code/agencies/${acronym}`;
+        this.resource['name'] = acronym;
+      } else {
+        this.resource['iconId'] = 'fa-search';
+        this.resource['imageIcon'] = false;
+        this.resource['url'] = `/search?q=${this.result.term}`;
+        this.resource['name'] = this.result.term;
+      }
     }
   }
 

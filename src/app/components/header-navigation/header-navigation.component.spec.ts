@@ -1,4 +1,5 @@
 import { APP_BASE_HREF } from '@angular/common';
+import { HttpModule } from '@angular/http';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
@@ -18,6 +19,7 @@ describe('HeaderNavigationComponent', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
           imports: [
+            HttpModule,
             RouterModule.forRoot([]),
           ],
           declarations: [

@@ -29,11 +29,30 @@ const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 
 module.exports = function (options) {
-  isProd = ['production', 'staging'].indexOf(options.env) > -1;
+
+  let isProd = ['production', 'staging'].indexOf(options.env) > -1;
+
+  /*
+    Basically, if set API_URL environmental variable to stag,
+    staging, or the actual url, use staging.  Otherwise, use
+    production url.
+  */
+  let API_URL = process.env.API_URL;
+  if (API_URL) {
+    API_URL = API_URL.trim().toLowerCase();
+    if (API_URL.startsWith("http") === false) {
+      if (API_URL.startsWith("stag")) {
+        API_URL = 'https://code-api-staging.app.cloud.gov/api/';
+      } else {
+        API_URL = 'https://code-api.app.cloud.gov/api/';
+      }
+    }
+  } else {
+    API_URL = 'https://code-api.app.cloud.gov/api/';
+  }
 
   const METADATA = {
-
-    API_URL: isProd ? 'https://code-api.app.cloud.gov/api/0.1/' : 'http://localhost:3001/api/0.1/',
+    API_URL,
     title: 'Code.gov',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer(),

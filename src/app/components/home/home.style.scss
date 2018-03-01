@@ -181,7 +181,7 @@ left: 50%;
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
   background-attachment: scroll;
-  background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
+  background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -265,7 +265,7 @@ left: 50%;
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/typing.png');
+      background: url('./assets/img/featured-projects/typing.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -301,7 +301,7 @@ left: 50%;
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/construction_worker.png');
+      background: url('./assets/img/featured-projects/construction_worker.png');
       background-position: 103% 100%;
       background-repeat: no-repeat;
       background-size: 34rem;
@@ -344,8 +344,8 @@ left: 50%;
   color: $color-white;
 
   @media screen and (min-width: $medium-screen) {
-    background: url('../../../assets/img/featured-projects/grass.png'), #3f7fab;
-    background: url('../../../assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
+    background: url('./assets/img/featured-projects/grass.png'), #3f7fab;
+    background: url('./assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: cover, contain;
@@ -372,7 +372,7 @@ left: 50%;
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('../../../assets/img/featured-projects/house_for_sale.png');
+      background: url('./assets/img/featured-projects/house_for_sale.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 50%;
@@ -438,7 +438,7 @@ left: 50%;
 //Press section of homepage
 .press {
   background-attachment: scroll;
-  background-image: url('../../../assets/img/american_flag_1920x1280_gradient.jpg');
+  background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;

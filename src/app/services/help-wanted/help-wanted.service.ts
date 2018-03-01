@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
-import { ApiService } from '../api';
-import { AgencyService } from '../agency';
+import { Agency, ClientService } from '../client';
 
 
 interface Task {
-  agency: any;
+  agency: Agency;
   agency_id: string;
   image: string;
 }
@@ -18,18 +16,19 @@ interface HelpWantedResponse {
 }
 
 @Injectable()
-export class HelpWantedService extends ApiService {
+export class HelpWantedService {
   public tasks: any;
 
-  constructor(private http: Http, private agencyService: AgencyService) {
-    super(http);
-  }
+  constructor(private http: Http, private clientService: ClientService) {}
 
   cleanTask(task: Task): Task {
 
+    /*
+      - Need to figure out how to do this asynchronously
     if (!task.agency) {
-      task.agency = this.agencyService.getAgency(task.agency_id);
+      task.agency = this.clientService.getAgencyByAcronym(task.agency_id);
     }
+    */
 
     if (!task.image && task.agency_id) {
         let partialFilename: string;

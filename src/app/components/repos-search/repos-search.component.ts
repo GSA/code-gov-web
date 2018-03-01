@@ -37,8 +37,6 @@ export class ReposSearchComponent {
    * Constructs a ReposSearchComponent.
    *
    * @constructor
-   * @param {SearchService} searchService - A service for searching repositories
-   * @param {TermService} termService - A service for finding matching terms
    * @param {Router} router - The application's URL router
    */
   constructor(
