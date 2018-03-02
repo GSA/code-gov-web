@@ -10,35 +10,46 @@ body {
 
 //div between Search and Help Wanted
 .vertical-row {
-height: 9em;
-width: 3px;
-//should change this to variable
-background: white;
-top: 12em;
-bottom: 0;
-position: absolute;
-left: 50%;
-}
-
-//Modify search box size
-.input-home {
-  width: 95%;
+  @media screen and (min-width: $medium-screen) {
+    height: 9em;
+    width: 3px;
+    //should change this to variable
+    background: white;
+    top: 12em;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+  }
 }
 
 //Help Wanted styles between Banner and Our Mission (About) sections on homepage
 .help-wanted {
-  h2 {
-    margin-top: -1rem;
-    margin-bottom: -2rem;
-  }
-  p {
-    font-size: 1.2em;
-    line-height: 1em;
-    max-width: 75rem;
-    margin: 2rem auto 3rem;
-  }
+    h2 {
+      margin-top: -1rem;
+      margin-bottom: -2rem;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1em;
+      max-width: 75rem;
+      margin: 2rem auto 3rem;
+    }
+    .buttons {
+      margin-top: -3rem;
+    }
+    @media screen and (max-width: 599px) {
+      display: none;
+    }
+}
+
+.help-wanted-mobile {
   .buttons {
-    margin-top: -3rem;
+    @media screen and (min-width: 600px) {
+      display: none;
+    }
+    @media screen and (min-width: 481px) {
+    //need to figure how to make button smaller when only one on small screen
+    }
   }
 }
 
