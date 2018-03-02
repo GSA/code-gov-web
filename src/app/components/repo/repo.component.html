@@ -1,0 +1,75 @@
+<div class="repo-general">
+
+    <div class="repo-banner">
+      <h1>{{repo.agency.acronym}}</h1>
+      <h2>{{repo.name}}</h2>
+      
+      <a *ngIf="getRepositoryUrl() | isdefined" href="{{ getRepositoryUrl() }}">
+          <button class="button button--transparent">Visit Repo</button>
+        </a>
+    </div>
+  
+
+
+<section *ngIf="repo" class="repo-container usa-grid">
+    <div class="repo-breadcrumb">
+        <ul class="usa-unstyled-list">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/">{{repo.agency.acronym}}</a></li>
+          <li>{{repo.name}}</li>
+        </ul>
+      </div>
+    <header>
+      <div class="repo-header-container">
+        <h3>About This Project<span *ngIf="repo.date | isdefined" class="updated">Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</span></h3>
+        <button class="repo-tag">Tag 1</button> <button class="repo-tag">Tag 2</button><button class="repo-tag">Tag 3</button>
+        <ul class="usa-unstyled-list repo-features">
+            <li>
+              <span *ngIf="repo.permissions.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
+              <span *ngIf="repo.permissions.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>
+            </li>
+            <li>
+                <span *ngIf="repo.permissions.licenses != null"><i class="icon fa fa-certificate"></i>{{repo.permissions.licenses}}</span>
+            </li>
+            <li>
+                <span  *ngIf="repo.contact.laborHours > 0"><i class="icon fa fa-hourglass-end"></i>{{repo.contact.laborHours}} hours</span>
+              </li>
+            <li>
+              <i class="icon fa fa-code"></i>
+              <span *ngFor="let language of repo.languages; let last=last" class="language"
+                [ngClass]="{last: last}">
+                {{ language }}<span class="comma">,</span>
+                </span>
+            </li>
+            <li>
+                <i class="icon fa fa-user"></i>
+                <span>23 people use this</span>
+            </li>
+            <li>
+              <i class="icon fa fa-envelope-o"></i>
+              <span *ngIf="repo.contact.email != null">{{repo.contact.email}}</span>
+            </li>
+
+          </ul>
+        <p>{{repo.description}}</p>
+      </div>
+
+      <div *ngIf="repo.permissions.usageType === 'governmentWideReuse'" class="repo-actions">
+        <ul class="usa-unstyled-list">
+          <li *ngIf="repo.homepageURL | isdefined">
+            <a external-link class="usa-button button button--secondary" href="{{repo.homepageURL}}">
+              Homepage
+            </a>
+          </li>
+          <li *ngIf="repo.contact.email | isdefined">
+            <a external-link class="usa-button button button--secondary" href="mailto:{{ repo.contact.email }}">
+              Contact Agency
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+  
+  </section>
+  <modal></modal>
+  

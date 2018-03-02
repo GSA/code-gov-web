@@ -9,6 +9,7 @@ import {
    SchemaValidatorComponent,
    SearchResultsComponent,
    SharedLayoutComponent,
+   RepoComponent,
  } from './utils/app-components';
 import { EXPLORE_CODE_ROUTES } from './routes/explore-code';
 import { POLICY_GUIDE_ROUTES } from './routes/policy-guide';
@@ -26,7 +27,12 @@ export const ROUTES: Routes = [
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'roadmap', component: RoadmapComponent },
       { path: 'help-wanted', component: HelpWantedComponent },
+      { path: 'repo', component: RepoComponent},
       { path: '**', component: FourOhFourComponent },
+      {
+        path: 'agencies/:agency_id/repos/:id',
+        component: RepoComponent,
+      },
     ]
   },
 ];
