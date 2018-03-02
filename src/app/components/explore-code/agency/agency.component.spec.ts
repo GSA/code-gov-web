@@ -1,7 +1,12 @@
+import { Location } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Component } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { inject, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+
+import { Angulartics2, Angulartics2Module } from 'angulartics2';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
@@ -12,6 +17,7 @@ import { ErrorModalService } from '../../../services/error-modal';
 import { ErrorModalComponent } from './../../error-modal/error-modal.component';
 import { LanguageIconPipe } from '../../../pipes/language-icon';
 import { PluralizePipe } from '../../../pipes/pluralize';
+import { ClientService } from '../../../services/client';
 import { SeoService } from '../../../services/seo';
 import { TruncatePipe } from '../../../pipes/truncate';
 import { MetaModule } from '@ngx-meta/core';
@@ -35,15 +41,20 @@ describe('AgencyComponent', () => {
         TruncatePipe
       ],
       imports: [
+        RouterTestingModule,
+        Angulartics2Module.forRoot(),
         HttpModule,
         RouterModule,
         MetaModule.forRoot(),
         InfiniteScrollModule,
       ],
       providers: [
+        Location,
+        Angulartics2,
         ErrorModalService,
         SeoService,
-        { provide: ActivatedRoute, useClass: MockActivatedRoute }
+        { provide: ActivatedRoute, useClass: MockActivatedRoute },
+        ClientService
       ]
     });
 
