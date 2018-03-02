@@ -4,6 +4,12 @@
 @import '../../../styles/base/variables';
 @import '~uswds/src/stylesheets/core/variables';
 
+.banner-container {
+  @media screen and (max-width: 480px) {
+    top: 27em;
+  }
+}
+
 body {
   background-color: $color-white;
 }
@@ -43,14 +49,21 @@ body {
 }
 
 .help-wanted-mobile {
-  .buttons {
-    @media screen and (min-width: 600px) {
-      display: none;
-    }
-    @media screen and (min-width: 481px) {
-    //need to figure how to make button smaller when only one on small screen
-    }
-  }
+ .buttons {
+   @media screen and (min-width: 600px) {
+     display: none;
+   }
+   @media screen and (max-width: 480px) {
+     margin-top: 5.5rem;
+     margin-bottom: 5.5rem;
+   }
+ }
+
+ button {
+   max-width: 170px;
+   width: 44%;
+
+ }
 }
 
 //Questions section
@@ -68,6 +81,33 @@ body {
       color: $brand-teal;
     }
   }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+}
+
+//Questions section for mobile
+.questions-mobile {
+  p {
+    margin: 1rem 1.5rem -1.5rem;
+    max-width: 75rem;
+    font-size: .9em;
+    text-align: left;
+  }
+  .second-line {
+    margin: 1.25rem -0.5rem 8.5rem 4.5rem;
+  }
+  a {
+    color: $brand-teal-dark;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+      }
+    }
+    @media screen and (min-width: 481px) {
+      display: none;
+    }
 }
 
 /* font awesome graphic for the comment */
