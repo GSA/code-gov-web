@@ -15,7 +15,6 @@ export * from '../../components/mobile-menu';
 export * from '../../components/error-modal';
 export * from '../../components/modal';
 export * from '../../components/privacy-policy';
-export * from '../../components/repo';
 export * from '../../components/repo-list';
 export * from '../../components/repo-list-item';
 export * from '../../components/repos-search';
@@ -30,6 +29,7 @@ export * from '../../components/explore-code/activity-list';
 export * from '../../components/explore-code/agencies';
 export * from '../../components/explore-code/agencies/agency-sidebar';
 export * from '../../components/explore-code/agency';
+export * from '../../components/explore-code/repo';
 export * from '../../components/explore-code/repos';
 
 export * from '../../components/policy-guide';
