@@ -21,52 +21,54 @@
       </div>
     <header>
       <div class="repo-header-container">
-        <h3>About This Project<span *ngIf="repo.date | isdefined" class="updated">Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</span></h3>
-        <button class="repo-tag">Tag 1</button> <button class="repo-tag">Tag 2</button><button class="repo-tag">Tag 3</button>
+        <h3>About This Project<span *ngIf="repo.date?.metadataLastUpdated" class="updated">Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</span></h3>
+        <span *ngFor="let tag of repo.tags">
+          <button *ngIf="tag" 
+            [routerLink]="['/search']" 
+            [queryParams]="{ q: tag }" 
+            class="repo-tag">
+            {{ tag }}
+          </button>
+        </span>
         <ul class="usa-unstyled-list repo-features">
             <li>
-              <span *ngIf="repo.permissions.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
-              <span *ngIf="repo.permissions.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>
+              <span *ngIf="repo.permissions?.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
+              <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>
             </li>
-            <li>
-                <span *ngIf="repo.permissions.licenses != null"><i class="icon fa fa-certificate"></i>{{repo.permissions.licenses}}</span>
-            </li>
-            <li>
-                <span  *ngIf="repo.contact.laborHours > 0"><i class="icon fa fa-hourglass-end"></i>{{repo.contact.laborHours}} hours</span>
+            <span *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
+              <li>
+                <i class="icon fa fa-certificate"></i>
+                <span>{{ repo.permissions?.licenses[0]?.name }}</span>
+              </li> 
+            </span>
+            <span *ngIf="repo.contact.laborHours > 0">
+              <li>
+                <i class="icon fa fa-hourglass-end"></i>
+                {{repo.contact.laborHours}} hours
               </li>
-            <li>
-              <i class="icon fa fa-code"></i>
-              <span *ngFor="let language of repo.languages; let last=last" class="language"
-                [ngClass]="{last: last}">
-                {{ language }}<span class="comma">,</span>
+            </span>
+            <span *ngIf="repo.languages">
+              <li>
+                <i class="icon fa fa-code"></i>
+                <span *ngFor="let language of repo.languages; let last=last" class="language"
+                  [ngClass]="{last: last}">
+                  {{ language }}<span class="comma">,</span>
                 </span>
-            </li>
+              </li>
+            </span>
             <li>
                 <i class="icon fa fa-user"></i>
                 <span>23 people use this</span>
             </li>
-            <li>
-              <i class="icon fa fa-envelope-o"></i>
-              <span *ngIf="repo.contact.email != null">{{repo.contact.email}}</span>
-            </li>
+            <span *ngIf="repo.contact?.email">
+              <li>
+                <i class="icon fa fa-envelope-o"></i>
+                {{repo.contact.email}}
+              </li>
+          </span>
 
           </ul>
         <p>{{repo.description}}</p>
-      </div>
-
-      <div *ngIf="repo.permissions.usageType === 'governmentWideReuse'" class="repo-actions">
-        <ul class="usa-unstyled-list">
-          <li *ngIf="repo.homepageURL | isdefined">
-            <a external-link class="usa-button button button--secondary" href="{{repo.homepageURL}}">
-              Homepage
-            </a>
-          </li>
-          <li *ngIf="repo.contact.email | isdefined">
-            <a external-link class="usa-button button button--secondary" href="mailto:{{ repo.contact.email }}">
-              Contact Agency
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
   

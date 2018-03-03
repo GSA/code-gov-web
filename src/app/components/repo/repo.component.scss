@@ -115,14 +115,11 @@
   width: 100%;
   background-color: lighten( $brand-blue , 60%);
   
-  li {
+  li,span.li {
     display: inline;
     color: $brand-blue-dark;
     padding: .7rem;
     margin-right: 0.75em;
-    &:last-child {
-      margin-right: 0;
-    }
     i {
       margin-right: 0.2em;
     }
