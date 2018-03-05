@@ -22,7 +22,9 @@
     <header>
       <div class="repo-header-container">
         <h2>{{ repo.name }}</h2>
-        <h3>About This Project<span *ngIf="repo.date?.metadataLastUpdated" class="updated">Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</span></h3>
+        <span *ngIf="repo.date?.metadataLastUpdated" class="updated">
+          <div>Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</div>
+        </span>
         <span *ngFor="let tag of repo.tags">
           <button *ngIf="tag" 
             [routerLink]="['/search']" 
@@ -61,7 +63,7 @@
                 <i class="icon fa fa-user"></i>
                 <span>23 people use this</span>
             </li> -->
-            <span *ngIf="repo.contact?.email">
+            <span *ngIf="repo.contact?.email | isdefined">
               <li>
                 <i class="icon fa fa-envelope-o"></i>
                 {{repo.contact.email}}

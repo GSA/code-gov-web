@@ -4,20 +4,10 @@
 
 
 .repo-general {
-  h1 {
-    // color: $color-white;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-  }
   h2 {
-    font-size: 4rem;
-    margin-top: 0;
+    font-size: 3.5rem;
+    margin: 0;
     color: #323a45;
-  }
-  h3,
-  p {
-    color: $color-gray-dark;
   }
   a {
     color: $brand-teal-dark;
@@ -26,6 +16,9 @@
     &:hover {
       color: $brand-teal;
     }
+  }
+  button {
+    margin-left: 0;
   }
 }
 
@@ -79,11 +72,6 @@
     padding: 2px 3px;
   }
 
-  h3 {
-    font-size: 2em;
-    color: $color-gray;
-  }
-
   header {
     @include clearfix;
     margin-bottom: 1em;
@@ -91,7 +79,6 @@
     position: relative;
   }
   .updated {
-    padding-left: 2rem;
     font-size: 1.5rem;
     color: $color-gray;
   }
@@ -112,6 +99,7 @@
 
 .repo-features {
   margin: 1rem 0;
+  padding: .5rem;
   width: 100%;
   background-color: lighten( $brand-blue , 60%);
   
@@ -135,14 +123,6 @@
   h3 {
     font-weight: normal;
     margin: 0;
-    span {
-      display: block;
-      padding: 0;
-      @media screen and (min-width: $medium-screen) {
-        display: inline;
-        padding-left: 10px;
-      }
-    }
 
     a {
       color: $color-gray;
