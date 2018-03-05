@@ -1,0 +1,154 @@
+@import '~bourbon/app/assets/stylesheets/addons/clearfix';
+@import '../../../../styles/base/variables';
+@import '~uswds/src/stylesheets/core/variables';
+
+
+.repo-general {
+  h2 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #323a45;
+  }
+  a {
+    color: $brand-teal-dark;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+    }
+  }
+  button {
+    margin-left: 0;
+  }
+}
+
+.repo-banner {
+  background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 2rem;
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.repo-breadcrumb {
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+  ul {
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '> ';
+      }
+
+      &:first-of-type {
+        &::before {
+          content: '';
+        }
+      }
+
+      a {
+        color: $color-black;
+      }
+
+      &:last-child {
+        font-weight: $font-bold;
+      }
+    }
+  }
+}
+
+
+.repo-container {
+
+  code {
+    background-color: $brand-blue-gray;
+    border-radius: 3px;
+    color: $color-gray-lightest;
+    font-size: 0.9em;
+    padding: 2px 3px;
+  }
+
+  header {
+    @include clearfix;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    position: relative;
+  }
+  .updated {
+    font-size: 1.5rem;
+    color: $color-gray;
+  }
+}
+
+.repo-tag {
+  border-radius: 3px;
+  background-color: $brand-blue;
+  padding: .25rem 1.25rem;
+}
+
+.repo-actions {
+
+  li {
+    display: inline-block;
+  }
+}
+
+.repo-features {
+  margin: 1rem 0;
+  padding: .5rem;
+  width: 100%;
+  background-color: lighten( $brand-blue , 60%);
+  
+  li,span.li {
+    display: inline;
+    color: $brand-blue-dark;
+    padding: .7rem;
+    margin-right: 0.75em;
+    i {
+      margin-right: 0.2em;
+    }
+  }
+}
+
+.repo-header-container {
+
+  h1 {
+    margin: 0 0 0.25em;
+  }
+
+  h3 {
+    font-weight: normal;
+    margin: 0;
+
+    a {
+      color: $color-gray;
+      font-size: 0.95em;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 3px solid $brand-teal-dark;
+        color: $color-gray-dark;
+      }
+    }
+  }
+
+  p {
+    font-size: 1em;
+    margin: 0;
+  }
+}
+
+.icon {
+  color: $brand-blue;
+}
+
+
+.language.last {
+  .comma {
+    display: none;
+  }
+}
