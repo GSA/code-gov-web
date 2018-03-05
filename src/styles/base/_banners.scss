@@ -12,11 +12,10 @@
 .banner-container {
   left: 50%;
   margin: 0 auto;
-  //was 55em, changed to 75em to account for search and help wanted
-  max-width: 80em;
+  max-width: 55em;
   position: absolute;
   text-align: center;
-  top: 20em;
+  top: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 100%;
 }
@@ -45,7 +44,7 @@
   p {
     color: $color-gray-lighter;
     font-size: 1em;
-    margin: 2rem auto 4rem;
+    margin: 2rem auto 3rem;
     max-width: 40rem;
 
     @media screen and (min-width: $small-screen) {
