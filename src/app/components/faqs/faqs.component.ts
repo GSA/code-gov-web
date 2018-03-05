@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
   template: require('./faqs.template.html'),
 })
 
-export class faqsComponent {
+export class FAQsComponent {
 
 }
