@@ -35,13 +35,11 @@ export class RepoListItemComponent {
   /**
    * Returns whether the provided repository is from GitHub.
    */
-  isGitHubRepo() {
-    if (!this.repo.repository && typeof this.repo.repository !== 'string') {
+  isGitHubRepo(): boolean {
+    if (!this.repo.repositoryURL && typeof this.repo.repositoryURL !== 'string') {
       return false;
     } else {
-      const isGitHubURL = /github\.com/;
-      console.log("this.repo.repositoryURL:", this.repo.repositoryURL);
-      return isGitHubURL.test(this.repo.repositoryURL);
+      return /github\.com/.test(this.repo.repositoryURL);
     }
   }
 }
