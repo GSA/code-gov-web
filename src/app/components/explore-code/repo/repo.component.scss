@@ -4,6 +4,17 @@
 
 
 .repo-general {
+  h1 {
+    // color: $color-white;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 4rem;
+    margin-top: 0;
+    // color: $color-white;
+  }
   h3,
   p {
     color: $color-gray-dark;
@@ -26,18 +37,6 @@
   padding-bottom: 8rem;
   padding-top: 8rem;
   text-align: center;
-
-  h1 {
-    color: $color-white;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 4rem;
-    margin-top: 0;
-    color: $color-white;
-  }
 }
 
 .repo-breadcrumb {

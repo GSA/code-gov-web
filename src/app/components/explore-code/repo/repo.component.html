@@ -21,6 +21,7 @@
       </div>
     <header>
       <div class="repo-header-container">
+        <h2>{{ repo.name }}</h2>
         <h3>About This Project<span *ngIf="repo.date?.metadataLastUpdated" class="updated">Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</span></h3>
         <span *ngFor="let tag of repo.tags">
           <button *ngIf="tag" 
@@ -69,6 +70,10 @@
 
           </ul>
         <p>{{repo.description}}</p>
+        <br>
+        <a *ngIf="getRepositoryUrl() | isdefined" href="{{ getRepositoryUrl() }}">
+          <button class="button">Visit Repo</button>
+        </a>
       </div>
     </header>
   
