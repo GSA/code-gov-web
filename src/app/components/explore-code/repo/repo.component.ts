@@ -44,7 +44,7 @@ export class RepoComponent implements OnInit, OnDestroy {
       this.seoService.setTitle(this.repo.name, true);
       this.seoService.setMetaDescription(this.repo.description);
       this.seoService.setMetaRobots('Index, Follow');
-      console.log("Repository information is ", repo);
+      console.log('Repository information is ', repo);
     });
   }
 
@@ -59,6 +59,6 @@ export class RepoComponent implements OnInit, OnDestroy {
 
     return this.repo.repositoryURL;
   }
-  
+
 
 }

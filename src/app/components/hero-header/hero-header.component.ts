@@ -8,5 +8,4 @@ import { Component, Input } from '@angular/core';
 
 export class HeroHeaderComponent {
     @Input() title: string;
-    
 }
