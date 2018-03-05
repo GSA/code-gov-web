@@ -50,7 +50,7 @@
                 {{repo.contact.laborHours}} hours
               </li>
             </span>
-            <span *ngIf="repo.languages  | isdefined">
+            <span *ngIf="repo.languages?.length > 0">
               <li>
                 <i class="icon fa fa-code"></i>
                 <span *ngFor="let language of repo.languages; let last=last" class="language"
