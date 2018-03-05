@@ -2,6 +2,7 @@ export * from '../../components/agency-list-item';
 export * from '../../components/autocomplete';
 export * from '../../components/autocomplete-result';
 export * from '../../components/app';
+export * from '../../components/faqs';
 export * from '../../components/four-oh-four';
 export * from '../../components/header-navigation';
 export * from '../../components/help-wanted';
