@@ -99,7 +99,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
   }
 
   displayRepo(repo) {
-    if (repo.agency.acronym === "EPA") {
+    if (repo.agency.acronym === 'EPA') {
       try {
         return repo.permissions.usageType.toLowerCase().startsWith('exempt') === false;
       } catch (error) {
