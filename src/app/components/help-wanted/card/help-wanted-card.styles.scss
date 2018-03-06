@@ -13,7 +13,13 @@
 
     a {
       font-weight: bold;
+
+      &:visited {
+        color: $brand-blue;
+      }
+
     }
+
   }
 
   p {
@@ -55,7 +61,7 @@
   dt {
     color: $color-gray;
   }
-  
+
   .agency-details {
     padding: 10px 0px 0px 0px;
     img {
@@ -67,7 +73,7 @@
         color: $color-gray-light;
     }
   }
-  
+
   .help-wanted-card-description {
     word-wrap: break-word;
   }
@@ -78,7 +84,7 @@
         margin-bottom: 0;
         width: fit-content;
         font-weight: 700;
-    
+
         &:last-of-type {
           margin-right: 0
         }
