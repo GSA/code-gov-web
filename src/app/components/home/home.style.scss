@@ -14,7 +14,6 @@ body {
   background-color: $color-white;
 }
 
-<<<<<<< HEAD
 //div between Search and Help Wanted
 .vertical-row {
   @media screen and (min-width: $medium-screen) {
@@ -118,8 +117,6 @@ body {
 }
 
 //aka Our Mission section of homepage
-=======
->>>>>>> master
 .about {
   padding-top: 4rem;
 
@@ -249,9 +246,6 @@ body {
 
 }
 
-
-
-
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
   background-attachment: scroll;
@@ -272,8 +266,6 @@ body {
     background-attachment: fixed;
   }
 }
-
-
 
 .featured-projects {
   text-align: center;
