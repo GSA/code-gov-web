@@ -5,7 +5,7 @@
 @import '~uswds/src/stylesheets/core/variables';
 
 .banner-container {
-  top: 30em;
+  top: 28em;
   @media screen and (max-width: 480px) {
     top: 27em;
   }
@@ -78,6 +78,10 @@ body {
     font-size: 1.2em;
     padding-top: 4em;
   }
+  img {
+    max-width: 4%;
+    max-height: 4%;
+  }
   a {
     color: #23C0BA;
     text-decoration: underline;
@@ -94,10 +98,14 @@ body {
 //Questions section for mobile
 .questions-mobile {
   p {
-    margin: 1rem 1.5rem -1.5rem;
+    margin: 1rem 2.5rem -1.5rem;
     max-width: 75rem;
     font-size: .9em;
     text-align: left;
+  }
+  img {
+    max-width: 5%;
+    max-height: 5%;
   }
   .second-line {
     margin: 1.25rem -0.5rem 8.5rem 4.5rem;
@@ -113,12 +121,6 @@ body {
     @media screen and (min-width: 481px) {
       display: none;
     }
-}
-
-/* font awesome graphic for the comment */
-.fa.fa-comments {
-  color: $brand-teal-dark;
-  font-size: 2em;
 }
 
 //aka Our Mission section of homepage
