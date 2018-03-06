@@ -98,6 +98,22 @@ export class AgencyComponent implements OnInit, OnDestroy {
     return repos.length > 0;
   }
 
+  displayRepo(repo) {
+    if (repo.agency.acronym === "EPA") {
+      try {
+        return repo.permissions.usageType.toLowerCase().startsWith('exempt') === false;
+      } catch (error) {
+        return true;
+      }
+    } else {
+      try {
+        return repo.permissions.usageType === 'governmentWideReuse' || repo.permissions.usageType === 'openSource';
+      } catch (error) {
+        return false;
+      }
+    }
+  }
+
   filterByAgency(repo) {
     return repo.agency !== undefined && repo.agency === this.agencyId();
   }
