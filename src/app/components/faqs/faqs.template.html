@@ -12,9 +12,6 @@
   </div>
 
   <div class="usa-grid faq-overview">
-    <div class="usa-width-one-whole">
-    <h2>FAQ</h2>
-    </div>
   </div>
 
   <div class="usa-grid general-content">
@@ -22,34 +19,284 @@
       <h3>Federal Source Code Policy</h3>
       <p><a href="#">What does the Federal Source Code Policy state in a nutshell?</a></p>
       <p><a href="#">How long is the pilot? What happens after the pilot</a></p>
-      <p><a href="#">How do agencies define custom code?</a></p>
-      <p><a href="#">How do agencies count 20% of code?</a></p>
+      <p><a href="#">What is the current administration’s position with the M-16-21 Federal Source Code Policy?</a></p>
+      <p><a href="#">What is the definition of custom code?</a></p>
+      <p><a href="#">How do agencies count 20 percent of code?</a></p>
       <p><a href="#">What is reuse?</a></p>
       <p><a href="#">Which agencies are beholden to the Federal Source Code Policy?</a></p>
       <p><a href="#">Why don't all agencies participate?</a></p>
-      <p><a href="#">What does exempt mean?</a></p>
 
-      <h3>Open Source Software</h3>
-      <p><a href="#">What is sharing? How is it different from Open Source?</a></p>
-      <p><a href="#">Is federal open source software free software?</a></p>
-      <p><a href="#">How can you ensure the security of federal government's infrastructure?</a></p>
+      <h3>Metadata Schema</h3>
+      <p><a href="#">Why is the government collecting labor hours, and how does the government plan use the hours?</a></p>
+      <p><a href="">How will labor hours impact an agency?</a></p>
+      <p><a href="">How do we accurately estimate labor hours without records or intimate knowledge of the software solution?[7]</a></p>
+      <p><a href="">Do labor-hour estimates only focus on programming or the entire Software Development Life Cycle (SDLC)?</a></p>
+      <p><a href="">What measurement-type method should we use for Open Source software? (cost, system, projects, modules, lines of code)</a></p>
+      <p><a href="">Why do agencies measure its source code at the agency level and not at the release level?</a></p>
+      <p><a href="">If a release was prior to the the August 2016 policy date and the agency would like to add it to its inventory but not counted towards its 20% open source requirement, how should the agency qualify that in the schema?</a></p>
+      <p><a href="">How can an agency meet the open source 20 percent requirement when all custom software have national security risks and all releases have to be exempt?</a></p>
+      <p><a href="">How have agencies created their code.json files?</a></p>
+      <p><a href="">How can agencies update a code.json file through an automation process?</a></p>
+      <p><a href="">How can an agency validate a code.json file against the current schema?</a></p>
 
-      <h3>Non-Government Employees</h3>
-      <p><a href="#">I am a contractor, can I use OSS found on Code.gov in the project I am building for the Federal Government?</a></p>
-      <p><a href="#">How can I contribute to federal open source software?</a></p>
+      <h3>Non-Government Users</h3>
+      <p><a href="#">As a contractor can I use open source software found on Code.gov in the project I am building for the Federal Government?</a></p>
+      <p><a href="#">How can I contribute to Federal Open Source Software?</a></p>
     </div>
 
     <div class="usa-width-one-half">
+      <h3>Open Source Software</h3>
+      <p><a href="#">What is open source software?</a></p>
+      <p><a href="#">Is Federal Open Source Software free software?</a></p>
+      <p><a href="#">How can you ensure the security of federal government's infrastructure?</a></p>
+      <p><a href="#">Which Open Source license (CC0, MIT, Apache, etc.) should the projects on Code.gov use?</a></p>
+      <p><a href="#">Where do agencies host their public open source software?[9]</a></p>
+
+    <h3>Government Users</h3>
+      <p><a href="#">Where can I check to see if my agency is in compliance with the Federal Source Code Policy?</a></p>
+      <p><a href="#">Who can I talk to for assistance?</a></p>
+      <p><a href="#">How do government agencies accept work through pull requests (PR) from non-government entities and general public without violating anti-deficiency laws?</a></p>
+      <p><a href="#">What is the recommended process for conducting a software inventory across an agency components?</a></p>
+      <p><a href="#">Who decides how and when a software can be open sourced?</a></p>
+      <p><a href="#">What are best practices for open sourcing software? </a></p>
+      <p><a href="#">How do you get security buy-in on the review and publication of custom software?</a></p>
+      <p><a href="#">Do sub-agencies need their own open source policy?</a></p>
+      <p><a href="#">How do sub-agencies submit their own metadata code.json file?</a></p>
+      <p><a href="#">How do sub-agencies update records to an existing agency code.json file?</a></p>
+
       <h3>Code.gov</h3>
       <p><a href="#">What is Code.gov?</a></p>
       <p><a href="#">Is Code.gov a version control repository?</a></p>
-      <p><a href="#">What tools are available on Code.gov</a></p>
-
-    <h3>Government Employees</h3>
-      <p><a href="#">How do I set up a code.json file for my agency?</a></p>
-      <p><a href="#">Where can I check to see if my agency is in compliance with the Federal Source Code Policy?</a></p>
-      <p><a href="#">Who can I talk to for assistance?</a></p>
+      <p><a href="#">What features are available on Code.gov?</a></p>
+      <p><a href="#">How often does Code.gov harvest code from the agencies?</a></p>
     </div>
   </div>
-
+</div>
+<div class="usa-grid general-content">
+  <h2>Federal Source Code Policy</h2>
+  <div>
+    <h3>What does the Federal Source Policy state in a nutshell?</h3>
+      <p>In an effort to cut excessive spending, the government released the <a href="https://sourcecode.cio.gov/">Federal Source Code Policy</a> in August 2016 to reduce duplicative software acquisitions. The policy has two parts:</p>
+      <ul>
+          <li>Government wide reuse – any new software the federal government develops must be available for reuse across all federal agencies.</li>
+          <li>A three-year pilot program requires federal agencies to share at least 20 percent of their new source code as open source software
+            <ul>
+              <li>Exemptions are made for National security and privacy</li>
+            </ul>
+          </li>
+      </ul>
+  </div>
+  <div>
+    <h3>How long is the pilot? What happens after the pilot?</h3>
+    <p>Section 5 of the Federal Source Code Policy requires covered agencies to release as open source software at <span>least 20 percent</span> of its new custom-developed code each year for the term of the pilot program. Currently, Federal Open Source Program is in the second year of the three-year pilot to ascertain the appropriate amount of government source code to release. According to the Federal Source Code Policy, the Office of Management and Budget will make a decision of whether to make the requirement of releasing source code permanent, or to allow the pilot to expire.</p>
+  </div>
+  <div>
+    <h3>What is the current administration’s position with the M-16-21 Federal Source Code Policy?</h3>
+    <p>Each year, the Federal Government spends more than $6 billion on software through more than 42,000 transactions. Open sourcing the government’s source code has the potential to save taxpayers millions of dollars every year on software as it promotes software reuse within the federal government. Saving taxpayers money isn’t a partisan issue. It just makes good business sense.</p>
+  </div>
+  <div>
+    <h3>What is the definition of “custom code”?</h3>
+    <p>The Federal Source Code Policy defines “custom code” as any source code developed after August 2016 -- the date of the policy.</p>
+  </div>
+  <div>
+    <h3>How do agencies count 20 percent of code?</h3>
+    <p>It’s up to each agency to inventory its open source software and determine how it will account for the 20 percent requirement. Code.gov is in the midst of a three-year pilot and variance in how each agency chooses to measure towards its 20 percent goal – lines of code, cost, modules, etc., -- will provide the data for the Code.gov team to make a final decision on how to measure across government at the end of the pilot.</p>
+  </div>
+  <div>
+    <h3>What is reuse?</h3>
+    <p>Code.gov catalogs the government’s source code that is available for reuse or open source. Reuse is software that is not appropriate to open source due to a sensitive nature, but is available to other government agencies to use for their purposes. Through reuse, the government aims to reduce the amount of redundant software transactions it enters every year.</p>
+  </div>
+  <div>
+    <h3>Which agencies are beholden to the Federal Source Code Policy?</h3>
+    <p>For the purposes of this policy, an agency is one that meets the definition of executive agency under the Clinger Cohen Act of 1996. For a complete list of the 24 agencies, see our compliance dashboard.</p>
+  </div>
+  <div>
+    <h3>Why don’t all agencies participate?</h3>
+    <p>The Office of Management and Budget only has authority for Information Technology over the 24 Clinger Cohen Act agencies. However, many agencies that are not bound by the policy are participating, for example the Consumer Finance Protection Board.</p>
+  </div>
+  <h2>Open Source Software</h2>
+  <div>
+    <h3>What is open source software?</h3>
+    <p>Open source software is software with source code anyone can view, use, influence or improve subject to the licenses governing the source code.</p>
+  </div>
+  <div>
+    <h3>Is Federal Open Source Software Free Software?</h3>
+    <p>Free software is software anyone can use for any purpose. Most of the government’s software is open source, however, it is up to each agency to determine whether their source code is available as free or open source. It’s best to check the licence of each software to be sure.</p>
+  </div>
+  <div>
+    <h3>How can you ensure the security of the federal government’s infrastructure?
+      </h3>
+    <p>Open source code it generally thought to be more secure since more eyes are viewing the source code and the open source community provides updates to the code through issues and pull requests. Still, it is up to each agency as part of its IT portfolio to ensure the health of its open source code. Just like private software requires regular maintenance and attention to ensure the health of the agency’s infrastructure, open source code requires the same attention. Agencies are responsible for maintaining and updating their open source repositories as needed to ensure the health of their IT portfolio.</p>
+  </div>
+  <div>
+    <h3>Which Open Source license (CC0, MIT, Apache, etc.) should the projects on Code.gov use?</h3>
+    <p>Each agency decides, often in consult with its legal team, which license is appropriate for its open source projects. Therefore, users may see the full spectrum of open source licenses as they explore source code on Code.gov.</p>
+  </div>
+  <div>
+    <h3>Where do agencies host their public open source software?[9]</h3>
+    <p>It’s up to each agency to determine where to host its open-source software and whether it will use a version control system. Code.gov does not make specific recommendations to agencies on which platform to use, nor does it support a specific solution or product over any other.</p>
+  </div>
+  <h2>Non-Government Users</h2>
+  <div>
+    <h3>As a contractor can I use open source software found on Code.gov in the project I am building for the Federal Government?</h3>
+    <p>Absolutely. That is the goal. However, we ask that you make it known to your client so that agency liaisons can track reuse of government software.</p>
+  </div>
+  <div>
+    <h3>How can I contribute to Federal Open Source Software?</h3>
+    <p>The same way you contribute to open source programs. You can submit an issue or initiate at pull request. Our Help Wanted page list projects agencies specifically need help on, however your contributions should not be limited to the projects on this page. If you see something in a repository and want to go to work, please do.</p>
+  </div>
+  <h2>Code.gov</h2>
+  <div>
+    <h3>What is Code.gov?</h3>
+    <p>Code.gov is the nation’s primary platform for sharing and improving government software, it helps government agencies implement the Federal Source Code Policy by harvesting their software projects to enable members of the government and the general public explore, improve, and reuse the government’s custom-developed source code.</p>
+  </div>
+  <div>
+    <h3>Is Code.gov a version control repository?</h3>
+    <p>No. The Code.gov platform is not a version control system. Code.gov harvests the open source software inventory (code.json file) from a federal agency’s national website and indexes the records for searchability.</p>
+  </div>
+  <div>
+    <h3>What features are available on Code.gov?</h3>
+    <p>Code.gov offers users the ability to search the government’s inventory of software. Software is then identified as exempt from policy, available for re-use, or open source. Our search capabilities allow users to search for code by language, project type, as well as filter results based on a number of criteria. Code.gov’s Help Wanted Page allows users to give back to their country through code by finding projects that interest them and working on them. The government will then review the code and accept it Code.gov offers users GitHub integration when repositories are housed on GitHub.</p>
+  </div>
+  <div>
+    <h3>How often does Code.gov harvest code from the agencies?</h3>
+    <p>The code.gov platform harvest and indexes the software inventory from the agencies’ national websites code.json files (example: https://www.agency.gov/code.json file). Code.gov manually executes the harvester on Mondays to systematically crawl through all the federal agencies’ national websites and capture their software inventory updates on their code.json files. We replace the releases.json and releasesIndex.json files on the code-gov-web repository which are then published on the code.gov platform.</p>
+  </div>
+  <h2>Government Users</h2>
+    <div>
+      <h3>Where can I check to see if my agency is in compliance with the Federal Source Code Policy?</h3>
+      <p>Federal Agencies and members of the general public can see how compliant with the Federal Source Code Policy each agency is by visiting the Code.gov compliance dashboard.</p>
+    </div>
+    <div>
+      <h3>Who can I talk to for assistance?</h3>
+      <p>The Code.gov team is ready to assist any user needing help. We specifically have an open source director to help members of the government and general open source community. The best way to ensure the correct team member is assigned to your specific issue is to email code@gsa.gov describing your challenge so a member of the team can follow up. We encourage users familiar with GitHub to log their questions, insights and feedback as GitHub issues on the appropriate repo.</p>
+    </div>
+    <div>
+      <h3>How do government agencies accept work through pull requests (PR) from non-government entities and general public without violating anti-deficiency laws?</h3>
+      <p>The Anti-Deficiency Act forbids federal officials from entering into financial obligations for which they do not have funding. Government agencies can accept work through pull requests without violating anti-deficiency laws since the work is under open source licenses. Contributions to those projects operate under the same license unless the contributor states otherwise. In those situations, the agency can decide whether to accept the PR and update its license or refuse the PR and keep its license the same. Learn more about popular licenses and discuss with your legal team which are appropriate for your projects.</p>
+    </div>
+    <div>
+      <h3>What is the recommended process for conducting a software inventory across an agency components?</h3>
+      <p>Each Federal agency’s Office of the Chief Information Officer (OCIO) has identified a liaison responsible for overseeing the execution of the M-16-21 Federal Source Code Policy requirements. Each liaison works with internal offices, for instance legal, procurement, engineering, and security to complete a comprehensive custom software inventory. Also, a liaison works with their agency’s sub-component offices to ensure there is a standard process for managing open source software from both the agency and its sub-components. At some large agencies -- like the Departments of Homeland Security, Defense, and Agriculture -- the liaisons have established internal working groups that meet periodically to discuss policy requirements, workflows, process, security, and custom software inventory.</p>
+    </div>
+    <div>
+      <h3>Who decides how and when a software can be open sourced?</h3>
+      <ul>
+        <li>Each Federal agency’s open source liaison, who falls under the Office of the Chief Information Officer, is responsible for determining whether the agency should open source parts of its custom software inventory.</li>
+        <li>At most agencies, liaisons gain the approval of project owner or the business unit responsible for the software. The project owner/business unit and agency liaison coordinate with offices inside the agency to gain approval to open-source the software, including legal, and security.</li>
+        <li>Federal agencies follow open source community standards for open sourcing custom software.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What are best practices for open sourcing software?</h3>
+      <ul>
+        <li>The federal government follows open source community best practices as standards for open sourcing custom software.</li>
+        <li>Each agency determines the best license model for its custom software. For instance, the agency plans how to govern its open source software:
+          <ul>
+            <li>Give Credit / Recognition Model</li>
+            <li>Give me fixes types mode</li>
+            <li>Give me everything / Strong Copyleft Model</li>
+          </ul>
+        </li>
+          <li>Open Source License Guides:
+          <ul>
+            <li>Comparison of free and open-source software licenses</li>
+            <li>Open Source Guide</li>
+            <li>Choose an open source license</li>
+            <li>Google Open Source</li>
+          </ul>
+        </li>
+          <li>Federal agencies must implement or use a version control system (vcs) that allows the public to access the source code and the agency to accept pull requests (PRs).</li>
+          <li>Some Federal agencies have established innersource best practices for an open source-like culture within the organization to effectively improve development process across business units, sub-agencies or components that eliminates boundaries. Consequently innersource methodology increases internal collaboration, knowledge sharing in the government agency as a community, and increases infrastructure and software reuse which in turns helps reduce cost and produce a better product while adhering to security regulations. Innersource moves open source best practices behind the agency’s firewall, providing an agency more fidelity in its management of open source software.</li>
+          <li>Agencies may manage their open source software in two different version control systems (vcs). One for internal use behind firewall to meet security controls and safeguards. For instance, some agencies will execute static software analysis on their internal source-code repository prior approving the use of the open source software internally or updating their internal systems. Second for public access and management of pull requests (PR) from the external open source community. Agencies manage and manually transfer the submitted PRs through established workflow procedures approved by security and engineering teams. Also, the manual intake process supports NIST 800-53 security controls that help protect and defend agency systems from security vulnerabilities and bad actors.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>How do you get security buy-in on the review and publication of custom software?</h3>
+      <ul>
+        <li>Most agency liaisons recommend working with the agency’s information security office as a first step when inventorying the agency’s software to address potential risks with the publication of custom software as open source.</li>
+        <li>Each Federal agency has established internal procedures and safeguards with respect to security to properly publish open source software.</li>
+        <li>Federal agencies are responsible for developing software management workflows that include static code analysis scans to check for security vulnerabilities and data sanitation procedures to remove sensitive information  from source code, such as personal identifying information.</li>
+        <li>These procedures allow agencies to accept open source software contributions from external sources with confidence.</li>
+        <li>Agencies evaluate and analyze software contributions from external sources prior to using them on government systems and applications.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Do sub-agencies need their own open source policy?</h3>
+      <p>No. Sub, or component, agencies fall under the policies of their parent agencies. For example, The Office of Patent and Trade would fall under the open source policy of The Department of Commerce.</p>
+    </div>
+    <div>
+      <h3>How do sub-agencies submit their own metadata code.json file?</h3>
+      <p>Sub or component agencies should submit their repositories to their agency liaison at their parent agency. If you do not know your agency liaison, email code@gsa.gov so we can connect you with the right person.</p>
+    </div>
+    <div>
+      <h3>How do sub-agencies update records to an existing agency code.json file?</h3>
+      <p>Agencies have a dedicated liaison who is responsible for overseeing the implementation of OMB M-16-21 Federal Source Code Policy. Sub-component agencies are required to report upstream to the Federal agency liaison to include their open source software in the agencies code.json file. The agency liaison works with all the sub-agencies to complete a comprehensive software inventory that can be reported on the code.json file. Please contact us for inquiries about the Federal agencies POC.</p>
+    </div>
+    <h2>Metadata Schema</h2>
+    <div>
+      <h3>Why is the government collecting labor hours, and how does the government plan use the hours?</h3>
+      <p>The government is collecting labor hours to ascertain an approximate estimation of time and taxpayer dollars saved by reusing and sharing code.</p>
+    </div>
+    <div>
+      <h3>How will labor hours impact an agency?</h3>
+      <p>Labor hours are collected strictly to help understand the impact that open sourcing the government’s source code is having. Collecting this data should not impact agencies.</p>
+    </div>
+    <div>
+      <h3>How do we accurately estimate labor hours without records or intimate knowledge of the software solution?[7]</h3>
+      <p>If agencies have not historically collected labor hours for Information Technology projects, then we recommend running the project’s git through a line-counting program. Once this is complete, use the CoCoMo II model to estimate labor hours using a 19-day month and $48/hr pay rate. However, it is imperative going forward that agencies start collecting this information and include language in contracts so this information is attainable.</p>
+    </div>
+    <div>
+      <h3>Do labor-hour estimates only focus on programming or the entire Software Development Life Cycle (SDLC)?</h3>
+      <p>If labor estimates are available, they should focus on the entire Software Development Life Cycle. Since since part of the pilot stage is to ascertain the Federal open source program’s value, Code.gov will accept a conservative estimate if programming labor hours is all that is available. The git scraping program that counts lines of code, counts everything in the git history, including design or communications documents that may be in git file. That being said, it is extremely important agencies start collecting data on the labor hours for the Software Development Life Cycle.</p>
+    </div>
+    <div>
+      <h3>What measurement-type method should we use for Open Source software? (cost, system, projects, modules, lines of code)</h3>
+      <p>It’s up to each agency to inventory its open source software and determine how it will account for the 20 percent requirement. Code.gov is in the midst of a three-year pilot and variance in how each agency chooses to measure towards its 20 percent goal – lines of code, cost, modules, ect., -- will provide the data the Code.gov team needs to make a final decision on how to measure across government at the end of the pilot.</p>
+    </div>
+    <div>
+      <h3>Why do agencies measure its source code at the agency level and not at the release level?</h3>
+      <p>Open sourcing the government’s source code is part of a three-year pilot, during which Code.gov is gathering data to inform final decisions on government open source software once the pilot is complete. One of these decisions will be how to measure the release of source code across government. If Code.gov allowed measurement to the release level, it would pollute the data and not allow the team to make a decision according to what is best for the majority of agencies and therefore, government.</p>
+    </div>
+    <div>
+      <h3>If a release was prior to the the August 2016 policy date and the agency would like to add it to its inventory but not counted towards its 20% open source requirement, how should the agency qualify that in the schema?</h3>
+      <p>Some agencies are inventorying all of their custom softwares on their code.json file, but some of the releseases cannot be open source due. To prevent a release from being counted towards the 20% open source requirement, we recommend for agencies to use the exempByPolicyDate option for the usageType field as described on our current metadata schema.  Additionally, we recommend for agencies to use the date object to specify the created, lastModified, and metadataLastUpdated on their releases. By using the exempByPolicyDate and date created we can systematically determined whether or not to count that release toward the 20% open source requirement.</p>
+    </div>
+    <div>
+      <h3>How can an agency meet the open source 20 percent requirement when all custom software have national security risks and all releases have to be exempt?
+        </h3>
+      <p>While certain agencies certainly have national security missions, not all of their IT projects have national security risks or implications. For example, the National Security Agency (NSA) releases some of its code open source. Focusing on the the non-secure parts of the mission – for instance human resources or budgeting – can help agencies get to their 20 percent requirement. Also ensuring that code used in sensitive missions is stripped of its sensitive information – names, passwords, etc., -- so that only the code remains may also be a viable option. In short, while agencies with National Security Missions may need to get more creative to release code open source, not all of their code should be in exempt status; they are still accountable to the Federal Source Code Policy.</p>
+    </div>
+    <div>
+      <h3>How have agencies created their code.json files?</h3>
+      <p>First, agencies are required to follow our current metadata schema requirements. There are two recommended approaches for generating a JavaScript Object Notation (JSON) file that meet the metadata schema requirements.</p>
+      <ol>
+        <li>Manual Approach - Those with technical skills can get started by downloading the sample code.json file locally to their computer systems, then manually edit the code.json file with a text editor for code. The sample code.json file contains the metadata schema structure with required fields and sample data values that can be modified.
+        </li>
+        <li>Semi Automated Approach - A number of Federal agencies have implemented software tools to help expedite the implementation of their code.json files through scripts. Two solutions are used by agencies using git version control systems (vcs): 
+          <ul>
+            <li>The most complete approach is the Scraper Tool developed by the Department of Energy, Lawrence Livermore National Laboratory (LLNL). The Scraper tool systematically goes through your git repository and produces a code.json file. There is a requirement to setup a configuration file about your organization on your repository.
+              <ul>
+                <li>Repo URL: https://github.com/LLNL/scraper </li>
+              </ul>
+            </li>
+            <li>Alternatively, GSA has implemented a Code-Inventory-Metadata-Generator to create a project metadata YAML or JSON file to build an organization-wide code inventory. There is an online web form that can be completed or the users can run the web-form from any system.  
+              <ul>
+                <li>Webform: https://gsa.github.io/codeinventory-metadata-generator/</li>
+                <li>Repo URL:  https://github.com/GSA/codeinventory-metadata-generator</li>
+              </ul>
+            </li>
+            <li>Agencies can validate their code.json files through our code.json Validator tool.</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div>
+      <h3>How can agencies update a code.json file through an automation process?</h3>
+      <p>At this time we do not have automated process for agencies to update their code.json files but we are working with Federal agencies on ways to implement an automated process. In the meantime, the Scraper Tool offers a semi-automated process to catalog an agency’s custom software inventory managed on a version control system (vcs) and create a code.json file based on our current metadata schema.</p>
+    </div>
+    <div>
+      <h3>How can an agency validate a code.json file against the current schema?</h3>
+      <p>Code.gov provides agencies a validator to run their code.json files against the current schema. The validator will identify errors, if any, agencies need to fix to be current with the schema.</p>
+    </div>
 </div>
