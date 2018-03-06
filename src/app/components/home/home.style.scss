@@ -14,6 +14,7 @@ body {
   background-color: $color-white;
 }
 
+<<<<<<< HEAD
 //div between Search and Help Wanted
 .vertical-row {
   @media screen and (min-width: $medium-screen) {
@@ -117,6 +118,8 @@ body {
 }
 
 //aka Our Mission section of homepage
+=======
+>>>>>>> master
 .about {
   padding-top: 4rem;
 
@@ -240,10 +243,14 @@ body {
   }
 }
 
-//Banner section (funny this comes after Our Mission aka About)
 .banner#banner-home {
+
   min-height: 48rem;
+
 }
+
+
+
 
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
@@ -266,7 +273,8 @@ body {
   }
 }
 
-//Featured Projects section of homepage
+
+
 .featured-projects {
   text-align: center;
 
@@ -502,7 +510,6 @@ body {
   }
 }
 
-//Press section of homepage
 .press {
   background-attachment: scroll;
   background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');

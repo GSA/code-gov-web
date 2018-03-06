@@ -106,4 +106,5 @@ export class AgencyComponent implements OnInit, OnDestroy {
     this.repos = [...this.repos, ...this.allRepos.slice(this.currentIndex, this.currentIndex + this.pageSize)];
     this.currentIndex = this.currentIndex + this.pageSize;
   }
+
 }

@@ -491,6 +491,211 @@
       "popular": true,
       "agency_id": "NASA",
       "license": "Apache License Version 2.0"
+    },
+    {
+      "id": 25,
+      "title": "Return to top footer link not behaving as expected",
+      "description": "Using the keyboard, the link behaves correctly and takes the user visually to the top of the page, but a second tab navigation shoots the user back down to the next footer link.\n\nI believe the intent is that keyboard users can return to the top and then tab through that navigation, without tabbing through every link in the long footer. As it is now, this is not the case. See amazon.com for proper behavior in its 'return to top' footer link.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/2321",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 26,
+      "title": "Make site run faster",
+      "description": "The site is taking 12 seconds to build which makes it really time consuming to work on. It's loading all fractal components on every update which seem to be taking most of the time. Is it possible to only load them incrementally when that component has changed?",
+      "updated": "2017-10-13",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds-site/issues/417",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 27,
+      "title": "[Grid]: 7/12 and 5/12 column bug",
+      "description": "When using these columns, it doesn't work bc the last column has right margin so it drops to the next line, bc the width exceeds the usa-grid space.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1955",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 28,
+      "title": "Radio buttons mis-aligned when in an element with overflow-y: scroll",
+      "description": "Because the input for radio buttons are position: absolute, they do not scroll with the labels that follow them when inside an element that has overflow: scroll set. The end result is that once you've scrolled down within such an element, clicking on the visible labels triggers a click on the incorrect invisible input, which hasn't scrolled due to being position: absolute.\n\n(I recognize that overflow scroll is generally not preferred, but in a web application context we have a constraint that may require its use.)\n\nI believe a simple fix would be to add position: relative to one of the suggested ancestors of radio inputs. From the sample code in the docs, it looks like that might be .usa-fieldset-inputs, though I'm not sure if that would have any unintended side effects.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1881",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 29,
+      "title": "Accordion in mobile footer can only be expanded",
+      "description": "In the current mobile version of the footer component there is an accordion-like feature where links are accessed through tappable submenus. In this example, you can tap 'Topics' to expand but you can't tap it again to collapse the menu. You can also only have one submenu open at a time which may or may not be a bug.",
+      "updated": "2018-2-21",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1857",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 30,
+      "title": "Remove explicit display values around aria-hidden",
+      "description": "We currently use the Sass mixin accessibly-hidden to display: none; when aria-hidden is set to true. Adding display values to the aria-hidden attribute is discouraged. We need to remove this mixing and replace by using either the hidden attribute or class names to define display properties.\n\nSee the following article for further guidance and information:\n\nhttps://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/",
+      "updated": "2017-10-23",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1513",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 31,
+      "title": "Checkbox hidden when label & input order flipped",
+      "description": "I'm generating forms with Django and the default format that is rendered has <label> followed by <input> which works beautifully with textfields but not so with checkboxes. The label shows up but the checkbox is hidden. The only way I can make it show up is to write a custom form only to flip the order of those elements to match your documentation.",
+      "updated": "2018-2-19",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1071",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 32,
+      "title": "Create Visualizations of Data from API",
+      "description": "Expected Behavior\nCreate cool data visualizations of the data from the API.\nCurrent Behavior\nHere's some examples:\nhttps://beta.observablehq.com/@danieljdufour/python-vs-ruby-number-of-projects-on-code-gov\nhttps://beta.observablehq.com/@danieljdufour/top-10-languages-of-projects-on-code-gov\nPossible Solution\nCreate a data visualization using D3 or any library you might like.",
+      "updated": "2018-03-02",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-api/issues/198",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 33,
+      "title": "Fix Repo Component Tests",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/473",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 34,
+      "title": "Fix Agency Page Tests",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/472",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 35,
+      "title": "Fix Autocomplete-Result Test",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/471",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     }
   ]
 }
