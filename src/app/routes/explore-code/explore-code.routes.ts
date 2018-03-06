@@ -14,11 +14,11 @@ export const EXPLORE_CODE_ROUTES: Routes = [
     path: 'explore-code',
     component: ExploreCodeComponent,
     children: [
-      { path: '', redirectTo: 'agencies/' + 'NASA', pathMatch: 'full' },
+      { path: '', redirectTo: 'agencies/NASA', pathMatch: 'full' },
       { path: 'agencies',
         component: AgenciesComponent,
         children: [
-          { path: '', redirectTo: 'NASA', pathMatch: 'full' },
+          { path: '', redirectTo: '/NASA', pathMatch: 'full' },
           { path: ':id', component: AgencyComponent }
         ]
       },

@@ -1,21 +1,22 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { Agency } from '../../../services/client';
 import { ClientService } from '../../../services/client';
-import { ExternalLinkDirective } from '../../../directives/external-link';
+import { ExternalLinkDirective } from '../../directives/external-link';
 import { SeoService } from '../../../services/seo';
 import { MetaService } from '@ngx-meta/core';
+import { LanguageIconPipe } from '../../pipes/language-icon';
 
 @Component({
   selector: 'repo',
-  styles: [require('./repo.styles.scss')],
-  template: require('./repo.template.html')
+  styles: [require('./repo.component.scss')],
+  template: require('./repo.component.html')
 })
 
 export class RepoComponent implements OnInit, OnDestroy {
+  @Input() repo: any;
   agency: Agency;
-  repo: any;
   eventSub: Subscription;
   repoSub: Subscription;
 
@@ -43,11 +44,7 @@ export class RepoComponent implements OnInit, OnDestroy {
       this.seoService.setTitle(this.repo.name, true);
       this.seoService.setMetaDescription(this.repo.description);
       this.seoService.setMetaRobots('Index, Follow');
-      this.meta.setTag('twitter:card', 'summary');
-      this.meta.setTag('twitter:site', '@codedotgov');
-      this.meta.setTag('twitter:title', `code.gov/${this.repo.name}`);
-      this.meta.setTag('twitter:description', this.repo.description);
-      this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
+      console.log('Repository information is ', repo);
     });
   }
 
@@ -62,4 +59,6 @@ export class RepoComponent implements OnInit, OnDestroy {
 
     return this.repo.repositoryURL;
   }
+
+
 }

@@ -10,6 +10,7 @@ import {
    SchemaValidatorComponent,
    SearchResultsComponent,
    SharedLayoutComponent,
+   RepoComponent,
  } from './utils/app-components';
 import { EXPLORE_CODE_ROUTES } from './routes/explore-code';
 import { POLICY_GUIDE_ROUTES } from './routes/policy-guide';
