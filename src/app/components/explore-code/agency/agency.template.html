@@ -18,8 +18,7 @@
           [infiniteScrollThrottle]="500"
           (scrolled)="onScroll()">
         <li *ngFor="let repo of repos" class="repo">
-
-          <span *ngIf="repo.permissions.usageType === 'governmentWideReuse' || repo.permissions.usageType === 'openSource'">
+          <span *ngIf="displayRepo(repo)">
             <a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">
               <div class="card card--focusable">
                 <h3 class="repo-name">{{ repo.name }}</h3>
