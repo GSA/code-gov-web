@@ -6,7 +6,8 @@
 
 .banner-container {
   top: 28em;
-  @media screen and (max-width: 480px) {
+  //set to 480px
+  @media screen and (max-width: $small-screen) {
     top: 27em;
   }
 }
@@ -44,7 +45,8 @@ body {
     .buttons {
       margin-top: -3rem;
     }
-    @media screen and (max-width: 599px) {
+    //set to 599px
+    @media screen and (max-width: $medium-screen) {
       display: none;
     }
     button {
@@ -54,10 +56,12 @@ body {
 
 .help-wanted-mobile {
  .buttons {
-   @media screen and (min-width: 600px) {
+   //set to 600px
+   @media screen and (min-width: $medium-screen) {
      display: none;
    }
-   @media screen and (max-width: 480px) {
+   //set to 480px
+   @media screen and (max-width: $small-screen) {
      margin-top: 5.5rem;
      margin-bottom: 5.5rem;
    }
@@ -90,7 +94,8 @@ body {
       color: $brand-teal;
     }
   }
-  @media screen and (max-width: 480px) {
+  //set to 480px
+  @media screen and (max-width: $small-screen) {
     display: none;
   }
 }
@@ -111,14 +116,15 @@ body {
     margin: 1.25rem -0.5rem 8.5rem 4.5rem;
   }
   a {
-    color: $brand-teal-dark;
+    color: #23C0BA;
     text-decoration: underline;
 
     &:hover {
       color: $brand-teal;
       }
     }
-    @media screen and (min-width: 481px) {
+    //set to 481px
+    @media screen and (min-width: $small-screen) {
       display: none;
     }
 }
