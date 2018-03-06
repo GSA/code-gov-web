@@ -43,6 +43,11 @@
 
 .browse-by-agency-button {
   padding: 1rem 1.5rem;
+  margin-top: 3em;
+
+  @media screen and (max-width: 812px) {
+    margin-top: 1em;
+  }
 }
 
 button {
@@ -85,7 +90,11 @@ button {
 
   input,
   label {
-    max-width: none;
+    //max-width: none;
+    width: 90%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
   }
 
   label {

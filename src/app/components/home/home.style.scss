@@ -5,6 +5,7 @@
 @import '~uswds/src/stylesheets/core/variables';
 
 .banner-container {
+  top: 30em;
   @media screen and (max-width: 480px) {
     top: 27em;
   }
@@ -38,13 +39,16 @@ body {
       font-size: 1.2em;
       line-height: 1em;
       max-width: 75rem;
-      margin: 2rem auto 3rem;
+      margin: 2rem 2rem 3.5rem 3rem;
     }
     .buttons {
       margin-top: -3rem;
     }
     @media screen and (max-width: 599px) {
       display: none;
+    }
+    button {
+      margin-top: 2em;
     }
 }
 
@@ -72,9 +76,10 @@ body {
     margin: 3rem auto 2rem;
     max-width: 75rem;
     font-size: 1.2em;
+    padding-top: 4em;
   }
   a {
-    color: $brand-teal-dark;
+    color: #23C0BA;
     text-decoration: underline;
 
     &:hover {
