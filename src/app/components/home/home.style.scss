@@ -6,9 +6,12 @@
 
 .banner-container {
   top: 28em;
+  @media screen and (min-width: $medium-screen) {
+    top: 18em;
+  }
   //set to 480px
   @media screen and (max-width: $small-screen) {
-    top: 27em;
+    top: 25em;
   }
 }
 
@@ -61,10 +64,10 @@ body {
      display: none;
    }
    //set to 480px
-   @media screen and (max-width: $small-screen) {
-     margin-top: 5.5rem;
-     margin-bottom: 5.5rem;
-   }
+   //@media screen and (max-width: $small-screen) {
+     //margin-top: 5.5rem;
+     //margin-bottom: 5.5rem;
+   //}
  }
 
  button {
@@ -94,6 +97,9 @@ body {
       color: $brand-teal;
     }
   }
+  @media screen and (min-width: $medium-screen) {
+    display: none;
+  }
   //set to 480px
   @media screen and (max-width: $small-screen) {
     display: none;
@@ -103,7 +109,7 @@ body {
 //Questions section for mobile
 .questions-mobile {
   p {
-    margin: 1rem 2.5rem -1.5rem;
+    margin: 4rem 2.5rem -1.5rem;
     max-width: 75rem;
     font-size: .9em;
     text-align: left;
