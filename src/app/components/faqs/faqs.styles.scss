@@ -50,8 +50,44 @@
   h2 {
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
   }
   padding: 0rem 3rem 3rem 3rem;
+}
+
+/* tools section of page */
+.tools {
+  padding: 4rem 0 6rem;
+  margin: 0;
+  color: $color-gray-dark;
+  background-color: $color-gray-lightest;
+  text-align: center;
+  h2 {
+    margin-bottom: 2em;
+  }
+  a {
+    color: $color-gray-dark;
+  }
+  div {
+    padding: 0 2em;
+    font-size: 1.8rem;
+  }
+  i {
+    font-size: 15rem;
+    color: $color-gray-dark;
+  }
+  span {
+    padding: 1.7rem 0 1rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .tools-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 //general content
