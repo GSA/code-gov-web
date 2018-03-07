@@ -6,7 +6,7 @@
 /* overarching page styles */
 .faq-general {
   h3,
-  p {
+  p, {
     color: $color-gray-dark;
   }
   a {
@@ -60,4 +60,7 @@
     font-weight: 700;
   }
   padding: 3rem 3rem 3rem 3rem;
+  li {
+    color: $color-gray-dark;
+  }
 }
