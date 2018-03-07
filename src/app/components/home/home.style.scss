@@ -5,13 +5,12 @@
 @import '~uswds/src/stylesheets/core/variables';
 
 .banner-container {
-  top: 28em;
+  top: 30em;
   @media screen and (min-width: $medium-screen) {
-    top: 18em;
+    top: 20em;
   }
-  //set to 480px
   @media screen and (max-width: $small-screen) {
-    top: 25em;
+    top: 20em;
   }
 }
 
