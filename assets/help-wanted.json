@@ -46,6 +46,28 @@
     },
     {
       "id": 3,
+      "title": "Add footer variations for slim and big",
+      "description": "Currently we have the option of setting the header type in the header.yml file. I think it would be nice to be able to set the footer type as well between slim, medium, and big in the footer.yml file. At the moment the default footer is medium.",
+      "updated": "2018-03-01",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "impact": "Open Government",
+      "projectURL": "https://github.com/18F/uswds-jekyll",
+      "issueURL": "https://github.com/18F/uswds-jekyll/issues/53",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 4,
       "title": "Allow rename during duplicate",
       "description": "It would be nice to give the opportunity to rename when creating the copy, rather than having to create the copy and then go into properties to edit the name.",
       "updated": "2017-10-24",
@@ -66,7 +88,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Allow user to view an item from the left pane while editing",
       "description": "Issue Description:\nWhen editing, a very common observation is users single-clicking an object in the left pane (both browse tree and search) and being taken out of Edit mode, or being warned with the 'Unsaved changes' dialog. What they want is to be able to see an object before adding it to a thing they're currently editing.\n\nProposed solution:\n\nSingle-clicking in the left pane during Edit mode displays the clicked object in an overlay without taking the user out of Edit mode.\nAll normal 'view' functionality (like plot pan/zoom) would be available.\nThere should be a 'Add This Item' button available in the overlay as well that would add the item being viewed to the object being edited, then closes the overlay.",
       "updated": "2017-12-13",
@@ -87,7 +109,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Add 'Create..' Option to create object inside other object.",
       "description": "It should be possible for a user to right click on an object in the tree view and select 'create...' to create an object inside of that object. This option should not exist for objects that do not have composition.",
       "updated": "2017-12-13",
@@ -108,7 +130,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Remove action is available for non-editable objects",
       "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
       "updated": "2018-1-10",
@@ -129,7 +151,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Timers aren't visually indicating countdown or countup",
       "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
       "updated": "2018-1-29",
@@ -150,7 +172,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Various error messages in tables",
       "description": "The table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
       "updated": "2018-1-19",
@@ -171,7 +193,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 9,
+      "id": 10,
       "title": "Wait spinner shows longer than necessary",
       "description": "During testing of VISTA R3.4 RC1, repeatedly noticed wait spinners sticking around after new data had become visible in the plot. Clicking on a splitter bar between panes causes the wait spinner to disappear, leading me to believe that we need an $apply call somewhere.",
       "updated": "2018-1-16",
@@ -192,7 +214,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 10,
+      "id": 11,
       "title": "Y Axis disappears when deeply zoomed",
       "description": "Steps to reproduce:Create a plot containing a telemetry element, Zoom in on data repeatedly, looking at Y-Axis, Observe: Eventually Y Axis disappears and a console error is shown",
       "updated": "2018-1-16",
@@ -213,7 +235,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 11,
+      "id": 12,
       "title": "Elements pool doesn't get updated after removing an object",
       "description": "In Layout, try removing an object via the context menu by right clicking the object in the elements pool. Notice the object remains listed in the elements pool.",
       "updated": "2018-1-8",
@@ -234,7 +256,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 12,
+      "id": 13,
       "title": "Allow Angular components as Interfaces",
       "description": "Currently Interfaces are limited to relatively simple JS (or whatever plugin libraries are loaded by the interface). It would be very nice to be able to just add an additional component and somehow load it into the main module (or add in a new app module just for this), so interface developers can utilize Angular functionality to make writing interfaces easier (and better utilize our apis).",
       "updated": "2017-12-17",
@@ -254,7 +276,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "Split up the App API JSON Schema into multiple files",
       "description": "Currently the App API JSON Schema in data/walkoff_schema.json is about 1000 lines long and is getting a bit bloated and hand to maintain. It would be better if it is split up into manageable files and placed in its own directory inside data. This should only involve using the {'#ref' : '../path/to/new/file'} feature of JSON schemas (see this issue here: Julian/jsonschema#98). This may also involve a teak in core.config.config depending on the reference resolver being used and possibly a change to core.config.paths if the path to the schema changes.",
       "updated": "2017-12-1",
@@ -274,7 +296,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "client-side dependency installation support for interfaces",
       "description": "Currently, there is no clean way to install client dependencies for custom interfaces. If the install_dependencies.py script could look for a package.json file in the interfaces and run npm install in that directory, then this issue would be resolved",
       "updated": "2017-12-1",
@@ -294,7 +316,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 15,
+      "id": 16,
       "title": "requirements.txt support in custom interfaces",
       "description": "Custom interfaces may require additional dependencies, but currently, there is no straightforward mechanism to install them like there is for app dependencies. The install dependencies script could be modified to install dependencies for apps as well as interfaces",
       "updated": "2017-12-1",
@@ -314,7 +336,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 16,
+      "id": 17,
       "title": "Request: parameter to start on a specific module",
       "description": "We would love to be able to create bookmarklets that take us directly to a specific module, like Tables or Links. We have a set of bookmarklets shared by the team, organized by what they're used for, so it would be great to point someone directly to a specific module. We would love a parameter we can pass in the URL that selects the starting module.",
       "updated": "2018-2-1",
@@ -333,7 +355,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 17,
+      "id": 18,
       "title": "Double border in footer links at mobile",
       "description": "When at mobile size the links in the footer stack on top of each other. Since it's three columns at desktop sizes, the three stacked columns end up with double borders between each stacked column. This is visible after the 'Open Government' and 'Tribal' link.",
       "updated": "2017-11-9",
@@ -353,7 +375,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 18,
+      "id": 19,
       "title": "Protractor parameters are not including text after spaces",
       "description": "Try gulp test:acceptance --platform='OS X 10.9' --sauce and this line will have platform set to OS, not the full string with spaces, which leads to a Sauce error since the OS version is not specified.",
       "updated": "2017-10-28",
@@ -374,7 +396,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 19,
+      "id": 20,
       "title": "Sauce window dimensions are not being set",
       "description": "Running tests on sauce shows up undefined,undefinedpx because this reference does not exist anymore https://github.com/cfpb/cfgov-refresh/blob/master/test/browser_tests/conf.js#L169-L170.",
       "updated": "2017-10-28",
@@ -395,7 +417,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 20,
+      "id": 21,
       "title": "State OR Region?",
       "description": "As currently designed, the site lets me think I can search for, say, schools in Virginia in the region of New England. Seems to me if I choose a state, the site should eliminate region as an additional option.",
       "updated": "2017-9-28",
@@ -414,7 +436,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 21,
+      "id": 22,
       "title": "AnnotationAttributes interface alignment",
       "description": "Evaluate AnnotationAttributes in light of the patterns established by ShapeAttributes and PlacemarkAttributes. Identify and resolve inconsistent patterns. We know of one property that breaks with the established attributes convention: AnnotationAttributes.opacity. This value is expressed in the attributes' alpha channel.",
       "updated": "2018-2-14",
@@ -433,7 +455,7 @@
       "license": "Apache License Version 2.0"
     },
     {
-      "id": 22,
+      "id": 23,
       "title": "TectonicPlatesLayer plate geometries are drawn incorrectly",
       "description": "The TectonicPlatesLayer plate geometries are drawn with SurfacePolygon, yet the source geometry for each plate is a WKT LineString. The geometry should be drawn with SurfacePolyline.",
       "updated": "2018-1-27",
@@ -452,7 +474,7 @@
       "license": "Apache License Version 2.0"
     },
     {
-      "id": 23,
+      "id": 24,
       "title": "Add a method for cleanly unregistering window controllers",
       "description": "With the new controller design, apps have the freedom to replace the default BasicWorldWindController with one of their own choosing. However, replacing the controller will currently leave dangling GestureRecognizer references (and perhaps others) hanging around, so we need to add a method of gracefully unregistering a controller and registering a new one that does proper clean up.",
       "updated": "2018-1-2",
@@ -469,6 +491,211 @@
       "popular": true,
       "agency_id": "NASA",
       "license": "Apache License Version 2.0"
+    },
+    {
+      "id": 25,
+      "title": "Return to top footer link not behaving as expected",
+      "description": "Using the keyboard, the link behaves correctly and takes the user visually to the top of the page, but a second tab navigation shoots the user back down to the next footer link.\n\nI believe the intent is that keyboard users can return to the top and then tab through that navigation, without tabbing through every link in the long footer. As it is now, this is not the case. See amazon.com for proper behavior in its 'return to top' footer link.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/2321",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 26,
+      "title": "Make site run faster",
+      "description": "The site is taking 12 seconds to build which makes it really time consuming to work on. It's loading all fractal components on every update which seem to be taking most of the time. Is it possible to only load them incrementally when that component has changed?",
+      "updated": "2017-10-13",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds-site/issues/417",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 27,
+      "title": "[Grid]: 7/12 and 5/12 column bug",
+      "description": "When using these columns, it doesn't work bc the last column has right margin so it drops to the next line, bc the width exceeds the usa-grid space.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1955",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 28,
+      "title": "Radio buttons mis-aligned when in an element with overflow-y: scroll",
+      "description": "Because the input for radio buttons are position: absolute, they do not scroll with the labels that follow them when inside an element that has overflow: scroll set. The end result is that once you've scrolled down within such an element, clicking on the visible labels triggers a click on the incorrect invisible input, which hasn't scrolled due to being position: absolute.\n\n(I recognize that overflow scroll is generally not preferred, but in a web application context we have a constraint that may require its use.)\n\nI believe a simple fix would be to add position: relative to one of the suggested ancestors of radio inputs. From the sample code in the docs, it looks like that might be .usa-fieldset-inputs, though I'm not sure if that would have any unintended side effects.",
+      "updated": "2018-3-2",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1881",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 29,
+      "title": "Accordion in mobile footer can only be expanded",
+      "description": "In the current mobile version of the footer component there is an accordion-like feature where links are accessed through tappable submenus. In this example, you can tap 'Topics' to expand but you can't tap it again to collapse the menu. You can also only have one submenu open at a time which may or may not be a bug.",
+      "updated": "2018-2-21",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Bug",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1857",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 30,
+      "title": "Remove explicit display values around aria-hidden",
+      "description": "We currently use the Sass mixin accessibly-hidden to display: none; when aria-hidden is set to true. Adding display values to the aria-hidden attribute is discouraged. We need to remove this mixing and replace by using either the hidden attribute or class names to define display properties.\n\nSee the following article for further guidance and information:\n\nhttps://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/",
+      "updated": "2017-10-23",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1513",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 31,
+      "title": "Checkbox hidden when label & input order flipped",
+      "description": "I'm generating forms with Django and the default format that is rendered has <label> followed by <input> which works beautifully with textfields but not so with checkboxes. The label shows up but the checkbox is hidden. The only way I can make it show up is to write a custom form only to flip the order of those elements to match your documentation.",
+      "updated": "2018-2-19",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/uswds/uswds",
+      "issueURL": "https://github.com/uswds/uswds/issues/1071",
+      "featured": true,
+      "active": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT license"
+    },
+    {
+      "id": 32,
+      "title": "Create Visualizations of Data from API",
+      "description": "Expected Behavior\nCreate cool data visualizations of the data from the API.\nCurrent Behavior\nHere's some examples:\nhttps://beta.observablehq.com/@danieljdufour/python-vs-ruby-number-of-projects-on-code-gov\nhttps://beta.observablehq.com/@danieljdufour/top-10-languages-of-projects-on-code-gov\nPossible Solution\nCreate a data visualization using D3 or any library you might like.",
+      "updated": "2018-03-02",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-api/issues/198",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 33,
+      "title": "Fix Repo Component Tests",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/473",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 34,
+      "title": "Fix Agency Page Tests",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/472",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
+    },
+    {
+      "id": 35,
+      "title": "Fix Autocomplete-Result Test",
+      "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
+      "languages": [
+        "TypeScript"
+      ],
+      "skill": "Advanced",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://github.com/GSA/code-gov-api",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/471",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     }
   ]
 }
