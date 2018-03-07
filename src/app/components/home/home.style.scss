@@ -47,17 +47,48 @@ body {
     .buttons {
       margin-top: -3rem;
     }
+
+//start here
     //set to 599px
     @media screen and (max-width: $medium-screen) {
       display: none;
     }
+
+    //save for changing mobile
+    @media screen and (min-width: $small-screen) {
+    h2 {
+      margin-top: -1rem;
+      margin-bottom: -2rem;
+      }
+    p {
+      font-size: 1.2em;
+      line-height: 1em;
+      max-width: 75rem;
+      margin: 2rem 2rem 3.5rem 3rem;
+      }
+    }
+
     button {
       margin-top: 2em;
     }
 }
 
 .help-wanted-mobile {
- .buttons {
+  @media screen and (min-width: $medium-screen) {
+    display: none;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+    max-width: 75rem;
+    margin: 2rem 2rem 0.5rem 3rem;
+  }
+  .buttons {
    //set to 600px
    @media screen and (min-width: $medium-screen) {
      display: none;
