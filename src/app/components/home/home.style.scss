@@ -166,6 +166,16 @@ body {
 .featured-projects {
   text-align: center;
 
+  #featured-projects-title {
+    background: white;
+    color: $featured-dark;
+    padding: 2rem;
+
+    h2 {
+      color: $featured-dark;
+    }
+  }
+
   h2 {
     color: $color-white;
     font-size: 1.75em;
@@ -190,13 +200,13 @@ body {
 
   &:nth-of-type(odd) {
     .usa-width-one-half {
-      float: right;
+      float: left;
     }
   }
 
   &:nth-of-type(even) {
     .usa-width-one-half {
-      float: left;
+      float: right;
     }
   }
 
@@ -221,153 +231,102 @@ body {
   }
 }
 
-.accessible-name-and-description-inspector {
-  background: #283036;
-  background: linear-gradient(215deg, #283036, #4a5963);
+.wntr {
+  background: $featured-dark;
   color: $color-white;
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/typing.png');
-      background-position: 0% 100%;
-      background-repeat: no-repeat;
-      background-size: 34rem;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-position: 0% 100%;
-      background-size: 45rem;
-    }
-
-    @media screen and (min-width: $extra-large-screen) {
-      background-position: 8% 100%;
-      background-size: 45rem;
-    }
-  }
-
-  button,
-  .usa-button,
-  h3,
-  h4,
-  p {
-    color: $color-white;
-  }
-}
-
-.osha-heat-safety {
-  background: #fdcf84;
-  background: linear-gradient(215deg, #cc9966 0%, #fdcf84 100%);
-
-  @media screen and (min-width: $medium-screen) {
-    background: radial-gradient(circle at 75% 50%, #fff 0%, #fdcf84 67%, #ac7f47 100%)
-  }
-
-  .usa-grid {
-    @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/construction_worker.png');
-      background-position: 103% 100%;
-      background-repeat: no-repeat;
-      background-size: 34rem;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-position: 99% 100%;
-      background-size: 45rem;
-    }
-
-    @media screen and (min-width: $extra-large-screen) {
-      background-position: 90% 100%;
-      background-size: 45rem;
-    }
-  }
-
-  button,
-  .usa-button,
-  h3,
-  h4,
-  p {
-    color: $color-gray-dark;
-  }
-
-  button,
-  .usa-button {
-    border-color: $color-gray-dark;
-
-    &:focus,
-    &:hover {
-      border-color: $brand-teal;
-      color: $color-white;
-    }
-  }
-}
-
-.owning-a-home {
-  background: #3f7fab;
-  background: linear-gradient(215deg, #3f7fab, #6db5f1);
-  color: $color-white;
-
-  @media screen and (min-width: $medium-screen) {
-    background: url('./assets/img/featured-projects/grass.png'), #3f7fab;
-    background: url('./assets/img/featured-projects/grass.png'), linear-gradient(215deg, #3f7fab, #6db5f1);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: cover, contain;
-  }
-
-  .featured-project-info {
-    padding-top: 0;
-
-    @media screen and (min-width: $small-screen) {
-      padding-bottom: 5rem;
-      padding-top: 0;
-    }
-
-    @media screen and (min-width: $medium-screen) {
-      padding-bottom: 9rem;
-      padding-top: 1rem;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      padding-bottom: 11rem;
-      padding-top: 2rem;
-    }
-  }
-
-  .usa-grid {
-    @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/house_for_sale.png');
+      background: url('./assets/img/featured-projects/pipes3.png');
       background-position: 0% 100%;
       background-repeat: no-repeat;
       background-size: 50%;
     }
   }
 
-  button,
-  .usa-button,
-  h3,
-  h4,
-  p {
+  button, .usa-button, h3, h4, p {
+    color: $color-white;
+  }
+}
+
+.its-ode {
+
+  background: $featured-light;
+  color: $color-white;
+
+  .usa-grid {
+    @media screen and (min-width: $medium-screen) {
+      background-image: url('./assets/img/featured-projects/smartcity.png');
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: 100% 50%;
+    }
+
+    .featured-project-info {
+      .fp-short-name {
+        color: $color-gray-dark
+      }
+      .fp-verbose-name {
+        color: $color-gray-dark;
+      }
+      .fp-developed-by {
+        color: darkgray;
+      }
+
+    }
+  }
+
+  button, .usa-button {
+    border-color: $color-gray-dark;
+    color: $color-gray-dark;
+  }
+
+  button, .usa-button {
+    &:focus, &:hover {
+      border-color: $brand-teal;
+      color: $color-white;
+    }
+  }
+}
+
+
+
+.walkoff {
+
+  background: $featured-dark;
+  color: $color-white;
+
+  .usa-grid {
+    @media screen and (min-width: $medium-screen) {
+      background-image: url('./assets/img/featured-projects/WALKOFF.png');
+      background-repeat: no-repeat;
+      background-size: 25rem;
+      background-position: 25% 50%;
+    }
+  }
+
+  button, .usa-button, h3, h4, p {
     color: $color-white;
   }
 }
 
 .featured-project-info {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding: 3rem 4rem;
 
-  @media screen and (min-width: $small-screen) {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
+  .fp-short-name {
+    font-size: 3rem;
+    font-weight: bold;
   }
 
-  @media screen and (min-width: $medium-screen) {
-    padding-bottom: 10rem;
-    padding-top: 10rem;
+  .fp-verbose-name {
+    font-size: 2rem;
+    font-weight: bold;
   }
 
-  @media screen and (min-width: $large-screen) {
-    padding-bottom: 12rem;
-    padding-top: 12rem;
+  .fp-developed-by {
+    color: lightgray;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
   .buttons {
