@@ -67,14 +67,22 @@
   }
   a {
     color: $color-gray-dark;
+    text-decoration: none;
+    padding: 3em 2em;
+    @media screen and (min-width: $medium-screen) {
+      padding: 0;
+    }
   }
   div {
     padding: 0 2em;
     font-size: 1.8rem;
   }
   i {
-    font-size: 15rem;
+    font-size: 5rem;
     color: $color-gray-dark;
+    @media screen and (min-width: $medium-screen) {
+      font-size: 15rem;
+    }
   }
   span {
     padding: 1.7rem 0 1rem;
