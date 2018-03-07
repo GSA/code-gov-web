@@ -3,26 +3,26 @@
   <small>Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</small>
   <p class="help-wanted-card-description">{{ item.description | truncate : 250}}</p>
   <dl *ngIf="!mobile">
-    <div>
+    <div *ngIf="item.languages">
       <dt>Language:</dt>
       <dd>{{ item.languages.join(', ') }}</dd>
     </div>
 
-    <div>
+    <div *ngIf="item.skill">
       <dt>Skill Level:</dt>
       <dd>{{ item.skill | capitalize }}</dd>
     </div>
 
-    <div>
+    <div *ngIf="item.effort">
       <dt>Effort:</dt>
       <dd>{{ item.effort }}</dd>
     </div>
-    
-    <div>
+
+    <div *ngIf="item.impact">
       <dt>Impact:</dt>
       <dd>{{ item.impact | capitalize }}</dd>
     </div>
-    
+
   </dl>
   <div class="help-wanted-card-actions">
     <a external-link [href]="item.projectURL" *ngIf="item.projectURL"><button class="usa-button button--tertiary">Project Details</button></a>
