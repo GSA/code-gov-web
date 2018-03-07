@@ -174,7 +174,7 @@ export class HelpWantedComponent {
           return false;
         }
 
-        return filteredValues.every(value => {
+        return filteredValues.some(value => {
           if (Array.isArray(itemValue)) {
             return itemValue.indexOf(value) > -1;
           } else {

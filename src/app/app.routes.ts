@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import {
+   FaqsComponent,
    FourOhFourComponent,
    HelpWantedComponent,
    HomeComponent,
@@ -25,6 +26,7 @@ export const ROUTES: Routes = [
       ...POLICY_GUIDE_ROUTES,
       { path: 'search', component: SearchResultsComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
+      { path: 'faqs', component: FaqsComponent },
       { path: 'roadmap', component: RoadmapComponent },
       { path: 'help-wanted', component: HelpWantedComponent },
       { path: '**', component: FourOhFourComponent },

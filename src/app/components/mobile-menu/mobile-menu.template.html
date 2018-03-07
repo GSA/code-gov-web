@@ -26,6 +26,9 @@
       </ul>
     </li>
     <li class="mobile-menu-item">
+        <a class="link" routerLink="/help-wanted" routerLinkActive="link--active" (click)="hideSideNav()">Help Wanted</a>
+    </li>
+    <li class="mobile-menu-item">
       <div [ngClass]="{open: openAccordions['/policy-guide/docs']}" (click)="toggleAccordion('/policy-guide/docs')">
         <a class="link">Policy Info</a>
         <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/policy-guide/docs'], 'fa-chevron-up': openAccordions['/policy-guide/docs']}"></i></a>
@@ -101,6 +104,12 @@
           </ul>
         </li>
       </ul>
+    </li>
+    <li class="mobile-menu-item">
+        <a class="link" routerLink="/faqs" routerLinkActive="link--active" (click)="hideSideNav()">FAQ</a>
+    </li>
+    <li class="mobile-menu-item">
+        <a class="link" routerLink="/roadmap" routerLinkActive="link--active" (click)="hideSideNav()">Roadmap</a>
     </li>
     <li class="mobile-menu-item">
       <a class="link" href="https://bit.ly/2pnRlYN" rel="noopener">Join Mailing List</a>
