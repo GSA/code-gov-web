@@ -58,7 +58,7 @@ export class SearchResultsComponent {
     }));
 
     this.filterForm.valueChanges.subscribe(data => {
-      //this.filteredResults = this.sortResults(this.filterResults(this.results));
+      // this.filteredResults = this.sortResults(this.filterResults(this.results));
       this.filteredResults = this.filterResults(this.results);
     });
 

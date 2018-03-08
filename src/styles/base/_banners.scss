@@ -12,7 +12,8 @@
 .banner-container {
   left: 50%;
   margin: 0 auto;
-  max-width: 55em;
+  //was 55em, changed to 75em to account for search and help wanted
+  max-width: 85em;
   position: absolute;
   text-align: center;
   top: 50%;

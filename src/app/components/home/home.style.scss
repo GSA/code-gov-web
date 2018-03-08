@@ -4,10 +4,159 @@
 @import '../../../styles/base/variables';
 @import '~uswds/src/stylesheets/core/variables';
 
+
 body {
   background-color: $color-white;
 }
 
+//div between Search and Help Wanted
+.vertical-row {
+  @media screen and (min-width: $medium-screen) {
+    height: 9em;
+    width: 3px;
+    //should change this to variable
+    background: white;
+    top: 12em;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+  }
+}
+
+//Help Wanted styles between Banner and Our Mission (About) sections on homepage
+.help-wanted {
+    h2 {
+      margin-top: -1rem;
+      margin-bottom: -2rem;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1em;
+      max-width: 75rem;
+      margin: 2rem 2rem 3.5rem 3rem;
+    }
+    .buttons {
+      margin-top: -3rem;
+    }
+
+//start here
+    //set to 599px
+    @media screen and (max-width: $medium-screen) {
+      display: none;
+    }
+
+    //save for changing mobile
+    @media screen and (min-width: $small-screen) {
+    h2 {
+      margin-top: -1rem;
+      margin-bottom: -2rem;
+      }
+    p {
+      font-size: 1.2em;
+      line-height: 1em;
+      max-width: 75rem;
+      margin: 2rem 2rem 3.5rem 3rem;
+      }
+    }
+
+    button {
+      margin-top: 2em;
+    }
+}
+
+.help-wanted-mobile {
+  @media screen and (min-width: $medium-screen) {
+    display: none;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+    margin-bottom: -0.5em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5em;
+    max-width: 75rem;
+    margin: 2rem 2rem 0.5rem 3rem;
+  }
+  .buttons {
+   //set to 600px
+   @media screen and (min-width: $medium-screen) {
+     display: none;
+   }
+   //set to 480px
+   //@media screen and (max-width: $small-screen) {
+     //margin-top: 5.5rem;
+     //margin-bottom: 5.5rem;
+   //}
+ }
+
+ button {
+   max-width: 170px;
+   width: 44%;
+
+ }
+}
+
+//Questions section
+.questions {
+  p {
+    margin: 3rem auto 2rem;
+    max-width: 75rem;
+    font-size: 1.2em;
+    padding-top: 4em;
+  }
+  img {
+    max-width: 4%;
+    max-height: 4%;
+  }
+  a {
+    color: #23C0BA;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+    }
+  }
+  @media screen and (min-width: $medium-screen) {
+    display: none;
+  }
+  //set to 480px
+  @media screen and (max-width: $small-screen) {
+    display: none;
+  }
+}
+
+//Questions section for mobile
+.questions-mobile {
+  p {
+    margin: 4rem 2.5rem -1.5rem;
+    max-width: 75rem;
+    font-size: .9em;
+    text-align: left;
+  }
+  img {
+    max-width: 5%;
+    max-height: 5%;
+  }
+  .second-line {
+    margin: 1.25rem -0.5rem 8.5rem 4.5rem;
+  }
+  a {
+    color: #23C0BA;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-teal;
+      }
+    }
+    //set to 481px
+    @media screen and (min-width: $small-screen) {
+      display: none;
+    }
+}
+
+//aka Our Mission section of homepage
 .about {
   padding-top: 4rem;
 
@@ -137,9 +286,6 @@ body {
 
 }
 
-
-
-
 .banner-background {
   animation: 15s linear zoomOutOnBackground;
   background-attachment: scroll;
@@ -160,8 +306,6 @@ body {
     background-attachment: fixed;
   }
 }
-
-
 
 .featured-projects {
   text-align: center;
