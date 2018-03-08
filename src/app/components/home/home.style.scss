@@ -237,11 +237,16 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/pipes3.png');
-      background-position: 0% 100%;
+      background: url('./assets/img/featured-projects/pipes4.png');
+      background-position: 0% 50%;
       background-repeat: no-repeat;
       background-size: 50%;
     }
+    
+    @media screen and (min-width: $large-screen) {
+      background-size: 30%;
+    }
+
   }
 
   button, .usa-button, h3, h4, p {
@@ -256,10 +261,14 @@ body {
 
   .usa-grid {
     @media screen and (min-width: $medium-screen) {
-      background-image: url('./assets/img/featured-projects/smartcity.png');
+      background-image: url('./assets/img/featured-projects/smartcity2.png');
       background-repeat: no-repeat;
-      background-size: 50%;
+      background-size: 50%;  
       background-position: 100% 50%;
+    }
+    
+    @media screen and (min-width: $large-screen) {
+      background-size: 30%;
     }
 
     .featured-project-info {
