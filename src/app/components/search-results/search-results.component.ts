@@ -58,20 +58,25 @@ export class SearchResultsComponent {
     }));
 
     this.filterForm.valueChanges.subscribe(data => {
-      this.filteredResults = this.sortResults(this.filterResults(this.results));
+      //this.filteredResults = this.sortResults(this.filterResults(this.results));
+      this.filteredResults = this.filterResults(this.results);
     });
 
+    /*
     this.metaForm = formBuilder.group({
       pageSize: this.pageSize,
       sort: this.sort,
     });
+    */
 
+    /*
     this.metaForm.valueChanges.subscribe(data => {
       this.pageSize = data.pageSize;
       this.sort = data.sort;
 
       this.filteredResults = this.sortResults(this.filterResults(this.results));
     });
+    */
   }
 
   ngOnInit() {
@@ -105,6 +110,7 @@ export class SearchResultsComponent {
     }, {})));
   }
 
+  /*
   sortResults(results) {
     if (this.metaForm.value.sort === 'date') {
       return results.sort((a, b) => {
@@ -121,10 +127,11 @@ export class SearchResultsComponent {
       });
     } else if (this.metaForm.value.sort === 'relevance') {
       return results.sort((a, b) => {
-        return a.score > b.score ? -1 : a.score === b.score ? 0 : 1;
+        return a.searchScore > b.searchScore ? -1 : a.searchScore === b.searchScore ? 0 : 1;
       });
     }
   }
+  */
 
   getFilteredValues(property) {
     return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
