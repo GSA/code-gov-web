@@ -83,6 +83,16 @@
         }
       }
     }
+
+    a {
+      cursor: pointer;
+    }
+
+    i {
+      color: $color-gray;
+      font-size: 1.5em;
+      line-height: 40px;
+    }
   }
 }
 
@@ -139,19 +149,6 @@
 
   &.active {
     transform: translateY(52px);
-  }
-}
-
-.toggle-search-box-button {
-  color: $color-gray;
-  cursor: pointer;
-  display: none;
-  float: right;
-  font-size: 1.5em;
-  line-height: 40px;
-
-  @media screen and (min-width: $small-screen) {
-    display: block;
   }
 }
 
