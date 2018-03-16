@@ -50,7 +50,11 @@ export class ReposSearchComponent {
    * @return {void}
    */
   onSubmit(): void {
-    this.search();
+    if (this.queryValue && this.queryValue.length > 0) {
+      this.search();
+    } else {
+      console.log("No search terms were entered, so do nothing");
+    }
   }
 
   /**

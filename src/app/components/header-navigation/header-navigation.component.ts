@@ -39,8 +39,12 @@ export class HeaderNavigationComponent {
    * query.
    */
   handleFormSubmission() {
-    this.search();
-    this.resetSearchQuery();
+    if (this.searchQuery && this.searchQuery.length > 0) {
+      this.search();
+      this.resetSearchQuery();
+    } else {
+      console.log("No search terms were entered, so do nothing");
+    }
   }
 
   /**
