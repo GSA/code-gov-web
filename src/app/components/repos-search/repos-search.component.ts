@@ -53,7 +53,7 @@ export class ReposSearchComponent {
     if (this.queryValue && this.queryValue.length > 0) {
       this.search();
     } else {
-      console.log("No search terms were entered, so do nothing");
+      console.log('No search terms were entered, so do nothing');
     }
   }
 
