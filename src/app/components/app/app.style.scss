@@ -1,5 +1,4 @@
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .block--dark {
   .cls-1 {
@@ -7,13 +6,6 @@
   }
 }
 
-.app-footer {
-  text-align: center;
-
-  @media screen and (min-width: $small-screen) {
-    text-align: left;
-  }
-}
 
 .agency-logos {
   li {
@@ -112,10 +104,6 @@
   @media screen and (min-width: $small-screen) {
     font-size: 1em;
     text-align: left;
-  }
-
-  > .usa-grid {
-    padding: 0;
   }
 
   .search-form {

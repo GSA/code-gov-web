@@ -1,13 +1,11 @@
-@import '~bourbon/app/assets/stylesheets/addons/clearfix';
-@import '../../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 
 .repo-general {
   h2 {
     font-size: 3.5rem;
     margin: 0;
-    color: #323a45;
+    color: $color-gray-dark;
   }
   a {
     color: $brand-teal-dark;
@@ -102,7 +100,7 @@
   padding: .5rem;
   width: 100%;
   background-color: lighten( $brand-blue , 60%);
-  
+
   li,span.li {
     display: inline;
     color: $brand-blue-dark;

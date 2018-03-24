@@ -1,7 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .repos-container,
 .no-repos {
@@ -88,7 +85,7 @@
 
   &--paged {
     display: none;
-    
+
     @media screen and (min-width: $medium-screen) {
       display: block;
     }

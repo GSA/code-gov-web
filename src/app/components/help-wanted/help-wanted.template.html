@@ -1,21 +1,21 @@
-<div class="banner-help-wanted">
-  <h1>Help Wanted</h1>
+<div class="banner">
+  <div class="banner-title">Help Wanted</div>
   <p>Discover how you can get involved and make America's Code better</p>
 </div>
 
 <div class="help-wanted{{mobile ? ' mobile' : ''}}">
-  <div class="help-wanted-breadcrumb usa-grid">
+  <div class="help-wanted-breadcrumb indented">
     <ul class="usa-unstyled-list">
       <li><a routerLink="/">Home</a></li>
       <li>Help Wanted</li>
     </ul>
   </div>
-  <div class="help-wanted-content usa-grid">
+  <div class="help-wanted-content indented">
     <div id="help-wanted-filter-section">
       <h4 *ngIf="!mobile">Filter</h4>
-      <form class="help-wanted-filters" [formGroup]="filterForm"  *ngIf="!mobile">
-        <fieldset class="usa-fieldset-inputs">
-          <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getDesktopFormOptions()" >
+      <form class="filter-form" [formGroup]="filterForm"  *ngIf="!mobile">
+        <fieldset>
+          <ul class="category" *ngFor="let option of getDesktopFormOptions()" >
             <li class="filter-bottom-padding">
               <h5>{{option.display}}</h5>
               <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
@@ -52,18 +52,18 @@
 
 <div class="filter-form-popup{{displayPopup ? ' display' : ''}}" *ngIf="mobile">
   <div class="close-button-wrapper"><span class="close-button" (click)="closePopup()">X</span></div>
-  <form class="help-wanted-filters" [formGroup]="filterForm">
+  <form class="filter-form" [formGroup]="filterForm">
     <h4>Filter</h4>
-    <fieldset class="usa-fieldset-inputs">
-      <ul class="help-wanted-filter usa-unstyled-list" *ngFor="let option of getMobileFormOptions()" >
+    <fieldset>
+      <ul class="category" *ngFor="let option of getMobileFormOptions()" >
       <li class="filter-bottom-padding">
         <h5>{{option.display}}</h5>
         <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
       </li>
       </ul>
-      <ul class="help-wanted-filter usa-unstyled-list">
+      <ul class="help-wanted-filter">
         <li>
-          <button class="usa-button-big button--tertiary" (click)="applyFilters(); closePopup();">Apply Filters</button>
+          <button (click)="applyFilters(); closePopup();">Apply Filters</button>
         </li>
       </ul>
     </fieldset>

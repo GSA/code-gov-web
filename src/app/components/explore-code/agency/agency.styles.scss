@@ -1,4 +1,4 @@
-@import '../../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .agency-container {
 
@@ -20,7 +20,7 @@
   }
 }
 
-.repo { 
+.repo {
 
   a {
     display: block;

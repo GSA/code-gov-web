@@ -9,9 +9,9 @@
           Unlock the tremendous potential of the Federal Government’s software.
         </p>
       </div>
-    <div class="usa-grid">
+    <div class="indented">
       <div class="usa-width-one-half">
-        <repos-search autofocus=true buttonClasses="button--transparent"></repos-search>
+        <repos-search autofocus=true buttonClasses="transparent"></repos-search>
       </div>
       <div class="vertical-row"></div>
       <div class="usa-width-one-half">
@@ -20,7 +20,7 @@
           <p>Discover how you can get involved and make America's code better</p>
           <!--button for above medium (601) screens-->
           <div class="buttons">
-            <button class="button--transparent" routerLink="/help-wanted">Explore Tasks</button>
+            <button class="transparent" routerLink="/help-wanted">Explore Tasks</button>
           </div>
         </div>
         <!--mobile button with different style and text for below medium screens-->
@@ -28,75 +28,59 @@
           <h2>Help Wanted!</h2>
           <p>Discover how you can get involved and make America's code better</p>
           <div class="buttons">
-            <button class="button--transparent" routerLink="/help-wanted">Explore Tasks</button>
+            <button class="transparent" routerLink="/help-wanted">Explore Tasks</button>
           </div>
           </div>
       </div>
     </div>
-<!--
-    <div class="usa-grid">
-      <div class="usa-width-one-whole">
-        <div class="questions">
-          <p><img alt="Chat Bubble" aria-hidden="true" src="../../../assets/img/icons/chat_bubble.png" /> Have questions or feedback? Open an issue on our open source repository <a external-link href="https://github.com/GSA/code-gov-web/issues">here</a>.</p>
-        </div>
-        <div class="questions-mobile">
-          <p><img alt="Chat Bubble" aria-hidden="true" src="../../../assets/img/icons/chat_bubble.png" />
-            Have questions or feedback?</p>
-          <p class="second-line">Open an issue on our open source repository <a external-link href="https://github.com/GSA/code-gov-web/issues">here</a>.</p>
-        </div>
-      </div>
-    </div>
--->
-    </div>
+  </div>
   <a class="scroll-indicator" title="Scroll Down" pageScroll [pageScrollDuration]="250" [pageScrollOffset]="getAboutOffset()" pageScrollTarget=".about" href="#"><i class="fa fa-angle-down"></i></a>
 </section>
-<section id="about" class="about">
-  <div class="usa-grid">
-    <header>
-      <h2>Our Mission</h2>
-      <p>
-        Code.gov leverages the power of code sharing and collaboration to help the US Government
-        cut down on duplicative software development and save millions of taxpayer dollars for
-        the American people.
-      </p>
-    </header>
-    <hr />
-    <ul class="usa-unstyled-list usa-grid about-actions">
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/docs/overview/introduction">
-          <img alt="About Icon" aria-hidden="true" src="../../../assets/img/icons/info_bl.png" />
-          <h3>About Us</h3>
-          <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
-        </a>
-      </li>
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/policy/introduction">
-          <img alt="Policy Info Icon" aria-hidden="true" src="../../../assets/img/icons/policy_bl.png" />
-          <h3>Policy Info</h3>
-          <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
-        </a>
-      </li>
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/docs/compliance/dashboard">
-          <img alt="Dashboard Icon" aria-hidden="true" src="../../../assets/img/icons/check_bl.png" />
-          <h3>Progress Report</h3>
-          <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
-        </a>
-      </li>
-    </ul>
-  </div>
+<section id="about" class="about indented">
+  <header>
+    <h2>Our Mission</h2>
+    <p>
+      Code.gov leverages the power of code sharing and collaboration to help the US Government
+      cut down on duplicative software development and save millions of taxpayer dollars for
+      the American people.
+    </p>
+  </header>
+  <hr />
+  <ul class="indented about-actions">
+    <li class="about-action width-one-third">
+      <a routerLink="/policy-guide/docs/overview/introduction">
+        <img alt="About Icon" aria-hidden="true" src="../../../assets/img/icons/info_bl.png" />
+        <h3>About Us</h3>
+        <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
+      </a>
+    </li>
+    <li class="about-action width-one-third">
+      <a routerLink="/policy-guide/policy/introduction">
+        <img alt="Policy Info Icon" aria-hidden="true" src="../../../assets/img/icons/policy_bl.png" />
+        <h3>Policy Info</h3>
+        <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
+      </a>
+    </li>
+    <li class="about-action width-one-third">
+      <a routerLink="/policy-guide/docs/compliance/dashboard">
+        <img alt="Dashboard Icon" aria-hidden="true" src="../../../assets/img/icons/check_bl.png" />
+        <h3>Progress Report</h3>
+        <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
+      </a>
+    </li>
+  </ul>
 </section>
 <section class="featured-projects block block--white">
   <ul class="usa-unstyled-list">
     <li class="usa-width-one-whole" id="featured-projects-title">
-      <div class="usa-grid">
+      <div class="indented">
         <div class="usa-width-one-whole">
           <h1>Featured Projects</h1>
         </div>
       </div>
     </li>
     <li class="block wntr featured-project usa-width-one-whole">
-      <div class="usa-grid">
+      <div class="indented">
         <div class="usa-width-one-half">
           <div class="featured-project-info">
             <div class="fp-short-name">WNTR</div>
@@ -105,18 +89,18 @@
             <p class="fp-description">A python package designed to simulate and analyze resilience of water distribution networks.</p>
             <div class="buttons">
               <button
-                class="button--transparent"
+                class="transparent"
                 routerLink="/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0"
               >View Project</button>
               &nbsp;
-              <a href="https://github.com/usepa/wntr"><button class="button--transparent">Go to Repo</button></a>
+              <a href="https://github.com/usepa/wntr"><button class="transparent">Go to Repo</button></a>
             </div>
           </div>
         </div>
       </div>
     </li>
     <li class="block its-ode featured-project usa-width-one-whole">
-      <div class="usa-grid">
+      <div class="indented">
         <div class="usa-width-one-half">
           <div class="featured-project-info">
             <div class="fp-short-name">ITS ODE</div>
@@ -125,18 +109,18 @@
             <p class="fp-description">A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.</p>
             <div class="buttons">
               <button
-                class="button--transparent"
+                class="transparent"
                 routerLink="/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_"
               >View Project</button>
               &nbsp;
-              <a href="https://github.com/usdot-jpo-ode/jpo-ode"><button class="button--transparent">Go to Repo</button></a>
+              <a href="https://github.com/usdot-jpo-ode/jpo-ode"><button class="transparent">Go to Repo</button></a>
             </div>
           </div>
         </div>
       </div>
     </li>
     <li class="block walkoff featured-project usa-width-one-whole">
-      <div class="usa-grid">
+      <div class="indented">
         <div class="usa-width-one-half">
           <div class="featured-project-info">
             <div class="fp-short-name">WALKOFF</div>
@@ -144,11 +128,11 @@
             <p class="fp-description">Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.</p>
             <div class="buttons">
               <button
-                class="button--transparent"
+                class="transparent"
                 routerLink="/explore-code/agencies/NSA/repos/nsa_walkoff"
               >View Project</button>
               &nbsp;
-              <a href="https://github.com/iadgov/WALKOFF" ><button class="button--transparent">Go to Repo</button></a>
+              <a href="https://github.com/iadgov/WALKOFF" ><button class="transparent">Go to Repo</button></a>
             </div>
           </div>
         </div>
@@ -157,7 +141,7 @@
   </ul>
 </section>
 <section class="press l-block--extra-large">
-  <div class="usa-grid">
+  <div class="indented">
     <h2>Press</h2>
     <div class="press-container">
       <div class="usa-width-one-whole quote-large">

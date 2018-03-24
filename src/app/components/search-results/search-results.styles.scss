@@ -1,7 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 h3 {
   font-size: $lead-font-size;
@@ -85,7 +82,7 @@ h3 {
     }
 
     p {
-      background-color: $brand-blue-gray-dark;
+      background-color: $color-gray-dark;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
       color: $color-white;

@@ -1,13 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '../../../styles/base/grid-settings';
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
-
-
-body {
-  background-color: $color-white;
-}
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 //div between Search and Help Wanted
 .vertical-row {
@@ -379,7 +370,7 @@ body {
   background: $featured-dark;
   color: $color-white;
 
-  .usa-grid {
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background: url('./assets/img/featured-projects/pipes4.png');
       background-position: 0% 50%;
@@ -403,7 +394,7 @@ body {
   background: $featured-light;
   color: $color-white;
 
-  .usa-grid {
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background-image: url('./assets/img/featured-projects/smartcity4.png');
       background-repeat: no-repeat;
@@ -449,7 +440,7 @@ body {
   background: $featured-dark;
   color: $color-white;
 
-  .usa-grid {
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background-image: url('./assets/img/featured-projects/WALKOFF.png');
       background-repeat: no-repeat;

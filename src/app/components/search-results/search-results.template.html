@@ -2,13 +2,13 @@
   <div class="search-results-banner">
     <h1>Search Results</h1>
   </div>
-  <div class="search-results-breadcrumb usa-grid">
-    <ul class="usa-unstyled-list">
+  <div class="search-results-breadcrumb indented">
+    <ul>
       <li><a routerLink="/">Home</a></li>
       <li>Search Results</li>
     </ul>
   </div>
-  <div class="search-results-header usa-grid">
+  <div class="search-results-header indented">
     <h3 *ngIf="total" class="repos-count">
       We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
     </h3>
@@ -32,7 +32,7 @@
     </form>
     -->
   </div>
-  <div class="usa-grid">
+  <div class="indented">
     <!-- TODO: Add this section back in once we have better data quality -->
     <!-- <div class="search-filter-section">
       <h4>Filter</h4>

@@ -1,4 +1,4 @@
-@import '../../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .upgrade-schema {
   header {
@@ -50,8 +50,5 @@
   section {
     border-top: 1px solid $color-gray-lighter;
   }
-
-  & > .usa-grid {
-    padding: 0;
-  }
+  
 }
