@@ -44,7 +44,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   getStatuses() {
-    this.statusesSub = this.statusService.getJsonFile().
+    this.statusesSub = this.clientService.getStatuses().
       subscribe((result) => {
         if (result) {
           for (let statusAgency in result.statuses) {
@@ -52,14 +52,14 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
              // if agencyWidePolicy is null in report.json it means the agency doesn't have
              // to comply, so don't include it in the dash.
              // TODO: should make this more explicit in the API,
-            if (result.statuses[statusAgency].requirements['agencyWidePolicy'] !== null) {
+            if (result.statuses[statusAgency].metadata.agency.requirements['agencyWidePolicy'] !== null) {
 
               let requirements = [];
               let overallStatus;
 
-              for (let requirement in result.statuses[statusAgency].requirements) {
-                if (result.statuses[statusAgency].requirements.hasOwnProperty(requirement)) {
-                  const rValue = result.statuses[statusAgency].requirements[requirement];
+              for (let requirement in result.statuses[statusAgency].metadata.agency.requirements) {
+                if (result.statuses[statusAgency].metadata.agency.requirements.hasOwnProperty(requirement)) {
+                  const rValue = result.statuses[statusAgency].metadata.agency.requirements[requirement];
 
                   let requirementStatus = 'noncompliant';
 
