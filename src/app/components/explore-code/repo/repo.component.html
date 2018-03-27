@@ -1,7 +1,7 @@
 <div class="repo-general">
 <section *ngIf="repo" class="repo-container indented">
     <div class="repo-breadcrumb">
-        <ul class="usa-unstyled-list">
+        <ul>
           <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/explore-code/agencies/{{repo.agency.acronym}}">{{repo.agency.acronym}}</a></li>
           <li>{{repo.name}}</li>
@@ -21,7 +21,7 @@
             {{ tag }}
           </button>
         </span>
-        <ul class="usa-unstyled-list repo-features">
+        <ul class="repo-features">
             <li>
               <span *ngIf="repo.permissions?.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
               <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>

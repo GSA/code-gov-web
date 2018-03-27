@@ -115,7 +115,7 @@ h3 {
 }
 
 .search-filter-section {
-  @include span-columns(3);
+  @include @extend .width-quarter;
 
   padding-top: 2rem;
 
@@ -156,7 +156,7 @@ h3 {
 }
 
 .search-results-section {
-  @include span-columns(12);
+  @include @extend .width-whole;
 }
 
 .load-more-button {

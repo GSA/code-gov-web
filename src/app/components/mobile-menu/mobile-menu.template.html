@@ -1,5 +1,5 @@
 <div class="mobile-menu" [ngClass]="{open: isOpen}">
-  <ul class="mobile-menu-items usa-unstyled-list">
+  <ul class="mobile-menu-items">
     <li class="mobile-menu-item">
       <form
           class="search-form"
@@ -17,7 +17,7 @@
         <a class="link">Browse Projects</a>
         <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/explore-code/agencies'], 'fa-chevron-up': openAccordions['/explore-code/agencies']}"></i></a>
       </div>
-      <ul class="mobile-menu-sub-items usa-unstyled-list">
+      <ul class="mobile-menu-sub-items">
         <li *ngFor="let agency of agencies" class="mobile-menu-item">
           <a class="agency-link" routerLink="/explore-code/agencies/{{agency.acronym}}" routerLinkActive="link--active" (click)="hideSideNav()">
             {{agency.name}}
@@ -33,13 +33,13 @@
         <a class="link">Policy Info</a>
         <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/policy-guide/docs'], 'fa-chevron-up': openAccordions['/policy-guide/docs']}"></i></a>
       </div>
-      <ul class="mobile-menu-sub-items usa-unstyled-list">
+      <ul class="mobile-menu-sub-items">
         <li class="mobile-menu-item">
           <div [ngClass]="{open: openAccordions['/policy-guide/docs/overview']}" (click)="toggleAccordion('/policy-guide/docs/overview')">
             <a class="link">Overview</a>
             <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/policy-guide/docs/overview'], 'fa-chevron-up': openAccordions['/policy-guide/docs/overview']}"></i></a>
           </div>
-          <ul class="mobile-menu-sub-items usa-unstyled-list">
+          <ul class="mobile-menu-sub-items">
             <li class="mobile-menu-item">
               <a class="link" routerLink="/policy-guide/docs/overview/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
                 Introduction
@@ -57,7 +57,7 @@
             <a class="link">Compliance</a>
             <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/policy-guide/docs/compliance'], 'fa-chevron-up': openAccordions['/policy-guide/docs/compliance']}"></i></a>
           </div>
-          <ul class="mobile-menu-sub-items usa-unstyled-list">
+          <ul class="mobile-menu-sub-items">
             <li class="mobile-menu-item">
               <a class="link" routerLink="/policy-guide/docs/compliance/dashboard" routerLinkActive="link--active" (click)="hideSideNav()">
                 Agency Compliance
@@ -80,7 +80,7 @@
             <a class="link">Open Source Pilot</a>
             <a class="expander"><i class="pull-right fa" [ngClass]="{'fa-chevron-down': !openAccordions['/policy-guide/docs/open-source'], 'fa-chevron-up': openAccordions['/policy-guide/docs/open-source']}"></i></a>
           </div>
-          <ul class="mobile-menu-sub-items usa-unstyled-list">
+          <ul class="mobile-menu-sub-items">
             <li class="mobile-menu-item">
               <a class="link" routerLink="/policy-guide/docs/open-source/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
                 Introduction

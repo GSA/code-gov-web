@@ -81,7 +81,7 @@
 }
 
 #help-wanted-filter-section {
-  @include span-columns(3);
+  @include @extend .width-quarter;
 
   h4 {
     color: $color-black;
@@ -130,7 +130,7 @@
 }
 
 .help-wanted-results {
-  @include span-columns(9);
+  @extend .width-three-quarters;
 }
 
 .help-wanted-content-header {

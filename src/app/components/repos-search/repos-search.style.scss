@@ -1,7 +1,6 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
 .browse {
-  @include span-columns(12);
   margin-top: 0.7rem;
 
   @media screen and (min-width: $small-screen) {
@@ -19,7 +18,7 @@
 }
 
 .search-with-icon-button {
-  @include span-columns(3);
+  @include @extend .width-quarter;
   font-size: 0.8em;
   margin: 0;
   margin-left: 10px;
@@ -69,7 +68,7 @@ button {
   }
 
   &.search-with-icon-button {
-    @include span-columns(3);
+    @include @extend .width-quarter;
     display: block;
     font-size: 0.8em;
     margin-left: 0;
@@ -104,16 +103,16 @@ button {
 }
 
 .search-input-container {
-  @include span-columns(9);
+  @extend .width-three-quarters;
 
   @media screen and (min-width: $small-screen) {
-    @include span-columns(12);
+    @include @extend .width-whole;
   }
 }
 
 .search-results-content {
   .search-input-container {
-    @include span-columns(9);
+    @extend .width-three-quarters;
     margin-left: 0;
   }
 

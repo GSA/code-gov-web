@@ -240,7 +240,6 @@
 }
 
 .about-action {
-  @include span-columns(12);
   text-align: center;
 
   @media screen and (min-width: $medium-screen) {
