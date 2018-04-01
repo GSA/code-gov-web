@@ -1,56 +1,5 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-  .banner-help-wanted {
-    background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 2rem;
-    padding-bottom: 5rem;
-    padding-top: 8rem;
-    text-align: center;
-
-    //To accocunt for header p text pushing the padding
-    @media screen and (min-width: $large-screen) {
-      padding-bottom: 8rem;
-    }
-  }
-
-/*
-
-#banner-help-wanted {
-
-  max-height: 20rem;
-
- .banner-background {
-    background-attachment: scroll;
-    background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    margin-bottom: 2rem;
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 100%;
-
-    // HACK: This is a hack to prevent ugliness on iOS
-    @media screen and (min-width: 768px) {
-      background-attachment: fixed;
-    }
-  }
-
-  p {
-    max-width: 80%;
-  }
-}
-*/
-
 .help-wanted-breadcrumb {
   font-size: 1em;
   margin-bottom: 4rem;
@@ -81,7 +30,7 @@
 }
 
 #help-wanted-filter-section {
-  @include @extend .width-quarter;
+  @extend .width-quarter;
 
   h4 {
     color: $color-black;
@@ -95,9 +44,14 @@
   h5 {
     font-family: Helvetica, $header-font-family;
   }
+
+  a {
+    font-weight: normal;
+  }
 }
 
 .help-wanted-filter {
+
   h5 {
     color: $color-black;
     margin-top: 5px;
@@ -118,14 +72,9 @@
     }
   }
 
-// USWDS usa-unstyled-list workaround - webpage and mobile form
+  // USWDS usa-unstyled-list workaround - webpage and mobile form
   .filter-bottom-padding {
     padding-bottom: 5px;
-  }
-
-  .show-more {
-    color: $color-gray-medium;
-    text-decoration: none;
   }
 }
 
@@ -218,7 +167,7 @@
 
   .filter-form-popup {
 
-    background-color: $color-gray-lightest;
+    background-color: $color-gray-second-lightest;
     bottom: 0;
     left: -100%;
     overflow: scroll;

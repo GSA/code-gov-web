@@ -1,18 +1,26 @@
 <h1>Creating your enterprise code inventory</h1>
 <h2>Overview</h2>
 
-<p>Section <a pageScroll [routerLink]="['/policy-guide/policy/implementation']" href="#code-inventories-and-discovery">7.2</a> and <a pageScroll [routerLink]="['/policy-guide/policy/implementation']" href="#codegov">7.3</a> of the Source Code Policy require agencies to provide an inventory of their 'custom-developed code' to support government-wide reuse and make Federal open source code easier to find.</p>
+<p>Section <a
+	class="default-link"
+	pageScroll
+	[routerLink]="['/policy-guide/policy/implementation']"
+	href="#code-inventories-and-discovery">7.2</a> and <a
+	class="default-link"
+	pageScroll
+	[routerLink]="['/policy-guide/policy/implementation']"
+	href="#codegov">7.3</a> of the Source Code Policy require agencies to provide an inventory of their 'custom-developed code' to support government-wide reuse and make Federal open source code easier to find.</p>
 
-<p>Using these inventories, <a href="https://Code.gov">Code.gov</a> will provide a platform to search federally funded open source software and software available for government-wide reuse.</p>
+<p>Using these inventories, <a class="default-link" href="https://Code.gov">Code.gov</a> will provide a platform to search federally funded open source software and software available for government-wide reuse.</p>
 
 <h2>Publishing Your Agency's Inventory</h2>
 
 <p>Agencies are required to publish their inventories using a standard metadata schema - a JSON file that they'll make available on their agency websites. Versions 1.0.0, 1.0.1, and 2.0.0. of the schema are now available. Agencies are strongly encouraged to use version 2.0.0 of the schema, which is described below. This version includes revisions that make your inventory much more useful and intuitive. Versions 1.0.0 and 1.0.1 will be phased out at the end of 2017.</p>
 
-<p>Agencies should make the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">“code.json”</a> available in the root folder of their website (e.g., https://www.agency.gov/code.json). Code.gov will then retrieve these JSON files daily and compile them.</p>
+<p>Agencies should make the <a class="default-link" href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">“code.json”</a> available in the root folder of their website (e.g., https://www.agency.gov/code.json). Code.gov will then retrieve these JSON files daily and compile them.</p>
 
 <h2>Metadata Schema version 2.0.0</h2>
-Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/schemas/2.0.0.json">metadata schema file in JSON format can be found here.</a>
+Version 2.0.0 of the <a class="default-link" href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/schemas/2.0.0.json">metadata schema file in JSON format can be found here.</a>
 
 <h3>File location and contents:</h3>
 
@@ -30,23 +38,23 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
   <li><code>measurementType</code>: [object] An object containing description of the open source measurement method.
   <ul>
     <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
-    
+
     <ul>
       	<li><code>cost</code>: Cost of software development.</li>
-        <li><code>systems</code>: System certification and accreditation boundaries.</li> 
-        <li><code>projects</code>: A complete software solution / project.</li>     	
+        <li><code>systems</code>: System certification and accreditation boundaries.</li>
+        <li><code>projects</code>: A complete software solution / project.</li>
 		<li><code>modules</code>: A self-contained module from a software solution.</li>
         <li><code>linesOfCode</code>: Source lines of code.</li>
         <li><code>other</code>: Another measurement method not referenced above.</li>
 	</ul>
-    
+
     </li>
     </ul>
     <ul>
     <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>
 			</ul>
   </li>
-	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act (CCA) agencies can be found through the <a href="https://cfo.gov/about/">CFO Act list</a>, as CCA references the CFO Act. For example "GSA" or "DOD." Please use uppercase letters.</li>
+	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act (CCA) agencies can be found through the <a class="default-link" href="https://cfo.gov/about/">CFO Act list</a>, as CCA references the CFO Act. For example "GSA" or "DOD." Please use uppercase letters.</li>
 	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.</li>
 	<ul>
 		<li>
@@ -171,12 +179,15 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 </ul>
 <h2>Example code.json file</h2>
 
-<p>We’ve created a <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">sample code.json</a>.</p>
+<p>We’ve created a <a class="default-link" href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">sample code.json</a>.</p>
 
 <h2>Tools</h2>
 <ul>
 	<li>
-		<a routerLink="/policy-guide/docs/compliance/inventory-code/tools/validate-schema">
+		<a
+			class="default-link"
+			routerLink="/policy-guide/docs/compliance/inventory-code/tools/validate-schema"
+		>
 			Schema Validator
 		</a>
 		<p>
@@ -186,7 +197,10 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 		</p>
 	</li>
 	<li>
-		<a routerLink="/policy-guide/docs/compliance/inventory-code/tools/upgrade-schema">
+		<a
+			class="default-link"
+			routerLink="/policy-guide/docs/compliance/inventory-code/tools/upgrade-schema"
+		>
 			v1.0.1 to v2.0.0 Schema Upgrader
 		</a>
 		<p>
@@ -197,7 +211,10 @@ Version 2.0.0 of the <a href="https://github.com/presidential-innovation-fellows
 	</li>
 </ul>
 
-<h2><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
+<h2><a
+	class="default-link"
+	href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md"
+>Changelog</a></h2>
 
 <h3>August 2017 - Version 2.0.0</h3>
 <p>This revision includes revisions to incorporate the open source measurement requirement, improvements and clarifications on previous versions of schema content.</p>

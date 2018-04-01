@@ -3,14 +3,11 @@
 //div between Search and Help Wanted
 .vertical-row {
   @media screen and (min-width: $medium-screen) {
-    height: 9em;
+    display: inline-block;
+    height: 12em;
     width: 3px;
-    //should change this to variable
-    background: white;
-    top: 12em;
-    bottom: 0;
-    position: absolute;
-    left: 50%;
+    background: $color-white;
+    position: relative;
   }
 }
 
@@ -179,18 +176,6 @@
       }
     }
   }
-
-  hr {
-    border-bottom: 0;
-    border-top: 6px solid $brand-teal;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    max-width: 30rem;
-
-    @media screen and (min-width: $small-screen) {
-      margin-top: 6rem;
-    }
-  }
 }
 
 .about-actions {
@@ -243,7 +228,7 @@
   text-align: center;
 
   @media screen and (min-width: $medium-screen) {
-    @include span-columns(4);
+    @include width-third();
   }
 
   > a > img {
@@ -303,10 +288,11 @@
   #featured-projects-title {
     background: white;
     color: $featured-dark;
-    padding: 2rem;
 
     h2 {
       color: $featured-dark;
+      margin-top: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -333,14 +319,20 @@
   text-align: left;
 
   &:nth-of-type(odd) {
-    .usa-width-one-half {
-      float: left;
+    > div {
+      text-align: left;
+      > div {
+        text-align: left;
+      }
     }
   }
 
   &:nth-of-type(even) {
-    .usa-width-one-half {
-      float: right;
+    > div {
+      text-align: right;
+      > div {
+        text-align: left;
+      }
     }
   }
 
@@ -517,18 +509,6 @@
     margin-bottom: 2rem;
     text-align: center;
   }
-
-  hr {
-    border-bottom: 0;
-    border-top: 4px solid $brand-teal;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    max-width: 30rem;
-
-    @media screen and (min-width: $small-screen) {
-      margin-top: 3rem;
-    }
-  }
 }
 
 .press-container {
@@ -560,68 +540,6 @@
 
     &:first-of-type {
       margin-left: 0;
-    }
-  }
-}
-
-.quote-large {
-  blockquote {
-    line-height: 1.25;
-    background-color: transparent;
-    border-left: none;
-    color: $color-white;
-    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 1.75em;
-    font-weight: 500;
-    line-height: 1.1;
-    margin: 0;
-    margin-bottom: 0.2em;
-    padding: 0;
-    padding-left: 0.75em;
-    position: relative;
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 2.2em;
-    }
-
-    .begin-quote {
-      color: $brand-teal;
-      font-size: 1.75em;
-      left: 0em;
-      position: absolute;
-      top: -0.275em;
-
-      @media screen and (min-width: $medium-screen) {
-        font-size: 2.2em;
-      }
-    }
-
-    .end-quote {
-      color: $brand-teal;
-      font-size: 1.75em;
-      line-height: 0.8;
-      position: absolute;
-      vertical-align: text-top;
-
-      @media screen and (min-width: $medium-screen) {
-        font-size: 2.2em;
-      }
-    }
-  }
-
-  .attribution {
-    border-top: 1px solid $color-gray-lighter;
-    display: inline-block;
-    margin-left: 1.3em;
-    padding-top: 0.75em;
-
-    @media screen and (min-width: $medium-screen) {
-      margin-left: 2em;
-    }
-
-    .press-logo {
-      max-height: 2em;
-      max-width: 10em;
     }
   }
 }

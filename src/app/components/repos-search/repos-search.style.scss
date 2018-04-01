@@ -11,6 +11,7 @@
 .button-container {
   display: none;
   margin: 0 auto;
+  margin-top: 3rem;
 
   @media screen and (min-width: $small-screen) {
     display: block;
@@ -18,7 +19,7 @@
 }
 
 .search-with-icon-button {
-  @include @extend .width-quarter;
+  @extend .width-quarter;
   font-size: 0.8em;
   margin: 0;
   margin-left: 10px;
@@ -68,7 +69,7 @@ button {
   }
 
   &.search-with-icon-button {
-    @include @extend .width-quarter;
+    @extend .width-quarter;
     display: block;
     font-size: 0.8em;
     margin-left: 0;
@@ -80,18 +81,8 @@ button {
 }
 
 .search-form {
-  @include clearfix;
-  padding-left: 2rem;
-  padding-right: 2rem;
 
-  input,
-  label {
-    //max-width: none;
-    width: 90%;
-    @media screen and (max-width: $small-screen) {
-      width: 100%;
-    }
-  }
+  width: 100%;
 
   label {
     height: 0px;
@@ -103,16 +94,16 @@ button {
 }
 
 .search-input-container {
-  @extend .width-three-quarters;
+  @include width-three-quarters();
 
   @media screen and (min-width: $small-screen) {
-    @include @extend .width-whole;
+    @include width-whole();
   }
 }
 
 .search-results-content {
   .search-input-container {
-    @extend .width-three-quarters;
+    @include width-three-quarters();
     margin-left: 0;
   }
 

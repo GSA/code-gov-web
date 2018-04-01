@@ -3,3 +3,9 @@
 .banner {
   background-image: url("./assets/img/american_flag_1920x1280_gradient.jpg");
 }
+
+[type=checkbox]:checked + label::before,
+[type=checkbox]:checked:disabled + label::before {
+  background-image: url('./assets/img/correct8.png');
+  background-image: url('./assets/img/correct8.svg');
+}

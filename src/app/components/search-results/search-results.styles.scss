@@ -115,7 +115,7 @@ h3 {
 }
 
 .search-filter-section {
-  @include @extend .width-quarter;
+  @extend .width-quarter;
 
   padding-top: 2rem;
 
@@ -125,7 +125,7 @@ h3 {
 }
 
 .search-filters {
-  background-color: $color-gray-lightest;
+  background-color: $color-gray-second-lightest;
   padding: 1rem;
 }
 
@@ -156,7 +156,7 @@ h3 {
 }
 
 .search-results-section {
-  @include @extend .width-whole;
+  @extend .width-whole;
 }
 
 .load-more-button {
@@ -176,7 +176,7 @@ h3 {
 }
 
 .search-container {
-  background-color: darken($color-gray-lightest, 5);
+  background-color: darken($color-gray-second-lightest, 5);
   padding: 0.5em 0;
 }
 

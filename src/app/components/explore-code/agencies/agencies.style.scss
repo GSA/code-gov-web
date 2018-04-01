@@ -31,7 +31,7 @@
 
 .sidebar-agencies {
   @media screen and (min-width: $medium-screen) {
-    @include @extend .width-quarter;
+    @include width-quarter();
   }
 }
 
@@ -40,7 +40,7 @@
   padding: 2.5em 1.5em;
 
   @media screen and (min-width: $medium-screen) {
-    @extend .width-three-quarters;
+    @include width-three-quarters();
   }
 
   @media screen and (min-width: $extra-large-screen) {

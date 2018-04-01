@@ -115,15 +115,9 @@
 
 .search-form {
   display: none;
-  float: right;
-  width: 90%;
 
   @media screen and (min-width: $small-screen) {
     display: block;
-  }
-
-  @media screen and (min-width: $medium-screen) {
-    width: 36rem;
   }
 }
 

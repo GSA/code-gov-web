@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="banner-title">Help Wanted</div>
-  <p>Discover how you can get involved and make America's Code better</p>
+  <div class="banner-subtitle">Discover how you can get involved and make America's Code better</div>
 </div>
 
 <div class="help-wanted{{mobile ? ' mobile' : ''}}">
@@ -17,7 +17,7 @@
         <fieldset>
           <ul class="category" *ngFor="let option of getDesktopFormOptions()" >
             <li class="filter-bottom-padding">
-              <h5>{{option.display}}</h5>
+              <div class="category-title">{{option.display}}</div>
               <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
             </li>
           </ul>
