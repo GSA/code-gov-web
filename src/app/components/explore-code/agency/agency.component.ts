@@ -23,6 +23,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
   private eventSub: Subscription;
   private agencyReposSub: Subscription;
   private allRepos = [];
+  private allDisplayedRepos = [];
   private currentIndex = 0;
   private pageSize = 20;
   private isLoading = true;
@@ -51,6 +52,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
         if (this.agency) {
           this.repos = [];
           this.allRepos = [];
+          this.allDisplayedRepos = [];
           this.currentIndex = 0;
           this.isLoading = true;
           this.agencyRepos();
@@ -85,7 +87,8 @@ export class AgencyComponent implements OnInit, OnDestroy {
           this.errorModalService.showModal({});
         } else if (numberOfRepos > 0) {
           this.allRepos = repos;
-          this.repos = this.allRepos.slice(0, this.repos.length || this.pageSize);
+          this.allDisplayedRepos = this.allRepos.filter(repo => this.displayRepo(repo));
+          this.repos = this.allDisplayedRepos.slice(0, this.repos.length || this.pageSize);
           this.currentIndex = this.repos.length || this.pageSize;
           this.hasRepos = this.checkRepos(this.repos);
           this.isLoading = false;
@@ -119,7 +122,7 @@ export class AgencyComponent implements OnInit, OnDestroy {
   }
 
   onScroll() {
-    this.repos = [...this.repos, ...this.allRepos.slice(this.currentIndex, this.currentIndex + this.pageSize)];
+    this.repos = [...this.repos, ...this.allDisplayedRepos.slice(this.currentIndex, this.currentIndex + this.pageSize)];
     this.currentIndex = this.currentIndex + this.pageSize;
   }
 
