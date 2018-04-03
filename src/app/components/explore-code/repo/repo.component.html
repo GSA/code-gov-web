@@ -54,7 +54,8 @@
             <span *ngIf="repo.contact?.email | isdefined">
               <li>
                 <i class="icon fa fa-envelope-o"></i>
-                {{repo.contact.email}}
+                <a href="mailto:{{repo.contact.email}}?Subject=Contribution%20Inquiry" target="_top">
+                  {{repo.contact.email}}</a>
               </li>
           </span>
 

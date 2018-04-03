@@ -9,7 +9,7 @@
   <div *ngIf="!isLoading">
     <div *ngIf="hasRepos" class="repos-container">
       <p class="repos-count">
-        {{ allRepos.length }} Featured {{ "Projects" | pluralize : allRepos.length }}
+        {{ allDisplayedRepos.length }} {{ "Projects" | pluralize : allDisplayedRepos.length }}
       </p>
       <ul
           class="repos-list"
