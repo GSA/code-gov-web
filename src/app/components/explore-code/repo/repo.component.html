@@ -1,7 +1,7 @@
 <div class="repo-general">
 <section *ngIf="repo" class="repo-container indented">
-    <div class="repo-breadcrumb">
-        <ul>
+    <div>
+        <ul class="breadcrumbs">
           <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/explore-code/agencies/{{repo.agency.acronym}}">{{repo.agency.acronym}}</a></li>
           <li>{{repo.name}}</li>
@@ -17,7 +17,7 @@
           <button *ngIf="tag"
             [routerLink]="['/search']"
             [queryParams]="{ q: tag }"
-            class="repo-tag">
+            class="tag">
             {{ tag }}
           </button>
         </span>

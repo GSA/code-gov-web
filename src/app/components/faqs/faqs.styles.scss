@@ -16,32 +16,6 @@
   }
 }
 
-
-//breadcrumb
-.faq-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-  ul {
-    li {
-      display: inline-block;
-      &::before {
-        content: '> ';
-      }
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-      a {
-        color: $color-black;
-      }
-      &:last-child {
-        font-weight: $font-bold;
-      }
-    }
-  }
-}
-
 /* faq overview section of page */
 .faq-overview {
   h2 {

@@ -1,7 +1,7 @@
 <nav [ngClass]="{active: menuActive}" class="sidebar left">
-  <h3 #sidebarTitle *ngIf="showTitle" class="sidebar__title">
+  <div #sidebarTitle *ngIf="showTitle" class="sidebar-title">
     <ng-content select="sidebar-title"></ng-content>
-  </h3>
+  </div>
   <ul>
     <ng-content select="sidebar-content"></ng-content>
   </ul>

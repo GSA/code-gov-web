@@ -1,12 +1,14 @@
-  <div class="agencies-breadcrumb">
-    <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li>Browse Projects</li>
-    </ul>
-  </div>
-<div class='sidebar-agencies'>
-  <agency-sidebar></agency-sidebar>
+<div>
+  <ul class="breadcrumbs">
+    <li><a routerLink="/">Home</a></li>
+    <li>Browse Projects</li>
+  </ul>
 </div>
-<div class='agencies-content'>
-  <router-outlet></router-outlet>
+<div>
+  <div class='width-quarter'>
+    <agency-sidebar></agency-sidebar>
+  </div>
+  <div class='agencies-content width-three-quarters'>
+    <router-outlet></router-outlet>
+  </div>
 </div>

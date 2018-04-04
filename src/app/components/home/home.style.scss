@@ -255,33 +255,6 @@
   }
 }
 
-.banner#banner-home {
-
-  min-height: 48rem;
-
-}
-
-.banner-background {
-  animation: 15s linear zoomOutOnBackground;
-  background-attachment: scroll;
-  background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-
-  // HACK: This is a hack to prevent ugliness on iOS
-  @media screen and (min-width: 768px) {
-    background-attachment: fixed;
-  }
-}
-
 .featured-projects {
   text-align: center;
 

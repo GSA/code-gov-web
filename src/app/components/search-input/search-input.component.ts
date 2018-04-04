@@ -38,7 +38,6 @@ export class SearchInputComponent {
   @Input() name: string;
   @Input() ngModel: any;
   @Input() placeholder: string = 'Search Thousands of Projects...';
-  @Input() withIcon: boolean = false;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
   public autocompleteVisible: boolean = false;

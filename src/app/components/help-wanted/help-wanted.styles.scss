@@ -1,34 +1,5 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-.help-wanted-breadcrumb {
-  font-size: 1em;
-  margin-bottom: 4rem;
-  margin-top: 2rem;
-
-  ul {
-    li {
-      display: inline-block;
-      font-weight: bold;
-
-      &::before {
-        content: '> ';
-        font-weight: normal;
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      a {
-        color: $color-black;
-        font-weight: normal;
-      }
-    }
-  }
-}
-
 #help-wanted-filter-section {
   @extend .width-quarter;
 

@@ -1,10 +1,8 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-.help-wanted-card {
-  height: 100%;
+.card {
 
-  h3,
-  p {
+  h3, p {
     margin: 0;
   }
 
@@ -17,9 +15,7 @@
       &:visited {
         color: $brand-blue;
       }
-
     }
-
   }
 
   p {
@@ -36,7 +32,7 @@
     margin-bottom: 0.25rem;
     padding: 0.75rem 0rem;
 
-    > div {
+    > div {      
       display: inline-block;
       line-height: 1.1;
       margin-left: 1rem;
@@ -48,8 +44,7 @@
     }
   }
 
-  dd,
-  dt {
+  dd, dt {
     display: inline;
     margin: 0;
   }

@@ -20,35 +20,6 @@ h3 {
   }
 }
 
-.search-results-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-
-  ul {
-    li {
-      display: inline-block;
-
-      &::before {
-        content: '> ';
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      &:last-child {
-        font-weight: $font-bold;
-      }
-
-      a {
-        color: $color-black;
-      }
-    }
-  }
-}
-
 .search-results-header {
   h3 {
     display: inline-block;

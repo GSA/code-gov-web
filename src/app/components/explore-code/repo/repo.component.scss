@@ -20,46 +20,6 @@
   }
 }
 
-.repo-banner {
-  background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  margin-bottom: 2rem;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
-  text-align: center;
-}
-
-.repo-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-
-  ul {
-    li {
-      display: inline-block;
-
-      &::before {
-        content: '> ';
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      a {
-        color: $color-black;
-      }
-
-      &:last-child {
-        font-weight: $font-bold;
-      }
-    }
-  }
-}
-
-
 .repo-container {
 
   code {
@@ -80,12 +40,6 @@
     font-size: 1.5rem;
     color: $color-gray;
   }
-}
-
-.repo-tag {
-  border-radius: 3px;
-  background-color: $brand-blue;
-  padding: .25rem 1.25rem;
 }
 
 .repo-actions {

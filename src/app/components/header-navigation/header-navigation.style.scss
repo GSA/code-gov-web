@@ -45,8 +45,16 @@
   .search-form {
     display: none;
 
+    @media screen and (min-width: $medium-screen) {
+      width: 36rem;
+    }
+
     @media screen and (min-width: $large-screen) {
       display: block;
+    }
+
+    input[type=search] {
+      width: 90%;
     }
   }
 }
@@ -119,6 +127,10 @@
   @media screen and (min-width: $small-screen) {
     display: block;
   }
+
+  input[type=search] {
+    width: 90%;
+  }
 }
 
 .search-box {
@@ -142,6 +154,12 @@
 
   &.active {
     transform: translateY(52px);
+  }
+
+  .search-form {
+    @media screen and (min-width: $medium-screen) {
+      width: 36rem;
+    }    
   }
 }
 

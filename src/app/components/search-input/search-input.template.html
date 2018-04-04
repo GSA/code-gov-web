@@ -1,10 +1,9 @@
-<div class="search-input" [ngClass]="{'with-icon': withIcon}" #searchInput>
-  <i class="fa fa-search" aria-hidden="true"></i>
+<div #searchInput>
   <input
       #query
       [name]="name"
       title="Search Code.gov"
-      type="text"
+      type="search"
       required
       class="form-control"
       [ngModel]="queryValue"
