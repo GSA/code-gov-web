@@ -44,10 +44,9 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
   }
 
   _setRequirementStatuses(agencyRequirements) {
-    let requirementStatues = {
-      requirements: [],
-      overallStatus: 'noncompliant'
-    };
+    let requirements = [];
+    let overallStatus = 'noncompliant';
+
     for (let requirement in agencyRequirements) {
       if (agencyRequirements.hasOwnProperty(requirement)) {
         const rValue = agencyRequirements[requirement];
@@ -62,13 +61,13 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
         }
 
         if (requirement !== 'overallCompliance') {
-          requirementStatues.requirements.push({ text: requirement, status: requirementStatus });
+          requirements.push({ text: requirement, status: requirementStatus });
         } else {
-          requirementStatues.overallStatus = requirementStatus;
+          overallStatus = requirementStatus;
         }
       }
     }
-    return requirementStatues;
+    return { requirements, overallStatus };
   }
 
   _getCodePath(status) {
