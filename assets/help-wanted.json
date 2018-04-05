@@ -836,6 +836,24 @@
       "popular": true,
       "agency_id": "GSA",
       "license": "CC0-1.0"
+    },
+    {
+      "id": 43,
+      "title": "Update for Quarry release",
+      "description": "Update SDK for DOL's v2 API",
+      "updated": "2015-03-31",
+      "languages": [
+        "PHP"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOL/repos/dol_ocio_php_doldatasdk",
+      "issueURL": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK/issues/1",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOL",
+      "license": "Public Domain"
     }
   ]
 }
