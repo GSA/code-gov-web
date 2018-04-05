@@ -31,6 +31,6 @@ export class HomeComponent {
    * section and the header is flush against the section.
    */
   getAboutOffset() {
-    return document.querySelector('.app-navigation').clientHeight;
+    return document.querySelector('header.main').clientHeight;
   }
 }

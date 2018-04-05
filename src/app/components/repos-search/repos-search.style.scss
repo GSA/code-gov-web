@@ -80,19 +80,6 @@ button {
   }
 }
 
-.search-form {
-
-  width: 100%;
-
-  label {
-    height: 0px;
-    margin: 0;
-    overflow: none;
-    text-align: left;
-    text-indent: -9999px;
-  }
-}
-
 .search-input-container {
   @include width-three-quarters();
 

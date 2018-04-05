@@ -28,11 +28,4 @@
     background-color: #485567;
   }
 
-  .block--dark & {
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background-color: $color-white;
-    }
-  }
 }

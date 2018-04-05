@@ -1,13 +1,13 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-.nav-item {
-  display: inline-block;
-  font-size: 1em;
-  line-height: 40px;
-  margin-bottom: 8px;
-  margin-left: 1em;
-  margin-top: 8px;
-  vertical-align: top;
+ul {
+  li {
+    a {
+      svg {
+        float: left;
+      }
+    }
+  }
 }
 
 .app-navigation {
@@ -26,20 +26,6 @@
   &.block--white.not-at-top {
     background-color: $color-white;
     box-shadow: 0 0 10px 0 $color-black;
-  }
-
-  &.block--dark {
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  &.block--dark.not-at-top {
-    background-color: $color-gray-dark;
-    box-shadow: 0 0 10px 0 $color-black;
-
-    @media screen and (min-width: $small-screen) {
-      box-shadow: none;
-    }
   }
 
   .search-form {
@@ -126,6 +112,7 @@
 
   @media screen and (min-width: $small-screen) {
     display: block;
+    float: right;
   }
 
   input[type=search] {
@@ -139,7 +126,7 @@
   padding: 0.5rem 2rem;
   position: fixed;
   right: 0;
-  top: 23px;
+  top: 20px;
   transition: 0.25s linear transform;
   width: 100%;
   z-index: 2;
@@ -153,13 +140,13 @@
   }
 
   &.active {
-    transform: translateY(52px);
+    transform: translateY(55px);
   }
 
   .search-form {
     @media screen and (min-width: $medium-screen) {
       width: 36rem;
-    }    
+    }
   }
 }
 
