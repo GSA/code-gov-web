@@ -19,6 +19,8 @@ export class HeaderNavigationComponent {
   isAtTop: boolean = true;
   isSearchBoxShown: boolean = false;
   searchBoxActiveSubscription: Subscription;
+  private color: string = "white";
+  private dropdownSearchBox: boolean = true;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
 
 
