@@ -50,6 +50,9 @@ $menu-width: 320px;
   .expander > i {
     color: $color-gray-lighter;
     line-height: 2;
+    &.pull-right {
+      float: right;
+    }
   }
 
   .form-control {
@@ -109,6 +112,7 @@ $menu-width: 320px;
   float: left;
 }
 
+
 .mobile-menu-item {
   float: left;
   width: 100%;
@@ -145,4 +149,8 @@ $menu-width: 320px;
       }
     }
   }
+}
+
+.icon-search {
+  color: black;
 }

@@ -57,20 +57,6 @@ describe('AutocompleteResultComponent', () => {
         expect(component).toBeDefined();
     });
 
-    /*
-      It's not dependent on clientService and should define a resource on init
-      */
-      /*
-    it('will define a resource on init', () => {
-      component.ngOnInit();
-
-      expect(component.resource.iconId).toEqual('fa-search');
-      expect(component.resource.imageIcon).toBe(false);
-      expect(component.resource.url).toEqual('/explore-code/agencies/gsa/repos/example');
-      expect(component.resource.name).toEqual('example');
-    });
-    */
-
     it('should emit an event when clicked', () => {
       spyOn(component.onSuggestionSelected, 'emit');
       component.handleSuggestionSelected();
@@ -106,17 +92,6 @@ describe('AutocompleteResultComponent', () => {
     it('should have defined AutocompleteResultComponent instance', () => {
         expect(component).toBeDefined();
     });
-
-    /*
-    it('will define a resource on init', () => {
-      component.ngOnInit();
-
-      expect(component.resource.iconId).toEqual('fa-search');
-      expect(component.resource.imageIcon).toBe(true);
-      expect(component.resource.url).toEqual('/explore-code/agencies/gsa');
-      expect(component.resource.name).toEqual('General Services Administration');
-    });
-    */
 
     it('should emit an event when clicked', () => {
       spyOn(component.onSuggestionSelected, 'emit');

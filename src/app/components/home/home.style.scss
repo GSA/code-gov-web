@@ -670,19 +670,23 @@ body {
   height: 4rem;
   left: 50%;
   overflow: hidden;
+  padding-bottom: 5rem;
   position: absolute;
 
   @media screen and (min-width: $small-screen) {
     font-size: 6em;
     height: 6rem;
+    padding-bottom: 10em;
   }
 
   @media screen and (min-width: $medium-screen) {
     font-size: 8em;
     height: 7rem;
+    padding-bottom: 12rem;
   }
 
   i {
+    color: $color-white;
     top: 50%;
     transform: translateY(-50%);
     vertical-align: middle;
