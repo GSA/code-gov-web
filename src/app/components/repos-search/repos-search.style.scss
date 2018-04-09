@@ -28,6 +28,10 @@
   @media screen and (min-width: $small-screen) {
     display: none;
   }
+
+  i.search-button-icon {
+    color: white;
+  }
 }
 
 .search-with-text-button {

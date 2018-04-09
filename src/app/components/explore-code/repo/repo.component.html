@@ -1,5 +1,5 @@
 <div class="repo-general">
-<section *ngIf="repo" class="repo-container indented">
+  <section *ngIf="repo" class="repo-container indented">
     <div>
         <ul class="breadcrumbs">
           <li><a routerLink="/">Home</a></li>
@@ -14,46 +14,44 @@
           <div>Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</div>
         </span>
         <span *ngFor="let tag of repo.tags">
-          <button *ngIf="tag"
+          <button
+            *ngIf="tag"
             [routerLink]="['/search']"
             [queryParams]="{ q: tag }"
-            class="tag">
+            class="tag"
+          >
             {{ tag }}
           </button>
         </span>
         <ul class="repo-features">
             <li>
-              <span *ngIf="repo.permissions?.usageType === 'openSource'"><i class="icon fa fa-check-circle-o"></i>Open Source</span>
-              <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'"><i class="icon fa fa-refresh"></i>Government-Wide Reuse</span>
+              <span *ngIf="repo.permissions?.usageType === 'openSource'"><i class="icon icon-ok-circled2"></i>Open Source</span>
+              <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'"><i class="icon icon-arrows-cw"></i>Government-Wide Reuse</span>
             </li>
             <span *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
               <li>
-                <i class="icon fa fa-certificate"></i>
+                <i class="icon icon-certificate"></i>
                 <span>{{ repo.permissions?.licenses[0]?.name }}</span>
               </li>
             </span>
             <span *ngIf="repo.contact.laborHours > 0">
               <li>
-                <i class="icon fa fa-hourglass-end"></i>
+                <i class="icon icon-hourglass-end"></i>
                 {{repo.contact.laborHours}} hours
               </li>
             </span>
             <span *ngIf="repo.languages?.length > 0">
               <li>
-                <i class="icon fa fa-code"></i>
+                <i class="icon icon-code"></i>
                 <span *ngFor="let language of repo.languages; let last=last" class="language"
                   [ngClass]="{last: last}">
                   {{ language }}<span class="comma">,</span>
                 </span>
               </li>
             </span>
-            <!-- <li>
-                <i class="icon fa fa-user"></i>
-                <span>23 people use this</span>
-            </li> -->
             <span *ngIf="repo.contact?.email | isdefined">
               <li>
-                <i class="icon fa fa-envelope-o"></i>
+                <i class="icon icon-mail"></i>
                 <a href="mailto:{{repo.contact.email}}?Subject=Contribution%20Inquiry" target="_top">
                   {{repo.contact.email}}</a>
               </li>
@@ -69,4 +67,5 @@
     </header>
 
   </section>
-  <modal></modal>
+</div>
+<modal></modal>

@@ -32,21 +32,22 @@
   <ul class="right">
     <li *ngIf="dropdownSearchBox">
       <a (click)="toggleSearchBox()">
-        <i class="fa fa-search"></i>
+        <i class="icon icon-search"></i>
       </a>
     </li>
     <li>
       <a class="no-underline" href="https://twitter.com/codedotgov" title="Follow us on Twitter">
         <span *ngIf="!dropdownSearchBox" class="follow-us">Follow Us</span>
-        <i class="fa fa-twitter"></i>
+        <i class="icon icon-twitter"></i>
       </a>
     </li>
   </ul>
 
 </nav>
+
 <div *ngIf="dropdownSearchBox" class="search-box" [ngClass]="{'active': isSearchBoxShown}">
   <a class="close-search-box-button" (click)="hideSearchBox()">
-    <i class="fa fa-close"></i>
+    <i class="icon icon-cancel"></i>
   </a>
   <form
       class="search-form"
