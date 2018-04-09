@@ -20,8 +20,7 @@
           <div class="width-third">
             <form>
               <button
-                  class="usa-button usa-button-small"
-                  [ngClass]="{ 'usa-button-disabled': !isValidBeforeJson() }"
+                  [ngClass]="{ 'disabled': !isValidBeforeJson() }"
                   [disabled]="!isValidBeforeJson()"
                   (click)="upgradeContent()">
                 Upgrade
@@ -54,7 +53,7 @@
           </div>
           <div class="width-third">
             <form>
-              <button class="usa-button usa-button-small upgrade-schema__copy-button">Copy to Clipboard</button>
+              <button class="upgrade-schema__copy-button">Copy to Clipboard</button>
             </form>
           </div>
         </div>

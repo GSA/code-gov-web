@@ -324,8 +324,7 @@
     padding-top: 1rem;
   }
 
-  button,
-  .usa-button {
+  button {
     margin-left: 10px;
   }
 }
@@ -348,7 +347,7 @@
 
   }
 
-  button, .usa-button, h3, h4, p {
+  button, h3, h4, p {
     color: $color-white;
   }
 }
@@ -384,12 +383,12 @@
     }
   }
 
-  button, .usa-button {
+  button {
     border-color: $color-gray-dark;
     color: $color-gray-dark;
   }
 
-  button, .usa-button {
+  button {
     &:focus, &:hover {
       border-color: $brand-teal;
       color: $color-white;
@@ -413,7 +412,7 @@
     }
   }
 
-  button, .usa-button, h3, h4, p {
+  button, h3, h4, p {
     color: $color-white;
   }
 }
@@ -445,8 +444,7 @@
     }
   }
 
-  button,
-  .usa-button {
+  button {
     font-size: 0.8em;
     margin-bottom: 0;
     margin-left: 1rem;

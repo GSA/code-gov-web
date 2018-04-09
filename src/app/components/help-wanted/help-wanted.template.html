@@ -21,18 +21,13 @@
               <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
             </li>
           </ul>
-          <ul class="help-wanted-filter" *ngIf="mobile">
-            <li>
-              <button class="usa-button-big button--tertiary" (click)="applyFilters()">Apply Filters</button>
-            </li>
-          </ul>
         </fieldset>
       </form>
     </div>
     <div class="help-wanted-results">
       <div class="help-wanted-content-header">
         <h4>Explore Our Help Wanted Tasks</h4>
-        <button id="filter-popup-trigger-button" class="usa-button-big button--tertiary" *ngIf="mobile" (click)="openPopup()">Filter</button>
+        <button id="filter-popup-trigger-button" *ngIf="mobile" (click)="openPopup()">Filter</button>
         <ul class="help-wanted-tabs" *ngIf="!mobile">
           <li [ngClass]="{ active: this.activeTab === 'Featured' }"><a href="#" (click)="setActiveTab('Featured', $event)">Featured</a></li>
           <li [ngClass]="{ active: this.activeTab === 'Active' }"><a href="#" (click)="setActiveTab('Active', $event)">Active</a></li>
