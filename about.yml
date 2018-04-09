@@ -62,7 +62,7 @@ team:
 - github: mattbailey0
   id: Matt Bailey
   role: Community Manager
-  
+
 # Partners for whom the project is developed
 partners:
 - OMB
@@ -106,11 +106,11 @@ licenses:
   ruby-on-rails:
     name: MIT
     url: https://github.com/rails/rails
- 
+
   jquery-1.11.3.min.js:
     name: MIT
     url: https://jquery.org/license/
-  font-awesome.min.css:
+  font-awesome:
     name: MIT, SIL OFL 1.1, CC BY 3.0
     url: http://fontawesome.io/license/
   ruby:

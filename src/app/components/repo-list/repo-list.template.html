@@ -14,8 +14,8 @@
 
       <ul class="ngx-pagination usa-unstyled-list">
         <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
-          <span *ngIf="p.isFirstPage()"><i class="fa fa-chevron-left"></i> Prev</span>
-          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="fa fa-chevron-left"></i> Prev</a>
+          <span *ngIf="p.isFirstPage()"><i class="icon icon-angle-circled-left"></i> Prev</span>
+          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-left"></i> Prev</a>
         </li>
 
         <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
@@ -28,8 +28,8 @@
         </li>
 
         <li class="pagination-next" [class.disabled]="p.isLastPage()">
-          <span *ngIf="p.isLastPage()">Next <i class="fa fa-chevron-right"></i></span>
-          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="fa fa-chevron-right"></i></a>
+          <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
+          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
         </li>
       </ul>
 
@@ -64,8 +64,8 @@
 
       <ul class="ngx-pagination usa-unstyled-list">
         <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
-          <span *ngIf="p.isFirstPage()"><i class="fa fa-chevron-left"></i> Prev</span>
-          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="fa fa-chevron-left"></i> Prev</a>
+          <span *ngIf="p.isFirstPage()"><i class="icon icon-angle-circled-left"></i> Prev</span>
+          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-up"></i> Prev</a>
         </li>
 
         <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
@@ -78,8 +78,8 @@
         </li>
 
         <li class="pagination-next" [class.disabled]="p.isLastPage()">
-          <span *ngIf="p.isLastPage()">Next <i class="fa fa-chevron-right"></i></span>
-          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="fa fa-chevron-right"></i></a>
+          <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
+          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
         </li>
       </ul>
 

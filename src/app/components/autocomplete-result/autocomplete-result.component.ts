@@ -23,7 +23,7 @@ export class AutocompleteResultComponent {
         this.resource['routerLink'] = `/explore-code/agencies/${acronym}`;
         this.resource['name'] = acronym;
       } else {
-        this.resource['iconId'] = 'fa-search';
+        this.resource['iconId'] = 'icon icon-search';
         this.resource['imageIcon'] = false;
         this.resource['routerLink'] = ['/search'];
         this.resource['queryParams'] = { q: this.result.term };
