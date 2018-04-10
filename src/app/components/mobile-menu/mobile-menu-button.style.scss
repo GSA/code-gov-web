@@ -17,7 +17,7 @@
 
   &:hover,
   &:focus {
-    background-color: transparent;
+    background-color: transparent !important;
     box-shadow: none;
     opacity: 1;
   }

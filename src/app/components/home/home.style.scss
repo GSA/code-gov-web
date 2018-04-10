@@ -543,14 +543,13 @@
 
 .scroll-indicator {
   animation: 6s linear bounce infinite;
-  bottom: 0;
+  bottom: 1rem;
   color: $color-white;
   font-size: 3em;
   height: 4rem;
-  left: 50%;
   overflow: hidden;
-  padding-bottom: 5rem;
   position: absolute;
+  text-decoration: none;
 
   @media screen and (min-width: $small-screen) {
     font-size: 6em;
@@ -566,8 +565,6 @@
 
   i {
     color: $color-white;
-    top: 50%;
-    transform: translateY(-50%);
     vertical-align: middle;
   }
 }
