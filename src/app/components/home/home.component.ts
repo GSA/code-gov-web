@@ -27,12 +27,12 @@ export class HomeComponent {
   }
 
   scrollToAbout() {
-    let top = document.getElementById("banner-home").clientHeight;
-    let offset = document.querySelector("header nav.main").clientHeight;
+    let top = document.getElementById('banner-home').clientHeight;
+    let offset = document.querySelector('header nav.main').clientHeight;
     let buffer = 35;
     window.scrollTo({
       top: top - offset,
-      behavior: "smooth"
+      behavior: 'smooth'
     });
   }
 }

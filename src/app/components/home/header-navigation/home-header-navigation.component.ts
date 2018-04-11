@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
 
 export class HomeHeaderNavigationComponent {
   private isAtTop: boolean = true;
-  private color: string = "dark transparent";
+  private color: string = 'dark transparent';
   private dropdownSearchBox: boolean = false;
 
   /**
