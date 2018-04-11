@@ -151,16 +151,16 @@ table.focus-on tbody tr.focused td {
   background-color: #ffffff;
   width: 100%;
 }
-#datatable-editable .fa-trash-o {
+#datatable-editable .icon-trash {
   color: #ff5b5b;
 }
-#datatable-editable .fa-times {
+#datatable-editable .icon-cancel {
   color: #ff5b5b;
 }
-#datatable-editable .fa-pencil {
+#datatable-editable .icon-pencil {
   color: #10c469;
 }
-#datatable-editable .fa-save {
+#datatable-editable .icon-floppy {
   color: #10c469;
 }
 /* Data tables */
