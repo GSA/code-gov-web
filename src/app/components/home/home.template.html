@@ -4,11 +4,11 @@
     Unlock the tremendous potential of the Federal Government’s software.
   </div>
   <div class="indented">
-    <div class="width-half">
+    <div class="banner-subsection width-half">
       <repos-search autofocus=true buttonClasses="transparent"></repos-search>
     </div>
     <div class="vertical-row"></div>
-    <div class="width-half">
+    <div class="banner-subsection width-half">
       <div class="banner-subsection-title">Help Wanted!</div>
       <div class="banner-subsection-subtitle">
         Discover how you can get involved and make America's code better
@@ -22,11 +22,7 @@
   <a
     class="scroll-indicator"
     title="Scroll Down"
-    pageScroll
-    [pageScrollDuration]="250"
-    [pageScrollOffset]="getAboutOffset()"
-    pageScrollTarget=".about"
-    href="#"
+    (click)="scrollToAbout()"
   >
     <i class="icon icon-angle-down"></i>
   </a>

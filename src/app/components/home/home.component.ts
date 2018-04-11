@@ -26,11 +26,13 @@ export class HomeComponent {
     );
   }
 
-  /**
-   * Get the offset of the app navigation header so we scroll down to the about
-   * section and the header is flush against the section.
-   */
-  getAboutOffset() {
-    return document.querySelector('header.main').clientHeight;
+  scrollToAbout() {
+    let top = document.getElementById("banner-home").clientHeight;
+    let offset = document.querySelector("header nav.main").clientHeight;
+    let buffer = 35;
+    window.scrollTo({
+      top: top - offset,
+      behavior: "smooth"
+    });
   }
 }

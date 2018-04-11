@@ -10,7 +10,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Angulartics2On } from 'angulartics2';
 import { Angulartics2Module, Angulartics2GoogleTagManager } from 'angulartics2';
 
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { MetaModule } from '@ngx-meta/core';
@@ -70,7 +69,6 @@ const APP_PROVIDERS = [
     HttpModule,
     InfiniteScrollModule,
     RouterModule.forRoot(ROUTES, { useHash: true }),
-    Ng2PageScrollModule,
     MetaModule.forRoot(),
     NgxPaginationModule,
   ],

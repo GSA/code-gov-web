@@ -1,6 +1,7 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
 .browse {
+  margin-bottom: 4.5rem;
   margin-top: 0.7rem;
 
   @media screen and (min-width: $small-screen) {
@@ -73,8 +74,8 @@ button {
   }
 
   &.search-with-icon-button {
-    @extend .width-quarter;
-    display: block;
+    @include width-sixth();
+    display: inline-block;
     font-size: 0.8em;
     margin-left: 0;
 
