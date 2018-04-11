@@ -1,24 +1,28 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-.autocomplete-container {
-  display: none;
-  position: absolute;
-  top: 44px;
-  width: 100%;
+.search-input-wrapper {
+  position: relative;
 
-  @media screen and (min-width: $small-screen) {
-    display: block;
+  .autocomplete-container {
+    display: none;
+    position: absolute;
+    top: 44px;
+    width: 100%;
+
+    @media screen and (min-width: $small-screen) {
+      display: block;
+    }
   }
-}
 
-input[type=search] {
-  width: 100%;
+  input[type=search] {
+    width: 100%;
 
-  @media screen and (min-width: $small-screen) {
-    width: 85%;
+    @media screen and (min-width: $small-screen) {
+      width: 85%;
+    }
   }
-}
 
-.icon-search {
-  color: black;
+  .icon-search {
+    color: black;
+  }  
 }
