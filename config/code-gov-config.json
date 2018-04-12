@@ -1,0 +1,40 @@
+{
+  "title": "code.gov",
+  "style": "code-gov-style",
+  "twitter": {
+    "handle": "codedotgov"
+  },
+  "featured": [
+    {
+      "short_name": "WNTR",
+      "verboe_name": "Water Network Tool for Resilience",
+      "author": "Environmental Protection Agency",
+      "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
+      "repoID": "doe_snl_water_network_tool_for_resilience_v_1_0",
+      "repo_url": "https://github.com/usepa/wntr"
+    }
+  ],
+  "links": {
+    "privacy_policy": "/#/privacy-policy",
+    "project_page": "https://github.com/GSA/code-gov-web",
+    "join_mailing_list": "https://bit.ly/2pnRlYN",
+    "roadmap": "/#/roadmap"
+  },
+  "images": {
+    "background": "./assets/img/american_flag_1920x1280_gradient.jpg"
+  },
+  "logos": [
+    {
+      "image": "/assets/img/logos/whitehouse.png",
+      "url": "https://whitehouse.gov/"
+    },
+    {
+      "image": "/assets/img/logos/PIF.png",
+      "url": "https://presidentialinnovationfellows.gov/"
+    },
+    {
+      "image": "/assets/img/logos/GSA.png",
+      "url": "https://www.gsa.gov/"
+    }
+  ]
+}

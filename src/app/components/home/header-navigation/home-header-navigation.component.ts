@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { twitter } from '../../../../../config/code-gov-config.json';
 
 @Component({
   selector: 'home-header-navigation',
@@ -16,6 +17,7 @@ export class HomeHeaderNavigationComponent {
   private isAtTop: boolean = true;
   private color: string = 'dark transparent';
   private dropdownSearchBox: boolean = false;
+  private twitter_handle: string = twitter.handle;
 
   /**
    * Triggers whenever the window is scrolled.

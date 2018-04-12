@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
+import * as SiteConfig from '../../../../config/code-gov-config.json';
 
 @Component({
   // The selector is what angular internally uses
@@ -19,7 +20,7 @@ export class HomeComponent {
     private seoService: SeoService,
   ) {
     this.stateService.set('section', 'home');
-    this.seoService.setTitle('Code.gov', false);
+    this.seoService.setTitle(SiteConfig.title, false);
     this.seoService.setMetaDescription(
       'Code.gov is a platform designed to improve access to the federal government’s ' +
       'custom-developed software.'

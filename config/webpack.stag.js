@@ -23,6 +23,8 @@ const CriticalCssPlugin = require('./critical-css-plugin');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 
+const SiteConfig = require('./code-gov-config.json');
+
 /**
  * Webpack Constants
  */
@@ -208,13 +210,12 @@ module.exports = function (env) {
       //   threshold: 2 * 1024
       // })
 
-      new HtmlWebpackPlugin({
+      new HtmlWebpackPlugin(Object.assign({
         template: 'src/index.html',
-        title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
         inject: 'head'
-      }),
+      }, SiteConfig)),
 
       /**
        * Inline critical-path CSS in index.html, and asynchronously load remainder of stylesheet.
