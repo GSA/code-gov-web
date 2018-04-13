@@ -1,5 +1,6 @@
 {
   "title": "code.gov",
+  "api": "https://api.code.gov/repos?api_key=DEMO_KEY",
   "style": "code-gov-style",
   "twitter": {
     "handle": "codedotgov"
