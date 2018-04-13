@@ -12,7 +12,7 @@
 </p>
 <hr/>
 <div class="dashboard-container">
-  <ul class="dashboard-list usa-unstyled-list">
+  <ul class="dashboard-list">
     <li class="card dashboard-agency {{status.agency.overall}}" *ngFor="let status of statuses">
       <div class="dashboard-agency-icon">
         <img [src]="getIcon(status)" alt="{{status.agency.name}}"/>
@@ -53,7 +53,7 @@
           </div>
         </div>
         <div class="dashboard-agency-link" *ngIf="status.agency.codePath != null">
-            <a toggle-menu routerLink="{{status.agency.codePath}}" routerLinkActive="usa-current">Explore the code</a>
+            <a toggle-menu routerLink="{{status.agency.codePath}}" routerLinkActive="current">Explore the code</a>
         </div>
       </div>
     </li>

@@ -1,19 +1,7 @@
 <div class="repo-general">
-
-    <!-- <div class="repo-banner">
-      <h1>{{repo.agency.acronym}}</h1>
-      <h2>{{repo.name}}</h2>
-
-      <a *ngIf="getRepositoryUrl() | isdefined" href="{{ getRepositoryUrl() }}">
-          <button class="button button--transparent">Visit Repo</button>
-        </a>
-    </div> -->
-
-
-
-<section *ngIf="repo" class="repo-container usa-grid">
-    <div class="repo-breadcrumb">
-        <ul class="usa-unstyled-list">
+  <section *ngIf="repo" class="repo-container indented">
+    <div>
+        <ul class="breadcrumbs">
           <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/explore-code/agencies/{{repo.agency.acronym}}">{{repo.agency.acronym}}</a></li>
           <li>{{repo.name}}</li>
@@ -26,14 +14,16 @@
           <div>Last updated on {{repo.date.metadataLastUpdated | date: "MM/dd/yy"}}</div>
         </span>
         <span *ngFor="let tag of repo.tags">
-          <button *ngIf="tag"
+          <button
+            *ngIf="tag"
             [routerLink]="['/search']"
             [queryParams]="{ q: tag }"
-            class="repo-tag">
+            class="tag"
+          >
             {{ tag }}
           </button>
         </span>
-        <ul class="usa-unstyled-list repo-features">
+        <ul class="repo-features">
             <li>
               <span *ngIf="repo.permissions?.usageType === 'openSource'"><i class="icon icon-ok-circled2"></i>Open Source</span>
               <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'"><i class="icon icon-arrows-cw"></i>Government-Wide Reuse</span>
@@ -77,4 +67,5 @@
     </header>
 
   </section>
-  <modal></modal>
+</div>
+<modal></modal>

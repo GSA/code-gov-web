@@ -1,195 +1,179 @@
-<section id="banner-home" class="block block--dark banner">
-  <div class="banner-background-container">
-    <div class="banner-background"></div>
-  </div>
-    <div class="banner-container">
-      <div class="banner-content">
-        <h1>Sharing America's Code</h1>
-        <p>
-          Unlock the tremendous potential of the Federal Government’s software.
-        </p>
-      </div>
-    <div class="usa-grid">
-      <div class="usa-width-one-half">
-        <repos-search autofocus=true buttonClasses="button--transparent"></repos-search>
+<section id="banner-home" class="banner large">
+  <div class="banner-content">
+    <div class="banner-title">Sharing America's Code</div>
+    <div class="banner-subtitle">
+      Unlock the tremendous potential of the Federal Government’s software.
+    </div>
+    <div class="indented">
+      <div class="banner-subsection width-half">
+        <div class="banner-subsection-content">
+          <repos-search autofocus=true buttonClasses="transparent"></repos-search>
+        </div>
       </div>
       <div class="vertical-row"></div>
-      <div class="usa-width-one-half">
-        <div class="help-wanted">
-          <h2>Help Wanted!</h2>
-          <p>Discover how you can get involved and make America's code better</p>
-          <!--button for above medium (601) screens-->
+      <div class="banner-subsection width-half">
+        <div class="banner-subsection-content">
+          <div class="banner-subsection-title">Help Wanted!</div>
+          <div class="banner-subsection-subtitle">
+            Discover how you can get involved and make America's code better
+          </div>
           <div class="buttons">
-            <button class="button--transparent" routerLink="/help-wanted">Explore Tasks</button>
+              <button class="transparent" routerLink="/help-wanted">Explore Tasks</button>
           </div>
-        </div>
-        <!--mobile button with different style and text for below medium screens-->
-        <div class="help-wanted-mobile">
-          <h2>Help Wanted!</h2>
-          <p>Discover how you can get involved and make America's code better</p>
-          <div class="buttons">
-            <button class="button--transparent" routerLink="/help-wanted">Explore Tasks</button>
-          </div>
-          </div>
-      </div>
-    </div>
-<!--
-    <div class="usa-grid">
-      <div class="usa-width-one-whole">
-        <div class="questions">
-          <p><img alt="Chat Bubble" aria-hidden="true" src="../../../assets/img/icons/chat_bubble.png" /> Have questions or feedback? Open an issue on our open source repository <a external-link href="https://github.com/GSA/code-gov-web/issues">here</a>.</p>
-        </div>
-        <div class="questions-mobile">
-          <p><img alt="Chat Bubble" aria-hidden="true" src="../../../assets/img/icons/chat_bubble.png" />
-            Have questions or feedback?</p>
-          <p class="second-line">Open an issue on our open source repository <a external-link href="https://github.com/GSA/code-gov-web/issues">here</a>.</p>
         </div>
       </div>
     </div>
--->
-    </div>
-  <a class="scroll-indicator" title="Scroll Down" pageScroll [pageScrollDuration]="250" [pageScrollOffset]="getAboutOffset()" pageScrollTarget=".about" href="#"><i class="icon icon-angle-down"></i></a>
-</section>
-<section id="about" class="about">
-  <div class="usa-grid">
-    <header>
-      <h2>Our Mission</h2>
-      <p>
-        Code.gov leverages the power of code sharing and collaboration to help the US Government
-        cut down on duplicative software development and save millions of taxpayer dollars for
-        the American people.
-      </p>
-    </header>
-    <hr />
-    <ul class="usa-unstyled-list usa-grid about-actions">
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/docs/overview/introduction">
-          <img alt="About Icon" aria-hidden="true" src="../../../assets/img/icons/info_bl.png" />
-          <h3>About Us</h3>
-          <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
-        </a>
-      </li>
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/policy/introduction">
-          <img alt="Policy Info Icon" aria-hidden="true" src="../../../assets/img/icons/policy_bl.png" />
-          <h3>Policy Info</h3>
-          <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
-        </a>
-      </li>
-      <li class="about-action usa-width-one-third">
-        <a routerLink="/policy-guide/docs/compliance/dashboard">
-          <img alt="Dashboard Icon" aria-hidden="true" src="../../../assets/img/icons/check_bl.png" />
-          <h3>Progress Report</h3>
-          <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
-        </a>
-      </li>
-    </ul>
   </div>
+
+  <a
+    class="scroll-indicator"
+    title="Scroll Down"
+    (click)="scrollToAbout()"
+  >
+    <i class="icon icon-angle-down"></i>
+  </a>
+
 </section>
-<section class="featured-projects block block--white">
-  <ul class="usa-unstyled-list">
-    <li class="usa-width-one-whole" id="featured-projects-title">
-      <div class="usa-grid">
-        <div class="usa-width-one-whole">
-          <h1>Featured Projects</h1>
-        </div>
-      </div>
+
+
+
+<section id="about" class="about indented">
+  <header>
+    <h2>Our Mission</h2>
+    <p>
+      Code.gov leverages the power of code sharing and collaboration to help the US Government
+      cut down on duplicative software development and save millions of taxpayer dollars for
+      the American people.
+    </p>
+  </header>
+  <br />
+  <hr />
+  <ul class="indented about-actions">
+    <li class="about-action width-third">
+      <a routerLink="/policy-guide/docs/overview/introduction">
+        <img alt="About Icon" aria-hidden="true" src="../../../assets/img/icons/info_bl.png" />
+        <h3>About Us</h3>
+        <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
+      </a>
     </li>
-    <li class="block wntr featured-project usa-width-one-whole">
-      <div class="usa-grid">
-        <div class="usa-width-one-half">
-          <div class="featured-project-info">
-            <div class="fp-short-name">WNTR</div>
-            <div class="fp-verbose-name">Water Network Tool for Resilience</div>
-            <div class="fp-developed-by">developed by the Environmental Protection Agency</div>
-            <p class="fp-description">A python package designed to simulate and analyze resilience of water distribution networks.</p>
-            <div class="buttons">
-              <button
-                class="button--transparent"
-                routerLink="/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0"
-              >View Project</button>
-              &nbsp;
-              <a href="https://github.com/usepa/wntr"><button class="button--transparent">Go to Repo</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <li class="about-action width-third">
+      <a routerLink="/policy-guide/policy/introduction">
+        <img alt="Policy Info Icon" aria-hidden="true" src="../../../assets/img/icons/policy_bl.png" />
+        <h3>Policy Info</h3>
+        <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
+      </a>
     </li>
-    <li class="block its-ode featured-project usa-width-one-whole">
-      <div class="usa-grid">
-        <div class="usa-width-one-half">
-          <div class="featured-project-info">
-            <div class="fp-short-name">ITS ODE</div>
-            <div class="fp-verbose-name">Intelligent Transportation Systems Operational Data Environment</div>
-            <div class="fp-developed-by">developed by the Department of Transportation</div>
-            <p class="fp-description">A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.</p>
-            <div class="buttons">
-              <button
-                class="button--transparent"
-                routerLink="/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_"
-              >View Project</button>
-              &nbsp;
-              <a href="https://github.com/usdot-jpo-ode/jpo-ode"><button class="button--transparent">Go to Repo</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li class="block walkoff featured-project usa-width-one-whole">
-      <div class="usa-grid">
-        <div class="usa-width-one-half">
-          <div class="featured-project-info">
-            <div class="fp-short-name">WALKOFF</div>
-            <div class="fp-developed-by">developed by the National Security Agency</div>
-            <p class="fp-description">Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.</p>
-            <div class="buttons">
-              <button
-                class="button--transparent"
-                routerLink="/explore-code/agencies/NSA/repos/nsa_walkoff"
-              >View Project</button>
-              &nbsp;
-              <a href="https://github.com/iadgov/WALKOFF" ><button class="button--transparent">Go to Repo</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <li class="about-action width-third">
+      <a routerLink="/policy-guide/docs/compliance/dashboard">
+        <img alt="Dashboard Icon" aria-hidden="true" src="../../../assets/img/icons/check_bl.png" />
+        <h3>Progress Report</h3>
+        <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
+      </a>
     </li>
   </ul>
 </section>
-<section class="press l-block--extra-large">
-  <div class="usa-grid">
-    <h2>Press</h2>
-    <div class="press-container">
-      <div class="usa-width-one-whole quote-large">
-        <blockquote>
-          <span class="begin-quote">“</span>It’s the latest in a long line of high-profile victories for the open
-          source movement.<span class="end-quote">”</span>
-        </blockquote>
-        <div class="attribution">
-          <a external-link href="https://www.wired.com/2016/08/open-source-won-now/">
-            <img class="press-logo" src="../../../assets/img/logos/press/wired.svg" alt="Wired">
-          </a>
+<section class="featured-projects block block--white">
+  <div id="featured-projects-title">
+    <div class="indented">
+        <h2>Featured Projects</h2>
+    </div>
+  </div>
+  <div class="block wntr featured-project">
+    <div class="indented">
+      <div class="width-half">
+        <div class="featured-project-info">
+          <div class="fp-short-name">WNTR</div>
+          <div class="fp-verbose-name">Water Network Tool for Resilience</div>
+          <div class="fp-developed-by">developed by the Environmental Protection Agency</div>
+          <p class="fp-description">A python package designed to simulate and analyze resilience of water distribution networks.</p>
+          <div class="buttons">
+            <button
+              class="transparent"
+              routerLink="/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0"
+            >View Project</button>
+            &nbsp;
+            <a href="https://github.com/usepa/wntr"><button class="transparent">Go to Repo</button></a>
+          </div>
         </div>
       </div>
-      <div class="usa-width-one-whole">
-        <hr />
-        <ul class="usa-unstyled-list press-links">
-          <li>
-            <a external-link href="https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/">
-              <img class="press-logo" src="../../../assets/img/logos/press/techcrunch.jpg" alt="TechCrunch">
-            </a>
-          </li>
-          <li>
-            <a external-link href="http://www.pcmag.com/news/346860/white-house-releases-open-source-software-policy">
-              <img class="press-logo" src="../../../assets/img/logos/press/pcmag.png" alt="PC Mag">
-            </a>
-          </li>
-          <li>
-            <a external-link href="https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx">
-              <img class="press-logo" src="../../../assets/img/logos/press/fcw.png" alt="FCW">
-            </a>
-          </li>
-        </ul>
+    </div>
+  </div>
+  <div class="block its-ode featured-project">
+    <div class="indented">
+      <div class="width-half">
+        <div class="featured-project-info">
+          <div class="fp-short-name">ITS ODE</div>
+          <div class="fp-verbose-name">Intelligent Transportation Systems Operational Data Environment</div>
+          <div class="fp-developed-by">developed by the Department of Transportation</div>
+          <p class="fp-description">A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.</p>
+          <div class="buttons">
+            <button
+              class="transparent"
+              routerLink="/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_"
+            >View Project</button>
+            &nbsp;
+            <a href="https://github.com/usdot-jpo-ode/jpo-ode"><button class="transparent">Go to Repo</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block walkoff featured-project">
+    <div class="indented">
+      <div class="width-half">
+        <div class="featured-project-info">
+          <div class="fp-short-name">WALKOFF</div>
+          <div class="fp-developed-by">developed by the National Security Agency</div>
+          <p class="fp-description">Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.</p>
+          <div class="buttons">
+            <button
+              class="transparent"
+              routerLink="/explore-code/agencies/NSA/repos/nsa_walkoff"
+            >View Project</button>
+            &nbsp;
+            <a href="https://github.com/iadgov/WALKOFF" ><button class="transparent">Go to Repo</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="press">
+  <div class="banner medium">
+    <div class="banner-content">
+      <div class="indented">
+        <div class="banner-title">Press</div>
+        <div class="press-container">
+          <div class="quote light">
+            <blockquote>It’s the latest in a long line of high-profile victories for the open
+              source movement.</blockquote>
+            <div class="attribution">
+              <a external-link href="https://www.wired.com/2016/08/open-source-won-now/">
+                <img class="press-logo" src="../../../assets/img/logos/press/wired.svg" alt="Wired">
+              </a>
+            </div>
+          </div>
+          <div>
+            <hr />
+            <ul class="press-links">
+              <li>
+                <a external-link href="https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/">
+                  <img class="press-logo" src="../../../assets/img/logos/press/techcrunch.jpg" alt="TechCrunch">
+                </a>
+              </li>
+              <li>
+                <a external-link href="http://www.pcmag.com/news/346860/white-house-releases-open-source-software-policy">
+                  <img class="press-logo" src="../../../assets/img/logos/press/pcmag.png" alt="PC Mag">
+                </a>
+              </li>
+              <li>
+                <a external-link href="https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx">
+                  <img class="press-logo" src="../../../assets/img/logos/press/fcw.png" alt="FCW">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

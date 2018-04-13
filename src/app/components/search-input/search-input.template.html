@@ -1,12 +1,11 @@
-<div class="search-input" [ngClass]="{'with-icon': withIcon}" #searchInput>
-  <i class="icon icon-search" aria-hidden="true"></i>
+<div class="search-input-wrapper" #searchInput>
   <input
       #query
       [name]="name"
       title="Search Code.gov"
-      type="text"
+      type="search"
       required
-      class="form-control"
+      class="form-control no-search-icon-on-mobile"
       [ngModel]="queryValue"
       (ngModelChange)="change($event)"
       (focus)="showAutocomplete()"

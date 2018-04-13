@@ -1,10 +1,7 @@
-@import '../../../styles/base/variables';
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .browse {
-  @include span-columns(12);
+  margin-bottom: 4.5rem;
   margin-top: 0.7rem;
 
   @media screen and (min-width: $small-screen) {
@@ -15,6 +12,7 @@
 .button-container {
   display: none;
   margin: 0 auto;
+  margin-top: 3rem;
 
   @media screen and (min-width: $small-screen) {
     display: block;
@@ -22,7 +20,7 @@
 }
 
 .search-with-icon-button {
-  @include span-columns(3);
+  @extend .width-quarter;
   font-size: 0.8em;
   margin: 0;
   margin-left: 10px;
@@ -76,8 +74,8 @@ button {
   }
 
   &.search-with-icon-button {
-    @include span-columns(3);
-    display: block;
+    @include width-sixth();
+    display: inline-block;
     font-size: 0.8em;
     margin-left: 0;
 
@@ -87,40 +85,18 @@ button {
   }
 }
 
-.search-form {
-  @include clearfix;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  input,
-  label {
-    //max-width: none;
-    width: 90%;
-    @media screen and (max-width: $small-screen) {
-      width: 100%;
-    }
-  }
-
-  label {
-    height: 0px;
-    margin: 0;
-    overflow: none;
-    text-align: left;
-    text-indent: -9999px;
-  }
-}
-
 .search-input-container {
-  @include span-columns(9);
+  @include width-three-quarters();
 
   @media screen and (min-width: $small-screen) {
-    @include span-columns(12);
+    @include width-whole();
+    margin-right: 0;    
   }
 }
 
 .search-results-content {
   .search-input-container {
-    @include span-columns(9);
+    @include width-three-quarters();
     margin-left: 0;
   }
 

@@ -6,7 +6,7 @@
   <p class="repo-description">
     {{ repo.description | truncate : 200 }}
   </p>
-  <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features usa-unstyled-list">
+  <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
     <li *ngIf="isGitHubRepo()">
       <i class="icon icon-github"></i>
       <span><a [href]="repo.repositoryURL">{{ repo.repositoryURL }}</a></span>

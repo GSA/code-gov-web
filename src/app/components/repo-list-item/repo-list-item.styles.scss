@@ -1,6 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/addons/font-stacks';
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .repo-list-item {
   display: block;
@@ -14,10 +12,10 @@
       border-right: 0;
       border-top: 0;
       padding-bottom: 3rem;
-  
+
       &:hover {
         box-shadow: none;
-      } 
+      }
     }
   }
 }

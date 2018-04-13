@@ -1,14 +1,13 @@
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
-.nav-item {
-  display: inline-block;
-  font-size: 1em;
-  line-height: 40px;
-  margin-bottom: 8px;
-  margin-left: 1em;
-  margin-top: 8px;
-  vertical-align: top;
+ul {
+  li {
+    a {
+      svg {
+        float: left;
+      }
+    }
+  }
 }
 
 .app-navigation {
@@ -24,30 +23,19 @@
     padding: 1.5rem 2rem;
   }
 
-  &.block--white.not-at-top {
-    background-color: $color-white;
-    box-shadow: 0 0 10px 0 $color-black;
-  }
-
-  &.block--dark {
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  &.block--dark.not-at-top {
-    background-color: $brand-blue-gray-dark;
-    box-shadow: 0 0 10px 0 $color-black;
-
-    @media screen and (min-width: $small-screen) {
-      box-shadow: none;
-    }
-  }
-
   .search-form {
     display: none;
 
+    @media screen and (min-width: $medium-screen) {
+      width: 36rem;
+    }
+
     @media screen and (min-width: $large-screen) {
       display: block;
+    }
+
+    input[type=search] {
+      width: 90%;
     }
   }
 }
@@ -116,25 +104,24 @@
 
 .search-form {
   display: none;
-  float: right;
-  width: 90%;
 
   @media screen and (min-width: $small-screen) {
     display: block;
+    float: right;
   }
 
-  @media screen and (min-width: $medium-screen) {
-    width: 36rem;
+  input[type=search] {
+    width: 90%;
   }
 }
 
 .search-box {
-  background-color: $brand-blue-gray-dark;
+  background-color: $color-gray-dark;
   display: none;
   padding: 0.5rem 2rem;
   position: fixed;
   right: 0;
-  top: 23px;
+  top: 20px;
   transition: 0.25s linear transform;
   width: 100%;
   z-index: 2;
@@ -148,7 +135,13 @@
   }
 
   &.active {
-    transform: translateY(52px);
+    transform: translateY(55px);
+  }
+
+  .search-form {
+    @media screen and (min-width: $medium-screen) {
+      width: 36rem;
+    }
   }
 }
 
@@ -160,6 +153,7 @@
   height: 42px;
   line-height: 42px;
   position: relative;
+  text-decoration: none;
   transition: 0.25s transform;
   width: 10%;
 
@@ -172,11 +166,13 @@
     transform: scale(1.5);
 
     > i {
+      color: $color-white;
       transform: translateX(-50%) translateY(-50%);
     }
   }
 
   > i {
+    color: $color-white;
     position: absolute;
     top: 50%;
     left: 50%;

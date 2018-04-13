@@ -18,6 +18,8 @@ const commonConfig = require('./webpack.common.js');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 
+const SiteConfig = require('./code-gov-config.json');
+
 /**
  * Webpack Constants
  */
@@ -76,11 +78,17 @@ const METADATA = webpackMerge(webpackConfig.metadata, {
   gtmAuth: gtmAuth,
   HMR: false,
   isDevServer: false,
-  title: 'Code.gov'
 });
 
-
 module.exports = function (env) {
+
+  const htmlWebpackPlugin = new HtmlWebpackPlugin(Object.assign({
+    metadata: METADATA,
+    template: 'src/index.html',
+    chunksSortMode: 'dependency',
+    inject: 'head'
+  }, SiteConfig));
+ 
 
   return webpackMerge(webpackConfig({env: ENV}), {
 
@@ -90,14 +98,9 @@ module.exports = function (env) {
 
     plugins: [
 
-      new HtmlWebpackPlugin({
-        metadata: METADATA,
-        template: 'src/index.html',
-        title: METADATA.title,
-        chunksSortMode: 'dependency',
-        inject: 'head'
-      }),
-      new PreloadWebpackPlugin(),
+     htmlWebpackPlugin,
+
+     new PreloadWebpackPlugin(),
 
       new LoaderOptionsPlugin({
         options: {

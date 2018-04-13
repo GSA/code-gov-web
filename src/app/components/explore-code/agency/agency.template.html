@@ -12,7 +12,7 @@
         {{ allDisplayedRepos.length }} {{ "Projects" | pluralize : allDisplayedRepos.length }}
       </p>
       <ul
-          class="repos-list usa-unstyled-list"
+          class="repos-list"
           infinite-scroll
           [infiniteScrollDistance]="2"
           [infiniteScrollThrottle]="500"
@@ -25,7 +25,7 @@
                 <p class="repo-description">
                   {{ repo.description | truncate : 200 }}
                 </p>
-                <ul class="usa-unstyled-list repo-features">
+                <ul class="repo-features">
                   <li *ngFor="let language of repo.languages" class="language">
                     <i class="icon devicons devicons-{{language | lowercase | languageIcon }}"></i>
                     <span>{{ language }}</span>

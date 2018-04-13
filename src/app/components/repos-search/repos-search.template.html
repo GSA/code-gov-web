@@ -2,7 +2,7 @@
     class="search-form"
     (ngSubmit)="onSubmit()"
     #repoSearch>
-  <label for="searchQuery">Query</label>
+  <label for="searchQuery"></label>
   <div>
     <div class="search-input-container">
       <search-input
@@ -20,9 +20,7 @@
     Or <a class="link" routerLink="/explore-code">Browse by Agency</a>
   </div>
   <div class="button-container">
-    <button class="search-with-text-button button {{buttonClasses}}">
-      <span class="search-button-text">Search</span>
-    </button>
-    <button class="browse-by-agency-button button {{buttonClasses}}" routerLink="/explore-code">Browse By Agency</button>
+    <button class="transparent">Search</button>
+    <button class="transparent" routerLink="/explore-code">Browse by Agency</button>
   </div>
 </form>

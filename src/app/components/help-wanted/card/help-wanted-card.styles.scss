@@ -1,15 +1,17 @@
-@import '../../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
-.help-wanted-card {
-  height: 100%;
+.card {
 
-  h3,
-  p {
+  h3, p {
     margin: 0;
   }
 
   h3 {
     line-height: 1;
+
+    &:hover {
+      color: $brand-teal;
+    }
 
     a {
       font-weight: bold;
@@ -17,9 +19,7 @@
       &:visited {
         color: $brand-blue;
       }
-
     }
-
   }
 
   p {
@@ -48,8 +48,7 @@
     }
   }
 
-  dd,
-  dt {
+  dd, dt {
     display: inline;
     margin: 0;
   }

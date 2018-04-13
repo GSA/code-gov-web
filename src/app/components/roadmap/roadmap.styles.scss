@@ -1,7 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 /* overarching page styles */
 .roadmap-general {
@@ -15,51 +12,6 @@
 
     &:hover {
       color: $brand-teal;
-    }
-  }
-}
-
-.roadmap-banner {
-  background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  margin-bottom: 2rem;
-  padding-bottom: 8rem;
-  padding-top: 8rem;
-  text-align: center;
-
-  h1 {
-    color: $color-white;
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-}
-
-.roadmap-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-
-  ul {
-    li {
-      display: inline-block;
-
-      &::before {
-        content: '> ';
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      a {
-        color: $color-black;
-      }
-
-      &:last-child {
-        font-weight: $font-bold;
-      }
     }
   }
 }
@@ -82,71 +34,6 @@
     table {margin-bottom: .1rem};
   }
 }
-
-.roadmap-table {
-
-  table {
-    width: 100%
-  }
-
-  th {
-    color: $color-gray-dark;
-    font-size: 1.3em;
-    text-align: center;
-    background-color: $color-cool-blue-lightest;
-    border-color: $color-gray-lighter;
-    border-width: 1px;
-  }
-
-  td {
-    color: $color-gray-dark;
-    border-color: $color-gray-lighter;
-    border-width: 1px;
-    width: 10%;
-  }
-
-  td.widerow {
-    padding-left: 1%;
-    width: 90%;
-  }
-
-  td.text-cell {
-    border-left: 0rem;
-    border-bottom: 0rem;
-    border-top: 0rem;
-  }
-
-  td.graphic-cell {
-    border-right: 0rem;
-    border-bottom: 0rem;
-    border-top: 0rem;
-  }
-
-  td.text-cell-last {
-    border-left: 0rem;
-    border-top: 0rem;
-  }
-
-  td.graphic-cell-last {
-    border-right: 0rem;
-    border-top: 0rem;
-  }
-
-  table tr:last-child td:first-child {
-    border-bottom-left-radius: 5px;
-  }
-
-  table tr:last-child td:last-child {
-    border-bottom-right-radius: 5px;
-  }
-
-  table th{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-
-}
-
 /* legend under roadmap table */
 .roadmap-legend {
 

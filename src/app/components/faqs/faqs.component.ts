@@ -16,6 +16,6 @@ export class FaqsComponent {
    * section and the header is flush against the section.
    */
   getAboutOffset() {
-    return document.querySelector('.app-navigation').clientHeight + 30;
+    return document.querySelector('#about').clientHeight + 30;
   }
 }

@@ -1,7 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 /* overarching page styles */
 .faq-general {
@@ -15,32 +12,6 @@
 
     &:hover {
       color: $brand-teal;
-    }
-  }
-}
-
-
-//breadcrumb
-.faq-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-  ul {
-    li {
-      display: inline-block;
-      &::before {
-        content: '> ';
-      }
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-      a {
-        color: $color-black;
-      }
-      &:last-child {
-        font-weight: $font-bold;
-      }
     }
   }
 }
@@ -60,7 +31,7 @@
   padding: 4rem 0 6rem;
   margin: 0;
   color: $color-gray-dark;
-  background-color: $color-gray-lightest;
+  background-color: $color-gray-second-lightest;
   text-align: center;
   h2 {
     margin-bottom: 2em;
