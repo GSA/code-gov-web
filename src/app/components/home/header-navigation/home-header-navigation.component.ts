@@ -17,7 +17,7 @@ export class HomeHeaderNavigationComponent {
   private isAtTop: boolean = true;
   private color: string = 'dark transparent';
   private dropdownSearchBox: boolean = false;
-  private twitter_handle: string = twitter.handle;
+  private twitterHandle: string = twitter.handle;
 
   /**
    * Triggers whenever the window is scrolled.

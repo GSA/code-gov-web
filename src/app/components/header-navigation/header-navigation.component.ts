@@ -23,7 +23,7 @@ export class HeaderNavigationComponent {
   searchBoxActiveSubscription: Subscription;
   color: string = 'white';
   dropdownSearchBox: boolean = true;
-  twitter_handle: string = twitter.handle;
+  twitterHandle: string = twitter.handle;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
 
 
