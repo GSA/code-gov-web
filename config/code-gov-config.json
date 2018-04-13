@@ -2,7 +2,7 @@
   "title": "code.gov",
   "api": {
     "base": "https://api.code.gov/",
-    "key": "eQjuCayvuIpnxRjFZ0ev0jDHoTvhidzrX0hL3ttC",
+    "key": "OC457325hyT6DpFm5HBBZ1i8SR6gtp5U2CdqtHZQ"
   },
   "style": "code-gov-style",
   "twitter": {
@@ -15,7 +15,8 @@
       "author": "Environmental Protection Agency",
       "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
       "repoID": "doe_snl_water_network_tool_for_resilience_v_1_0",
-      "repo_url": "https://github.com/usepa/wntr"
+      "repo_url": "https://github.com/usepa/wntr",
+      "image": "url"
     }
   ],
   "links": {
