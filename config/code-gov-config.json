@@ -1,6 +1,9 @@
 {
   "title": "code.gov",
-  "api": "https://api.code.gov/repos?api_key=DEMO_KEY",
+  "api": {
+    "base": "https://api.code.gov/",
+    "key": "eQjuCayvuIpnxRjFZ0ev0jDHoTvhidzrX0hL3ttC",
+  },
   "style": "code-gov-style",
   "twitter": {
     "handle": "codedotgov"
