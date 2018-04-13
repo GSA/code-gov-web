@@ -1,15 +1,37 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
-//div between Search and Help Wanted
-.vertical-row {
-  @media screen and (min-width: $medium-screen) {
-    display: inline-block;
-    height: 12em;
-    width: 3px;
-    background: $color-white;
-    position: relative;
+.banner {
+
+  &.large {
+
+    .banner-subsection {
+      height: 14rem;
+      @media screen and (min-width: $medium-screen) {
+        height: 17rem;
+      }
+      .banner-subsection-content {
+        @include center-vertically();
+
+        .buttons {
+          padding-top: 7px;
+        }
+      }
+    }
+
+    //div between Search and Help Wanted
+    .vertical-row {
+      @media screen and (min-width: $medium-screen) {
+        display: inline-block;
+        height: 17rem;
+        width: 3px;
+        background: $color-white;
+        position: relative;
+      }
+    }
   }
+
 }
+
 
 //Help Wanted styles between Banner and Our Mission (About) sections on homepage
 .help-wanted {

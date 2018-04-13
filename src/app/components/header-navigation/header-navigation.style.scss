@@ -23,11 +23,6 @@ ul {
     padding: 1.5rem 2rem;
   }
 
-  &.block--white.not-at-top {
-    background-color: $color-white;
-    box-shadow: 0 0 10px 0 $color-black;
-  }
-
   .search-form {
     display: none;
 
@@ -158,6 +153,7 @@ ul {
   height: 42px;
   line-height: 42px;
   position: relative;
+  text-decoration: none;
   transition: 0.25s transform;
   width: 10%;
 
@@ -170,11 +166,13 @@ ul {
     transform: scale(1.5);
 
     > i {
+      color: $color-white;
       transform: translateX(-50%) translateY(-50%);
     }
   }
 
   > i {
+    color: $color-white;
     position: absolute;
     top: 50%;
     left: 50%;

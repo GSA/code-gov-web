@@ -90,6 +90,7 @@ button {
 
   @media screen and (min-width: $small-screen) {
     @include width-whole();
+    margin-right: 0;    
   }
 }
 
