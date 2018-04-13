@@ -121,7 +121,7 @@ export class ClientService {
   }
 
   getRepoByID(acronym: string = ''): Observable<Repo> {
-    let url = this.BASE + `repos/${acronym}&api_key=${this.KEY}`;
+    let url = this.BASE + `repos/${acronym}?api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json());
   }
