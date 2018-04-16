@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { SeoService } from '../../services/seo';
@@ -13,7 +13,7 @@ import * as SiteConfig from '../../../../config/code-gov-config.json';
   styles: [require('./home.style.scss')],
   template: require('./home.template.html')
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(
     public stateService: StateService,
@@ -28,14 +28,17 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     // fixes weird issue where would start on home page scrolled down somewhat
-    this.router.events.subscribe((evt) => {
-        if (!(evt instanceof NavigationEnd)) {
-            return;
-        }
-        window.scrollTo(0, 0);
-    });
+    window.scrollTo(0, 0);
+  }
+
+  ngAfterViewInit(): void {
+    /*
+      fixes weird issue where would start on home page scrolled down somewhat
+      This is called each time the use switches to the home page.
+    */
+    window.scrollTo(0, 0);
   }
 
   scrollToAbout() {
