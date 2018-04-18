@@ -312,10 +312,87 @@
 
 .featured-project {
   text-align: left;
+  position: relative;
+
+  .indented {
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+
+    .featured-project-info {
+      padding: 3rem 4rem;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 50%;
+
+      .fp-short-name {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .fp-verbose-name {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .fp-developed-by {
+        color: lightgray;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .buttons {
+        text-align: center;
+
+        @media screen and (min-width: $small-screen) {
+          text-align: left;
+        }
+      }
+
+      button {
+        font-size: 0.8em;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 0;
+        margin-top: 0;
+        max-width: 170px;
+        width: 44%;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @media screen and (min-width: $large-screen) {
+          font-size: 1em;
+        }
+      }
+    }
+
+  }
 
   &:nth-of-type(odd) {
+    background: $featured-dark;
+    color: $color-white;
+
+    button, h3, h4, p {
+      color: $color-white;
+    }
+
     > div {
       text-align: left;
+
       > div {
         text-align: left;
       }
@@ -323,10 +400,39 @@
   }
 
   &:nth-of-type(even) {
+    background: $featured-light;
+    color: $color-white;
+
     > div {
+
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+      background-size: 50%;
       text-align: right;
       > div {
         text-align: left;
+
+        .featured-project-info {
+          .fp-short-name {
+            color: $color-gray-dark
+          }
+          .fp-verbose-name {
+            color: $color-gray-dark;
+          }
+          .fp-developed-by {
+            color: darkgray;
+          }
+
+          button {
+            border-color: $color-gray-dark;
+            color: $color-gray-dark;
+
+            &:focus, &:hover {
+              border-color: $brand-teal;
+              color: $color-white;
+            }
+          }
+        }
       }
     }
   }
@@ -351,9 +457,8 @@
   }
 }
 
+/*
 .wntr {
-  background: $featured-dark;
-  color: $color-white;
 
   .indented {
     @media screen and (min-width: $medium-screen) {
@@ -369,15 +474,12 @@
 
   }
 
-  button, h3, h4, p {
-    color: $color-white;
-  }
+
 }
 
 .its-ode {
 
-  background: $featured-light;
-  color: $color-white;
+
 
   .indented {
     @media screen and (min-width: $medium-screen) {
@@ -391,39 +493,14 @@
       background-size: 30%;
     }
 
-    .featured-project-info {
-      .fp-short-name {
-        color: $color-gray-dark
-      }
-      .fp-verbose-name {
-        color: $color-gray-dark;
-      }
-      .fp-developed-by {
-        color: darkgray;
-      }
 
-    }
   }
 
-  button {
-    border-color: $color-gray-dark;
-    color: $color-gray-dark;
-  }
-
-  button {
-    &:focus, &:hover {
-      border-color: $brand-teal;
-      color: $color-white;
-    }
-  }
 }
 
 
 
 .walkoff {
-
-  background: $featured-dark;
-  color: $color-white;
 
   .indented {
     @media screen and (min-width: $medium-screen) {
@@ -434,56 +511,9 @@
     }
   }
 
-  button, h3, h4, p {
-    color: $color-white;
-  }
 }
+*/
 
-.featured-project-info {
-  padding: 3rem 4rem;
-
-  .fp-short-name {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  .fp-verbose-name {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .fp-developed-by {
-    color: lightgray;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .buttons {
-    text-align: center;
-
-    @media screen and (min-width: $small-screen) {
-      text-align: left;
-    }
-  }
-
-  button {
-    font-size: 0.8em;
-    margin-bottom: 0;
-    margin-left: 1rem;
-    margin-right: 0;
-    margin-top: 0;
-    max-width: 170px;
-    width: 44%;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      font-size: 1em;
-    }
-  }
-}
 
 .press {
   background-attachment: scroll;

@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { MobileService } from '../../services/mobile';
 import { SearchInputComponent } from '../search-input';
 
-import { twitter } from '../../../../config/code-gov-config.json';
+import { title, twitter } from '../../../../config/code-gov-config.json';
 
 @Component({
   selector: 'header-navigation',
@@ -24,6 +24,7 @@ export class HeaderNavigationComponent {
   color: string = 'white';
   dropdownSearchBox: boolean = true;
   twitterHandle: string = twitter.handle;
+  title: string = title;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
 
 
