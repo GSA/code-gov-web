@@ -1,9 +1,7 @@
 <section id="banner-home" class="banner large">
   <div class="banner-content">
-    <div class="banner-title">Sharing America's Code</div>
-    <div class="banner-subtitle">
-      Unlock the tremendous potential of the Federal Government’s software.
-    </div>
+    <div class="banner-title">{{content.home.banner.motto}}</div>
+    <div class="banner-subtitle">{{content.home.banner.subtitle}}</div>
     <div class="indented">
       <div class="banner-subsection width-half">
         <div class="banner-subsection-content">
@@ -14,9 +12,7 @@
       <div class="banner-subsection width-half">
         <div class="banner-subsection-content">
           <div class="banner-subsection-title">Help Wanted!</div>
-          <div class="banner-subsection-subtitle">
-            Discover how you can get involved and make America's code better
-          </div>
+          <div class="banner-subsection-subtitle">{{content.home.banner.help_wanted_description}}</div>
           <div class="buttons">
               <button class="transparent" routerLink="/help-wanted">Explore Tasks</button>
           </div>
@@ -40,34 +36,16 @@
 <section id="about" class="about indented">
   <header>
     <h2>Our Mission</h2>
-    <p>
-      Code.gov leverages the power of code sharing and collaboration to help the US Government
-      cut down on duplicative software development and save millions of taxpayer dollars for
-      the American people.
-    </p>
+    <p>{{content.home.mission}}</p>
   </header>
   <br />
   <hr />
   <ul class="indented about-actions">
-    <li class="about-action width-third">
-      <a routerLink="/policy-guide/docs/overview/introduction">
-        <img alt="About Icon" aria-hidden="true" src="../../../assets/img/icons/info_bl.png" />
-        <h3>About Us</h3>
-        <p>Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.</p>
-      </a>
-    </li>
-    <li class="about-action width-third">
-      <a routerLink="/policy-guide/policy/introduction">
-        <img alt="Policy Info Icon" aria-hidden="true" src="../../../assets/img/icons/policy_bl.png" />
-        <h3>Policy Info</h3>
-        <p>The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.</p>
-      </a>
-    </li>
-    <li class="about-action width-third">
-      <a routerLink="/policy-guide/docs/compliance/dashboard">
-        <img alt="Dashboard Icon" aria-hidden="true" src="../../../assets/img/icons/check_bl.png" />
-        <h3>Progress Report</h3>
-        <p>Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.</p>
+    <li class="about-action width-third" *ngFor="let item of content.home.about">
+      <a [routerLink]="item.link">
+        <img alt="About Icon" aria-hidden="true" [src]="item.image" />
+        <h3>{{item.title}}</h3>
+        <p>{{item.description}}</p>
       </a>
     </li>
   </ul>
@@ -78,62 +56,24 @@
         <h2>Featured Projects</h2>
     </div>
   </div>
-  <div class="block wntr featured-project">
-    <div class="indented">
-      <div class="width-half">
-        <div class="featured-project-info">
-          <div class="fp-short-name">WNTR</div>
-          <div class="fp-verbose-name">Water Network Tool for Resilience</div>
-          <div class="fp-developed-by">developed by the Environmental Protection Agency</div>
-          <p class="fp-description">A python package designed to simulate and analyze resilience of water distribution networks.</p>
-          <div class="buttons">
-            <button
-              class="transparent"
-              routerLink="/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0"
-            >View Project</button>
-            &nbsp;
-            <a href="https://github.com/usepa/wntr"><button class="transparent">Go to Repo</button></a>
+  <div>
+    <div class="block featured-project" *ngFor="let fp of content.home.featured; let i = index">
+      <div class="indented">
+        <div class="width-half" *ngIf="i % 2 === 0"><img [src]="fp.image"></div>
+        <div class="width-half">
+          <div class="featured-project-info">
+            <div class="fp-short-name">{{fp.short_name}}</div>
+            <div class="fp-verbose-name" *ngIf="fp.verbose_name && fp.verbose_name !== ''">{{fp.verbose_name}}</div>
+            <div class="fp-developed-by">developed by the {{fp.author}}</div>
+            <p class="fp-description">{{fp.description}}</p>
+            <div class="buttons">
+              <a [href]="fp.links.view_project"><button class="transparent">View Project</button></a>
+              &nbsp;
+              <a [href]="fp.links.go_to_repo"><button class="transparent">Go to Repo</button></a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="block its-ode featured-project">
-    <div class="indented">
-      <div class="width-half">
-        <div class="featured-project-info">
-          <div class="fp-short-name">ITS ODE</div>
-          <div class="fp-verbose-name">Intelligent Transportation Systems Operational Data Environment</div>
-          <div class="fp-developed-by">developed by the Department of Transportation</div>
-          <p class="fp-description">A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.</p>
-          <div class="buttons">
-            <button
-              class="transparent"
-              routerLink="/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_"
-            >View Project</button>
-            &nbsp;
-            <a href="https://github.com/usdot-jpo-ode/jpo-ode"><button class="transparent">Go to Repo</button></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="block walkoff featured-project">
-    <div class="indented">
-      <div class="width-half">
-        <div class="featured-project-info">
-          <div class="fp-short-name">WALKOFF</div>
-          <div class="fp-developed-by">developed by the National Security Agency</div>
-          <p class="fp-description">Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.</p>
-          <div class="buttons">
-            <button
-              class="transparent"
-              routerLink="/explore-code/agencies/NSA/repos/nsa_walkoff"
-            >View Project</button>
-            &nbsp;
-            <a href="https://github.com/iadgov/WALKOFF" ><button class="transparent">Go to Repo</button></a>
-          </div>
-        </div>
+        <div class="width-half" *ngIf="i % 2 === 1"><img [src]="fp.image"></div>        
       </div>
     </div>
   </div>

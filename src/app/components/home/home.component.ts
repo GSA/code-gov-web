@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
-import * as SiteConfig from '../../../../config/code-gov-config.json';
+import { content, title } from '../../../../config/code-gov-config.json';
 
 @Component({
   // The selector is what angular internally uses
@@ -15,13 +15,15 @@ import * as SiteConfig from '../../../../config/code-gov-config.json';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
+  private content = content;
+
   constructor(
     public stateService: StateService,
     private seoService: SeoService,
     private router: Router
   ) {
     this.stateService.set('section', 'home');
-    this.seoService.setTitle(SiteConfig.title, false);
+    this.seoService.setTitle(title, false);
     this.seoService.setMetaDescription(
       'Code.gov is a platform designed to improve access to the federal government’s ' +
       'custom-developed software.'

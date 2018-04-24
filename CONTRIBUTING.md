@@ -4,13 +4,13 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
 
 We encourage you to read this project's CONTRIBUTING policy (you are here), its [LICENSE](LICENSE.md), and its [README](README.md).
 
-## How to contribute to Code.gov
+## How to contribute to code-gov-web
 
-- Report bugs and request features via [Github Issues](https://github.com/GSA/code-gov-api/issues).
+- Report bugs and request features via [Github Issues](https://github.com/GSA/code-gov-web/issues).
 - Join the [mailing list](http://code.us15.list-manage.com/subscribe?u=57dec439b29289fc14396b8db&id=a317168ea7) and stay up to date with our latest news.
-- [Share your ideas](mailto://code@gsa.gov) for how to improve Code.gov. We're always open to suggestions.
+- [Share your ideas](mailto://code@gsa.gov) for how to improve code-gov-web. We're always open to suggestions.
 - Create a [Github pull request](https://help.github.com/articles/creating-a-pull-request/) with new functionality or fixing a bug.
-- Improve or create documentation for Code.gov.
+- Improve or create documentation for code-gov-web.
 - Help us improve our unit and integrations tests.
 - Triage tickets and review patches triaging-tickets created by other users.
 
