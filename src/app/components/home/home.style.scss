@@ -315,27 +315,43 @@
   position: relative;
 
   .indented {
-    height: 40rem;
+    height: 45rem;
     overflow: hidden;
     position: relative;
 
+    @media screen and (max-width: 400.5px) {
+      height: 52rem;
+    }
+
     img {
+      display: none;
       position: absolute;
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
+
+      @media screen and (min-width: $small-screen) {
+        display: block;
+      }
     }
 
 
     .featured-project-info {
-      padding: 3rem 4rem;
+      left: 0;
+      padding: 3rem 5rem;
       position: absolute;
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      width: 50%;
+      width: 100%;
+
+      @media screen and (min-width: $small-screen) {
+        left: auto;
+        padding: 3rem 4rem;
+        width: 50%;
+      }
 
       .fp-short-name {
         font-size: 3rem;

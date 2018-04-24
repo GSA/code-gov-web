@@ -1,5 +1,5 @@
 {
-  "title": "code.sandiego.gov",
+  "title": "code.gov",
   "api": {
     "base": "https://api.code.gov/",
     "key": "OC457325hyT6DpFm5HBBZ1i8SR6gtp5U2CdqtHZQ"
@@ -71,29 +71,42 @@
           }
         }
       ]
+    },
+    "footer": {
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "url": "/#/privacy-policy"
+        },
+        {
+          "name": "Visit Project Page",
+          "url": "https://github.com/GSA/code-gov-web"
+        },
+        {
+          "name": "Join Mailing List",
+          "url": "https://bit.ly/2pnRlYN"
+        }
+      ],
+      "logos": [
+        {
+          "image": "/assets/img/logos/whitehouse.png",
+          "name": "The White House",
+          "url": "https://whitehouse.gov/"
+        },
+        {
+          "image": "/assets/img/logos/PIF.png",
+          "name": "Presidential Innovation Fellows",
+          "url": "https://presidentialinnovationfellows.gov/"
+        },
+        {
+          "image": "/assets/img/logos/GSA.png",
+          "name": "U.S. General Services Administration",
+          "url": "https://www.gsa.gov/"
+        }
+      ]
     }
-  },
-  "links": {
-    "privacy_policy": "/#/privacy-policy",
-    "project_page": "https://github.com/GSA/code-gov-web",
-    "join_mailing_list": "https://bit.ly/2pnRlYN",
-    "roadmap": "/#/roadmap"
   },
   "images": {
     "background": "./assets/img/american_flag_1920x1280_gradient.jpg"
-  },
-  "logos": [
-    {
-      "image": "/assets/img/logos/whitehouse.png",
-      "url": "https://whitehouse.gov/"
-    },
-    {
-      "image": "/assets/img/logos/PIF.png",
-      "url": "https://presidentialinnovationfellows.gov/"
-    },
-    {
-      "image": "/assets/img/logos/GSA.png",
-      "url": "https://www.gsa.gov/"
-    }
-  ]
+  }
 }
