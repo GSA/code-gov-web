@@ -104,6 +104,34 @@
           "url": "https://www.gsa.gov/"
         }
       ]
+    },
+    "roadmap": {
+      "overview": [
+        "At Code.gov, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
+        "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap. If you want to join the Code.gov user testing group, please email us at <a href='mailto:code@gsa.gov'>Code@gsa.gov</a>."
+      ],
+      "near": [
+        { "name": "Search results", "status": "Released" },
+        { "name": "Project Details Phase I", "status": "Released" },
+        { "name": "Help wanted", "status": "Released" },
+        { "name": "Roadmap on site", "status": "Released" },
+        { "name": "Enhanced compliance dashboard", "status": "Released" },
+        { "name": "Increased agency participation", "status": "Released" },
+        { "name": "Metadata schema 1.0 & 1.0.1 deprecation", "status": "Released" }
+      ],
+      "mid": [
+        { "name": "Agency pages", "status": null },
+        { "name": "Medium skin", "status": null },
+        { "name": "FAQs page", "status": "In Progress" },
+        { "name": "Admin tool", "status": null },
+        { "name": "Enhanced tools and resources", "status": null },
+        { "name": "Project Details Phase II", "status": null}
+      ],
+      "long": [
+        { "name": "User accounts", "status": null },
+        { "name": "Gamification", "status": null }
+      ],
+      "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The Code.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of Code.gov, the General Services Agency, the Office of Management and Budget, and the United States Federal Government."
     }
   },
   "images": {

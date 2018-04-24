@@ -15,9 +15,7 @@
 
   <div class="indented roadmap-overview">
     <h3>Overview</h3>
-    <p>At Code.gov, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.</p>
-
-    <p>The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap. If you want to join the Code.gov user testing group, please email us at <a href="mailto:code@gsa.gov">Code@gsa.gov</a>.</p>
+    <p *ngFor="let paragraph of content.roadmap.overview" [innerHTML]="sanitizer.bypassSecurityTrustHtml(paragraph)"></p>
   </div>
 
   <div class="indented roadmap-table-title">
@@ -33,33 +31,11 @@
           </tr>
         </thead>
           <tbody>
-            <tr>
-              <td class="graphic-cell"><i class="icon icon-ok" aria-hidden="true"></i></td>
-              <td class="widerow text-cell">Search results</td>
-            </tr>
-            <tr>
-              <td class="graphic-cell"></td>
-              <td class="widerow text-cell">Project details</td>
-            </tr>
-            <tr>
-              <td class="graphic-cell"><i class="icon icon-circle" aria-hidden="true"></i></td>
-              <td class="widerow text-cell">Help wanted</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell"><i class="icon icon-ok" aria-hidden="true"></i></td>
-                <td class="widerow text-cell">Roadmap on site</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell"><i class="icon icon-circle" aria-hidden="true"></i></td>
-                <td class="widerow text-cell">Enhanced compliance dashboard</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell"><i class="icon icon-ok" aria-hidden="true"></i></td>
-                <td class="widerow text-cell">Increased agency participation</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell-last"><i class="icon icon-circle" aria-hidden="true"></i></td>
-                <td class="widerow text-cell-last">Metadata schema 1.0 & 1.0.1 deprecation</td>
+            <tr *ngFor="let todo of content.roadmap.near">
+              <td class="graphic-cell">
+                <i class="icon {{todo.status === 'Released' ? 'icon-ok' : todo.status === 'In Progress' ? 'icon-circle' : ''}}" aria-hidden="true"></i>
+              </td>
+              <td class="widerow text-cell">{{ todo.name }}</td>
             </tr>
         </tbody>
       </table>
@@ -73,25 +49,11 @@
           </tr>
         </thead>
           <tbody>
-            <tr>
-              <td class="graphic-cell"></td>
-              <td class="widerow text-cell">Agency pages</td>
-            </tr>
-            <tr>
-              <td class="graphic-cell"></td>
-              <td class="widerow text-cell">Medium skin</td>
-            </tr>
-            <tr>
-              <td class="graphic-cell"><i class="icon icon-circle" aria-hidden="true"></i></td>
-              <td class="widerow text-cell">FAQs page</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell"></td>
-                <td class="widerow text-cell">Admin tool</td>
-            </tr>
-            <tr>
-                <td class="graphic-cell-last"></td>
-                <td class="widerow text-cell-last">Enhanced tools and resources</td>
+            <tr *ngFor="let todo of content.roadmap.mid">
+              <td class="graphic-cell">
+                <i class="icon {{todo.status === 'Released' ? 'icon-ok' : todo.status === 'In Progress' ? 'icon-circle' : ''}}" aria-hidden="true"></i>
+              </td>
+              <td class="widerow text-cell">{{ todo.name }}</td>
             </tr>
         </tbody>
       </table>
@@ -105,13 +67,11 @@
           </tr>
         </thead>
           <tbody>
-            <tr>
-              <td class="graphic-cell"></td>
-              <td class="widerow text-cell">User accounts</td>
-            </tr>
-            <tr>
-              <td class="graphic-cell-last"></td>
-              <td class="widerow text-cell-last">Gamification</td>
+            <tr *ngFor="let todo of content.roadmap.long">
+              <td class="graphic-cell">
+                <i class="icon {{todo.status === 'Released' ? 'icon-ok' : todo.status === 'In Progress' ? 'icon-circle' : ''}}" aria-hidden="true"></i>
+              </td>
+              <td class="widerow text-cell">{{ todo.name }}</td>
             </tr>
         </tbody>
       </table>
@@ -138,6 +98,6 @@
 
   <div class="indented roadmap-disclaimer">
     <h3>Disclaimer</h3>
-    <p>This Development Roadmap (Roadmap) is for informational purposes only. The Code.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of Code.gov, the General Services Agency, the Office of Management and Budget, and the United States Federal Government.</p>
+    <p>{{content.roadmap.disclaimer}}</p>
   </div>
 </div>

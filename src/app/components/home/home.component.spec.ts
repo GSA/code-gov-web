@@ -51,7 +51,4 @@ describe('HomeComponent', () => {
     this.homeComponent = this.fixture.componentInstance;
   });
 
-  it('should have a heading', () => {
-    expect(this.homeComponent.url).toEqual('https://pif.gov');
-  });
 });
