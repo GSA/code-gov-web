@@ -70,7 +70,28 @@
             "go_to_repo": "https://github.com/iadgov/WALKOFF"
           }
         }
-      ]
+      ],
+      "press": {
+        "quote": "It’s the latest in a long line of high-profile victories for the open source movement.",
+        "attribution": {
+          "image": "assets/img/logos/press/wired.svg",
+          "url": "https://www.wired.com/2016/08/open-source-won-now/"
+        },
+        "links": [
+          {
+            "image": "assets/img/logos/press/techcrunch.jpg",
+            "url": "https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/"
+          },
+          {
+            "image": "assets/img/logos/press/pcmag.png",
+            "url": "http://www.pcmag.com/news/346860/white-house-releases-open-source-software-policy"
+          },
+          {
+            "image": "assets/img/logos/press/fcw.png",
+            "url": "https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx"
+          }
+        ]
+      }
     },
     "footer": {
       "links": [
