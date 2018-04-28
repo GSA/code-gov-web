@@ -1,5 +1,4 @@
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .mobile-menu-button .hamburger {
   background-color: transparent;
@@ -18,7 +17,7 @@
 
   &:hover,
   &:focus {
-    background-color: transparent;
+    background-color: transparent !important;
     box-shadow: none;
     opacity: 1;
   }
@@ -29,11 +28,4 @@
     background-color: #485567;
   }
 
-  .block--dark & {
-    .hamburger-inner,
-    .hamburger-inner::before,
-    .hamburger-inner::after {
-      background-color: $color-white;
-    }
-  }
 }

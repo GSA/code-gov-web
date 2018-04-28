@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { MobileService } from '../../services/mobile';
 import { SearchInputComponent } from '../search-input';
 
+import { title, twitter } from '../../../../config/code-gov-config.json';
+
 @Component({
   selector: 'header-navigation',
   styles: [require('./header-navigation.style.scss')],
@@ -19,6 +21,10 @@ export class HeaderNavigationComponent {
   isAtTop: boolean = true;
   isSearchBoxShown: boolean = false;
   searchBoxActiveSubscription: Subscription;
+  color: string = 'white';
+  dropdownSearchBox: boolean = true;
+  twitterHandle: string = twitter.handle;
+  title: string = title;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
 
 

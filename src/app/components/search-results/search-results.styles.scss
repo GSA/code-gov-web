@@ -1,7 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 h3 {
   font-size: $lead-font-size;
@@ -20,35 +17,6 @@ h3 {
     color: $color-white;
     margin-bottom: 0;
     text-transform: uppercase;
-  }
-}
-
-.search-results-breadcrumb {
-  font-size: 0.8em;
-  margin-bottom: 4rem;
-
-  ul {
-    li {
-      display: inline-block;
-
-      &::before {
-        content: '> ';
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      &:last-child {
-        font-weight: $font-bold;
-      }
-
-      a {
-        color: $color-black;
-      }
-    }
   }
 }
 
@@ -85,7 +53,7 @@ h3 {
     }
 
     p {
-      background-color: $brand-blue-gray-dark;
+      background-color: $color-gray-dark;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
       color: $color-white;
@@ -118,7 +86,7 @@ h3 {
 }
 
 .search-filter-section {
-  @include span-columns(3);
+  @extend .width-quarter;
 
   padding-top: 2rem;
 
@@ -128,7 +96,7 @@ h3 {
 }
 
 .search-filters {
-  background-color: $color-gray-lightest;
+  background-color: $color-gray-second-lightest;
   padding: 1rem;
 }
 
@@ -159,7 +127,7 @@ h3 {
 }
 
 .search-results-section {
-  @include span-columns(12);
+  @extend .width-whole;
 }
 
 .load-more-button {
@@ -179,7 +147,7 @@ h3 {
 }
 
 .search-container {
-  background-color: darken($color-gray-lightest, 5);
+  background-color: darken($color-gray-second-lightest, 5);
   padding: 0.5em 0;
 }
 

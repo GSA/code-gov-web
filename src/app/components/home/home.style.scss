@@ -1,27 +1,37 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '../../../styles/base/grid-settings';
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
+.banner {
 
-body {
-  background-color: $color-white;
-}
+  &.large {
 
-//div between Search and Help Wanted
-.vertical-row {
-  @media screen and (min-width: $medium-screen) {
-    height: 9em;
-    width: 3px;
-    //should change this to variable
-    background: white;
-    top: 12em;
-    bottom: 0;
-    position: absolute;
-    left: 50%;
+    .banner-subsection {
+      height: 14rem;
+      @media screen and (min-width: $medium-screen) {
+        height: 17rem;
+      }
+      .banner-subsection-content {
+        @include center-vertically();
+
+        .buttons {
+          padding-top: 7px;
+        }
+      }
+    }
+
+    //div between Search and Help Wanted
+    .vertical-row {
+      @media screen and (min-width: $medium-screen) {
+        display: inline-block;
+        height: 17rem;
+        width: 3px;
+        background: $color-white;
+        position: relative;
+      }
+    }
   }
+
 }
+
 
 //Help Wanted styles between Banner and Our Mission (About) sections on homepage
 .help-wanted {
@@ -188,18 +198,6 @@ body {
       }
     }
   }
-
-  hr {
-    border-bottom: 0;
-    border-top: 6px solid $brand-teal;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
-    max-width: 30rem;
-
-    @media screen and (min-width: $small-screen) {
-      margin-top: 6rem;
-    }
-  }
 }
 
 .about-actions {
@@ -249,11 +247,10 @@ body {
 }
 
 .about-action {
-  @include span-columns(12);
   text-align: center;
 
   @media screen and (min-width: $medium-screen) {
-    @include span-columns(4);
+    @include width-third();
   }
 
   > a > img {
@@ -280,43 +277,17 @@ body {
   }
 }
 
-.banner#banner-home {
-
-  min-height: 48rem;
-
-}
-
-.banner-background {
-  animation: 15s linear zoomOutOnBackground;
-  background-attachment: scroll;
-  background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-
-  // HACK: This is a hack to prevent ugliness on iOS
-  @media screen and (min-width: 768px) {
-    background-attachment: fixed;
-  }
-}
-
 .featured-projects {
   text-align: center;
 
   #featured-projects-title {
     background: white;
     color: $featured-dark;
-    padding: 2rem;
 
     h2 {
       color: $featured-dark;
+      margin-top: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -341,16 +312,144 @@ body {
 
 .featured-project {
   text-align: left;
+  position: relative;
+
+  .indented {
+    height: 45rem;
+    overflow: hidden;
+    position: relative;
+
+    @media screen and (max-width: 400.5px) {
+      height: 52rem;
+    }
+
+    img {
+      display: none;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      @media screen and (min-width: $small-screen) {
+        display: block;
+      }
+    }
+
+
+    .featured-project-info {
+      left: 0;
+      padding: 3rem 5rem;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100%;
+
+      @media screen and (min-width: $small-screen) {
+        left: auto;
+        padding: 3rem 4rem;
+        width: 50%;
+      }
+
+      .fp-short-name {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .fp-verbose-name {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .fp-developed-by {
+        color: lightgray;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .buttons {
+        text-align: center;
+
+        @media screen and (min-width: $small-screen) {
+          text-align: left;
+        }
+      }
+
+      button {
+        font-size: 0.8em;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 0;
+        margin-top: 0;
+        max-width: 170px;
+        width: 44%;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        @media screen and (min-width: $large-screen) {
+          font-size: 1em;
+        }
+      }
+    }
+
+  }
 
   &:nth-of-type(odd) {
-    .usa-width-one-half {
-      float: left;
+    background: $featured-dark;
+    color: $color-white;
+
+    button, h3, h4, p {
+      color: $color-white;
+    }
+
+    > div {
+      text-align: left;
+
+      > div {
+        text-align: left;
+      }
     }
   }
 
   &:nth-of-type(even) {
-    .usa-width-one-half {
-      float: right;
+    background: $featured-light;
+    color: $color-white;
+
+    > div {
+
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      text-align: right;
+      > div {
+        text-align: left;
+
+        .featured-project-info {
+          .fp-short-name {
+            color: $color-gray-dark
+          }
+          .fp-verbose-name {
+            color: $color-gray-dark;
+          }
+          .fp-developed-by {
+            color: darkgray;
+          }
+
+          button {
+            border-color: $color-gray-dark;
+            color: $color-gray-dark;
+
+            &:focus, &:hover {
+              border-color: $brand-teal;
+              color: $color-white;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -369,17 +468,15 @@ body {
     padding-top: 1rem;
   }
 
-  button,
-  .usa-button {
+  button {
     margin-left: 10px;
   }
 }
 
+/*
 .wntr {
-  background: $featured-dark;
-  color: $color-white;
 
-  .usa-grid {
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background: url('./assets/img/featured-projects/pipes4.png');
       background-position: 0% 50%;
@@ -393,17 +490,14 @@ body {
 
   }
 
-  button, .usa-button, h3, h4, p {
-    color: $color-white;
-  }
+
 }
 
 .its-ode {
 
-  background: $featured-light;
-  color: $color-white;
 
-  .usa-grid {
+
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background-image: url('./assets/img/featured-projects/smartcity4.png');
       background-repeat: no-repeat;
@@ -415,41 +509,16 @@ body {
       background-size: 30%;
     }
 
-    .featured-project-info {
-      .fp-short-name {
-        color: $color-gray-dark
-      }
-      .fp-verbose-name {
-        color: $color-gray-dark;
-      }
-      .fp-developed-by {
-        color: darkgray;
-      }
 
-    }
   }
 
-  button, .usa-button {
-    border-color: $color-gray-dark;
-    color: $color-gray-dark;
-  }
-
-  button, .usa-button {
-    &:focus, &:hover {
-      border-color: $brand-teal;
-      color: $color-white;
-    }
-  }
 }
 
 
 
 .walkoff {
 
-  background: $featured-dark;
-  color: $color-white;
-
-  .usa-grid {
+  .indented {
     @media screen and (min-width: $medium-screen) {
       background-image: url('./assets/img/featured-projects/WALKOFF.png');
       background-repeat: no-repeat;
@@ -458,57 +527,9 @@ body {
     }
   }
 
-  button, .usa-button, h3, h4, p {
-    color: $color-white;
-  }
 }
+*/
 
-.featured-project-info {
-  padding: 3rem 4rem;
-
-  .fp-short-name {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  .fp-verbose-name {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .fp-developed-by {
-    color: lightgray;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-
-  .buttons {
-    text-align: center;
-
-    @media screen and (min-width: $small-screen) {
-      text-align: left;
-    }
-  }
-
-  button,
-  .usa-button {
-    font-size: 0.8em;
-    margin-bottom: 0;
-    margin-left: 1rem;
-    margin-right: 0;
-    margin-top: 0;
-    max-width: 170px;
-    width: 44%;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      font-size: 1em;
-    }
-  }
-}
 
 .press {
   background-attachment: scroll;
@@ -526,18 +547,6 @@ body {
     color: $color-white;
     margin-bottom: 2rem;
     text-align: center;
-  }
-
-  hr {
-    border-bottom: 0;
-    border-top: 4px solid $brand-teal;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    max-width: 30rem;
-
-    @media screen and (min-width: $small-screen) {
-      margin-top: 3rem;
-    }
   }
 }
 
@@ -574,68 +583,6 @@ body {
   }
 }
 
-.quote-large {
-  blockquote {
-    line-height: 1.25;
-    background-color: transparent;
-    border-left: none;
-    color: $color-white;
-    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 1.75em;
-    font-weight: 500;
-    line-height: 1.1;
-    margin: 0;
-    margin-bottom: 0.2em;
-    padding: 0;
-    padding-left: 0.75em;
-    position: relative;
-
-    @media screen and (min-width: $medium-screen) {
-      font-size: 2.2em;
-    }
-
-    .begin-quote {
-      color: $brand-teal;
-      font-size: 1.75em;
-      left: 0em;
-      position: absolute;
-      top: -0.275em;
-
-      @media screen and (min-width: $medium-screen) {
-        font-size: 2.2em;
-      }
-    }
-
-    .end-quote {
-      color: $brand-teal;
-      font-size: 1.75em;
-      line-height: 0.8;
-      position: absolute;
-      vertical-align: text-top;
-
-      @media screen and (min-width: $medium-screen) {
-        font-size: 2.2em;
-      }
-    }
-  }
-
-  .attribution {
-    border-top: 1px solid $color-gray-lighter;
-    display: inline-block;
-    margin-left: 1.3em;
-    padding-top: 0.75em;
-
-    @media screen and (min-width: $medium-screen) {
-      margin-left: 2em;
-    }
-
-    .press-logo {
-      max-height: 2em;
-      max-width: 10em;
-    }
-  }
-}
-
 .press-logo {
   backface-visibility: visible;
   transition: all 0.2s ease;
@@ -664,27 +611,28 @@ body {
 
 .scroll-indicator {
   animation: 6s linear bounce infinite;
-  bottom: 0;
+  bottom: 1rem;
   color: $color-white;
   font-size: 3em;
   height: 4rem;
-  left: 50%;
   overflow: hidden;
   position: absolute;
+  text-decoration: none;
 
   @media screen and (min-width: $small-screen) {
     font-size: 6em;
     height: 6rem;
+    padding-bottom: 10em;
   }
 
   @media screen and (min-width: $medium-screen) {
     font-size: 8em;
     height: 7rem;
+    padding-bottom: 12rem;
   }
 
   i {
-    top: 50%;
-    transform: translateY(-50%);
+    color: $color-white;
     vertical-align: middle;
   }
 }

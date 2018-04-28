@@ -1,14 +1,8 @@
-@import '~bourbon/app/assets/stylesheets/addons/font-stacks';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .privacy-content {
   li {
     color: $color-gray;
     font-size: 1.1em;
   }
-}
-
-.usa-grid {
-  padding-bottom: 6em;
-  padding-top: 2em;
 }

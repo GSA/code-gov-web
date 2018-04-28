@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import { map } from 'rxjs/operators';
 
+import { api } from '../../../../config/code-gov-config.json';
+
 interface Options {
   base?: string;
   debug?: boolean;
@@ -87,7 +89,8 @@ export interface AgencyStatus {
 @Injectable()
 export class ClientService {
 
-  private BASE: string = process.env.API_URL || 'https://code-api.app.cloud.gov/api/';
+  private BASE: string = api.base;
+  private KEY: string = api.key;
 
   constructor (private http: Http) {
   }
@@ -100,7 +103,7 @@ export class ClientService {
     });
   }
   getAgencies(): Observable<Agency[]> {
-    let url = this.BASE + 'agencies?size=1000';
+    let url = this.BASE + `agencies?size=1000&api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -111,7 +114,7 @@ export class ClientService {
   }
 
   getAgencyByAcronym(acronym: string): Observable<Agency> {
-    let url = this.BASE + 'agencies?size=1000';
+    let url = this.BASE + `agencies?size=1000&api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -123,20 +126,20 @@ export class ClientService {
     /*
       - permissions.usageType is 'openSource' or 'governmentWideReuse'
     */
-    let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc`;
+    let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc&api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => data.repos);
   }
 
   getRepoByID(acronym: string = ''): Observable<Repo> {
-    let url = this.BASE + `repos/${acronym}`;
+    let url = this.BASE + `repos/${acronym}?api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json());
   }
 
   suggest(term: string = '', size: number = 10) {
-    let url = this.BASE + `terms?term=${term}&size=${size}`;
+    let url = this.BASE + `terms?term=${term}&size=${size}&api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => data.terms);
@@ -144,7 +147,7 @@ export class ClientService {
 
   search(text: string = '', size: number = 10) {
     let permissionsFilter = '&permissions.usageType=openSource&permissions.usageType=governmentWideReuse';
-    let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}`;
+    let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}&api_key=${this.KEY}`;
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {

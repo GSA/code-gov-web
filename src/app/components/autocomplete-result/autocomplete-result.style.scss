@@ -1,3 +1,5 @@
+@import '~@code.gov/code-gov-style/_sass/_variables';
+
 .autocomplete-result {
   display: block;
   padding: 0.5em;
@@ -29,7 +31,9 @@
 
     i {
       font-size: 2rem;
+      margin-top: -0.1rem;
       padding: .3rem;
+      padding-top: 0;
     }
   }
 
@@ -39,7 +43,7 @@
     vertical-align: center;
 
     p {
-      color: #323a45;
+      color: $color-gray-dark;
       font-size: 0.9em;
       line-height: 28px;
       margin: 0;
@@ -48,5 +52,5 @@
       white-space: nowrap;
     }
   }
-  
+
 }

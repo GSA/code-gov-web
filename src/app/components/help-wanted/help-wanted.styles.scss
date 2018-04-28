@@ -1,108 +1,7 @@
-@import '~bourbon/app/assets/stylesheets/bourbon';
-@import '~bourbon-neat/app/assets/stylesheets/neat';
-@import '~uswds/src/stylesheets/core/variables';
-@import '../../../styles/base/variables';
-@import '../../../styles/base/grid-settings';
-
-
-  .banner-help-wanted {
-    background: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 2rem;
-    padding-bottom: 5rem;
-    padding-top: 8rem;
-    text-align: center;
-
-    h1 {
-      color: $color-white;
-      margin-bottom: 0;
-      text-transform: uppercase;
-    }
-
-    p {
-      color: $color-white;
-      max-width: 80%;
-      text-align: center;
-      padding-left: 20%;
-      line-height: 1.5;
-      margin-top: 1em;
-      margin-bottom: -2em;
-    }
-
-    //To accocunt for header p text pushing the padding
-    @media screen and (min-width: $large-screen) {
-      padding-bottom: 8rem;
-    }
-  }
-
-/*
-
-#banner-help-wanted {
-
-  max-height: 20rem;
-
- .banner-background {
-    background-attachment: scroll;
-    background-image: url('./assets/img/american_flag_1920x1280_gradient.jpg');
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    margin-bottom: 2rem;
-    padding-bottom: 8rem;
-    padding-top: 8rem;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: 100%;
-
-    // HACK: This is a hack to prevent ugliness on iOS
-    @media screen and (min-width: 768px) {
-      background-attachment: fixed;
-    }
-  }
-
-  p {
-    max-width: 80%;
-  }
-}
-*/
-
-.help-wanted-breadcrumb {
-  font-size: 1em;
-  margin-bottom: 4rem;
-  margin-top: 2rem;
-
-  ul {
-    li {
-      display: inline-block;
-      font-weight: bold;
-
-      &::before {
-        content: '> ';
-        font-weight: normal;
-      }
-
-      &:first-of-type {
-        &::before {
-          content: '';
-        }
-      }
-
-      a {
-        color: $color-black;
-        font-weight: normal;
-      }
-    }
-  }
-}
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 #help-wanted-filter-section {
-  @include span-columns(3);
+  @extend .width-quarter;
 
   h4 {
     color: $color-black;
@@ -116,15 +15,14 @@
   h5 {
     font-family: Helvetica, $header-font-family;
   }
-}
 
-.help-wanted-filters {
-  background-color: $color-gray-lightest;
-  padding: 1rem;
-  min-width: min-content;
+  a {
+    font-weight: normal;
+  }
 }
 
 .help-wanted-filter {
+
   h5 {
     color: $color-black;
     margin-top: 5px;
@@ -145,19 +43,14 @@
     }
   }
 
-// USWDS usa-unstyled-list workaround - webpage and mobile form
+  // USWDS usa-unstyled-list workaround - webpage and mobile form
   .filter-bottom-padding {
     padding-bottom: 5px;
-  }
-
-  .show-more {
-    color: $color-gray-medium;
-    text-decoration: none;
   }
 }
 
 .help-wanted-results {
-  @include span-columns(9);
+  @extend .width-three-quarters;
 }
 
 .help-wanted-content-header {
@@ -245,7 +138,7 @@
 
   .filter-form-popup {
 
-    background-color: $color-gray-lightest;
+    background-color: $color-gray-second-lightest;
     bottom: 0;
     left: -100%;
     overflow: scroll;

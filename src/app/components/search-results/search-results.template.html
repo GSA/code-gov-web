@@ -2,13 +2,13 @@
   <div class="search-results-banner">
     <h1>Search Results</h1>
   </div>
-  <div class="search-results-breadcrumb usa-grid">
-    <ul class="usa-unstyled-list">
+  <div class="indented">
+    <ul class="breadcrumbs">
       <li><a routerLink="/">Home</a></li>
       <li>Search Results</li>
     </ul>
   </div>
-  <div class="search-results-header usa-grid">
+  <div class="search-results-header indented">
     <h3 *ngIf="total" class="repos-count">
       We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
     </h3>
@@ -32,32 +32,32 @@
     </form>
     -->
   </div>
-  <div class="usa-grid">
+  <div class="indented">
     <!-- TODO: Add this section back in once we have better data quality -->
     <!-- <div class="search-filter-section">
       <h4>Filter</h4>
       <form class="search-filters" [formGroup]="filterForm">
         <fieldset class="usa-fieldset-inputs">
-          <ul class="search-filter usa-unstyled-list" *ngIf="getLanguages().length > 0">
+          <ul class="search-filter" *ngIf="getLanguages().length > 0">
             <li>
               <h5>Language</h5>
               <show-more [formGroup]="filterForm" name="languages" [list]="getLanguages()"></show-more>
             </li>
           </ul>
-          <ul class="search-filter usa-unstyled-list" *ngIf="getLicenses().length > 0">
+          <ul class="search-filter" *ngIf="getLicenses().length > 0">
             <li>
               <h5>License</h5>
-              <ul class="usa-unstyled-list">
+              <ul>
                 <li *ngFor="let license of getLicenses()">
                   <input id="license-{{ license }}" name="license" type="checkbox" value="{{ license }}" /><label for="license-{{ license }}"><span>{{ license }}</span></label>
                 </li>
               </ul>
             </li>
           </ul>
-          <ul class="search-filter usa-unstyled-list">
+          <ul class="search-filter">
             <li>
               <h5>Usage Type</h5>
-              <ul class="usa-unstyled-list" [formGroup]="filterForm.controls.usageTypes">
+              <ul [formGroup]="filterForm.controls.usageTypes">
                 <li>
                   <input id="usage-type-government-wide-reuse" name="usageType" type="checkbox" value="government-wide-reuse" formControlName="governmentWideReuse" /><label for="usage-type-government-wide-reuse"><span>Government-Wide Reuse</span></label>
                 </li>

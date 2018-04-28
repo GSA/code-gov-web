@@ -27,6 +27,9 @@ Over the next few weeks, we will begin the *discovery sprint* for code.gov. Duri
 
 After the discovery sprint, we'll begin building the site. We'll be relying on input from the community and from agencies about what features should be delivered first. That list of features will drive the *design sprint* and *development sprint*. And because this site is being developed in the open, you will be able to make contributions and provide feedback here as we go.
 
+## Configuration
+For documentation on how to configure code-gov-web, go [here](https://github.com/GSA/code-gov-web/blob/master/CONFIGURATION.md).
+
 ## Contributing
 
 Here’s how you can help contribute to code.gov:

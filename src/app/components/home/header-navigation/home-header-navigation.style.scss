@@ -1,5 +1,4 @@
-@import '../../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .social-links {
   display: none;
@@ -17,6 +16,11 @@
   a {
     color: $color-white;
     text-decoration: none;
+  }
+
+
+  i {
+    color: $color-white;
   }
 
   .follow-us {

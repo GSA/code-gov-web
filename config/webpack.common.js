@@ -27,6 +27,7 @@ const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
+const SiteConfig = require('./code-gov-config.json');
 
 module.exports = function (options) {
 
@@ -53,7 +54,6 @@ module.exports = function (options) {
 
   const METADATA = {
     API_URL,
-    title: 'Code.gov',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer(),
     gtmAuth: isProd ? 'GTM-M9L9Q5' : 'GTM-MSJCVS',
@@ -78,6 +78,15 @@ module.exports = function (options) {
   /**
    * Common Plugins
    */
+
+  const htmlWebpackPlugin = new HtmlWebpackPlugin(Object.assign({
+      template: 'src/index.html',
+      chunksSortMode: 'dependency',
+      metadata: METADATA,
+      inject: 'head'
+    }, SiteConfig));
+  console.log("htmlWebpackPlugin:", htmlWebpackPlugin);
+
   const commonPlugins = [
     new AssetsPlugin({
       path: helpers.root('dist'),
@@ -157,14 +166,8 @@ module.exports = function (options) {
         'HMR': METADATA.HMR,
       }
     }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      title: METADATA.title,
-      chunksSortMode: 'dependency',
-      metadata: METADATA,
-      inject: 'head'
-    }),
-    new PreloadWebpackPlugin(),
+    htmlWebpackPlugin,
+    new PreloadWebpackPlugin()
   ];
 
   /**

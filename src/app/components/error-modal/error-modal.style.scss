@@ -1,6 +1,4 @@
-@import '~bourbon/app/assets/stylesheets/addons/font-stacks';
-@import '../../../styles/base/variables';
-@import '~uswds/src/stylesheets/core/variables';
+@import '~@code.gov/code-gov-style/_sass/_variables';
 
 .modal-container {
   animation: fadeInUp 0.2s ease;
@@ -39,7 +37,7 @@
 
     &:hover {
       background-color: transparent;
-      color: $brand-blue-gray-dark;
+      color: $color-gray-dark;
     }
   }
 
@@ -63,7 +61,7 @@
 }
 
 .overlay {
-  background-color: rgba($brand-blue-gray-dark, 0.75);
+  background-color: rgba($color-gray-dark, 0.75);
   bottom: 0;
   left: 0;
   position: fixed;

@@ -4,7 +4,7 @@
 
 The Devicons font files in `src/assets/fonts` are licensed under the [MIT License](https://opensource.org/licenses/MIT), and copyright [Theodore Vorillas](https://github.com/vorillaz).
 
-The FontAwesome font files in `src/assets/fonts` are from [Font Awesome](http://fontawesome.io/) by Dave Gandy under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL). The FontAwesome styles located in `src/assets/fonts.css` are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+The FontAwesome SVG's are found inside code-gov-font's font files.  [Font Awesome](http://fontawesome.io/) is by Dave Gandy under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
 
 The Merriweather font files in `src/assets/fonts` are from [Google Web Fonts](https://www.google.com/fonts#UsePlace:use/Collection:Merriweather:400,300,400italic,700,700italic), licensed under the [SIL Open Font License](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL), and copyright [Sorkin Type Co](www.sorkintype.com) with Reserved Font Name 'Merriweather'.
 
