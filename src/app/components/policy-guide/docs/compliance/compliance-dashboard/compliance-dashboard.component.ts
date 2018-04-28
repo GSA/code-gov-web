@@ -55,8 +55,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
         if (rValue >= 1) {
           requirementStatus = 'compliant';
-        }
-        if (rValue >= 0.25 && rValue < 1) {
+        } else if (rValue >= 0.25 && rValue < 1) {
           requirementStatus = 'partial';
         }
 
@@ -72,7 +71,7 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
 
   _getCodePath(status) {
 
-    if (this.agencyIds.find((x) => x === status)) {
+    if (this.agencyIds.find(x => x === status)) {
       return '/explore-code/agencies/' + status;
     }
 
