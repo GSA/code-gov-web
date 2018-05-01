@@ -43,58 +43,63 @@ export class ComplianceDashboardComponent implements OnInit, OnDestroy {
     );
   }
 
+  _setRequirementStatuses(agencyRequirements) {
+    let requirements = [];
+    let overallStatus = 'noncompliant';
+
+    for (let requirement in agencyRequirements) {
+      if (agencyRequirements.hasOwnProperty(requirement)) {
+        const rValue = agencyRequirements[requirement];
+
+        let requirementStatus = 'noncompliant';
+
+        if (rValue >= 1) {
+          requirementStatus = 'compliant';
+        } else if (rValue >= 0.25 && rValue < 1) {
+          requirementStatus = 'partial';
+        }
+
+        if (requirement !== 'overallCompliance') {
+          requirements.push({ text: requirement, status: requirementStatus });
+        } else {
+          overallStatus = requirementStatus;
+        }
+      }
+    }
+    return { requirements, overallStatus };
+  }
+
+  _getCodePath(status) {
+
+    if (this.agencyIds.find(x => x === status)) {
+      return '/explore-code/agencies/' + status;
+    }
+
+    return null;
+  }
   getStatuses() {
-    this.statusesSub = this.statusService.getJsonFile().
+    this.statusesSub = this.clientService.getStatuses().
       subscribe((result) => {
         if (result) {
           for (let statusAgency in result.statuses) {
+            if (result.statuses.hasOwnProperty(statusAgency) &&
+                result.statuses[statusAgency].metadata.agency.complianceDashboard) {
 
-             // if agencyWidePolicy is null in report.json it means the agency doesn't have
-             // to comply, so don't include it in the dash.
-             // TODO: should make this more explicit in the API,
-            if (result.statuses[statusAgency].requirements['agencyWidePolicy'] !== null) {
+              let agencyStatus = result.statuses[statusAgency];
 
-              let requirements = [];
-              let overallStatus;
+              const {requirements, overallStatus} = this._setRequirementStatuses(agencyStatus.requirements);
 
-              for (let requirement in result.statuses[statusAgency].requirements) {
-                if (result.statuses[statusAgency].requirements.hasOwnProperty(requirement)) {
-                  const rValue = result.statuses[statusAgency].requirements[requirement];
-
-                  let requirementStatus = 'noncompliant';
-
-                  if (rValue >= 1) {
-                    requirementStatus = 'compliant';
-                  }
-                  if (rValue >= 0.25 && rValue < 1) {
-                    requirementStatus = 'partial';
-                  }
-
-                  if (requirement !== 'overallCompliance') {
-                    requirements.push({ text: requirement, status: requirementStatus });
-                  } else {
-                   overallStatus = requirementStatus;
-                  }
-                }
-              }
-
-              let codePath = null;
-
-              if (this.agencyIds.find((x) => x === status)) {
-                codePath = '/explore-code/agencies/' + status;
-              }
-
-              let agency = {
-                id: result.statuses[statusAgency].metadata.agency.id,
-                name: result.statuses[statusAgency].metadata.agency.name,
-                overall: overallStatus,
-                codePath: codePath
-              };
               this.statuses.push({
                 id: statusAgency,
-                agency: agency,
+                agency: {
+                  id: result.statuses[statusAgency].metadata.agency.id,
+                  name: result.statuses[statusAgency].metadata.agency.name,
+                  overall: overallStatus,
+                  codePath: this._getCodePath(status)
+                },
                 requirements: requirements
               });
+
               this.updated = result.timestamp;
             }
           }
