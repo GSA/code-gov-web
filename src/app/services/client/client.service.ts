@@ -81,6 +81,11 @@ export interface Repo {
   repoID: string;
 }
 
+export interface AgencyStatus {
+  timestamp: string;
+  statuses: object;
+}
+
 @Injectable()
 export class ClientService {
 
@@ -89,7 +94,14 @@ export class ClientService {
 
   constructor (private http: Http) {
   }
-
+  getStatuses(): Observable<AgencyStatus> {
+    let url = this.BASE + 'status.json';
+    return this.http.get(url)
+    .map((response: Response) => response.json())
+    .map((data: any) => {
+      return data;
+    });
+  }
   getAgencies(): Observable<Agency[]> {
     let url = this.BASE + `agencies?size=1000&api_key=${this.KEY}`;
     return this.http.get(url)
