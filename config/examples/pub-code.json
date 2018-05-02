@@ -1,0 +1,149 @@
+{
+  "title": "PubCode",
+  "api": {
+    "base": "https://api.code.gov/",
+    "key": "OC457325hyT6DpFm5HBBZ1i8SR6gtp5U2CdqtHZQ"
+  },
+  "style": "code-gov-style",
+  "twitter": {
+    "handle": ""
+  },
+  "content": {
+    "home": {
+      "banner": {
+        "motto": "PubCode",
+        "subtitle": "Code for the Scientific Community",
+        "help_wanted_description": ""
+      },
+      "mission": "PubCode is a prototype platform for developers to present their code in a formal environment, while showcasing useful metadata regarding the development, upkeep, and activity levels of their code to prospective users. Enhancing the users search for an appropriate tool for their given task provides an incentive to cite these open source tools, providing further interest in both its use and development.",
+      "about": [
+        {
+          "title": "Submit your Code",
+          "description": "Have you created some cool code?",
+          "link": "/submit",
+          "image": "../../../assets/img/icons/info_bl.png"
+        },
+        {
+          "title": "Show your Work",
+          "description": "Have you used code from PubCode",
+          "link": "/submit-case-study",
+          "image": "../../../assets/img/icons/policy_bl.png"
+        },
+        {
+          "title": "Roadmap",
+          "description": "See our progress",
+          "link": "/roadmap",
+          "image": "../../../assets/img/icons/check_bl.png"
+        }
+      ],
+      "featured": [
+        {
+          "short_name": "WNTR",
+          "verbose_name": "Water Network Tool for Resilience",
+          "author": "Environmental Protection Agency",
+          "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
+          "image": "/assets/img/featured-projects/pipes4.png",
+          "links": {
+            "view_project": "/#/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0",
+            "go_to_repo": "https://github.com/usepa/wntr"
+          }
+        },
+        {
+          "short_name": "ITS ODE",
+          "verbose_name": "Intelligent Transportation Systems Operational Data Environment",
+          "author": "Department of Transportation",
+          "description": "A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.",
+          "image": "/assets/img/featured-projects/smartcity4.png",
+          "links": {
+            "view_project": "/#/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_",
+            "go_to_repo": "https://github.com/usdot-jpo-ode/jpo-ode"
+          }
+        },
+        {
+          "short_name": "WALKOFF",
+          "verbose_name": "",
+          "author": "National Security Agency",
+          "description": "Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.",
+          "image": "/assets/img/featured-projects/WALKOFF.png",
+          "links": {
+            "view_project": "/#/explore-code/agencies/NSA/repos/nsa_walkoff",
+            "go_to_repo": "https://github.com/iadgov/WALKOFF"
+          }
+        }
+      ],
+      "press": {
+        "quote": "It’s the latest in a long line of high-profile victories for the open source movement.",
+        "attribution": {
+          "image": "assets/img/logos/press/wired.svg",
+          "url": "https://www.wired.com/2016/08/open-source-won-now/"
+        },
+        "links": [
+          {
+            "image": "assets/img/logos/press/techcrunch.jpg",
+            "url": "https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/"
+          },
+          {
+            "image": "assets/img/logos/press/pcmag.png",
+            "url": "http://www.pcmag.com/news/346860/white-house-releases-open-source-software-policy"
+          },
+          {
+            "image": "assets/img/logos/press/fcw.png",
+            "url": "https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "url": "/#/privacy-policy"
+        },
+        {
+          "name": "Visit Project Page",
+          "url": "https://github.com/NCBI-Hackathons/PubCode"
+        }
+      ],
+      "logos": [
+        {
+          "image": "/assets/img/logos/whitehouse.png",
+          "name": "The White House",
+          "url": "https://whitehouse.gov/"
+        },
+        {
+          "image": "/assets/img/logos/PIF.png",
+          "name": "Presidential Innovation Fellows",
+          "url": "https://presidentialinnovationfellows.gov/"
+        },
+        {
+          "image": "/assets/img/logos/NLM.png",
+          "name": "U.S. National Library of Medicine",
+          "url": "https://www.nlm.nih.gov/"
+        }
+      ]
+    },
+    "roadmap": {
+      "overview": [
+        "At PubCode, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
+        "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap."
+      ],
+      "near": [
+        { "name": "Create Prototype", "status": "Released" },
+        { "name": "Roadmap on site", "status": "Released" },
+        { "name": "Create Metadata Schema", "status": "In Progress" },
+        { "name": "Create MVP", "status": "In Progress" }
+      ],
+      "mid": [
+        { "name": "Integrate Quality Metric", "status": null }
+      ],
+      "long": [
+        { "name": "Integrate literature highlighting by Bowtie v Bowtie2", "status": null },
+        { "name": "Integrate u-INDEX by Callahan et al. (2018)", "status": null }
+      ],
+      "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The PubCode team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of PubCode, the Presidential Innovation Fellows, the National Center for Biotechnology Information, and the United States Federal Government."
+    }
+  },
+  "images": {
+    "background": "./assets/img/pubcode-home.png"
+  }
+}

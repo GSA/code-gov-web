@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { StateService } from '../../services/state';
 import { SeoService } from '../../services/seo';
+
+import * as privacy_policy from './privacy-policy.md';
 
 /**
  * Class representing a privacy policy.
@@ -14,16 +17,20 @@ import { SeoService } from '../../services/seo';
 
 export class PrivacyPolicyComponent {
 
+  private privacy_policy = privacy_policy;
+
   /**
    * Construct a PrivacyPolicyComponent.
    *
    * @constructor
    * @param {SeoService} seoService - A service for setting SEO related tags
    * @param {StateService} stateService - A service for managing the state of the site
+   * @param {DomSanitizer} sanitizer - Sanitizes content from json
    */
   constructor(
     private seoService: SeoService,
-    public stateService: StateService
+    public stateService: StateService,
+    private sanitizer: DomSanitizer
   ) {
     this.stateService.set('section', 'privacy-policy');
     this.seoService.setTitle('Privacy Policy', true);

@@ -1,4 +1,4 @@
-<section id="banner-home" class="banner large">
+<section id="banner-home" class="banner large" [style.background-color]="'red'" [style.background-image]="backgroundImage">
   <div class="banner-content">
     <div class="banner-title">{{content.home.banner.motto}}</div>
     <div class="banner-subtitle">{{content.home.banner.subtitle}}</div>
@@ -8,8 +8,8 @@
           <repos-search autofocus=true buttonClasses="transparent"></repos-search>
         </div>
       </div>
-      <div class="vertical-row"></div>
-      <div class="banner-subsection width-half">
+      <div class="vertical-row" *ngIf="content.home.banner.help_wanted_description"></div>
+      <div class="banner-subsection width-half" *ngIf="content.home.banner.help_wanted_description">
         <div class="banner-subsection-content">
           <div class="banner-subsection-title">Help Wanted!</div>
           <div class="banner-subsection-subtitle">{{content.home.banner.help_wanted_description}}</div>
