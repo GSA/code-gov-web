@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import { content } from '../../../../config/code-gov-config.json';
+import { content, images } from '../../../../config/code-gov-config.json';
 
 /**
  * Class representing a roadmap.
@@ -14,9 +14,12 @@ import { content } from '../../../../config/code-gov-config.json';
 })
 
 export class RoadmapComponent {
+  private bannerImage: any;
   private content: any = content;
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {
+    this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
+  }
 
 
 }

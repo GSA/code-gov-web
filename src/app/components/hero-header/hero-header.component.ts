@@ -1,4 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
+import { images } from '../../../../config/code-gov-config.json';
 
 @Component({
     selector: 'hero-header',
@@ -7,5 +10,10 @@ import { Component, Input } from '@angular/core';
 })
 
 export class HeroHeaderComponent {
-    @Input() title: string;
+  private backgroundImage;
+  @Input() title: string;
+
+  constructor(private sanitizer: DomSanitizer) {
+     this.backgroundImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
+  }
 }
