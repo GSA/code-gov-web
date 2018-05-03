@@ -1,5 +1,5 @@
 <div class="card focusable">
-  <a external-link [href]="item.projectURL" class="card-title">{{ item.title }}</a>
+  <a [href]="item.issueURL ? item.issueURL : item.projectURL" class="card-title" target="_blank">{{ item.title }}</a>
   <div class="card-date">Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</div>
   <p class="card-description">{{ item.description | truncate : 250}}</p>
   <dl *ngIf="!mobile">
@@ -25,10 +25,10 @@
 
   </dl>
   <div class="help-wanted-card-actions">
-    <a external-link [href]="item.projectURL" *ngIf="item.projectURL">
+    <a [href]="item.projectURL" *ngIf="item.projectURL" target="_blank">
       <button class="dark">Project Details</button>
     </a>
-    <a external-link [href]="item.issueURL" *ngIf="item.issueURL">
+    <a [href]="item.issueURL" *ngIf="item.issueURL" target="_blank">
       <button class="dark">Start Now</button>
     </a>
   </div>
