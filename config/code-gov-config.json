@@ -9,6 +9,18 @@
     "handle": "codedotgov"
   },
   "content": {
+    "header": {
+      "logos": {
+        "dark": "./assets/img/logos/code-gov-dark.svg",
+        "light": "./assets/img/logos/code-gov-light.svg"
+      },
+      "links": [
+        { "name": "Browse Projects", "url": "/#/explore-code" },
+        { "name": "Help Wanted", "url": "/#/help-wanted" },
+        { "name": "Policy Info", "url": "/#/policy-guide" },
+        { "name": "Roadmap", "url": "/#/roadmap" }
+      ]
+    },
     "home": {
       "banner": {
         "motto": "Sharing America's Code",

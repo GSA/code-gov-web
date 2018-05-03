@@ -1,38 +1,50 @@
 {
-  "title": "PubCode",
+  "title": "code.gov",
   "api": {
     "base": "https://api.code.gov/",
     "key": "OC457325hyT6DpFm5HBBZ1i8SR6gtp5U2CdqtHZQ"
   },
   "style": "code-gov-style",
   "twitter": {
-    "handle": ""
+    "handle": "codedotgov"
   },
   "content": {
+    "header": {
+      "logos": {
+        "dark": "./assets/img/logos/code-gov-dark.svg",
+        "light": "./assets/img/logos/code-gov-light.svg"
+      },
+      "links": [
+        { "name": "Browse Projects", "url": "/#/explore-code" },
+        { "name": "Help Wanted", "url": "/#/help-wanted" },
+        { "name": "Policy Info", "url": "/#/policy-guide" },        
+        { "name": "Roadmap", "url": "/#/roadmap" }
+      ]
+    },
     "home": {
       "banner": {
-        "motto": "PubCode",
-        "subtitle": "Code for the Scientific Community",
-        "help_wanted_description": ""
+        "motto": "Sharing America's Code",
+        "subtitle": "Unlock the tremendous potential of the Federal Government’s software.",
+        "help_wanted_description": "Discover how you can get involved and make America's code better"
       },
-      "mission": "PubCode is a prototype platform for developers to present their code in a formal environment, while showcasing useful metadata regarding the development, upkeep, and activity levels of their code to prospective users. Enhancing the users search for an appropriate tool for their given task provides an incentive to cite these open source tools, providing further interest in both its use and development.",
+      "mission": "Code.gov leverages the power of code sharing and collaboration to help the US Government cut down on duplicative software development and save millions of taxpayer dollars for the American people.",
       "about": [
         {
-          "title": "Submit your Code",
-          "description": "Have you created some cool code?",
-          "link": "/submit",
+          "title": "About Us",
+          "description": "Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.",
+          "link": "/policy-guide/docs/overview/introduction",
           "image": "../../../assets/img/icons/info_bl.png"
         },
         {
-          "title": "Show your Work",
-          "description": "Have you used code from PubCode",
-          "link": "/submit-case-study",
+          "title": "Policy Info",
+          "description": "The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.",
+          "link": "/policy-guide/policy/introduction",
           "image": "../../../assets/img/icons/policy_bl.png"
         },
         {
-          "title": "Roadmap",
-          "description": "See our progress",
-          "link": "/roadmap",
+          "title": "Progress Report",
+          "description": "Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.",
+          "link": "/policy-guide/docs/compliance/dashboard",
           "image": "../../../assets/img/icons/check_bl.png"
         }
       ],
@@ -101,7 +113,7 @@
         },
         {
           "name": "Visit Project Page",
-          "url": "https://github.com/NCBI-Hackathons/PubCode"
+          "url": "https://github.com/GSA/code-gov-web"
         }
       ],
       "logos": [
@@ -116,34 +128,42 @@
           "url": "https://presidentialinnovationfellows.gov/"
         },
         {
-          "image": "/assets/img/logos/NLM.png",
-          "name": "U.S. National Library of Medicine",
-          "url": "https://www.nlm.nih.gov/"
+          "image": "/assets/img/logos/GSA.png",
+          "name": "U.S. General Services Administration",
+          "url": "https://www.gsa.gov/"
         }
       ]
     },
     "roadmap": {
       "overview": [
-        "At PubCode, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
-        "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap."
+        "At Code.gov, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
+        "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap. If you want to join the Code.gov user testing group, please email us at <a href='mailto:code@gsa.gov'>Code@gsa.gov</a>."
       ],
       "near": [
-        { "name": "Create Prototype", "status": "Released" },
+        { "name": "Search results", "status": "Released" },
+        { "name": "Project Details Phase I", "status": "Released" },
+        { "name": "Help wanted", "status": "Released" },
         { "name": "Roadmap on site", "status": "Released" },
-        { "name": "Create Metadata Schema", "status": "In Progress" },
-        { "name": "Create MVP", "status": "In Progress" }
+        { "name": "Enhanced compliance dashboard", "status": "Released" },
+        { "name": "Increased agency participation", "status": "Released" },
+        { "name": "Metadata schema 1.0 & 1.0.1 deprecation", "status": "Released" }
       ],
       "mid": [
-        { "name": "Integrate Quality Metric", "status": null }
+        { "name": "Agency pages", "status": null },
+        { "name": "Medium skin", "status": null },
+        { "name": "FAQs page", "status": "In Progress" },
+        { "name": "Admin tool", "status": null },
+        { "name": "Enhanced tools and resources", "status": null },
+        { "name": "Project Details Phase II", "status": null}
       ],
       "long": [
-        { "name": "Integrate literature highlighting by Bowtie v Bowtie2", "status": null },
-        { "name": "Integrate u-INDEX by Callahan et al. (2018)", "status": null }
+        { "name": "User accounts", "status": null },
+        { "name": "Gamification", "status": null }
       ],
-      "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The PubCode team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of PubCode, the Presidential Innovation Fellows, the National Center for Biotechnology Information, and the United States Federal Government."
+      "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The Code.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of Code.gov, the General Services Agency, the Office of Management and Budget, and the United States Federal Government."
     }
   },
   "images": {
-    "background": "./assets/img/pubcode-home.png"
+    "background": "./assets/img/american_flag_1920x1280_gradient.jpg"
   }
 }

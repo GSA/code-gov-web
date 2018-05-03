@@ -11,22 +11,10 @@
     </div>
     <div class="footer-part logos">
       <ul>
-        <li>
-          <a href="https://whitehouse.gov" target="_blank" rel="noopener">
-            <img src="../../../assets/img/logos/whitehouse.png" alt="The White House">
-            <span>The White House</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://presidentialinnovationfellows.gov/" target="_blank" rel="noopener">
-            <img src="../../../assets/img/logos/PIF.png" alt="Presidential Innovation Fellows">
-            <span>PIF</span>
-          </a>
-        </li>
-        <li>
-          <a href="//www.gsa.gov" target="_blank" rel="noopener">
-            <img src="../../../assets/img/logos/GSA.png" alt="General Services Administration">
-            <span>GSA</span>
+        <li *ngFor="let logo of content.footer.logos">
+          <a [href]="logo.url" target="_blank" rel="noopener">
+            <img [src]="logo.image" [alt]="logo.name">
+            <span [textContent]="logo.name"></span>
           </a>
         </li>
       </ul>
