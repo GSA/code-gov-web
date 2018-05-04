@@ -225,7 +225,7 @@ module.exports = function (options) {
     },
 
     resolve: {
-      extensions: ['.ts', '.js', '.json'],
+      extensions: ['.ts', '.js', '.json', '.md'],
       modules: [helpers.root('src'), 'node_modules'],
     },
 
@@ -277,6 +277,17 @@ module.exports = function (options) {
           test: /\.(woff|woff2|ttf|eot)$/,
           loader: 'url-loader?limit=100000'
         },
+        {
+          test: /\.md$/,
+          use: [
+            {
+              loader: "html-loader"
+            },
+            {
+              loader: "markdown-loader"
+            }
+          ]
+        }
       ],
     },
 

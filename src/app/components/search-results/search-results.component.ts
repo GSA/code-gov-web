@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
@@ -7,6 +8,8 @@ import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
+
+import { content, images } from '../../../../config/code-gov-config.json';
 
 /**
  * Class representing a search results page for repositories.
@@ -21,6 +24,7 @@ import { StateService } from '../../services/state';
 
 export class SearchResultsComponent {
   public searchQuery: string = '';
+  private bannerImage: SafeStyle;
   private queryValue: string = '';
   private routeSubscription: Subscription;
   private results = [];
@@ -45,7 +49,11 @@ export class SearchResultsComponent {
     private activatedRoute: ActivatedRoute,
     private clientService: ClientService,
     private formBuilder: FormBuilder,
+    private sanitizer: DomSanitizer
   ) {
+
+    this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
+
     this.filterForm = formBuilder.group({
       languages: {},
       licenses: {},
@@ -86,8 +94,19 @@ export class SearchResultsComponent {
       (response: any) => {
         this.queryValue = response.q;
         this.clientService.search(this.queryValue, 100).subscribe(data => {
-          this.results = data.repos;
-          this.total = data.total;
+          let repos = data.repos;
+
+          if (content.search && content.search.entities) {
+            const entities = content.search.entities;
+            repos = repos.filter(repo => {
+              return entities.includes(repo.agency.name)
+              || entities.includes(repo.agency.acronym)
+              || entities.includes(repo.organization);
+            });
+          }
+
+          this.results = repos;
+          this.total = repos.length;
           this.buildFormControl('languages', this.getLanguages());
           this.buildFormControl('licenses', this.getLicenses());
           this.isLoading = false;
