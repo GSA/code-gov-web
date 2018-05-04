@@ -1,7 +1,10 @@
 import { Component, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { DomSanitizer } from '@angular/platform-browser';
 import { HelpWantedService } from '../../services/help-wanted';
 import { Option } from './help-wanted.option';
+
+import { images } from '../../../../config/code-gov-config.json';
 
 @Component({
   selector: 'help-wanted',
@@ -10,6 +13,7 @@ import { Option } from './help-wanted.option';
 })
 
 export class HelpWantedComponent {
+  private bannerImage;
   private items;
   private filteredItems;
   private filterForm: FormGroup;
@@ -19,9 +23,11 @@ export class HelpWantedComponent {
   private displayPopup: boolean;
 
   constructor(
+    private sanitizer: DomSanitizer,
     private formBuilder: FormBuilder,
     private helpWantedService: HelpWantedService
   ) {
+    this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
     this.items = [];
     this.filteredItems = [];
     this.filterForm = this.formBuilder.group({

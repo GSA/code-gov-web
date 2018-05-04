@@ -1,9 +1,10 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
-import { content, title } from '../../../../config/code-gov-config.json';
+import { content, images, title } from '../../../../config/code-gov-config.json';
 
 @Component({
   // The selector is what angular internally uses
@@ -15,10 +16,12 @@ import { content, title } from '../../../../config/code-gov-config.json';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
+  private backgroundImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
   private content = content;
 
   constructor(
     public stateService: StateService,
+    private sanitizer: DomSanitizer,
     private seoService: SeoService,
     private router: Router
   ) {
