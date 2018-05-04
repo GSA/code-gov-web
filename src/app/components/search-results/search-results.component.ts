@@ -98,11 +98,10 @@ export class SearchResultsComponent {
 
           if (content.search && content.search.entities) {
             const entities = content.search.entities;
-            console.log("entities:", entities);
             repos = repos.filter(repo => {
               return entities.includes(repo.agency.name)
               || entities.includes(repo.agency.acronym)
-              || entities.includes(repo.organization)
+              || entities.includes(repo.organization);
             });
           }
 

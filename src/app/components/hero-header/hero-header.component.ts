@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 
 import { images } from '../../../../config/code-gov-config.json';
 
@@ -10,8 +10,8 @@ import { images } from '../../../../config/code-gov-config.json';
 })
 
 export class HeroHeaderComponent {
-  private backgroundImage;
   @Input() title: string;
+  private backgroundImage: SafeStyle;
 
   constructor(private sanitizer: DomSanitizer) {
      this.backgroundImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
