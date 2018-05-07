@@ -77,9 +77,18 @@ This app uses the `github-deploy` package for handling deployment. To configure
 deployment, customize the `config/github-deploy` and `webpack.github-deploy`
 files to match your settings. When ready to deploy, run
 `npm run federalist-deploy:dev` or `npm run federalist-deploy:prod`, depending on your
-intended destination.  If you are deploying from a fork, you will have to set
+intended destination.
+
+If you are deploying from a fork, you will have to set
 the `GIT_REMOTE_NAME` environmental variable,
 like `GIT_REMOTE_NAME="upstream" npm run federalist-deploy`.
+
+## Deploying Arbitrary Branch
+If you'd like to deploy an arbitrary branch, set the `GIT_BRANCH_NAME` environmental variable.  For example the following code will deploy the current branch to https://federalist-proxy.app.cloud.gov/preview/gsa/code-gov-web/federalist-demo/#/
+```
+GIT_BRANCH_NAME="federalist-demo" npm run federalist-deploy
+```
+
 
 ## Specifying API URL
 The app uses the production API by default.  To use the staging API,

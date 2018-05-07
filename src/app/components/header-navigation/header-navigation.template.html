@@ -8,8 +8,20 @@
 
   <ul>
 
-    <li *ngFor="let link of headerContent.links">
-      <a class="link" [href]="link.url" [textContent]="link.name"></a>
+    <li *ngFor="let link of links">
+      <a
+        *ngIf="link.routerLink"
+        class="link"
+        [textContent]="link.name"
+        [routerLink]="link.routerLink"
+        routerLinkActive="active"
+      ></a>
+      <a
+        *ngIf="!link.routerLink"
+        class="link"
+        [textContent]="link.name"
+        [href]="link.url"
+      ></a>
     </li>
 
   </ul>

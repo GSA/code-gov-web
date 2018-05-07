@@ -24,8 +24,10 @@ const SiteConfig = require('./code-gov-config.json');
  * Webpack Constants
  */
 const GIT_REMOTE_NAME = process.env.GIT_REMOTE_NAME || 'origin';
+console.log("GIT_REMOTE_NAME:", GIT_REMOTE_NAME);
 const COMMIT_MESSAGE = 'Updates';
 const GH_REPO_NAME = ghDeploy.getRepoName(GIT_REMOTE_NAME);
+console.log("GH_REPO_NAME:", GH_REPO_NAME);
 const ENV = 'production';
 let BASEURL;
 let gtmAuth;
@@ -59,12 +61,10 @@ if (helpers.hasProcessFlag('federalist-stag')){
     allow: '/'
   }];
   robotsTxtConf.host = 'https://code.gov';
-
 } else {
-  GIT_BRANCH_NAME = 'federalist-dev';
+  GIT_BRANCH_NAME = process.env.GIT_BRANCH_NAME || 'federalist-dev';
   BASEURL = `/preview/gsa/code-gov-web/${GIT_BRANCH_NAME}/`;
   gtmAuth = 'GTM-M9L9Q5';
-
 }
 
 const METADATA = webpackMerge(webpackConfig.metadata, {
@@ -88,7 +88,7 @@ module.exports = function (env) {
     chunksSortMode: 'dependency',
     inject: 'head'
   }, SiteConfig));
- 
+
 
   return webpackMerge(webpackConfig({env: ENV}), {
 
@@ -147,11 +147,17 @@ module.exports = function (env) {
             dotfiles: true
           };
 
-          ghpages.publish(webpackConfig({env: ENV}).output.path, options, function(err) {
+          const outputPath = webpackConfig({env: ENV}).output.path;
+          console.log("outputPath:", outputPath);
+
+          ghpages.publish(outputPath, options, function(err) {
             if (err) {
               console.log('GitHub deployment done. STATUS: ERROR: '+err);
               throw err;
             } else {
+              if (BASEURL && BASEURL.length > 3) {
+                console.log("Deployed to https://federalist-proxy.app.cloud.gov/" + BASEURL);
+              }
               console.log('GitHub deployment done. STATUS: SUCCESS.');
             }
           });

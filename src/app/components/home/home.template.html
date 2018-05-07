@@ -41,7 +41,7 @@
   <br />
   <hr />
   <ul class="indented about-actions">
-    <li class="about-action width-third" *ngFor="let item of content.home.about">
+    <li class="about-action width-third" *ngFor="let item of aboutItems">
       <a [routerLink]="item.link">
         <img alt="About Icon" aria-hidden="true" [src]="item.image" />
         <h3>{{item.title}}</h3>
@@ -57,7 +57,7 @@
     </div>
   </div>
   <div>
-    <div class="block featured-project" *ngFor="let fp of content.home.featured; let i = index">
+    <div class="block featured-project" *ngFor="let fp of featured; let i = index">
       <div class="indented">
         <div class="width-half" *ngIf="i % 2 === 0"><img [src]="fp.image"></div>
         <div class="width-half">
@@ -67,9 +67,13 @@
             <div class="fp-developed-by">developed by the {{fp.author}}</div>
             <p class="fp-description">{{fp.description}}</p>
             <div class="buttons">
-              <a [href]="fp.links.view_project"><button class="transparent">View Project</button></a>
-              &nbsp;
-              <a [href]="fp.links.go_to_repo"><button class="transparent">Go to Repo</button></a>
+              <a
+                *ngFor="let link of fp.links"
+                [href]="link.routerLink ? null : link.url"
+                [routerLink]="link.routerLink || null"
+              >
+                <button class="transparent" [textContent]="link.name"></button>
+              </a>
             </div>
           </div>
         </div>
