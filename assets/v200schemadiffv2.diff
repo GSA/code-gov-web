@@ -1,0 +1,77 @@
+--- sample_code.json	2017-07-24 15:55:04.000000000 -0400
++++ draft_v200_sample_code.json	2017-07-25 17:36:00.000000000 -0400
+@@ -1,49 +1,58 @@
+ {
+-    "version":"1.0.1",
++    "version":"2.0.0",
+     "agency": "DOABC",
+-    "projects": [
++    "releases": [
+         {
+             "name": "mygov",
+             "organization": "XYZ Department",
+             "description": "A Platform for Connecting People and Government",
+-            "license": "https://path.to/license",
+-            "openSourceProject": 1,
+-            "governmentWideReuseProject": 0,
+-
++            "licenses": [{
++              "URL": "https://path.to/license",
++              "name": "CC0"
++          
++            }],
++            "permissions":{
++              "usageType":"open",
++              "exemptionText": null
++            },
++          
++          
+             "tags": [
+               "platform",
+               "government",
+               "connecting",
+               "people"
+             ],
+             "contact": {
+-              "email": "project@agency.gov",
++              "email": "release@agency.gov",
+               "name": "Project Coordinator Name",
+               "URL": "https://twitter.com/projectname",
+               "phone": "2025551313"
+             },
+             "status": "Alpha",
+             "vcs": "git",
+-            "repository": "https://github.com/presidential-innovation-fellows/mygov",
+-            "homepage": "https://agency.gov/project-homepage",
++            "repositoryURL": "https://github.com/presidential-innovation-fellows/mygov",
++            "homepageURL": "https://agency.gov/project-homepage",
+             "downloadURL": "https://agency.gov/project/dist.tar.gz",
+             "languages": [
+               "java",
+               "python"
+             ],
++            "laborHours": "1000",
++            "measurementType": "linesOfcode",
+             "partners": [
+                 {
+                     "name": "DOXYZ",
+-                    "email": "project@doxyz.gov"
++                    "email": "releaseContact1@doxyz.gov"
+                 }
+             ],
+-            "exemption": null,
+-            "exemptionText": "No exemption requested",
+-            "updated": {
+-                "lastCommit": "2016-04-30",
+-                "metadataLastUpdated": "2016-04-13",
+-                "lastModified": "2016-04-12"
++            
++            "date": {
++                "created": "2016-04-12",
++                "lastModified": "2016-04-12",
++                "metadataLastUpdated": "2016-04-13"
++                
+             }
+         }
+     ]
+ }
