@@ -40,4 +40,3 @@ export class HomeHeaderNavigationComponent {
     this.isAtTop = top === 0;
   }
 }
-;

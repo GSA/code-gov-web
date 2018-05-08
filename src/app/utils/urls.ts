@@ -1,7 +1,7 @@
 export function toAbsoluteUrl(url: string): string {
-  if (url.startsWith("http")) {
+  if (url.startsWith('http')) {
     return url;
-  } else if (url.startsWith("/assets")) {
+  } else if (url.startsWith('/assets')) {
     return document.head.baseURI.replace(/\/$/, '') + url;
   }
   return url;
@@ -23,7 +23,7 @@ export interface Link {
 
 
 export function routifyLinks(links: Link[]): Link[] {
-  if (links) {    
+  if (links) {
     return links.map(link => {
       link.routerLink = toRouterLink(link.url);
       return link;
