@@ -67,13 +67,14 @@
             <div class="fp-developed-by">developed by the {{fp.author}}</div>
             <p class="fp-description">{{fp.description}}</p>
             <div class="buttons">
-              <a
-                *ngFor="let link of fp.links"
-                [href]="link.routerLink ? null : link.url"
-                [routerLink]="link.routerLink || null"
-              >
-                <button class="transparent" [textContent]="link.name"></button>
-              </a>
+              <span *ngFor="let link of fp.links">
+                <a *ngIf="link.routerLink" [routerLink]="link.routerLink">
+                  <button class="transparent" [textContent]="link.name"></button>
+                </a>
+                <a *ngIf="!link.routerLink" [href]="link.url">
+                  <button class="transparent" [textContent]="link.name"></button>
+                </a>
+              </span>
             </div>
           </div>
         </div>
