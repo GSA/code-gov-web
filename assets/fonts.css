@@ -7,12 +7,12 @@
 /* code-gov-font, which heavily uses font-awesome */
 @font-face {
   font-family: 'code-gov';
-  src: url('fonts/code-gov.eot?15175915');
-  src: url('fonts/code-gov.eot?15175915#iefix') format('embedded-opentype'),
-       url('fonts/code-gov.woff2?15175915') format('woff2'),
-       url('fonts/code-gov.woff?15175915') format('woff'),
-       url('fonts/code-gov.ttf?15175915') format('truetype'),
-       url('fonts/code-gov.svg?15175915#code-gov') format('svg');
+  src: url('/assets/fonts/code-gov.eot?15175915');
+  src: url('/assets/fonts/code-gov.eot?15175915#iefix') format('embedded-opentype'),
+       url('/assets/fonts/code-gov.woff2?15175915') format('woff2'),
+       url('/assets/fonts/code-gov.woff?15175915') format('woff'),
+       url('/assets/fonts/code-gov.ttf?15175915') format('truetype'),
+       url('/assets/fonts/code-gov.svg?15175915#code-gov') format('svg');
   font-weight: normal;
   font-style: normal;
 }
