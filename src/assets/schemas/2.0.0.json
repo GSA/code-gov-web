@@ -97,7 +97,7 @@
               }
             },
             "additionalProperties": false,
-            "required": ["licenses"]
+            "required": ["licenses", "usageType"]
           },
           "tags": {
             "type": "array",
