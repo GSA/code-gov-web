@@ -1,0 +1,14 @@
+{
+  "main": {
+    "js": "/preview/gsa/code-gov-web/federalist-your-city-demo/main.bc1873f3ed44a08edf40.bundle.js"
+  },
+  "vendor": {
+    "js": "/preview/gsa/code-gov-web/federalist-your-city-demo/vendor.bf2c0b7bc19313ac45c0.bundle.js"
+  },
+  "styles": {
+    "js": "/preview/gsa/code-gov-web/federalist-your-city-demo/styles.576eb3c1270aa469b9ff.bundle.js"
+  },
+  "polyfills": {
+    "js": "/preview/gsa/code-gov-web/federalist-your-city-demo/polyfills.96219909a8db45401dfa.bundle.js"
+  }
+}

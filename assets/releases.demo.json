@@ -1,0 +1,70 @@
+{
+  "releases": {
+    "DOABC/mygov": {
+      "id": "DOABC/mygov",
+      "name": "mygov",
+      "agency": "DOABC",
+      "version": "1.0.0",
+      "organization": "XYZ Department",
+      "description": "A Platform for Connecting People and Government",
+
+      "permissions": {
+        "licenses": [
+        {
+          "URL": "https://path.to/license",
+          "name": "CC0"
+        }
+      ],
+        "usageType": "openSource",
+        "exemptionText": null
+      },
+      "tags": [
+        "platform",
+        "government",
+        "connecting",
+        "people"
+      ],
+      "contact": {
+        "email": "release@agency.gov",
+        "name": "Project Coordinator Name",
+        "URL": "https://twitter.com/projectname",
+        "phone": "2025551313"
+      },
+      "status": "Alpha",
+      "vcs": "git",
+      "repositoryURL": "https://github.com/presidential-innovation-fellows/code-gov-web",
+      "homepageURL": "https://agency.gov/project-homepage",
+      "downloadURL": "https://agency.gov/project/dist.tar.gz",
+      "languages": [
+        "java",
+        "python"
+      ],
+      "laborHours": 1000,
+      "relatedCode": [
+        {
+          "name": "Code.gov API",
+          "URL": "https://github.com/presidential-innovation-fellows/code-gov-api"
+
+        }
+      ],
+      "reusedCode": [
+        {
+          "name": "US web design standards",
+          "URL": "https://github.com/18F/web-design-standards"
+
+        }
+      ],
+      "partners": [
+        {
+          "name": "DOXYZ",
+          "email": "releaseContact1@doxyz.gov"
+        }
+      ],
+      "date": {
+        "created": "2016-04-12",
+        "lastModified": "2016-04-12",
+        "metadataLastUpdated": "2016-04-13"
+      }
+    }
+  }
+}

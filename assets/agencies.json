@@ -1,0 +1,116 @@
+{
+  "agencies": {
+    "USAID": {
+      "id": "USAID",
+      "name": "Agency for International Development"
+    },
+    "CFPB": {
+      "id": "CFPB",
+      "name": "Consumer Financial Protection Bureau"
+    },
+    "USDA": {
+      "id": "USDA",
+      "name": "Department of Agriculture"
+    },
+    "DOC": {
+      "id": "DOC",
+      "name": "Department of Commerce"
+    },
+    "DOD": {
+      "id": "DOD",
+      "name": "Department of Defense"
+    },
+    "DOE": {
+      "id": "DOE",
+      "name": "Department of Energy"
+    },
+    "DOJ": {
+      "id": "DOJ",
+      "name": "Department of Justice"
+    },
+    "ED": {
+      "id": "ED",
+      "name": "Department of Education"
+    },
+    "HHS": {
+      "id": "HHS",
+      "name": "Department of Health and Human Services"
+    },
+    "DHS": {
+      "id": "DHS",
+      "name": "Department of Homeland Security"
+    },
+    "HUD": {
+      "id": "HUD",
+      "name": "Department of Housing and Urban Development"
+    },
+    "DOL": {
+      "id": "DOL",
+      "name": "Department of Labor"
+    },
+    "DOS": {
+      "id": "DOS",
+      "name": "Department of State"
+    },
+    "DOT": {
+      "id": "DOT",
+      "name": "Department of Transportation"
+    },
+    "TREASURY": {
+      "id": "TREASURY",
+      "name": "Department of the Treasury"
+    },
+    "VA": {
+      "id": "VA",
+      "name": "Department of Veterans Affairs"
+    },
+    "EPA": {
+      "id": "EPA",
+      "name": "Environmental Protection Agency"
+    },
+    "FDA": {
+      "id": "FDA",
+      "name": "Food and Drug Administration"
+    },
+    "EOP": {
+      "id": "EOP",
+      "name": "Executive Office of the President"
+    },
+    "GSA": {
+      "id": "GSA",
+      "name": "General Services Administration"
+    },
+    "NASA": {
+      "id": "NASA",
+      "name": "NASA"
+    },
+    "NARA": {
+      "id": "NARA",
+      "name": "National Archives and Records Administration"
+    },
+    "NSA": {
+      "id": "NSA",
+      "name": "National Security Agency"
+    },
+    "NSF": {
+      "id": "NSF",
+      "name": "National Science Foundation"
+    },
+    "NRC": {
+      "id": "NRC",
+      "name": "Nuclear Regulatory Commission"
+    },
+    "OPM": {
+      "id": "OPM",
+      "name": "Office of Personnel Management"
+    },
+    "SBA": {
+      "id": "SBA",
+      "name": "Small Business Administration"
+    },
+    "SSA": {
+      "id": "SSA",
+      "name": "Social Security Administration"
+    }
+  }
+}
