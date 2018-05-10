@@ -2,8 +2,11 @@
   <div class="footer-content">
     <div class="footer-part links">
       <ul>
-        <li *ngFor="let link of content.footer.links">
-          <a class="link" [href]="link.url">
+        <li *ngFor="let link of links">
+          <a *ngIf="link.routerLink" class="link" [routerLink]="link.routerLink">
+            <span>{{link.name}}</span>
+          </a>
+          <a *ngIf="!link.routerLink" class="link" [href]="link.url">
             <span>{{link.name}}</span>
           </a>
         </li>
@@ -11,7 +14,7 @@
     </div>
     <div class="footer-part logos">
       <ul>
-        <li *ngFor="let logo of content.footer.logos">
+        <li *ngFor="let logo of logos">
           <a [href]="logo.url" target="_blank" rel="noopener">
             <img [src]="logo.image" [alt]="logo.name">
             <span [textContent]="logo.name"></span>

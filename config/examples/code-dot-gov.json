@@ -33,19 +33,19 @@
           "title": "About Us",
           "description": "Code.gov is on track to become the nation’s primary platform for sharing America’s code.  Find out how we’ll get there.",
           "link": "/policy-guide/docs/overview/introduction",
-          "image": "../../../assets/img/icons/info_bl.png"
+          "image": "/assets/img/icons/info_bl.png"
         },
         {
           "title": "Policy Info",
           "description": "The Federal Source Code Policy helps government agencies reduce duplicative software development and save taxpayer dollars.",
           "link": "/policy-guide/policy/introduction",
-          "image": "../../../assets/img/icons/policy_bl.png"
+          "image": "/assets/img/icons/policy_bl.png"
         },
         {
           "title": "Progress Report",
           "description": "Government agencies are working hard to unlock the potential of code sharing and collaboration. Here’s a quick snapshot of their progress.",
           "link": "/policy-guide/docs/compliance/dashboard",
-          "image": "../../../assets/img/icons/check_bl.png"
+          "image": "/assets/img/icons/check_bl.png"
         }
       ],
       "featured": [
@@ -55,10 +55,10 @@
           "author": "Environmental Protection Agency",
           "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
           "image": "/assets/img/featured-projects/pipes4.png",
-          "links": {
-            "view_project": "/#/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0",
-            "go_to_repo": "https://github.com/usepa/wntr"
-          }
+          "links": [
+            { "name": "View Project", "url": "/#/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0" },
+            { "name": "Go to Repo", "url": "https://github.com/usepa/wntr"}
+          ]
         },
         {
           "short_name": "ITS ODE",
@@ -66,10 +66,10 @@
           "author": "Department of Transportation",
           "description": "A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.",
           "image": "/assets/img/featured-projects/smartcity4.png",
-          "links": {
-            "view_project": "/#/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_",
-            "go_to_repo": "https://github.com/usdot-jpo-ode/jpo-ode"
-          }
+          "links": [
+            { "name": "View Project", "url": "/#/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_" },
+            { "name": "Go to Repo", "url": "https://github.com/usdot-jpo-ode/jpo-ode" }
+          ]
         },
         {
           "short_name": "WALKOFF",
@@ -77,10 +77,10 @@
           "author": "National Security Agency",
           "description": "Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.",
           "image": "/assets/img/featured-projects/WALKOFF.png",
-          "links": {
-            "view_project": "/#/explore-code/agencies/NSA/repos/nsa_walkoff",
-            "go_to_repo": "https://github.com/iadgov/WALKOFF"
-          }
+          "links": [
+            { "name": "View Project", "url": "/#/explore-code/agencies/NSA/repos/nsa_walkoff" },
+            { "name": "Go to Repo", "url": "https://github.com/iadgov/WALKOFF" }
+          ]
         }
       ],
       "press": {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { toRouterLink, Link } from '../../../utils/urls';
 import { content, title, twitter } from '../../../../../config/code-gov-config.json';
 
 @Component({
@@ -20,6 +21,14 @@ export class HomeHeaderNavigationComponent {
   private twitterHandle: string = twitter.handle;
   private title: string = title;
   private headerContent: any = content.header;
+  private links: Link[];
+
+  constructor() {
+    this.links = content.header.links.map(link => {
+      link.routerLink = toRouterLink(link.url);
+      return link;
+    });
+  }
 
   /**
    * Triggers whenever the window is scrolled.

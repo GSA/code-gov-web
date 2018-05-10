@@ -1,0 +1,14 @@
+FROM node:9.11.1-onbuild
+
+MAINTAINER code.gov
+
+RUN git clone --depth 1 https://github.com/GSA/code-gov-web
+
+WORKDIR code-gov-web
+
+RUN npm install
+
+# setting up to use code-dot-gov configuration
+RUN cp config/examples/code-dot-gov.json config/code-gov-config.json
+
+EXPOSE 2700

@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { MobileService } from '../../services/mobile';
 import { SearchInputComponent } from '../search-input';
 
+import { toRouterLink, Link } from '../../utils/urls';
+
 import { content, title, twitter } from '../../../../config/code-gov-config.json';
 
 @Component({
@@ -24,6 +26,7 @@ export class HeaderNavigationComponent {
   color: string = 'white';
   dropdownSearchBox: boolean = true;
   headerContent: any = content.header;
+  links: Link[];
   twitterHandle: string = twitter.handle;
   title: string = title;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
@@ -35,6 +38,11 @@ export class HeaderNavigationComponent {
   ) {
     this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(
       isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
+
+    this.links = content.header.links.map(link => {
+      link.routerLink = toRouterLink(link.url);
+      return link;
+    });
   }
 
   ngOnDestroy() {

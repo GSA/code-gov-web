@@ -4,7 +4,29 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { SeoService } from '../../services/seo';
 import { StateService } from '../../services/state';
+import { toAbsoluteUrl, toRouterLink, routifyLinks } from '../../utils/urls';
 import { content, images, title } from '../../../../config/code-gov-config.json';
+
+interface AboutItem {
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+}
+
+interface Link {
+  view_project: string;
+  go_to_repo: string;
+}
+
+interface FeaturedProject {
+  short_name: string;
+  verbose_name: string;
+  author: string;
+  description: string;
+  image: string;
+  links: Link[];
+}
 
 @Component({
   // The selector is what angular internally uses
@@ -18,6 +40,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   private backgroundImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
   private content = content;
+  private featured: FeaturedProject[];
+  private aboutItems: AboutItem[];
 
   constructor(
     public stateService: StateService,
@@ -31,6 +55,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'Code.gov is a platform designed to improve access to the federal government’s ' +
       'custom-developed software.'
     );
+
+    this.aboutItems = content.home.about.map(aboutItem => {
+      aboutItem.image = toAbsoluteUrl(aboutItem.image);
+      return aboutItem;
+    });
+
+    this.featured = content.home.featured.map(featuredProject => {
+      featuredProject.image = toAbsoluteUrl(featuredProject.image);
+      featuredProject.links = routifyLinks(featuredProject.links);
+      return featuredProject;
+    });
+
   }
 
   ngOnInit(): void {
