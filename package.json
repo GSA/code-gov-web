@@ -94,7 +94,8 @@
     "licenses": "license-checker --json --relativeLicensePath --out dependency_licenses.json",
     "list-git-conflicts": "git diff --name-only --diff-filter=U",
     "clear-gh-pages-cache": "rm -fr node_modules/gh-pages/.cache",
-    "update-fonts": "cp node_modules/@code.gov/code-gov-font/font/* src/assets/fonts/."
+    "update-fonts": "cp node_modules/@code.gov/code-gov-font/font/* src/assets/fonts/.",
+    "switch-to-code-dot-gov": "cp config/examples/code-dot-gov.json config/code-gov-config.json && cp src/assets/help-wanted-code-dot-gov.json src/assets/help-wanted.json && cp src/app/components/privacy-policy/privacy-policy-code-dot-gov.md src/app/components/privacy-policy/privacy-policy.md"
   },
   "dependencies": {
     "@angular/animations": "^4.4.4",
