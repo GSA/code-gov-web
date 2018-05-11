@@ -101,6 +101,10 @@
         }
       ]
     },
+    "help_wanted": {
+      "title": "Help Wanted",
+      "subtitle": "Discover how you can get involved and make America's Scientific Code better"
+    },
     "roadmap": {
       "overview": [
         "At PubCode, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
