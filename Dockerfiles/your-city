@@ -1,0 +1,21 @@
+FROM ubuntu:latest
+
+RUN apt-get update
+
+RUN apt-get install -y git nodejs npm
+
+RUN git clone --depth 1 https://github.com/GSA/code-gov-web
+
+WORKDIR code-gov-web
+
+# setting up to use code-dot-gov configuration
+RUN cp config/examples/your-city.json config/code-gov-config.json
+
+# removing because causing problems
+RUN rm package-lock.json
+
+RUN npm install
+
+CMD PORT=80 npm run start
+
+EXPOSE 80
