@@ -12,6 +12,7 @@ import { content } from '../../../../../../config/code-gov-config.json';
 
 export class AgencySidebarComponent {
   agencies: Agency[];
+  private browse_by_text: string = content.browse_projects.browse_by_text;
 
   constructor(private clientService: ClientService) { }
 

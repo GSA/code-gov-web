@@ -16,6 +16,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { content } from '../../../../config/code-gov-config.json';
+
 /**
  * Class representing a search component for repositories.
  */
@@ -32,6 +34,7 @@ export class ReposSearchComponent {
   @Input() autofocus = false;
   @Input() buttonClasses = '';
   @ViewChild('repoSearch') searchFormElement: ElementRef;
+  private browse_by_text: string = content.home.banner.browse_by_text;
 
   /**
    * Constructs a ReposSearchComponent.

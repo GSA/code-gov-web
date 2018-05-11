@@ -26,7 +26,8 @@
         "motto": "Sharing America's Code",
         "subtitle": "Unlock the tremendous potential of the Federal Government’s software.",
         "help_wanted_description": "Discover how you can get involved and make America's code better",
-        "search_placeholder_text": "Search Thousands of Projects..."                
+        "search_placeholder_text": "Search Thousands of Projects...",
+        "browse_by_text": "Browse by Agency"
       },
       "mission": "Code.gov leverages the power of code sharing and collaboration to help the US Government cut down on duplicative software development and save millions of taxpayer dollars for the American people.",
       "about": [
@@ -134,6 +135,9 @@
           "url": "https://www.gsa.gov/"
         }
       ]
+    },
+    "browse_projects": {
+      "browse_by_text": "Browse by Agency"      
     },
     "help_wanted": {
       "title": "Help Wanted",

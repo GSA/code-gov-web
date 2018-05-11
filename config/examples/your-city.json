@@ -26,7 +26,7 @@
         "subtitle": "Unlock the tremendous potential of Your City’s software",
         "help_wanted_description": "Discover how you can get involved and make Your City's code better",
         "search_placeholder_text": "Search Your City's Projects",
-        "browse_text": "Browse by Department"
+        "browse_by_text": "Browse by Department"
       },
       "mission": "This is where you put the mission of Your City's code.gov fork.  Talk about why you're doing this and how it helps Your City's residents.",
       "about": [
@@ -97,6 +97,9 @@
           "url": ""
         }
       ]
+    },
+    "browse_projects": {
+      "browse_by_text": "Browse by Department"
     },
     "help_wanted": {
       "title": "Help Wanted",
