@@ -24,7 +24,8 @@
       "banner": {
         "motto": "PubCode",
         "subtitle": "Code for the Scientific Community",
-        "help_wanted_description": "Discover how you can get involved and make America's code better"
+        "help_wanted_description": "Discover how you can get involved and make America's code better",
+        "search_placeholder_text": "Search Thousands of Projects"
       },
       "mission": "PubCode is a prototype platform for developers to present their code in a formal environment, while showcasing useful metadata regarding the development, upkeep, and activity levels of their code to prospective users. Enhancing the users search for an appropriate tool for their given task provides an incentive to cite these open source tools, providing further interest in both its use and development.",
       "about": [

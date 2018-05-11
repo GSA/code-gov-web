@@ -25,7 +25,8 @@
       "banner": {
         "motto": "Sharing America's Code",
         "subtitle": "Unlock the tremendous potential of the Federal Government’s software.",
-        "help_wanted_description": "Discover how you can get involved and make America's code better"
+        "help_wanted_description": "Discover how you can get involved and make America's code better",
+        "search_placeholder_text": "Search Thousands of Projects..."                
       },
       "mission": "Code.gov leverages the power of code sharing and collaboration to help the US Government cut down on duplicative software development and save millions of taxpayer dollars for the American people.",
       "about": [
@@ -137,7 +138,7 @@
     "help_wanted": {
       "title": "Help Wanted",
       "subtitle": "Discover how you can get involved and make Your City's Code better"
-    },    
+    },
     "roadmap": {
       "overview": [
         "At Code.gov, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
