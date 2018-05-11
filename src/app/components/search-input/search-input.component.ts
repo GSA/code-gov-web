@@ -39,7 +39,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() placeholder: string = content.home.banner.search_placeholder_text || "define this text in your code-gov-config.json";
+  @Input() placeholder: string = content.home.banner.search_placeholder_text;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
   public autocompleteVisible: boolean = false;
