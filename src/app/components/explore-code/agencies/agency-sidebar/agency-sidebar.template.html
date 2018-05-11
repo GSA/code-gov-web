@@ -1,6 +1,6 @@
 <sidebar>
-  <sidebar-menu-text>Browse by Agency</sidebar-menu-text>
-  <sidebar-title>Browse by Agency</sidebar-title>
+  <sidebar-menu-text>{{browse_by_text}}</sidebar-menu-text>
+  <sidebar-title>{{browse_by_text}}</sidebar-title>
   <sidebar-content>
     <li *ngFor="let agency of agencies">
       <a toggle-menu routerLink="{{agency.acronym}}" routerLinkActive="current">

@@ -1,0 +1,132 @@
+{
+  "title": "code.yourcity.gov",
+  "api": {
+    "base": "https://api.code.gov/",
+    "key": "OC457325hyT6DpFm5HBBZ1i8SR6gtp5U2CdqtHZQ"
+  },
+  "style": "code-gov-style",
+  "twitter": {
+    "handle": "yourcitydotgov"
+  },
+  "content": {
+    "header": {
+      "logos": {
+        "dark": "./assets/img/logos/your-city-dark.svg",
+        "light": "./assets/img/logos/your-city-light.svg"
+      },
+      "links": [
+        { "name": "Browse Projects", "url": "/#/explore-code" },
+        { "name": "Help Wanted", "url": "/#/help-wanted" },
+        { "name": "Roadmap", "url": "/#/roadmap" }
+      ]
+    },
+    "home": {
+      "banner": {
+        "motto": "Sharing Your City's Code",
+        "subtitle": "Unlock the tremendous potential of Your City’s software",
+        "help_wanted_description": "Discover how you can get involved and make Your City's code better",
+        "search_placeholder_text": "Search Your City's Projects",
+        "browse_by_text": "Browse by Department"
+      },
+      "mission": "This is where you put the mission of Your City's code.gov fork.  Talk about why you're doing this and how it helps Your City's residents.",
+      "about": [
+        {
+          "title": "First Item",
+          "description": "This is where you put the description.",
+          "link": "",
+          "image": "/assets/img/icons/info_bl.png"
+        },
+        {
+          "title": "Second Item",
+          "description": "This is where you put the description.",
+          "link": "",
+          "image": "/assets/img/icons/policy_bl.png"
+        },
+        {
+          "title": "Third Item",
+          "description": "This is where you put the description.",
+          "link": "",
+          "image": "/assets/img/icons/check_bl.png"
+        }
+      ],
+      "featured": [
+        {
+          "short_name": "Biz Start Kit",
+          "verbose_name": "Business Starter Kit",
+          "author": "Office of Local Business",
+          "description": "A website with resource and tools for starting your own business in Your City",
+          "image": "/assets/img/featured-projects/biz_400x400.png",
+          "links": [
+            { "name": "View Project", "url": "/#/explore-code/agencies/" },
+            { "name": "Go to Repo", "url": "https://github.com/"}
+          ]
+        },
+        {
+          "short_name": "Transportation Map",
+          "verbose_name": "Map of transportation options within Your City",
+          "author": "Office of Transportation Technology",
+          "description": "A mobile-friendly online interactive map that shows transportation routes and current locations of public transportation options",
+          "image": "/assets/img/featured-projects/transportation_409x409.png",
+          "links": [
+            { "name": "View Project", "url": "/#/explore-code/agencies/" },
+            { "name": "Go to Repo", "url": "https://github.com" }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "url": "/#/privacy-policy"
+        },
+        {
+          "name": "Visit Project Page",
+          "url": "https://github.com/GSA/code-gov-web"
+        }
+      ],
+      "logos": [
+        {
+          "image": "/assets/img/logos/yourcity.png",
+          "name": "The Office of the Mayor",
+          "url": ""
+        },
+        {
+          "image": "/assets/img/logos/yourcity2.png",
+          "name": "Your City Innovation Office",
+          "url": ""
+        }
+      ]
+    },
+    "browse_projects": {
+      "browse_by_text": "Browse by Department"
+    },
+    "help_wanted": {
+      "title": "Help Wanted",
+      "subtitle": "Discover how you can get involved and make Your City's Code better"
+    },
+    "roadmap": {
+      "overview": [
+        "At code.yourcity.gov, we know it’s important to keep an open dialogue with our users. That’s why we’re sharing our plans for the future through this Development Roadmap. Hopefully, it will help you better understand our priorities for the platform.",
+        "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap. If you want to join the code.yourcity.gov user testing group, please email us at <a href='mailto:code@yourcity.gov'>code@yourcity.gov</a>."
+      ],
+      "near": [
+        { "name": "Feature 1", "status": "Released" },
+        { "name": "Feature 2", "status": "Released" }
+      ],
+      "mid": [
+        { "name": "Feature 3", "status": "In Progress" },
+        { "name": "Feature 4", "status": null },
+        { "name": "Feature 5", "status": "In Progress" }
+      ],
+      "long": [
+        { "name": "Feature 6", "status": null },
+        { "name": "Feature 7", "status": null }
+      ],
+      "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The code.yourcity.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of code.yourcity.gov, the Your City Innovation Office and the Your City Office of the Mayor."
+    }
+  },
+  "images": {
+    "background": "./assets/img/yourcity.jpg"
+  }
+}

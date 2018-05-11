@@ -11,6 +11,8 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { MobileService } from '../../services/mobile';
 
+import { content } from '../../../../config/code-gov-config.json';
+
 /**
  * Class representing a sidebar.
  */
@@ -27,6 +29,7 @@ export class SidebarComponent implements OnDestroy, AfterViewInit {
   activeMenuSub: Subscription;
   showTitle: boolean;
   @ViewChild('sidebarTitle') sidebarTitle: ElementRef;
+  private browse_by_title: string = content.browse_projects.browse_by_title;
 
   /**
    * Constructs a SidebarComponent.

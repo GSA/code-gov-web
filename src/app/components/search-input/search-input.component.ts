@@ -20,6 +20,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { ClientService } from '../../services/client';
 
+import { content } from '../../../../config/code-gov-config.json';
+
 /**
  * Class representing a search component for repositories.
  */
@@ -37,7 +39,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() placeholder: string = 'Search Thousands of Projects...';
+  @Input() placeholder: string = content.home.banner.search_placeholder_text;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
   public autocompleteVisible: boolean = false;

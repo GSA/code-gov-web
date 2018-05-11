@@ -4,7 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { HelpWantedService } from '../../services/help-wanted';
 import { Option } from './help-wanted.option';
 
-import { images } from '../../../../config/code-gov-config.json';
+import { content, images } from '../../../../config/code-gov-config.json';
 
 @Component({
   selector: 'help-wanted',
@@ -13,6 +13,7 @@ import { images } from '../../../../config/code-gov-config.json';
 })
 
 export class HelpWantedComponent {
+  private content: any = content.help_wanted;
   private bannerImage;
   private items;
   private filteredItems;
