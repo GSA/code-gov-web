@@ -1,5 +1,5 @@
 # Configuration of code-gov-web
-code-gov-web is configurable.
+code-gov-web is configurable.  To set up your own site, you'll have to configure your `CNAME`, `code-gov-config.json`, and `privacy-policy.md`.  More details are below.
 
 # Domain
 If you want to host code-gov-web on your own domain, you'll have to change the CNAME file found at [code-gov-web/config/CNAME](https://github.com/GSA/code-gov-web/blob/master/config/CNAME)
@@ -71,7 +71,7 @@ You can also add a disclaimer that says you can't guarantee that features are ro
 ```
 
 # privacy policy
-coming soon
+In order to change the privacy policy that appears on the site, just edit [privacy-policy.md](https://github.com/GSA/code-gov-web/blob/master/src/app/components/privacy-policy/privacy-policy.md).  It's in markdown.  Here's a guide on how to write markdown: https://guides.github.com/features/mastering-markdown/.
 
 # more soon
 There's many other ways to customize code-gov-web.  More documentation coming soon!
