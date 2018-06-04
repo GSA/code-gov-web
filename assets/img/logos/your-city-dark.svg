@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40">
+  <title>your-city</title>
+  <text
+    fill="#485567"
+    x="0" y="30"
+    font-family="Verdana"
+    font-size="30"
+    font-weight="bold"
+  >Your City</text>
+</svg>
