@@ -36,77 +36,74 @@ Version 2.0.0 of the <a class="default-link" href="https://github.com/presidenti
 <ul>
 	<li><code>version</code>: [string] Code.gov’s version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org. For example "2.0.0."</li>
   <li><code>measurementType</code>: [object] An object containing description of the open source measurement method.
-  <ul>
-    <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
-
-    <ul>
-      	<li><code>cost</code>: Cost of software development.</li>
-        <li><code>systems</code>: System certification and accreditation boundaries.</li>
-        <li><code>projects</code>: A complete software solution / project.</li>
-		<li><code>modules</code>: A self-contained module from a software solution.</li>
-        <li><code>linesOfCode</code>: Source lines of code.</li>
-        <li><code>other</code>: Another measurement method not referenced above.</li>
-	</ul>
-
-    </li>
-    </ul>
-    <ul>
-    <li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>
-			</ul>
-  </li>
+	  <ul>
+	    <li><code>method</code>: [enum] An enumerated list of methods for measuring the open source requirement.
+				<ul>
+					<li><code>cost</code>: Cost of software development.</li>
+	        <li><code>systems</code>: System certification and accreditation boundaries.</li>
+	        <li><code>projects</code>: A complete software solution / project.</li>
+					<li><code>modules</code>: A self-contained module from a software solution.</li>
+	        <li><code>linesOfCode</code>: Source lines of code.</li>
+	        <li><code>other</code>: Another measurement method not referenced above.</li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li><code>ifOther</code>: [string] A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field.</li>
+		</ul>
+	</li>
 	<li><code>agency</code>: [string] The agency acronym for Clinger Cohen Act (CCA) agencies can be found through the <a class="default-link" href="https://cfo.gov/about/">CFO Act list</a>, as CCA references the CFO Act. For example "GSA" or "DOD." Please use uppercase letters.</li>
-	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.</li>
-	<ul>
-		<li>
-			<code>name</code>: [string] The name of the release.
-		</li>
-		<li>
-			<code>repositoryURL</code>: [string] The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions).
-		</li>
-		<li>
-			<code>description</code>: [string] A one- or two-sentence description of the release.
-		</li>
-
-    <li><code>permissions</code>: [object] An object containing description of the usage/restrictions regarding the release.
-  <ul>
-    <li>
-			<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. If not, <code>null</code> should be used.
-      <ul>
-        <li><code>URL</code>: [string] The URL of the release license, if available.</li>
-        <li><code>name</code>: [string] An abbreviation for the name of the license. For example, 'CC0' or 'MIT.'</li>
-      </ul>
-		</li>
-    <li><code>usageType</code>: [enum] A list of enumerated values which describes the usage permissions for the release.
-    <ul>
-      <li><code>openSource</code>: Open source</li>
-	  <li><code>governmentWideReuse</code>: Government-wide reuse.</li>
-      <li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
-       <li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
-       <li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
-       <li><code>exemptByAgencyMission</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
-       <li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
-       <li><code>exemptByPolicyDate</code>: The release was created prior to the M-16-21 policy (August 8, 2016).</li>
-	</ul>
-
-    </li>
-    </ul>
-    <ul>
-    <li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</li>
-			</ul>
-  </li>
-    <li>
-			<code>laborHours</code>: [number] An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
-		</li>
-		<li>
-			<code>tags</code>: [array] An array of keywords that will be helpful in discovering and searching for the release. For example: cms, feature, image processing, tool, integration, accessibility, 508, geospatial, map, etc.</li>
-		<li>
-			<code>contact</code>: [object] Information about contacting the release.
-			<ul>
-				<li><code>email</code>: [string] An email address to contact the release.</li>
-
-			</ul>
-		</li>
-	</ul>
+	<li><code>releases</code>: [array] Contains objects representing each versioned source code release made available.
+		<ul>
+			<li>
+				<code>name</code>: [string] The name of the release.
+			</li>
+			<li>
+				<code>repositoryURL</code>: [string] The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions).
+			</li>
+			<li>
+				<code>description</code>: [string] A one- or two-sentence description of the release.
+			</li>
+			<li><code>permissions</code>: [object] An object containing description of the usage/restrictions regarding the release.
+				<ul>
+					<li>
+						<code>licenses</code>: [<code>null</code> or array of objects] An object containing license details, if available. If not, <code>null</code> should be used.
+						<ul>
+							<li><code>URL</code>: [string] The URL of the release license, if available.</li>
+							<li><code>name</code>: [string] An abbreviation for the name of the license. For example, 'CC0' or 'MIT.'</li>
+						</ul>
+					</li>
+					<li><code>usageType</code>: [enum] A list of enumerated values which describes the usage permissions for the release.
+						<ul>
+							<li><code>openSource</code>: Open source</li>
+							<li><code>governmentWideReuse</code>: Government-wide reuse.</li>
+							<li><code>exemptByLaw</code>: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information.</li>
+							<li><code>exemptByNationalSecurity</code>: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy.</li>
+							<li><code>exemptByAgencySystem</code>: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel.</li>
+							<li><code>exemptByAgencyMission</code>: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations.</li>
+							<li><code>exemptByCIO</code>: The CIO believes it is in the national interest to exempt sharing the source code.</li>
+							<li><code>exemptByPolicyDate</code>: The release was created prior to the M-16-21 policy (August 8, 2016).</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li><code>exemptionText</code>: <code>null</code> or [string] If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used.</li>
+				</ul>
+			</li>
+			<li>
+				<code>laborHours</code>: [number] An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors.
+			</li>
+			<li>
+				<code>tags</code>: [array] An array of keywords that will be helpful in discovering and searching for the release. For example: cms, feature, image processing, tool, integration, accessibility, 508, geospatial, map, etc.
+			</li>
+			<li>
+				<code>contact</code>: [object] Information about contacting the release.
+				<ul>
+					<li><code>email</code>: [string] An email address to contact the release.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
 </ul>
 
 <h4>Optional</h4>
