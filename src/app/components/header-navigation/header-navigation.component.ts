@@ -9,6 +9,10 @@ import { toRouterLink, Link } from '../../utils/urls';
 
 import { content, title, twitter } from '../../../../config/code-gov-config.json';
 
+interface MenuOption {
+  links: Link[];
+}
+
 @Component({
   selector: 'header-navigation',
   styles: [require('./header-navigation.style.scss')],
@@ -17,7 +21,6 @@ import { content, title, twitter } from '../../../../config/code-gov-config.json
     '(window:scroll)': 'onScrollHandler($event)',
   },
 })
-
 export class HeaderNavigationComponent {
   searchQuery: string = '';
   isAtTop: boolean = true;
@@ -26,7 +29,7 @@ export class HeaderNavigationComponent {
   color: string = 'white';
   dropdownSearchBox: boolean = true;
   headerContent: any = content.header;
-  links: Link[];
+  menu: MenuOption[];
   twitterHandle: string = twitter.handle;
   title: string = title;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
@@ -39,9 +42,12 @@ export class HeaderNavigationComponent {
     this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(
       isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
 
-    this.links = content.header.links.map(link => {
-      link.routerLink = toRouterLink(link.url);
-      return link;
+    this.menu = content.header.menu.map(option => {
+      option.links.forEach(link => {
+        link.routerLink = toRouterLink(link.url);
+        return link;
+      });
+      return option;
     });
   }
 

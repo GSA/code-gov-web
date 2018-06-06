@@ -14,7 +14,7 @@
         "dark": "./assets/img/logos/code-gov-dark.svg",
         "light": "./assets/img/logos/code-gov-light.svg"
       },
-      "links": [
+      "menu": [
         {
           "name": "about",
           "links": [

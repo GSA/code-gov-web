@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { toRouterLink, Link } from '../../../utils/urls';
 import { content, title, twitter } from '../../../../../config/code-gov-config.json';
 
+interface MenuOption {
+  links: Link[];
+}
+
 @Component({
   selector: 'home-header-navigation',
   styles: [
@@ -21,13 +25,18 @@ export class HomeHeaderNavigationComponent {
   private twitterHandle: string = twitter.handle;
   private title: string = title;
   private headerContent: any = content.header;
-  private links: Link[];
+  private menu: MenuOption[];
 
   constructor() {
-    this.links = content.header.links.map(link => {
-      link.routerLink = toRouterLink(link.url);
-      return link;
+    this.menu = content.header.menu.map(option => {
+      console.log('option:', option);
+      option.links.forEach(link => {
+        link.routerLink = toRouterLink(link.url);
+        return link;
+      });
+      return option;
     });
+    console.log('this.menu:', this.menu);
   }
 
   /**
@@ -38,5 +47,9 @@ export class HomeHeaderNavigationComponent {
   onScrollHandler($event) {
     const top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     this.isAtTop = top === 0;
+  }
+
+  onClickMenuOption($event) {
+    console.log("onClickMenuOption");
   }
 }

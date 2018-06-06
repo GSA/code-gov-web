@@ -8,20 +8,25 @@
 
   <ul>
 
-    <li *ngFor="let link of links">
-      <a
-        *ngIf="link.routerLink"
-        class="link"
-        [textContent]="link.name"
-        [routerLink]="link.routerLink"
-        routerLinkActive="active"
-      ></a>
-      <a
-        *ngIf="!link.routerLink"
-        class="link"
-        [textContent]="link.name"
-        [href]="link.url"
-      ></a>
+    <li *ngFor="let menuOption of menu">
+
+      <div [textContent]="menuOption.name" (click)="onClickMenuOption()"></div>
+
+      <ul *ngIf="menuOption.links && menuOption.links.length > 0">
+        <li *ngFor="let link of menuOption.links">
+          <a
+            *ngIf="link.routerLink"
+            [routerLink]="menuOption.routerLink"
+            [textContent]="menuOption.name"
+          ></a>
+          <a
+            *ngIf="!link.routerLink"
+            [href]="menuOption.url"
+            [textContent]="menuOption.name"
+          ></a>
+        </li>
+      </ul>
+
     </li>
 
   </ul>
