@@ -35,8 +35,8 @@
   <div class="agency-details">
     <img alt="" [src]="item.image" *ngIf="item.image"/>
     <span
-      *ngIf="item?.agency?.name"
+      *ngIf="item?.agency_id"
       class="help-wanted-agency-name"
-    >{{item?.agency?.name}}</span>
+    >{{item?.agency_id}}</span>
   </div>
 </div>
