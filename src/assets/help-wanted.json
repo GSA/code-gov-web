@@ -575,26 +575,6 @@
     },
     {
       "id": 30,
-      "title": "Help Wanted page agency name missing next to agency logo",
-      "description": "Agency name should be displayed next to agency logo",
-      "updated": "2018-03-07",
-      "languages": [
-        "CSS",
-        "HTML",
-        "JavaScript"
-      ],
-      "skill": "Beginner",
-      "effort": "Small",
-      "type": "Enhancement",
-      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
-      "issueURL": "https://github.com/GSA/code-gov-web/issues/493",
-      "featured": true,
-      "popular": true,
-      "agency_id": "GSA",
-      "license": "CC0-1.0"
-    },
-    {
-      "id": 31,
       "title": "Update for Quarry release",
       "description": "Update SDK for DOL's v2 API",
       "updated": "2015-03-31",
