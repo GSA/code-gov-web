@@ -10,6 +10,7 @@
   },
   "content": {
     "header": {
+      "fork_me_url": "https://github.com/GSA/code-gov-web",
       "logos": {
         "dark": "./assets/img/logos/code-gov-dark.svg",
         "light": "./assets/img/logos/code-gov-light.svg"
@@ -18,16 +19,16 @@
         {
           "name": "about",
           "links": [
-            { "name": "code.gov", "url": "#" },
-            { "name": "Source Code Policy", "url": "/policy-guide/docs/overview/introduction" },
-            { "name": "Open Source Pilot", "url": "/policy-guide/docs/open-source/introduction" }
+            { "name": "code.gov", "url": "/#" },
+            { "name": "Source Code Policy", "url": "/#/policy-guide/docs/overview/introduction" },
+            { "name": "Open Source Pilot", "url": "/#/policy-guide/docs/open-source/introduction" }
           ]
         },
         {
           "name": "federal agencies",
           "links": [
-            { "name": "Tools", "url": "/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
-            { "name": "Compliance Dashboard", "url": "/policy-guide/docs/compliance/dashboard"}
+            { "name": "Tools", "url": "/#/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
+            { "name": "Compliance Dashboard", "url": "/#/policy-guide/docs/compliance/dashboard"}
           ]
         },
         {

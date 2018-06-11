@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { toRouterLink, Link } from '../../../utils/urls';
-import { content, title, twitter } from '../../../../../config/code-gov-config.json';
+import { content, title } from '../../../../../config/code-gov-config.json';
 
 interface MenuOption {
   links: Link[];
@@ -22,21 +22,21 @@ export class HomeHeaderNavigationComponent {
   private isAtTop: boolean = true;
   private color: string = 'dark transparent';
   private dropdownSearchBox: boolean = false;
-  private twitterHandle: string = twitter.handle;
   private title: string = title;
   private headerContent: any = content.header;
   private menu: MenuOption[];
+  private expanded: boolean = false;
+  private height: string = '';
+  private forkMeUrl: boolean = content.header.fork_me_url;
 
   constructor() {
     this.menu = content.header.menu.map(option => {
-      console.log('option:', option);
       option.links.forEach(link => {
         link.routerLink = toRouterLink(link.url);
-        return link;
       });
+      option.expanded = false;
       return option;
     });
-    console.log('this.menu:', this.menu);
   }
 
   /**
@@ -49,7 +49,44 @@ export class HomeHeaderNavigationComponent {
     this.isAtTop = top === 0;
   }
 
-  onClickMenuOption($event) {
+  onClickMenuOption(selected, event) {
     console.log("onClickMenuOption");
+    // make sure to close all other menuOptions
+    this.menu.forEach(menuOption => {
+      if (menuOption != selected) {
+        menuOption.expanded = false;
+      }
+    });
+
+    selected.expanded = !selected.expanded;
+    console.log('selected:', selected);
+
+    this.expanded = this.menu.filter(option => option.expanded).length > 0;
+
+    this.updateMenuSize(event);
+  }
+
+  updateMenuSize(event) {
+    if (this.expanded) {
+      let nav = document.querySelector("header.main nav.main");
+      console.log("nav:", nav);
+      let padding = 2 * Number(window.getComputedStyle(nav).padding.split(" ")[1].replace("px",""));
+      console.log("padding:", padding);
+      let navHeight = nav.querySelector("ul").clientHeight;
+      console.log("navHeight:", navHeight;)
+      let selectedSubMenu = event.target.nextElementSibling
+      console.log("target:", selectedSubMenu);
+
+      // need to directly add the class even though Angular will take care of it
+      // because it needs to be done synchronously before getting height from
+      // menu when it appears
+      let li = event.target.parentElement;
+      li.className = 'expanded';
+      let dropdownHeight = selectedSubMenu.clientHeight;
+      console.log("dropdownHeight", dropdownHeight);
+      this.height = padding + navHeight + dropdownHeight;
+    } else {
+      this.height = null;
+    }
   }
 }
