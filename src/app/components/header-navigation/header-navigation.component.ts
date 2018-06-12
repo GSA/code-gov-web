@@ -45,10 +45,14 @@ export class HeaderNavigationComponent {
       isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
 
     this.menu = content.header.menu.map(option => {
-      option.links.forEach(link => {
-        link.routerLink = toRouterLink(link.url);
-      });
-      option.expanded = false;
+      if (option.links) {
+        option.links.forEach(link => {
+          link.routerLink = toRouterLink(link.url);
+        });
+        option.expanded = false;
+      } else if (option.url) {
+        option.routerLink = toRouterLink(option.url);
+      }
       return option;
     });
   }
