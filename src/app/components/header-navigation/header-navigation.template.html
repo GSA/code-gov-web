@@ -15,13 +15,13 @@
       <ul *ngIf="menuOption.links && menuOption.links.length > 0">
         <li *ngFor="let link of menuOption.links">
           <a
-            *ngIf="link.routerLink"
+            *ngIf="link.routerLink !== null && link.routerLink !== undefined"
             [routerLink]="link.routerLink"
             [textContent]="link.name"
             (click)="closeAllMenus()"
           ></a>
           <a
-            *ngIf="!link.routerLink"
+            *ngIf="link.routerLink === null || link.routerLink === undefined"
             [href]="link.url"
             [textContent]="link.name"
             target="_blank"

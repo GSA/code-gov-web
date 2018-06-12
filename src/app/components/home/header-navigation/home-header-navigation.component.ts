@@ -4,6 +4,7 @@ import { content, title } from '../../../../../config/code-gov-config.json';
 
 interface MenuOption {
   links: Link[];
+  expanded?: boolean;
 }
 
 @Component({
@@ -50,16 +51,14 @@ export class HomeHeaderNavigationComponent {
   }
 
   onClickMenuOption(selected, event) {
-    console.log("onClickMenuOption");
     // make sure to close all other menuOptions
     this.menu.forEach(menuOption => {
-      if (menuOption != selected) {
+      if (menuOption !== selected) {
         menuOption.expanded = false;
       }
     });
 
     selected.expanded = !selected.expanded;
-    console.log('selected:', selected);
 
     this.expanded = this.menu.filter(option => option.expanded).length > 0;
 
@@ -68,14 +67,10 @@ export class HomeHeaderNavigationComponent {
 
   updateMenuSize(event) {
     if (this.expanded) {
-      let nav = document.querySelector("header.main nav.main");
-      console.log("nav:", nav);
-      let padding = 2 * Number(window.getComputedStyle(nav).padding.split(" ")[1].replace("px",""));
-      console.log("padding:", padding);
-      let navHeight = nav.querySelector("ul").clientHeight;
-      console.log("navHeight:", navHeight;)
-      let selectedSubMenu = event.target.nextElementSibling
-      console.log("target:", selectedSubMenu);
+      let nav = document.querySelector('header.main nav.main');
+      let padding = 2 * Number(window.getComputedStyle(nav).padding.split(' ')[1].replace('px', ''));
+      let navHeight = nav.querySelector('ul').clientHeight;
+      let selectedSubMenu = event.target.nextElementSibling;
 
       // need to directly add the class even though Angular will take care of it
       // because it needs to be done synchronously before getting height from
@@ -83,7 +78,6 @@ export class HomeHeaderNavigationComponent {
       let li = event.target.parentElement;
       li.className = 'expanded';
       let dropdownHeight = selectedSubMenu.clientHeight;
-      console.log("dropdownHeight", dropdownHeight);
       this.height = padding + navHeight + dropdownHeight;
     } else {
       this.height = null;
