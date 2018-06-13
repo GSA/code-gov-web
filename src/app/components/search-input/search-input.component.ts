@@ -39,6 +39,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
+  @Input() description: string = window.innerWidth > 500 ? content.home.banner.search_description_text : content.home.banner.search_description_text_mobile;
   @Input() placeholder: string = content.home.banner.search_placeholder_text;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;

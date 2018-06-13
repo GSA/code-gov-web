@@ -58,8 +58,10 @@
       "banner": {
         "motto": "Sharing America's Code",
         "subtitle": "Unlock the tremendous potential of the Federal Government’s software.",
-        "help_wanted_description": "Discover how you can get involved and make America's code better",
-        "search_placeholder_text": "Search Thousands of Projects...",
+        "help_wanted_description": "Join the community to help make America's Code better. Get involved by fixing bugs and building new features.",
+        "search_description_text": "Search thousands of Federal Government projects",
+        "search_description_text_mobile": "Search projects",
+        "search_placeholder_text": "e.g. JavaScript, NASA, web standards",
         "browse_by_text": "Browse by Agency"
       },
       "mission": "Code.gov leverages the power of code sharing and collaboration to help the US Government cut down on duplicative software development and save millions of taxpayer dollars for the American people.",

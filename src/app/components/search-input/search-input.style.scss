@@ -14,6 +14,20 @@
     }
   }
 
+  .search-description-wrapper {
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (min-width: $small-screen) {
+      margin: 0 auto;
+      width: 85%;
+    }
+
+    > div {
+      text-align: left;
+    }
+  }
+
   input[type=search] {
     width: 100%;
 
@@ -24,5 +38,5 @@
 
   .icon-search {
     color: black;
-  }  
+  }
 }
