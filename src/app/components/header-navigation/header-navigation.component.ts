@@ -152,7 +152,10 @@ export class HeaderNavigationComponent {
   updateMenuSize(event) {
     if (this.expanded) {
       let nav = document.querySelector('header.main nav.main');
-      let padding = 2 * Number(window.getComputedStyle(nav).padding.split(' ')[1].replace('px', ''));
+      let computedStyle = window.getComputedStyle(nav);
+      let paddingTop = Number(computedStyle['padding-top'].replace('px', ''));
+      let paddingBottom = Number(computedStyle['padding-bottom'].replace('px', ''));
+      let padding = paddingTop + paddingBottom;
       let navHeight = nav.querySelector('ul').clientHeight;
       let selectedSubMenu = event.target.nextElementSibling;
 
