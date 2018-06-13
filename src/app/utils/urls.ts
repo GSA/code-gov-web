@@ -2,7 +2,12 @@ export function toAbsoluteUrl(url: string): string {
   if (url.startsWith('http')) {
     return url;
   } else if (url.startsWith('/assets')) {
-    return document.head.baseURI.replace(/\/$/, '') + url;
+    let baseURI = document.head.baseURI;
+    if (baseURI === undefined) {
+      let base = document.querySelector('base');
+      baseURI = base ? base.href : document.URL;
+    }
+    return baseURI.replace(/\/$/, '') + url;
   }
   return url;
 }
