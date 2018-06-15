@@ -1,4 +1,4 @@
-<nav class="main {{color}}" [ngClass]="{'not-at-top': !isAtTop}">
+<nav class="main {{color}}" [ngClass]="{'not-at-top': !isAtTop, 'expanded': expanded}" [ngStyle]="{'height.px': height}">
 
   <mobile-menu-button></mobile-menu-button>
 
@@ -8,20 +8,43 @@
 
   <ul>
 
-    <li *ngFor="let link of links">
+    <li *ngFor="let menuOption of menu" [class]="menuOption.expanded ? 'expanded' : ''">
+
       <a
-        *ngIf="link.routerLink"
-        class="link"
-        [textContent]="link.name"
-        [routerLink]="link.routerLink"
-        routerLinkActive="active"
+        *ngIf="menuOption.routerLink !== null && menuOption.routerLink !== undefined"
+        [routerLink]="menuOption.routerLink"
+        [textContent]="menuOption.name"
+        (click)="closeAllMenus()"
       ></a>
+
       <a
-        *ngIf="!link.routerLink"
-        class="link"
-        [textContent]="link.name"
-        [href]="link.url"
+        *ngIf="(menuOption.routerLink === null || menuOption.routerLink === undefined) && (menuOption.url !== null && menuOption.url !== undefined)"
+        [href]="menuOption.url"
+        [textContent]="menuOption.name"
+        target="_blank"
+        (click)="closeAllMenus()"
       ></a>
+
+      <div *ngIf="!menuOption.url" [textContent]="menuOption.name" (click)="onClickMenuOption(menuOption, $event)"></div>
+
+      <ul *ngIf="menuOption.links && menuOption.links.length > 0">
+        <li *ngFor="let link of menuOption.links">
+          <a
+            *ngIf="link.routerLink !== null && link.routerLink !== undefined"
+            [routerLink]="link.routerLink"
+            [textContent]="link.name"
+            (click)="closeAllMenus()"
+          ></a>
+          <a
+            *ngIf="link.routerLink === null || link.routerLink === undefined"
+            [href]="link.url"
+            [textContent]="link.name"
+            target="_blank"
+            (click)="closeAllMenus()"
+          ></a>
+        </li>
+      </ul>
+
     </li>
 
   </ul>
@@ -29,16 +52,47 @@
   <ul class="right">
     <li *ngIf="dropdownSearchBox">
       <a class="no-underline" (click)="toggleSearchBox()">
-        <i class="icon icon-search"></i>
-      </a>
-    </li>
-    <li *ngIf="twitterHandle">
-      <a class="no-underline" href="https://twitter.com/{{twitterHandle}}" title="Follow us on Twitter">
-        <span *ngIf="!dropdownSearchBox" class="follow-us">Follow Us</span>
-        <i class="icon icon-twitter"></i>
+        <i class="icon icon-search" (click)="closeAllMenus()"></i>
       </a>
     </li>
   </ul>
+
+  <svg
+    *ngIf="forkMeUrl"  
+    class="fork_me"
+    version="1.2"
+    baseProfile="full"
+    width="250px"
+    height="250px"
+    style="position:fixed; top:0; right:0;"
+    fill="blue"
+    xmlns="http://www.w3.org/2000/svg"
+    >
+
+    <filter id="blur-shadow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+
+    <a [attr.href]="forkMeUrl" target="_blank">
+      <rect width="200%" height="33" y="-100" style="fill:rgb(35, 192, 186); transform:rotate(45deg);" filter="url(#blur-shadow)"></rect>
+
+      <line xmlns="http://www.w3.org/2000/svg" x1="0" x2="1000%" y1="-97" y2="-97" style="stroke:white;stroke-width:2;transform:rotate(45deg);opacity:0.6;" stroke-dasharray="3, 2"/>
+
+      <line xmlns="http://www.w3.org/2000/svg" x1="0" x2="1000%" y1="-70" y2="-70" style="stroke:white;stroke-width:2;transform:rotate(45deg);opacity:0.6;" stroke-dasharray="3, 2"/>
+
+      <text
+        xmlns="http://www.w3.org/2000/svg"
+        x="45%"
+        y="-77"
+        font-family="Helvetica"
+        font-size="15"
+        fill="white"
+        text-decoration="none"
+        transform="rotate(45)"
+      >Fork me on Github</text>
+    </a>
+
+  </svg>
 
 </nav>
 

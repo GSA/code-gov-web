@@ -7,7 +7,12 @@ import { SearchInputComponent } from '../search-input';
 
 import { toRouterLink, Link } from '../../utils/urls';
 
-import { content, title, twitter } from '../../../../config/code-gov-config.json';
+import { content, title } from '../../../../config/code-gov-config.json';
+
+interface MenuOption {
+  links: Link[];
+  expanded?: boolean;
+}
 
 @Component({
   selector: 'header-navigation',
@@ -17,7 +22,6 @@ import { content, title, twitter } from '../../../../config/code-gov-config.json
     '(window:scroll)': 'onScrollHandler($event)',
   },
 })
-
 export class HeaderNavigationComponent {
   searchQuery: string = '';
   isAtTop: boolean = true;
@@ -26,8 +30,9 @@ export class HeaderNavigationComponent {
   color: string = 'white';
   dropdownSearchBox: boolean = true;
   headerContent: any = content.header;
-  links: Link[];
-  twitterHandle: string = twitter.handle;
+  menu: MenuOption[];
+  expanded: boolean = false;
+  height: string = '';
   title: string = title;
   @ViewChild(SearchInputComponent) child: SearchInputComponent;
 
@@ -39,9 +44,16 @@ export class HeaderNavigationComponent {
     this.searchBoxActiveSubscription = this.mobileService.activeSearchBox$.subscribe(
       isSearchBoxShown => this.isSearchBoxShown = isSearchBoxShown);
 
-    this.links = content.header.links.map(link => {
-      link.routerLink = toRouterLink(link.url);
-      return link;
+    this.menu = content.header.menu.map(option => {
+      if (option.links) {
+        option.links.forEach(link => {
+          link.routerLink = toRouterLink(link.url);
+        });
+        option.expanded = false;
+      } else if (option.url) {
+        option.routerLink = toRouterLink(option.url);
+      }
+      return option;
     });
   }
 
@@ -112,4 +124,54 @@ export class HeaderNavigationComponent {
       this.showSearchBox();
     }
   }
+
+  closeAllMenus() {
+    this.expanded = false;
+    this.menu.forEach(menuOption => {
+      menuOption.expanded = false;
+    });
+    this.height = null;
+  }
+
+  onClickMenuOption(selected, event) {
+
+    // make sure to close all other menuOptions
+    this.menu.forEach(menuOption => {
+      if (menuOption !== selected) {
+        menuOption.expanded = false;
+      }
+    });
+
+    selected.expanded = !selected.expanded;
+
+    this.expanded = this.menu.filter(option => option.expanded).length > 0;
+
+    this.updateMenuSize(event);
+  }
+
+  updateMenuSize(event) {
+    if (this.expanded) {
+      let nav = document.querySelector('header.main nav.main');
+      let computedStyle = window.getComputedStyle(nav);
+      let paddingTop = Number(computedStyle['padding-top'].replace('px', ''));
+      let paddingBottom = Number(computedStyle['padding-bottom'].replace('px', ''));
+      let padding = paddingTop + paddingBottom;
+      let navHeight = nav.querySelector('ul').clientHeight;
+      let selectedSubMenu = event.target.nextElementSibling;
+
+      // need to directly add the class even though Angular will take care of it
+      // because it needs to be done synchronously before getting height from
+      // menu when it appears
+      let li = event.target.parentElement;
+      li.className = 'expanded';
+      let dropdownHeight = selectedSubMenu.clientHeight;
+      this.height = padding + navHeight + dropdownHeight;
+    } else {
+      this.height = null;
+    }
+  }
+
+
+
+
 }

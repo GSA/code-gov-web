@@ -10,15 +10,48 @@
   },
   "content": {
     "header": {
+      "fork_me_url": "https://github.com/GSA/code-gov-web",
       "logos": {
         "dark": "./assets/img/logos/code-gov-dark.svg",
         "light": "./assets/img/logos/code-gov-light.svg"
       },
-      "links": [
-        { "name": "Browse Projects", "url": "/#/explore-code" },
-        { "name": "Help Wanted", "url": "/#/help-wanted" },
-        { "name": "Policy Info", "url": "/#/policy-guide" },
-        { "name": "Roadmap", "url": "/#/roadmap" }
+      "menu": [
+        {
+          "name": "about",
+          "links": [
+            { "name": "Source Code Policy", "url": "/#/policy-guide/docs/overview/introduction" },
+            { "name": "Open Source Pilot", "url": "/#/policy-guide/docs/open-source/introduction" }
+          ]
+        },
+        {
+          "name": "Browse Projects",
+          "url": "/#/explore-code/agencies/NASA"
+        },
+        {
+          "name": "federal agencies",
+          "links": [
+            { "name": "Tools", "url": "/#/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
+            { "name": "Compliance Dashboard", "url": "/#/policy-guide/docs/compliance/dashboard"}
+          ]
+        },
+        {
+          "name": "developers",
+          "links": [
+            { "name": "code.gov API", "url": "https://developers.code.gov/basics.html" },
+            { "name": "Contribute", "url": "/#/help-wanted" },
+            { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" }
+          ]
+        },
+        {
+          "name": "community",
+          "links": [
+            { "name": "code.gov Repo", "url": "http://github.com/GSA/code-gov-web" },
+            { "name": "Blog", "url": "https://medium.com/codedotgov" },
+            { "name": "LinkedIn", "url": "https://www.linkedin.com/company/code-gov" },
+            { "name": "Twitter", "url": "https://twitter.com/codedotgov" },
+            { "name": "Contact Us", "url": "mailto:code@gsa.gov" }
+          ]
+        }
       ]
     },
     "home": {
@@ -137,7 +170,7 @@
       ]
     },
     "browse_projects": {
-      "browse_by_text": "Browse by Agency"      
+      "browse_by_text": "Browse by Agency"
     },
     "help_wanted": {
       "title": "Help Wanted",
