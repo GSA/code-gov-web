@@ -4,32 +4,36 @@
 
   &.large {
 
-    .banner-subsection {
-      height: 14rem;
-      @media screen and (min-width: $medium-screen) {
-        height: 17rem;
-      }
-      .banner-subsection-content {
-        @include center-vertically();
+    .banner-content {
 
-        .buttons {
-          padding-top: 7px;
+      padding-top: 60px;
+
+      .banner-subsection {
+        height: 14rem;
+        @media screen and (min-width: $medium-screen) {
+          height: 17rem;
+        }
+        .banner-subsection-content {
+          @include center-vertically();
+
+          .buttons {
+            padding-top: 7px;
+          }
+        }
+      }
+
+      //div between Search and Help Wanted
+      .vertical-row {
+        @media screen and (min-width: $medium-screen) {
+          display: inline-block;
+          height: 17rem;
+          width: 3px;
+          background: $color-white;
+          position: relative;
         }
       }
     }
-
-    //div between Search and Help Wanted
-    .vertical-row {
-      @media screen and (min-width: $medium-screen) {
-        display: inline-block;
-        height: 17rem;
-        width: 3px;
-        background: $color-white;
-        position: relative;
-      }
-    }
   }
-
 }
 
 
@@ -636,4 +640,10 @@
     color: $color-white;
     vertical-align: middle;
   }
+}
+
+
+img.chat {
+  height: 30px;
+  vertical-align: middle;
 }

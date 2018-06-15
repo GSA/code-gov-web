@@ -16,11 +16,12 @@
 
   .search-description-wrapper {
     margin: 0 auto;
+    text-align: left;
     width: 100%;
 
     @media screen and (min-width: $small-screen) {
       margin: 0 auto;
-      width: 85%;
+      width: 90%;
     }
 
     > div {
@@ -28,11 +29,17 @@
     }
   }
 
-  input[type=search] {
+  .search-input-and-button-wrapper {
+    margin: 0 auto;
+    text-align: left;
     width: 100%;
 
     @media screen and (min-width: $small-screen) {
-      width: 85%;
+      width: 90%;
+    }
+
+    input {
+      width: 80%;
     }
   }
 

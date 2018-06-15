@@ -58,7 +58,7 @@
   </ul>
 
   <svg
-    *ngIf="forkMeUrl"  
+    *ngIf="forkMeUrl"
     class="fork_me"
     version="1.2"
     baseProfile="full"
@@ -106,8 +106,11 @@
     <search-input
         name="searchQuery"
         placeholder="Search Projects..."
+        description=""
         [(queryValue)]="searchQuery"
-        ngDefaultControl>
+        ngDefaultControl
+        include_button=false
+        >
     </search-input>
   </form>
 </div>

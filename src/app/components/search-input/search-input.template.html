@@ -1,20 +1,23 @@
 <div class="search-input-wrapper" #searchInput>
-  <div class="search-description-wrapper">
+  <div *ngIf="description" class="search-description-wrapper">
     <div [textContent]="description"></div>
   </div>
-  <input
-      #query
-      [name]="name"
-      title="Search Code.gov"
-      type="search"
-      required
-      class="form-control no-search-icon-on-mobile"
-      [ngModel]="queryValue"
-      (ngModelChange)="change($event)"
-      (focus)="showAutocomplete()"
-      (keyup)="onKey($event)"
-      [placeholder]="placeholder"
-      autocomplete="off" />
+  <div class="search-input-and-button-wrapper">
+    <input
+        #query
+        [name]="name"
+        title="Search Code.gov"
+        type="search"
+        required
+        class="form-control no-search-icon-on-mobile"
+        [ngModel]="queryValue"
+        (ngModelChange)="change($event)"
+        (focus)="showAutocomplete()"
+        (keyup)="onKey($event)"
+        [placeholder]="placeholder"
+        autocomplete="off" />
+    <button class="go">Go</button>
+  </div>
   <div *ngIf="hasQuery() && autocompleteVisible" class="autocomplete-container">
     <autocomplete
         [termResultsObservable]="termResultsObservable"

@@ -3,9 +3,12 @@
 .browse {
   margin-bottom: 4.5rem;
   margin-top: 0.7rem;
+  padding-right: 40px; /* the size of the Go button */
+  text-align: center;
 
-  @media screen and (min-width: $small-screen) {
-    display: none;
+  a {
+    color: $brand-teal !important;
+    text-align: center;
   }
 }
 
@@ -90,7 +93,7 @@ button {
 
   @media screen and (min-width: $small-screen) {
     @include width-whole();
-    margin-right: 0;    
+    margin-right: 0;
   }
 }
 
