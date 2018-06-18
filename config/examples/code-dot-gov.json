@@ -58,7 +58,11 @@
       "banner": {
         "motto": "Sharing America's Code",
         "subtitle": "Unlock the tremendous potential of the Federal Government’s software.",
-        "help_wanted_description": "Join the community to help make America's Code better. Get involved by fixing bugs and building new features.",
+        "help_wanted": {
+          "title": "Ready. Set. Code!",
+          "description": "Whether you are a beginner or an experienced coder, join the open source community. Help improve America's Code.",
+          "button": "Explore Open Task"
+        },
         "search_description_text": "Search thousands of Federal Government projects",
         "search_description_text_mobile": "Search projects",
         "search_placeholder_text": "e.g. JavaScript, NASA, web standards",
