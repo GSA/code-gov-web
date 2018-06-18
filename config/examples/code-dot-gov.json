@@ -66,7 +66,8 @@
         "search_description_text": "Search thousands of Federal Government projects",
         "search_description_text_mobile": "Search projects",
         "search_placeholder_text": "e.g. JavaScript, NASA, web standards",
-        "browse_by_text": "Browse by Agency"
+        "browse_by_text": "Browse by Agency",
+        "issue_url": "https://github.com/GSA/code-gov-web/issues"
       },
       "mission": "Code.gov leverages the power of code sharing and collaboration to help the US Government cut down on duplicative software development and save millions of taxpayer dollars for the American people.",
       "about": [
