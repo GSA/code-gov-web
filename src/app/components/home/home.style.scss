@@ -619,26 +619,38 @@
   bottom: 1rem;
   color: $color-white;
   font-size: 3em;
-  height: 4rem;
+  height: 2rem;
   overflow: hidden;
   position: absolute;
   text-decoration: none;
+  width: 100%;
+  
+  &:hover {
+    i {
+      color: $brand-teal;
+    }
+  }
 
   @media screen and (min-width: $small-screen) {
     font-size: 6em;
-    height: 6rem;
+    height: 2rem;
     padding-bottom: 10em;
   }
 
   @media screen and (min-width: $medium-screen) {
     font-size: 8em;
-    height: 7rem;
-    padding-bottom: 12rem;
+    height: 3rem;
+    padding-bottom: 4rem;
   }
 
   i {
     color: $color-white;
-    vertical-align: middle;
+    line-height: 1rem;
+    vertical-align: top;
+    
+    &::before {
+      line-height: 1rem;
+    }
   }
 }
 
@@ -646,4 +658,17 @@
 img.chat {
   height: 30px;
   vertical-align: middle;
+}
+
+
+#issue-banner-subsection-subtitle {
+  max-width: 100%;
+  width: 100%;
+}
+
+#issue-link {
+  color: $brand-teal;
+  &:hover {
+    text-decoration: none;
+  }
 }
