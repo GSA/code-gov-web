@@ -5,16 +5,20 @@
     <div class="indented">
       <div class="banner-subsection width-half" [style.z-index]="30">
         <div class="banner-subsection-content">
-          <repos-search autofocus=true buttonClasses="alt"></repos-search>
+          <div class="banner-subsection-content-padder">
+            <repos-search autofocus=true buttonClasses="alt"></repos-search>
+          </div>
         </div>
       </div>
       <div class="vertical-row" *ngIf="content.home.banner.help_wanted?.title || content.home.banner.help_wanted?.description"></div>
       <div class="banner-subsection width-half">
         <div class="banner-subsection-content">
-          <div class="banner-subsection-title" *ngIf="content.home.banner.help_wanted.title">{{content.home.banner.help_wanted.title}}</div>
-          <div class="banner-subsection-subtitle" *ngIf="content.home.banner.help_wanted.description">{{content.home.banner.help_wanted.description}}</div>
-          <div class="buttons" *ngIf="content.home.banner.help_wanted.button">
-              <button class="alt" routerLink="/help-wanted" [textContent]="content.home.banner.help_wanted.button"></button>
+          <div class="banner-subsection-content-padder">
+            <div class="banner-subsection-title" *ngIf="content.home.banner.help_wanted.title">{{content.home.banner.help_wanted.title}}</div>
+            <div class="banner-subsection-subtitle" *ngIf="content.home.banner.help_wanted.description">{{content.home.banner.help_wanted.description}}</div>
+            <div class="buttons" *ngIf="content.home.banner.help_wanted.button">
+                <button class="alt" routerLink="/help-wanted" [textContent]="content.home.banner.help_wanted.button"></button>
+            </div>
           </div>
         </div>
       </div>

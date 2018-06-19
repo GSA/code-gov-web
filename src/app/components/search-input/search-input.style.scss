@@ -19,11 +19,6 @@
     text-align: left;
     width: 100%;
 
-    @media screen and (min-width: $small-screen) {
-      margin: 0 auto;
-      width: 90%;
-    }
-
     > div {
       text-align: left;
     }
@@ -34,12 +29,13 @@
     text-align: left;
     width: 100%;
 
-    @media screen and (min-width: $small-screen) {
-      width: 90%;
+    input {
+      /* 100% minus width of the button */
+      width: calc(100% - 40px);
     }
 
-    input {
-      width: 80%;
+    button.go {
+      margin-right: 0;
     }
   }
 
