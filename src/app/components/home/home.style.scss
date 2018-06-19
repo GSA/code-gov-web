@@ -8,11 +8,29 @@
 
       padding-top: 60px;
 
+      /* adds some additional spacing between sections */
+      .indented {
+        @media screen and (max-width: $medium-screen) {
+          margin-top: 5rem;
+        }
+        @media screen and (min-width: $medium-screen) {
+          margin-top: 10rem;
+        }
+      }
+
+      .banner-subtitle {
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
+      }
+
       .banner-subsection {
         height: 14rem;
+
         @media screen and (min-width: $medium-screen) {
           height: 17rem;
         }
+
         .banner-subsection-content {
           @include center-vertically();
 
@@ -22,6 +40,13 @@
             }
           }
         }
+
+        @media screen and (max-width: $medium-screen) {
+          &#banner-subsection-engage {
+            display: none;
+          }
+        }
+
 
         @media screen and (min-width: 1200px) {
           &:first-child {
@@ -69,7 +94,7 @@
       margin-top: -3rem;
     }
 
-//start here
+    //start here
     //set to 599px
     @media screen and (max-width: $medium-screen) {
       display: none;
@@ -489,64 +514,6 @@
     margin-left: 10px;
   }
 }
-
-/*
-.wntr {
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/pipes4.png');
-      background-position: 0% 50%;
-      background-repeat: no-repeat;
-      background-size: 50%;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-size: 30%;
-    }
-
-  }
-
-
-}
-
-.its-ode {
-
-
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background-image: url('./assets/img/featured-projects/smartcity4.png');
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position: 100% 50%;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-size: 30%;
-    }
-
-
-  }
-
-}
-
-
-
-.walkoff {
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background-image: url('./assets/img/featured-projects/WALKOFF.png');
-      background-repeat: no-repeat;
-      background-size: 25rem;
-      background-position: 25% 50%;
-    }
-  }
-
-}
-*/
-
 
 .press {
   background-attachment: scroll;
