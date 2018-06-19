@@ -16,8 +16,24 @@
         .banner-subsection-content {
           @include center-vertically();
 
-          .buttons {
-            padding-top: 7px;
+          .banner-subsection-content-padder {
+            .buttons {
+              padding-top: 7px;
+            }
+          }
+        }
+
+        @media screen and (min-width: 1200px) {
+          &:first-child {
+            .banner-subsection-content-padder {
+              padding-right: 80px;
+            }
+          }
+
+          &:last-child {
+            .banner-subsection-content-padder {
+              padding-left: 80px;
+            }
           }
         }
       }
