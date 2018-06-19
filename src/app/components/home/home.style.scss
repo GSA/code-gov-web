@@ -379,6 +379,12 @@
         @media screen and (min-width: $small-screen) {
           text-align: left;
         }
+
+        span {
+          a {
+            text-decoration: none;
+          }
+        }
       }
 
       button {
@@ -442,16 +448,6 @@
           }
           .fp-developed-by {
             color: darkgray;
-          }
-
-          button {
-            border-color: $color-gray-dark;
-            color: $color-gray-dark;
-
-            &:focus, &:hover {
-              border-color: $brand-teal;
-              color: $color-white;
-            }
           }
         }
       }
@@ -624,7 +620,7 @@
   position: absolute;
   text-decoration: none;
   width: 100%;
-  
+
   &:hover {
     i {
       color: $brand-teal;
@@ -647,7 +643,7 @@
     color: $color-white;
     line-height: 1rem;
     vertical-align: top;
-    
+
     &::before {
       line-height: 1rem;
     }
