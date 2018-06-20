@@ -20,10 +20,6 @@
 
     > div {
       text-align: left;
-
-      @media screen and (max-width: $medium-screen) {
-        text-align: center;
-      }
     }
   }
 
