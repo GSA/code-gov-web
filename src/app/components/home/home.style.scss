@@ -579,60 +579,6 @@
   }
 }
 
-@keyframes bounce {
-	0%, 6%, 15%, 20%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-	12% {
-    transform: translateX(-50%) translateY(-30px);
-  }
-
-	18% {
-    transform: translateX(-50%) translateY(-15px);
-  }
-}
-
-.scroll-indicator {
-  animation: 6s linear bounce infinite;
-  bottom: 1rem;
-  color: $color-white;
-  font-size: 3em;
-  height: 2rem;
-  overflow: hidden;
-  position: absolute;
-  text-decoration: none;
-  width: 100%;
-
-  &:hover {
-    i {
-      color: $brand-teal;
-    }
-  }
-
-  @media screen and (min-width: $small-screen) {
-    font-size: 6em;
-    height: 2rem;
-    padding-bottom: 10em;
-  }
-
-  @media screen and (min-width: $medium-screen) {
-    font-size: 8em;
-    height: 3rem;
-    padding-bottom: 4rem;
-  }
-
-  i {
-    color: $color-white;
-    line-height: 1rem;
-    vertical-align: top;
-
-    &::before {
-      line-height: 1rem;
-    }
-  }
-}
-
 
 img.chat {
   height: 30px;
