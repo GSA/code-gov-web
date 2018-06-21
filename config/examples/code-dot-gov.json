@@ -30,6 +30,7 @@
         {
           "name": "federal agencies",
           "links": [
+            { "name": "How to Inventory Code", "url": "/#/policy-guide/docs/compliance/inventory-code" },
             { "name": "Tools", "url": "/#/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
             { "name": "Compliance Dashboard", "url": "/#/policy-guide/docs/compliance/dashboard"}
           ]
