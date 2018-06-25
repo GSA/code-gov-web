@@ -3,12 +3,12 @@
 .browse {
   margin-bottom: 4.5rem;
   margin-top: 0.7rem;
-  padding-right: 40px; /* the size of the Go button */
   text-align: center;
 
-  a {
-    color: $brand-teal !important;
-    text-align: center;
+  select {
+    @media screen and (max-width: $medium-screen) {
+      max-width: 150px;
+    }    
   }
 }
 
