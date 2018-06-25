@@ -14,6 +14,10 @@
     </div>
   </div>
   <div class="browse">
-    Or <a class="link" routerLink="/explore-code" [textContent]="browse_by_text"></a>
+    Or
+    <select (change)="onBrowseByEntityChange($event.target.value)">
+      <option [textContent]="browse_by_text"></option>
+      <option *ngFor="let entity of entities" [textContent]="entity.name" [value]="entity.acronym"></option>
+    </select>
   </div>
 </form>
