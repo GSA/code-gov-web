@@ -129,6 +129,9 @@ This app follows the
 [official Angular Style Guide](https://angular.io/styleguide). Please ensure you
 follow the naming conventions defined in this guide.
 
+## Vocabulary
+We sometimes use the word `entities`.  It basically means something that has repositories.  Agencies are types of entities.
+
 ## License
 
 As stated in [CONTRIBUTING](CONTRIBUTING.md):

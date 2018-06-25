@@ -4,32 +4,77 @@
 
   &.large {
 
-    .banner-subsection {
-      height: 14rem;
-      @media screen and (min-width: $medium-screen) {
-        height: 17rem;
-      }
-      .banner-subsection-content {
-        @include center-vertically();
+    .banner-content {
 
-        .buttons {
-          padding-top: 7px;
+      padding-top: 60px;
+
+      /* adds some additional spacing between sections */
+      .indented {
+        @media screen and (max-width: $medium-screen) {
+          margin-top: 5rem;
+        }
+        @media screen and (min-width: $medium-screen) {
+          margin-top: 10rem;
+        }
+      }
+
+      .banner-subtitle {
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
+      }
+
+      .banner-subsection {
+        height: 14rem;
+
+        @media screen and (min-width: $medium-screen) {
+          height: 17rem;
+        }
+
+        .banner-subsection-content {
+          @include center-vertically();
+
+          .banner-subsection-content-padder {
+            .buttons {
+              padding-top: 7px;
+            }
+          }
+        }
+
+        @media screen and (max-width: $medium-screen) {
+          &#banner-subsection-engage {
+            display: none;
+          }
+        }
+
+
+        @media screen and (min-width: 1200px) {
+          &:first-child {
+            .banner-subsection-content-padder {
+              padding-right: 80px;
+            }
+          }
+
+          &:last-child {
+            .banner-subsection-content-padder {
+              padding-left: 80px;
+            }
+          }
+        }
+      }
+
+      //div between Search and Help Wanted
+      .vertical-row {
+        @media screen and (min-width: $medium-screen) {
+          display: inline-block;
+          height: 17rem;
+          width: 3px;
+          background: $color-white;
+          position: relative;
         }
       }
     }
-
-    //div between Search and Help Wanted
-    .vertical-row {
-      @media screen and (min-width: $medium-screen) {
-        display: inline-block;
-        height: 17rem;
-        width: 3px;
-        background: $color-white;
-        position: relative;
-      }
-    }
   }
-
 }
 
 
@@ -49,7 +94,7 @@
       margin-top: -3rem;
     }
 
-//start here
+    //start here
     //set to 599px
     @media screen and (max-width: $medium-screen) {
       display: none;
@@ -375,6 +420,12 @@
         @media screen and (min-width: $small-screen) {
           text-align: left;
         }
+
+        span {
+          a {
+            text-decoration: none;
+          }
+        }
       }
 
       button {
@@ -439,16 +490,6 @@
           .fp-developed-by {
             color: darkgray;
           }
-
-          button {
-            border-color: $color-gray-dark;
-            color: $color-gray-dark;
-
-            &:focus, &:hover {
-              border-color: $brand-teal;
-              color: $color-white;
-            }
-          }
         }
       }
     }
@@ -473,64 +514,6 @@
     margin-left: 10px;
   }
 }
-
-/*
-.wntr {
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background: url('./assets/img/featured-projects/pipes4.png');
-      background-position: 0% 50%;
-      background-repeat: no-repeat;
-      background-size: 50%;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-size: 30%;
-    }
-
-  }
-
-
-}
-
-.its-ode {
-
-
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background-image: url('./assets/img/featured-projects/smartcity4.png');
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position: 100% 50%;
-    }
-
-    @media screen and (min-width: $large-screen) {
-      background-size: 30%;
-    }
-
-
-  }
-
-}
-
-
-
-.walkoff {
-
-  .indented {
-    @media screen and (min-width: $medium-screen) {
-      background-image: url('./assets/img/featured-projects/WALKOFF.png');
-      background-repeat: no-repeat;
-      background-size: 25rem;
-      background-position: 25% 50%;
-    }
-  }
-
-}
-*/
-
 
 .press {
   background-attachment: scroll;
@@ -596,44 +579,21 @@
   }
 }
 
-@keyframes bounce {
-	0%, 6%, 15%, 20%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
 
-	12% {
-    transform: translateX(-50%) translateY(-30px);
-  }
-
-	18% {
-    transform: translateX(-50%) translateY(-15px);
-  }
+img.chat {
+  height: 30px;
+  vertical-align: middle;
 }
 
-.scroll-indicator {
-  animation: 6s linear bounce infinite;
-  bottom: 1rem;
-  color: $color-white;
-  font-size: 3em;
-  height: 4rem;
-  overflow: hidden;
-  position: absolute;
-  text-decoration: none;
 
-  @media screen and (min-width: $small-screen) {
-    font-size: 6em;
-    height: 6rem;
-    padding-bottom: 10em;
-  }
+#issue-banner-subsection-subtitle {
+  max-width: 100%;
+  width: 100%;
+}
 
-  @media screen and (min-width: $medium-screen) {
-    font-size: 8em;
-    height: 7rem;
-    padding-bottom: 12rem;
-  }
-
-  i {
-    color: $color-white;
-    vertical-align: middle;
+#issue-link {
+  color: $brand-teal;
+  &:hover {
+    text-decoration: none;
   }
 }

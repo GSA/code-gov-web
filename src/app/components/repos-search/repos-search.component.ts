@@ -18,6 +18,8 @@ import { Router } from '@angular/router';
 
 import { content } from '../../../../config/code-gov-config.json';
 
+import { ClientService } from '../../services/client';
+
 /**
  * Class representing a search component for repositories.
  */
@@ -35,6 +37,7 @@ export class ReposSearchComponent {
   @Input() buttonClasses = '';
   @ViewChild('repoSearch') searchFormElement: ElementRef;
   private browse_by_text: string = content.home.banner.browse_by_text;
+  private entities: any[];
 
   /**
    * Constructs a ReposSearchComponent.
@@ -44,7 +47,12 @@ export class ReposSearchComponent {
    */
   constructor(
     private router: Router,
-  ) {}
+    private clientService: ClientService
+  ) {
+    this.clientService.getAgencies().subscribe(entities => {
+      this.entities = entities;
+    });
+  }
 
   /**
    * When form is submitted, go to search results page.
@@ -67,5 +75,9 @@ export class ReposSearchComponent {
    */
   search() {
     this.router.navigateByUrl('/search?q=' + this.queryValue);
+  }
+
+  onBrowseByEntityChange(newValue) {
+    this.router.navigateByUrl('/explore-code/agencies/' + newValue);
   }
 }
