@@ -90,7 +90,7 @@ export interface AgencyStatus {
 export class ClientService {
 
   private BASE: string = api.base;
-  private KEY: string = api.key;
+  private KEY: string = process.env.API_KEY || api.key;
 
   constructor (private http: Http) {
   }

@@ -51,7 +51,7 @@ module.exports = function (options) {
   } else {
     API_URL = 'https://code-api.app.cloud.gov/api/';
   }
-
+  
   const METADATA = {
     API_URL,
     baseUrl: '/',
@@ -62,6 +62,10 @@ module.exports = function (options) {
     port: process.env.PORT || (isProd ? 8080 : 2700),
     host: process.env.HOST || 'localhost'
   };
+  
+  if (process.env.API_KEY) {
+    METADATA.API_KEY = process.env.API_KEY;
+  }
 
   const copyPluginOptions = [{
     from: 'src/assets',
@@ -160,6 +164,7 @@ module.exports = function (options) {
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
       'process.env': {
+        'API_KEY': JSON.stringify(METADATA.API_KEY),
         'API_URL': JSON.stringify(METADATA.API_URL),
         'ENV': JSON.stringify(METADATA.ENV),
         'NODE_ENV': JSON.stringify(METADATA.ENV),
