@@ -13,8 +13,11 @@
         @media screen and (max-width: $medium-screen) {
           margin-top: 5rem;
         }
-        @media screen and (min-width: $medium-screen) {
+        @media screen and (min-height: 800px) and (min-width: $medium-screen) {
           margin-top: 10rem;
+        }
+        @media screen and (max-height: 800px) and (min-width: $medium-screen) {
+          margin-top: 2rem;
         }
       }
 
@@ -27,7 +30,7 @@
       .banner-subsection {
         height: 14rem;
 
-        @media screen and (min-width: $medium-screen) {
+        @media screen and (min-height: 800px) and (min-width: $medium-screen) {
           height: 17rem;
         }
 
