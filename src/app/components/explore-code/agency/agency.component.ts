@@ -46,7 +46,6 @@ export class AgencyComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.eventSub = this.route.params.subscribe(params => {
       let id = params['id'];
-      console.log("id:", id);
       if (id === 'All') {
         this.agency = { acronym: 'All', name: 'All' };
         this.repos = [];
