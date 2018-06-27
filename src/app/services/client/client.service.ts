@@ -24,9 +24,9 @@ export interface Requirements {
 export interface Agency {
   acronym: string;
   name: string;
-  website: string;
-  codeUrl: string;
-  numRepos: string;
+  website?: string;
+  codeUrl?: string;
+  numRepos?: string;
   requirements?: Requirements;
 }
 

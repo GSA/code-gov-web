@@ -46,28 +46,49 @@ export class AgencyComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.eventSub = this.route.params.subscribe(params => {
       let id = params['id'];
-      this.clientService.getAgencyByAcronym(id)
-      .subscribe((agency: Agency) => {
-        this.agency = agency;
-        if (this.agency) {
-          this.repos = [];
-          this.allRepos = [];
-          this.allDisplayedRepos = [];
-          this.currentIndex = 0;
-          this.isLoading = true;
-          this.agencyRepos();
+      console.log("id:", id);
+      if (id === 'All') {
+        this.agency = { acronym: 'All', name: 'All' };
+        this.repos = [];
+        this.allRepos = [];
+        this.allDisplayedRepos = [];
+        this.currentIndex = 0;
+        this.isLoading = true;
+        this.agencyRepos();
 
-          this.seoService.setTitle(this.agency.name, true);
-          this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
-          this.seoService.setMetaRobots('Index, Follow');
+        this.seoService.setTitle(this.agency.name, true);
+        this.seoService.setMetaDescription('Browse code from All agencies');
+        this.seoService.setMetaRobots('Index, Follow');
 
-          this.meta.setTag('twitter:card', 'summary');
-          this.meta.setTag('twitter:site', '@codedotgov');
-          this.meta.setTag('twitter:title', `code.gov/${this.agency.name}`);
-          this.meta.setTag('twitter:description', 'Browse code from the ' + this.agency.name);
-          this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
-        }
-      });
+        this.meta.setTag('twitter:card', 'summary');
+        this.meta.setTag('twitter:site', '@codedotgov');
+        this.meta.setTag('twitter:title', `code.gov`);
+        this.meta.setTag('twitter:description', 'Browse code from All agencies');
+        this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
+      } else {
+        this.clientService.getAgencyByAcronym(id)
+        .subscribe((agency: Agency) => {
+          this.agency = agency;
+          if (this.agency) {
+            this.repos = [];
+            this.allRepos = [];
+            this.allDisplayedRepos = [];
+            this.currentIndex = 0;
+            this.isLoading = true;
+            this.agencyRepos();
+
+            this.seoService.setTitle(this.agency.name, true);
+            this.seoService.setMetaDescription('Browse code from the ' + this.agency.name);
+            this.seoService.setMetaRobots('Index, Follow');
+
+            this.meta.setTag('twitter:card', 'summary');
+            this.meta.setTag('twitter:site', '@codedotgov');
+            this.meta.setTag('twitter:title', `code.gov/${this.agency.name}`);
+            this.meta.setTag('twitter:description', 'Browse code from the ' + this.agency.name);
+            this.meta.setTag('twitter:image', 'https://code.gov/assets/img/og.jpg');
+          }
+        });
+      }
     });
   }
 
@@ -81,7 +102,8 @@ export class AgencyComponent implements OnInit, OnDestroy {
 
   agencyRepos() {
     if (this.agency) {
-      this.clientService.getAgencyRepos(this.agency.acronym, 10000).subscribe(repos => {
+      const acronym = this.agency.acronym === 'All' ? '' : this.agency.acronym;
+      this.clientService.getAgencyRepos(acronym, 10000).subscribe(repos => {
         let numberOfRepos = repos.length;
         if (numberOfRepos === 0) {
           this.errorModalService.showModal({});
@@ -118,7 +140,11 @@ export class AgencyComponent implements OnInit, OnDestroy {
   }
 
   filterByAgency(repo) {
-    return repo.agency !== undefined && repo.agency === this.agencyId();
+    if (this.agency.acronym === 'All') {
+      return true;
+    } else {
+      return repo.agency !== undefined && repo.agency === this.agencyId();
+    }
   }
 
   onScroll() {
