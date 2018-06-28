@@ -22,6 +22,9 @@ import { ClientService } from '../../services/client';
 
 import { content } from '../../../../config/code-gov-config.json';
 
+const banner = content.home.banner;
+const description = window.innerWidth > 500 ? banner.search_description_text : banner.search_description_text_mobile;
+
 /**
  * Class representing a search component for repositories.
  */
@@ -39,7 +42,7 @@ export class SearchInputComponent {
   @Input() autofocus = false;
   @Input() name: string;
   @Input() ngModel: any;
-  @Input() description: string = window.innerWidth > 500 ? content.home.banner.search_description_text : content.home.banner.search_description_text_mobile;
+  @Input() description: string = description;
   @Input() placeholder: string = content.home.banner.search_placeholder_text;
   @ViewChild('query') queryElement: ElementRef;
   @ViewChild('searchInput') searchInputElement: ElementRef;
