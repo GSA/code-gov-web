@@ -63,8 +63,8 @@ module.exports = function (options) {
     host: process.env.HOST || 'localhost'
   };
   
-  if (process.env.API_KEY) {
-    METADATA.API_KEY = process.env.API_KEY;
+  if (process.env.CODE_GOV_API_KEY) {
+    METADATA.CODE_GOV_API_KEY = process.env.CODE_GOV_API_KEY;
   }
 
   const copyPluginOptions = [{
@@ -164,7 +164,7 @@ module.exports = function (options) {
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
       'process.env': {
-        'API_KEY': JSON.stringify(METADATA.API_KEY),
+        'CODE_GOV_API_KEY': JSON.stringify(METADATA.CODE_GOV_API_KEY),
         'API_URL': JSON.stringify(METADATA.API_URL),
         'ENV': JSON.stringify(METADATA.ENV),
         'NODE_ENV': JSON.stringify(METADATA.ENV),

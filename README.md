@@ -102,9 +102,9 @@ API_URL=staging GIT_REMOTE_NAME=upstream npm run federalist-deploy:dev
 
 ## Specifying an API Key
 The app uses the API key provided in the code-gov-config.json by default.
-If you want to override that, specify an `API_KEY` environmental variable.  Here's an example:
+If you want to override that, specify an `CODE_GOV_API_KEY` environmental variable.  Here's an example:
 ```
-API_KEY=l87sfdi7ybc2bic7bai8cb2i176c3b872tb3 npm run server
+CODE_GOV_API_KEY=l87sfdi7ybc2bic7bai8cb2i176c3b872tb3 npm run server
 ```
 
 ## Deployment Problems
