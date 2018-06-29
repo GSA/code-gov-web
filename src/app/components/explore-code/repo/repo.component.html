@@ -67,7 +67,10 @@
               <div *ngFor="let value of repo.additional_data[key]" [textContent]="value"></div>
             </div>
             <div class="metadata-value" *ngIf="!isArray(repo.additional_data[key])">
-              <div [textContent]="repo.additional_data[key]"></div>
+              <a *ngIf="isURL(repo.additional_data[key])" [href]="repo.additional_data[key]" target="_blank">
+                <div [textContent]="repo.additional_data[key]"></div>
+              </a>
+              <div *ngIf="!isURL(repo.additional_data[key])" [textContent]="repo.additional_data[key]"></div>
             </div>
           </div>
         </div>

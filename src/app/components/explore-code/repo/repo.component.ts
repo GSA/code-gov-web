@@ -69,13 +69,17 @@ export class RepoComponent implements OnInit, OnDestroy {
   }
 
   clean(input) {
-    if (typeof input === "number") {
+    if (typeof input === 'number') {
       return input.toString();
-    } else if (typeof input === "string") {
-      return input.replace(/[_-]/g, " ");
+    } else if (typeof input === 'string') {
+      return input.replace(/[_-]/g, ' ');
     } else {
       return JSON.stringify(input);
     }
+  }
+
+  isURL(input) {
+    return typeof input === 'string' && input.startsWith('http');
   }
 
 }
