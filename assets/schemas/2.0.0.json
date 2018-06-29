@@ -1,0 +1,286 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Code.gov Inventory",
+  "description": "A federal source code catalog",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "The version of the metadata schema in use. Implements semantic versioning 2.0.0 rules as defined at http://semver.org"
+    },
+    "measurementType": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "linesOfCode",
+            "modules",
+            "cost",
+            "projects",
+            "systems",
+            "other"
+          ],
+          "description": "An enumerated list of methods for measuring the open source requirement."
+        },
+        "ifOther": {
+          "type": "string",
+          "description": "A one- or two- sentence description of the measurement type used, if 'other' is selected as the value of 'method' field."
+        }
+      },
+      "additionalProperties": false
+    },
+    "agency": {
+      "type": "string",
+      "description": "The agency acronym for Clinger Cohen Act agency, as defined by the United States Government Manual."
+    },
+    "releases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "An object containing each versioned source code release made available.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the release."
+          },
+          "version": {
+            "type": "string",
+            "description": "The version for this release. For example, '1.0.0'."
+          },
+          "organization": {
+            "type": "string",
+            "description": "The organization or component within the agency to which the releases listed belong. For example, '18F' or 'Navy'."
+          },
+          "description": {
+            "type": "string",
+            "description": "A one or two sentence description of the release."
+          },
+          "permissions": {
+            "type": "object",
+            "properties": {
+              "licenses": {
+                "type": ["array", "null"],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "URL": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "The URL of the release license, if available. If not, null should be used."
+                    },
+                    "name": {
+                      "type": "string",
+                      "description": "An abbreviation for the name of the license. For example, 'CC0' or 'MIT'."
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "usageType": {
+                "type": "string",
+                "description": "A list of enumerated values which describes the usage permissions for the release.",
+                "enum": [
+                  "openSource",
+                  "governmentWideReuse",
+                  "exemptByLaw",
+                  "exemptByNationalSecurity",
+                  "exemptByAgencySystem",
+                  "exemptByAgencyMission",
+                  "exemptByCIO"
+                ],
+                "additionalProperties": false
+              },
+              "exemptionText": {
+                "type": ["string", "null"],
+                "description": "If an exemption is listed in the 'usageType' field, this field should include a one- or two- sentence justification for the exemption used."
+              }
+            },
+            "additionalProperties": false,
+            "required": ["licenses", "usageType"]
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "An array of keywords that will be helpful in discovering and searching for the release."
+            }
+          },
+          "contact": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string",
+                "description": "The email address for the point of contact for the release."
+
+              },
+              "name": {
+                "type": "string",
+                "description": "The name of the point of contact for the release."
+
+              },
+              "URL": {
+                "type": "string",
+                "format": "uri",
+                "description": "The URL to a website that can be used to reach the point of contact. For example, 'http://twitter.com/codeDotGov'."
+              },
+              "phone": {
+                "type": "string",
+                "description": "A phone number for the point of contact for the release."
+              }
+            },
+            "additionalProperties": false,
+            "required": ["email"]
+          },
+          "status": {
+            "type": "string",
+            "description": "The development status of the release.",
+            "enum": [
+              "Ideation",
+              "Development",
+              "Alpha",
+              "Beta",
+              "Release Candidate",
+              "Production",
+              "Archival"
+            ]
+          },
+          "vcs": {
+            "type": "string",
+            "description": "A lowercase string with the name of the version control system that is being used for the release. For example, 'git'."
+          },
+          "repositoryURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release repository for open source repositories. This field is not required for repositories that are only available as government-wide reuse or are closed (pursuant to one of the exemptions)."
+          },
+          "homepageURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL of the public release homepage."
+          },
+          "downloadURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where a distribution of the release can be found."
+          },
+          "disclaimerURL": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where disclaimer language regarding the release can be found."
+          },
+          "disclaimerText": {
+            "type": "string",
+            "description": "Short paragraph that includes disclaimer language to accompany the release."
+          },
+          "languages": {
+            "type": "array",
+            "description": " An array of strings with the names of the programming languages in use on the release.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "laborHours": {
+            "type": "number",
+            "description": "An estimate of total labor hours spent by your organization/component across all versions of this release. This includes labor performed by federal employees and contractors."
+          },
+          "relatedCode": {
+            "type": "array",
+            "description": "An array of affiliated government repositories that may be a part of the same project. For example,  relatedCode for 'code-gov-web' would include 'code-gov-api' and 'code-gov-tools'.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the code repository, project, library or release."
+                },
+                "URL": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL where the code repository, project, library or release can be found."
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "reusedCode": {
+            "type": "array",
+            "description": "An array of government source code, libraries, frameworks, APIs, platforms or other software used in this release. For example, US Web Design Standards, cloud.gov, Federalist, Digital Services Playbook, Analytics Reporter.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the software used in this release."
+                },
+                "URL": {
+                  "type": "string",
+                  "format": "uri",
+                  "description": "The URL where the software can be found."
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "partners": {
+            "type": "array",
+            "description": "An array of objects including an acronym for each agency partnering on the release and the contact email at such agency.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The acronym describing the partner agency."
+                },
+                "email": {
+                  "type": "string",
+                  "description": "The email address for the point of contact at the partner agency."
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "date": {
+            "type": "object",
+            "description": "A date object describing the release.",
+            "properties": {
+              "created": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the release was created, in YYYY-MM-DD or ISO 8601 format."
+              },
+              "lastModified": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the release was modified, in YYYY-MM-DD or ISO 8601 format."
+              },
+              "metadataLastUpdated": {
+                "type": "string",
+                "format": "date",
+                "description": "The date the metadata of the release was last updated, in YYYY-MM-DD or ISO 8601 format."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "name",
+          "permissions",
+          "repositoryURL",
+          "description",
+          "laborHours",
+          "tags",
+          "contact"
+        ]
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "measurementType",
+    "agency",
+    "releases"
+  ],
+  "additionalProperties": false
+}
