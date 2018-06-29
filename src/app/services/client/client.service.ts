@@ -135,7 +135,19 @@ export class ClientService {
   getRepoByID(acronym: string = ''): Observable<Repo> {
     let url = this.BASE + `repos/${acronym}?api_key=${this.KEY}`;
     return this.http.get(url)
-    .map((response: Response) => response.json());
+    .map((response: Response) => {
+      var data = response.json();
+      data.additional_data = {
+        "project_doi": "http://dx.doi.org/10.1000/456%23789",
+        "version_doi": "http://dx.doi.org/10.1000/456%23789",
+        "publication": "BLa bla bal Publishers",
+        "citation": "Pizzi C, Caraglia M, Cianciulli M, Fabbrocini A, Libroia A, Matano E, Contegiacomo A, Del Prete S, Abbruzzese A, Martignetti A, et al. 2002. Low-dose recombinant IL-2 induces psychological changes: monitoring by Minnesota Multiphasic Personality Inventory (MMPI). Anticancer Res. 22(2A):727–732.",
+        "contributor(s)": ["Christopher Pizzi", "Michael Caraglia", "Morgan Cianciulli", "Alexander Fabbrocini", "Anders Libroia", "Eric Matano", "Alexander Contegiacomo", "Skippy Del Prete", "Alexander Abbruzzese", "Alexander Martignetti"],
+        "language, natural": "English",
+        "operating system": "Windows 10"
+      };
+      return data;
+    });
   }
 
   suggest(term: string = '', size: number = 10) {
