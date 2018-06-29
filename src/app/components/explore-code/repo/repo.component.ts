@@ -38,6 +38,10 @@ export class RepoComponent implements OnInit, OnDestroy {
     if (this.repoSub) this.repoSub.unsubscribe();
   }
 
+  getKeys(object) {
+    return Object.keys(object);
+  }
+
   getRepo(agencyId, releaseId) {
     this.clientService.getRepoByID(releaseId).subscribe(repo => {
       this.repo = repo;
@@ -60,5 +64,18 @@ export class RepoComponent implements OnInit, OnDestroy {
     return this.repo.repositoryURL;
   }
 
+  isArray(input) {
+    return Array.isArray(input);
+  }
+
+  clean(input) {
+    if (typeof input === "number") {
+      return input.toString();
+    } else if (typeof input === "string") {
+      return input.replace(/[_-]/g, " ");
+    } else {
+      return JSON.stringify(input);
+    }
+  }
 
 }
