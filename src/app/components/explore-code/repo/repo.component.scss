@@ -121,6 +121,7 @@
   }
 
   .metadata-value {
+    color: $color-gray;
     display: block;
 
     @media screen and (min-width: $medium-screen) {
