@@ -100,7 +100,12 @@ API_URL='https://code-api-staging.app.cloud.gov/api/' npm run start
 API_URL=staging GIT_REMOTE_NAME=upstream npm run federalist-deploy:dev
 ```
 
-
+## Specifying an API Key
+The app uses the API key provided in the code-gov-config.json by default.
+If you want to override that, specify an `CODE_GOV_API_KEY` environmental variable.  Here's an example:
+```
+CODE_GOV_API_KEY=l87sfdi7ybc2bic7bai8cb2i176c3b872tb3 npm run server
+```
 
 ## Deployment Problems
 When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache`
@@ -128,6 +133,9 @@ conditionals. Styles are encapsulated by default unless the Component has
 This app follows the
 [official Angular Style Guide](https://angular.io/styleguide). Please ensure you
 follow the naming conventions defined in this guide.
+
+## Vocabulary
+We sometimes use the word `entities`.  It basically means something that has repositories.  Agencies are types of entities.
 
 ## License
 

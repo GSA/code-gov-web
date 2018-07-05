@@ -24,9 +24,9 @@ export interface Requirements {
 export interface Agency {
   acronym: string;
   name: string;
-  website: string;
-  codeUrl: string;
-  numRepos: string;
+  website?: string;
+  codeUrl?: string;
+  numRepos?: string;
   requirements?: Requirements;
 }
 
@@ -90,7 +90,7 @@ export interface AgencyStatus {
 export class ClientService {
 
   private BASE: string = api.base;
-  private KEY: string = api.key;
+  private KEY: string = process.env.CODE_GOV_API_KEY || api.key;
 
   constructor (private http: Http) {
   }
