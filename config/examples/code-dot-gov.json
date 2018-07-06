@@ -155,6 +155,10 @@
           "url": "/#/privacy-policy"
         },
         {
+          "name": "Roadmap",
+          "url": "/#/roadmap"
+        },
+        {
           "name": "Visit Project Page",
           "url": "https://github.com/GSA/code-gov-web"
         }
@@ -190,25 +194,27 @@
         "The Development Roadmap is organized into three categories – Near-term, Mid-term, and Long-term. Priorities are sorted into roadmap categories based on feedback we receive during user interviews. Dependencies and resources are also factors that affect placement on the roadmap. If you want to join the Code.gov user testing group, please email us at <a href='mailto:code@gsa.gov'>Code@gsa.gov</a>."
       ],
       "near": [
-        { "name": "Search results", "status": "Released" },
-        { "name": "Project Details Phase I", "status": "Released" },
-        { "name": "Help wanted", "status": "Released" },
-        { "name": "Roadmap on site", "status": "Released" },
-        { "name": "Enhanced compliance dashboard", "status": "Released" },
-        { "name": "Increased agency participation", "status": "Released" },
-        { "name": "Metadata schema 1.0 & 1.0.1 deprecation", "status": "Released" }
+        { "name": "Code.gov configurability with Angular", "status": "Released" },
+        { "name": "Update Navigation and Homepage content", "status": "Released" },
+        { "name": "Usability sessions, round 1", "status": "Released" },
+        { "name": "Phase 1 SEO improvements", "status": "In Progress" },
+        { "name": "Licenses documentation", "status": "In Progress" },
+        { "name": "Search scoring phase 1", "status": "In Progress" },
+        { "name": "Update search filters", "status": "In Progress" }
       ],
       "mid": [
-        { "name": "Agency pages", "status": null },
-        { "name": "Medium skin", "status": null },
-        { "name": "FAQs page", "status": "In Progress" },
-        { "name": "Admin tool", "status": null },
-        { "name": "Enhanced tools and resources", "status": null },
-        { "name": "Project Details Phase II", "status": null}
+        { "name": "Update help wanted phase 1", "status": null },
+        { "name": "Update UI for search results", "status": null },
+        { "name": "Usability sessions, round 2", "status": null }
       ],
       "long": [
-        { "name": "User accounts", "status": null },
-        { "name": "Gamification", "status": null }
+        { "name": "States and cities pilot program", "status": null },
+        { "name": "Phase 2 SEO improvements", "status": null },
+        { "name": "User profiles", "status": null },
+        { "name": "Gamification/badges", "status": null },
+        { "name": "Chatbot", "status": null },
+        { "name": "Code.json creator tool", "status": null },
+        { "name": "Search scoring phase 2", "status": null }
       ],
       "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The Code.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of Code.gov, the General Services Agency, the Office of Management and Budget, and the United States Federal Government."
     }
