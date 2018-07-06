@@ -199,10 +199,10 @@
         { "name": "Usability sessions, round 1", "status": "Released" },
         { "name": "Phase 1 SEO improvements", "status": "In Progress" },
         { "name": "Licenses documentation", "status": "In Progress" },
-        { "name": "Search scoring phase 1", "status": "In Progress" }
+        { "name": "Search scoring phase 1", "status": "In Progress" },
+        { "name": "Update search filters", "status": "In Progress" }
       ],
       "mid": [
-        { "name": "Update search filters", "status": null },
         { "name": "Update help wanted phase 1", "status": null },
         { "name": "Update UI for search results", "status": null },
         { "name": "Usability sessions, round 2", "status": null }
