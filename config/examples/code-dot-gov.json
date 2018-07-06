@@ -195,22 +195,26 @@
       ],
       "near": [
         { "name": "Code.gov configurability with Angular", "status": "Released" },
-        { "name": "Updated navigation and hero", "status": "Released" },
-        { "name": "Usability sessions, round 1", "status": "In Progress" },
+        { "name": "Update Navigation and Homepage content", "status": "Released" },
+        { "name": "Usability sessions, round 1", "status": "Released" },
         { "name": "Phase 1 SEO improvements", "status": "In Progress" },
-        { "name": "Updated roadmap", "status": "In Progress" }
+        { "name": "Licenses documentation", "status": "In Progress" },
+        { "name": "Search scoring phase 1", "status": "In Progress" }
       ],
       "mid": [
-        { "name": "Search scoring", "status": null },
-        { "name": "Licenses documentation", "status": null },
-        { "name": "Updated search filters", "status": null },
-        { "name": "States and cities prototype", "status": null }
+        { "name": "Update search filters", "status": null },
+        { "name": "Update help wanted phase 1", "status": null },
+        { "name": "Update UI for search results", "status": null },
+        { "name": "Usability sessions, round 2", "status": null }
       ],
       "long": [
-        { "name": "States and cities", "status": null },
-        { "name": "Updated help wanted", "status": null },
-        { "name": "Usability sessions, round 2", "status": null },
-        { "name": "Phase 2 SEO improvements", "status": null }
+        { "name": "States and cities pilot program", "status": null },
+        { "name": "Phase 2 SEO improvements", "status": null },
+        { "name": "User profiles", "status": null },
+        { "name": "Gamification/badges", "status": null },
+        { "name": "Chatbot", "status": null },
+        { "name": "Code.json creator tool", "status": null },
+        { "name": "Search scoring phase 2", "status": null }
       ],
       "disclaimer": "This Development Roadmap (Roadmap) is for informational purposes only. The Code.gov team will update the Roadmap as frequently as possible but, given that it’s subject to change at any time, the information presented by the Roadmap should not be used for planning purposes. The information presented in the Roadmap does not represent a solicitation or similar contract vehicle. All items in the Roadmap will be developed and released at the sole discretion of Code.gov, the General Services Agency, the Office of Management and Budget, and the United States Federal Government."
     }
