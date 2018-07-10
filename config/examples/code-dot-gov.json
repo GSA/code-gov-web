@@ -19,27 +19,27 @@
         {
           "name": "about",
           "links": [
-            { "name": "Source Code Policy", "url": "/#/policy-guide/docs/overview/introduction" },
-            { "name": "Open Source Pilot", "url": "/#/policy-guide/docs/open-source/introduction" }
+            { "name": "Source Code Policy", "url": "/#!/policy-guide/docs/overview/introduction" },
+            { "name": "Open Source Pilot", "url": "/#!/policy-guide/docs/open-source/introduction" }
           ]
         },
         {
           "name": "Browse Projects",
-          "url": "/#/explore-code/agencies/All"
+          "url": "/#!/explore-code/agencies/All"
         },
         {
           "name": "federal agencies",
           "links": [
-            { "name": "How to Inventory Code", "url": "/#/policy-guide/docs/compliance/inventory-code" },
-            { "name": "Tools", "url": "/#/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
-            { "name": "Compliance Dashboard", "url": "/#/policy-guide/docs/compliance/dashboard"}
+            { "name": "How to Inventory Code", "url": "/#!/policy-guide/docs/compliance/inventory-code" },
+            { "name": "Tools", "url": "/#!/policy-guide/docs/compliance/inventory-code/tools/validate-schema" },
+            { "name": "Compliance Dashboard", "url": "/#!/policy-guide/docs/compliance/dashboard"}
           ]
         },
         {
           "name": "developers",
           "links": [
             { "name": "code.gov API", "url": "https://developers.code.gov/basics.html" },
-            { "name": "Contribute", "url": "/#/help-wanted" },
+            { "name": "Contribute", "url": "/#!/help-wanted" },
             { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" }
           ]
         },
@@ -99,7 +99,7 @@
           "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
           "image": "/assets/img/featured-projects/pipes4.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/DOE/repos/doe_snl_water_network_tool_for_resilience_v_1_0" },
             { "name": "Go to Repo", "url": "https://github.com/usepa/wntr"}
           ]
         },
@@ -110,7 +110,7 @@
           "description": "A real-time virtual data router that ingests and processes operational data from various connected devices including vehicles, infrastructure, and traffic management centers and distributes it to other devices and subscribing transportation management applications.",
           "image": "/assets/img/featured-projects/smartcity4.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/DOT/repos/dot_fhwa_intelligent_transportation_systems_operational_data_environment_its_ode_" },
             { "name": "Go to Repo", "url": "https://github.com/usdot-jpo-ode/jpo-ode" }
           ]
         },
@@ -121,7 +121,7 @@
           "description": "Enables security teams to integrate apps, workflows, and analytics tools that would otherwise need to be created from scratch.",
           "image": "/assets/img/featured-projects/WALKOFF.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/NSA/repos/nsa_walkoff" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/NSA/repos/nsa_walkoff" },
             { "name": "Go to Repo", "url": "https://github.com/iadgov/WALKOFF" }
           ]
         }
@@ -152,11 +152,11 @@
       "links": [
         {
           "name": "Privacy Policy",
-          "url": "/#/privacy-policy"
+          "url": "/#!/privacy-policy"
         },
         {
           "name": "Roadmap",
-          "url": "/#/roadmap"
+          "url": "/#!/roadmap"
         },
         {
           "name": "Visit Project Page",
