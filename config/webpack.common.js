@@ -137,10 +137,7 @@ module.exports = function (options) {
           }),
         ],
         sassLoader: {
-          includePaths: [
-            require('bourbon').includePaths,
-            require('bourbon-neat').includePaths,
-          ]
+          includePaths: []
         },
         tslint: {
           emitErrors: isProd ? true : false,
