@@ -14,65 +14,18 @@
     <h3 *ngIf="total" class="repos-count">
       We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
     </h3>
-    <!--
-    <form class="search-meta-section" [formGroup]="metaForm">
-      <p>
-        <label for="sort">Sort</label>
-        <select id="sort" name="sort" formControlName="sort">
-          <option value="relevance">Relevance</option>
-          <option value="date">Date</option>
-        </select>
-      </p>
-      <p class="page-size-field">
-        <label for="pageSize">Items Per Page</label>
-        <select id="pageSize" name="pageSize" formControlName="pageSize">
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
-        </select>
-      </p>
-    </form>
-    -->
   </div>
   <div class="indented">
-    <!-- TODO: Add this section back in once we have better data quality -->
-    <!-- <div class="search-filter-section">
-      <h4>Filter</h4>
-      <form class="search-filters" [formGroup]="filterForm">
-        <fieldset class="usa-fieldset-inputs">
-          <ul class="search-filter" *ngIf="getLanguages().length > 0">
-            <li>
-              <h5>Language</h5>
-              <show-more [formGroup]="filterForm" name="languages" [list]="getLanguages()"></show-more>
-            </li>
-          </ul>
-          <ul class="search-filter" *ngIf="getLicenses().length > 0">
-            <li>
-              <h5>License</h5>
-              <ul>
-                <li *ngFor="let license of getLicenses()">
-                  <input id="license-{{ license }}" name="license" type="checkbox" value="{{ license }}" /><label for="license-{{ license }}"><span>{{ license }}</span></label>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="search-filter">
-            <li>
-              <h5>Usage Type</h5>
-              <ul [formGroup]="filterForm.controls.usageTypes">
-                <li>
-                  <input id="usage-type-government-wide-reuse" name="usageType" type="checkbox" value="government-wide-reuse" formControlName="governmentWideReuse" /><label for="usage-type-government-wide-reuse"><span>Government-Wide Reuse</span></label>
-                </li>
-                <li>
-                  <input id="usage-type-open-source" name="usageType" type="checkbox" value="open-source" formControlName="openSource" /><label for="usage-type-open-source"><span>Open Source</span></label>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </fieldset>
-      </form>
-    </div> -->
-    <div class="search-results-section">
+    <br/>
+    <br/>
+    <div id="search-filter-boxes" class="width-quarter">
+      <h1>Filter</h1>
+      <filter-box
+        title="Federal Agency"
+  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
+></filter-box>
+    </div>
+    <div class="search-results-section width-three-quarters">
       <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
