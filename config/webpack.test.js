@@ -237,10 +237,7 @@ module.exports = function (options) {
            * See: https://github.com/wbuchwalter/tslint-loader
            */
           sassLoader: {
-            includePaths: [
-              require('bourbon').includePaths,
-              require('bourbon-neat').includePaths
-            ]
+            includePaths: []
           },
 
           tslint: {
