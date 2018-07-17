@@ -118,8 +118,6 @@
     "@types/jasminewd2": "^2.0.2",
     "angulartics2": "1.4.3",
     "assets-webpack-plugin": "^3.4.0",
-    "bourbon": "^4.2.7",
-    "bourbon-neat": "^3.0.0",
     "clipboard": "^1.7.1",
     "core-js": "^2.5.3",
     "cssnano": "^3.10.0",
