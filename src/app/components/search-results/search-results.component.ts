@@ -89,7 +89,6 @@ export class SearchResultsComponent {
     */
     
     this.clientService.getAgencies().subscribe(data => {
-      console.error("data:", data);
       this.agencies = data.map(agency => agency.name);
     });
   }
@@ -162,9 +161,17 @@ export class SearchResultsComponent {
   getFilteredValues(property) {
     return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
   }
+  
+  filterOrgType(result) {
+    const orgTypes = this.hostElement.nativeElement.querySelector("filter-box[title='Organization Type']").values;
+    if (orgTypes.length === 0) {
+      return true;
+    } else {
+      return orgTypes.includes(result.orgType || 'federal');
+    }
+  }
 
   filterFederalAgency(result) {
-    console.log("starting filterFederalAgency with", result);
     const names = this.hostElement.nativeElement.querySelector("filter-box[title='Federal Agency']").values;
     if (names.length === 0) {
       return true;
@@ -220,6 +227,7 @@ export class SearchResultsComponent {
     this.filteredResults = this.results.filter(this.filterLanguages.bind(this))
       .filter(this.filterLicenses.bind(this))
       .filter(this.filterUsageTypes.bind(this))
+    //  .filter(this.filterOrgType.bind(this))
       .filter(this.filterFederalAgency.bind(this));
   }
 

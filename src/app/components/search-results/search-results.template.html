@@ -18,15 +18,22 @@
   <div class="indented">
     <br/>
     <br/>
-    <div id="search-filter-boxes" class="width-quarter">
+    <div id="search-filter-boxes">
       <h1>Filter</h1>
+      <!--
+      <filter-box
+        title="Organization Type"
+        options='[{"name":"Federal Government","value":"federal"},{"name":"State Government","value":"state"},{"name":"Local Government","value":"local"}]'
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+      -->
       <filter-box
         title="Federal Agency"
         [attr.options]="agencies | json"
         (change)="onFilterBoxChange()"
       ></filter-box>
     </div>
-    <div class="search-results-section width-three-quarters">
+    <div id="search-results-section">
       <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>

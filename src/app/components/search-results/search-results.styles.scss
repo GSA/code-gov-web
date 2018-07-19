@@ -154,3 +154,30 @@ h3 {
     min-height: 25em;
   }
 }
+
+#search-filter-boxes {
+  
+  .filter-box {
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+
+    .filter-box {
+      width:100%;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    @include width-quarter();
+  }
+}
+
+#search-results-section {
+  width: 100%;
+  @media screen and (min-width: 750px) {
+    @include width-three-quarters();
+  }
+}
+

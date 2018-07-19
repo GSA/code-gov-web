@@ -66,6 +66,28 @@
           return Array.from(this.querySelectorAll(":checked")).map(tag => tag.value);
         }
 
+        parseOptions() {
+          const rawOptions = this.getAttribute('options');
+          let parsedOptions = null;
+          try {
+            parsedOptions = JSON.parse(rawOptions);
+          } catch (error) {
+            console.error("[filter-box] failed to parse rawOptions:", rawOptions);
+            throw error;
+          }
+          if (parsedOptions) {
+            this.options = parsedOptions.map(option => {
+              if (typeof option === "object" && option.name && option.value) {
+                return { name: option.name, value: option.value, selected: false };
+              } else {
+                return { name: option, value: option, selected: false };
+              }
+            });
+          } else {
+            this.options = [];
+          }          
+        }
+
         update() {
 
             this.showAll = true;          
@@ -76,21 +98,7 @@
             const container = document.createElement('div');
           
             this.title = this.getAttribute('title');
-            const rawOptions = this.getAttribute('options');
-            let parsedOptions = null;
-            try {
-              parsedOptions = JSON.parse(rawOptions);
-            } catch (error) {
-              console.error("[filter-box] failed to parse rawOptions:", rawOptions);
-              throw error;
-            }
-            if (parsedOptions) {
-              this.options = parsedOptions.map(option => {
-                return { name: option, value: option, selected: false };
-              });
-            } else {
-              this.options = [];
-            }
+            this.parseOptions();
 
             container.className = "filter-box";
             
