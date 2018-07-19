@@ -20,6 +20,11 @@
     <br/>
     <div id="search-filter-boxes">
       <h1>Filter</h1>
+      <filter-box
+        title="Language"
+        options='["C", "C++", "Java", "JavaScript", "Python", "TypeScript"]'
+        (change)="onFilterBoxChange()"
+      ></filter-box>
       <!--
       <filter-box
         title="Organization Type"
@@ -30,6 +35,11 @@
       <filter-box
         title="Federal Agency"
         [attr.options]="agencies | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+      <filter-box
+        title="Licenses"
+        [attr.options]="licenses | json"
         (change)="onFilterBoxChange()"
       ></filter-box>
     </div>

@@ -7,10 +7,15 @@ import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
+import * as licenseList from 'spdx-license-list';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 
 import { content, images } from '../../../../config/code-gov-config.json';
+
+const licenses = Object.entries(licenseList).map(entry => {
+    return { name: entry[1].name, value: entry[0] };
+});
 
 /**
  * Class representing a search results page for repositories.
@@ -37,6 +42,7 @@ export class SearchResultsComponent {
   private pageSize = 10;
   private sort = 'relevance';
   private agencies = [];
+  private licenses = licenses;
 
   /**
    * Constructs a SearchResultsComponent.
@@ -54,40 +60,8 @@ export class SearchResultsComponent {
     private sanitizer: DomSanitizer,
     private hostElement: ElementRef    
   ) {
-
     this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
 
-    this.filterForm = formBuilder.group({
-      languages: {},
-      licenses: {},
-      usageTypes: {},
-    });
-
-    this.filterForm.setControl('usageTypes', this.formBuilder.group({
-      openSource: false,
-      governmentWideReuse: false,
-    }));
-
-    this.filterForm.valueChanges.subscribe(data => {
-      this.filterResults();
-    });
-
-    /*
-    this.metaForm = formBuilder.group({
-      pageSize: this.pageSize,
-      sort: this.sort,
-    });
-    */
-
-    /*
-    this.metaForm.valueChanges.subscribe(data => {
-      this.pageSize = data.pageSize;
-      this.sort = data.sort;
-
-      this.filterResults();
-    });
-    */
-    
     this.clientService.getAgencies().subscribe(data => {
       this.agencies = data.map(agency => agency.name);
     });
@@ -100,6 +74,7 @@ export class SearchResultsComponent {
       (response: any) => {
         this.queryValue = response.q;
         this.clientService.search(this.queryValue, 100).subscribe(data => {
+          console.log("data:", data);
           let repos = data.repos;
 
           if (content.search && content.search.entities) {
@@ -113,8 +88,6 @@ export class SearchResultsComponent {
 
           this.results = repos;
           this.total = repos.length;
-          this.buildFormControl('languages', this.getLanguages());
-          this.buildFormControl('licenses', this.getLicenses());
           this.isLoading = false;
         });
       }
@@ -127,43 +100,13 @@ export class SearchResultsComponent {
   ngOnDestroy() {
     this.routeSubscription.unsubscribe();
   }
-
-  buildFormControl(property, values) {
-    this.filterForm.setControl(property, this.formBuilder.group(values.reduce((obj, key) => {
-      obj[key] = this.formBuilder.control(false);
-      return obj;
-    }, {})));
-  }
-
-  /*
-  sortResults(results) {
-    if (this.metaForm.value.sort === 'date') {
-      return results.sort((a, b) => {
-        // Move entries without dates to the very end.
-        if (!a.date) {
-          return -1;
-        }
-
-        if (!b.date) {
-          return 1;
-        }
-
-        return a.date.lastModified > b.date.lastModified ? -1 : a.date.lastModified === b.date.lastModified ? 0 : 1;
-      });
-    } else if (this.metaForm.value.sort === 'relevance') {
-      return results.sort((a, b) => {
-        return a.searchScore > b.searchScore ? -1 : a.searchScore === b.searchScore ? 0 : 1;
-      });
-    }
-  }
-  */
-
-  getFilteredValues(property) {
-    return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
-  }
   
+  getFilterBoxValues(title) {
+    return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
+  }
+
   filterOrgType(result) {
-    const orgTypes = this.hostElement.nativeElement.querySelector("filter-box[title='Organization Type']").values;
+    const orgTypes = this.getFilterBoxValues('Organization Type');
     if (orgTypes.length === 0) {
       return true;
     } else {
@@ -172,7 +115,7 @@ export class SearchResultsComponent {
   }
 
   filterFederalAgency(result) {
-    const names = this.hostElement.nativeElement.querySelector("filter-box[title='Federal Agency']").values;
+    const names = this.getFilterBoxValues('Federal Agency');
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
@@ -181,24 +124,25 @@ export class SearchResultsComponent {
   }
 
   filterLanguages(result) {
-    const filteredLanguages = this.getFilteredValues('languages');
+    const languages = this.getFilterBoxValues('Language');
 
-    if (filteredLanguages.length > 0) {
-      if (Array.isArray(result.languages)) {
-        return filteredLanguages.every(l => result.languages.indexOf(l) > -1);
-      } else {
-        return false;
-      }
-    } else {
+    if (languages.length === 0) {
       return true;
+    } else if (languages.length > 0) {
+      return languages.includes(result.agency.name); 
     }
   }
 
   filterLicenses(result) {
-    const filteredLicenses = this.getFilteredValues('licenses');
+    const licenses = this.getFilterBoxValues('License');
 
-    if (!result.permissions || !result.permissions.licenses || filteredLicenses.length === 0) {
-      return true;
+    if (licenses.length === 0) {
+      return true;      
+    } else if (Array.isArray(result.permissions.licenses) && licenses.length > 0) {
+      const objLicenseNames = result.permissions.licenses.map(license => license.name);
+      return licenses.some(l => objLicenseNames.includes(l));
+    } else {
+      return false;
     }
 
     if (Array.isArray(result.permissions.licenses)) {
