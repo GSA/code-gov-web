@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -35,6 +36,7 @@ export class SearchResultsComponent {
   private metaForm: FormGroup;
   private pageSize = 10;
   private sort = 'relevance';
+  private agencies = [];
 
   /**
    * Constructs a SearchResultsComponent.
@@ -49,7 +51,8 @@ export class SearchResultsComponent {
     private activatedRoute: ActivatedRoute,
     private clientService: ClientService,
     private formBuilder: FormBuilder,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private hostElement: ElementRef    
   ) {
 
     this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
@@ -66,8 +69,7 @@ export class SearchResultsComponent {
     }));
 
     this.filterForm.valueChanges.subscribe(data => {
-      // this.filteredResults = this.sortResults(this.filterResults(this.results));
-      this.filteredResults = this.filterResults(this.results);
+      this.filterResults();
     });
 
     /*
@@ -82,9 +84,14 @@ export class SearchResultsComponent {
       this.pageSize = data.pageSize;
       this.sort = data.sort;
 
-      this.filteredResults = this.sortResults(this.filterResults(this.results));
+      this.filterResults();
     });
     */
+    
+    this.clientService.getAgencies().subscribe(data => {
+      console.error("data:", data);
+      this.agencies = data.map(agency => agency.name);
+    });
   }
 
   ngOnInit() {
@@ -156,6 +163,16 @@ export class SearchResultsComponent {
     return Object.keys(this.filterForm.value[property]).filter(key => this.filterForm.value[property][key]);
   }
 
+  filterFederalAgency(result) {
+    console.log("starting filterFederalAgency with", result);
+    const names = this.hostElement.nativeElement.querySelector("filter-box[title='Federal Agency']").values;
+    if (names.length === 0) {
+      return true;
+    } else if (names.length > 0) {
+      return names.includes(result.agency.name); 
+    }
+  }
+
   filterLanguages(result) {
     const filteredLanguages = this.getFilteredValues('languages');
 
@@ -198,10 +215,12 @@ export class SearchResultsComponent {
     }
   }
 
-  filterResults(results) {
-    return results.filter(this.filterLanguages.bind(this))
+  filterResults() {
+    console.log("starting filterResults");
+    this.filteredResults = this.results.filter(this.filterLanguages.bind(this))
       .filter(this.filterLicenses.bind(this))
-      .filter(this.filterUsageTypes.bind(this));
+      .filter(this.filterUsageTypes.bind(this))
+      .filter(this.filterFederalAgency.bind(this));
   }
 
   getLanguages() {
@@ -228,5 +247,10 @@ export class SearchResultsComponent {
       }
     });
     return Array.from(licenses);
+  }
+  
+  onFilterBoxChange(event) {
+    console.error("starting onFilterBoxChange");
+    this.filterResults();
   }
 }

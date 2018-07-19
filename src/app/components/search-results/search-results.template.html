@@ -22,8 +22,9 @@
       <h1>Filter</h1>
       <filter-box
         title="Federal Agency"
-  options='["Assembly", "C", "C#", "C++", "Java", "JavaScript", "PHP", "Python", "Ruby", "Visual Basic"]'
-></filter-box>
+        [attr.options]="agencies | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
     </div>
     <div class="search-results-section width-three-quarters">
       <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>

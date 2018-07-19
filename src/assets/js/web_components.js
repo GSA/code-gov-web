@@ -7,7 +7,11 @@
             // establish prototype chain
             super();
         }
-        
+
+        static get observedAttributes() {
+          return ['options'];
+        }
+      
         get collapsed() {
           return this.className.includes("collapsed");
         }
@@ -18,7 +22,7 @@
         
         setClassName(className, newValue) {
           if (newValue) {
-            this.className = (this.className + " " + className).trim();
+            this.className = (this.className.replace(className, "") + " " + className).trim();
           } else {
             this.className = this.className.replace(className, "").trim();
           }          
@@ -36,6 +40,12 @@
         // fires after the element has been attached to the DOM
         connectedCallback() {
           this.update();
+        }
+
+        attributeChangedCallback(attrName, oldVal, newVal) {
+          if (attrName === 'options') {
+            this.update();
+          }
         }
 
         getHTML() {
@@ -74,16 +84,18 @@
               console.error("[filter-box] failed to parse rawOptions:", rawOptions);
               throw error;
             }
-            this.options = parsedOptions.map(option => {
-              return { name: option, value: option, selected: false };
-            });
-            console.log("options:", this.options);
+            if (parsedOptions) {
+              this.options = parsedOptions.map(option => {
+                return { name: option, value: option, selected: false };
+              });
+            } else {
+              this.options = [];
+            }
 
             container.className = "filter-box";
             
             container.innerHTML = this.getHTML(); 
 
-            // appending the container to the shadow DOM
             this.appendChild(container);            
             
             this.querySelector(".icon-angle-down").addEventListener('click', _ => {
@@ -104,9 +116,9 @@
               tag.addEventListener('change', event => {
                 const li = event.target.parentElement;
                 if (event.target.checked) {
-                  li.className += " checked";
+                  li.className = (li.className.replace("checked", "") + " checked").trim();
                 } else {
-                  li.className = li.className.replace("checked", "");                  
+                  li.className = li.className.replace("checked", "").trim();                  
                 }
               }, false);
             });
@@ -114,6 +126,8 @@
             /*
             addElementButton.addEventListener('click', this.addListItem, false);
             */
+            const event = new Event('change', {});
+            this.dispatchEvent(event);
         }
         
         toggleState() {
