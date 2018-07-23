@@ -13,9 +13,15 @@ import { StateService } from '../../services/state';
 
 import { content, images } from '../../../../config/code-gov-config.json';
 
-const licenses = Object.entries(licenseList).map(entry => {
-    return { name: entry[1].name, value: entry[0] };
+const licenseNameToId = {};
+const licenseIdToName = {};
+Object.entries(licenseList).forEach(values => {
+  const [licenseId, licenseData] = values;
+  const licenseName = licenseData.name;
+  licenseNameToId[licenseName] = licenseId;
+  licenseIdToName[licenseId] = licenseName;
 });
+
 
 /**
  * Class representing a search results page for repositories.
@@ -42,7 +48,7 @@ export class SearchResultsComponent {
   private pageSize = 10;
   private sort = 'relevance';
   private agencies = [];
-  private licenses = licenses;
+  private licenses = [];
 
   /**
    * Constructs a SearchResultsComponent.
@@ -89,6 +95,8 @@ export class SearchResultsComponent {
           this.results = repos;
           this.total = repos.length;
           this.isLoading = false;
+          
+          this.setLicenses();
         });
       }
     );
@@ -104,6 +112,16 @@ export class SearchResultsComponent {
   getFilterBoxValues(title) {
     return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
   }
+
+  filterUsageType(result) {
+    const selectedUsageTypes = this.getFilterBoxValues('Usage Type');
+
+    if (selectedUsageTypes.length === 0) {
+      return true;
+    } else {
+      return selectedUsageTypes.includes(result.permissions.usageType);
+    }
+  }  
 
   filterOrgType(result) {
     const orgTypes = this.getFilterBoxValues('Organization Type');
@@ -144,33 +162,14 @@ export class SearchResultsComponent {
     } else {
       return false;
     }
-
-    if (Array.isArray(result.permissions.licenses)) {
-      return filteredLicenses.every(l => result.permissions.licenses.map(license => license.name).indexOf(l) > -1);
-    } else {
-      return false;
-    }
-  }
-
-  filterUsageTypes(result) {
-    const filteredUsageTypes = this.getFilteredValues('usageTypes');
-
-    if (!result.permissions || !result.permissions.usageType || filteredUsageTypes.length === 0) {
-      return true;
-    }
-
-    if (result.permissions.usageType) {
-      return filteredUsageTypes.every(ut => result.permissions.usageType === ut);
-    } else {
-      return false;
-    }
   }
 
   filterResults() {
     console.log("starting filterResults");
-    this.filteredResults = this.results.filter(this.filterLanguages.bind(this))
-      .filter(this.filterLicenses.bind(this))
-      .filter(this.filterUsageTypes.bind(this))
+    this.filteredResults = this.results
+    //.filter(this.filterLanguages.bind(this))
+//      .filter(this.filterLicenses.bind(this))
+      .filter(this.filterUsageType.bind(this))
     //  .filter(this.filterOrgType.bind(this))
       .filter(this.filterFederalAgency.bind(this));
   }
@@ -187,18 +186,21 @@ export class SearchResultsComponent {
     return Array.from(languages);
   }
 
-  getLicenses() {
+  setLicenses() {
     let licenses = new Set();
     this.results.forEach(result => {
       if (result.permissions && result.permissions.licenses) {
         result.permissions.licenses.forEach(license => {
           if (license.name) {
-            licenses.add(license.name);
+            const licenseName = license.name;
+            if (validLicenseNames.includes(licenseName)) {
+              licenses.add(license.name);
+            }
           }
         });
       }
     });
-    return Array.from(licenses);
+    this.licenses = Array.from(licenses);
   }
   
   onFilterBoxChange(event) {

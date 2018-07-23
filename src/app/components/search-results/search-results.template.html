@@ -22,9 +22,16 @@
       <h1>Filter</h1>
       <filter-box
         title="Language"
-        options='["C", "C++", "Java", "JavaScript", "Python", "TypeScript"]'
+        options='["C", "C++", "Java", "JavaScript", "PHP", "Python", "TypeScript"]'
         (change)="onFilterBoxChange()"
       ></filter-box>
+
+      <filter-box
+        title="Usage Type"
+        options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"},{"name":"Exempt","value":"exempt"}]'
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
       <!--
       <filter-box
         title="Organization Type"
