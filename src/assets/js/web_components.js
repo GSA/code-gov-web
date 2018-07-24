@@ -72,6 +72,7 @@
           try {
             parsedOptions = JSON.parse(rawOptions);
           } catch (error) {
+            console.error("[filter-box] this.title:", this.title);
             console.error("[filter-box] failed to parse rawOptions:", rawOptions);
             throw error;
           }

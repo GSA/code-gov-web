@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, ElementRef, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, ViewEncapsulation } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -10,6 +10,7 @@ import 'rxjs/add/operator/map';
 import * as licenseList from 'spdx-license-list';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
+import * as allLanguages from '../../../enums/languages.json';
 
 import { content, images } from '../../../../config/code-gov-config.json';
 
@@ -49,6 +50,7 @@ export class SearchResultsComponent {
   private sort = 'relevance';
   private agencies = [];
   private licenses = [];
+  private languages = [];
 
   /**
    * Constructs a SearchResultsComponent.
@@ -64,13 +66,10 @@ export class SearchResultsComponent {
     private clientService: ClientService,
     private formBuilder: FormBuilder,
     private sanitizer: DomSanitizer,
-    private hostElement: ElementRef    
+    private hostElement: ElementRef,
+    private cd: ChangeDetectorRef
   ) {
     this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
-
-    this.clientService.getAgencies().subscribe(data => {
-      this.agencies = data.map(agency => agency.name);
-    });
   }
 
   ngOnInit() {
@@ -80,7 +79,6 @@ export class SearchResultsComponent {
       (response: any) => {
         this.queryValue = response.q;
         this.clientService.search(this.queryValue, 100).subscribe(data => {
-          console.log("data:", data);
           let repos = data.repos;
 
           if (content.search && content.search.entities) {
@@ -95,8 +93,11 @@ export class SearchResultsComponent {
           this.results = repos;
           this.total = repos.length;
           this.isLoading = false;
-          
+
+          this.setFederalAgencies();
+          this.setLanguages();
           this.setLicenses();
+          this.cd.detectChanges();
         });
       }
     );
@@ -110,7 +111,11 @@ export class SearchResultsComponent {
   }
   
   getFilterBoxValues(title) {
-    return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
+    try {
+      return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
+    } catch (error) {
+      console.error(`getFilterBoxValues caught the following error with ${title}`, error);
+    }
   }
 
   filterUsageType(result) {
@@ -119,7 +124,8 @@ export class SearchResultsComponent {
     if (selectedUsageTypes.length === 0) {
       return true;
     } else {
-      return selectedUsageTypes.includes(result.permissions.usageType);
+      const objUsageType = result.permissions.usageType;
+      return selectedUsageTypes.some(selected => objUsageType.startsWith(selected));
     }
   }  
 
@@ -142,48 +148,62 @@ export class SearchResultsComponent {
   }
 
   filterLanguages(result) {
-    const languages = this.getFilterBoxValues('Language');
+    const selectedLangs = this.getFilterBoxValues('Language');
 
-    if (languages.length === 0) {
+    if (selectedLangs.length === 0) {
       return true;
-    } else if (languages.length > 0) {
-      return languages.includes(result.agency.name); 
+    } else if (selectedLangs.length > 0) {
+      const repoLanguages = result.languages;
+      if (Array.isArray(repoLanguages)) {
+        return repoLanguages.some(repoLang => selectedLangs.includes(repoLang));
+      }
     }
   }
 
   filterLicenses(result) {
-    const licenses = this.getFilterBoxValues('License');
+    const selectedLicenseIds = this.getFilterBoxValues('License');
+    const selectedLicenseNames = selectedLicenseIds.map(id => licenseIdToName[id]);
+    let selectedLicenses = Array.from(new Set(selectedLicenseIds.concat(selectedLicenseNames)));
 
-    if (licenses.length === 0) {
+    if (selectedLicenseIds.length === 0) {
       return true;      
-    } else if (Array.isArray(result.permissions.licenses) && licenses.length > 0) {
-      const objLicenseNames = result.permissions.licenses.map(license => license.name);
-      return licenses.some(l => objLicenseNames.includes(l));
+    } else if (selectedLicenseIds.length > 0) {
+      if (Array.isArray(result.permissions.licenses)) {
+        const objLicenseNames = result.permissions.licenses.map(license => license.name);
+        return selectedLicenses.some(l => objLicenseNames.includes(l));
+      } else {
+        return false;
+      }
     } else {
       return false;
     }
   }
 
   filterResults() {
-    console.log("starting filterResults");
     this.filteredResults = this.results
-    //.filter(this.filterLanguages.bind(this))
-//      .filter(this.filterLicenses.bind(this))
+      .filter(this.filterLanguages.bind(this))
+      .filter(this.filterLicenses.bind(this))
       .filter(this.filterUsageType.bind(this))
     //  .filter(this.filterOrgType.bind(this))
       .filter(this.filterFederalAgency.bind(this));
   }
 
-  getLanguages() {
+  setLanguages() {
     let languages = new Set();
     this.results.forEach(result => {
       if (Array.isArray(result.languages)) {
-        result.languages.forEach((language: string) => {
-          languages.add(language);
+        result.languages.forEach(language=> {
+          if (allLanguages.includes(language)) {
+            languages.add(language);
+          }
         });
       }
     });
-    return Array.from(languages);
+    this.languages = Array.from(languages).sort();
+  }
+
+  setFederalAgencies() {
+    this.agencies = Array.from(new Set(this.results.map(repo => repo.agency.name)));
   }
 
   setLicenses() {
@@ -193,18 +213,21 @@ export class SearchResultsComponent {
         result.permissions.licenses.forEach(license => {
           if (license.name) {
             const licenseName = license.name;
-            if (validLicenseNames.includes(licenseName)) {
-              licenses.add(license.name);
+            if (licenseNameToId.hasOwnProperty(licenseName)) {
+              licenses.add(JSON.stringify({ name: licenseName, value: licenseNameToId[licenseName] }));
+            } else if (licenseIdToName.hasOwnProperty(licenseName)) {
+              licenses.add(JSON.stringify({ name: licenseIdToName[licenseName], value: licenseName }));
             }
           }
         });
       }
     });
-    this.licenses = Array.from(licenses);
+    this.licenses = Array.from(licenses)
+      .map(license => JSON.parse(license))
+      .sort((a, b) => a.name < b.name ? -1 : 1);      
   }
   
   onFilterBoxChange(event) {
-    console.error("starting onFilterBoxChange");
     this.filterResults();
   }
 }

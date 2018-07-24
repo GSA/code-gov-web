@@ -22,7 +22,7 @@
       <h1>Filter</h1>
       <filter-box
         title="Language"
-        options='["C", "C++", "Java", "JavaScript", "PHP", "Python", "TypeScript"]'
+        [attr.options]="languages | json"
         (change)="onFilterBoxChange()"
       ></filter-box>
 
@@ -45,7 +45,7 @@
         (change)="onFilterBoxChange()"
       ></filter-box>
       <filter-box
-        title="Licenses"
+        title="License"
         [attr.options]="licenses | json"
         (change)="onFilterBoxChange()"
       ></filter-box>
