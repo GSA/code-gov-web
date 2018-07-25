@@ -31,6 +31,9 @@
         color: $color-primary;
         text-decoration: underline;
         margin-bottom: 2.5em;
+        @media screen and (min-width: $medium-screen) {
+          margin-bottom: 0.2em;
+        }
       }
   }
 

@@ -21,8 +21,12 @@
 }
 
 h3 {
-  margin-bottom: 0.2em;
+  margin-bottom: 2.5em;
   font-weight: $font-bold;
+
+  @media screen and (min-width: $medium-screen) {
+    margin-bottom: 0.2em;
+  }
 }
 
 p {
