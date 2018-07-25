@@ -111,10 +111,7 @@ module.exports = function (env) {
             }),
           ],
           sassLoader: {
-            includePaths: [
-              require('bourbon').includePaths,
-              require('bourbon-neat').includePaths
-            ]
+            includePaths: []
           }
         }
       }),
