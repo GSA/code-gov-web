@@ -124,8 +124,7 @@ export class SearchResultsComponent {
     if (selectedUsageTypes.length === 0) {
       return true;
     } else {
-      const objUsageType = result.permissions.usageType;
-      return selectedUsageTypes.some(selected => objUsageType.startsWith(selected));
+      return selectedUsageTypes.includes(result.permissions.usageType);
     }
   }  
 
