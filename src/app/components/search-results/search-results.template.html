@@ -26,12 +26,6 @@
         (change)="onFilterBoxChange()"
       ></filter-box>
 
-      <filter-box
-        title="Usage Type"
-        options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"},{"name":"Exempt","value":"exempt"}]'
-        (change)="onFilterBoxChange()"
-      ></filter-box>
-
       <!--
       <filter-box
         title="Organization Type"
@@ -47,6 +41,12 @@
       <filter-box
         title="License"
         [attr.options]="licenses | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
+      <filter-box
+        title="Usage Type"
+        options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"},{"name":"Exempt","value":"exempt"}]'
         (change)="onFilterBoxChange()"
       ></filter-box>
     </div>
