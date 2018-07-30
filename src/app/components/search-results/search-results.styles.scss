@@ -126,10 +126,6 @@ h3 {
   }
 }
 
-.search-results-section {
-  @extend .width-whole;
-}
-
 .load-more-button {
   font-size: 1.1em;
   margin-top: 1em;
@@ -158,3 +154,32 @@ h3 {
     min-height: 25em;
   }
 }
+
+#search-filter-boxes {
+  
+  padding-top: 5px;
+
+  .filter-box {
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+
+    .filter-box {
+      width:100%;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    @include width-quarter();
+  }
+}
+
+#search-results-section {
+  width: 100%;
+  @media screen and (min-width: 750px) {
+    @include width-three-quarters();
+  }
+}
+
