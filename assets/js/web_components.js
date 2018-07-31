@@ -7,7 +7,11 @@
             // establish prototype chain
             super();
         }
-        
+
+        static get observedAttributes() {
+          return ['options'];
+        }
+      
         get collapsed() {
           return this.className.includes("collapsed");
         }
@@ -18,7 +22,7 @@
         
         setClassName(className, newValue) {
           if (newValue) {
-            this.className = (this.className + " " + className).trim();
+            this.className = (this.className.replace(className, "") + " " + className).trim();
           } else {
             this.className = this.className.replace(className, "").trim();
           }          
@@ -38,6 +42,12 @@
           this.update();
         }
 
+        attributeChangedCallback(attrName, oldVal, newVal) {
+          if (attrName === 'options') {
+            this.update();
+          }
+        }
+
         getHTML() {
           return `
             <div class="title-bar">${this.title}<i class="icon icon-angle-down"></i><i class="icon icon-angle-up"></i></div>
@@ -47,13 +57,35 @@
                 if (index >= 4 && this.showAll) className += "hideOnCollapsed";
                 return '<li class="' + className + '"><input type="checkbox" id="' + option.value + '" value="' + option.value + '"><label for="' + option.value + '"><span>' + option.name + '</span></label></li>';
               }).join("\n")}
-              ${this.options.length >= 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
+              ${this.options.length > 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
             </ul>
           `;     
         }
         
         get values() {
           return Array.from(this.querySelectorAll(":checked")).map(tag => tag.value);
+        }
+
+        parseOptions() {
+          const rawOptions = this.getAttribute('options');
+          let parsedOptions = null;
+          try {
+            parsedOptions = JSON.parse(rawOptions);
+          } catch (error) {
+            console.error("[filter-box] failed to parse rawOptions:", rawOptions);
+            throw error;
+          }
+          if (parsedOptions) {
+            this.options = parsedOptions.map(option => {
+              if (typeof option === "object" && option.name && option.value) {
+                return { name: option.name, value: option.value, selected: false };
+              } else {
+                return { name: option, value: option, selected: false };
+              }
+            });
+          } else {
+            this.options = [];
+          }          
         }
 
         update() {
@@ -66,24 +98,12 @@
             const container = document.createElement('div');
           
             this.title = this.getAttribute('title');
-            const rawOptions = this.getAttribute('options');
-            let parsedOptions = null;
-            try {
-              parsedOptions = JSON.parse(rawOptions);
-            } catch (error) {
-              console.error("[filter-box] failed to parse rawOptions:", rawOptions);
-              throw error;
-            }
-            this.options = parsedOptions.map(option => {
-              return { name: option, value: option, selected: false };
-            });
-            console.log("options:", this.options);
+            this.parseOptions();
 
             container.className = "filter-box";
             
             container.innerHTML = this.getHTML(); 
 
-            // appending the container to the shadow DOM
             this.appendChild(container);            
             
             this.querySelector(".icon-angle-down").addEventListener('click', _ => {
@@ -104,9 +124,9 @@
               tag.addEventListener('change', event => {
                 const li = event.target.parentElement;
                 if (event.target.checked) {
-                  li.className += " checked";
+                  li.className = (li.className.replace("checked", "") + " checked").trim();
                 } else {
-                  li.className = li.className.replace("checked", "");                  
+                  li.className = li.className.replace("checked", "").trim();                  
                 }
               }, false);
             });
@@ -114,6 +134,8 @@
             /*
             addElementButton.addEventListener('click', this.addListItem, false);
             */
+            const event = new Event('change', {});
+            this.dispatchEvent(event);
         }
         
         toggleState() {
