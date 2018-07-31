@@ -1,0 +1,62 @@
+<div class="search-results-content">
+  <div class="banner" [style.background-image]="bannerImage">
+    <div class="banner-content">
+      <div class="banner-title">Search Results</div>
+    </div>
+  </div>
+  <div class="indented">
+    <ul class="breadcrumbs">
+      <li><a routerLink="/">Home</a></li>
+      <li>Search Results</li>
+    </ul>
+  </div>
+  <div class="search-results-header indented">
+    <h3 *ngIf="total" class="repos-count">
+      We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
+    </h3>
+  </div>
+  <div class="indented">
+    <br/>
+    <br/>
+    <div id="search-filter-boxes">
+      <h1>Filter</h1>
+      <filter-box
+        [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
+        title="Language"
+        [attr.options]="languages | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
+      <!--
+      <filter-box
+        title="Organization Type"
+        options='[{"name":"Federal Government","value":"federal"},{"name":"State Government","value":"state"},{"name":"Local Government","value":"local"}]'
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+      -->
+      <filter-box
+        [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'"
+        title="Federal Agency"
+        [attr.options]="agencies | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
+      <filter-box
+        [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'"
+        title="License"
+        [attr.options]="licenses | json"
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
+      <filter-box
+        title="Usage Type"
+        options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"}]'
+        (change)="onFilterBoxChange()"
+      ></filter-box>
+
+    </div>
+    <div id="search-results-section">
+      <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
+    </div>
+  </div>
+</div>
