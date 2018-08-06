@@ -1,4 +1,5 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
+@import '../base-filter-page/base-filter-page.styles.scss';
 
 h3 {
   font-size: $lead-font-size;
@@ -154,32 +155,3 @@ h3 {
     min-height: 25em;
   }
 }
-
-#search-filter-boxes {
-  
-  padding-top: 5px;
-
-  .filter-box {
-    margin: 2rem auto;
-  }
-
-  @media screen and (max-width: 750px) {
-    width: 100%;
-
-    .filter-box {
-      width:100%;
-    }
-  }
-
-  @media screen and (min-width: 750px) {
-    @include width-quarter();
-  }
-}
-
-#search-results-section {
-  width: 100%;
-  @media screen and (min-width: 750px) {
-    @include width-three-quarters();
-  }
-}
-

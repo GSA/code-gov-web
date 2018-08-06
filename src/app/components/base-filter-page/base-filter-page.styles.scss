@@ -1,0 +1,30 @@
+@import '~@code.gov/code-gov-style/_sass/_variables';
+
+#filter-boxes-section {
+  
+  padding-top: 5px;
+
+  .filter-box {
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+
+    .filter-box {
+      width:100%;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    @include width-quarter();
+  }
+}
+
+#filter-results-section {
+  width: 100%;
+  @media screen and (min-width: 750px) {
+    @include width-three-quarters();
+  }
+}
+

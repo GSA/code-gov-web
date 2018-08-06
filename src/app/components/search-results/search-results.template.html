@@ -18,7 +18,7 @@
   <div class="indented">
     <br/>
     <br/>
-    <div id="search-filter-boxes">
+    <div id="filter-boxes-section">
       <h1>Filter</h1>
       <filter-box
         [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
@@ -55,7 +55,7 @@
       ></filter-box>
 
     </div>
-    <div id="search-results-section">
+    <div id="filter-results-section">
       <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>

@@ -25,6 +25,7 @@ Object.entries(licenseList).forEach(values => {
 
 @Component({
   selector: 'base-filter-page',
+  styles: [require('./base-filter-page.styles.scss')],
   template: ''
 })
 
