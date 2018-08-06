@@ -11,14 +11,9 @@ import * as licenseList from 'spdx-license-list';
 import { ClientService } from '../../services/client';
 import { StateService } from '../../services/state';
 import * as allLanguages from '../../../enums/languages.json';
-
 import { BaseFilterPageComponent } from '../base-filter-page';
-
-
 import { content, images } from '../../../../config/code-gov-config.json';
 
-
-console.error("BaseFilterPageComponent:", BaseFilterPageComponent);
 
 const licenseNameToId = {};
 const licenseIdToName = {};
