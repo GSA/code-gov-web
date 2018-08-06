@@ -43,11 +43,20 @@ Object.entries(licenseList).forEach(values => {
 
 export class SearchResultsComponent extends BaseFilterPageComponent {
 
-  constructor() {
+  constructor(
+    public stateService: StateService,
+    public activatedRoute: ActivatedRoute,
+    public clientService: ClientService,
+    public sanitizer: DomSanitizer,
+    public hostElement: ElementRef,
+    public cd: ChangeDetectorRef
+  ) {
     super();
   }
 
   ngOnInit() {
+    this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
+
     this.stateService.set('section', 'explore-code');
 
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
@@ -72,7 +81,7 @@ export class SearchResultsComponent extends BaseFilterPageComponent {
           super.setFederalAgencies();
           super.setLanguages();
           super.setLicenses();
-          super.cd.detectChanges();
+          this.cd.detectChanges();
         });
       }
     );

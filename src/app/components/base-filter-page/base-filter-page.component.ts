@@ -42,17 +42,8 @@ export class BaseFilterPageComponent {
   public agencies = [];
   public licenses = [];
   public languages = [];
+  public hostElement: ElementRef;
 
-  public constructor(
-    public stateService: StateService,
-    public activatedRoute: ActivatedRoute,
-    public clientService: ClientService,
-    public sanitizer: DomSanitizer,
-    public hostElement: ElementRef,
-    public cd: ChangeDetectorRef
-  ) {
-    this.bannerImage = this.sanitizer.bypassSecurityTrustStyle(`url('${images.background}')`);
-  }
 
   /**
    * On removal from the DOM, unsubscribe from URL updates.
