@@ -15,14 +15,6 @@ import { BaseFilterPageComponent } from '../base-filter-page';
 import { content, images } from '../../../../config/code-gov-config.json';
 
 
-const licenseNameToId = {};
-const licenseIdToName = {};
-Object.entries(licenseList).forEach(values => {
-  const [licenseId, licenseData] = values;
-  const licenseName = licenseData.name;
-  licenseNameToId[licenseName] = licenseId;
-  licenseIdToName[licenseId] = licenseName;
-});
 
 
 /**
