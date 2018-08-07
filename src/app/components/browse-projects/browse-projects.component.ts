@@ -23,8 +23,8 @@ import { content, images } from '../../../../config/code-gov-config.json';
 })
 
 export class BrowseProjectsComponent extends BaseFilterPageComponent {
-  private content: any = content.browse_projects;
-  private bannerImage;
+  public content: any = content.browse_projects;
+  public bannerImage;
 
   constructor(
     public stateService: StateService,
@@ -69,6 +69,5 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
       }
     );
   }
-
 
 }

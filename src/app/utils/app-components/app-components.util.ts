@@ -2,7 +2,7 @@ export * from '../../components/agency-list-item';
 export * from '../../components/autocomplete';
 export * from '../../components/autocomplete-result';
 export * from '../../components/app';
-export * from '../../components/browse_projects';
+export * from '../../components/browse-projects';
 export * from '../../components/faqs';
 export * from '../../components/footer';
 export * from '../../components/four-oh-four';

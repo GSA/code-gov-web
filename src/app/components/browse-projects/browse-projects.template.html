@@ -51,7 +51,10 @@
 
     </div>
     <div id="filter-results-section">
-      <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
+      <div *ngIf="isLoading">
+        Loading
+      </div>
+      <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
 </div>

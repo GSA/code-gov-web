@@ -29,6 +29,7 @@ import { content, images } from '../../../../config/code-gov-config.json';
 })
 
 export class SearchResultsComponent extends BaseFilterPageComponent {
+  public bannerImage;
 
   constructor(
     public stateService: StateService,

@@ -145,7 +145,7 @@ export class BaseFilterPageComponent {
   }
 
   public setFederalAgencies() {
-    this.agencies = Array.from(new Set(this.results.map(repo => repo.agency.name)));
+    this.agencies = Array.from(new Set(this.results.map(repo => repo.agency.name))).sort();
   }
 
   public setLicenses() {
