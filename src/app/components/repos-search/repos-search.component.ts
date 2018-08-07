@@ -51,6 +51,7 @@ export class ReposSearchComponent {
   ) {
     this.clientService.getAgencies().subscribe(entities => {
       this.entities = entities;
+      console.log("entities:", entities);
     });
   }
 
@@ -78,6 +79,6 @@ export class ReposSearchComponent {
   }
 
   onBrowseByEntityChange(newValue) {
-    this.router.navigateByUrl('/explore-code/agencies/' + newValue);
+    this.router.navigateByUrl('/browse-projects?agencies=' + newValue);
   }
 }

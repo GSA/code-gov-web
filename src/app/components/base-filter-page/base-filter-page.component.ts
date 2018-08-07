@@ -85,7 +85,7 @@ export class BaseFilterPageComponent {
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
-      return names.includes(result.agency.name); 
+      return names.includes(result.agency.acronym); 
     }
   }
 
@@ -144,8 +144,19 @@ export class BaseFilterPageComponent {
     this.languages = Array.from(languages).sort();
   }
 
-  public setFederalAgencies() {
-    this.agencies = Array.from(new Set(this.results.map(repo => repo.agency.name))).sort();
+  public setFederalAgencies(initialAgencies=[]) {
+    const nameToAcronym = {};
+    const names = new Set();
+    this.results.forEach(repo => {
+      const agency = repo.agency;
+      nameToAcronym[agency.name] = agency.acronym;
+      names.add(agency.name)
+    });
+    this.agencies = Array.from(names).sort().map(name => {
+      const acronym = nameToAcronym[name];
+      const checked = typeof initialAgencies === "object" && initialAgencies.includes(acronym);
+      return { name: name, value: acronym, checked: checked };
+    });
   }
 
   public setLicenses() {
@@ -171,5 +182,14 @@ export class BaseFilterPageComponent {
   
   public onFilterBoxChange(event) {
     this.filterResults();
+    
+    // set federal agency params
+    //const names = this.getFilterBoxValues('Federal Agency');
+    //let hash = window.location.hash.replace(/\?agencies=[^&]*/, "");
+    //if (names.length === 0) {
+    //  window.location.hash = hash;
+    //} else {
+    //  window.location.hash = hash + "?agencies=" + names.join(",");
+    //}
   }
 }

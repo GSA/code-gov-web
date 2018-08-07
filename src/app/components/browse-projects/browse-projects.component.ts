@@ -44,28 +44,22 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
 
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
-        this.queryValue = ''; //blank for all repos
-        this.clientService.search(this.queryValue, 10000).subscribe(data => {
-          let repos = data.repos;
-
-          if (content.search && content.search.entities) {
-            const entities = content.search.entities;
-            repos = repos.filter(repo => {
-              return entities.includes(repo.agency.name)
-              || entities.includes(repo.agency.acronym)
-              || entities.includes(repo.organization);
-            });
-          }
-
-          this.results = repos;
-          this.total = repos.length;
-          this.isLoading = false;
-
-          super.setFederalAgencies();
-          super.setLanguages();
-          super.setLicenses();
-          this.cd.detectChanges();
-        });
+        if (this.isLoading) {
+          const initialAgencies = response.agencies ? response.agencies.split(",") : [];
+          this.queryValue = ''; //blank for all repos
+          this.clientService.search(this.queryValue, 10000).subscribe(data => {
+            let repos = data.repos;
+  
+            this.results = repos;
+            this.total = repos.length;
+            this.isLoading = false;
+  
+            super.setFederalAgencies(initialAgencies);
+            super.setLanguages();
+            super.setLicenses();
+            this.cd.detectChanges();
+          });
+        }
       }
     );
   }
