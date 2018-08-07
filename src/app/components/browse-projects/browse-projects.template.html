@@ -19,38 +19,43 @@
         [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
         title="Language"
         [attr.options]="languages | json"
-        (change)="onFilterBoxChange()"
+        (change)="onFilterBoxChange($event)"
       ></filter-box>
 
       <!--
       <filter-box
         title="Organization Type"
         options='[{"name":"Federal Government","value":"federal"},{"name":"State Government","value":"state"},{"name":"Local Government","value":"local"}]'
-        (change)="onFilterBoxChange()"
+        (change)="onFilterBoxChange($event)"
       ></filter-box>
       -->
       <filter-box
         [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'"
         title="Federal Agency"
         [attr.options]="agencies | json"
-        (change)="onFilterBoxChange()"
+        (change)="onFilterBoxChange($event)"
       ></filter-box>
 
       <filter-box
         [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'"
         title="License"
         [attr.options]="licenses | json"
-        (change)="onFilterBoxChange()"
+        (change)="onFilterBoxChange($event)"
       ></filter-box>
 
       <filter-box
         title="Usage Type"
         options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"}]'
-        (change)="onFilterBoxChange()"
+        (change)="onFilterBoxChange($event)"
       ></filter-box>
 
     </div>
     <div id="filter-results-section">
+      <div class="filter-tags">
+        <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
+          <div class="filter-tag-title">{{filterTag.name}}</div>
+        </div>
+      </div>      
       <div *ngIf="isLoading">
         Loading
       </div>

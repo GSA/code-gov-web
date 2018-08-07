@@ -45,7 +45,7 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
     this.routeSubscription = this.activatedRoute.queryParams.subscribe(
       (response: any) => {
         if (this.isLoading) {
-          const initialAgencies = response.agencies ? response.agencies.split(",") : [];
+          const initialAgencies = response.agencies ? response.agencies.split(',') : [];
           this.queryValue = ''; //blank for all repos
           this.clientService.search(this.queryValue, 10000).subscribe(data => {
             let repos = data.repos;
@@ -55,6 +55,22 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
             this.isLoading = false;
   
             super.setFederalAgencies(initialAgencies);
+            if (initialAgencies.length > 0) {
+              const acronymToName = {};
+              this.results.forEach(repo => {
+                const agency = repo.agency;
+                acronymToName[agency.acronym] = agency.name;
+              });
+              initialAgencies.forEach(acronym => {
+                this.filterTags.push({
+                  category: 'Federal Agency',
+                  name: acronymToName[acronym],
+                  value: acronym
+                });
+              });
+            }
+
+            
             super.setLanguages();
             super.setLicenses();
             this.cd.detectChanges();

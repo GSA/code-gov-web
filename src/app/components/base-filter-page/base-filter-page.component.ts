@@ -53,7 +53,7 @@ export class BaseFilterPageComponent {
   public ngOnDestroy() {
     this.routeSubscription.unsubscribe();
   }
-  
+
   public getFilterBoxValues(title) {
     try {
       return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
@@ -70,7 +70,7 @@ export class BaseFilterPageComponent {
     } else {
       return selectedUsageTypes.includes(result.permissions.usageType);
     }
-  }  
+  }
 
   public filterOrgType(result) {
     const orgTypes = this.getFilterBoxValues('Organization Type');
@@ -86,7 +86,7 @@ export class BaseFilterPageComponent {
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
-      return names.includes(result.agency.acronym); 
+      return names.includes(result.agency.acronym);
     }
   }
 
@@ -109,7 +109,7 @@ export class BaseFilterPageComponent {
     let selectedLicenses = Array.from(new Set(selectedLicenseIds.concat(selectedLicenseNames)));
 
     if (selectedLicenseIds.length === 0) {
-      return true;      
+      return true;
     } else if (selectedLicenseIds.length > 0) {
       if (Array.isArray(result.permissions.licenses)) {
         const objLicenseNames = result.permissions.licenses.map(license => license.name);
@@ -155,7 +155,7 @@ export class BaseFilterPageComponent {
     });
     this.agencies = Array.from(names).sort().map(name => {
       const acronym = nameToAcronym[name];
-      const checked = typeof initialAgencies === "object" && initialAgencies.includes(acronym);
+      const checked = typeof initialAgencies === 'object' && initialAgencies.includes(acronym);
       return { name: name, value: acronym, checked: checked };
     });
   }
@@ -184,9 +184,8 @@ export class BaseFilterPageComponent {
   public onFilterBoxChange(event) {
     this.filterResults();
     
-    console.log("onFilterBoxChange:", event);
     const target = event.target;
-    if (target.tagName === "INPUT") {
+    if (target.tagName === 'INPUT') {
       const li = target.parentElement;
       const ul = li.parentElement;
       const container = ul.parentElement;
@@ -195,7 +194,7 @@ export class BaseFilterPageComponent {
       const category = webComponent.title;
       const checked = target.checked;
       const value = target.value;
-      const name = li.querySelector("label").textContent;
+      const name = li.querySelector('label').textContent;
       
       if (checked) {
         this.filterTags.push({ category, name, value });
@@ -208,11 +207,11 @@ export class BaseFilterPageComponent {
     
     // set federal agency params
     //const names = this.getFilterBoxValues('Federal Agency');
-    //let hash = window.location.hash.replace(/\?agencies=[^&]*/, "");
+    //let hash = window.location.hash.replace(/\?agencies=[^&]*/, '');
     //if (names.length === 0) {
     //  window.location.hash = hash;
     //} else {
-    //  window.location.hash = hash + "?agencies=" + names.join(",");
+    //  window.location.hash = hash + '?agencies=' + names.join(',');
     //}
   }
 
