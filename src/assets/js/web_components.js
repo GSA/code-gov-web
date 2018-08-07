@@ -47,14 +47,14 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
     constructor() {
         // establish prototype chain
         super();
-        
+
         this.internalId = Math.random().toString(36).substring(2, 7);
     }
 
     static get observedAttributes() {
       return ['options'];
     }
-  
+
     get collapsed() {
       return this.className.includes("collapsed");
     }
@@ -86,7 +86,6 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
     }
 
     attributeChangedCallback(attrName, oldVal, newVal) {
-      console.log("starting attributeChangedCallback with", attrName, oldVal, newVal);
       if (attrName === 'options') {
         this.update();
       }
@@ -99,14 +98,14 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
           ${this.options.map((option, index) => {
             let className = "";
             if (index >= 4 && this.showAll) className += "hideOnCollapsed";
-            if (option.checked) className += " checked";            
+            if (option.checked) className += " checked";
             return '<li class="' + className + '"><input' + (option.checked ? ' checked': '')  + ' type="checkbox" id="' + this.internalId + option.value + '" value="' + option.value + '"><label for="' + this.internalId + option.value + '"><span>' + option.name + '</span></label></li>';
           }).join("\n")}
           ${this.options.length > 4 ? '<li><span class="showMore">Show more</span><span class="showLess">Show less</span></li>' : ''}
         </ul>
-      `;     
+      `;
     }
-    
+
     get values() {
       return Array.from(this.querySelectorAll(":checked")).map(tag => tag.value);
     }
@@ -134,27 +133,27 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
         });
       } else {
         this.options = [];
-      }          
+      }
     }
 
     update() {
 
-        this.showAll = true;          
-      
+        this.showAll = true;
+
         this.innerHTML = "";
-      
+
         // creating a container for the editable-list component
         const container = document.createElement('div');
-      
+
         this.title = this.getAttribute('title');
         this.parseOptions();
 
         container.className = "filter-box";
-        
-        container.innerHTML = this.getHTML(); 
 
-        this.appendChild(container);            
-        
+        container.innerHTML = this.getHTML();
+
+        this.appendChild(container);
+
         this.querySelector(".icon-angle-down").addEventListener('click', _ => {
           this.setClassName('collapsed', false);
         }, false);
@@ -162,20 +161,20 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
         this.querySelector(".icon-angle-up").addEventListener('click', _ => {
           this.setClassName('collapsed', true);
         }, false);
-     
+
         this.querySelectorAll('.showLess, .showMore').forEach(tag => {
           tag.addEventListener('click', _ => {
             this.toggleState();
           }, false);
         });
-        
+
         this.querySelectorAll('input').forEach(tag => {
           tag.addEventListener('change', event => {
             const li = event.target.parentElement;
             if (event.target.checked) {
               li.className = (li.className.replace("checked", "") + " checked").trim();
             } else {
-              li.className = li.className.replace("checked", "").trim();                  
+              li.className = li.className.replace("checked", "").trim();
             }
           }, false);
         });
@@ -187,7 +186,7 @@ var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define|
         const event = new Event('change', {});
         this.dispatchEvent(event);
     }
-    
+
     toggleState() {
       this.showAll = !this.showAll;
     }

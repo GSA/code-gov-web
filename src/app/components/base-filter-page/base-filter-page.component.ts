@@ -44,6 +44,7 @@ export class BaseFilterPageComponent {
   public licenses = [];
   public languages = [];
   public hostElement: ElementRef;
+  public filterTags = [];
 
 
   /**
@@ -183,6 +184,28 @@ export class BaseFilterPageComponent {
   public onFilterBoxChange(event) {
     this.filterResults();
     
+    console.log("onFilterBoxChange:", event);
+    const target = event.target;
+    if (target.tagName === "INPUT") {
+      const li = target.parentElement;
+      const ul = li.parentElement;
+      const container = ul.parentElement;
+      const webComponent = container.parentElement;
+
+      const category = webComponent.title;
+      const checked = target.checked;
+      const value = target.value;
+      const name = li.querySelector("label").textContent;
+      
+      if (checked) {
+        this.filterTags.push({ category, name, value });
+      } else {
+        this.filterTags = this.filterTags.filter(tag => {
+          return tag.category !== category && tag.name != name;
+        });
+      }
+    }
+    
     // set federal agency params
     //const names = this.getFilterBoxValues('Federal Agency');
     //let hash = window.location.hash.replace(/\?agencies=[^&]*/, "");
@@ -191,5 +214,14 @@ export class BaseFilterPageComponent {
     //} else {
     //  window.location.hash = hash + "?agencies=" + names.join(",");
     //}
+  }
+
+  /* on trigger by click on filter tag */
+  public removeFilterTag(target) {
+    this.filterTags = this.filterTags.filter(tag => tag != target);
+    const nativeElement = this.hostElement.nativeElement;
+    const selector = `filter-box[title='${target.category}'] input[value='${target.value}']`;
+    nativeElement.querySelector(selector).checked = false;
+    this.filterResults();
   }
 }
