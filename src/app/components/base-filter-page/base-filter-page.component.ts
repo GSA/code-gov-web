@@ -25,6 +25,7 @@ Object.entries(licenseList).forEach(values => {
 
 @Component({
   selector: 'base-filter-page',
+  styles: [require('./base-filter-page.styles.scss')],
   template: ''
 })
 
@@ -43,6 +44,7 @@ export class BaseFilterPageComponent {
   public licenses = [];
   public languages = [];
   public hostElement: ElementRef;
+  public filterTags = [];
 
 
   /**
@@ -51,7 +53,7 @@ export class BaseFilterPageComponent {
   public ngOnDestroy() {
     this.routeSubscription.unsubscribe();
   }
-  
+
   public getFilterBoxValues(title) {
     try {
       return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
@@ -68,7 +70,7 @@ export class BaseFilterPageComponent {
     } else {
       return selectedUsageTypes.includes(result.permissions.usageType);
     }
-  }  
+  }
 
   public filterOrgType(result) {
     const orgTypes = this.getFilterBoxValues('Organization Type');
@@ -84,7 +86,7 @@ export class BaseFilterPageComponent {
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
-      return names.includes(result.agency.name); 
+      return names.includes(result.agency.acronym);
     }
   }
 
@@ -107,7 +109,7 @@ export class BaseFilterPageComponent {
     let selectedLicenses = Array.from(new Set(selectedLicenseIds.concat(selectedLicenseNames)));
 
     if (selectedLicenseIds.length === 0) {
-      return true;      
+      return true;
     } else if (selectedLicenseIds.length > 0) {
       if (Array.isArray(result.permissions.licenses)) {
         const objLicenseNames = result.permissions.licenses.map(license => license.name);
@@ -133,7 +135,7 @@ export class BaseFilterPageComponent {
     let languages = new Set();
     this.results.forEach(result => {
       if (Array.isArray(result.languages)) {
-        result.languages.forEach(language=> {
+        result.languages.forEach(language => {
           if (allLanguages.includes(language)) {
             languages.add(language);
           }
@@ -143,8 +145,19 @@ export class BaseFilterPageComponent {
     this.languages = Array.from(languages).sort();
   }
 
-  public setFederalAgencies() {
-    this.agencies = Array.from(new Set(this.results.map(repo => repo.agency.name)));
+  public setFederalAgencies(initialAgencies = []) {
+    const nameToAcronym = {};
+    const names = new Set();
+    this.results.forEach(repo => {
+      const agency = repo.agency;
+      nameToAcronym[agency.name] = agency.acronym;
+      names.add(agency.name);
+    });
+    this.agencies = Array.from(names).sort().map(name => {
+      const acronym = nameToAcronym[name];
+      const checked = typeof initialAgencies === 'object' && initialAgencies.includes(acronym);
+      return { name: name, value: acronym, checked: checked };
+    });
   }
 
   public setLicenses() {
@@ -165,10 +178,49 @@ export class BaseFilterPageComponent {
     });
     this.licenses = Array.from(licenses)
       .map(license => JSON.parse(license))
-      .sort((a, b) => a.name < b.name ? -1 : 1);      
+      .sort((a, b) => a.name < b.name ? -1 : 1);
   }
-  
+
   public onFilterBoxChange(event) {
+    this.filterResults();
+
+    const target = event.target;
+    if (target.tagName === 'INPUT') {
+      const li = target.parentElement;
+      const ul = li.parentElement;
+      const container = ul.parentElement;
+      const webComponent = container.parentElement;
+
+      const category = webComponent.title;
+      const checked = target.checked;
+      const value = target.value;
+      const name = li.querySelector('label').textContent;
+
+      if (checked) {
+        this.filterTags.push({ category, name, value });
+      } else {
+        this.filterTags = this.filterTags.filter(tag => {
+          return tag.category !== category && tag.name !== name;
+        });
+      }
+    }
+
+    // set federal agency params
+    // const names = this.getFilterBoxValues('Federal Agency');
+    // let hash = window.location.hash.replace(/\?agencies=[^&]*/, '');
+    // if (names.length === 0) {
+    //  window.location.hash = hash;
+    // } else {
+    //  window.location.hash = hash + '?agencies=' + names.join(',');
+    // }
+  }
+
+  /* on trigger by click on filter tag */
+  public removeFilterTag(target) {
+    this.filterTags = this.filterTags.filter(tag => tag !== target);
+    const nativeElement = this.hostElement.nativeElement;
+    const selector = `filter-box[title='${target.category}'] input[value='${target.value}']`;
+    nativeElement.querySelector(selector).checked = false;
     this.filterResults();
   }
 }

@@ -1,19 +1,14 @@
 <div class="search-results-content">
   <div class="banner" [style.background-image]="bannerImage">
     <div class="banner-content">
-      <div class="banner-title">Search Results</div>
+      <div class="banner-title">Browse Projects</div>
     </div>
   </div>
   <div class="indented">
     <ul class="breadcrumbs">
       <li><a routerLink="/">Home</a></li>
-      <li>Search Results</li>
+      <li>Browse Projects</li>
     </ul>
-  </div>
-  <div class="search-results-header indented">
-    <h3 *ngIf="total" class="repos-count">
-      We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
-    </h3>
   </div>
   <div class="indented">
     <br/>
@@ -56,12 +51,15 @@
 
     </div>
     <div id="filter-results-section">
-        <div class="filter-tags">
-          <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
-            <div class="filter-tag-title">{{filterTag.name}}</div>
-          </div>
+      <div class="filter-tags">
+        <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
+          <div class="filter-tag-title">{{filterTag.name}}</div>
         </div>
-      <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
+      </div>      
+      <div *ngIf="isLoading">
+        Loading
+      </div>
+      <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
 </div>
