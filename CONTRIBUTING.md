@@ -7,6 +7,7 @@ We encourage you to read this project's CONTRIBUTING policy (you are here), its 
 ## How to contribute to code-gov-web
 
 - Report bugs and request features via [Github Issues](https://github.com/GSA/code-gov-web/issues).
+   - If you are not sure that the issue is related to the website you can [create the issue in our general repository](https://github.com/gsa/code-gov/issue/new): [code-gov](https://github.com/gsa/code-gov)
 - Join the [mailing list](http://code.us15.list-manage.com/subscribe?u=57dec439b29289fc14396b8db&id=a317168ea7) and stay up to date with our latest news.
 - [Share your ideas](mailto://code@gsa.gov) for how to improve code-gov-web. We're always open to suggestions.
 - Create a [Github pull request](https://help.github.com/articles/creating-a-pull-request/) with new functionality or fixing a bug.
