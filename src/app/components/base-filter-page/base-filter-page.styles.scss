@@ -26,6 +26,14 @@
   @media screen and (min-width: 750px) {
     @include width-three-quarters();
   }
+  
+  .filter-tags {
+    .filter-tag {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 
