@@ -46,14 +46,14 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
       (response: any) => {
         if (this.isLoading) {
           const initialAgencies = response.agencies ? response.agencies.split(',') : [];
-          this.queryValue = ''; //blank for all repos
+          this.queryValue = ''; // blank for all repos
           this.clientService.search(this.queryValue, 10000).subscribe(data => {
             let repos = data.repos;
-  
+
             this.results = repos;
             this.total = repos.length;
             this.isLoading = false;
-  
+
             super.setFederalAgencies(initialAgencies);
             if (initialAgencies.length > 0) {
               const acronymToName = {};
@@ -70,7 +70,7 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
               });
             }
 
-            
+
             super.setLanguages();
             super.setLicenses();
             this.cd.detectChanges();

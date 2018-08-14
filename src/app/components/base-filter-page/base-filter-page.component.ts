@@ -135,7 +135,7 @@ export class BaseFilterPageComponent {
     let languages = new Set();
     this.results.forEach(result => {
       if (Array.isArray(result.languages)) {
-        result.languages.forEach(language=> {
+        result.languages.forEach(language => {
           if (allLanguages.includes(language)) {
             languages.add(language);
           }
@@ -145,13 +145,13 @@ export class BaseFilterPageComponent {
     this.languages = Array.from(languages).sort();
   }
 
-  public setFederalAgencies(initialAgencies=[]) {
+  public setFederalAgencies(initialAgencies = []) {
     const nameToAcronym = {};
     const names = new Set();
     this.results.forEach(repo => {
       const agency = repo.agency;
       nameToAcronym[agency.name] = agency.acronym;
-      names.add(agency.name)
+      names.add(agency.name);
     });
     this.agencies = Array.from(names).sort().map(name => {
       const acronym = nameToAcronym[name];
@@ -178,12 +178,12 @@ export class BaseFilterPageComponent {
     });
     this.licenses = Array.from(licenses)
       .map(license => JSON.parse(license))
-      .sort((a, b) => a.name < b.name ? -1 : 1);      
+      .sort((a, b) => a.name < b.name ? -1 : 1);
   }
-  
+
   public onFilterBoxChange(event) {
     this.filterResults();
-    
+
     const target = event.target;
     if (target.tagName === 'INPUT') {
       const li = target.parentElement;
@@ -195,29 +195,29 @@ export class BaseFilterPageComponent {
       const checked = target.checked;
       const value = target.value;
       const name = li.querySelector('label').textContent;
-      
+
       if (checked) {
         this.filterTags.push({ category, name, value });
       } else {
         this.filterTags = this.filterTags.filter(tag => {
-          return tag.category !== category && tag.name != name;
+          return tag.category !== category && tag.name !== name;
         });
       }
     }
-    
+
     // set federal agency params
-    //const names = this.getFilterBoxValues('Federal Agency');
-    //let hash = window.location.hash.replace(/\?agencies=[^&]*/, '');
-    //if (names.length === 0) {
+    // const names = this.getFilterBoxValues('Federal Agency');
+    // let hash = window.location.hash.replace(/\?agencies=[^&]*/, '');
+    // if (names.length === 0) {
     //  window.location.hash = hash;
-    //} else {
+    // } else {
     //  window.location.hash = hash + '?agencies=' + names.join(',');
-    //}
+    // }
   }
 
   /* on trigger by click on filter tag */
   public removeFilterTag(target) {
-    this.filterTags = this.filterTags.filter(tag => tag != target);
+    this.filterTags = this.filterTags.filter(tag => tag !== target);
     const nativeElement = this.hostElement.nativeElement;
     const selector = `filter-box[title='${target.category}'] input[value='${target.value}']`;
     nativeElement.querySelector(selector).checked = false;
