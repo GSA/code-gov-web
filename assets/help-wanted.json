@@ -14,7 +14,7 @@
       "effort": "Medium",
       "type": "Enhancement",
       "impact": "Open Government",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/416",
       "featured": true,
       "active": true,
@@ -36,7 +36,7 @@
       "effort": "Medium",
       "type": "Enhancement",
       "impact": "Open Government",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_uswds_jekyll",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_18f_uswds_jekyll",
       "issueURL": "https://github.com/18F/uswds-jekyll/issues/53",
       "featured": true,
       "active": true,
@@ -57,7 +57,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
       "issueURL": "https://github.com/nasa/openmct/issues/604",
       "featured": true,
       "active": true,
@@ -78,7 +78,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
       "issueURL": "https://github.com/nasa/openmct/issues/354",
       "featured": true,
       "active": true,
@@ -88,69 +88,6 @@
     },
     {
       "id": 5,
-      "title": "Remove action is available for non-editable objects",
-      "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
-      "updated": "2018-1-10",
-      "languages": [
-        "CSS",
-        "HTML",
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
-      "issueURL": "https://github.com/nasa/openmct/issues/1542",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "NASA",
-      "license": "Apache License, Version 2.0"
-    },
-    {
-      "id": 6,
-      "title": "Timers aren't visually indicating countdown or countup",
-      "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
-      "updated": "2018-1-29",
-      "languages": [
-        "CSS",
-        "HTML",
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
-      "issueURL": "https://github.com/nasa/openmct/issues/1895",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "NASA",
-      "license": "Apache License, Version 2.0"
-    },
-    {
-      "id": 7,
-      "title": "Various error messages in tables",
-      "description": "The table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
-      "updated": "2018-1-19",
-      "languages": [
-        "CSS",
-        "HTML",
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
-      "issueURL": "https://github.com/nasa/openmct/issues/1884",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "NASA",
-      "license": "Apache License, Version 2.0"
-    },
-    {
-      "id": 8,
       "title": "Y Axis disappears when deeply zoomed",
       "description": "Steps to reproduce:Create a plot containing a telemetry element, Zoom in on data repeatedly, looking at Y-Axis, Observe: Eventually Y Axis disappears and a console error is shown",
       "updated": "2018-1-16",
@@ -162,7 +99,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_open_mission_control_web_open_mct_web_",
       "issueURL": "https://github.com/nasa/openmct/issues/1879",
       "featured": true,
       "active": true,
@@ -171,7 +108,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 9,
+      "id": 6,
       "title": "Allow Angular components as Interfaces",
       "description": "Currently Interfaces are limited to relatively simple JS (or whatever plugin libraries are loaded by the interface). It would be very nice to be able to just add an additional component and somehow load it into the main module (or add in a new app module just for this), so interface developers can utilize Angular functionality to make writing interfaces easier (and better utilize our apis).",
       "updated": "2018-2-8",
@@ -182,7 +119,7 @@
       "skill": "Advanced",
       "effort": "Large",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NSA/repos/nsa_walkoff",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NSA/repos/nsa_walkoff",
       "issueURL": "https://github.com/iadgov/WALKOFF/issues/181",
       "featured": true,
       "active": true,
@@ -191,7 +128,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 10,
+      "id": 7,
       "title": "Split up the App API JSON Schema into multiple files",
       "description": "Currently the App API JSON Schema in data/walkoff_schema.json is about 1000 lines long and is getting a bit bloated and hand to maintain. It would be better if it is split up into manageable files and placed in its own directory inside data. This should only involve using the {'#ref' : '../path/to/new/file'} feature of JSON schemas (see this issue here: Julian/jsonschema#98). This may also involve a teak in core.config.config depending on the reference resolver being used and possibly a change to core.config.paths if the path to the schema changes.",
       "updated": "2018-2-8",
@@ -202,7 +139,7 @@
       "skill": "Beginner",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NSA/repos/nsa_walkoff",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NSA/repos/nsa_walkoff",
       "issueURL": "https://github.com/iadgov/WALKOFF/issues/171",
       "featured": true,
       "active": true,
@@ -211,7 +148,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 11,
+      "id": 8,
       "title": "client-side dependency installation support for interfaces",
       "description": "Currently, there is no clean way to install client dependencies for custom interfaces. If the install_dependencies.py script could look for a package.json file in the interfaces and run npm install in that directory, then this issue would be resolved",
       "updated": "2017-2-8",
@@ -222,7 +159,7 @@
       "skill": "Beginner",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NSA/repos/nsa_walkoff",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NSA/repos/nsa_walkoff",
       "issueURL": "https://github.com/iadgov/WALKOFF/issues/168",
       "featured": true,
       "active": true,
@@ -231,27 +168,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 12,
-      "title": "requirements.txt support in custom interfaces",
-      "description": "Custom interfaces may require additional dependencies, but currently, there is no straightforward mechanism to install them like there is for app dependencies. The install dependencies script could be modified to install dependencies for apps as well as interfaces",
-      "updated": "2018-2-8",
-      "languages": [
-        "Python",
-        "Angular"
-      ],
-      "skill": "Beginner",
-      "effort": "Small",
-      "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NSA/repos/nsa_walkoff",
-      "issueURL": "https://github.com/iadgov/WALKOFF/issues/167",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "NSA",
-      "license": "CC0 1.0 Universal License"
-    },
-    {
-      "id": 13,
+      "id": 9,
       "title": "Request: parameter to start on a specific module",
       "description": "We would love to be able to create bookmarklets that take us directly to a specific module, like Tables or Links. We have a set of bookmarklets shared by the team, organized by what they're used for, so it would be great to point someone directly to a specific module. We would love a parameter we can pass in the URL that selects the starting module.",
       "updated": "2018-2-14",
@@ -261,7 +178,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/SSA/repos/ssa_accessible_name_description_inspector",
+      "projectURL": "https://code.gov/#/explore-code/agencies/SSA/repos/ssa_accessible_name_description_inspector",
       "issueURL": "https://github.com/SSAgov/ANDI/issues/2",
       "featured": true,
       "active": true,
@@ -270,7 +187,7 @@
       "license": "Apache License, Version 2.0"
     },
     {
-      "id": 14,
+      "id": 10,
       "title": "Double border in footer links at mobile",
       "description": "When at mobile size the links in the footer stack on top of each other. Since it's three columns at desktop sizes, the three stacked columns end up with double borders between each stacked column. This is visible after the 'Open Government' and 'Tribal' link.",
       "updated": "2018-4-18",
@@ -281,7 +198,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/CFPB/repos/cfpb_cfgov_refresh",
+      "projectURL": "https://code.gov/#/explore-code/agencies/CFPB/repos/cfpb_cfgov_refresh",
       "issueURL": "https://github.com/cfpb/cfgov-refresh/issues/3575",
       "featured": true,
       "active": true,
@@ -290,7 +207,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 15,
+      "id": 11,
       "title": "Sauce window dimensions are not being set",
       "description": "Running tests on sauce shows up undefined,undefinedpx because this reference does not exist anymore https://github.com/cfpb/cfgov-refresh/blob/master/test/browser_tests/conf.js#L169-L170.",
       "updated": "2018-4-18",
@@ -302,7 +219,7 @@
       "effort": "Large",
       "type": "Bug",
       "impact": "Open Government",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/CFPB/repos/cfpb_cfgov_refresh",
+      "projectURL": "https://code.gov/#/explore-code/agencies/CFPB/repos/cfpb_cfgov_refresh",
       "issueURL": "https://github.com/cfpb/cfgov-refresh/issues/3527",
       "featured": true,
       "active": true,
@@ -311,7 +228,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 16,
+      "id": 12,
       "title": "State OR Region?",
       "description": "As currently designed, the site lets me think I can search for, say, schools in Virginia in the region of New England. Seems to me if I choose a state, the site should eliminate region as an additional option.",
       "updated": "2017-9-28",
@@ -321,7 +238,7 @@
       "skill": "Beginner",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/ED/repos/ed_college_scorecard",
+      "projectURL": "https://code.gov/#/explore-code/agencies/ED/repos/ed_college_scorecard",
       "issueURL": "https://github.com/RTICWDT/college-scorecard/issues/1640",
       "featured": true,
       "active": true,
@@ -330,7 +247,7 @@
       "license": "CC0 1.0 Universal License"
     },
     {
-      "id": 17,
+      "id": 13,
       "title": "AnnotationAttributes interface alignment",
       "description": "Evaluate AnnotationAttributes in light of the patterns established by ShapeAttributes and PlacemarkAttributes. Identify and resolve inconsistent patterns. We know of one property that breaks with the established attributes convention: AnnotationAttributes.opacity. This value is expressed in the attributes' alpha channel.",
       "updated": "2018-3-19",
@@ -340,7 +257,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
       "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/473",
       "featured": true,
       "active": true,
@@ -349,7 +266,7 @@
       "license": "Apache License Version 2.0"
     },
     {
-      "id": 18,
+      "id": 14,
       "title": "TectonicPlatesLayer plate geometries are drawn incorrectly",
       "description": "The TectonicPlatesLayer plate geometries are drawn with SurfacePolygon, yet the source geometry for each plate is a WKT LineString. The geometry should be drawn with SurfacePolyline.",
       "updated": "2018-3-9",
@@ -359,7 +276,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
       "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/453",
       "featured": true,
       "active": true,
@@ -368,7 +285,7 @@
       "license": "Apache License Version 2.0"
     },
     {
-      "id": 19,
+      "id": 15,
       "title": "Add a method for cleanly unregistering window controllers",
       "description": "With the new controller design, apps have the freedom to replace the default BasicWorldWindController with one of their own choosing. However, replacing the controller will currently leave dangling GestureRecognizer references (and perhaps others) hanging around, so we need to add a method of gracefully unregistering a controller and registering a new one that does proper clean up.",
       "updated": "2018-3-9",
@@ -378,7 +295,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_arc_webworldwind",
       "issueURL": "https://github.com/NASAWorldWind/WebWorldWind/issues/437",
       "featured": true,
       "active": true,
@@ -387,7 +304,7 @@
       "license": "Apache License Version 2.0"
     },
     {
-      "id": 20,
+      "id": 16,
       "title": "Make site run faster",
       "description": "The site is taking 12 seconds to build which makes it really time consuming to work on. It's loading all fractal components on every update which seem to be taking most of the time. Is it possible to only load them incrementally when that component has changed?",
       "updated": "2017-10-13",
@@ -397,7 +314,7 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
       "issueURL": "https://github.com/uswds/uswds-site/issues/417",
       "featured": true,
       "active": true,
@@ -406,83 +323,7 @@
       "license": "MIT license"
     },
     {
-      "id": 21,
-      "title": "[Grid]: 7/12 and 5/12 column bug",
-      "description": "When using these columns, it doesn't work bc the last column has right margin so it drops to the next line, bc the width exceeds the usa-grid space.",
-      "updated": "2018-3-2",
-      "languages": [
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
-      "issueURL": "https://github.com/uswds/uswds/issues/1955",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "GSA",
-      "license": "MIT license"
-    },
-    {
-      "id": 22,
-      "title": "Radio buttons mis-aligned when in an element with overflow-y: scroll",
-      "description": "Because the input for radio buttons are position: absolute, they do not scroll with the labels that follow them when inside an element that has overflow: scroll set. The end result is that once you've scrolled down within such an element, clicking on the visible labels triggers a click on the incorrect invisible input, which hasn't scrolled due to being position: absolute.\n\n(I recognize that overflow scroll is generally not preferred, but in a web application context we have a constraint that may require its use.)\n\nI believe a simple fix would be to add position: relative to one of the suggested ancestors of radio inputs. From the sample code in the docs, it looks like that might be .usa-fieldset-inputs, though I'm not sure if that would have any unintended side effects.",
-      "updated": "2018-3-2",
-      "languages": [
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Bug",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
-      "issueURL": "https://github.com/uswds/uswds/issues/1881",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "GSA",
-      "license": "MIT license"
-    },
-    {
-      "id": 23,
-      "title": "Remove explicit display values around aria-hidden",
-      "description": "We currently use the Sass mixin accessibly-hidden to display: none; when aria-hidden is set to true. Adding display values to the aria-hidden attribute is discouraged. We need to remove this mixing and replace by using either the hidden attribute or class names to define display properties.\n\nSee the following article for further guidance and information:\n\nhttps://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/",
-      "updated": "2018-3-20",
-      "languages": [
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
-      "issueURL": "https://github.com/uswds/uswds/issues/1513",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "GSA",
-      "license": "MIT license"
-    },
-    {
-      "id": 24,
-      "title": "Checkbox hidden when label & input order flipped",
-      "description": "I'm generating forms with Django and the default format that is rendered has <label> followed by <input> which works beautifully with textfields but not so with checkboxes. The label shows up but the checkbox is hidden. The only way I can make it show up is to write a custom form only to flip the order of those elements to match your documentation.",
-      "updated": "2018-2-19",
-      "languages": [
-        "JavaScript"
-      ],
-      "skill": "Intermediate",
-      "effort": "Medium",
-      "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_18f_web_design_standards",
-      "issueURL": "https://github.com/uswds/uswds/issues/1071",
-      "featured": true,
-      "active": true,
-      "popular": true,
-      "agency_id": "GSA",
-      "license": "MIT license"
-    },
-    {
-      "id": 25,
+      "id": 17,
       "title": "Create Visualizations of Data from API",
       "description": "Expected Behavior\nCreate cool data visualizations of the data from the API.\nCurrent Behavior\nHere's some examples:\nhttps://beta.observablehq.com/@danieljdufour/python-vs-ruby-number-of-projects-on-code-gov\nhttps://beta.observablehq.com/@danieljdufour/top-10-languages-of-projects-on-code-gov\nPossible Solution\nCreate a data visualization using D3 or any library you might like.",
       "updated": "2018-03-02",
@@ -492,7 +333,7 @@
       "skill": "Intermediate",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov_api",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov_api",
       "issueURL": "https://github.com/GSA/code-gov-api/issues/198",
       "featured": true,
       "popular": true,
@@ -500,7 +341,7 @@
       "license": "CC0-1.0"
     },
     {
-      "id": 26,
+      "id": 18,
       "title": "Fix Repo Component Tests",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
       "updated": "2018-03-02",
@@ -510,7 +351,7 @@
       "skill": "Advanced",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/473",
       "featured": true,
       "popular": true,
@@ -518,7 +359,7 @@
       "license": "CC0-1.0"
     },
     {
-      "id": 27,
+      "id": 19,
       "title": "Fix Agency Page Tests",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
       "updated": "2018-03-02",
@@ -528,7 +369,7 @@
       "skill": "Advanced",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/472",
       "featured": true,
       "popular": true,
@@ -536,7 +377,7 @@
       "license": "CC0-1.0"
     },
     {
-      "id": 28,
+      "id": 20,
       "title": "Fix Autocomplete-Result Test",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
       "updated": "2018-03-02",
@@ -546,7 +387,7 @@
       "skill": "Advanced",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/471",
       "featured": true,
       "popular": true,
@@ -554,7 +395,7 @@
       "license": "CC0-1.0"
     },
     {
-      "id": 29,
+      "id": 21,
       "title": "Search Bar: Pressing down/up arrow on keyboard should move through suggested search options",
       "description": "When I press the down/up arrow keys I should be able to select the available suggested search options",
       "updated": "2018-03-07",
@@ -566,7 +407,7 @@
       "skill": "Beginner",
       "effort": "Small",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/492",
       "featured": true,
       "popular": true,
@@ -574,7 +415,7 @@
       "license": "CC0-1.0"
     },
     {
-      "id": 30,
+      "id": 22,
       "title": "Update for Quarry release",
       "description": "Update SDK for DOL's v2 API",
       "updated": "2015-03-31",
@@ -584,12 +425,336 @@
       "skill": "Intermediate",
       "effort": "Medium",
       "type": "Enhancement",
-      "projectURL": "https://code.gov/#!/explore-code/agencies/DOL/repos/dol_ocio_php_doldatasdk",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOL/repos/dol_ocio_php_doldatasdk",
       "issueURL": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK/issues/1",
       "featured": true,
       "popular": true,
       "agency_id": "DOL",
       "license": "Public Domain"
+    },
+    {
+      "id": 23,
+      "title": "Using Spack in containerized environments cleanup examples",
+      "description": "This is a documentation feature request: To facilitate optimal use in containerized environments, it would be helpful to have an example of using spack with (say) a docker ubuntu image, including recommendations of how to maximally clean up after package installs to minimize space usage. This is implicit in the current documentation, but a specific section with examples would establish best practices.",
+      "updated": "2018-03-01",
+      "languages": [
+        "Python"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOE/repos/doe_lawrence_livermore_national_laboratory_llnl_spack_supercomputing_package_manager",
+      "issueURL": "https://github.com/spack/spack/issues/7186",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOE",
+      "license": "LGPL-2.1"
+    },
+    {
+      "id": 24,
+      "title": "Update/Fix the MacPorts Recipe",
+      "description": "Failed installation",
+      "updated": "2018-03-22",
+      "languages": [
+        "C++"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOE/repos/doe_sandia_national_laboratories_snl_cantrilbat_cantera_apps_v1_0_beta",
+      "issueURL": "https://github.com/Cantera/cantera/issues/496",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": 25,
+      "title": "Avoiding unnecesary data reading and histogram calculations",
+      "description": "In the typical work, using the slider interface, operations related to the colorbar do not require reading and processing the data, but only need refreshing the imshow plot. In a particular case of the 2D histograms generated from the particle data, the processing with np.histogram2d can be time consuming, so it would be nice to avoid it.",
+      "updated": "2018-05-14",
+      "languages": [
+        "Jupyter Notebook"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOE/repos/doe_lawrence_livermore_national_laboratory_llnl_openpmd_viewer",
+      "issueURL": "https://github.com/openPMD/openPMD-viewer/issues/201",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": 26,
+      "title": "Add support and continuous integration on Windows",
+      "description": "We could use AppVeyor for CI on Windows...",
+      "updated": "2018-05-23",
+      "languages": [
+        "Jupyter Notebook"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOE/repos/doe_lawrence_livermore_national_laboratory_llnl_openpmd_viewer",
+      "issueURL": "https://github.com/openPMD/openPMD-viewer/issues/206",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOE",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": 27,
+      "title": "Add featured code projects 'above the fold' on homepage",
+      "description": "Users visiting the site might want to see some of the neat projects that have been open sourced within the DoD. It would be good to have a snapshot of two or three of these on the homepage, above the fold.",
+      "updated": "2018-06-22",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOD/repos/dod_dds_code_mil",
+      "issueURL": "https://github.com/Code-dot-mil/code.mil/issues/140",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOD",
+      "license": "MIT"
+    },
+    {
+      "id": 28,
+      "title": "Design a Code.mil logo",
+      "description": "State purpose and audience, Identify design requirements (color requirements, fonts which the agency prefers), Propose candidate designs",
+      "updated": "2018-06-22",
+      "languages": [
+        "Design"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/DOD/repos/dod_dds_code_mil",
+      "issueURL": "https://github.com/Code-dot-mil/code.mil/issues/147",
+      "featured": true,
+      "popular": true,
+      "agency_id": "DOD",
+      "license": "MIT"
+    },
+    {
+      "id": 29,
+      "title": "Implement better mobile detection",
+      "description": "Right now, we do not have a consistent way of recognizing mobile devices such as tablets and mobile. The tour code, for example, uses a function called validScreenSize which looks for a window width and height. What we really want here is an ability to detect mobile devices. We use separate functions throughout the rest of the code base for similar mobile / screen size detection.",
+      "updated": "2018-05-04",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_gsfc_worldview_satellite_imagery_browsing_downloading_tool",
+      "issueURL": "https://github.com/nasa-gibs/worldview/issues/709",
+      "featured": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "NASA v3"
+    },
+    {
+      "id": 30,
+      "title": "Replace mobiscroll for mobile timewheels",
+      "description": "We are currently running mobiscroll 2.6.0 and are pulling it in via a browserify-shim. Ideally, we would update this package to include the latest version (3.2.6 / 4.0.0beta-3.1) and pull it in via npm but version 2.7+ have a new license agreement so we can't use the latest version. So, we need to find a replacement solution.",
+      "updated": "2018-07-30",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Beginner",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/NASA/repos/nasa_gsfc_worldview_satellite_imagery_browsing_downloading_tool",
+      "issueURL": "https://github.com/nasa-gibs/worldview/issues/757",
+      "featured": true,
+      "popular": true,
+      "agency_id": "NASA",
+      "license": "NASA v3"
+    },
+    {
+      "id": 31,
+      "title": "Add a login script without any cf push",
+      "description": "I want to be able to run arbitrary cf commands like cf run-task. To do this I have to run all the login commands myslef. If this was a script, I could use it and it could be re-used in cf_deploy.sh.",
+      "updated": "2018-04-07",
+      "languages": [
+        "Shell"
+      ],
+      "skill": "Intermediate",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_18f_cloud_foundry_cli",
+      "issueURL": "https://github.com/18F/cloud-foundry-cli/issues/11",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": ""
+    },
+    {
+      "id": 32,
+      "title": "Separate ELK ES client config from custom index ES client config",
+      "description": "Right now the ES module is designed in such a way that all accesses to Elasticsearch go to the same cluster endpoint(s).\n\nWe would like to be able to send requests related to analytics to one ES endpoint and requests related to our custom document indices (i.e. anything using Indexable) to another ES endpoint. This separation would allow us to upgrade our Elasticsearch usage from ES 1.x to ES 5.x or 6.x independently: first for analytics, then for our custom indices; or vice versa.",
+      "updated": "2018-06-08",
+      "languages": [
+        "Ruby"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_search_gov",
+      "issueURL": "https://github.com/GSA/search-gov/issues/3",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": ""
+    },
+    {
+      "id": 33,
+      "title": "Upgrade custom indices to use Elasticsearch 5.6.x",
+      "description": "See #3 for background. Once we can separate ES connections for Kibana/Logstash/analytics from ES connections for custom indices, we would like to upgrade our ES server version for custom indices to use ES 5.6.x.",
+      "updated": "2018-03-07",
+      "languages": [
+        "Ruby"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_search_gov",
+      "issueURL": "https://github.com/GSA/search-gov/issues/5",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": ""
+    },
+    {
+      "id": 34,
+      "title": "Upgrade search-gov to Rails 5.x",
+      "description": "It's time to say farewell to the fours and hello to the fives, in order to keep the codebase current with security patches and the latest Rails features.\n\nThe search-gov app currently uses 4.2.10, and we should upgrade either to the latest 5.1.x release (5.1.5 at the time of writing), or 5.2.x if it is released prior to working on this story.",
+      "updated": "2018-06-08",
+      "languages": [
+        "Ruby"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_search_gov",
+      "issueURL": "https://github.com/GSA/search-gov/issues/9",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": ""
+    },
+    {
+      "id": 35,
+      "title": "Improve the graphs/visuals in Tock",
+      "description": "Tock's graphs and visuals in the reports page could use some TLC! If there's something we can do here in a reasonable amount of time, it would be a big help.",
+      "updated": "2018-03-19",
+      "languages": [
+        "Python"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_18f_tock",
+      "issueURL": "https://github.com/GSA/search-gov/issues/9",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0 1.0 Universal"
+    },
+    {
+      "id": 36,
+      "title": "Improve the graphs/visuals in Tock",
+      "description": "Tock's graphs and visuals in the reports page could use some TLC! If there's something we can do here in a reasonable amount of time, it would be a big help.",
+      "updated": "2018-03-19",
+      "languages": [
+        "Python"
+      ],
+      "skill": "Intermediate",
+      "effort": "Medium",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_18f_tock",
+      "issueURL": "https://github.com/GSA/search-gov/issues/9",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "CC0 1.0 Universal"
+    },
+    {
+      "id": 37,
+      "title": "Add endpoint for exposing the code.json file",
+      "description": "It would be great to add an endpoint to the REST API to enable an end user to get the full code.json file for all the federal agencies. That would allow comparisons against the data from agencies.\n\nFor instance, I am interesting in comparing Federal wide information to the data at DOECode. Additionally, I have am investigating other integrations with, for instance, GitHub.com/llnl/scraper",
+      "updated": "2018-03-22",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Beginner",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_code_gov_api",
+      "issueURL": "https://github.com/GSA/code-gov-api/issues/202",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT"
+    },
+    {
+      "id": 38,
+      "title": "Update inventory creator script to only collect metadata on GSA code repos",
+      "description": "This task supports the GSA CTO Digital Service team with creating the agency source code inventory. We currently have a script/tool that is the crux of the repo but it collects all GitHub GSA org repos, not only the ones with the codeinventory.yml file which should be the ones with only code in them.",
+      "updated": "2018-02-02",
+      "languages": [
+        "Ruby"
+      ],
+      "skill": "Intermediate",
+      "effort": "Small",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_codeinventory",
+      "issueURL": "https://github.com/GSA/codeinventory/issues/6",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "Public Domain"
+    },
+    {
+      "id": 39,
+      "title": "Update inventory creator script to only collect metadata on GSA code repos",
+      "description": "We are currently using the root of the API (/api) as an informative and healthcheck endpoint for our API. This endpoint can only be accessed using an API key. We want to create a separate healthcheck endpoint and leave the /api endpoint for informative uses.",
+      "updated": "2018-07-24",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Small",
+      "type": "New Feature",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_code_gov_api",
+      "issueURL": "https://github.com/GSA/code-gov-api/issues/242",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT"
+    },
+    {
+      "id": 40,
+      "title": "Add broken links to status report",
+      "description": "During the harvesting process, we need to add data about any broken links that appear in the repository data.",
+      "updated": "2018-07-31",
+      "languages": [
+        "JavaScript"
+      ],
+      "skill": "Intermediate",
+      "effort": "Large",
+      "type": "Enhancement",
+      "projectURL": "https://code.gov/#/explore-code/agencies/GSA/repos/gsa_gsa_code_gov_api",
+      "issueURL": "https://github.com/GSA/code-gov-api/issues/207",
+      "featured": true,
+      "popular": true,
+      "agency_id": "GSA",
+      "license": "MIT"
     }
   ]
 }
