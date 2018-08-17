@@ -6,6 +6,23 @@
   padding: 1em;
   text-decoration: none;
 
+  hr {
+    visibility: hidden;
+    display: none;
+
+    @media screen and (min-width: $small-screen) {
+      border-top: 1px solid $color-gray-lighter;
+      display: block;
+      margin-top: 2rem;
+      max-width: 100%;
+      visibility: visible;
+    }
+  }
+
+  .agency-details > span {
+    font-weight: $font-bold;
+  }
+
   @media screen and (max-width: $small-screen - 1) {
     &.card {
       border-left: 0;
