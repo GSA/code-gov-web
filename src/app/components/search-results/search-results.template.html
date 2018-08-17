@@ -10,15 +10,16 @@
       <li>Search Results</li>
     </ul>
   </div>
-  <div class="search-results-header indented">
-    <h3 *ngIf="total" class="repos-count">
-      We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
-    </h3>
+  <div class="search-results-header">
+    <div class="indented">
+      <div class="width-quarter"></div>
+      <h3 *ngIf="total" class="repos-count width-three-quarters">
+        We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
+      </h3>
+    </div>
   </div>
   <div class="indented">
-    <br/>
-    <br/>
-    <div id="filter-boxes-section">
+    <div id="filter-boxes-section" class="width-quarter">
       <h1>Filter</h1>
       <filter-box
         [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
@@ -55,7 +56,8 @@
       ></filter-box>
 
     </div>
-    <div id="filter-results-section">
+    <div id="filter-results-section" class="width-three-quarters">
+      <div class="sort-results"></div>
         <div class="filter-tags">
           <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
             <div class="filter-tag-title">{{filterTag.name}}</div>
