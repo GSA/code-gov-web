@@ -21,6 +21,14 @@
 
   .agency-details > span {
     font-weight: $font-bold;
+
+    &:last-child {
+      margin-left: 1.5rem;
+    }
+    
+    &:only-child {
+      margin-left: 0;
+    }
   }
 
   @media screen and (max-width: $small-screen - 1) {

@@ -8,6 +8,7 @@
   </p>
   <div class="agency-details">
       <span>Agency: </span>{{repo.agency.name}}
+      <span *ngIf="repo.date?.lastModified">Last updated: </span>{{repo.date?.lastModified | date: "MM/dd/yy"}}
   </div>
   <hr>
   <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
