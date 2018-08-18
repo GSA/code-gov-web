@@ -12,10 +12,6 @@
   </div>
   <hr>
   <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
-    <li *ngIf="isGitHubRepo()">
-      <i class="icon icon-github"></i>
-      <span><a [href]="repo.repositoryURL">{{ repo.repositoryURL }}</a></span>
-    </li>
     <li *ngIf="repo.permissions?.usageType === 'openSource'">
       <i class="icon icon-ok-circled2"></i><span>Open Source</span>
     </li>
@@ -31,4 +27,7 @@
       <span>{{ repo.permissions?.licenses[0]?.name }}</span>
     </li>
   </ul>
+  <div *ngIf="isGitHubRepo()">
+      <a [href]="repo.repositoryURL"><button>Go to Repo</button></a>
+  </div>
 </div>
