@@ -105,8 +105,8 @@ export class ClientService {
   getAgencies(): Observable<Agency[]> {
     let url = this.BASE + `agencies?size=1000`;
 
-    if(this.KEY) {
-      `&api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `&api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
@@ -121,8 +121,8 @@ export class ClientService {
   getAgencyByAcronym(acronym: string): Observable<Agency> {
     let url = this.BASE + `agencies?size=1000`;
 
-    if(this.KEY) {
-      `&api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `&api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
@@ -138,8 +138,8 @@ export class ClientService {
     */
     let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc`;
 
-    if(this.KEY) {
-      `&api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `&api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
@@ -150,8 +150,8 @@ export class ClientService {
   getRepoByID(acronym: string = ''): Observable<Repo> {
     let url = this.BASE + `repos/${acronym}`;
 
-    if(this.KEY) {
-      `?api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `?api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
@@ -161,8 +161,8 @@ export class ClientService {
   suggest(term: string = '', size: number = 10) {
     let url = this.BASE + `terms?term=${term}&size=${size}`;
 
-    if(this.KEY) {
-      `&api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `&api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
@@ -174,8 +174,8 @@ export class ClientService {
     let permissionsFilter = '&permissions.usageType=openSource&permissions.usageType=governmentWideReuse';
     let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}`;
 
-    if(this.KEY) {
-      `&api_key=${this.KEY}`;
+    if (this.KEY) {
+      url += `&api_key=${this.KEY}`;
     }
 
     return this.http.get(url)
