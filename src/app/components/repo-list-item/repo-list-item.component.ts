@@ -48,9 +48,9 @@ export class RepoListItemComponent {
       let score = this.repo.score;
       if (score > 0 && score < 4) {
         return 'low';
-      } else if (score >= 4 && score < 7.5) {
+      } else if (score >= 4 && score < 7) {
         return 'medium';
-      } else if (score >= 7.5) {
+      } else if (score >= 7) {
         return 'high';
       } else {
         return '';
