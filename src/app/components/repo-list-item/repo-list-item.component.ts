@@ -42,4 +42,19 @@ export class RepoListItemComponent {
       return /github\.com/.test(this.repo.repositoryURL);
     }
   }
+
+  getDataQualityClass(): string {
+    if (this.repo && this.repo.score) {
+      let score = this.repo.score;
+      if (score > 0 && score < 4) {
+        return 'low';
+      } else if (score >= 4 && score < 7.5) {
+        return 'medium';
+      } else if (score >= 7.5) {
+        return 'high';
+      } else {
+        return '';
+      }
+    }
+  }
 }

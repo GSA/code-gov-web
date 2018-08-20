@@ -149,12 +149,11 @@ export class ClientService {
     let permissionsFilter = '&permissions.usageType=openSource&permissions.usageType=governmentWideReuse';
     let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}&api_key=${this.KEY}`;
     return this.http.get(url)
-    .map((response: Response) => response.json())
-    .map((data: any) => {
-      data.repos.filter(repo => {
-        return repo.permissions
-          && repo.permissions.usageType
-          && ['openSource', 'governmentWideReuse'].indexOf(repo.permissions.usageType) > -1;
+    .map(response => response.json())
+    .map(data => {
+      data.repos.forEach(repo => {
+        // rounding score to one decimal place
+        repo.score = Math.round( repo.score * 10) / 10;
       });
       return data;
     });
