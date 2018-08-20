@@ -89,8 +89,8 @@ export interface AgencyStatus {
 @Injectable()
 export class ClientService {
 
-  private BASE: string = api.base;
-  private KEY: string = process.env.CODE_GOV_API_KEY || api.key;
+  private BASE: string = api.base || 'http://localhost:3000/';
+  private KEY: string = process.env.CODE_GOV_API_KEY || api.key || undefined;
 
   constructor (private http: Http) {
   }
@@ -103,7 +103,12 @@ export class ClientService {
     });
   }
   getAgencies(): Observable<Agency[]> {
-    let url = this.BASE + `agencies?size=1000&api_key=${this.KEY}`;
+    let url = this.BASE + `agencies?size=1000`;
+
+    if(this.KEY) {
+      `&api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -114,7 +119,12 @@ export class ClientService {
   }
 
   getAgencyByAcronym(acronym: string): Observable<Agency> {
-    let url = this.BASE + `agencies?size=1000&api_key=${this.KEY}`;
+    let url = this.BASE + `agencies?size=1000`;
+
+    if(this.KEY) {
+      `&api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
@@ -126,20 +136,35 @@ export class ClientService {
     /*
       - permissions.usageType is 'openSource' or 'governmentWideReuse'
     */
-    let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc&api_key=${this.KEY}`;
+    let url = this.BASE + `repos?agency.acronym=${acronym}&size=${size}&sort=name__asc`;
+
+    if(this.KEY) {
+      `&api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => data.repos);
   }
 
   getRepoByID(acronym: string = ''): Observable<Repo> {
-    let url = this.BASE + `repos/${acronym}?api_key=${this.KEY}`;
+    let url = this.BASE + `repos/${acronym}`;
+
+    if(this.KEY) {
+      `?api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json());
   }
 
   suggest(term: string = '', size: number = 10) {
-    let url = this.BASE + `terms?term=${term}&size=${size}&api_key=${this.KEY}`;
+    let url = this.BASE + `terms?term=${term}&size=${size}`;
+
+    if(this.KEY) {
+      `&api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => data.terms);
@@ -147,7 +172,12 @@ export class ClientService {
 
   search(text: string = '', size: number = 10) {
     let permissionsFilter = '&permissions.usageType=openSource&permissions.usageType=governmentWideReuse';
-    let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}&api_key=${this.KEY}`;
+    let url = this.BASE + `repos?q=${text}` + permissionsFilter + `&size=${size}`;
+
+    if(this.KEY) {
+      `&api_key=${this.KEY}`;
+    }
+
     return this.http.get(url)
     .map((response: Response) => response.json())
     .map((data: any) => {
