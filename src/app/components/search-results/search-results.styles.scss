@@ -1,2 +1,30 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 @import '../base-filter-page/base-filter-page.styles.scss';
+
+.search-results-content {
+
+    .search-form {
+        margin: 1em auto;
+
+        .search-input-and-button-wrapper {
+
+            input {
+                border: 1px solid $color-gray-lighter;
+            }
+
+            button.go {
+                border: 1px solid $color-gray-lighter;
+            }
+        }
+    }
+
+    .search-input-container {
+        width: 100% !important;
+    }
+
+
+    .browse, .search-description-wrapper{
+        display: none;
+        visibility: hidden;
+    }
+}

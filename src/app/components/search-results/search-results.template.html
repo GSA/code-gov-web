@@ -12,7 +12,9 @@
   </div>
   <div class="search-results-header">
     <div class="indented">
-      <div class="width-quarter"></div>
+      <div class="width-quarter">
+        <repos-search autofocus=true buttonClasses="alt" placeholder="{{ queryValue }}"></repos-search>
+      </div>
       <h3 *ngIf="total" class="repos-count width-three-quarters">
         We found {{ total }} {{ "Repositories" | pluralize : reposTotal }} for "{{ queryValue }}"
       </h3>
