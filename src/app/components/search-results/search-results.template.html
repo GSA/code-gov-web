@@ -56,12 +56,20 @@
 
     </div>
     <div id="filter-results-section">
-        <div class="filter-tags">
-          <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
-            <div class="filter-tag-title">{{filterTag.name}}</div>
-          </div>
+      <div class="sort-section">
+        <h2>
+          <span>Sort by</span>
+          <select [(ngModel)]="selectedSortOption" (change)="onSortSelectionChange($event)">
+            <option *ngFor="let sortOption of sortOptions" [ngValue]="sortOption">{{sortOption}}</option>
+          </select>
+        </h2>
+      </div>      
+      <div class="filter-tags">
+        <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
+          <div class="filter-tag-title">{{filterTag.name}}</div>
         </div>
-      <repo-list [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
+      </div>
+      <repo-list [queryValue]="queryValue" [results]="finalResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
 </div>

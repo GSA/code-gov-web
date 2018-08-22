@@ -49,7 +49,6 @@ export class BaseFilterPageComponent {
   public sortOptions: String[];
   public selectedSortOption: String;
   
-
   /**
    * On removal from the DOM, unsubscribe from URL updates.
    */
@@ -184,10 +183,6 @@ export class BaseFilterPageComponent {
       .sort((a, b) => a.name < b.name ? -1 : 1);
   }
 
-  public onSortSelectionChange(event) {
-    this.sortResults();
-  }
-
   public onFilterBoxChange(event) {
     this.filterResults();
 
@@ -230,19 +225,26 @@ export class BaseFilterPageComponent {
     nativeElement.querySelector(selector).checked = false;
     this.filterResults();
   }
+
+  public onSortSelectionChange() {
+    console.log("starting onSortSelectionChange");
+    this.sortResults();
+    console.log("finishing onSortSelectionChange");
+  }
   
   public sortResults() {
     console.log('starting sortResults with:', this.selectedSortOption);
+    console.log('this.selectedSortOption:', this.selectedSortOption);
     switch(this.selectedSortOption) {
       case 'A-Z':
-        this.finalResults = this.finalResults.sort((a, b) => a.name.trim() < b.name.trim() ? -1 : 1);
+        this.finalResults.sort((a, b) => a.name.trim() < b.name.trim() ? -1 : 1);
         break;
       case 'Best Match':
-        this.finalResults = this.finalResults.sort((a, b) => {
+        this.finalResults.sort((a, b) => {
           if (a.searchScore < b.searchScore) {
-            return -1;
-          } else if (a.searchScore > b.searchScore) {
             return 1;
+          } else if (a.searchScore > b.searchScore) {
+            return -1;
           } else {
             // sort by name
             return a.name.trim() < b.name.trim() ? -1 : 1;
@@ -250,18 +252,29 @@ export class BaseFilterPageComponent {
         });
         break;
       case 'Data Quality':
-        this.finalResults = this.finalResults.sort((a, b) => {
+        this.finalResults.sort((a, b) => {
           if (a.score < b.score) {
-            return -1;
-          } else if (a.score > b.score) {
             return 1;
+          } else if (a.score > b.score) {
+            return -1;
           } else {
             // sort by name
             return a.name.trim() < b.name.trim() ? -1 : 1;
           }
         });
         break;
+      case 'Last Updated':
+        console.log("sorted by lastUpdated");
+        this.finalResults.sort((a, b) => {
+          const aTime = a.date && a.date.lastModified ? new Date(a.date.lastModified).getTime() :  -10e10;
+          const bTime = b.date && b.date.lastModified ? new Date(b.date.lastModified).getTime() :  -10e10;
+          return Math.sign(bTime - aTime) || 0;
+        });
+        break;
     }
-    console.log('this.finalResults:', this.finalResults);
+    console.log('sortResults finishing with this.finalResults:', this.finalResults);
+    console.error(this.finalResults.map(repo => {
+      return repo.date && repo.date.lastModified ? new Date(repo.date.lastModified).getTime() :  -10e10
+    }));  
   }
 }

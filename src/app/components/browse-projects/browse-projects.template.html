@@ -54,8 +54,8 @@
       <div class="sort-section">
         <h2>
           <span>Sort by</span>
-          <select [(ngModel)]="selectedSortOption" (change)="onSortSelectionChange($event)">
-            <option *ngFor="let sortOption of sortOptions" [ngValue]="sortOption">{{sortOption}}</option>
+          <select [(ngModel)]="selectedSortOption" (change)="onSortSelectionChange()">
+            <option *ngFor="let opt of sortOptions" [ngValue]="opt" [textContent]="opt"></option>
           </select>
         </h2>
       </div>

@@ -38,6 +38,10 @@ export class RepoListComponent {
     }
   }
 
+  ngOnChanges() {
+    console.log("starting ngOnChanges");
+  }
+
   get results(): Array<any> {
     // transform value for display
     return this._results;
@@ -45,9 +49,12 @@ export class RepoListComponent {
 
   @Input()
   set results(results: Array<any>) {
-    this.loadedResults = results.slice(0, this.PAGE_SIZE);
-
-    this._results = results;
+    console.log("running repo-list.set results");
+    if (results) {
+      this.loadedResults = results.slice(0, this.PAGE_SIZE);
+  
+      this._results = results;
+    }
   }
 
   /**
@@ -56,7 +63,7 @@ export class RepoListComponent {
    * @return {void}
    */
   hasRepos() {
-    return this.results.length > 0;
+    return this.results && this.results.length > 0;
   }
 
   /**

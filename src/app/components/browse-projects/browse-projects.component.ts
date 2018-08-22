@@ -26,8 +26,7 @@ export class BrowseProjectsComponent extends BaseFilterPageComponent {
   public content: any = content.browse_projects;
   public bannerImage;
   
-  // full list. not all are ready to be implemented
-  public sortOptions: String[] = ['A-Z', 'Data Quality', 'Last Updated'];
+  public sortOptions: String[] = ['Data Quality', 'A-Z', 'Last Updated'];
   public selectedSortOption: String = 'Data Quality';
 
   constructor(
