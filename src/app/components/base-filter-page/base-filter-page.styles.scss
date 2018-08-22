@@ -19,6 +19,10 @@
   @media screen and (min-width: 750px) {
     @include width-quarter();
   }
+  
+  h2 {
+    font-weight: bold;
+  }
 }
 
 #filter-results-section {
@@ -33,6 +37,10 @@
         margin-left: 0;
       }
     }
+  }
+  
+  h2 {
+    font-weight: bold;
   }
 }
 

@@ -25,6 +25,10 @@ import { content, images } from '../../../../config/code-gov-config.json';
 export class BrowseProjectsComponent extends BaseFilterPageComponent {
   public content: any = content.browse_projects;
   public bannerImage;
+  
+  // full list. not all are ready to be implemented
+  public sortOptions: String[] = ['A-Z', 'Data Quality', 'Last Updated'];
+  public selectedSortOption: String = 'Data Quality';
 
   constructor(
     public stateService: StateService,
