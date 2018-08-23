@@ -5,6 +5,11 @@
   margin-bottom: 1em;
   padding: 1em;
   text-decoration: none;
+  @include clearfix;
+
+  .mybutton {
+    float: right;
+  }
 
   hr {
     visibility: hidden;
@@ -13,21 +18,28 @@
     @media screen and (min-width: $small-screen) {
       border-top: 1px solid $color-gray-lighter;
       display: block;
+      margin-left: -1em;
+      margin-right: -1em;
       margin-top: 2rem;
-      max-width: 100%;
+      max-width: none;
       visibility: visible;
+      width: auto;
     }
   }
 
-  .agency-details > span {
-    font-weight: $font-bold;
+  .agency-details {
+    font-size: .85714286em;
 
-    &:last-child {
-      margin-left: 1.5rem;
-    }
+      &> span{
+      font-weight: $font-bold;
 
-    &:only-child {
-      margin-left: 0;
+      &:last-child {
+        margin-left: 1rem;
+      }
+
+      &:only-child {
+        margin-left: 0;
+      }
     }
   }
 
@@ -51,7 +63,7 @@ h3 {
 }
 
 p {
-  font-size: 0.95em;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -62,21 +74,25 @@ p {
 .repo-features {
   color: $brand-blue-dark;
   display: none;
-  font-size: 0.8em;
   margin-bottom: 1rem;
 
   @media screen and (min-width: $small-screen) {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   li {
     display: inline-block;
+    font-weight: $font-bold;
+    margin-bottom: 1rem;
     margin-right: 1.5rem;
+    min-width: 25%;
+    @include clearfix;
 
-    i {
-      font-size: 1.5em;
-      margin-right: 0.5rem;
-      vertical-align: bottom;
+    &> span {
+      font-weight: 400;
     }
 
     a {
@@ -91,22 +107,5 @@ p {
         margin-right: 0.2em;
       }
     }
-  }
-}
-
-.repo-agency-icon {
-  font-size: 0;
-
-  img {
-    margin-right: 0.5rem;
-    max-height: 2rem;
-    max-width: 2rem;
-    vertical-align: middle;
-  }
-
-  span {
-    font-size: $small-font-size;
-    vertical-align: middle;
-    color: $color-gray-light;
   }
 }

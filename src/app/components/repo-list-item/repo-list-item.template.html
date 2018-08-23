@@ -7,27 +7,27 @@
     {{ repo.description | truncate : 200 }}
   </p>
   <div class="agency-details">
-      <span>Agency: </span>{{repo.agency.name}}
-      <span *ngIf="repo.date?.lastModified">Last updated: </span>{{repo.date?.lastModified | date: "MM/dd/yy"}}
-  </div>
-  <hr>
-  <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
-    <li *ngIf="repo.permissions?.usageType === 'openSource'">
-      <i class="icon icon-ok-circled2"></i><span>Open Source</span>
-    </li>
-    <li *ngIf="repo.permissions?.usageType === 'governmentWideReuse'">
-      <i class="icon icon-arrows-cw"></i><span>Gov-wide Reuse</span>
-    </li>
-    <li *ngIf="repo.languages?.length > 0" class="language">
-      <i class="icon icon-code"></i>
-      <span *ngFor="let language of repo.languages">{{ language }}</span>
-    </li>
-    <li *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
-      <i class="icon icon-certificate"></i>
-      <span>{{ repo.permissions?.licenses[0]?.name }}</span>
-    </li>
-  </ul>
-  <div *ngIf="isGitHubRepo()">
-      <a [href]="repo.repositoryURL"><button>Go to Repo</button></a>
+    <span>Agency: </span>{{repo.agency.name}}
+    <span *ngIf="repo.date?.lastModified">Last updated: </span>{{repo.date?.lastModified | date: "MM/dd/yy"}}
+
+    <hr>
+
+    <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
+      <li *ngIf="repo.permissions?.usageType === 'openSource'">
+          Usage Type: <span>Open Source</span>
+      </li>
+      <li *ngIf="repo.permissions?.usageType === 'governmentWideReuse'">
+        Usage Type:<span>Gov-wide Reuse</span>
+      </li>
+      <li *ngIf="repo.languages?.length > 0" class="language">
+        Languages: <span *ngFor="let language of repo.languages">{{ language }} </span>
+      </li>
+      <li *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
+        License: <span>{{ repo.permissions?.licenses[0]?.name }}</span>
+      </li>
+    </ul>
+    <div *ngIf="isGitHubRepo()" class="mybutton">
+        <a [href]="repo.repositoryURL"><button>Go to Repo</button></a>
+    </div>
   </div>
 </div>

@@ -46,7 +46,7 @@ h3 {
 
 .search-results-header {
   background: $color-white;
-  border: 1px solid $color-gray-lighter;
+  border: 1px solid $color-gray-light;
   margin-bottom: 2rem;
 
   h3 {
@@ -75,7 +75,7 @@ h3 {
 }
 
 .search-results-content {
-  background: $color-gray-lightest;
+  background: #F0F3F7;
   padding-bottom: 4em;
 
   @media screen and (min-width: $medium-screen) {
