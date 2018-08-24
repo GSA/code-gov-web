@@ -89,7 +89,7 @@ export interface AgencyStatus {
 @Injectable()
 export class ClientService {
 
-  private BASE: string = api.base || 'http://localhost:3000/';
+  private BASE: string = api.base';
   private KEY: string = process.env.CODE_GOV_API_KEY || api.key || undefined;
 
   constructor (private http: Http) {
