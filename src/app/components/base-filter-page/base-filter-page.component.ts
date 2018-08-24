@@ -273,8 +273,5 @@ export class BaseFilterPageComponent {
         break;
     }
     console.log('sortResults finishing with this.finalResults:', this.finalResults);
-    console.error(this.finalResults.map(repo => {
-      return repo.date && repo.date.lastModified ? new Date(repo.date.lastModified).getTime() :  -10e10
-    }));  
   }
 }
