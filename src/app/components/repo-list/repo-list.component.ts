@@ -34,7 +34,7 @@ export class RepoListComponent {
     ngOnChanges on when the properties on an input property changes.  ngOnChanges
     only checks if an object changes.  If we sort the results, this isn't technically
     a new object, just the same old object with a different order.
-    
+
     The code below basically hashes the results and triggers a new load of the
     results for mobile if the hash has changed.
   */

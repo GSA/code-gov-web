@@ -48,7 +48,7 @@ export class BaseFilterPageComponent {
   // added by children
   public sortOptions: String[];
   public selectedSortOption: String;
-  
+
   /**
    * On removal from the DOM, unsubscribe from URL updates.
    */
@@ -227,15 +227,11 @@ export class BaseFilterPageComponent {
   }
 
   public onSortSelectionChange() {
-    console.log("starting onSortSelectionChange");
     this.sortResults();
-    console.log("finishing onSortSelectionChange");
   }
-  
+
   public sortResults() {
-    console.log('starting sortResults with:', this.selectedSortOption);
-    console.log('this.selectedSortOption:', this.selectedSortOption);
-    switch(this.selectedSortOption) {
+    switch (this.selectedSortOption) {
       case 'A-Z':
         this.finalResults.sort((a, b) => a.name.trim() < b.name.trim() ? -1 : 1);
         break;
@@ -264,14 +260,14 @@ export class BaseFilterPageComponent {
         });
         break;
       case 'Last Updated':
-        console.log("sorted by lastUpdated");
         this.finalResults.sort((a, b) => {
           const aTime = a.date && a.date.lastModified ? new Date(a.date.lastModified).getTime() :  -10e10;
           const bTime = b.date && b.date.lastModified ? new Date(b.date.lastModified).getTime() :  -10e10;
           return Math.sign(bTime - aTime) || 0;
         });
         break;
+      default:
+        break;
     }
-    console.log('sortResults finishing with this.finalResults:', this.finalResults);
   }
 }

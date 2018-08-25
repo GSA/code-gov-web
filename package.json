@@ -42,7 +42,7 @@
   "license": "CC0-1.0",
   "scripts": {
     "rimraf": "rimraf",
-    "tslint": "tslint --project tsconfig.json",
+    "tslint": "tslint --config tslint.json --project tsconfig.json",
     "typedoc": "typedoc",
     "webpack": "webpack",
     "webpack-analyze": "webpack --config ./config/webpack.analyze.js",
