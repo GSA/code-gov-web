@@ -50,7 +50,11 @@ export class ReposSearchComponent {
     private clientService: ClientService
   ) {
     this.clientService.getAgencies().subscribe(entities => {
-      this.entities = entities;
+      this.entities = entities.filter(entity => Number(entity.numRepos) > 0)
+
+      // hard coding. will need to come up with better solution
+      // filter out agencies that don't have any open-source or gov't wide reuse repos
+      .filter(entity => entity.acronym !== 'NRC');
     });
   }
 
@@ -78,6 +82,10 @@ export class ReposSearchComponent {
   }
 
   onBrowseByEntityChange(newValue) {
-    this.router.navigateByUrl('/explore-code/agencies/' + newValue);
+    let url = '/browse-projects';
+    if (typeof newValue === 'string' && newValue !== 'All') {
+      url += '?agencies=' + newValue;
+    }
+    this.router.navigateByUrl(url);
   }
 }
