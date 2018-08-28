@@ -11,23 +11,30 @@
     <span *ngIf="repo.date?.lastModified">Last updated: </span>{{repo.date?.lastModified | date: "MM/dd/yy"}}
 
     <hr>
-
+<div class="width-three-quarters">
     <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
-      <li *ngIf="repo.permissions?.usageType === 'openSource'">
-          Usage Type: <span>Open Source</span>
+      <li>
+        Usage Type: 
+        <span *ngIf="repo.permissions?.usageType === 'openSource'">Open Source</span>
+        <span *ngIf="repo.permissions?.usageType === 'governmentWideReuse'">Gov-wide Reuse</span>
       </li>
-      <li *ngIf="repo.permissions?.usageType === 'governmentWideReuse'">
-        Usage Type:<span>Gov-wide Reuse</span>
-      </li>
-      <li *ngIf="repo.languages?.length > 0" class="language">
+      <li *ngIf="repo.languages?.length > 0; else noLang">
         Languages: <span *ngFor="let language of repo.languages">{{ language }} </span>
       </li>
-      <li *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name">
+      <ng-template #noLang>
+       <li>Languages: <span>N/A </span></li>
+     </ng-template>
+      <li *ngIf="repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name; else noLicense">
         License: <span>{{ repo.permissions?.licenses[0]?.name }}</span>
       </li>
+      <ng-template #noLicense>
+          <li>License: <span>N/A </span></li>
+      </ng-template>
+      <!-- <li>
+      <a *ngIf="isGitHubRepo()" class="mybutton" [href]="repo.repositoryURL"><button>Go to Repo</button></a>
+    </li> -->
     </ul>
-    <div *ngIf="isGitHubRepo()" class="mybutton">
-        <a [href]="repo.repositoryURL"><button>Go to Repo</button></a>
-    </div>
+  </div>
+    <a *ngIf="isGitHubRepo()" class="mybutton width-quarter" [href]="repo.repositoryURL"><button>Go to Repo</button></a>
   </div>
 </div>
