@@ -99,7 +99,7 @@
           "description": "A python package designed to simulate and analyze resilience of water distribution networks.",
           "image": "/assets/img/featured-projects/pipes4.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/DOE/repos/doe_sandia_national_laboratories_snl_water_network_tool_for_resilience_v_1_0" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/DOE/repos/doe_sandia_national_laboratories_snl_water_network_tool_for_resilience_v_1_0" },
             { "name": "Go to Repo", "url": "https://github.com/usepa/wntr"}
           ]
         },
