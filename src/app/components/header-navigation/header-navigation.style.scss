@@ -4,7 +4,8 @@ nav {
   a {
     img {
       height: 33px;
-      width: 175px;
+      padding-left: 15px;
+      padding-right: 15px;
 
       @media screen and (max-width: 600px) {
         padding-top: 10px;
