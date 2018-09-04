@@ -26,12 +26,19 @@
 }
 
 #filter-results-section {
+
+  padding-top: 5px;
+
   width: 100%;
   @media screen and (min-width: 750px) {
     @include width-three-quarters();
   }
   
   .filter-tags {
+
+    // we do this so the top of the filter tags aligns with the top 
+    margin-top: -10px;
+
     .filter-tag {
       &:first-child {
         margin-left: 0;
