@@ -15,9 +15,9 @@
         "light": "./assets/img/logos/your-city-light.svg"
       },
       "links": [
-        { "name": "Browse Projects", "url": "/#/explore-code" },
-        { "name": "Help Wanted", "url": "/#/help-wanted" },
-        { "name": "Roadmap", "url": "/#/roadmap" }
+        { "name": "Browse Projects", "url": "/#!/explore-code" },
+        { "name": "Help Wanted", "url": "/#!/help-wanted" },
+        { "name": "Roadmap", "url": "/#!/roadmap" }
       ]
     },
     "home": {
@@ -57,7 +57,7 @@
           "description": "A website with resource and tools for starting your own business in Your City",
           "image": "/assets/img/featured-projects/biz_400x400.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/" },
             { "name": "Go to Repo", "url": "https://github.com/"}
           ]
         },
@@ -68,7 +68,7 @@
           "description": "A mobile-friendly online interactive map that shows transportation routes and current locations of public transportation options",
           "image": "/assets/img/featured-projects/transportation_409x409.png",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/" },
             { "name": "Go to Repo", "url": "https://github.com" }
           ]
         }
@@ -78,7 +78,7 @@
       "links": [
         {
           "name": "Privacy Policy",
-          "url": "/#/privacy-policy"
+          "url": "/#!/privacy-policy"
         },
         {
           "name": "Visit Project Page",

@@ -13,9 +13,9 @@ export function toAbsoluteUrl(url: string): string {
 }
 
 export function toRouterLink(url: string): string {
-  if (url.startsWith('/#/')) {
-    return url.replace(/^\/#/, '');
-  } else if (url === '/#') {
+  if (url.startsWith('/#!/')) {
+    return url.replace(/^\/#!/, '');
+  } else if (url === '/#!') {
     return '';
   } else {
     return null;

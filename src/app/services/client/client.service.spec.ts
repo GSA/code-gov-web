@@ -41,7 +41,7 @@ describe('ClientService', () => {
                       {
                         keyword: 'type',
                         dataPath: '.repositoryURL',
-                        schemaPath: '#/properties/repositoryURL/type',
+                        schemaPath: '#!/properties/repositoryURL/type',
                         params: {
                           type: 'string'
                         },
@@ -60,7 +60,7 @@ describe('ClientService', () => {
                       {
                         'keyword': 'type',
                         'dataPath': '.repositoryURL',
-                        'schemaPath': '#/properties/repositoryURL/type',
+                        'schemaPath': '#!/properties/repositoryURL/type',
                         'params': {
                           'type': 'string'
                         },
