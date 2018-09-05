@@ -15,9 +15,9 @@
         "light": "./assets/img/logos/pub-code-light.svg"
       },
       "links": [
-        { "name": "Browse Projects", "url": "/#/explore-code" },
-        { "name": "Help Wanted", "url": "/#/help-wanted" },
-        { "name": "Roadmap", "url": "/#/roadmap" }
+        { "name": "Browse Projects", "url": "/#!/explore-code" },
+        { "name": "Help Wanted", "url": "/#!/help-wanted" },
+        { "name": "Roadmap", "url": "/#!/roadmap" }
       ]
     },
     "home": {
@@ -45,7 +45,7 @@
         {
           "title": "Roadmap",
           "description": "See our progress",
-          "link": "/#/roadmap",
+          "link": "/#!/roadmap",
           "image": "/assets/img/icons/check_bl.png"
         }
       ],
@@ -57,7 +57,7 @@
           "description": "The GNEIMO methods and algorithms build up on the Spatial Operator Algebra (SOA) multibody dynamics framework.",
           "image": "/assets/img/featured-projects/Science.svg",
           "links": [
-            { "name": "View Project", "url": "/#/explore-code/agencies/NASA/repos/nasa_jpl_gneimo_advanced_techniques_for_constrained_internal_coordinate_molecular_dynamics" },
+            { "name": "View Project", "url": "/#!/explore-code/agencies/NASA/repos/nasa_jpl_gneimo_advanced_techniques_for_constrained_internal_coordinate_molecular_dynamics" },
             { "name": "Go to Repo", "url": "https://software.nasa.gov/software/NPO-48712-1" }
           ]
         }
@@ -79,7 +79,7 @@
       "links": [
         {
           "name": "Privacy Policy",
-          "url": "/#/privacy-policy"
+          "url": "/#!/privacy-policy"
         },
         {
           "name": "Visit Project Page",
