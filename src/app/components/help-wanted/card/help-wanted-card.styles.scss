@@ -22,6 +22,22 @@
     }
   }
 
+  hr {
+    visibility: hidden;
+    display: none;
+
+    @media screen and (min-width: $medium-screen) {
+      border-top: 1px solid $color-gray-light;
+      display: block;
+      margin-left: -1em;
+      margin-right: -1.1em;
+      margin-top: 2rem;
+      max-width: none;
+      visibility: visible;
+      width: auto;
+    }
+  }
+
   p {
     color: $color-black;
     line-height: 1.1;
@@ -53,12 +69,8 @@
     margin: 0;
   }
 
-  dd {
-    font-weight: bold;
-  }
-
   dt {
-    color: $color-gray;
+    font-weight: bold;
   }
 
   .agency-details {

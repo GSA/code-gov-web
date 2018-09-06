@@ -1,12 +1,35 @@
 <div class="card focusable">
   <a [href]="item.issueURL ? item.issueURL : item.projectURL" class="card-title" target="_blank">{{ item.title }}</a>
-  <div class="card-date">Last updated {{ item.updated | date: "MMM d 'at' h':'mm a"}}</div>
   <p class="card-description">{{ item.description | truncate : 250}}</p>
+
   <dl *ngIf="!mobile">
+
+    <!-- <div *ngIf="item.projectURL">
+      <dt>Project Name: </dt>
+      <dd><a [href]="item.projectURL" *ngIf="item.projectURL" target="_blank">project name</a></dd>
+    </div> -->
+
+    <div *ngIf="item?.agency_id">
+      <dt>Agency: 
+      <dd><a routerLink="/explore-code/agencies/{{item?.agency_id}}">{{item?.agency_id}}</a></dd>
+    </div>
+
+    <div *ngIf="item?.updated">
+      <dt>Last updated: 
+      <dd>{{item?.updated | date: "MMM d 'at' h':'mm a"}}</dd>
+    </div>
+
+    <hr>
+
     <div *ngIf="item.languages">
       <dt>Language:</dt>
       <dd>{{ item.languages.join(', ') }}</dd>
     </div>
+
+    <div *ngIf="item.type">
+        <dt>Type:</dt>
+        <dd>{{ item.type | capitalize }}</dd>
+      </div>
 
     <div *ngIf="item.skill">
       <dt>Skill Level:</dt>
@@ -18,21 +41,5 @@
       <dd>{{ item.effort }}</dd>
     </div>
 
-    <div *ngIf="item.impact">
-      <dt>Impact:</dt>
-      <dd>{{ item.impact | capitalize }}</dd>
-    </div>
-
   </dl>
-  <div class="help-wanted-card-actions">
-    <a [href]="item.projectURL" *ngIf="item.projectURL" target="_blank"><button class="dark">Project Details</button></a>
-    <a [href]="item.issueURL" *ngIf="item.issueURL" target="_blank"><button class="dark">Start Now</button></a>
-  </div>
-  <div class="agency-details">
-    <img alt="" [src]="item.image" *ngIf="item.image"/>
-    <span
-      *ngIf="item?.agency_id"
-      class="help-wanted-agency-name"
-    >{{item?.agency_id}}</span>
-  </div>
 </div>

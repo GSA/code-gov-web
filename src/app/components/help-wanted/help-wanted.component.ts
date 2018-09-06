@@ -22,6 +22,7 @@ export class HelpWantedComponent {
   private mobile: boolean;
   private options: Option[];
   private displayPopup: boolean;
+  private total: number;
 
   constructor(
     private sanitizer: DomSanitizer,
@@ -54,6 +55,7 @@ export class HelpWantedComponent {
 
       this.items = tasks;
       this.filteredItems = tasks;
+      this.total = tasks.length;
 
       this.options = [
         { display: 'Show', key: 'show', options: ['Featured', 'Active', 'Popular', 'All'], version: 'mobile' },
