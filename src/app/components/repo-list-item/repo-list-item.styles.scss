@@ -15,6 +15,10 @@
     }
   }
 
+  .repo-button {
+    text-align: right;
+  }
+
   hr {
     visibility: hidden;
     display: none;
@@ -22,8 +26,9 @@
     @media screen and (min-width: $medium-screen) {
       border-top: 1px solid $color-gray-light;
       display: block;
-      margin-left: -1em;
-      margin-right: -1em;
+      margin-left: -1.2em;
+      margin-right: -1.25em;
+      margin-bottom: 0;
       margin-top: 2rem;
       max-width: none;
       visibility: visible;
@@ -36,12 +41,9 @@
 
       &> span{
       font-weight: $font-bold;
+      margin-left: 2rem;
 
-      &:last-child {
-        margin-left: 1rem;
-      }
-
-      &:only-child {
+      &:first-child {
         margin-left: 0;
       }
     }
@@ -77,6 +79,10 @@ p {
 }
 
 .repo-features {
+  margin-left: 0;
+}
+
+.repo-features-list {
   max-height: 100px;
 
   @media screen and (min-width: $medium-screen) {
@@ -96,7 +102,7 @@ p {
     min-width: 25%;
     @include clearfix;
 
-    &> span {
+    & > span {
       font-weight: 400;
     }
 
