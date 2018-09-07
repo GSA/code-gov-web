@@ -54,10 +54,17 @@
   <% } %>
   <!-- End Google Tag Manager -->
 
-  <% if (webpackConfig.htmlElements.headTags) { %>
-  <!-- Configured Head Tags  -->
-  <%= webpackConfig.htmlElements.headTags %>
-  <% } %>
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/favicon-57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/favicon-72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-114.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/favicon-144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/favicon-192.png">
+  <link rel="icon" href="/assets/img/favicons/favicon.ico">
+  <link rel="manifest" href="/assets/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#00bcd4">
+  <meta name="msapplication-TileImage" content="/assets/img/favicons/favicon-144.png">
+  <meta name="theme-color" content="#00bcd4">
 
   <!-- base url -->
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">

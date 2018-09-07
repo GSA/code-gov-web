@@ -9,22 +9,16 @@ const webpackMerge = require('webpack-merge');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
-const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
-const HtmlElementsPlugin = require('./html-elements-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const DedupePlugin = require('webpack/lib/optimize/DedupePlugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const IgnorePlugin = require('webpack/lib/IgnorePlugin');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const ProvidePlugin = require('webpack/lib/ProvidePlugin');
-const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const CriticalCssPlugin = require('./critical-css-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const postcssCssnext = require('postcss-cssnext');
 const postcssImport = require('postcss-import');
 const SiteConfig = require('./code-gov-config.json');
@@ -83,14 +77,6 @@ module.exports = function (options) {
    * Common Plugins
    */
 
-  const htmlWebpackPlugin = new HtmlWebpackPlugin(Object.assign({
-      template: 'src/index.html',
-      chunksSortMode: 'dependency',
-      metadata: METADATA,
-      inject: 'head'
-    }, SiteConfig));
-  console.log("htmlWebpackPlugin:", htmlWebpackPlugin);
-
   const commonPlugins = [
     new AssetsPlugin({
       path: helpers.root('dist'),
@@ -98,9 +84,6 @@ module.exports = function (options) {
       prettyPrint: true
     }),
     new CheckerPlugin(),
-    new CommonsChunkPlugin({
-      name: ['polyfills', 'vendor'].reverse()
-    }),
     /**
       * Plugin: ContextReplacementPlugin
       * Description: Provides context to Angular's use of System.import
@@ -121,12 +104,6 @@ module.exports = function (options) {
        }
      ),
     new CopyWebpackPlugin(copyPluginOptions),
-    new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
-    }),
-    new HtmlElementsPlugin({
-      headTags: require('./head-config.common')
-    }),
     new LoaderOptionsPlugin({
       debug: isProd ? false : true,
       options: {
@@ -167,9 +144,8 @@ module.exports = function (options) {
         'NODE_ENV': JSON.stringify(METADATA.ENV),
         'HMR': METADATA.HMR,
       }
-    }),
-    htmlWebpackPlugin,
-    new PreloadWebpackPlugin()
+    })
+//    htmlWebpackPlugin,
   ];
 
   /**
@@ -178,15 +154,19 @@ module.exports = function (options) {
   const prodPlugins = commonPlugins.concat([
     new WebpackMd5Hash(),
     new UglifyJsPlugin({
-      beautify: false,
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true
-      },
-      compress: {
-        screw_ie8: true
-      },
-      comments: false
+      uglifyOptions: {
+        mangle: {
+          screw_ie8: true,
+          keep_fnames: true
+        },
+        compress: {
+          screw_ie8: true
+        },
+        output: {
+          beautify: false,
+          comments: false
+        }
+      }
     }),
     new NormalModuleReplacementPlugin(
       /angular2-hmr/,

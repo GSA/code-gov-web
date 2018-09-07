@@ -7,7 +7,6 @@ const CreateFilePlugin = require('webpack-create-file-plugin');
 const CriticalCssPlugin = require('./critical-css-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const webpackMerge = require('webpack-merge'); // used to merge webpack configs
 const ghpages = require('gh-pages');
 const webpack = require('webpack');
@@ -99,8 +98,6 @@ module.exports = function (env) {
     plugins: [
 
      htmlWebpackPlugin,
-
-     new PreloadWebpackPlugin(),
 
       new LoaderOptionsPlugin({
         options: {
