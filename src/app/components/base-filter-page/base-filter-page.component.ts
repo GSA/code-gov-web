@@ -70,7 +70,7 @@ export class BaseFilterPageComponent {
     if (selectedUsageTypes.length === 0) {
       return true;
     } else {
-      return selectedUsageTypes.includes(result.permissions.usageType);
+      return selectedUsageTypes.indexOf(result.permissions.usageType) > -1;
     }
   }
 
@@ -79,7 +79,7 @@ export class BaseFilterPageComponent {
     if (orgTypes.length === 0) {
       return true;
     } else {
-      return orgTypes.includes(result.orgType || 'federal');
+      return orgTypes.indexOf(result.orgType || 'federal') > -1;
     }
   }
 
@@ -88,7 +88,7 @@ export class BaseFilterPageComponent {
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
-      return names.includes(result.agency.acronym);
+      return names.indexOf(result.agency.acronym) > -1;
     }
   }
 
@@ -100,7 +100,7 @@ export class BaseFilterPageComponent {
     } else if (selectedLangs.length > 0) {
       const repoLanguages = result.languages;
       if (Array.isArray(repoLanguages)) {
-        return repoLanguages.some(repoLang => selectedLangs.includes(repoLang));
+        return repoLanguages.some(repoLang => selectedLangs.indexOf(repoLang) > -1);
       }
     }
   }
@@ -115,7 +115,7 @@ export class BaseFilterPageComponent {
     } else if (selectedLicenseIds.length > 0) {
       if (Array.isArray(result.permissions.licenses)) {
         const objLicenseNames = result.permissions.licenses.map(license => license.name);
-        return selectedLicenses.some(l => objLicenseNames.includes(l));
+        return selectedLicenses.some(l => objLicenseNames.indexOf(l) > -1);
       } else {
         return false;
       }
@@ -138,7 +138,7 @@ export class BaseFilterPageComponent {
     this.results.forEach(result => {
       if (Array.isArray(result.languages)) {
         result.languages.forEach(language => {
-          if (allLanguages.includes(language)) {
+          if (allLanguages.indexOf(language) > -1) {
             languages.add(language);
           }
         });
@@ -157,7 +157,7 @@ export class BaseFilterPageComponent {
     });
     this.agencies = Array.from(names).sort().map(name => {
       const acronym = nameToAcronym[name];
-      const checked = typeof initialAgencies === 'object' && initialAgencies.includes(acronym);
+      const checked = typeof initialAgencies === 'object' && initialAgencies.indexOf(acronym) > -1;
       return { name: name, value: acronym, checked: checked };
     });
   }

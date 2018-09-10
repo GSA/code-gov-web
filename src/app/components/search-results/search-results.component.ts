@@ -59,9 +59,9 @@ export class SearchResultsComponent extends BaseFilterPageComponent {
           if (content.search && content.search.entities) {
             const entities = content.search.entities;
             repos = repos.filter(repo => {
-              return entities.includes(repo.agency.name)
-              || entities.includes(repo.agency.acronym)
-              || entities.includes(repo.organization);
+              return entities.indexOf(repo.agency.name) > -1
+              || entities.indexOf(repo.agency.acronym) > -1
+              || entities.indexOf(repo.organization) > -1;
             });
           }
 
