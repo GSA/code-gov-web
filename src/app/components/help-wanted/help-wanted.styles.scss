@@ -1,53 +1,5 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
-
-#help-wanted-filter-section {
-  @extend .width-quarter;
-
-  h4 {
-    color: $color-black;
-    font-family: $header-font-family;
-    font-size: 1.5em;
-    font-weight: bold;
-    line-height: 5.5rem;
-    margin-bottom: 0;
-  }
-
-  h5 {
-    font-family: Helvetica, $header-font-family;
-  }
-
-  a {
-    font-weight: normal;
-  }
-}
-
-.help-wanted-filter {
-
-  h5 {
-    color: $color-black;
-    margin-top: 5px;
-    margin-bottom: 4px;
-  }
-
-  ul {
-    margin-bottom: 2rem;
-    padding-left: 1rem;
-    font-size: 0.8em;
-
-    label {
-      span {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(100% - 30px);
-      }
-    }
-  }
-
-  // USWDS usa-unstyled-list workaround - webpage and mobile form
-  .filter-bottom-padding {
-    padding-bottom: 5px;
-  }
-}
+@import '../base-filter-page/base-filter-page.styles.scss';
 
 .help-wanted-results {
   @extend .width-three-quarters;
@@ -135,44 +87,4 @@
 
     }
   }
-
-  .filter-form-popup {
-
-    background-color: $color-gray-second-lightest;
-    bottom: 0;
-    left: -100%;
-    overflow: scroll;
-    padding: 0.5rem;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 99;
-    &.display {
-      left: 0;
-      transition: .5s;
-    }
-
-    .close-button-wrapper {
-      padding: 0.5rem;
-      text-align: right;
-
-      .close-button {
-        font-size: 4rem;
-      }
-    }
-
-    h4 {
-      color: black;
-      font-family: $header-font-family;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    h5 {
-      font-family: $header-font-family;
-    }
-
-  }
-
 }
