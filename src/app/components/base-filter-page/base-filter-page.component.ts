@@ -35,17 +35,19 @@ export class BaseFilterPageComponent {
   public queryValue: string = '';
   public routeSubscription: Subscription;
   public results = [];
-  public filteredResults = [];
+  public finalResults = [];
   public total: number;
   public isLoading = true;
   public pageSize = 10;
-  public sort = 'relevance';
   public agencies = [];
   public licenses = [];
   public languages = [];
   public hostElement: ElementRef;
   public filterTags = [];
 
+  // added by children
+  public sortOptions: String[];
+  public selectedSortOption: String;
 
   /**
    * On removal from the DOM, unsubscribe from URL updates.
@@ -123,7 +125,7 @@ export class BaseFilterPageComponent {
   }
 
   public filterResults() {
-    this.filteredResults = this.results
+    this.finalResults = this.results
       .filter(this.filterLanguages.bind(this))
       .filter(this.filterLicenses.bind(this))
       .filter(this.filterUsageType.bind(this))
@@ -222,5 +224,50 @@ export class BaseFilterPageComponent {
     const selector = `filter-box[title='${target.category}'] input[value='${target.value}']`;
     nativeElement.querySelector(selector).checked = false;
     this.filterResults();
+  }
+
+  public onSortSelectionChange() {
+    this.sortResults();
+  }
+
+  public sortResults() {
+    switch (this.selectedSortOption) {
+      case 'A-Z':
+        this.finalResults.sort((a, b) => a.name.trim() < b.name.trim() ? -1 : 1);
+        break;
+      case 'Best Match':
+        this.finalResults.sort((a, b) => {
+          if (a.searchScore < b.searchScore) {
+            return 1;
+          } else if (a.searchScore > b.searchScore) {
+            return -1;
+          } else {
+            // sort by name
+            return a.name.trim() < b.name.trim() ? -1 : 1;
+          }
+        });
+        break;
+      case 'Data Quality':
+        this.finalResults.sort((a, b) => {
+          if (a.score < b.score) {
+            return 1;
+          } else if (a.score > b.score) {
+            return -1;
+          } else {
+            // sort by name
+            return a.name.trim() < b.name.trim() ? -1 : 1;
+          }
+        });
+        break;
+      case 'Last Updated':
+        this.finalResults.sort((a, b) => {
+          const aTime = a.date && a.date.lastModified ? new Date(a.date.lastModified).getTime() :  -10e10;
+          const bTime = b.date && b.date.lastModified ? new Date(b.date.lastModified).getTime() :  -10e10;
+          return Math.sign(bTime - aTime) || 0;
+        });
+        break;
+      default:
+        break;
+    }
   }
 }

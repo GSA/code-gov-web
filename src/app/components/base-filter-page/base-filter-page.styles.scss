@@ -19,19 +19,40 @@
   @media screen and (min-width: 750px) {
     @include width-quarter();
   }
+  
+  h2 {
+    font-weight: bold;
+  }
 }
 
 #filter-results-section {
+
+  padding-top: 5px;
+
   width: 100%;
   @media screen and (min-width: 750px) {
     @include width-three-quarters();
   }
   
   .filter-tags {
+
+    // we do this so the top of the filter tags aligns with the top 
+    margin-top: -7px;
+
     .filter-tag {
       &:first-child {
         margin-left: 0;
       }
+    }
+  }
+  
+  h2 {
+    font-weight: bold;
+
+    select {
+      margin-left: 8px;
+      margin-top: 4px;
+      position: absolute;
     }
   }
 }

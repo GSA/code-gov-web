@@ -31,6 +31,9 @@ import { content, images } from '../../../../config/code-gov-config.json';
 export class SearchResultsComponent extends BaseFilterPageComponent {
   public bannerImage;
 
+  public sortOptions: String[] = ['Best Match', 'Data Quality', 'A-Z', 'Last Updated'];
+  public selectedSortOption: String = 'Best Match';
+
   constructor(
     public stateService: StateService,
     public activatedRoute: ActivatedRoute,
