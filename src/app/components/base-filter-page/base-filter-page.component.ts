@@ -35,17 +35,19 @@ export class BaseFilterPageComponent {
   public queryValue: string = '';
   public routeSubscription: Subscription;
   public results = [];
-  public filteredResults = [];
+  public finalResults = [];
   public total: number;
   public isLoading = true;
   public pageSize = 10;
-  public sort = 'relevance';
   public agencies = [];
   public licenses = [];
   public languages = [];
   public hostElement: ElementRef;
   public filterTags = [];
 
+  // added by children
+  public sortOptions: String[];
+  public selectedSortOption: String;
 
   /**
    * On removal from the DOM, unsubscribe from URL updates.
@@ -68,7 +70,7 @@ export class BaseFilterPageComponent {
     if (selectedUsageTypes.length === 0) {
       return true;
     } else {
-      return selectedUsageTypes.includes(result.permissions.usageType);
+      return selectedUsageTypes.indexOf(result.permissions.usageType) > -1;
     }
   }
 
@@ -77,7 +79,7 @@ export class BaseFilterPageComponent {
     if (orgTypes.length === 0) {
       return true;
     } else {
-      return orgTypes.includes(result.orgType || 'federal');
+      return orgTypes.indexOf(result.orgType || 'federal') > -1;
     }
   }
 
@@ -86,7 +88,7 @@ export class BaseFilterPageComponent {
     if (names.length === 0) {
       return true;
     } else if (names.length > 0) {
-      return names.includes(result.agency.acronym);
+      return names.indexOf(result.agency.acronym) > -1;
     }
   }
 
@@ -98,7 +100,7 @@ export class BaseFilterPageComponent {
     } else if (selectedLangs.length > 0) {
       const repoLanguages = result.languages;
       if (Array.isArray(repoLanguages)) {
-        return repoLanguages.some(repoLang => selectedLangs.includes(repoLang));
+        return repoLanguages.some(repoLang => selectedLangs.indexOf(repoLang) > -1);
       }
     }
   }
@@ -113,7 +115,7 @@ export class BaseFilterPageComponent {
     } else if (selectedLicenseIds.length > 0) {
       if (Array.isArray(result.permissions.licenses)) {
         const objLicenseNames = result.permissions.licenses.map(license => license.name);
-        return selectedLicenses.some(l => objLicenseNames.includes(l));
+        return selectedLicenses.some(l => objLicenseNames.indexOf(l) > -1);
       } else {
         return false;
       }
@@ -123,7 +125,7 @@ export class BaseFilterPageComponent {
   }
 
   public filterResults() {
-    this.filteredResults = this.results
+    this.finalResults = this.results
       .filter(this.filterLanguages.bind(this))
       .filter(this.filterLicenses.bind(this))
       .filter(this.filterUsageType.bind(this))
@@ -136,7 +138,7 @@ export class BaseFilterPageComponent {
     this.results.forEach(result => {
       if (Array.isArray(result.languages)) {
         result.languages.forEach(language => {
-          if (allLanguages.includes(language)) {
+          if (allLanguages.indexOf(language) > -1) {
             languages.add(language);
           }
         });
@@ -155,7 +157,7 @@ export class BaseFilterPageComponent {
     });
     this.agencies = Array.from(names).sort().map(name => {
       const acronym = nameToAcronym[name];
-      const checked = typeof initialAgencies === 'object' && initialAgencies.includes(acronym);
+      const checked = typeof initialAgencies === 'object' && initialAgencies.indexOf(acronym) > -1;
       return { name: name, value: acronym, checked: checked };
     });
   }
@@ -222,5 +224,50 @@ export class BaseFilterPageComponent {
     const selector = `filter-box[title='${target.category}'] input[value='${target.value}']`;
     nativeElement.querySelector(selector).checked = false;
     this.filterResults();
+  }
+
+  public onSortSelectionChange() {
+    this.sortResults();
+  }
+
+  public sortResults() {
+    switch (this.selectedSortOption) {
+      case 'A-Z':
+        this.finalResults.sort((a, b) => a.name.trim() < b.name.trim() ? -1 : 1);
+        break;
+      case 'Best Match':
+        this.finalResults.sort((a, b) => {
+          if (a.searchScore < b.searchScore) {
+            return 1;
+          } else if (a.searchScore > b.searchScore) {
+            return -1;
+          } else {
+            // sort by name
+            return a.name.trim() < b.name.trim() ? -1 : 1;
+          }
+        });
+        break;
+      case 'Data Quality':
+        this.finalResults.sort((a, b) => {
+          if (a.score < b.score) {
+            return 1;
+          } else if (a.score > b.score) {
+            return -1;
+          } else {
+            // sort by name
+            return a.name.trim() < b.name.trim() ? -1 : 1;
+          }
+        });
+        break;
+      case 'Last Updated':
+        this.finalResults.sort((a, b) => {
+          const aTime = a.date && a.date.lastModified ? new Date(a.date.lastModified).getTime() :  -10e10;
+          const bTime = b.date && b.date.lastModified ? new Date(b.date.lastModified).getTime() :  -10e10;
+          return Math.sign(bTime - aTime) || 0;
+        });
+        break;
+      default:
+        break;
+    }
   }
 }

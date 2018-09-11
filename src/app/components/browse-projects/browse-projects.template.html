@@ -20,7 +20,7 @@
     </div>
   <div class="indented">
     <div id="filter-boxes-section">
-      <h1>Filter</h1>
+      <h2>Filter</h2>
       <filter-box
         [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
         title="Language"
@@ -57,6 +57,14 @@
 
     </div>
     <div id="filter-results-section">
+      <div class="sort-section">
+        <h2>
+          <span>Sort by</span>
+          <select [(ngModel)]="selectedSortOption" (change)="onSortSelectionChange()">
+            <option *ngFor="let opt of sortOptions" [ngValue]="opt" [textContent]="opt"></option>
+          </select>
+        </h2>
+      </div>
       <div class="filter-tags">
         <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
           <div class="filter-tag-title">{{filterTag.name}}</div>
@@ -65,7 +73,7 @@
       <div *ngIf="isLoading">
         Loading
       </div>
-      <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="filteredResults" [pageSize]="pageSize"></repo-list>
+      <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="finalResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
 </div>

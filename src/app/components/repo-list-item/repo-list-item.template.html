@@ -7,7 +7,7 @@
     {{ repo.description | truncate : 200 }}
   </p>
   <div class="agency-details">
-    <span>Agency: </span><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:repo.agency.acronym}" _target="_self">{{repo.agency.name}}</a>
+    <span>Agency: </span><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:repo.agency.acronym}">{{repo.agency.name}}</a>
     <span *ngIf="repo.date?.lastModified">Last updated: </span>{{repo.date?.lastModified | date: "MM/dd/yy"}}
 
     <hr>
