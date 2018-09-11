@@ -2,13 +2,16 @@
   <div class="corner-tag {{getDataQualityClass()}}">
     <div class="corner-tag-value">{{repo.score}}</div>
   </div>
-  <h3 class="repo-name"><a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">{{ repo.name }}</a></h3>
+  <div class="card-title">
+    <a routerLink="/explore-code/agencies/{{repo.agency.acronym}}/repos/{{repo.repoID}}">{{ repo.name }}</a>
+  </div>
   <p *ngIf="agency" class="repo-agency-icon">
     <span>{{ agency?.name }}</span>
   </p>
-  <p class="repo-description">
+  <div class="card-description">
     {{ repo.description | truncate : 200 }}
-  </p>
+  </div>
+  <br/>
   <ul *ngIf="isGitHubRepo() || repo?.permissions?.usageType === 'openSource' || repo?.permissions?.usageType === 'governmentWideReuse' || repo?.languages?.length > 0 || repo.permissions?.licenses && repo.permissions?.licenses?.length > 0 && repo.permissions?.licenses[0]?.name" class="repo-features">
     <li *ngIf="isGitHubRepo()">
       <i class="icon icon-github"></i>
