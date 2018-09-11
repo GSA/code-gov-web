@@ -46,7 +46,8 @@ h3 {
 
 .search-results-header {
   background: $color-white;
-  border: 1px solid $color-gray-light;
+  border-bottom: 1px solid $color-gray-light;
+  border-top: 1px solid $color-gray-light;
   margin-bottom: 2rem;
 
   h3 {
