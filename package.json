@@ -1,6 +1,6 @@
 {
   "name": "code-gov-web",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Code.gov is a website promoting good practices in code development, collaboration, and reuse across the U.S. Government. Code.gov will provide tools and guidance to help agencies implement the [Federal Source Code Policy](https://sourcecode.cio.gov). It will include an inventory of the government's custom code to promote reuse between agencies and will provide tools to help government and the public collaborate on open source projects.",
   "keywords": [
     "angular2",
@@ -42,7 +42,7 @@
   "license": "CC0-1.0",
   "scripts": {
     "rimraf": "rimraf",
-    "tslint": "tslint --project tsconfig.json",
+    "tslint": "tslint --config tslint.json --project tsconfig.json",
     "typedoc": "typedoc",
     "webpack": "webpack",
     "webpack-analyze": "webpack --config ./config/webpack.analyze.js",
@@ -115,7 +115,7 @@
     "@angularclass/hmr-loader": "~3.0.2",
     "@code.gov/api-client": "^0.1.1",
     "@code.gov/code-gov-font": "0.6.3",
-    "@code.gov/code-gov-style": "1.7.11",
+    "@code.gov/code-gov-style": "1.7.14",
     "@ngx-meta/core": "^0.4.0-rc.2",
     "@types/jasminewd2": "^2.0.2",
     "angulartics2": "1.4.3",
@@ -133,7 +133,7 @@
     "markdown-loader": "^2.0.2",
     "marked": "^0.3.19",
     "monaco-editor": "^0.9.0",
-    "ngx-infinite-scroll": "^0.5.1",
+    "ngx-infinite-scroll": "0.8.4",
     "ngx-pagination": "^3.0.3",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",

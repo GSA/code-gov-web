@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import { hashString } from '../../utils/hash';
 
 /**
  * Class representing a list of repositories.
@@ -12,22 +13,13 @@ import { Subscription } from 'rxjs/Subscription';
 })
 
 export class RepoListComponent {
-  private _results;
   @Input() private pageSize = 10;
+  @Input() private results;
   private currentPage = 1;
   private subscription: Subscription;
   private loadedResults = [];
   private PAGE_SIZE = 10;
-
-  /**
-   * Constructs a RepoListComponent.
-   *
-   * @constructor
-   */
-  constructor() {
-  }
-
-  ngOnInit() { }
+  private resultsHash;
 
   /**
    * On removal from the DOM, unsubscribe from events.
@@ -38,16 +30,20 @@ export class RepoListComponent {
     }
   }
 
-  get results(): Array<any> {
-    // transform value for display
-    return this._results;
-  }
+  /* We have to do something weird here.  Basically, angular doesn't trigger
+    ngOnChanges on when the properties on an input property changes.  ngOnChanges
+    only checks if an object changes.  If we sort the results, this isn't technically
+    a new object, just the same old object with a different order.
 
-  @Input()
-  set results(results: Array<any>) {
-    this.loadedResults = results.slice(0, this.PAGE_SIZE);
-
-    this._results = results;
+    The code below basically hashes the results and triggers a new load of the
+    results for mobile if the hash has changed.
+  */
+  ngDoCheck() {
+    const newHash = hashString(JSON.stringify(this.results));
+    if (newHash !== this.resultsHash) {
+      this.loadedResults = this.results.slice(0, this.PAGE_SIZE);
+    }
+    this.resultsHash = newHash;
   }
 
   /**
@@ -56,7 +52,7 @@ export class RepoListComponent {
    * @return {void}
    */
   hasRepos() {
-    return this.results.length > 0;
+    return this.results && this.results.length > 0;
   }
 
   /**
