@@ -1,20 +1,21 @@
-<nav class="main {{color}}" [ngClass]="{'not-at-top': !isAtTop, 'expanded': expanded}" [ngStyle]="{'height.px': height}">
+<nav class="main {{color}}" [ngClass]="{'not-at-top': !isAtTop, 'expanded': expanded}" [ngStyle]="{'height.px': height}" aria-label="primary">
 
   <mobile-menu-button></mobile-menu-button>
 
   <a class="svg-container" [attr.title]="title + ' Home'" routerLink="/">
-    <img [src]="color === 'white' ? headerContent?.logos?.dark : headerContent?.logos?.light">
+    <img [src]="color === 'white' ? headerContent?.logos?.dark : headerContent?.logos?.light" alt="code.gov">
   </a>
 
-  <ul>
+  <ul role="menubar" aria-label="primary">
 
-    <li *ngFor="let menuOption of menu" [class]="menuOption.expanded ? 'expanded' : ''">
+    <li *ngFor="let menuOption of menu" [class]="menuOption.expanded ? 'expanded' : ''" role="none">
 
       <a
         *ngIf="menuOption.routerLink !== null && menuOption.routerLink !== undefined"
         [routerLink]="menuOption.routerLink"
         [textContent]="menuOption.name"
         (click)="closeAllMenus()"
+        role="menuitem"
       ></a>
 
       <a
@@ -23,17 +24,19 @@
         [textContent]="menuOption.name"
         target="_blank"
         (click)="closeAllMenus()"
+        role="menuitem"
       ></a>
 
-      <div *ngIf="!menuOption.url" [textContent]="menuOption.name" (click)="onClickMenuOption(menuOption, $event)"></div>
+      <a *ngIf="!menuOption.url" [textContent]="menuOption.name" (click)="onClickMenuOption(menuOption, $event)"  tabindex="0" role="menuitem" aria-haspopup="true" href="#"></a>
 
-      <ul *ngIf="menuOption.links && menuOption.links.length > 0">
-        <li *ngFor="let link of menuOption.links">
+      <ul *ngIf="menuOption.links && menuOption.links.length > 0" role="menu">
+        <li *ngFor="let link of menuOption.links" role="none">
           <a
             *ngIf="link.routerLink !== null && link.routerLink !== undefined"
-            [routerLink]="link.routerLink"
+            [routerLink]="link.routerLink"  
             [textContent]="link.name"
             (click)="closeAllMenus()"
+            role="menuitem"
           ></a>
           <a
             *ngIf="link.routerLink === null || link.routerLink === undefined"
@@ -41,6 +44,7 @@
             [textContent]="link.name"
             target="_blank"
             (click)="closeAllMenus()"
+            role="menuitem"
           ></a>
         </li>
       </ul>
