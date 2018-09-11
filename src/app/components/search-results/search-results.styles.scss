@@ -13,7 +13,13 @@
             }
 
             button.go {
+                background-color: $color-blue !important;
                 border: 1px solid $color-gray-light;
+
+                &:focus, &:hover {
+                    background-color: $brand-teal !important;
+                    border-color: $color-gray-light !important;
+                }
             }
         }
     }
