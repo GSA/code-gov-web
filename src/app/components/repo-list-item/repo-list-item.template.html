@@ -4,7 +4,7 @@
     <span>{{ agency?.name }}</span>
   </p>
   <p class="repo-description">
-    {{ repo.description | truncate : 200 }}
+    {{ repo.description | truncate : 400 }}
   </p>
   <div class="agency-details">
     <span>Agency: </span><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:repo.agency.acronym}">{{repo.agency.name}}</a>
