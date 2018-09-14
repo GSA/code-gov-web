@@ -1,5 +1,9 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
 
+.repos-container {
+  position: relative;
+}
+
 .repos-container,
 .no-repos {
   margin-top: 2rem;
