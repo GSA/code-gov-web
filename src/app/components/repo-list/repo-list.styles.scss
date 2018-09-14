@@ -2,6 +2,12 @@
 
 .repos-container {
   position: relative;
+
+  .data-quality-title {
+    @media (max-width: 801px) {
+      display: none;
+    }
+  }
 }
 
 .repos-container,
