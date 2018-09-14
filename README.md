@@ -13,7 +13,7 @@ To learn more about the project, check out this [blog post](https://www.whitehou
 
 Code.gov is an open source project, so we invite your contributions, be it in the form of code, design, or ideas.
 
-## Project Timeline
+## Requirements
 
 The development of code.gov is guided by the requirements set forth in [Section 7.2 (Code Inventories and Discovery)](https://sourcecode.cio.gov/Implementation/#code-inventories-and-discovery), [Section 7.3 (Code.gov)](https://sourcecode.cio.gov/Implementation/#codegov), and  [Section 7.6 (Agency Policy)](https://sourcecode.cio.gov/Implementation/#agency-policy) of the Federal Source Code Policy. Namely:
 
@@ -22,10 +22,6 @@ The development of code.gov is guided by the requirements set forth in [Section 
 > * "Within 90 days of the publication date of this policy, each agency’s CIO—in consultation with the agency’s CAO—shall develop an agency-wide policy that addresses the requirements of this [document.]";  and
 >
 > * "Within 120 days of the publication date of this policy, each agency must update—and thereafter keep up to date—its inventory of agency information resources to include an enterprise code inventory that lists custom-developed code for or by the agency after the publication of this policy."
-
-Over the next few weeks, we will begin the *discovery sprint* for code.gov. During that time, we will conduct user interviews and engage this community in discussions that will inform the user experience for code.gov.
-
-After the discovery sprint, we'll begin building the site. We'll be relying on input from the community and from agencies about what features should be delivered first. That list of features will drive the *design sprint* and *development sprint*. And because this site is being developed in the open, you will be able to make contributions and provide feedback here as we go.
 
 ## Configuration
 For documentation on how to configure code-gov-web, go [here](https://github.com/GSA/code-gov-web/blob/master/CONFIGURATION.md).
