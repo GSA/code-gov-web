@@ -2,26 +2,6 @@
 
 .card {
 
-  h3, p {
-    margin: 0;
-  }
-
-  h3 {
-    line-height: 1;
-
-    &:hover {
-      color: $brand-teal;
-    }
-
-    a {
-      font-weight: bold;
-
-      &:visited {
-        color: $brand-blue;
-      }
-    }
-  }
-
   hr {
     visibility: hidden;
     display: none;
@@ -36,16 +16,6 @@
       visibility: visible;
       width: auto;
     }
-  }
-
-  p {
-    color: $color-black;
-    line-height: 1.1;
-  }
-
-  small {
-    color: $color-gray-light;
-    font-size: 1em;
   }
 
   dl {
@@ -66,6 +36,7 @@
 
   dd, dt {
     display: inline;
+    font-size: .85714286em; 
     margin: 0;
   }
 

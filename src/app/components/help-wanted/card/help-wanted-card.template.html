@@ -1,5 +1,5 @@
 <div class="card focusable">
-  <a [href]="item.issueURL ? item.issueURL : item.projectURL" class="card-title" target="_blank">{{ item.title }}</a>
+  <h3 class="card-title"><a [href]="item.issueURL ? item.issueURL : item.projectURL" target="_blank">{{ item.title }}</a></h3>
   <p class="card-description">{{ item.description | truncate : 250}}</p>
 
   <dl *ngIf="!mobile">

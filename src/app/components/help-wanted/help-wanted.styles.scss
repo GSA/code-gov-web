@@ -37,8 +37,6 @@
 }
 
 .help-wanted-content-header {
-  border-bottom: 1px solid $color-gray-lighter;
-  margin-bottom: 2rem;
 
   h4 {
     color: $color-black;
@@ -96,6 +94,7 @@
 .help-wanted-content-items {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 
 .help-wanted-content-item {
