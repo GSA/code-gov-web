@@ -30,11 +30,12 @@
 
     input {
       /* 100% minus width of the button */
-      width: calc(100% - 40px);
+      width: calc(100% - 30px);
     }
 
     button.go {
       margin-right: 0;
+      position: absolute;
     }
   }
 
