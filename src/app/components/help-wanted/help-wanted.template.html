@@ -12,6 +12,16 @@
       <li>Help Wanted</li>
     </ul>
   </div>
+  <div class="help-wanted-header">
+    <div class="indented">
+      <div class="width-quarter">
+        <!-- <repos-search autofocus=true buttonClasses="alt" placeholder="{{ queryValue }}"></repos-search> -->
+      </div>
+      <h3 *ngIf="total" class="repos-count width-three-quarters">
+        {{ total }} Open Tasks
+      </h3>
+    </div>
+  </div>
   <div class="help-wanted-content indented">
     <div id="help-wanted-filter-section">
       <h4 *ngIf="!mobile">Filter</h4>
@@ -28,14 +38,8 @@
     </div>
     <div class="help-wanted-results">
       <div class="help-wanted-content-header">
-        <h4>Explore Our Help Wanted Tasks</h4>
+        <h4>Explore Open Tasks</h4>
         <button id="filter-popup-trigger-button" *ngIf="mobile" (click)="openPopup()">Filter</button>
-        <ul class="help-wanted-tabs" *ngIf="!mobile">
-          <li [ngClass]="{ active: this.activeTab === 'Featured' }"><a href="#" (click)="setActiveTab('Featured', $event)">Featured</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'Active' }"><a href="#" (click)="setActiveTab('Active', $event)">Active</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'Popular' }"><a href="#" (click)="setActiveTab('Popular', $event)">Popular</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'All' }"><a href="#" (click)="setActiveTab('All', $event)">All</a></li>
-        </ul>
       </div>
       <ul class="help-wanted-content-items">
         <li *ngFor="let item of filteredItems" class="help-wanted-content-item">

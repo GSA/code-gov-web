@@ -1,4 +1,5 @@
 @import '~@code.gov/code-gov-style/_sass/_variables';
+@import '../base-filter-page/base-filter-page.styles.scss';
 
 #help-wanted-filter-section {
   @extend .width-quarter;
@@ -21,31 +22,13 @@
   }
 }
 
-.help-wanted-filter {
+.help-wanted-header {
+  background: $color-white;
+  border: 1px solid $color-gray-light;
+  margin-bottom: 2rem;
 
-  h5 {
-    color: $color-black;
-    margin-top: 5px;
-    margin-bottom: 4px;
-  }
-
-  ul {
-    margin-bottom: 2rem;
-    padding-left: 1rem;
-    font-size: 0.8em;
-
-    label {
-      span {
-        display: inline-block;
-        vertical-align: top;
-        width: calc(100% - 30px);
-      }
-    }
-  }
-
-  // USWDS usa-unstyled-list workaround - webpage and mobile form
-  .filter-bottom-padding {
-    padding-bottom: 5px;
+  h3 {
+    display: inline-block;
   }
 }
 
@@ -54,8 +37,6 @@
 }
 
 .help-wanted-content-header {
-  border-bottom: 1px solid $color-gray-lighter;
-  margin-bottom: 2rem;
 
   h4 {
     color: $color-black;
@@ -113,6 +94,7 @@
 .help-wanted-content-items {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 
 .help-wanted-content-item {
