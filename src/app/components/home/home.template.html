@@ -28,8 +28,8 @@
       <br/>
       <div class="banner-subsection">
         <div class="banner-subsection-subtitle" id="issue-banner-subsection-subtitle">
-          <img class="chat" src="/assets/img/icons/chat_bubble.png">
-            <span>Have questions or feedback? Open an issue on our open source repository <a class="link" href="{{content.home.banner.issue_url}}" id="issue-link" target="_blank">here</a>.</span>
+          <img class="chat" src="/assets/img/icons/chat_bubble.png" alt="">
+            <span>Have questions or feedback? Open an issue on our <a class="link" href="{{content.home.banner.issue_url}}" id="issue-link" target="_blank">open source repository</a>.</span>
         </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
   <ul class="indented about-actions">
     <li class="about-action width-third" *ngFor="let item of aboutItems">
       <a [routerLink]="item.link">
-        <img alt="About Icon" aria-hidden="true" [src]="item.image" />
+        <img alt="" aria-hidden="true" [src]="item.image" />
         <h3>{{item.title}}</h3>
         <p>{{item.description}}</p>
       </a>
@@ -73,7 +73,7 @@
   <div>
     <div class="block featured-project" *ngFor="let fp of featured; let i = index">
       <div class="indented">
-        <div class="width-half" *ngIf="i % 2 === 0"><img [src]="fp.image"></div>
+        <div class="width-half" *ngIf="i % 2 === 0"><img [src]="fp.image" alt=""></div>
         <div class="width-half">
           <div class="featured-project-info">
             <div class="fp-short-name">{{fp.short_name}}</div>
@@ -82,17 +82,13 @@
             <p class="fp-description">{{fp.description}}</p>
             <div class="buttons">
               <span *ngFor="let link of fp.links">
-                <a *ngIf="link.routerLink" [routerLink]="link.routerLink">
-                  <button class="alt" [textContent]="link.name"></button>
-                </a>
-                <a *ngIf="!link.routerLink" [href]="link.url">
-                  <button class="alt" [textContent]="link.name"></button>
-                </a>
+                <a *ngIf="link.routerLink" [routerLink]="link.routerLink"><button class="alt" [textContent]="link.name"></button></a>
+                <a *ngIf="!link.routerLink" [href]="link.url"><button class="alt" [textContent]="link.name"></button></a>
               </span>
             </div>
           </div>
         </div>
-        <div class="width-half" *ngIf="i % 2 === 1"><img [src]="fp.image"></div>
+        <div class="width-half" *ngIf="i % 2 === 1"><img [src]="fp.image" alt=""></div>
       </div>
     </div>
   </div>
@@ -108,7 +104,7 @@
             <blockquote>{{content.home.press.quote}}</blockquote>
             <div class="attribution">
               <a [href]="content.home.press.attribution.url">
-                <img class="press-logo" [src]="content.home.press.attribution.image" alt="Wired">
+                <img class="press-logo" [src]="content.home.press.attribution.image" [alt]="content.home.press.attribution.alt">
               </a>
             </div>
           </div>
@@ -117,7 +113,7 @@
             <ul class="press-links">
               <li>
                 <a *ngFor="let link of content.home.press.links" [href]="link.url">
-                  <img class="press-logo" [src]="link.image" alt="TechCrunch">
+                  <img class="press-logo" [src]="link.image" [alt]="link.alt">
                 </a>
               </li>
             </ul>
