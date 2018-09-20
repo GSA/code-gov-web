@@ -24,13 +24,13 @@
       <h2>Filter</h2>
       <filter-box title="Language" [attr.options]="languages | json" (change)="onFilterBoxChange($event)"></filter-box>
 
+      <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
+
       <filter-box title="Skill Level" options='["Beginner","Intermediate","Advanced"]' (change)="onFilterBoxChange($event)"></filter-box>
 
       <filter-box title="Time Required" options='["Small","Medium","Large"]' (change)="onFilterBoxChange($event)"></filter-box>
 
       <filter-box title="Type" [attr.options]="types | json" (change)="onFilterBoxChange($event)"></filter-box>
-
-      <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
 
       <filter-box [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'" title="License" [attr.options]="licenses | json" (change)="onFilterBoxChange($event)"></filter-box>
 
