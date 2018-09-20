@@ -1,8 +1,10 @@
 {
-  "items": [{
+  "items": [
+    {
       "id": 1,
       "title": "Labor Hours Estimation for Code.gov Open Source Repositories",
       "description": "Issue Description:\nThis task supports the Code.gov team. We want to estimate total lines of code and total hours and costs for the code that is located in all of our open source repositories. The open source repositories are listed in the agency json files as shown on Code.gov.\n\nSpecific tasks:\n\nCount total lines of code for all open source repos on Code.gov using CLOC - https://github.com/AlDanial/cloc.\nDetermine labor hours and costs of total lines of code using the COCOMO II Model - http://csse.usc.edu/tools/cocomoii.php. Parameters TBD and can work with me (Joe Castle) on this.\nProvide all of this in a program/script that can be run on a regular basis to account for new code as it is added to Code.gov\nContact Info:\nName: Joseph Castle\nEmail: joseph.castle@gsa.gov",
+      "updated": "2018-01-23T03:11:00Z",
       "languages": [
         "CSS",
         "HTML",
@@ -17,19 +19,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-01-23T03:11:00Z"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 2,
       "title": "Add footer variations for slim and big",
       "description": "Currently we have the option of setting the header type in the header.yml file. I think it would be nice to be able to set the footer type as well between slim, medium, and big in the footer.yml file. At the moment the default footer is medium.",
+      "updated": "2018-03-01",
       "languages": [
         "CSS",
         "HTML",
@@ -44,19 +41,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-01"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 3,
       "title": "Allow rename during duplicate",
       "description": "It would be nice to give the opportunity to rename when creating the copy, rather than having to create the copy and then go into properties to edit the name.",
+      "updated": "2017-10-24",
       "languages": [
         "CSS",
         "HTML",
@@ -70,19 +62,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2017-10-24"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 4,
       "title": "Add 'Create..' Option to create object inside other object.",
       "description": "It should be possible for a user to right click on an object in the tree view and select 'create...' to create an object inside of that object. This option should not exist for objects that do not have composition.",
+      "updated": "2017-12-13",
       "languages": [
         "CSS",
         "HTML",
@@ -96,19 +83,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2017-12-13"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 5,
       "title": "Remove action is available for non-editable objects",
       "description": "Attempting to use the action fails as expected, but it probably shouldn't be available in the first place. This is evident in the live demo. Navigate to a non-editable layout (eg. anything under 'demo objects'). The context menu on any of the objects in the layout includes the remove action.",
+      "updated": "2018-1-10",
       "languages": [
         "CSS",
         "HTML",
@@ -122,19 +104,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-1-10"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 6,
       "title": "Timers aren't visually indicating countdown or countup",
       "description": "Timers should display + or - depending on whether they are counting up or down. This is a regression error, they used to do this.",
+      "updated": "2018-1-29",
       "languages": [
         "CSS",
         "HTML",
@@ -148,19 +125,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-1-29"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 7,
       "title": "Various error messages in tables",
       "description": "The table component can sometimes produce various errors when the view changes (eg. on save, on navigation away etc.).",
+      "updated": "2018-1-19",
       "languages": [
         "CSS",
         "HTML",
@@ -174,19 +146,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-1-19"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 8,
       "title": "Y Axis disappears when deeply zoomed",
       "description": "Steps to reproduce:Create a plot containing a telemetry element, Zoom in on data repeatedly, looking at Y-Axis, Observe: Eventually Y Axis disappears and a console error is shown",
+      "updated": "2018-1-16",
       "languages": [
         "CSS",
         "HTML",
@@ -200,19 +167,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-1-16"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 9,
       "title": "Allow Angular components as Interfaces",
       "description": "Currently Interfaces are limited to relatively simple JS (or whatever plugin libraries are loaded by the interface). It would be very nice to be able to just add an additional component and somehow load it into the main module (or add in a new app module just for this), so interface developers can utilize Angular functionality to make writing interfaces easier (and better utilize our apis).",
+      "updated": "2018-2-8",
       "languages": [
         "Python",
         "Angular"
@@ -225,19 +187,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "NSA",
-        "name": "National Security Agency"
-      },
-      "date": {
-        "lastModified": "2018-2-8"
-      }
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 10,
       "title": "Split up the App API JSON Schema into multiple files",
       "description": "Currently the App API JSON Schema in data/walkoff_schema.json is about 1000 lines long and is getting a bit bloated and hand to maintain. It would be better if it is split up into manageable files and placed in its own directory inside data. This should only involve using the {'#ref' : '../path/to/new/file'} feature of JSON schemas (see this issue here: Julian/jsonschema#98). This may also involve a teak in core.config.config depending on the reference resolver being used and possibly a change to core.config.paths if the path to the schema changes.",
+      "updated": "2018-2-8",
       "languages": [
         "Python",
         "Angular"
@@ -250,19 +207,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "NSA",
-        "name": "National Security Agency"
-      },
-      "date": {
-        "lastModified": "2018-2-8"
-      }
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 11,
       "title": "client-side dependency installation support for interfaces",
       "description": "Currently, there is no clean way to install client dependencies for custom interfaces. If the install_dependencies.py script could look for a package.json file in the interfaces and run npm install in that directory, then this issue would be resolved",
+      "updated": "2017-2-8",
       "languages": [
         "Python",
         "Angular"
@@ -275,19 +227,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "NSA",
-        "name": "National Security Agency"
-      },
-      "date": {
-        "lastModified": "2017-2-8"
-      }
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 12,
       "title": "requirements.txt support in custom interfaces",
       "description": "Custom interfaces may require additional dependencies, but currently, there is no straightforward mechanism to install them like there is for app dependencies. The install dependencies script could be modified to install dependencies for apps as well as interfaces",
+      "updated": "2018-2-8",
       "languages": [
         "Python",
         "Angular"
@@ -300,19 +247,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "NSA",
-        "name": "National Security Agency"
-      },
-      "date": {
-        "lastModified": "2018-2-8"
-      }
+      "agency_id": "NSA",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 13,
       "title": "Request: parameter to start on a specific module",
       "description": "We would love to be able to create bookmarklets that take us directly to a specific module, like Tables or Links. We have a set of bookmarklets shared by the team, organized by what they're used for, so it would be great to point someone directly to a specific module. We would love a parameter we can pass in the URL that selects the starting module.",
+      "updated": "2018-2-14",
       "languages": [
         "JavaScript"
       ],
@@ -324,19 +266,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License, Version 2.0",
-      "agency": {
-        "acronym": "SSA",
-        "name": "Social Security Administration"
-      },
-      "date": {
-        "lastModified": "2018-2-14"
-      }
+      "agency_id": "SSA",
+      "license": "Apache License, Version 2.0"
     },
     {
       "id": 14,
       "title": "Double border in footer links at mobile",
       "description": "When at mobile size the links in the footer stack on top of each other. Since it's three columns at desktop sizes, the three stacked columns end up with double borders between each stacked column. This is visible after the 'Open Government' and 'Tribal' link.",
+      "updated": "2018-4-18",
       "languages": [
         "Python",
         "Django"
@@ -349,19 +286,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "CFPB",
-        "name": "Consumer Financial Protection Bureau"
-      },
-      "date": {
-        "lastModified": "2018-4-18"
-      }
+      "agency_id": "CFPB",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 15,
       "title": "Sauce window dimensions are not being set",
       "description": "Running tests on sauce shows up undefined,undefinedpx because this reference does not exist anymore https://github.com/cfpb/cfgov-refresh/blob/master/test/browser_tests/conf.js#L169-L170.",
+      "updated": "2018-4-18",
       "languages": [
         "Python",
         "Django"
@@ -375,19 +307,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "CFPB",
-        "name": "Consumer Financial Protection Bureau"
-      },
-      "date": {
-        "lastModified": "2018-4-18"
-      }
+      "agency_id": "CFPB",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 16,
       "title": "State OR Region?",
       "description": "As currently designed, the site lets me think I can search for, say, schools in Virginia in the region of New England. Seems to me if I choose a state, the site should eliminate region as an additional option.",
+      "updated": "2017-9-28",
       "languages": [
         "JavaScript"
       ],
@@ -399,18 +326,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "CC0 1.0 Universal License",
-      "agency": {
-        "acronym": "Department of Education"
-      },
-      "date": {
-        "lastModified": "2017-9-28"
-      }
+      "agency_id": "Department of Education",
+      "license": "CC0 1.0 Universal License"
     },
     {
       "id": 17,
       "title": "AnnotationAttributes interface alignment",
       "description": "Evaluate AnnotationAttributes in light of the patterns established by ShapeAttributes and PlacemarkAttributes. Identify and resolve inconsistent patterns. We know of one property that breaks with the established attributes convention: AnnotationAttributes.opacity. This value is expressed in the attributes' alpha channel.",
+      "updated": "2018-3-19",
       "languages": [
         "JavaScript"
       ],
@@ -422,19 +345,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-19"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
     },
     {
       "id": 18,
       "title": "TectonicPlatesLayer plate geometries are drawn incorrectly",
       "description": "The TectonicPlatesLayer plate geometries are drawn with SurfacePolygon, yet the source geometry for each plate is a WKT LineString. The geometry should be drawn with SurfacePolyline.",
+      "updated": "2018-3-9",
       "languages": [
         "JavaScript"
       ],
@@ -446,19 +364,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-9"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
     },
     {
       "id": 19,
       "title": "Add a method for cleanly unregistering window controllers",
       "description": "With the new controller design, apps have the freedom to replace the default BasicWorldWindController with one of their own choosing. However, replacing the controller will currently leave dangling GestureRecognizer references (and perhaps others) hanging around, so we need to add a method of gracefully unregistering a controller and registering a new one that does proper clean up.",
+      "updated": "2018-3-9",
       "languages": [
         "JavaScript"
       ],
@@ -470,19 +383,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "Apache License Version 2.0",
-      "agency": {
-        "acronym": "NASA",
-        "name": "National Aeronautics and Space Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-9"
-      }
+      "agency_id": "NASA",
+      "license": "Apache License Version 2.0"
     },
     {
       "id": 20,
       "title": "Make site run faster",
       "description": "The site is taking 12 seconds to build which makes it really time consuming to work on. It's loading all fractal components on every update which seem to be taking most of the time. Is it possible to only load them incrementally when that component has changed?",
+      "updated": "2017-10-13",
       "languages": [
         "JavaScript"
       ],
@@ -494,19 +402,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "MIT license",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2017-10-13"
-      }
+      "agency_id": "GSA",
+      "license": "MIT license"
     },
     {
       "id": 21,
       "title": "[Grid]: 7/12 and 5/12 column bug",
       "description": "When using these columns, it doesn't work bc the last column has right margin so it drops to the next line, bc the width exceeds the usa-grid space.",
+      "updated": "2018-3-2",
       "languages": [
         "JavaScript"
       ],
@@ -518,19 +421,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "MIT license",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-2"
-      }
+      "agency_id": "GSA",
+      "license": "MIT license"
     },
     {
       "id": 22,
       "title": "Radio buttons mis-aligned when in an element with overflow-y: scroll",
       "description": "Because the input for radio buttons are position: absolute, they do not scroll with the labels that follow them when inside an element that has overflow: scroll set. The end result is that once you've scrolled down within such an element, clicking on the visible labels triggers a click on the incorrect invisible input, which hasn't scrolled due to being position: absolute.\n\n(I recognize that overflow scroll is generally not preferred, but in a web application context we have a constraint that may require its use.)\n\nI believe a simple fix would be to add position: relative to one of the suggested ancestors of radio inputs. From the sample code in the docs, it looks like that might be .usa-fieldset-inputs, though I'm not sure if that would have any unintended side effects.",
+      "updated": "2018-3-2",
       "languages": [
         "JavaScript"
       ],
@@ -542,19 +440,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "MIT license",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-2"
-      }
+      "agency_id": "GSA",
+      "license": "MIT license"
     },
     {
       "id": 23,
       "title": "Remove explicit display values around aria-hidden",
       "description": "We currently use the Sass mixin accessibly-hidden to display: none; when aria-hidden is set to true. Adding display values to the aria-hidden attribute is discouraged. We need to remove this mixing and replace by using either the hidden attribute or class names to define display properties.\n\nSee the following article for further guidance and information:\n\nhttps://www.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/",
+      "updated": "2018-3-20",
       "languages": [
         "JavaScript"
       ],
@@ -566,19 +459,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "MIT license",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-3-20"
-      }
+      "agency_id": "GSA",
+      "license": "MIT license"
     },
     {
       "id": 24,
       "title": "Checkbox hidden when label & input order flipped",
       "description": "I'm generating forms with Django and the default format that is rendered has <label> followed by <input> which works beautifully with textfields but not so with checkboxes. The label shows up but the checkbox is hidden. The only way I can make it show up is to write a custom form only to flip the order of those elements to match your documentation.",
+      "updated": "2018-2-19",
       "languages": [
         "JavaScript"
       ],
@@ -590,19 +478,14 @@
       "featured": true,
       "active": true,
       "popular": true,
-      "license": "MIT license",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-2-19"
-      }
+      "agency_id": "GSA",
+      "license": "MIT license"
     },
     {
       "id": 25,
       "title": "Create Visualizations of Data from API",
       "description": "Expected Behavior\nCreate cool data visualizations of the data from the API.\nCurrent Behavior\nHere's some examples:\nhttps://beta.observablehq.com/@danieljdufour/python-vs-ruby-number-of-projects-on-code-gov\nhttps://beta.observablehq.com/@danieljdufour/top-10-languages-of-projects-on-code-gov\nPossible Solution\nCreate a data visualization using D3 or any library you might like.",
+      "updated": "2018-03-02",
       "languages": [
         "JavaScript"
       ],
@@ -613,19 +496,14 @@
       "issueURL": "https://github.com/GSA/code-gov-api/issues/198",
       "featured": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-02"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 26,
       "title": "Fix Repo Component Tests",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
       "languages": [
         "TypeScript"
       ],
@@ -636,19 +514,14 @@
       "issueURL": "https://github.com/GSA/code-gov-web/issues/473",
       "featured": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-02"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 27,
       "title": "Fix Agency Page Tests",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
       "languages": [
         "TypeScript"
       ],
@@ -659,19 +532,14 @@
       "issueURL": "https://github.com/GSA/code-gov-web/issues/472",
       "featured": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-02"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 28,
       "title": "Fix Autocomplete-Result Test",
       "description": "This is really important to us. Fixing this would help use deploy features more quickly and with more confidence.",
+      "updated": "2018-03-02",
       "languages": [
         "TypeScript"
       ],
@@ -682,19 +550,14 @@
       "issueURL": "https://github.com/GSA/code-gov-web/issues/471",
       "featured": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-02"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 29,
       "title": "Search Bar: Pressing down/up arrow on keyboard should move through suggested search options",
       "description": "When I press the down/up arrow keys I should be able to select the available suggested search options",
+      "updated": "2018-03-07",
       "languages": [
         "CSS",
         "HTML",
@@ -707,19 +570,14 @@
       "issueURL": "https://github.com/GSA/code-gov-web/issues/492",
       "featured": true,
       "popular": true,
-      "license": "CC0-1.0",
-      "agency": {
-        "acronym": "GSA",
-        "name": "General Services Administration"
-      },
-      "date": {
-        "lastModified": "2018-03-07"
-      }
+      "agency_id": "GSA",
+      "license": "CC0-1.0"
     },
     {
       "id": 30,
       "title": "Update for Quarry release",
       "description": "Update SDK for DOL's v2 API",
+      "updated": "2015-03-31",
       "languages": [
         "PHP"
       ],
@@ -730,14 +588,8 @@
       "issueURL": "https://github.com/USDepartmentofLabor/PHP_DOLDataSDK/issues/1",
       "featured": true,
       "popular": true,
-      "license": "Public Domain",
-      "agency": {
-        "acronym": "DOL",
-        "name": "Department of Labor"
-      },
-      "date": {
-        "lastModified": "2015-03-31"
-      }
+      "agency_id": "DOL",
+      "license": "Public Domain"
     }
   ]
 }
