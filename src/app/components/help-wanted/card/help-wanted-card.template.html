@@ -2,21 +2,21 @@
   <h3 class="card-title"><a [href]="item.issueURL ? item.issueURL : item.projectURL" target="_blank">{{ item.title }}</a></h3>
   <p class="card-description">{{ item.description | truncate : 250}}</p>
 
-  <dl *ngIf="!mobile">
+  <dl class="show-w-gt-900">
 
     <!-- <div *ngIf="item.projectURL">
       <dt>Project Name: </dt>
       <dd><a [href]="item.projectURL" *ngIf="item.projectURL" target="_blank">project name</a></dd>
     </div> -->
 
-    <div *ngIf="item?.agency_id">
-      <dt>Agency: 
-      <dd><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:item?.agency_id}">{{item?.agency_id}}</a></dd>
+    <div *ngIf="item?.agency?.acronym">
+      <dt>Agency:
+      <dd><a [routerLink]="['/browse-projects']" [queryParams]="{agencies:item?.agency?.acronym}">{{item?.agency?.acronym}}</a></dd>
     </div>
 
-    <div *ngIf="item?.updated">
-      <dt>Last updated: 
-      <dd>{{item?.updated | date: "MMM d 'at' h':'mm a"}}</dd>
+    <div *ngIf="item?.date?.lastModified">
+      <dt>Last updated:
+      <dd>{{item?.date?.lastModified | date: "MMM d yyyy 'at' h':'mm a"}}</dd>
     </div>
 
     <hr>
@@ -27,9 +27,9 @@
     </div>
 
     <div *ngIf="item.type">
-        <dt>Type:</dt>
-        <dd>{{ item.type | capitalize }}</dd>
-      </div>
+      <dt>Type:</dt>
+      <dd>{{ item.type | capitalize }}</dd>
+    </div>
 
     <div *ngIf="item.skill">
       <dt>Skill Level:</dt>
