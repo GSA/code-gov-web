@@ -104,3 +104,29 @@
     display: none;
   }
 }
+
+.metadata-entry {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  .metadata-key {
+    display: block;
+    font-weight: bold;
+
+    @media screen and (min-width: $medium-screen) {
+      display: inline-block;
+      width: 200px;
+      vertical-align: top;
+    }
+  }
+
+  .metadata-value {
+    color: $color-gray;
+    display: block;
+
+    @media screen and (min-width: $medium-screen) {
+      display: inline-block;
+      max-width: calc(100% - 300px);
+    }
+  }
+}

@@ -60,6 +60,21 @@
           </ul>
         <p>{{repo.description}}</p>
         <br>
+        <div *ngIf="repo.additional_data">
+          <div class="metadata-entry" *ngFor="let key of getKeys(repo.additional_data)">
+            <div class="metadata-key" [textContent]="clean(key)"></div>
+            <div class="metadata-value" *ngIf="isArray(repo.additional_data[key])">
+              <div *ngFor="let value of repo.additional_data[key]" [textContent]="value"></div>
+            </div>
+            <div class="metadata-value" *ngIf="!isArray(repo.additional_data[key])">
+              <a *ngIf="isURL(repo.additional_data[key])" [href]="repo.additional_data[key]" target="_blank">
+                <div [textContent]="repo.additional_data[key]"></div>
+              </a>
+              <div *ngIf="!isURL(repo.additional_data[key])" [textContent]="repo.additional_data[key]"></div>
+            </div>
+          </div>
+        </div>
+        <br>
         <a *ngIf="getRepositoryUrl() | isdefined" href="{{ getRepositoryUrl() }}">
           <button class="button">Visit Repo</button>
         </a>

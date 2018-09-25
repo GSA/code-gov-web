@@ -1,0 +1,79 @@
+<div class="search-results-content">
+  <div class="banner" [style.background-image]="bannerImage">
+    <div class="banner-content">
+      <div class="banner-title">Browse Projects</div>
+    </div>
+  </div>
+  <div class="indented">
+    <ul class="breadcrumbs">
+      <li><a routerLink="/">Home</a></li>
+      <li>Browse Projects</li>
+    </ul>
+  </div>
+  <div class="search-results-header">
+      <div class="indented">
+        <div class="width-quarter"></div>
+        <h3 *ngIf="total" class="repos-count width-three-quarters">
+          {{ total }} {{ "Repositories" | pluralize : reposTotal }}
+        </h3>
+      </div>
+    </div>
+  <div class="indented">
+    <div id="filter-boxes-section">
+      <h2>Filter</h2>
+      <filter-box
+        [style.display]="languages && languages.length > 1 ? 'block' : 'none'"
+        title="Language"
+        [attr.options]="languages | json"
+        (change)="onFilterBoxChange($event)"
+      ></filter-box>
+
+      <!--
+      <filter-box
+        title="Organization Type"
+        options='[{"name":"Federal Government","value":"federal"},{"name":"State Government","value":"state"},{"name":"Local Government","value":"local"}]'
+        (change)="onFilterBoxChange($event)"
+      ></filter-box>
+      -->
+      <filter-box
+        [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'"
+        title="Federal Agency"
+        [attr.options]="agencies | json"
+        (change)="onFilterBoxChange($event)"
+      ></filter-box>
+
+      <filter-box
+        [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'"
+        title="License"
+        [attr.options]="licenses | json"
+        (change)="onFilterBoxChange($event)"
+      ></filter-box>
+
+      <filter-box
+        title="Usage Type"
+        options='[{"name":"Open Source","value":"openSource"},{"name":"Government-Wide Reuse","value":"governmentWideReuse"}]'
+        (change)="onFilterBoxChange($event)"
+      ></filter-box>
+
+    </div>
+    <div id="filter-results-section">
+      <div class="sort-section">
+        <h2>
+          <span>Sort by</span>
+          <select [(ngModel)]="selectedSortOption" (change)="onSortSelectionChange()">
+            <option *ngFor="let opt of sortOptions" [ngValue]="opt" [textContent]="opt"></option>
+          </select>
+        </h2>
+      </div>
+      <div class="filter-tags">
+        <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
+          <div class="filter-tag-title">{{filterTag.name}}</div>
+        </div>
+      </div>      
+      <div *ngIf="isLoading">
+        Loading
+      </div>
+      <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="finalResults" [pageSize]="pageSize"></repo-list>
+    </div>
+  </div>
+</div>

@@ -51,7 +51,7 @@ module.exports = function (options) {
   } else {
     API_URL = 'https://code-api.app.cloud.gov/api/';
   }
-
+  
   const METADATA = {
     API_URL,
     baseUrl: '/',
@@ -62,6 +62,10 @@ module.exports = function (options) {
     port: process.env.PORT || (isProd ? 8080 : 2700),
     host: process.env.HOST || 'localhost'
   };
+  
+  if (process.env.CODE_GOV_API_KEY) {
+    METADATA.CODE_GOV_API_KEY = process.env.CODE_GOV_API_KEY;
+  }
 
   const copyPluginOptions = [{
     from: 'src/assets',
@@ -133,10 +137,7 @@ module.exports = function (options) {
           }),
         ],
         sassLoader: {
-          includePaths: [
-            require('bourbon').includePaths,
-            require('bourbon-neat').includePaths,
-          ]
+          includePaths: []
         },
         tslint: {
           emitErrors: isProd ? true : false,
@@ -160,6 +161,7 @@ module.exports = function (options) {
       'ENV': JSON.stringify(METADATA.ENV),
       'HMR': METADATA.HMR,
       'process.env': {
+        'CODE_GOV_API_KEY': JSON.stringify(METADATA.CODE_GOV_API_KEY),
         'API_URL': JSON.stringify(METADATA.API_URL),
         'ENV': JSON.stringify(METADATA.ENV),
         'NODE_ENV': JSON.stringify(METADATA.ENV),

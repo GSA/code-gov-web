@@ -1,0 +1,100 @@
+@import '~@code.gov/code-gov-style/_sass/_variables';
+
+#filter-boxes-section {
+  
+  padding-top: 5px;
+
+  .filter-box {
+    background: $color-white;
+    margin: 2rem auto;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 100%;
+
+    .filter-box {
+      width:100%;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    @include width-quarter();
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+}
+
+#filter-results-section {
+
+  padding-top: 5px;
+
+  width: 100%;
+  @media screen and (min-width: 750px) {
+    @include width-three-quarters();
+  }
+  
+  .filter-tags {
+
+    .filter-tag {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  h2 {
+    font-weight: bold;
+
+    select {
+      margin-left: 8px;
+      margin-top: 4px;
+      position: absolute;
+    }
+  }
+}
+
+
+
+
+h3 {
+  font-size: $lead-font-size;
+}
+
+.search-results-header {
+  background: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+  border-top: 1px solid $color-gray-light;
+  margin-bottom: 2rem;
+
+  h3 {
+    display: inline-block;
+  }
+}
+
+.search-filter-section {
+  padding-top: 2rem;
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+}
+
+.no-repos {
+  margin-top: 3em;
+}
+
+.repos-count {
+  color: $color-gray-dark;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.search-results-content {
+  padding-bottom: 4em;
+
+  @media screen and (min-width: $medium-screen) {
+    min-height: 25em;
+  }
+}

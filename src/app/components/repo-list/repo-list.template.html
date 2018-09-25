@@ -6,34 +6,6 @@
 
 <div *ngIf="results !== null" class="repo-list">
   <div *ngIf="hasRepos()" class="repos-container">
-    <div class="repo-list-summary-wrapper">
-      <p *ngIf="results.length === 0" class="repo-list-summary">No results found.</p>
-      <p *ngIf="results.length > 0" class="repo-list-summary">Results <strong>{{ getMinPageIndex() }}-{{ getMaxPageIndex() }}</strong> of <strong>{{ results.length }}</strong></p>
-    </div>
-    <pagination-template #p="paginationApi" (pageChange)="currentPage = $event">
-
-      <ul class="ngx-pagination">
-        <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
-          <span *ngIf="p.isFirstPage()"><i class="icon icon-angle-circled-left"></i> Prev</span>
-          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-left"></i> Prev</a>
-        </li>
-
-        <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
-          <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
-            {{ page.label }}
-          </a>
-          <span *ngIf="p.getCurrent() === page.value">
-            {{ page.label }}
-          </span>
-        </li>
-
-        <li class="pagination-next" [class.disabled]="p.isLastPage()">
-          <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
-          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
-        </li>
-      </ul>
-
-    </pagination-template>
     <ul class="repos-list repos-list--infinite-scrolled"
         infinite-scroll
         [infiniteScrollDistance]="500"
@@ -60,30 +32,34 @@
         </ng-template>
       </li>
     </ul>
-    <pagination-template (pageChange)="currentPage = $event">
-
-      <ul class="ngx-pagination">
-        <li class="pagination-previous" [class.disabled]="p.isFirstPage()">
-          <span *ngIf="p.isFirstPage()"><i class="icon icon-angle-circled-left"></i> Prev</span>
-          <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-up"></i> Prev</a>
-        </li>
-
-        <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst">
-          <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value">
-            {{ page.label }}
-          </a>
-          <span *ngIf="p.getCurrent() === page.value">
-            {{ page.label }}
-          </span>
-        </li>
-
-        <li class="pagination-next" [class.disabled]="p.isLastPage()">
-          <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
-          <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
-        </li>
-      </ul>
-
-    </pagination-template>
+    <pagination-template #p="paginationApi" (pageChange)="currentPage = $event">
+        <nav role="navigation" aria-label="Pagination Navigation" tabindex="0">
+          <ul class="ngx-pagination">
+              <div class="repo-list-summary-wrapper" tabindex="0">
+                  <p *ngIf="results.length === 0" class="repo-list-summary">No results found.</p>
+                  <p *ngIf="results.length > 0" class="repo-list-summary">Results <strong>{{ getMinPageIndex() }}-{{ getMaxPageIndex() }}</strong> of <strong>{{ results.length }}</strong></p>
+              </div>
+              <li class="pagination-previous" [class.disabled]="p.isFirstPage()" tabindex="0">
+              <span *ngIf="p.isFirstPage()" aria-label="Previous"><i class="icon icon-angle-circled-left"></i> Prev</span>
+              <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="icon icon-angle-circled-up"></i> Prev</a>
+              </li>
+  
+              <li *ngFor="let page of p.pages; let isFirst = first" class="page" [class.current]="p.getCurrent() === page.value" [class.first]="isFirst" tabindex="0">
+              <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value" attr.aria-label="Go to page {{ page.label }}">
+                  {{ page.label }}
+              </a>
+              <span *ngIf="p.getCurrent() === page.value" attr.aria-label="Current Page {{ page.label }}" aria-current="true">
+                  {{ page.label }}
+              </span>
+              </li>
+  
+              <li class="pagination-next" [class.disabled]="p.isLastPage()" tabindex="0">
+              <span *ngIf="p.isLastPage()">Next <i class="icon icon-angle-circled-right"></i></span>
+              <a *ngIf="!p.isLastPage()" (click)="p.next()">Next <i class="icon icon-angle-circled-right"></i></a>
+              </li>
+         </ul>
+        </nav>
+      </pagination-template>
   </div>
 
   <div *ngIf="!hasRepos()" class="no-repos">

@@ -6,8 +6,11 @@
           (ngSubmit)="search()">
         <search-input
             name="searchQuery"
+            placeholder="Search Projects..."
             [(queryValue)]="searchQuery"
-            ngDefaultControl>
+            ngDefaultControl
+            description=""
+        >
         </search-input>
       </form>
     </li>
@@ -17,6 +20,11 @@
         <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/explore-code/agencies'], 'icon-up-open': openAccordions['/explore-code/agencies']}"></i></a>
       </div>
       <ul class="mobile-menu-sub-items">
+        <li class="mobile-menu-item">
+          <a class="agency-link" routerLink="/explore-code/agencies/All" routerLinkActive="link--active" (click)="hideSideNav()">
+            All
+          </a>
+        </li>
         <li *ngFor="let agency of agencies" class="mobile-menu-item">
           <a class="agency-link" routerLink="/explore-code/agencies/{{agency.acronym}}" routerLinkActive="link--active" (click)="hideSideNav()">
             {{agency.name}}

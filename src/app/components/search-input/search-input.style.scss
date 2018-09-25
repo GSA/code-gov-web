@@ -6,7 +6,6 @@
   .autocomplete-container {
     display: none;
     position: absolute;
-    top: 44px;
     width: 100%;
 
     @media screen and (min-width: $small-screen) {
@@ -14,15 +13,33 @@
     }
   }
 
-  input[type=search] {
+  .search-description-wrapper {
+    margin: 0 auto;
+    text-align: left;
     width: 100%;
 
-    @media screen and (min-width: $small-screen) {
-      width: 85%;
+    > div {
+      text-align: left;
+    }
+  }
+
+  .search-input-and-button-wrapper {
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+
+    input {
+      /* 100% minus width of the button */
+      width: calc(100% - 30px);
+    }
+
+    button.go {
+      margin-right: 0;
+      position: absolute;
     }
   }
 
   .icon-search {
     color: black;
-  }  
+  }
 }

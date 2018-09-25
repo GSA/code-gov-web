@@ -13,7 +13,7 @@ To learn more about the project, check out this [blog post](https://www.whitehou
 
 Code.gov is an open source project, so we invite your contributions, be it in the form of code, design, or ideas.
 
-## Project Timeline
+## Requirements
 
 The development of code.gov is guided by the requirements set forth in [Section 7.2 (Code Inventories and Discovery)](https://sourcecode.cio.gov/Implementation/#code-inventories-and-discovery), [Section 7.3 (Code.gov)](https://sourcecode.cio.gov/Implementation/#codegov), and  [Section 7.6 (Agency Policy)](https://sourcecode.cio.gov/Implementation/#agency-policy) of the Federal Source Code Policy. Namely:
 
@@ -22,10 +22,6 @@ The development of code.gov is guided by the requirements set forth in [Section 
 > * "Within 90 days of the publication date of this policy, each agency’s CIO—in consultation with the agency’s CAO—shall develop an agency-wide policy that addresses the requirements of this [document.]";  and
 >
 > * "Within 120 days of the publication date of this policy, each agency must update—and thereafter keep up to date—its inventory of agency information resources to include an enterprise code inventory that lists custom-developed code for or by the agency after the publication of this policy."
-
-Over the next few weeks, we will begin the *discovery sprint* for code.gov. During that time, we will conduct user interviews and engage this community in discussions that will inform the user experience for code.gov.
-
-After the discovery sprint, we'll begin building the site. We'll be relying on input from the community and from agencies about what features should be delivered first. That list of features will drive the *design sprint* and *development sprint*. And because this site is being developed in the open, you will be able to make contributions and provide feedback here as we go.
 
 ## Configuration
 For documentation on how to configure code-gov-web, go [here](https://github.com/GSA/code-gov-web/blob/master/CONFIGURATION.md).
@@ -100,7 +96,12 @@ API_URL='https://code-api-staging.app.cloud.gov/api/' npm run start
 API_URL=staging GIT_REMOTE_NAME=upstream npm run federalist-deploy:dev
 ```
 
-
+## Specifying an API Key
+The app uses the API key provided in the code-gov-config.json by default.
+If you want to override that, specify an `CODE_GOV_API_KEY` environmental variable.  Here's an example:
+```
+CODE_GOV_API_KEY=l87sfdi7ybc2bic7bai8cb2i176c3b872tb3 npm run server
+```
 
 ## Deployment Problems
 When pushing to staging or dev branches, you might run into an occasional error warning that the branch you're pushing to already exists. If you see this, you need to clear the cache in the gh-pages module using this command: `rm -rf node_modules/gh-pages/.cache`
@@ -128,6 +129,9 @@ conditionals. Styles are encapsulated by default unless the Component has
 This app follows the
 [official Angular Style Guide](https://angular.io/styleguide). Please ensure you
 follow the naming conventions defined in this guide.
+
+## Vocabulary
+We sometimes use the word `entities`.  It basically means something that has repositories.  Agencies are types of entities.
 
 ## License
 
