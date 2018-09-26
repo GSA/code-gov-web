@@ -11,13 +11,15 @@
     </ul>
   </div>
   <div class="search-results-header">
-      <div class="indented">
-        <div class="width-quarter"></div>
-        <h3 *ngIf="total" class="repos-count width-three-quarters">
-          {{ total }} {{ "Repositories" | pluralize : reposTotal }}
-        </h3>
+    <div class="indented">
+      <div class="width-quarter">
+        <repos-search autofocus=true buttonClasses="alt" placeholder="{{ queryValue }}"></repos-search>
       </div>
+      <h3 *ngIf="total" class="repos-count width-three-quarters">
+        {{ total }} {{ "Repositories" | pluralize : reposTotal }}
+      </h3>
     </div>
+  </div>
   <div class="indented">
     <div id="filter-boxes-section">
       <h2>Filter</h2>
@@ -76,4 +78,4 @@
       <repo-list *ngIf="!isLoading" [queryValue]="queryValue" [results]="finalResults" [pageSize]="pageSize"></repo-list>
     </div>
   </div>
-</div>
+</div>  
