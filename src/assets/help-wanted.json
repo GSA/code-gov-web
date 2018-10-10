@@ -8,8 +8,8 @@
         "HTML",
         "JavaScript"
       ],
-      "skill": "Beginner",
-      "effort": "Small",
+      "skill": "Advanced",
+      "effort": "Medium",
       "type": "Enhancement",
       "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
       "issueURL": "https://github.com/GSA/code-gov-web/issues/674",
