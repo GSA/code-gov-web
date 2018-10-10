@@ -79,8 +79,8 @@
     },
     {
       "id": 4,
-      "title": "Make height of dropdown menus taller",
-      "description": "Currently the height of the dropdowns on Home (browse by agency), Browse by Agency (sort), and Search Results (sort) is about 15px.",
+      "title": "Browse Projects repository count does not reflect filter change",
+      "description": "The Browser Projects repository count does not change based on user's filter selection. The count is constant and not reflect the end user's filter action.",
       "languages": [
         "CSS",
         "HTML",
@@ -90,7 +90,7 @@
       "effort": "Small",
       "type": "Enhancement",
       "projectURL": "https://code.gov/#!/explore-code/agencies/GSA/repos/gsa_code_gov",
-      "issueURL": "https://github.com/GSA/code-gov-web/issues/676",
+      "issueURL": "https://github.com/GSA/code-gov-web/issues/680",
       "featured": true,
       "active": true,
       "popular": true,
