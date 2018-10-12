@@ -40,7 +40,8 @@
           "links": [
             { "name": "code.gov API", "url": "https://developers.code.gov/basics.html" },
             { "name": "Contribute", "url": "/#!/help-wanted" },
-            { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" }
+            { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" },
+            { "name": "Resources", "url": "https://github.com/GSA/code-gov/wiki/Tools-&-Resources" }
           ]
         },
         {
