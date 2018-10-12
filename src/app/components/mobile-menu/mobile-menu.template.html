@@ -15,6 +15,24 @@
       </form>
     </li>
     <li class="mobile-menu-item">
+      <div [ngClass]="{open: openAccordions['/policy-guide/docs']}" (click)="toggleAccordion('/policy-guide/docs')">
+        <a class="link">About</a>
+        <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs'], 'icon-up-open': openAccordions['/policy-guide/docs']}"></i></a>
+      </div>
+      <ul class="mobile-menu-sub-items">
+        <li class="mobile-menu-item">
+          <a class="link" routerLink="/policy-guide/docs/overview/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
+            Source Code Policy
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" routerLink="/policy-guide/docs/open-source/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
+            Open Source Pilot
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="mobile-menu-item">
       <div [ngClass]="{open: openAccordions['/explore-code/agencies']}" (click)="toggleAccordion('/explore-code/agencies')">
         <a class="link">Browse Projects</a>
         <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/explore-code/agencies'], 'icon-up-open': openAccordions['/explore-code/agencies']}"></i></a>
@@ -33,82 +51,86 @@
       </ul>
     </li>
     <li class="mobile-menu-item">
-        <a class="link" routerLink="/help-wanted" routerLinkActive="link--active" (click)="hideSideNav()">Help Wanted</a>
-    </li>
-    <li class="mobile-menu-item">
-      <div [ngClass]="{open: openAccordions['/policy-guide/docs']}" (click)="toggleAccordion('/policy-guide/docs')">
-        <a class="link">Policy Info</a>
+      <div [ngClass]="{open: openAccordions['policy-guide/docs/compliance']}" (click)="toggleAccordion('policy-guide/docs/compliance')">
+        <a class="link">Federal Agencies</a>
         <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs'], 'icon-up-open': openAccordions['/policy-guide/docs']}"></i></a>
       </div>
       <ul class="mobile-menu-sub-items">
         <li class="mobile-menu-item">
-          <div [ngClass]="{open: openAccordions['/policy-guide/docs/overview']}" (click)="toggleAccordion('/policy-guide/docs/overview')">
-            <a class="link">Overview</a>
-            <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs/overview'], 'icon-up-open': openAccordions['/policy-guide/docs/overview']}"></i></a>
-          </div>
-          <ul class="mobile-menu-sub-items">
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/overview/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
-                Introduction
-              </a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/overview/tracking-progress" routerLinkActive="link--active" (click)="hideSideNav()">
-                Tracking Progress
-              </a>
-            </li>
-          </ul>
+          <a class="link" routerLink="/policy-guide/docs/compliance/inventory-code" routerLinkActive="link--active" (click)="hideSideNav()">
+            How to Inventory Code
+          </a>
         </li>
         <li class="mobile-menu-item">
-          <div [ngClass]="{open: openAccordions['/policy-guide/docs/compliance']}" (click)="toggleAccordion('/policy-guide/docs/compliance')">
-            <a class="link">Compliance</a>
-            <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs/compliance'], 'icon-up-open': openAccordions['/policy-guide/docs/compliance']}"></i></a>
-          </div>
-          <ul class="mobile-menu-sub-items">
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/compliance/dashboard" routerLinkActive="link--active" (click)="hideSideNav()">
-                Agency Compliance
-              </a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/compliance/procurement" routerLinkActive="link--active" (click)="hideSideNav()">
-                How to Procure Software
-              </a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/compliance/inventory-code" routerLinkActive="link--active" (click)="hideSideNav()">
-                How to Inventory Code
-              </a>
-            </li>
-          </ul>
+          <a class="link" routerLink="/policy-guide/docs/compliance/inventory-code/tools/validate-schema" routerLinkActive="link--active" (click)="hideSideNav()">
+            Tools
+          </a>
         </li>
         <li class="mobile-menu-item">
-          <div [ngClass]="{open: openAccordions['/policy-guide/docs/open-source']}" (click)="toggleAccordion('/policy-guide/docs/open-source')">
-            <a class="link">Open Source Pilot</a>
-            <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs/open-source'], 'icon-up-open': openAccordions['/policy-guide/docs/open-source']}"></i></a>
-          </div>
-          <ul class="mobile-menu-sub-items">
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/open-source/introduction" routerLinkActive="link--active" (click)="hideSideNav()">
-                Introduction
-              </a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/open-source/resources" routerLinkActive="link--active" (click)="hideSideNav()">
-                Tools and Resources
-              </a>
-            </li>
-            <li class="mobile-menu-item">
-              <a class="link" routerLink="/policy-guide/docs/open-source/measuring-code" routerLinkActive="link--active" (click)="hideSideNav()">
-                How to Measure Code
-              </a>
-            </li>
-            <li class="mobile-menu-item"> <!-- todo -->
-              <a class="link" routerLink="/policy-guide/docs/open-source/licensing" routerLinkActive="link--active" (click)="hideSideNav()">
-                Licensing
-              </a>
-            </li>
-          </ul>
+          <a class="link" routerLink="/policy-guide/docs/compliance/dashboard" routerLinkActive="link--active" (click)="hideSideNav()">
+            Compliance Dashboard
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="mobile-menu-item">
+      <div [ngClass]="{open: openAccordions['/developers']}" (click)="toggleAccordion('/developers')">
+        <a class="link">Developers</a>
+        <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs'], 'icon-up-open': openAccordions['/policy-guide/docs']}"></i></a>
+      </div>
+      <ul class="mobile-menu-sub-items">
+        <li class="mobile-menu-item">
+          <a class="link" href="https://developers.code.gov/basics.html" (click)="hideSideNav()" target="_blank">
+            Code.gov API
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" routerLink="/open-tasks" routerLinkActive="link--active" (click)="hideSideNav()">
+            Open Tasks
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="https://beta.observablehq.com/search?query=%22code.gov%22" (click)="hideSideNav()" target="_blank">
+            Notebooks
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="https://github.com/GSA/code-gov/wiki/Tools-&-Resources" (click)="hideSideNav()" target="_blank">
+            Resources
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li class="mobile-menu-item">
+      <div [ngClass]="{open: openAccordions['/community']}" (click)="toggleAccordion('/community')">
+        <a class="link">Community</a>
+        <a class="expander"><i class="pull-right icon" [ngClass]="{'icon-down-open': !openAccordions['/policy-guide/docs'], 'icon-up-open': openAccordions['/policy-guide/docs']}"></i></a>
+      </div>
+      <ul class="mobile-menu-sub-items">
+        <li class="mobile-menu-item">
+          <a class="link" href="https://github.com/GSA/code-gov-web" (click)="hideSideNav()" target="_blank">
+            Code.gov Repo
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="https://medium.com/codedotgov" routerLinkActive="link--active" (click)="hideSideNav()" target="_blank">
+            Blog
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="https://www.linkedin.com/company/code-gov" (click)="hideSideNav()" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="https://twitter.com/codedotgov" (click)="hideSideNav()" target="_blank">
+            Twitter
+          </a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="link" href="mailto:code@gsa.gov" (click)="hideSideNav()" target="_blank">
+            Contact Us
+          </a>
         </li>
       </ul>
     </li>
