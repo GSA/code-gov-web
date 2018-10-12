@@ -39,7 +39,7 @@
           "name": "developers",
           "links": [
             { "name": "code.gov API", "url": "https://developers.code.gov/basics.html" },
-            { "name": "Contribute", "url": "/#!/help-wanted" },
+            { "name": "Open Tasks", "url": "/#!/open-tasks" },
             { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" }
           ]
         },
@@ -207,7 +207,7 @@
         { "name": "Update search filters", "status": "In Progress" }
       ],
       "mid": [
-        { "name": "Update help wanted phase 1", "status": null },
+        { "name": "Update open tasks phase 1", "status": null },
         { "name": "Update UI for search results", "status": null },
         { "name": "Usability sessions, round 2", "status": null }
       ],
