@@ -16,7 +16,7 @@
       },
       "links": [
         { "name": "Browse Projects", "url": "/#!/explore-code" },
-        { "name": "Help Wanted", "url": "/#!/help-wanted" },
+        { "name": "Open Taks", "url": "/#!/open-tasks" },
         { "name": "Roadmap", "url": "/#!/roadmap" }
       ]
     },
@@ -102,7 +102,7 @@
       "browse_by_text": "Browse by Department"
     },
     "help_wanted": {
-      "title": "Help Wanted",
+      "title": "Open Tasks",
       "subtitle": "Discover how you can get involved and make Your City's Code better"
     },
     "roadmap": {

@@ -16,7 +16,7 @@
       },
       "links": [
         { "name": "Browse Projects", "url": "/#!/explore-code" },
-        { "name": "Help Wanted", "url": "/#!/help-wanted" },
+        { "name": "Open Tasks", "url": "/#!/open-tasks" },
         { "name": "Roadmap", "url": "/#!/roadmap" }
       ]
     },
@@ -105,7 +105,7 @@
       ]
     },
     "help_wanted": {
-      "title": "Help Wanted",
+      "title": "Open Tasks",
       "subtitle": "Discover how you can get involved and make America's Scientific Code better"
     },
     "roadmap": {
