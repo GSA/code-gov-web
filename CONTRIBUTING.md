@@ -4,7 +4,7 @@ We're so glad you're thinking about contributing to a U.S. Government open sourc
 
 ## How to contribute to code-gov-web
 
-- We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](https://github.com/GSA/code-gov-web/blob/master/CODE_OF_CONDUCT.md) and all contributors should do the same.
+- We want to ensure a welcoming environment for all of our projects. Our staff follows this [Code of Conduct](CODE_OF_CONDUCT.md) and all contributors should do the same.
 - Report bugs and request features via [Github Issues](https://github.com/GSA/code-gov-web/issues).
    - If you are not sure that the issue is related to the website you can [create the issue in our general repository](https://github.com/gsa/code-gov/issue/new): [code-gov](https://github.com/gsa/code-gov)
 - Join the [mailing list](http://code.us15.list-manage.com/subscribe?u=57dec439b29289fc14396b8db&id=a317168ea7) and stay up to date with our latest news.
