@@ -2,13 +2,13 @@
 
 .browse {
   margin-bottom: 4.5rem;
-  margin-top: 0.7rem;
+  margin-top: 2rem;
   text-align: center;
 
   select {
     @media screen and (max-width: $medium-screen) {
       max-width: 150px;
-    }    
+    }
   }
 }
 
