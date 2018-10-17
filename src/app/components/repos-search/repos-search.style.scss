@@ -16,9 +16,12 @@
     margin: 0;
     padding: 1rem 3rem 1rem .7em;
     text-transform: none;
+
     @media screen and (min-width: $medium-screen) {
       font-size: 1.7rem;
+      padding: .75rem 3rem .75rem .7em;
     }
+
   }
 }
 
