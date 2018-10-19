@@ -5,8 +5,9 @@
   &.large {
 
     .banner-content {
-
-      padding-top: 60px;
+      padding-top: 100px;
+      position: absolute;
+      top: 50%;
 
       /* adds some additional spacing between sections */
       .indented {
@@ -66,7 +67,7 @@
         }
       }
 
-      //div between Search and Help Wanted
+      //div between Search and Open Tasks
       .vertical-row {
         @media screen and (min-width: $medium-screen) {
           display: inline-block;

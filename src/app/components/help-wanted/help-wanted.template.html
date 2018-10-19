@@ -1,71 +1,56 @@
-<div class="banner" [style.background-image]="bannerImage">
-  <div class="banner-content">
-    <div class="banner-title" [textContent]="content.title"></div>
-    <div class="banner-subtitle" [textContent]="content.subtitle"></div>
+<div class="search-results-content">
+  <div class="banner" [style.background-image]="bannerImage">
+    <div class="banner-content">
+      <div class="banner-title" [textContent]="content.title"></div>
+      <div class="banner-subtitle" [textContent]="content.subtitle"></div>
+    </div>
   </div>
-</div>
-
-<div class="help-wanted{{mobile ? ' mobile' : ''}}">
   <div class="indented">
     <ul class="breadcrumbs">
       <li><a routerLink="/">Home</a></li>
-      <li>Help Wanted</li>
+      <li>Open Tasks</li>
     </ul>
   </div>
-  <div class="help-wanted-content indented">
-    <div id="help-wanted-filter-section">
-      <h4 *ngIf="!mobile">Filter</h4>
-      <form class="filter-form" [formGroup]="filterForm"  *ngIf="!mobile">
-        <fieldset>
-          <ul class="category" *ngFor="let option of getDesktopFormOptions()" >
-            <li class="filter-bottom-padding">
-              <div class="category-title">{{option.display}}</div>
-              <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
-            </li>
-          </ul>
-        </fieldset>
-      </form>
+  <div class="search-results-header">
+    <div class="indented">
+      <div class="width-quarter"></div>
+      <h3 *ngIf="total" class="repos-count width-three-quarters">
+        {{ total }} Open Tasks
+      </h3>
     </div>
-    <div class="help-wanted-results">
-      <div class="help-wanted-content-header">
-        <h4>Explore Our Help Wanted Tasks</h4>
-        <button id="filter-popup-trigger-button" *ngIf="mobile" (click)="openPopup()">Filter</button>
-        <ul class="help-wanted-tabs" *ngIf="!mobile">
-          <li [ngClass]="{ active: this.activeTab === 'Featured' }"><a href="#" (click)="setActiveTab('Featured', $event)">Featured</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'Active' }"><a href="#" (click)="setActiveTab('Active', $event)">Active</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'Popular' }"><a href="#" (click)="setActiveTab('Popular', $event)">Popular</a></li>
-          <li [ngClass]="{ active: this.activeTab === 'All' }"><a href="#" (click)="setActiveTab('All', $event)">All</a></li>
-        </ul>
+  </div>
+  <div class="indented">
+    <div id="filter-boxes-section">
+      <h2>Filter</h2>
+      <filter-box title="Language" [attr.options]="languages | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+      <filter-box [style.display]="agencies && agencies.length > 1 ? 'block' : 'none'" title="Federal Agency" [attr.options]="agencies | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+      <filter-box title="Skill Level" options='["Beginner","Intermediate","Advanced"]' (change)="onFilterBoxChange($event)"></filter-box>
+
+      <filter-box title="Time Required" options='["Small","Medium","Large"]' (change)="onFilterBoxChange($event)"></filter-box>
+
+      <filter-box title="Type" [attr.options]="types | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+      <filter-box [style.display]="licenses && licenses.length > 1 ? 'block' : 'none'" title="License" [attr.options]="licenses | json" (change)="onFilterBoxChange($event)"></filter-box>
+
+    </div>
+    <div id="filter-results-section">
+      <div class="sort-section">
+        <h2>
+          <span>Explore Open Tasks</span>
+        </h2>
+      </div>
+      <div class="filter-tags">
+        <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
+          <div class="filter-tag-title">{{filterTag.name}}</div>
+        </div>
       </div>
       <ul class="help-wanted-content-items">
-        <li *ngFor="let item of filteredItems" class="help-wanted-content-item">
-          <help-wanted-card [item]="item" [mobile]="mobile"></help-wanted-card>
+        <li *ngFor="let item of finalResults" class="help-wanted-content-item">
+          <help-wanted-card [item]="item"></help-wanted-card>
         </li>
       </ul>
     </div>
   </div>
 </div>
-
-
-<div class="filter-form-popup{{displayPopup ? ' display' : ''}}" *ngIf="mobile">
-  <div class="close-button-wrapper"><span class="close-button" (click)="closePopup()">X</span></div>
-  <form class="filter-form" [formGroup]="filterForm">
-    <h4>Filter</h4>
-    <fieldset>
-      <ul class="category" *ngFor="let option of getMobileFormOptions()" >
-      <li class="filter-bottom-padding">
-        <h5>{{option.display}}</h5>
-        <show-more [formGroup]="filterForm" name="{{option.key}}" [list]="option.options"></show-more>
-      </li>
-      </ul>
-      <ul class="help-wanted-filter">
-        <li>
-          <button (click)="applyFilters(); closePopup();">Apply Filters</button>
-        </li>
-      </ul>
-    </fieldset>
-  </form>
-</div>
-
-<!-- modal for external links -->
-<modal></modal>

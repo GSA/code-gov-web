@@ -9,6 +9,7 @@ interface Task {
   agency: Agency;
   agency_id: string;
   image: string;
+  date: any;
 }
 
 interface HelpWantedResponse {

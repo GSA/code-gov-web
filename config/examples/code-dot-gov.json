@@ -39,8 +39,9 @@
           "name": "developers",
           "links": [
             { "name": "code.gov API", "url": "https://developers.code.gov/basics.html" },
-            { "name": "Contribute", "url": "/#!/help-wanted" },
-            { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" }
+            { "name": "Open Tasks", "url": "/#!/open-tasks" },
+            { "name": "Notebooks", "url": "https://beta.observablehq.com/search?query=%22code.gov%22" },
+            { "name": "Resources", "url": "https://github.com/GSA/code-gov/wiki/Tools-&-Resources" }
           ]
         },
         {
@@ -130,19 +131,23 @@
         "quote": "It’s the latest in a long line of high-profile victories for the open source movement.",
         "attribution": {
           "image": "assets/img/logos/press/wired.svg",
+          "alt": "wired magazine",
           "url": "https://www.wired.com/2016/08/open-source-won-now/"
         },
         "links": [
           {
             "image": "assets/img/logos/press/techcrunch.jpg",
+            "alt": "techcrunch",
             "url": "https://techcrunch.com/2016/08/08/the-white-house-just-released-the-federal-source-code-policy-to-help-government-agencies-go-open-source/"
           },
           {
             "image": "assets/img/logos/press/pcmag.png",
+            "alt": "pc magazine",
             "url": "http://www.pcmag.com/news/346860/white-house-releases-open-source-software-policy"
           },
           {
             "image": "assets/img/logos/press/fcw.png",
+            "alt": "federal computer week",
             "url": "https://fcw.com/articles/2016/08/08/open-source-rockwell.aspx"
           }
         ]
@@ -185,8 +190,8 @@
       "browse_by_text": "Browse by Agency"
     },
     "help_wanted": {
-      "title": "Help Wanted",
-      "subtitle": "Discover how you can get involved and make America's Code better"
+      "title": "Open Tasks",
+      "subtitle": "Ready. Set. Code!"
     },
     "roadmap": {
       "overview": [
@@ -203,7 +208,7 @@
         { "name": "Update search filters", "status": "In Progress" }
       ],
       "mid": [
-        { "name": "Update help wanted phase 1", "status": null },
+        { "name": "Update open tasks phase 1", "status": null },
         { "name": "Update UI for search results", "status": null },
         { "name": "Usability sessions, round 2", "status": null }
       ],

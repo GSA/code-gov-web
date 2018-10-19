@@ -30,7 +30,7 @@ export const ROUTES: Routes = [
       { path: 'faqs', component: FaqsComponent },
       { path: 'roadmap', component: RoadmapComponent },
       { path: 'browse-projects', component: BrowseProjectsComponent },
-      { path: 'help-wanted', component: HelpWantedComponent },
+      { path: 'open-tasks', component: HelpWantedComponent },
       { path: '**', component: FourOhFourComponent },
     ]
   },

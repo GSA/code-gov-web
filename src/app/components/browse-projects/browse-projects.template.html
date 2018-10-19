@@ -10,6 +10,16 @@
       <li>Browse Projects</li>
     </ul>
   </div>
+  <div class="search-results-header">
+    <div class="indented">
+      <div class="width-quarter">
+        <repos-search autofocus=true buttonClasses="alt" placeholder="{{ queryValue }}"></repos-search>
+      </div>
+      <h3 *ngIf="finalResults" class="repos-count width-three-quarters">
+        {{ finalResults.length }} {{ "Repositories" | pluralize : reposTotal }}
+      </h3>
+    </div>
+  </div>
   <div class="indented">
     <div id="filter-boxes-section">
       <h2>Filter</h2>
@@ -61,7 +71,7 @@
         <div class="filter-tag" *ngFor="let filterTag of filterTags" (click)="removeFilterTag(filterTag)">
           <div class="filter-tag-title">{{filterTag.name}}</div>
         </div>
-      </div>      
+      </div>
       <div *ngIf="isLoading">
         Loading
       </div>

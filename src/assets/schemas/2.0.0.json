@@ -198,6 +198,10 @@
                   "type": "string",
                   "format": "uri",
                   "description": "The URL where the code repository, project, library or release can be found."
+                },
+                "isGovernmentRepo":{
+                  "type": "boolean",
+                  "description": "True or False. Is the code repository owned or managed by a federal agency"
                 }
               },
               "additionalProperties": false

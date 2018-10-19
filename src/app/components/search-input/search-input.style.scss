@@ -14,7 +14,9 @@
   }
 
   .search-description-wrapper {
+    font-size: 1.6rem;
     margin: 0 auto;
+    margin-bottom: .8rem;
     text-align: left;
     width: 100%;
 
@@ -30,11 +32,12 @@
 
     input {
       /* 100% minus width of the button */
-      width: calc(100% - 40px);
+      width: calc(100% - 30px);
     }
 
     button.go {
       margin-right: 0;
+      position: absolute;
     }
   }
 

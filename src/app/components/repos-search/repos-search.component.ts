@@ -35,6 +35,7 @@ export class ReposSearchComponent {
   @Input() queryValue = '';
   @Input() autofocus = false;
   @Input() buttonClasses = '';
+  @Input() placeholder: string;
   @ViewChild('repoSearch') searchFormElement: ElementRef;
   private browse_by_text: string = content.home.banner.browse_by_text;
   private entities: any[];

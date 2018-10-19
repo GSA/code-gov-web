@@ -2,34 +2,20 @@
 
 .card {
 
-  h3, p {
-    margin: 0;
-  }
+  hr {
+    visibility: hidden;
+    display: none;
 
-  h3 {
-    line-height: 1;
-
-    &:hover {
-      color: $brand-teal;
+    @media screen and (min-width: $medium-screen) {
+      border-top: 1px solid $color-gray-light;
+      display: block;
+      margin-left: -1em;
+      margin-right: -1.1em;
+      margin-top: 2rem;
+      max-width: none;
+      visibility: visible;
+      width: auto;
     }
-
-    a {
-      font-weight: bold;
-
-      &:visited {
-        color: $brand-blue;
-      }
-    }
-  }
-
-  p {
-    color: $color-black;
-    line-height: 1.1;
-  }
-
-  small {
-    color: $color-gray-light;
-    font-size: 1em;
   }
 
   dl {
@@ -50,15 +36,12 @@
 
   dd, dt {
     display: inline;
+    font-size: .85714286em; 
     margin: 0;
   }
 
-  dd {
-    font-weight: bold;
-  }
-
   dt {
-    color: $color-gray;
+    font-weight: bold;
   }
 
   .agency-details {

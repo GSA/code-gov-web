@@ -44,6 +44,7 @@ export class BaseFilterPageComponent {
   public languages = [];
   public hostElement: ElementRef;
   public filterTags = [];
+  public types = [];
 
   // added by children
   public sortOptions: String[];
@@ -53,14 +54,22 @@ export class BaseFilterPageComponent {
    * On removal from the DOM, unsubscribe from URL updates.
    */
   public ngOnDestroy() {
-    this.routeSubscription.unsubscribe();
+    if (this.routeSubscription) {
+      this.routeSubscription.unsubscribe();
+    }
   }
 
   public getFilterBoxValues(title) {
     try {
-      return this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`).values;
+      const element = this.hostElement.nativeElement.querySelector(`filter-box[title='${title}']`);
+      if (element) {
+        return element.values;
+      } else {
+        return [];
+      }
     } catch (error) {
-      console.error(`getFilterBoxValues caught the following error with ${title}`, error);
+      console.warn(`getFilterBoxValues caught the following error with ${title}`, error);
+      return [];
     }
   }
 
@@ -71,6 +80,16 @@ export class BaseFilterPageComponent {
       return true;
     } else {
       return selectedUsageTypes.indexOf(result.permissions.usageType) > -1;
+    }
+  }
+
+  public filterType(result) {
+    const selectedTypes = this.getFilterBoxValues('Type');
+
+    if (selectedTypes.length === 0) {
+      return true;
+    } else {
+      return selectedTypes.indexOf(result.type) > -1;
     }
   }
 
@@ -89,6 +108,24 @@ export class BaseFilterPageComponent {
       return true;
     } else if (names.length > 0) {
       return names.indexOf(result.agency.acronym) > -1;
+    }
+  }
+
+  public filterSkillLevel(result) {
+    const names = this.getFilterBoxValues('Skill Level');
+    if (names.length === 0) {
+      return true;
+    } else if (names.length > 0) {
+      return names.indexOf(result.skill) > -1;
+    }
+  }
+
+  public filterTimeRequired(result) {
+    const names = this.getFilterBoxValues('Time Required');
+    if (names.length === 0) {
+      return true;
+    } else if (names.length > 0) {
+      return names.indexOf(result.effort) > -1;
     }
   }
 
@@ -130,6 +167,9 @@ export class BaseFilterPageComponent {
       .filter(this.filterLicenses.bind(this))
       .filter(this.filterUsageType.bind(this))
     //  .filter(this.filterOrgType.bind(this))
+      .filter(this.filterType.bind(this))
+      .filter(this.filterSkillLevel.bind(this))
+      .filter(this.filterTimeRequired.bind(this))
       .filter(this.filterFederalAgency.bind(this));
   }
 
@@ -181,6 +221,16 @@ export class BaseFilterPageComponent {
     this.licenses = Array.from(licenses)
       .map(license => JSON.parse(license))
       .sort((a, b) => a.name < b.name ? -1 : 1);
+  }
+
+  public setTypes() {
+    let types = new Set();
+    this.results.forEach(result => {
+      if (result.type) {
+        types.add(result.type);
+      }
+    });
+    this.types = Array.from(types).sort();
   }
 
   public onFilterBoxChange(event) {

@@ -8,14 +8,15 @@
       <search-input
           name="searchQuery"
           [autofocus]="autofocus"
+          [placeholder]="placeholder"
           [(queryValue)]="queryValue"
           ngDefaultControl>
       </search-input>
     </div>
   </div>
   <div class="browse">
-    Or
-    <select (change)="onBrowseByEntityChange($event.target.value)">
+    <div>Or</div>
+    <select (change)="onBrowseByEntityChange($event.target.value)" id="agencyList" aria-label="browse by agency">
       <option [textContent]="browse_by_text"></option>
       <option value="All">All</option>
       <option *ngFor="let entity of entities" [textContent]="entity.name" [value]="entity.acronym"></option>
