@@ -16,7 +16,10 @@
     }
   }
   button {
-    margin-left: 0;
+  margin-top: 1.5rem;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-left: 0px;
   }
 }
 
@@ -50,16 +53,19 @@
 }
 
 .repo-features {
-  margin: 1rem 0;
-  padding: .5rem;
+  margin-top: 1.5rem;
+  margin-right: 0px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
+  //padding: .5rem;
   width: 100%;
   border-bottom: 1px lightgray solid;
 
   li,span.li {
     display: inline;
     color: $brand-blue-dark;
-    padding: .7rem;
-    margin-right: 0.75em;
+    //padding: .7rem;
+    margin-right: 2em;
     i {
       margin-right: 0.2em;
     }
@@ -96,6 +102,13 @@
 
 .icon {
   color: $brand-blue;
+  margin-top: 0pxm;
+  margin-right: 0px;
+  margin-bottom: .7rem;
+  margin-left: 0px;
+  padding: 0;
+  padding-right: 1.1em;
+  padding-bottom: 1.1em;
 }
 
 
