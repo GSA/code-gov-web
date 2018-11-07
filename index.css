@@ -2986,96 +2986,85 @@ blockquote p:last-child {
 }
 
 .sidebar {
-  display: none;
+  position: relative;
+  border-bottom: none;
+  border-top: none;
+  display: block;
+}
+.sidebar.left {
+  float: left;
+}
+.sidebar.right {
+  float: right;
+}
+.sidebar .sidebar-title {
+  color: #5b616b;
+  clear: both;
+  display: block;
+  font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+.sidebar a {
+  border: none;
+  color: #212121;
+  display: block;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 0.95em;
+  line-height: 1.3;
+  padding: 0.85rem 1rem 0.85rem 1.5rem;
+  text-decoration: none;
+}
+.sidebar a:visited {
+  color: #212121;
+}
+.sidebar a:hover {
+  background-color: #f1f1f1;
+}
+.sidebar a.current {
+  color: #0071bc;
+  font-weight: 700;
+}
+.sidebar a img {
+  left: 0.5em;
+  max-width: 1.5em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar a img + span {
+  display: inline-block;
+  margin-left: 1.75em;
+}
+.sidebar li {
   position: relative;
 }
-@media screen and (min-width: 600px) {
-  .sidebar {
-    border-bottom: none;
-    border-top: none;
-    display: block;
-  }
-  .sidebar.left {
-    float: left;
-  }
-  .sidebar.right {
-    float: right;
-  }
-  .sidebar .sidebar-title {
-    color: #5b616b;
-    clear: both;
-    display: block;
-    font-family: "TT Lakes", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.3em;
-    margin-bottom: 0.5em;
-    margin-top: 0;
-  }
-  .sidebar a {
-    border: none;
-    color: #212121;
-    display: block;
-    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 0.95em;
-    line-height: 1.3;
-    padding: 0.85rem 1rem 0.85rem 1.5rem;
-    text-decoration: none;
-  }
-  .sidebar a:visited {
-    color: #212121;
-  }
-  .sidebar a:hover {
-    background-color: #f1f1f1;
-  }
-  .sidebar a.current {
-    color: #0071bc;
-    font-weight: 700;
-  }
-  .sidebar a img {
-    left: 0.5em;
-    max-width: 1.5em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .sidebar a img + span {
-    display: inline-block;
-    margin-left: 1.75em;
-  }
-  .sidebar li {
-    position: relative;
-  }
-  .sidebar > ul {
-    background-color: transparent;
-    border-top: none;
-    border-bottom: none;
-    display: block;
-    list-style-type: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0;
-    position: relative;
-  }
-  .sidebar > ul > li:not(:last-child), .sidebar > ul > * > li:not(:last-child) {
-    border-bottom: 2px solid #f1f1f1;
-  }
-  .sidebar > ul > li > a.current, .sidebar > ul > * > li > a.current {
-    border-left: 0.4rem solid #0071bc;
-    padding-left: 1.1rem;
-  }
-  .sidebar > ul > li ul, .sidebar > ul > * > li ul {
-    display: none;
-  }
-  .sidebar > ul > li ul li a, .sidebar > ul > * > li ul li a {
-    padding-left: 2.8rem;
-  }
-  .sidebar > ul > li ul li ul li a, .sidebar > ul > * > li ul li ul li a {
-    padding-left: 3.8rem;
-  }
-  .sidebar > ul li.current ul {
-    display: block;
-  }
+.sidebar > ul {
+  background-color: transparent;
+  border-top: none;
+  border-bottom: none;
+  display: block;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+}
+.sidebar > ul > li:not(:last-child), .sidebar > ul > * > li:not(:last-child) {
+  border-bottom: 2px solid #f1f1f1;
+}
+.sidebar > ul > li > a.current, .sidebar > ul > * > li > a.current {
+  border-left: 0.4rem solid #0071bc;
+  padding-left: 1.1rem;
+}
+.sidebar > ul > li ul li a, .sidebar > ul > * > li ul li a {
+  padding-left: 2.8rem;
+}
+.sidebar > ul > li ul li ul li a, .sidebar > ul > * > li ul li ul li a {
+  padding-left: 3.8rem;
 }
 
 table {
@@ -3609,7 +3598,7 @@ html {
   background: #ffffff;
 }
 html #app {
-  background: #ffffff;
+  background: #F0F3F7;
 }
 
 /* styles that apply to stuff around search box on multiple pages */
@@ -4408,7 +4397,7 @@ section#banner-home img.chat {
 }
 @media (max-width: 801px) {
   .card-container .data-quality-title {
-    display: none;
+    font-size: 1rem;
   }
 }
 
@@ -4429,30 +4418,26 @@ section#banner-home img.chat {
 
 .repo-list-summary-wrapper,
 .ngx-pagination {
-  display: none;
+  display: block;
+  text-align: center;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 860px) {
   .repo-list-summary-wrapper,
 .ngx-pagination {
     display: inline-block;
   }
 }
 
-.repo-list-summary {
-  display: inline-block;
-  font-size: 0.8em;
-  line-height: 22px;
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
-
 .card-list .ngx-pagination {
-  float: right;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
-  margin: 0;
-  margin-top: 10px;
+  margin: 10px 0;
   user-select: none;
+}
+@media screen and (min-width: 860px) {
+  .card-list .ngx-pagination {
+    float: right;
+  }
 }
 .card-list .ngx-pagination li {
   display: inline-block;
@@ -4478,8 +4463,16 @@ section#banner-home img.chat {
   cursor: pointer;
   text-decoration: none;
 }
-.card-list .ngx-pagination .page:not(.first) {
-  border-left: 2px solid #5b616b;
+.card-list .ngx-pagination .page {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .card-list .ngx-pagination .page {
+    display: inline;
+  }
+  .card-list .ngx-pagination .page .page:not(.first) {
+    border-left: 2px solid #5b616b;
+  }
 }
 .card-list .ngx-pagination .current {
   background: none;
@@ -4499,7 +4492,6 @@ section#banner-home img.chat {
 
 /* overarching page styles */
 .roadmap-general {
-  background: white;
   /* roadmap overview section of page */
   /* roadmap table section of page */
   /* legend under roadmap table */
