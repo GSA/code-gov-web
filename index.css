@@ -2632,10 +2632,7 @@ input + button.go:hover {
   font-weight: 400;
   margin-bottom: 0.65em;
   position: relative;
-}
-[type=checkbox] + label span {
-  display: inline-block;
-  padding-left: calc(1.75rem + 1em);
+  padding-left: calc(1.5rem + 1em);
   vertical-align: top;
 }
 
@@ -2653,6 +2650,7 @@ input + button.go:hover {
   transform: translateY(-50%);
   vertical-align: middle\0 ;
   width: 1.75rem;
+  left: 0rem;
 }
 
 [type=checkbox]:checked + label::before,
