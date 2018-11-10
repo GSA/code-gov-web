@@ -139,6 +139,7 @@
   }
 }
 
+/* at what pixels should switch from mobile to desktop menu */
 .help-wanted h2 {
   margin-top: -1rem;
   margin-bottom: -2rem;
@@ -374,7 +375,7 @@
   margin-left: 0;
   margin-right: 0.5rem;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   .featured-project .indented .featured-project-info button {
     font-size: 1em;
   }
@@ -443,255 +444,6 @@
 }
 #issue-link:hover {
   text-decoration: none;
-}
-@media screen and (min-width: 600px) {
-  .width-sixth {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 13.4181818182%;
-  }
-  .width-sixth:first-child {
-    margin-left: 0%;
-  }
-  .width-sixth:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-quarter {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 21.8363636364%;
-  }
-  .width-quarter:first-child {
-    margin-left: 0%;
-  }
-  .width-quarter:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-third {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 30.2545454545%;
-  }
-  .width-third:first-child {
-    margin-left: 0%;
-  }
-  .width-third:last-child {
-    margin-right: 0%;
-  }
-}
-
-.width-half {
-  display: inline-block;
-  margin-left: 1.7090909091%;
-  margin-right: 1.7090909091%;
-  vertical-align: top;
-  width: 97.6%;
-}
-.width-half:first-child {
-  margin-left: 0%;
-}
-.width-half:last-child {
-  margin-right: 0%;
-}
-@media screen and (min-width: 600px) {
-  .width-half {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 47.0909090909%;
-  }
-  .width-half:first-child {
-    margin-left: 0%;
-  }
-  .width-half:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-two-thirds {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 63.9272727273%;
-  }
-  .width-two-thirds:first-child {
-    margin-left: 0%;
-  }
-  .width-two-thirds:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-three-quarters {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 72.3454545455%;
-  }
-  .width-three-quarters:first-child {
-    margin-left: 0%;
-  }
-  .width-three-quarters:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-five-sixth {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 80.7636363636%;
-  }
-  .width-five-sixth:first-child {
-    margin-left: 0%;
-  }
-  .width-five-sixth:last-child {
-    margin-right: 0%;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .width-whole {
-    display: inline-block;
-    margin-left: 1.7090909091%;
-    margin-right: 1.7090909091%;
-    vertical-align: top;
-    width: 97.6%;
-  }
-  .width-whole:first-child {
-    margin-left: 0%;
-  }
-  .width-whole:last-child {
-    margin-right: 0%;
-  }
-}
-
-header.main {
-  height: 50px;
-}
-header.main nav .mobile-menu-button {
-  float: left;
-  font-size: 44px;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: absolute;
-  width: 64px;
-}
-header.main nav .mobile-menu-button .icon {
-  color: white;
-  height: 44px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-}
-header.main nav a img {
-  height: 33px;
-  width: 175px;
-}
-@media screen and (max-width: 600px) {
-  header.main nav a img {
-    padding-top: 10px;
-  }
-}
-header.main ul li a svg {
-  float: left;
-}
-
-.search-box {
-  background-color: #323a45;
-  display: none;
-  padding: 0.5rem 2rem;
-  position: fixed;
-  right: 0;
-  top: 20px;
-  transition: 0.25s linear transform;
-  width: 100%;
-  z-index: 2;
-}
-@media screen and (min-width: 481px) {
-  .search-box {
-    display: block;
-  }
-}
-@media screen and (min-width: 600px) {
-  .search-box {
-    padding-right: 68px;
-  }
-}
-.search-box.active {
-  transform: translateY(55px);
-}
-.search-box .close-search-box-button {
-  color: #ffffff;
-  cursor: pointer;
-  float: right;
-  font-size: 1.4em;
-  height: 42px;
-  line-height: 42px;
-  position: relative;
-  text-decoration: none;
-  transition: 0.25s transform;
-  width: 10%;
-}
-@media screen and (min-width: 600px) {
-  .search-box .close-search-box-button {
-    width: 42px;
-  }
-}
-.search-box .close-search-box-button:focus, .search-box .close-search-box-button:hover {
-  transform: scale(1.5);
-}
-.search-box .close-search-box-button:focus > i, .search-box .close-search-box-button:hover > i {
-  color: #ffffff;
-  transform: translateX(-50%) translateY(-50%);
-}
-.search-box .close-search-box-button > i {
-  color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-.search-box .search-form {
-  display: none;
-}
-@media screen and (min-width: 481px) {
-  .search-box .search-form {
-    display: block;
-    float: right;
-  }
-}
-.search-box .search-form input[type=search] {
-  width: 90%;
-}
-@media screen and (min-width: 600px) {
-  .search-box .search-form {
-    width: 36rem;
-  }
 }
 @font-face {
   font-family: 'code-gov';
@@ -1042,6 +794,7 @@ header.main ul li a svg {
   }
 }
 
+/* at what pixels should switch from mobile to desktop menu */
 html {
   box-sizing: border-box;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -1608,20 +1361,29 @@ button:only-child {
 }
 .card dl dt {
   font-weight: bold;
-  display: inline;
+  display: block;
   margin-left: 0px;
 }
-.card dl dt:before {
-  content: "\A";
-  white-space: pre;
+@media screen and (min-width: 600px) {
+  .card dl dt {
+    display: inline;
+  }
+  .card dl dt:before {
+    content: "\A";
+    white-space: pre;
+  }
 }
 .card dl dd {
   display: inline-block;
   margin-inline-start: 0px;
-  margin-left: 15px;
-  margin-right: 2rem;
   margin-bottom: 5px;
   margin-top: 5px;
+}
+@media screen and (min-width: 600px) {
+  .card dl dd {
+    margin-left: 15px;
+    margin-right: 2rem;
+  }
 }
 .card dl dd:last-child {
   margin-right: 0px;
@@ -1791,6 +1553,7 @@ hr {
   }
 }
 
+/* at what pixels should switch from mobile to desktop menu */
 @media screen and (min-width: 600px) {
   .sidebar-docs {
     display: inline-block;
@@ -2121,7 +1884,7 @@ filter-box .filter-box ul.options li .showLess {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.icon-cancel-thin:before {
+.icon-close:before {
   content: "\1";
 }
 
@@ -2776,6 +2539,149 @@ header.dark a.link--active, footer.dark a.link--active {
   color: #ffffff;
 }
 
+.mobile-menu-button {
+  bottom: 0;
+  cursor: pointer;
+  float: left;
+  font-size: 44px;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: absolute;
+  top: 0;
+  width: 64px;
+}
+.mobile-menu-button .icon {
+  color: white;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+}
+
+mobile-menu-button.dark .icon {
+  color: #485567;
+}
+
+.mobile-menu {
+  background-color: #323a45;
+  bottom: 0;
+  box-shadow: 0 0 10px 0 #000000;
+  font-size: 1.3em;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  top: 0px;
+  transform: translateX(-331px);
+  transition: 0.5s transform ease;
+  width: 320px;
+  z-index: 20;
+}
+.mobile-menu.open {
+  transform: translateX(0);
+}
+.mobile-menu > ul {
+  width: 320px;
+}
+.mobile-menu > ul li {
+  border-bottom: 1px solid #4773aa;
+  float: left;
+  width: 100%;
+}
+.mobile-menu > ul li a {
+  border-left: 8px solid transparent;
+  color: #ffffff;
+  display: block;
+  line-height: 5rem;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+}
+.mobile-menu > ul li a:focus, .mobile-menu > ul li a:hover {
+  border-left: 8px solid #43ddd7;
+  color: white;
+  text-decoration: none;
+}
+.mobile-menu > ul li a.active {
+  border-left: 8px solid #43ddd7;
+  font-weight: bold;
+  text-decoration: none;
+}
+.mobile-menu > ul li a:visited {
+  color: white;
+}
+.mobile-menu > ul li.collapsed a.dropdown:after {
+  content: "\F107";
+  float: right;
+  font-family: "code-gov";
+  font-size: 4rem;
+  padding-right: 2rem;
+}
+.mobile-menu > ul li.expanded a.dropdown:after {
+  content: "\F106";
+  float: right;
+  font-family: "code-gov";
+  font-size: 4rem;
+  padding-right: 2rem;
+}
+.mobile-menu > ul > li.search {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.mobile-menu > ul > li.search input {
+  width: 80%;
+}
+.mobile-menu > ul > li.search button.go {
+  margin-right: 0;
+}
+.mobile-menu > ul > li > a {
+  padding-left: 1rem;
+}
+.mobile-menu > ul > li.expanded ul {
+  display: block;
+}
+.mobile-menu > ul > li > ul {
+  background-color: #485568;
+  display: none;
+}
+.mobile-menu > ul > li > ul > li {
+  background: #485568;
+}
+.mobile-menu > ul > li > ul > li:last-child {
+  border-bottom: none;
+}
+.mobile-menu > ul > li > ul > li > a {
+  padding-left: 2rem;
+}
+
+.mobile-menu-underlay {
+  background-color: #323a45;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  top: calc(50px + 10px);
+  transition: 0.5s opacity;
+  z-index: -1;
+}
+.mobile-menu-underlay.active {
+  background-color: #323a45;
+  opacity: 0.7;
+  pointer-events: all;
+  z-index: 1;
+}
+
 .subnav {
   background-color: #e9e9e9;
 }
@@ -3326,6 +3232,7 @@ code {
   }
 }
 
+/* at what pixels should switch from mobile to desktop menu */
 header.main {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3390,7 +3297,7 @@ header.main nav.main {
 header.main nav.main.not-at-top, header.main nav.main.expanded {
   box-shadow: 0 0 10px 0 #000000;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main {
     font-size: 1em;
     padding: 1.5rem 2rem;
@@ -3399,10 +3306,11 @@ header.main nav.main.not-at-top, header.main nav.main.expanded {
 }
 header.main nav.main .svg-container {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
   position: absolute;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main .svg-container {
     float: left;
     left: 0;
@@ -3418,7 +3326,7 @@ header.main nav.main .svg-container svg {
   top: 0;
   width: 83px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main .svg-container svg {
     height: 25px;
     margin-bottom: 7.5px;
@@ -3426,7 +3334,7 @@ header.main nav.main .svg-container svg {
     width: 103px;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   header.main nav.main .svg-container svg {
     height: 30px;
     margin-bottom: 5px;
@@ -3448,7 +3356,7 @@ header.main nav.main > ul {
   margin-top: 0;
   /* first-level li */
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main > ul {
     display: inline-block;
   }
@@ -3473,7 +3381,7 @@ header.main nav.main > ul.right > li .follow-us {
   text-decoration: none;
   vertical-align: top;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main > ul.right > li .follow-us .follow-us {
     display: inline-block;
   }
@@ -3486,12 +3394,12 @@ header.main nav.main > ul > li {
   /* title of first level option */
   /* sub options */
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main > ul > li {
     margin-left: 2rem;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   header.main nav.main > ul > li {
     margin-left: 4rem;
   }
@@ -3507,12 +3415,12 @@ header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
   text-transform: uppercase;
   vertical-align: top;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
     font-size: 0.8em;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
     font-size: 1em;
   }
@@ -3531,12 +3439,12 @@ header.main nav.main > ul > li > ul a {
   line-height: 40px;
   text-decoration: none;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700.5px) {
   header.main nav.main > ul > li > ul a {
     font-size: 0.7em;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   header.main nav.main > ul > li > ul a {
     font-size: 0.9em;
   }
@@ -4034,6 +3942,7 @@ section#banner-home img.chat {
   }
 }
 
+/* at what pixels should switch from mobile to desktop menu */
 #press-section .banner-content {
   transform: none;
 }
@@ -4100,6 +4009,121 @@ section#banner-home img.chat {
 @media screen and (min-width: 481px) {
   #press-section #press-banner .press-container .press-links li .press-logo {
     max-height: 4em;
+  }
+}
+
+header.main {
+  height: 50px;
+}
+@media screen and (max-width: 700.5px) {
+  header.main nav {
+    height: 100%;
+    min-height: 50px;
+    position: relative;
+  }
+}
+header.main nav a img {
+  height: 33px;
+  width: 175px;
+}
+@media screen and (max-width: 700.5px) {
+  header.main nav a img {
+    padding: 5px;
+  }
+}
+header.main nav mobile-menu-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+header.main nav mobile-menu-button .mobile-menu-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header.main nav mobile-menu-button .mobile-menu-button .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header.main nav .mobile-menu {
+  top: calc(50px + 10px);
+}
+header.main nav ul li a svg {
+  float: left;
+}
+
+.search-box {
+  background-color: #323a45;
+  display: none;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  right: 0;
+  top: 20px;
+  transition: 0.25s linear transform;
+  width: 100%;
+  z-index: 2;
+}
+@media screen and (min-width: 481px) {
+  .search-box {
+    display: block;
+  }
+}
+@media screen and (min-width: 600px) {
+  .search-box {
+    padding-right: 68px;
+  }
+}
+.search-box.active {
+  transform: translateY(55px);
+}
+.search-box .close-search-box-button {
+  color: #ffffff;
+  cursor: pointer;
+  float: right;
+  font-size: 1.4em;
+  height: 42px;
+  line-height: 42px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.25s transform;
+  width: 10%;
+}
+@media screen and (min-width: 600px) {
+  .search-box .close-search-box-button {
+    width: 42px;
+  }
+}
+.search-box .close-search-box-button:focus, .search-box .close-search-box-button:hover {
+  transform: scale(1.5);
+}
+.search-box .close-search-box-button:focus > i, .search-box .close-search-box-button:hover > i {
+  color: #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+}
+.search-box .close-search-box-button > i {
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.search-box .search-form {
+  display: none;
+}
+@media screen and (min-width: 481px) {
+  .search-box .search-form {
+    display: block;
+    float: right;
+  }
+}
+.search-box .search-form input[type=search] {
+  width: 90%;
+}
+@media screen and (min-width: 600px) {
+  .search-box .search-form {
+    width: 36rem;
   }
 }
 
@@ -4332,6 +4356,10 @@ section#banner-home img.chat {
   font-size: 1em;
   margin: 0;
 }
+.card-list-item button {
+  font-size: 1.4rem;
+  padding: 1rem 0.6rem;
+}
 @media screen and (min-width: 600px) {
   .card-list-item button {
     margin: 0;
@@ -4389,6 +4417,12 @@ section#banner-home img.chat {
   color: #004370;
   text-decoration: none;
 }
+.card-list-item .language:after {
+  content: ", ";
+}
+.card-list-item .language:last-of-type:after {
+  content: "";
+}
 
 .card-container {
   position: relative;
@@ -4419,7 +4453,7 @@ section#banner-home img.chat {
   display: block;
   text-align: center;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   .repo-list-summary-wrapper,
 .ngx-pagination {
     display: inline-block;
@@ -4432,7 +4466,7 @@ section#banner-home img.chat {
   margin: 10px 0;
   user-select: none;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   .card-list .ngx-pagination {
     float: right;
   }
@@ -4442,7 +4476,7 @@ section#banner-home img.chat {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 925px) {
   .card-list .ngx-pagination li {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
