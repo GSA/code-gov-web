@@ -1336,6 +1336,9 @@ button:only-child {
 .card .card-title:visited {
   color: #0071bc;
 }
+.card quality-tag + .card-title, .card .corner-tag + .card-title {
+  padding-right: 2em;
+}
 .card .card-date {
   color: #aeb0b5;
   font-size: 1em;
@@ -2126,10 +2129,15 @@ footer .footer-content .footer-part.links ul li a:visited {
 }
 @media screen and (min-width: 937.5px) {
   footer .footer-content .footer-part.logos ul li a img {
-    height: 10rem;
+    height: 7rem;
   }
   footer .footer-content .footer-part.logos ul li a img + span {
     display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  footer .footer-content .footer-part.logos ul li a img {
+    height: 10rem;
   }
 }
 @media screen and (max-width: 937.5px) {
