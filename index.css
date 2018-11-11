@@ -4293,6 +4293,13 @@ header.main nav ul li a svg {
   color: #000000;
 }
 
+.mobile-menu .search-input-and-button-wrapper {
+  text-align: center;
+}
+.mobile-menu .search-input-and-button-wrapper button.go {
+  position: static;
+}
+
 .browse {
   font-size: 1.6rem;
   font-weight: bold;
