@@ -1807,6 +1807,10 @@ filter-box .filter-box ul.options li {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+filter-box .filter-box ul.options li label span {
+  display: inline-block;
+  padding-right: 1.75rem;
+}
 filter-box .filter-box ul.options li.checked {
   display: block !important;
 }
