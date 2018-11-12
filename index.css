@@ -375,7 +375,7 @@
   margin-left: 0;
   margin-right: 0.5rem;
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   .featured-project .indented .featured-project-info button {
     font-size: 1em;
   }
@@ -3309,7 +3309,7 @@ header.main nav.main {
 header.main nav.main.not-at-top, header.main nav.main.expanded {
   box-shadow: 0 0 10px 0 #000000;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main {
     font-size: 1em;
     padding: 1.5rem 2rem;
@@ -3322,7 +3322,7 @@ header.main nav.main .svg-container {
   top: 50%;
   position: absolute;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main .svg-container {
     float: left;
     left: 0;
@@ -3338,7 +3338,7 @@ header.main nav.main .svg-container svg {
   top: 0;
   width: 83px;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main .svg-container svg {
     height: 25px;
     margin-bottom: 7.5px;
@@ -3346,7 +3346,7 @@ header.main nav.main .svg-container svg {
     width: 103px;
   }
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   header.main nav.main .svg-container svg {
     height: 30px;
     margin-bottom: 5px;
@@ -3368,7 +3368,7 @@ header.main nav.main > ul {
   margin-top: 0;
   /* first-level li */
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main > ul {
     display: inline-block;
   }
@@ -3393,7 +3393,7 @@ header.main nav.main > ul.right > li .follow-us {
   text-decoration: none;
   vertical-align: top;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main > ul.right > li .follow-us .follow-us {
     display: inline-block;
   }
@@ -3406,12 +3406,12 @@ header.main nav.main > ul > li {
   /* title of first level option */
   /* sub options */
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main > ul > li {
     margin-left: 2rem;
   }
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   header.main nav.main > ul > li {
     margin-left: 4rem;
   }
@@ -3427,12 +3427,12 @@ header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
   text-transform: uppercase;
   vertical-align: top;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
     font-size: 0.8em;
   }
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   header.main nav.main > ul > li > div, header.main nav.main > ul > li > a {
     font-size: 1em;
   }
@@ -3451,12 +3451,12 @@ header.main nav.main > ul > li > ul a {
   line-height: 40px;
   text-decoration: none;
 }
-@media screen and (min-width: 700.5px) {
+@media screen and (min-width: 800.5px) {
   header.main nav.main > ul > li > ul a {
     font-size: 0.7em;
   }
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   header.main nav.main > ul > li > ul a {
     font-size: 0.9em;
   }
@@ -4027,7 +4027,7 @@ section#banner-home img.chat {
 header.main {
   height: 50px;
 }
-@media screen and (max-width: 700.5px) {
+@media screen and (max-width: 800.5px) {
   header.main nav {
     height: 100%;
     min-height: 50px;
@@ -4038,7 +4038,7 @@ header.main nav a img {
   height: 33px;
   width: 175px;
 }
-@media screen and (max-width: 700.5px) {
+@media screen and (max-width: 800.5px) {
   header.main nav a img {
     padding: 5px;
   }
@@ -4472,7 +4472,7 @@ header.main nav ul li a svg {
   display: block;
   text-align: center;
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   .repo-list-summary-wrapper,
 .ngx-pagination {
     display: inline-block;
@@ -4485,7 +4485,7 @@ header.main nav ul li a svg {
   margin: 10px 0;
   user-select: none;
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   .card-list .ngx-pagination {
     float: right;
   }
@@ -4495,7 +4495,7 @@ header.main nav ul li a svg {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-@media screen and (min-width: 925px) {
+@media screen and (min-width: 1000px) {
   .card-list .ngx-pagination li {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
