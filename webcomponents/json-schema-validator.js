@@ -9,11 +9,13 @@
     constructor() {
       // establish prototype chain
       super();
-      this.ajvurl = 'https://cdnjs.cloudflare.com/ajax/libs/ajv/6.5.5/ajv.min.js'
+      this.default_ajv_url = 'https://unpkg.com/ajv@6.5.5/dist/ajv.min.js'
+      this.default_json_editor_url = 'https://unpkg.com/jsoneditor@5.25.0';
+      this.promises = {};
     }
 
     static get observedAttributes() {
-      return ['ajv', 'metaschema', 'schema'];
+      return ['ajv', 'jsoneditor', 'metaschema', 'schema'];
     }
 
     // fires after the element has been attached to the DOM
@@ -21,12 +23,9 @@
       const uid = Math.ceil((Math.random() * 10e10).toString())
       this.id = `schema-validator-${uid}`
       this.innerHTML = `<div>
-        <textarea
-          onChange="event.target.parentElement.parentElement.validateInput()"
-          onKeyup="event.target.parentElement.parentElement.validateInput()"
-          style="box-sizing: border-box; height: 500px; padding: 15px; resize: none; width: 100%;"
-        ></textarea>
+        <div id="jsoneditor" style="box-sizing: border-box; height: 500px; padding: 15px; width: 100%;"></div>
         <div id="schema-validation-errors" style="box-sizing: border-box; padding: 15px; width: 100%;"></div>
+        <link href="${this.json_editor_url}/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
       </div>`;
       this.update();
     }
@@ -60,19 +59,29 @@
     }
 
     getAjv() {
-      if (this.ajv) {
-        return Promise.resolve(this.ajv);
-      } else {
-        return new Promise(resolve => {
+      return this.loadScript(this.ajv_url).then(() => {
+        if (!this.ajv) {
+          this.ajv = new window.Ajv({ allErrors: true, schemaId: 'id' });
+        }
+        return this.ajv
+      })
+    }
+
+    getJSONEditor() {
+      return this.loadScript(this.json_editor_url + '/dist/jsoneditor.min.js')
+        .then(() => window.JSONEditor)
+    }
+
+    loadScript(url) {
+      if (!this.promises[url]) {
+        this.promises[url] = new Promise(resolve => {
           const script = document.createElement("script");
-          script.src = this.ajvurl;
-          script.onload = () => {
-            this.ajv = new window.Ajv({ allErrors: true, schemaId: 'id' });
-            resolve(this.ajv)
-          };
+          script.src = url;
+          script.onload = resolve
           document.body.appendChild(script)
         })
       }
+      return Promise.resolve(this.promises[url])
     }
 
     getStyle() {
@@ -103,21 +112,36 @@
     }
 
     update() {
-      this.ajvurl = this.getAttribute('ajv') || this.ajvurl
+      this.ajv_url = this.getAttribute('ajv') || this.default_ajv_url
+      this.json_editor_url = this.getAttribute('jsoneditor') || this.default_json_editor_url
       this.schemaurl = this.getAttribute('schema')
       this.metaschemaurl = this.getAttribute('metaschema')
-      Promise.all([
+      this.updated = Promise.all([
         this.getAjv(),
+        this.getJSONEditor(),
         this.getMetaSchema(),
         this.getSchema()
-      ]).then(([ajv, metaschema, schema]) => {
-        console.log("[ajv, metaschema, schema]:", [ajv, metaschema, schema])
+      ]).then(([ajv, JSONEditor, metaschema, schema]) => {
+
+        console.log("[ajv, JSONEditor, metaschema, schema]:", [ajv, JSONEditor, metaschema, schema])
         try {
-          this.ajv.addMetaSchema(metaschema);
+          ajv.addMetaSchema(metaschema);
         } catch (error) {
           console.warn(error);
         }
-        this.validate = this.ajv.compile(schema);
+
+        if (!this.editor) {
+          // create the editor
+          var container = this.querySelector("#jsoneditor");
+          var options = {
+            ajv,
+            mode: 'text',
+            modes: ['text', 'tree']
+          };
+          this.editor = new JSONEditor(container, options, '');
+          this.editor.setSchema(schema)
+          this.editor.setText('')
+        }
       })
     }
 

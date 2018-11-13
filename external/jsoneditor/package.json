@@ -1,0 +1,82 @@
+{
+  "_from": "jsoneditor",
+  "_id": "jsoneditor@5.26.0",
+  "_inBundle": false,
+  "_integrity": "sha512-siSDleq3zN1O89xFX0YjmalmXHESnXaMAnL2Z3eIRz+CRb2sKoPMdOxsioVfFqDSY/4icr2XResMk7NO9fLBLg==",
+  "_location": "/jsoneditor",
+  "_phantomChildren": {
+    "co": "4.6.0",
+    "fast-json-stable-stringify": "2.0.0"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "jsoneditor",
+    "name": "jsoneditor",
+    "escapedName": "jsoneditor",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/",
+    "/@code.gov/json-schema-validator-web-component"
+  ],
+  "_resolved": "https://registry.npmjs.org/jsoneditor/-/jsoneditor-5.26.0.tgz",
+  "_shasum": "8b353a2eb003f77ce0de1b085b286ff918cb29d9",
+  "_spec": "jsoneditor",
+  "_where": "/home/ubuntu/caribou",
+  "author": {
+    "name": "Jos de Jong",
+    "email": "wjosdejong@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/josdejong/jsoneditor/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "ajv": "5.5.2",
+    "brace": "0.11.1",
+    "javascript-natural-sort": "0.7.1",
+    "jmespath": "0.15.0",
+    "json-source-map": "0.4.0",
+    "mobius1-selectr": "2.4.2",
+    "picomodal": "3.0.0",
+    "vanilla-picker": "2.4.2"
+  },
+  "deprecated": false,
+  "description": "A web-based tool to view, edit, format, and validate JSON",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-clean-css": "3.4.2",
+    "gulp-concat-css": "2.3.0",
+    "gulp-shell": "0.6.3",
+    "gulp-util": "3.0.8",
+    "json-loader": "0.5.7",
+    "mkdirp": "0.5.1",
+    "mocha": "5.2.0",
+    "uglify-js": "2.8.22",
+    "webpack": "1.13.1"
+  },
+  "homepage": "https://github.com/josdejong/jsoneditor",
+  "license": "Apache-2.0",
+  "main": "./index",
+  "name": "jsoneditor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josdejong/jsoneditor.git"
+  },
+  "scripts": {
+    "build": "gulp",
+    "start": "gulp watch",
+    "test": "mocha test"
+  },
+  "tags": [
+    "json",
+    "editor",
+    "viewer",
+    "formatter"
+  ],
+  "version": "5.26.0"
+}
