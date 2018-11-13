@@ -3582,9 +3582,11 @@ html #app {
   font-weight: bold;
 }
 #filter-results-section h2 select {
+  font-size: 1.4rem;
+  height: 3rem;
   margin-left: 8px;
-  margin-top: 4px;
   position: absolute;
+  width: 150px;
 }
 
 h3 {
@@ -4154,7 +4156,10 @@ header.main nav ul li a svg {
   color: #43ddd7;
 }
 .repo-general button {
-  margin-left: 0;
+  margin-top: 1.5rem;
+  margin-right: 5px;
+  margin-bottom: 0px;
+  margin-left: 0px;
 }
 .repo-general .repo-container code {
   background-color: #485568;
@@ -4181,16 +4186,17 @@ header.main nav ul li a svg {
   display: inline-block;
 }
 .repo-general .repo-features {
-  margin: 1rem 0;
-  padding: 0.5rem;
+  margin-top: 1.5rem;
+  margin-right: 0px;
+  margin-bottom: 2rem;
+  margin-left: 0px;
   width: 100%;
   border-bottom: 1px lightgray solid;
 }
 .repo-general .repo-features li, .repo-general .repo-features span.li {
   display: inline;
   color: #004370;
-  padding: 0.7rem;
-  margin-right: 0.75em;
+  margin-right: 2em;
 }
 .repo-general .repo-features li i, .repo-general .repo-features span.li i {
   margin-right: 0.2em;
@@ -4217,6 +4223,13 @@ header.main nav ul li a svg {
 }
 .repo-general .icon {
   color: #0071bc;
+  margin-top: 0pxm;
+  margin-right: 0px;
+  margin-bottom: 0.7rem;
+  margin-left: 0px;
+  padding: 0;
+  padding-right: 1.1em;
+  padding-bottom: 1.1em;
 }
 .repo-general .language.last .comma {
   display: none;
@@ -4348,7 +4361,7 @@ header.main nav ul li a svg {
 }
 .search-results-content .search-form .search-input-and-button-wrapper button.go {
   background-color: #0071bc !important;
-  border: 1px solid #aeb0b5;
+  border: none;
 }
 .search-results-content .search-form .search-input-and-button-wrapper button.go:focus, .search-results-content .search-form .search-input-and-button-wrapper button.go:hover {
   background-color: #43ddd7 !important;
@@ -4469,9 +4482,14 @@ header.main nav ul li a svg {
   margin-bottom: 120px;
 }
 
+.repo-list-summary {
+  font-size: 1em;
+}
+
 .repo-list-summary-wrapper,
 .ngx-pagination {
   display: block;
+  font-size: 1em;
   text-align: center;
 }
 @media screen and (min-width: 1000px) {
