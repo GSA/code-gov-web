@@ -22,7 +22,7 @@
             "systems",
             "other"
           ],
-          "description": "An enumerated list of methods for measuring the open source requirement."
+          "description": "An enumerated list of methods for measuring the open source requirement: (1) cost: Cost of software development, (2) systems: system certification and accreditation boundaries, (3) projects: A complete software solution / project, (4) modules: A self-contained module from a software solution, (5) linesOfCode: Source lines of code, (6) other: Another measurement method not referenced above"
         },
         "ifOther": {
           "type": "string",
@@ -81,7 +81,7 @@
               },
               "usageType": {
                 "type": "string",
-                "description": "A list of enumerated values which describes the usage permissions for the release.",
+                "description": "A list of enumerated values which describes the usage permissions for the release: (1) openSource: Open source; (2) governmentWideReuse: Government-wide reuse; (3) exemptByLaw: The sharing of the source code is restricted by law or regulation, including—but not limited to—patent or intellectual property law, the Export Asset Regulations, the International Traffic in Arms Regulation, and the Federal laws and regulations governing classified information; (4) exemptByNationalSecurity: The sharing of the source code would create an identifiable risk to the detriment of national security, confidentiality of Government information, or individual privacy; (5) exemptByAgencySystem: The sharing of the source code would create an identifiable risk to the stability, security, or integrity of the agency’s systems or personnel, (6) exemptByAgencyMission: The sharing of the source code would create an identifiable risk to agency mission, programs, or operations; (7) exemptByCIO: The CIO believes it is in the national interest to exempt sharing the source code; (8) exemptByPolicyDate: The release was created prior to the M-16-21 policy (August 8, 2016)",
                 "enum": [
                   "openSource",
                   "governmentWideReuse",
@@ -89,7 +89,8 @@
                   "exemptByNationalSecurity",
                   "exemptByAgencySystem",
                   "exemptByAgencyMission",
-                  "exemptByCIO"
+                  "exemptByCIO",
+                  "exemptByPolicyDate"
                 ],
                 "additionalProperties": false
               },
@@ -110,6 +111,7 @@
           },
           "contact": {
             "type": "object",
+            "description": "Point of contact information for the release.",
             "properties": {
               "email": {
                 "type": "string",
