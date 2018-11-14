@@ -4624,3 +4624,7 @@ header.main nav ul li a svg {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+
+ul.breadcrumbs li {
+  margin-right: 5px;
+}
