@@ -6,8 +6,8 @@
 
       // like ?agencies=DOD,USAID&languages=Python
       var search = location.search;
-      
-      var pathName = location.pathname.replace("/", "");
+
+      var pathName = location.pathname;
 
       var newSearch;
       if (search && search.length > 0 && search[0] === "?") {
