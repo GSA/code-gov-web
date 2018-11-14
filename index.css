@@ -2939,7 +2939,7 @@ blockquote p:last-child {
   color: #212121;
 }
 .sidebar a:hover {
-  background-color: #f1f1f1;
+  color: #0071bc;
 }
 .sidebar a.current {
   color: #0071bc;
