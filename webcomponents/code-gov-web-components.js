@@ -453,6 +453,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
   customElements.define('mobile-menu-button', MobileMenuButton);
 })();
 'use strict';
+/*global HTMLElement*/
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -480,64 +481,61 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-(function () {
-  /*global HTMLElement*/
-  var QualityTag =
-  /*#__PURE__*/
-  function (_HTMLElement) {
-    _inherits(QualityTag, _HTMLElement);
+var QualityTag =
+/*#__PURE__*/
+function (_HTMLElement) {
+  _inherits(QualityTag, _HTMLElement);
 
-    function QualityTag() {
-      _classCallCheck(this, QualityTag);
+  function QualityTag() {
+    _classCallCheck(this, QualityTag);
 
-      // establish prototype chain
-      return _possibleConstructorReturn(this, _getPrototypeOf(QualityTag).call(this));
+    // establish prototype chain
+    return _possibleConstructorReturn(this, _getPrototypeOf(QualityTag).call(this));
+  }
+
+  _createClass(QualityTag, [{
+    key: "connectedCallback",
+    // fires after the element has been attached to the DOM
+    value: function connectedCallback() {
+      this.update();
     }
-
-    _createClass(QualityTag, [{
-      key: "connectedCallback",
-      // fires after the element has been attached to the DOM
-      value: function connectedCallback() {
+  }, {
+    key: "attributeChangedCallback",
+    value: function attributeChangedCallback(attrName, oldVal, newVal) {
+      if (attrName === 'score') {
         this.update();
       }
-    }, {
-      key: "attributeChangedCallback",
-      value: function attributeChangedCallback(attrName, oldVal, newVal) {
-        if (attrName === 'score') {
-          this.update();
-        }
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      var rounded = Math.round(Number(this.getAttribute('score')) * 10) / 10;
+      var category = '';
+
+      if (rounded > 0 && rounded < 4) {
+        category = 'low';
+      } else if (rounded >= 4 && rounded < 7) {
+        category = 'medium';
+      } else if (rounded >= 7) {
+        category = 'high';
+      } else {
+        category = '';
       }
-    }, {
-      key: "update",
-      value: function update() {
-        var rounded = Math.round(Number(this.getAttribute('score')) * 10) / 10;
-        var category = '';
 
-        if (rounded > 0 && rounded < 4) {
-          category = 'low';
-        } else if (rounded >= 4 && rounded < 7) {
-          category = 'medium';
-        } else if (rounded >= 7) {
-          category = 'high';
-        } else {
-          category = '';
-        }
+      this.innerHTML = "<div class=\"corner-tag ".concat(category, "\"><div class=\"corner-tag-value\">").concat(rounded, "</div></div>");
+    }
+  }], [{
+    key: "observedAttributes",
+    get: function get() {
+      return ['score'];
+    }
+  }]);
 
-        this.innerHTML = '<div class="corner-tag ' + category + '"><div class="corner-tag-value">' + rounded + '</div></div>';
-      }
-    }], [{
-      key: "observedAttributes",
-      get: function get() {
-        return ['score'];
-      }
-    }]);
+  return QualityTag;
+}(_wrapNativeSuper(HTMLElement)); // let the browser know about the custom element
 
-    return QualityTag;
-  }(_wrapNativeSuper(HTMLElement)); // let the browser know about the custom element
-
-  /*global customElements*/
+/*global customElements*/
 
 
-  customElements.define('quality-tag', QualityTag);
-})();
+customElements.define('quality-tag', QualityTag);
 
