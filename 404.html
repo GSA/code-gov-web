@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var location = window.location;
+
+      // like ?agencies=DOD,USAID&languages=Python
+      var search = location.search;
+      
+      var pathName = location.pathname.replace("/", "");
+
+      var newSearch;
+      if (search && search.length > 0 && search[0] === "?") {
+        newSearch = search + "&p=" + pathName;
+      } else {
+        newSearch = "?p=" + pathName;
+      }
+
+      // don't include the pathname (e.g. '/browse-projects')
+      const newUrl = location.origin + newSearch;
+
+      location.replace(newUrl);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
