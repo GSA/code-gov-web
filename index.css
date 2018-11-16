@@ -879,6 +879,43 @@ html body ul {
     color: #00847f;
   }
 }
+.autocomplete {
+  background-color: #ffffff;
+  border: 1px solid #307ac4;
+  display: block;
+  margin-top: 0.25em;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  z-index: 1000;
+}
+.autocomplete li {
+  padding: 0px;
+}
+.autocomplete li a {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+.autocomplete li a:hover {
+  background-color: #7baddf;
+}
+.autocomplete li a .icon {
+  color: #0071bc;
+  max-width: 50px;
+}
+.autocomplete li a span {
+  color: black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 50px);
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
 .banner {
   background: url("/code-gov-style/assets/img/american_flag_1920x1280_gradient.jpg");
   background-attachment: fixed;
@@ -1868,7 +1905,7 @@ filter-box .filter-box ul.options li .showLess {
   transform: translateY(-50%);
 }
 .filter-tag .filter-tag-title::before {
-  content: "\1";
+  content: "\E80D";
   font-family: "code-gov";
   font-size: 1.3em;
   margin-left: -30px;
@@ -3622,6 +3659,15 @@ h3 {
   border-top: 1px solid #aeb0b5;
   margin-bottom: 2rem;
 }
+.search-results-header .width-quarter {
+  position: relative;
+}
+.search-results-header .width-quarter .search-form {
+  margin-bottom: 0;
+}
+.search-results-header .width-quarter .autocomplete {
+  width: calc(100% - 10px);
+}
 .search-results-header h3 {
   display: inline-block;
 }
@@ -4313,6 +4359,7 @@ header.main nav ul li a svg {
 }
 .search-input-wrapper .search-input-and-button-wrapper {
   margin: 0 auto;
+  position: relative;
   text-align: left;
   width: 100%;
 }
@@ -4326,6 +4373,9 @@ header.main nav ul li a svg {
   height: 40px;
   margin-right: 0;
   position: absolute;
+}
+.search-input-wrapper .search-input-and-button-wrapper .autocomplete {
+  width: calc(100% - 10px);
 }
 .search-input-wrapper .icon-search {
   color: #000000;
