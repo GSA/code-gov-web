@@ -4200,7 +4200,6 @@ header.main nav ul li a svg {
 @media screen and (min-width: 481px) {
   .search-box .search-form {
     display: block;
-    float: right;
   }
 }
 .search-box .search-form input[type=search] {
@@ -4210,6 +4209,9 @@ header.main nav ul li a svg {
   .search-box .search-form {
     width: 36rem;
   }
+}
+.search-box .autocomplete {
+  width: calc(100% - 42px - 10px);
 }
 
 .repo-general h2 {
