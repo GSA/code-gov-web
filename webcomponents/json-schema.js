@@ -183,6 +183,13 @@
           padding: .75rem 2rem;
         }
 
+        @media screen and (max-width: 500px) {
+          #${id} th {
+            font-size: 1.1em;
+            padding: .75rem .2rem;
+          }
+        }
+
         #${id} table {
           border-collapse: collapse;
           border-spacing:0;
@@ -194,6 +201,12 @@
           border-left: 1px solid lightgray;
           border-right: 1px solid lightgray;
           padding: 10px;
+        }
+
+        @media screen and (max-width: 500px) {
+          #${id} td {
+            padding: 5px;
+          }
         }
 
         #${id} td div, #${id} td span {
