@@ -2810,13 +2810,18 @@ mobile-menu-button.dark .icon {
   font-weight: bold;
   margin-bottom: 2px;
 }
+@media screen and (min-width: 1100px) and (min-width: 801px) {
+  .popper:hover .popover.desktop {
+    display: block;
+  }
+}
 @media (min-width: 801px) {
-  .popper:hover .popover.desktop, .popper.activated .popover.desktop {
+  .popper.activated .popover.desktop {
     display: block;
   }
 }
 @media (max-width: 801px) {
-  .popper:hover .popover.mobile, .popper.activated .popover.mobile {
+  .popper.activated .popover.mobile {
     display: block;
   }
 }
