@@ -1,5 +1,11 @@
 {
-  "_from": "jsoneditor",
+  "_args": [
+    [
+      "jsoneditor@5.26.0",
+      "/home/ubuntu/code-gov-front-end"
+    ]
+  ],
+  "_from": "jsoneditor@5.26.0",
   "_id": "jsoneditor@5.26.0",
   "_inBundle": false,
   "_integrity": "sha512-siSDleq3zN1O89xFX0YjmalmXHESnXaMAnL2Z3eIRz+CRb2sKoPMdOxsioVfFqDSY/4icr2XResMk7NO9fLBLg==",
@@ -9,24 +15,22 @@
     "fast-json-stable-stringify": "2.0.0"
   },
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "jsoneditor",
+    "raw": "jsoneditor@5.26.0",
     "name": "jsoneditor",
     "escapedName": "jsoneditor",
-    "rawSpec": "",
+    "rawSpec": "5.26.0",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "5.26.0"
   },
   "_requiredBy": [
-    "#USER",
     "/",
     "/@code.gov/json-schema-validator-web-component"
   ],
   "_resolved": "https://registry.npmjs.org/jsoneditor/-/jsoneditor-5.26.0.tgz",
-  "_shasum": "8b353a2eb003f77ce0de1b085b286ff918cb29d9",
-  "_spec": "jsoneditor",
-  "_where": "/home/ubuntu/caribou",
+  "_spec": "5.26.0",
+  "_where": "/home/ubuntu/code-gov-front-end",
   "author": {
     "name": "Jos de Jong",
     "email": "wjosdejong@gmail.com"
@@ -34,7 +38,6 @@
   "bugs": {
     "url": "https://github.com/josdejong/jsoneditor/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "ajv": "5.5.2",
     "brace": "0.11.1",
@@ -45,7 +48,6 @@
     "picomodal": "3.0.0",
     "vanilla-picker": "2.4.2"
   },
-  "deprecated": false,
   "description": "A web-based tool to view, edit, format, and validate JSON",
   "devDependencies": {
     "gulp": "3.9.1",
