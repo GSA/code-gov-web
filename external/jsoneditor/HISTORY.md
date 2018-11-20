@@ -3,6 +3,19 @@
 https://github.com/josdejong/jsoneditor
 
 
+## 2018-11-13, version 5.26.2
+
+- Fixed dragging and selecting multiple nodes not working
+  (regression introduced in `v5.26.1`).
+
+
+## 2018-11-13, version 5.26.1
+
+- Fixed `.update()` throwing an exception when replacing a JSON object
+  with `null`. Thanks @DullReferenceException.
+- Fixed #598: Search field can't be focused in object view.
+
+
 ## 2018-11-12, version 5.26.0
 
 - Implemented option `mainMenuBar` to enable/disable the main menu bar.

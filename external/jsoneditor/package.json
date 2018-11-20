@@ -1,35 +1,32 @@
 {
-  "_args": [
-    [
-      "jsoneditor@5.26.0",
-      "/home/ubuntu/code-gov-front-end"
-    ]
-  ],
-  "_from": "jsoneditor@5.26.0",
-  "_id": "jsoneditor@5.26.0",
+  "_from": "jsoneditor@^5.26.0",
+  "_id": "jsoneditor@5.26.2",
   "_inBundle": false,
-  "_integrity": "sha512-siSDleq3zN1O89xFX0YjmalmXHESnXaMAnL2Z3eIRz+CRb2sKoPMdOxsioVfFqDSY/4icr2XResMk7NO9fLBLg==",
+  "_integrity": "sha512-nG4SomKLDsTnBAy7b+hQFd41OTtFl28m425sK9WH6SQs6EsrUdOuU+eVETJ9Hbn2KfQ6tilQSdoE23ywSZPNGw==",
   "_location": "/jsoneditor",
   "_phantomChildren": {
     "co": "4.6.0",
-    "fast-json-stable-stringify": "2.0.0"
+    "fast-deep-equal": "1.1.0",
+    "fast-json-stable-stringify": "2.0.0",
+    "json-schema-traverse": "0.3.1"
   },
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "jsoneditor@5.26.0",
+    "raw": "jsoneditor@^5.26.0",
     "name": "jsoneditor",
     "escapedName": "jsoneditor",
-    "rawSpec": "5.26.0",
+    "rawSpec": "^5.26.0",
     "saveSpec": null,
-    "fetchSpec": "5.26.0"
+    "fetchSpec": "^5.26.0"
   },
   "_requiredBy": [
     "/",
     "/@code.gov/json-schema-validator-web-component"
   ],
-  "_resolved": "https://registry.npmjs.org/jsoneditor/-/jsoneditor-5.26.0.tgz",
-  "_spec": "5.26.0",
+  "_resolved": "https://registry.npmjs.org/jsoneditor/-/jsoneditor-5.26.2.tgz",
+  "_shasum": "7217ee8792bd2caa8519032a07ebaf6e081685b9",
+  "_spec": "jsoneditor@^5.26.0",
   "_where": "/home/ubuntu/code-gov-front-end",
   "author": {
     "name": "Jos de Jong",
@@ -38,6 +35,7 @@
   "bugs": {
     "url": "https://github.com/josdejong/jsoneditor/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "ajv": "5.5.2",
     "brace": "0.11.1",
@@ -48,6 +46,7 @@
     "picomodal": "3.0.0",
     "vanilla-picker": "2.4.2"
   },
+  "deprecated": false,
   "description": "A web-based tool to view, edit, format, and validate JSON",
   "devDependencies": {
     "gulp": "3.9.1",
@@ -80,5 +79,5 @@
     "viewer",
     "formatter"
   ],
-  "version": "5.26.0"
+  "version": "5.26.2"
 }
