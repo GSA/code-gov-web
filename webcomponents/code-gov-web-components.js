@@ -405,7 +405,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       value: function connectedCallback() {
         this.innerHTML = "\n        <div class=\"mobile-menu-button\" onClick=\"this.parentElement.toggleState()\">\n          <div class=\"icon\"></div>\n        </div>\n      ";
         this.icon = this.querySelector('.icon');
-        this.getAttr();
         this.update();
       }
     }, {
@@ -417,7 +416,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       key: "attributeChangedCallback",
       value: function attributeChangedCallback(attrName, oldVal, newVal) {
         if (attrName === 'open') {
-          this.getAttr();
           this.update();
         }
       }
@@ -431,10 +429,14 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }, {
       key: "update",
       value: function update() {
-        if (this.open) {
-          this.icon.className = 'icon icon-close';
-        } else {
-          this.icon.className = 'icon icon-menu';
+        if (this.icon) {
+          this.getAttr();
+
+          if (this.open) {
+            this.icon.className = 'icon icon-close';
+          } else {
+            this.icon.className = 'icon icon-menu';
+          }
         }
       }
     }], [{

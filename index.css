@@ -3579,6 +3579,18 @@ header.main .fork_me a:hover rect {
   background-image: none;
 }
 
+/* for internet explorer */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card .corner-tag.high {
+    background: url("/assets/img/corner-tags/high.svg");
+  }
+  .card .corner-tag.medium {
+    background: url("/assets/img/corner-tags/medium.svg");
+  }
+  .card .corner-tag.low {
+    background: url("/assets/img/corner-tags/low.svg");
+  }
+}
 html {
   background: #ffffff;
 }
