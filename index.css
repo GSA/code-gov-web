@@ -457,6 +457,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(/fonts/tt_lakes_medium-webfont.eot);
+  src: url(/fonts/tt_lakes_medium-webfont.eot) format('embedded-opentype'),
+       url(/fonts/tt_lakes_medium-webfont-subset.woff2) format("woff2"),
+       url(/fonts/tt_lakes_medium-webfont-subset.zopfli.woff) format("woff"),
+       url(/fonts/tt_lakes_medium-webfont-subset.ttf) format("truetype"),
+       url(/fonts/tt_lakes_medium-webfont.svg) format("svg");
+  unicode-range: U+20-7E;
+}
 @charset "UTF-8";
 /* import CSS rules that allow you to use icons */
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
@@ -1398,13 +1408,15 @@ button:only-child {
 .card .card-description {
   font-size: 0.95em;
   margin: 0;
+  margin-bottom: 14px;
+  padding-bottom: 0.75rem;
 }
 .card hr {
-  border-top: 2px solid #aeb0b5;
+  border-top: 1px solid #aeb0b5;
   display: block;
   margin-left: -1.2em;
   margin-right: -1.25em;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   margin-top: 2rem;
   max-width: none;
   visibility: visible;
@@ -1413,6 +1425,10 @@ button:only-child {
 .card dl {
   font-size: 0.85714286em;
   margin: 0;
+}
+.card dl:first-of-type {
+  margin-top: 14px;
+  padding-top: 0.75em;
 }
 .card dl dt {
   font-weight: bold;
@@ -4493,7 +4509,8 @@ header.main nav ul li a svg {
   }
 }
 .card-list-item .repo-button {
-  margin-left: 3.5818%;
+  margin-bottom: 5px;
+  margin-left: 5.8%;
   text-align: right;
   vertical-align: bottom;
 }
