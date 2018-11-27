@@ -5,7 +5,7 @@
     <script>
       // before anything else change ?p=/open-tasks to /open-tasks
       if (window.location.search.indexOf('p=') > -1) {
-        var pattern = /(\?|&)p=[/a-z-_0-9]{3,100}/
+        var pattern = /(\?|&)p=[/a-z-_0-9]{3,300}/
         const newSearch = window.location.search
           .replace(pattern, '') // remove p=... param from url
           .replace(/^./, '?'); // mark sure starting search param in a question mark
