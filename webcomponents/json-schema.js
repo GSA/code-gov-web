@@ -1,5 +1,3 @@
-'use strict';
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -32,8 +30,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+/* global customElements */
+
+/* global HTMLElement */
 (function () {
-  /*global HTMLElement*/
   let JSONSchema =
   /*#__PURE__*/
   function (_HTMLElement) {
@@ -64,9 +64,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       value: function getHTML() {
         var _this = this;
 
-        const uid = Math.ceil((Math.random() * 10e10).toString());
-        this.id = "schema-viewer-".concat(uid);
-        return "\n      ".concat(this.getStyle(), "\n      <div>\n        <h2>Field Definitions</h2>\n        <p color=\"#555\">The schema fields and definitions are listed below.  The optional fields are marked in red but serve to provide additional, helpful information. You can view a sample JSON file <a href=\"").concat(this.url, "\" target=\"blank\">here</a>.</p>\n        <div style=\"margin-bottom: 10px\">\n          <input id=\"json-schema-hide-optional-fields\" type=\"checkbox\" style=\"cursor: pointer; text-align: left\" onclick=\"document.getElementById('").concat(this.id, "').toggleOptionalFields()\">\n          <label for=\"json-schema-hide-optional-fields\" style=\"cursor: pointer\">Hide optional fields</label>\n        </div>\n        <table>\n          <thead>\n            <tr>\n              <th class='field-name-column'>Field Name</th>\n              <th class='data-type-column'>Data Type</th>\n              <th>Description</th>\n            </tr>\n          </thead>\n          <tbody>\n            ").concat(Object.entries(this.schema.properties).map(function (entry) {
+        this.id = "schema-viewer-".concat(this.getUID());
+        return "\n      ".concat(this.getStyle(), "\n      <div>\n        <h2>Field Definitions</h2>\n        <p color=\"#555\">The schema fields and definitions are listed below.  The optional fields are marked in red but serve to provide additional, helpful information. You can view a sample JSON file <a href=\"").concat(this.url, "\" target=\"blank\">here</a>.</p>\n        <div style=\"margin-bottom: 10px\">\n          <input id=\"json-schema-hide-optional-fields\" type=\"checkbox\" style=\"cursor: pointer; text-align: left\" onclick=\"document.getElementById('").concat(this.id, "').toggleOptionalFields()\">\n          <label for=\"json-schema-hide-optional-fields\" style=\"cursor: pointer\">Hide optional fields</label>\n        </div>\n        <div class=\"desktop-and-mobile-views\">\n          ").concat(this.getDetails(), "\n          <table>\n            <thead>\n              <tr>\n                <th class='field-name-column'>Field Name</th>\n                <th class='data-type-column'>Data Type</th>\n                <th class='description-column'>Description</th>\n              </tr>\n            </thead>\n            <tbody>\n              ").concat(Object.entries(this.schema.properties).map(function (entry) {
           const _entry = _slicedToArray(entry, 2),
                 key = _entry[0],
                 value = _entry[1];
@@ -74,7 +73,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           const isRequired = _this.schema.required.includes(key);
 
           return _this.getSection(entry, isRequired, 0);
-        }), "\n          </tbody>\n        </table>\n      </div>\n      ");
+        }), "\n            </tbody>\n          </table>\n        </div>\n      </div>\n      ");
+      }
+    }, {
+      key: "updateDetails",
+      value: function updateDetails() {
+        this.querySelector("#mobile-details").outerHTML = this.getDetails();
+      }
+    }, {
+      key: "getDetails",
+      value: function getDetails() {
+        return "\n        <div id=\"mobile-details\">\n          <table>\n            <thead>\n              <tr>\n                <th id='mobile-data-type-column'>Data Type</th>\n                <th class='mobile-description-column'>Description</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr style=\"background-color: ".concat(this.selectedBackgroundColor, "\">\n                <td class=\"mobile-data-type\">").concat(this.selectedDataType, "</td>\n                <td class=\"mobile-description\">").concat(this.selectedDescription, "</td>\n              </tr>\n              <tr>\n                <td class=\"back\" onclick=\"document.getElementById('").concat(this.id, "').hideDetails()\">\n                  <div id=\"back-arrow\" class=\"arrow-left\"></div>\n                  <div class=\"field-name-text\">back</div>\n                </td>\n              </tr>\n            </tbody>\n          </table>\n        </div>\n      ");
       }
     }, {
       key: "getDescription",
@@ -104,12 +113,32 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       key: "getDropDown",
       value: function getDropDown(status) {
         if (status === 'collapsed') {
-          return "<div class='dropdown' onclick=\"document.getElementById('".concat(this.id, "').toggleDropDown(event)\"><div class=\"arrow-up\"></div></div>");
+          return "<div class='dropdown' status=".concat(status, " onclick=\"document.getElementById('").concat(this.id, "').toggleDropDown(event)\"><div class=\"arrow-up-or-down\"></div></div>");
         } else if (status === 'expanded') {
-          return "<div class='dropdown' onclick=\"document.getElementById('".concat(this.id, "').toggleDropDown(event)\"><div class=\"arrow-down\"></div></div>");
+          return "<div class='dropdown' status=".concat(status, " onclick=\"document.getElementById('").concat(this.id, "').toggleDropDown(event)\"><div class=\"arrow-up-or-down\"></div></div>");
         } else {
           return "<div class=\"dropdown\"></div>";
         }
+      }
+    }, {
+      key: "getUID",
+      value: function getUID() {
+        return Math.ceil((Math.random() * 10e10).toString());
+      }
+    }, {
+      key: "hideDetails",
+      value: function hideDetails() {
+        this.setAttribute("details", "false");
+      }
+    }, {
+      key: "showDetails",
+      value: function showDetails(rowID) {
+        const row = document.getElementById(rowID);
+        this.setAttribute("details", "true");
+        this.selectedDataType = row.querySelector(".data-type").textContent.trim();
+        this.selectedDescription = this.prettify(row.querySelector(".description").textContent.trim());
+        this.selectedBackgroundColor = window.getComputedStyle(row).backgroundColor;
+        this.updateDetails();
       }
     }, {
       key: "getSection",
@@ -124,7 +153,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           const items = value.items,
                 properties = value.properties,
                 type = value.type;
-          const description = this.getDescription(value);
+          const description = this.prettify(this.getDescription(value));
           const required = this.getRequired(value);
           const hasDropDown = this.hasDropDown(value);
           let trClasses = [];
@@ -132,7 +161,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           if (isRequired === false) trClasses.push('optional');
           const trClass = trClasses.join(' ');
           const dropDownHTML = hasDropDown ? this.getDropDown('expanded') : this.getDropDown('invisble');
-          let html = "<tr class=\"".concat(trClass, "\" indent=\"").concat(indent, "\">\n          <td style=\"padding-left: ").concat(10 + 20 * indent, "px\">").concat(dropDownHTML, "<div class=\"field-name-text\">").concat(key, "</div></td>\n          <td class=\"data-type\"><div>").concat(Array.isArray(type) ? type.join(' or ') : type, "</div></td>\n          <td><div>").concat(description, "</div></td>\n        </tr>");
+          const rowID = this.getUID();
+          let html = "<tr id=\"".concat(rowID, "\" class=\"").concat(trClass, "\" indent=\"").concat(indent, "\">\n          <td style=\"padding-left: ").concat(10 + 20 * indent, "px\">\n            ").concat(dropDownHTML, "\n            <div class=\"field-name-text\">").concat(key, "</div>\n            <div class=\"details\" onclick=\"document.getElementById('").concat(this.id, "').showDetails('").concat(rowID, "')\">\n              <div class=\"details-text\">details</div>\n              <div class=\"details-arrow arrow-right\"></div>\n            </div>\n          </td>\n          <td class=\"data-type\">\n            <div>").concat(Array.isArray(type) ? type.join(' or ') : type, "</div>\n          </td>\n          <td class=\"description\">\n            <div>").concat(description, "</div>\n          </td>\n        </tr>");
 
           if (hasDropDown) {
             let entries;
@@ -191,8 +221,9 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       key: "getStyle",
       value: function getStyle() {
         const arrowSize = '8px';
+        const borderColor = 'lightgray';
         const id = this.id;
-        return "\n      <style>\n\n        json-schema[hide-optional-fields='true'] tr.optional {\n          display: none;\n        }\n\n        #".concat(id, " > div {\n          background: white;\n          padding: 15px;\n        }\n\n        #").concat(id, " input {\n          height: 20px;\n          width: 20px;\n          vertical-align: sub;\n        }\n\n        #").concat(id, " [class*=arrow] {\n          cursor: pointer;\n        }\n\n        #").concat(id, " .arrow-down {\n          width: 0;\n          height: 0;\n          border-left: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid transparent;\n          border-top: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " .arrow-left {\n          width: 0;\n          height: 0;\n          border-top: ").concat(arrowSize, " solid transparent;\n          border-bottom: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " th {\n          background: #323A45;\n          color: white;\n          padding: .75rem 2rem;\n        }\n\n        @media screen and (max-width: 500px) {\n          #").concat(id, " th {\n            font-size: 1.1em;\n            padding: .75rem .2rem;\n          }\n        }\n\n        #").concat(id, " table {\n          border-collapse: collapse;\n          border-spacing:0;\n          width: 100%;\n        }\n\n        #").concat(id, " td {\n          border-bottom: 1px solid lightgray;\n          border-left: 1px solid lightgray;\n          border-right: 1px solid lightgray;\n          padding: 10px;\n        }\n\n        @media screen and (max-width: 500px) {\n          #").concat(id, " td {\n            padding: 5px;\n          }\n        }\n\n        #").concat(id, " td div, #").concat(id, " td span {\n        }\n\n        #").concat(id, " .field-name-column {\n          width: 35%;\n        }\n\n        #").concat(id, " .data-type-column {\n          width: 15%;\n        }\n\n        #").concat(id, " .dropdown {\n          display: inline-block;\n          padding-left: .25rem;\n          width: 2rem;\n        }\n\n        #").concat(id, " .data-type {\n          text-align: center;\n        }\n\n        #").concat(id, " .field-name-text {\n          display: inline-block;\n        }\n\n        #").concat(id, " tr.first {\n          background: #F0F5FB;\n        }\n\n        #").concat(id, " tr.optional td {\n          color: rgb(153, 0, 51);\n        }\n      </style>");
+        return "\n      <style>\n        json-schema[hide-optional-fields='true'] tr.optional {\n          display: none;\n        }\n\n        #".concat(id, " > div {\n          background: white;\n          padding: 15px;\n          position: relative;\n        }\n\n        #").concat(id, " .desktop-and-mobile-views {\n          position: relative;\n        }\n\n        #").concat(id, " input {\n          height: 20px;\n          width: 20px;\n          vertical-align: sub;\n        }\n\n        #").concat(id, " [class*=arrow-] {\n          cursor: pointer;\n          height: 0;\n          width: 0;\n        }\n\n        #").concat(id, " .arrow-up {\n          border-left: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid transparent;\n          border-top: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " .arrow-down {\n          border-left: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid transparent;\n          border-top: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " .arrow-left {\n          border-top: ").concat(arrowSize, " solid transparent;\n          border-bottom: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " .arrow-right {\n          border-top: ").concat(arrowSize, " solid transparent;\n          border-bottom: ").concat(arrowSize, " solid transparent;\n          border-left: ").concat(arrowSize, " solid #000;\n        }\n\n        #").concat(id, " th {\n          background: #323A45;\n          border-bottom: 1px solid ").concat(borderColor, ";\n          border-left: 1px solid ").concat(borderColor, ";\n          border-right: 1px solid ").concat(borderColor, ";\n          box-sizing: border-box;\n          color: white;\n          padding: .75rem 2rem;\n        }\n\n        @media screen and (max-width: 500px) {\n          #").concat(id, " th {\n            font-size: 1.1em;\n            padding: .75rem .2rem;\n          }\n        }\n\n        #").concat(id, " table {\n          border-collapse: collapse;\n          border-spacing:0;\n          width: 100%;\n        }\n\n        #").concat(id, " td {\n          border-bottom: 1px solid ").concat(borderColor, ";\n          border-left: 1px solid ").concat(borderColor, ";\n          border-right: 1px solid ").concat(borderColor, ";\n          box-sizing: border-box;\n          padding: 10px;\n        }\n\n        @media screen and (max-width: 500px) {\n          #").concat(id, " td {\n            padding: 5px;\n          }\n        }\n\n        #").concat(id, " td div, #").concat(id, " td span {\n        }\n\n        #").concat(id, " .field-name-column {\n          width: 35%;\n        }\n\n        #").concat(id, " .data-type-column {\n          width: 15%;\n        }\n\n        #").concat(id, " .dropdown {\n          display: inline-block;\n          padding-left: .25rem;\n          width: 30px;\n        }\n\n        #").concat(id, " .dropdown[status=expanded] > div {\n          border-left: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid transparent;\n          border-top: ").concat(arrowSize, " solid black;\n        }\n\n        #").concat(id, " .dropdown[status=collapsed] > div {\n          border-bottom: ").concat(arrowSize, " solid black;\n          border-left: ").concat(arrowSize, " solid transparent;\n          border-right: ").concat(arrowSize, " solid transparent;\n        }\n\n        #").concat(id, " .data-type, #").concat(id, " .mobile-data-type {\n          text-align: center;\n        }\n\n        #").concat(id, " .field-name-text {\n          display: inline-block;\n        }\n\n        #").concat(id, " tr.first {\n          background: #F0F5FB;\n        }\n\n        #").concat(id, " tr.optional td {\n          color: rgb(153, 0, 51);\n        }\n\n        #").concat(id, " .details {\n          display: none;\n        }\n\n        #").concat(id, " #mobile-details {\n          display: none;\n        }\n\n        /* mobile view */\n        @media screen and (max-width: 600px) {\n          #").concat(id, " th.data-type-column,\n          #").concat(id, " th.description-column,\n          #").concat(id, " td.data-type,\n          #").concat(id, " td.description\n          {\n            display: none;\n          }\n\n          #").concat(id, " .details {\n            color: black;\n            cursor: pointer;\n            display: inline-block;\n            float: right;\n          }\n\n          #").concat(id, " .details-text {\n            display: inline-block;\n            margin-right: 5px;\n          }\n\n          #").concat(id, " .details-arrow, #").concat(id, " #back-arrow {\n            display: inline-block;\n            vertical-align: top;\n          }\n\n          #").concat(id, " #back-arrow {\n            margin-right: 5px;\n          }\n\n          #").concat(id, " #mobile-details {\n            background: white;\n            bottom: 0;\n            display: block;\n            height: 100%;\n            left: 0;\n            overflow: hidden;\n            position: absolute;\n            right: 0;\n            transition: .25s ease;\n            width: 0;\n          }\n\n          #").concat(id, ":not([details=true]) #mobile-details {\n            width: 0;\n          }\n\n          #").concat(id, "[details=true] #mobile-details {\n            width: 100%;\n          }\n\n          #").concat(id, " .dropdown {\n            padding-left: .15rem;\n            width: 20px;\n          }\n        }\n\n        #").concat(id, " td.back {\n          border: none;\n          cursor: pointer;\n          padding-bottom: 15px;\n          padding-top: 15px;\n          text-align: center;\n        }\n\n        #").concat(id, " td.back > div {\n          display: inline-block;\n        }\n\n        #").concat(id, " td.back:hover {\n          background: #323A45;\n          color: white;\n        }\n\n        #").concat(id, " td.back:hover .arrow-left {\n          border-right-color: white;\n        }\n\n        #mobile-data-type-column {\n          min-width: 75px;\n        }\n      </style>");
       }
     }, {
       key: "hasDropDown",
@@ -204,7 +235,10 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
       key: "toggleDropDown",
       value: function toggleDropDown(event) {
         const target = event.target;
-        const row = event.target.parentElement.parentElement.parentElement; // iterate down rows setting display none to all until hit one with indent equal or less than current
+        const row = event.target.parentElement.parentElement.parentElement;
+        const dropdownDiv = target.parentElement;
+        const status = dropdownDiv.getAttribute('status');
+        if (status === 'collapsed') dropdownDiv.setAttribute('status', 'expanded');else if (status === 'expanded') dropdownDiv.setAttribute('status', 'collapsed'); // iterate down rows setting display none to all until hit one with indent equal or less than current
 
         const indent = Number(row.getAttribute('indent') || 0);
         let sibling = row;
@@ -248,6 +282,27 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
           });
         }
       }
+    }, {
+      key: "prettify",
+      value: function prettify(text) {
+        text = this.urlify(text); // convert (1) cost: to \n\t(1) <b>cost</b>:
+
+        const bulletRegex = /\(\d{1,2}\) [A-Za-z]{1,25}:/g;
+        return text.replace(bulletRegex, function (match) {
+          return "<br/>" + match.replace(/[A-Za-z]{1,25}/, function (name) {
+            return "<b>".concat(name, "</b>");
+          });
+        });
+      } // https://stackoverflow.com/questions/1500260/detect-urls-in-text-with-javascript
+
+    }, {
+      key: "urlify",
+      value: function urlify(text) {
+        const urlRegex = /(https?:\/\/[^\s']+)/g;
+        return text.replace(urlRegex, function (url) {
+          return "<a href=\"".concat(url, "\" target=\"_blank\">").concat(url, "</a>");
+        });
+      }
     }], [{
       key: "observedAttributes",
       get: function () {
@@ -256,10 +311,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
     }]);
 
     return JSONSchema;
-  }(_wrapNativeSuper(HTMLElement)); // let the browser know about the custom element
-
-  /*global customElements*/
-
+  }(_wrapNativeSuper(HTMLElement));
 
   customElements.define('json-schema', JSONSchema);
 })();
