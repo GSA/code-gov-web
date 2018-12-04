@@ -1,13 +1,11 @@
 <h2 id="examplecodejsonfile">Example code.json file</h2>
-<p>We’ve created a <a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/src/assets/sample_code_200.json">sample code.json</a>.</p>
+<p>We've created some <a href="https://github.com/GSA/code-gov/blob/master/METADATA_EXAMPLES.md">good metadata examples</a></p>
 <h2 id="tools">Tools</h2>
 <ul>
-<li><p><a class="default-link" routerlink="/policy-guide/docs/compliance/inventory-code/tools/validate-schema">Schema Validator</a></p>
-<p>A tool for validating your code.json against either the v1.0.1 or v2.0.0 schemas. After entering in your code.json, it will list and highlight issues and provide a full featured code editor for making changes to the file.</p></li>
-<li><p><a class="default-link" routerlink="/policy-guide/docs/compliance/inventory-code/tools/upgrade-schema">v1.0.1 to v2.0.0 Schema Upgrader</a></p>
-<p>The upgrader takes a valid v1.0.1 code.json and performs as many automatic upgrades as it can. It also adds additional fields to the JSON to serve as templates for adding more information about your repositories.</p></li>
+<li><p><a class="default-link" href="https://code.gov/about/compliance/inventory-code/validate-schema">Schema Validator</a></p>
+<p>A tool for validating your code.json against v2.0.0 schemas. After entering in your code.json, it will list and highlight issues and provide a JSON editor for making changes to the file.</p></li>
 </ul>
-<h2 id="changeloghttpsgithubcompresidentialinnovationfellowscodegovwebblobmasterchangelogmd"><a href="https://github.com/presidential-innovation-fellows/code-gov-web/blob/master/CHANGELOG.md">Changelog</a></h2>
+<h2 id="changeloghttpsgithubcomgsacodegovdatablobmasterchangelogmd"><a href="https://github.com/GSA/code-gov-data/blob/master/CHANGELOG.md">Changelog</a></h2>
 <h3 id="august2017version200">August 2017 - Version 2.0.0</h3>
 <p>This revision includes revisions to incorporate the open source measurement requirement, improvements and clarifications on previous versions of schema content.</p>
 <h4 id="added">Added</h4>
@@ -38,13 +36,4 @@
 <li>'governmentWideReuseProject'</li>
 <li>'exemption' - now included within the enumerated usageType options in the 'permissions' object.</li>
 </ul>
-<h3 id="december2016version101">December 2016 - Version 1.0.1</h3>
-<p>This revision includes minor tweaks that are aimed at clarifying certain fields and increasing the overall utility of the schema content.</p>
-<h4 id="changesinv101">Changes in v1.0.1</h4>
-<ul>
-<li>'version': The first official iteration of the code.gov metadata schema will be version 1.0.1. Adding a version number to the schema makes it easier to track and manage changes between versions of the metadata schema.</li>
-<li>‘organization’: The ‘organization’ field, which holds the name of the sub-agency responsible for a particular repository or release, is now optional. It has also been moved into the ‘releases’ object. This enables agencies to identify the appropriate organization that owns the repository within the agency.</li>
-<li>‘releases’: This guide previously referred to a ‘release’ field in the metadata schema, while the sample code.json referred to the plural form ‘releases’. This guide has been updated to refer to the plural form ‘releases’.</li>
-<li>‘repository’: The link to the open source repository will be considered a required field for all open source repositories. For repositories that are only available as government-wide reuse or are closed, pursuant to one of the exemptions, this field is not required.</li>
-<li>‘exemptionText’: This field allows agencies to provide a brief narrative explanation for the exception requested in the 'exemption' field.</li>
-</ul>
+<p>Previous schema revisions found in <a href="https://github.com/GSA/code-gov-data/blob/master/schemas/CHANGELOG.md">Changelog</a></p>
