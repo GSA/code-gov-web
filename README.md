@@ -1,5 +1,9 @@
 
-# Code.gov - Unlocking the potential of the Federal Government’s software.
+# DEPRECATED 
+## This project repo is no longer being maintained. The front end of code.gov is now located at [code-gov-front-end](https://github.com/GSA/code-gov-front-end).
+
+
+## Code.gov - Unlocking the potential of the Federal Government’s software.
 
 [![Build Status](https://circleci.com/gh/presidential-innovation-fellows/code-gov-web.svg?style=shield)](https://circleci.com/gh/presidential-innovation-fellows/code-gov-web)
 [![Code Climate](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web/badges/gpa.svg)](https://codeclimate.com/github/presidential-innovation-fellows/code-gov-web)
